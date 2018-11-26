@@ -269,7 +269,7 @@ C0/BCDE 20 DE C6    JSR $C6DE
 C0/BCE1 20 41 4E    JSR $4E41		; Wait for $0B51 to be set (sync?)
 	C0/4E41 64 51       STZ $51		; Note: Bank #0B
 	C0/4E43 A5 51       LDA $51
-	C0/4E45 F0 FC       BEQ $4E43
+	C0/4E45 F0 FC       BEQ $44E3
 	C0/4E47 64 51       STZ $51
 	C0/4E49 60          RTS
 

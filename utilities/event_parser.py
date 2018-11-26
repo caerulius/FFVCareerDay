@@ -84,7 +84,7 @@ while pointer < len(data) - 2:
             line += "\t\t"
         if num_operands == 2 or num_operands == 3:
             line += "\t"
-            
+
         if byte == "C6":
             byte_data[0] = jobs[byte_data[0]]
         if byte == "A1":
@@ -93,6 +93,13 @@ while pointer < len(data) - 2:
             byte_data[0] = music[byte_data[0]]
         if byte == "B5":
             byte_data[0] = sounds[byte_data[0]]
+        if byte == "BA" or byte == "BB" or byte == "BC":
+            byte_data[0] = character[byte_data[0]]
+            byte_data[1] = status[byte_data[1]]
+        if byte == "AC":
+            byte_data[0] = magic[byte_data[0]]
+        if byte == "AA" or byte == "AB":
+            byte_data[0] = items[byte_data[0]]
             
         line += opcodes[byte].format(*byte_data) + "\n"
 
