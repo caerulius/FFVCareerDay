@@ -234,6 +234,107 @@ opcodes['FD'] = "Noop"
 opcodes['FE'] = "Noop"
 opcodes['FF'] = "End Event"
 
+jobs = {}
+jobs['00'] = "Knight"
+jobs['01'] = "Monk"
+jobs['02'] = "Thief"
+jobs['03'] = "Dragoon"
+jobs['04'] = "Ninja"
+jobs['05'] = "Samurai"
+jobs['06'] = "Berserker"
+jobs['07'] = "Hunter"
+jobs['08'] = "Mystic Knight"
+jobs['09'] = "White Mage"
+jobs['0A'] = "Black Mage"
+jobs['0B'] = "Time Mage"
+jobs['0C'] = "Summoner"
+jobs['0D'] = "Blue Mage"
+jobs['0E'] = "Red Mage"
+jobs['0F'] = "Mediator"
+jobs['10'] = "Chemist"
+jobs['11'] = "Geomancer"
+jobs['12'] = "Bard"
+jobs['13'] = "Dancer"
+jobs['14'] = "Mimic"
+
+shops = {}
+shops['00'] = "Tule Weapon"
+shops['01'] = "Tule Armor"
+shops['02'] = "Tule Inn"
+shops['03'] = "Tule Magic"
+shops['04'] = "Carwen Weapon"
+shops['05'] = "Carwen Armor"
+shops['06'] = "Carwen Inn"
+shops['07'] = "Carwen Magic"
+shops['08'] = "Worus Weapon"
+shops['09'] = "Worus Armor"
+shops['0A'] = "Worus Magic"
+shops['0B'] = "Karnak Weapon 1"
+shops['0C'] = "Karnak Weapon 2"
+shops['0D'] = "Karnak Armor"
+shops['0E'] = "Common World 1 Inn"
+shops['0F'] = "Karnak Magic 1"
+shops['10'] = "Karnak Magic 2"
+shops['11'] = "Karnak Magic 3"
+shops['12'] = "Crescent Weapon"
+shops['13'] = "Crescent Armor"
+shops['14'] = "0 Magic"
+shops['15'] = "Istory Rare"
+shops['16'] = "0 Armor"
+shops['17'] = "0 Inn"
+shops['18'] = "Jacole Weapon"
+shops['19'] = "Jacole Armor"
+shops['1A'] = "Common World 2 Inn 1"
+shops['1B'] = "Lix G"
+shops['1C'] = "Lix Armor"
+shops['1D'] = "Lix Magic"
+shops['1E'] = "Rugor Weapon"
+shops['1F'] = "Rugor Armor"
+shops['20'] = "Common World 2 Inn 2"
+shops['21'] = "Bal/Kelb Weapon"
+shops['22'] = "Bal/Kelb Armor"
+shops['23'] = "Kelb Weapon"
+shops['24'] = "Kelb Armor"
+shops['25'] = "Common World 2 Magic 1"
+shops['26'] = "Common World 2 Magic 2"
+shops['27'] = "Common World 2 Magic 3"
+shops['28'] = "Surgate Weapon"
+shops['29'] = "Surgate Armor"
+shops['2A'] = "Mua Weapon"
+shops['2B'] = "Mua Armor"
+shops['2C'] = "Mua Magic 1"
+shops['2D'] = "Mua Magic 2"
+shops['2E'] = "Mua Magic 3"
+shops['2F'] = "0 Weapon"
+shops['30'] = "0 Armor"
+shops['31'] = "Lix Inn"
+shops['32'] = "Dwarf Magic (unused)"
+shops['33'] = "Dwarf Weapon"
+shops['34'] = "Dwarf Armor"
+shops['35'] = "0 Inn"
+shops['36'] = "Mirage Weapon"
+shops['37'] = "Mirage Weapon 2 (I think)"
+shops['38'] = "Mirage Armor"
+shops['39'] = "Mirage Rare"
+shops['3A'] = "Mirage Magic 1"
+shops['3B'] = "Mirage Magic 2"
+shops['3C'] = "Mirage Inn 1"
+shops['3D'] = "Mirage Inn 2"
+shops['3E'] = "Karnak Weapon (pre arrest)"
+shops['3F'] = "Karnak Armor (pre arrest)"
+
+
+sprite_actions = {}
+sprite_actions['00'] = 'Hold'
+sprite_actions['01'] = 'Move Up'
+sprite_actions['02'] = 'Move Right'
+sprite_actions['03'] = 'Move Down'
+sprite_actions['04'] = 'Move Left'
+sprite_actions['05'] = 'Bounce'
+sprite_actions['06'] = 'Bounce'
+sprite_actions['09'] = 'Show'
+sprite_actions['0A'] = 'Hide'
+
 pointer = -2
 commented = ""
 data = data.upper().replace('\n', '')
@@ -256,33 +357,49 @@ while pointer < len(data) - 2:
         tup = getNextByte(pointer)
         byte = tup[0]
         pointer = tup[1]
-        commented += "{0} {1}\t\t\tSprite 0{0} do event {1}".format(byte0, byte) + "\n"
+        line = "{0} {1}\t\t\tSprite 0{0} do event {1}".format(byte0, byte) + "\n"
+        if byte in sprite_actions:
+            line = sprite_actions[byte].join(line.rsplit(byte, 1))
+        elif int(byte[0]) >= 1 and int(byte[0]) <= 6:
+            line = "pose".join(line.rsplit(byte, 1))
+        commented += line
     elif byte[0] == "9":
         byte0 = byte
         tup = getNextByte(pointer)
         byte = tup[0]
         pointer = tup[1]
-        commented += "{0} {1}\t\t\tSprite 1{0} do event {1}".format(byte0, byte) + "\n"
+        line += "{0} {1}\t\t\tSprite 1{0} do event {1}".format(byte0, byte) + "\n"
+        if byte in sprite_actions:
+            line = sprite_actions[byte].join(line.rsplit(byte, 1))
+        elif int(byte[0]) >= 1 and int(byte[0]) <= 6:
+            line = "pose".join(line.rsplit(byte, 1))
+        commented += line
     else:
         num_operands = 1
         byte_data = []
+        line = ""
         if byte in operands:
             num_operands = operands[byte]
         for x in range(0, num_operands):
             tup = getNextByte(pointer)
             byte_data.append(tup[0])
             pointer = tup[1]
-        commented += byte + " "
+        line += byte + " "
         for i in byte_data:
-            commented += i + " "
+            line += i + " "
 
         #dumbass code to make the comments align
-        commented += "\t"
+        line += "\t"
         if num_operands < 2:
-            commented += "\t\t"
+            line += "\t\t"
         if num_operands == 2 or num_operands == 3:
-            commented += "\t"
-            
-        commented += opcodes[byte].format(*byte_data) + "\n"
+            line += "\t"
+        line += opcodes[byte].format(*byte_data) + "\n"
+        if byte == "C6":
+            line = jobs[byte_data[0]].join(line.rsplit(byte_data[0], 1))
+        if byte == "A1":
+            line = shops[byte_data[0]].join(line.rsplit(byte_data[0], 1))
+
+        commented += line
 
 print commented
