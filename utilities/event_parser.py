@@ -84,15 +84,17 @@ while pointer < len(data) - 2:
             line += "\t\t"
         if num_operands == 2 or num_operands == 3:
             line += "\t"
-        line += opcodes[byte].format(*byte_data) + "\n"
+            
         if byte == "C6":
-            line = jobs[byte_data[0]].join(line.rsplit(byte_data[0], 1))
+            byte_data[0] = jobs[byte_data[0]]
         if byte == "A1":
-            line = shops[byte_data[0]].join(line.rsplit(byte_data[0], 1))
+            byte_data[0] = shops[byte_data[0]]
         if byte == "B4":
-            line = music[byte_data[0]].join(line.rsplit(byte_data[0], 1))
+            byte_data[0] = music[byte_data[0]]
         if byte == "B5":
-            line = sounds[byte_data[0]].join(line.rsplit(byte_data[0], 1))
+            byte_data[0] = sounds[byte_data[0]]
+            
+        line += opcodes[byte].format(*byte_data) + "\n"
 
         commented += line
 
