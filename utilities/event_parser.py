@@ -40,16 +40,16 @@ while pointer < len(data) - 2:
 
     #handle the specific ranges first
     if byte in poses:
-        commented += "{0}\t\t\tPlayer pose: {1}\n".format(byte, poses[byte])
+        commented += "db ${0}\t\t\t\t;Player pose: {1}\n".format(byte, poses[byte])
     elif byte[0] == "1" or byte[0] == "2" or byte[0] == "3" or \
        byte[0] == "4" or byte[0] == "5" or byte[0] == "6":
-        commented += "{0}\t\t\tPlayer or Sprite Pose".format(byte) + "\n"
+        commented += "db ${0}\t\t\t;Player or Sprite Pose".format(byte) + "\n"
     elif byte[0] == "8":
         byte0 = byte
         tup = getNextByte(pointer)
         byte = tup[0]
         pointer = tup[1]
-        line = "{0} {1}\t\t\tSprite 0{0} do event {1}".format(byte0, byte) + "\n"
+        line = "db ${0} ${1}\t\t\t;Sprite 0{0} do event {1}".format(byte0, byte) + "\n"
         if byte in sprite_actions:
             line = sprite_actions[byte].join(line.rsplit(byte, 1))
         elif byte in poses and byte[0].isdigit() and int(byte[0]) >= 1 and int(byte[0]) <= 6:
@@ -60,7 +60,7 @@ while pointer < len(data) - 2:
         tup = getNextByte(pointer)
         byte = tup[0]
         pointer = tup[1]
-        line += "{0} {1}\t\t\tSprite 1{0} do event {1}".format(byte0, byte) + "\n"
+        line += "db ${0}, ${1}\t\t\t;Sprite 1{0} do event {1}".format(byte0, byte) + "\n"
         if byte in sprite_actions:
             line = sprite_actions[byte].join(line.rsplit(byte, 1))
         elif byte in poses and byte[0].isdigit() and int(byte[0]) >= 1 and int(byte[0]) <= 6:
@@ -76,15 +76,19 @@ while pointer < len(data) - 2:
             tup = getNextByte(pointer)
             byte_data.append(tup[0])
             pointer = tup[1]
-        line += byte + " "
-        for i in byte_data:
-            line += i + " "
+        line += "db $" + byte + " "
+        for i in byte_data[:-1]:
+            line += "$" + i + ", "
+        if len(byte_data) > 0:
+            line += "$" + byte_data[-1] 
 
         #dumbass code to make the comments align
         line += "\t"
-        if num_operands < 2:
+        if num_operands == 0:
+            line += "\t\t\t"
+        if num_operands == 1 or num_operands == 2:
             line += "\t\t"
-        if num_operands == 2 or num_operands == 3:
+        if num_operands == 3:
             line += "\t"
 
         if byte == "C6":
@@ -103,7 +107,7 @@ while pointer < len(data) - 2:
         if byte == "AA" or byte == "AB":
             byte_data[0] = items[byte_data[0]]
             
-        line += opcodes[byte].format(*byte_data) + "\n"
+        line += ";" + opcodes[byte].format(*byte_data) + "\n"
         if byte == "FF":
             line += "\n-------------------------------\n"
 
