@@ -1,5 +1,6 @@
 #going to leave the sample data in here, feel free
-#to use if you're testing stuff out
+#to use if you're testing stuff out. this is a
+#single sample event and excersizes a lot of the code
 '''0673e11800921b00d08000b50bb103
 d382941730c306758209820282038203
 82038203820471c80f817116723073c8
@@ -21,62 +22,76 @@ d382941730c306758209820282038203
 1482248524c40475dbe100008c5cb412
 c30675a44cff'''
 
+#this has all our lookup dictionaries
 from event_data import *
 
 data = raw_input("paste your event here, no newlines: ")
 
+#we're going to increment the pointer very first, so we want it to be at 0 AFTERWARD
 pointer = -2
 commented = ""
+
+#allow either lowercase or uppercase input, fix it here
 data = data.upper().replace('\n', '')
 
+#there's probably a better way to do this, but i think this might be
+#the best way to achieve what is essentially a pass by reference
+#without having to make my own data structure for such a small usecase
 def getNextByte(pointer):
     pointer = pointer + 2 
     return (data[pointer:pointer+2], pointer)
 
+#as long as there's data to read, keep reading
+#the pointer advances 2 characters at a time, each byte is read in full
 while pointer < len(data) - 2:
     tup = getNextByte(pointer)
     byte = tup[0]
     pointer = tup[1]
 
     #handle the specific ranges first
+    #if we know about a pose, translate the pose here
     if byte in poses:
         commented += "db ${0}\t\t\t\t;Player pose: {1}\n".format(byte, poses[byte])
+
+    #otherwise, just show that it's a pose
     elif byte[0] == "1" or byte[0] == "2" or byte[0] == "3" or \
        byte[0] == "4" or byte[0] == "5" or byte[0] == "6":
         commented += "db ${0}\t\t\t;Player or Sprite Pose".format(byte) + "\n"
-    elif byte[0] == "8":
+
+    #if the byte is 8X or 9X, it's some sprite doing something, handle those here    
+    elif byte[0] == "8" or byte[0] == "9":
         byte0 = byte
         tup = getNextByte(pointer)
         byte = tup[0]
         pointer = tup[1]
-        line = "db ${0}, ${1}\t\t\t;Sprite 0{0} do event {1}".format(byte0, byte) + "\n"
+        line = "db ${0}, ${1}\t\t\t;Sprite " + str((int(byte0[0]) - 8)) + "{0} do event: {1}"
+        line = line.format(byte0, byte) + "\n"
         if byte in sprite_actions:
             line = sprite_actions[byte].join(line.rsplit(byte, 1))
         elif byte in poses and byte[0].isdigit() and int(byte[0]) >= 1 and int(byte[0]) <= 6:
             line = poses[byte].join(line.rsplit(byte, 1))
         commented += line
-    elif byte[0] == "9":
-        byte0 = byte
-        tup = getNextByte(pointer)
-        byte = tup[0]
-        pointer = tup[1]
-        line += "db ${0}, ${1}\t\t\t;Sprite 1{0} do event {1}".format(byte0, byte) + "\n"
-        if byte in sprite_actions:
-            line = sprite_actions[byte].join(line.rsplit(byte, 1))
-        elif byte in poses and byte[0].isdigit() and int(byte[0]) >= 1 and int(byte[0]) <= 6:
-            line = poses[byte].join(line.rsplit(byte, 1))
-        commented += line
+
+    #otherwise, we have a specific command
     else:
-        num_operands = 1
+        num_operands = 1 #we assume a command has 1 operand, most do so it saves me writing them all out
         byte_data = []
         line = ""
+        
+        #if our opcode is in our operands table, it has a number of operands other than 1
         if byte in operands:
             num_operands = operands[byte]
+
+        #for every operand, grab one byte and load them into an array of operands
         for x in range(0, num_operands):
             tup = getNextByte(pointer)
             byte_data.append(tup[0])
             pointer = tup[1]
+
+        #start the line with db (for asar) and the opcode
         line += "db $" + byte
+
+        #append each operand (don't forget this can be 0)
         for i in byte_data:
             line += ", $" + i
 
@@ -89,23 +104,41 @@ while pointer < len(data) - 2:
         if num_operands == 2 or num_operands == 3:
             line += "\t"
 
+        #translate our job byte into an actual job name
         if byte == "C6":
             byte_data[0] = jobs[byte_data[0]]
+
+        #translate our shop byte into an actual shop name
         if byte == "A1":
             byte_data[0] = shops[byte_data[0]]
+
+        #translate our music byte into a trak name
         if byte == "B4":
             byte_data[0] = music[byte_data[0]]
+
+        #translate our sand effect byte into an effect name
         if byte == "B5":
             byte_data[0] = sounds[byte_data[0]]
+
+        #translate a status effect into a status effect name
+        #also indicate which character it's applying to
         if byte == "BA" or byte == "BB" or byte == "BC":
             byte_data[0] = character[byte_data[0]]
             byte_data[1] = status[byte_data[1]]
+
+        #translate a magic spell byte into the name of the spell
         if byte == "AC":
             byte_data[0] = magic[byte_data[0]]
+
+        #translate a gained or lost item into the name of the item
         if byte == "AA" or byte == "AB":
             byte_data[0] = items[byte_data[0]]
-            
+
+        #add the comment (beginning with ; for asara) to the end of the line
         line += ";" + opcodes[byte].format(*byte_data) + "\n"
+
+        #you can put in as much event data at once as you want, add a delineator
+        #for the end of events so it's clear where they start and stop
         if byte == "FF":
             line += "\n-------------------------------\n"
 
