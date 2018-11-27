@@ -49,7 +49,7 @@ while pointer < len(data) - 2:
         tup = getNextByte(pointer)
         byte = tup[0]
         pointer = tup[1]
-        line = "db ${0} ${1}\t\t\t;Sprite 0{0} do event {1}".format(byte0, byte) + "\n"
+        line = "db ${0}, ${1}\t\t\t;Sprite 0{0} do event {1}".format(byte0, byte) + "\n"
         if byte in sprite_actions:
             line = sprite_actions[byte].join(line.rsplit(byte, 1))
         elif byte in poses and byte[0].isdigit() and int(byte[0]) >= 1 and int(byte[0]) <= 6:
@@ -76,19 +76,17 @@ while pointer < len(data) - 2:
             tup = getNextByte(pointer)
             byte_data.append(tup[0])
             pointer = tup[1]
-        line += "db $" + byte + " "
-        for i in byte_data[:-1]:
-            line += "$" + i + ", "
-        if len(byte_data) > 0:
-            line += "$" + byte_data[-1] 
+        line += "db $" + byte
+        for i in byte_data:
+            line += ", $" + i
 
         #dumbass code to make the comments align
         line += "\t"
         if num_operands == 0:
             line += "\t\t\t"
-        if num_operands == 1 or num_operands == 2:
+        if num_operands == 1:
             line += "\t\t"
-        if num_operands == 3:
+        if num_operands == 2 or num_operands == 3:
             line += "\t"
 
         if byte == "C6":
