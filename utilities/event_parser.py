@@ -23,7 +23,7 @@ c30675a44cff'''
 
 from event_data import *
 
-data = raw_input("paste your event here, no newlines")
+data = raw_input("paste your event here, no newlines: ")
 
 pointer = -2
 commented = ""
