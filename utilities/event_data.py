@@ -34,6 +34,7 @@ operands['7F'] = 0
 operands['BA'] = 2
 operands['BB'] = 2
 operands['BC'] = 2
+operands['BD'] = 2
 operands['C5'] = 0
 operands['C8'] = 2
 operands['C9'] = 2

@@ -39,7 +39,9 @@ while pointer < len(data) - 2:
     pointer = tup[1]
 
     #handle the specific ranges first
-    if byte[0] == "1" or byte[0] == "2" or byte[0] == "3" or \
+    if byte in poses:
+        commented += "{0}\t\t\tPlayer pose: {1}\n".format(byte, poses[byte])
+    elif byte[0] == "1" or byte[0] == "2" or byte[0] == "3" or \
        byte[0] == "4" or byte[0] == "5" or byte[0] == "6":
         commented += "{0}\t\t\tPlayer or Sprite Pose".format(byte) + "\n"
     elif byte[0] == "8":
