@@ -50,8 +50,8 @@ while pointer < len(data) - 2:
         line = "{0} {1}\t\t\tSprite 0{0} do event {1}".format(byte0, byte) + "\n"
         if byte in sprite_actions:
             line = sprite_actions[byte].join(line.rsplit(byte, 1))
-        elif int(byte[0]) >= 1 and int(byte[0]) <= 6:
-            line = "pose".join(line.rsplit(byte, 1))
+        elif byte in poses and byte[0].isdigit() and int(byte[0]) >= 1 and int(byte[0]) <= 6:
+            line = poses[byte].join(line.rsplit(byte, 1))
         commented += line
     elif byte[0] == "9":
         byte0 = byte
@@ -61,8 +61,8 @@ while pointer < len(data) - 2:
         line += "{0} {1}\t\t\tSprite 1{0} do event {1}".format(byte0, byte) + "\n"
         if byte in sprite_actions:
             line = sprite_actions[byte].join(line.rsplit(byte, 1))
-        elif int(byte[0]) >= 1 and int(byte[0]) <= 6:
-            line = "pose".join(line.rsplit(byte, 1))
+        elif byte in poses and byte[0].isdigit() and int(byte[0]) >= 1 and int(byte[0]) <= 6:
+            line = poses[byte].join(line.rsplit(byte, 1))
         commented += line
     else:
         num_operands = 1
@@ -102,6 +102,8 @@ while pointer < len(data) - 2:
             byte_data[0] = items[byte_data[0]]
             
         line += opcodes[byte].format(*byte_data) + "\n"
+        if byte == "FF":
+            line += "\n-------------------------------\n"
 
         commented += line
 

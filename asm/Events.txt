@@ -20,6 +20,13 @@ Event Codes
 0F
 
 10-6F				Player Poses (-10 for Sprites)
+11              unclear
+12              face right standing
+13              face right down hand backward
+14              face down left hand forward
+15              face down right hand forward
+16              face left standing
+17              face left down hand backward
 
 70-7F				Timing?
 7A					Naming Character
@@ -57,7 +64,7 @@ B9 xx				Toggle Subtractive Tint
 BA xx yy    	    Clear Character xx Status 0 yy
 BB xx yy        	Set Character xx Status 0 yy
 BC xx yy			Toggle Character xx Status 0 yy
-BD xx				Start Event Battle xx
+BD xx				Start Event Battle xx0
 BE xy				Rumble Effect
 BF xx				(Sprite Effect xx)
 
