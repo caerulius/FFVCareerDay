@@ -106,19 +106,23 @@ while pointer < len(data) - 2:
 
         #translate our job byte into an actual job name
         if byte == "C6":
-            byte_data[0] = jobs[byte_data[0]]
+            if byte_data[0] in jobs:
+                byte_data[0] = jobs[byte_data[0]]
 
         #translate our shop byte into an actual shop name
         if byte == "A1":
-            byte_data[0] = shops[byte_data[0]]
+            if byte_data[0] in shops:
+                byte_data[0] = shops[byte_data[0]]
 
         #translate our music byte into a trak name
         if byte == "B4":
-            byte_data[0] = music[byte_data[0]]
+            if byte_data[0] in music:
+                byte_data[0] = music[byte_data[0]]
 
         #translate our sand effect byte into an effect name
         if byte == "B5":
-            byte_data[0] = sounds[byte_data[0]]
+            if byte_data[0] in sounds:
+                byte_data[0] = sounds[byte_data[0]]
 
         #translate a status effect into a status effect name
         #also indicate which character it's applying to

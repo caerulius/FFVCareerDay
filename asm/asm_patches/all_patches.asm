@@ -13,3 +13,6 @@ incsrc tycoon_meteor_03_battle.asm
 incsrc world1_to_world2_warp.asm
 incsrc balcastle_leavegates.asm
 incsrc bigbridge_endofbridge.asm
+incsrc tule.asm
+incsrc after_tule_boat_cutscene.asm
+incsrc canal_gate.asm
