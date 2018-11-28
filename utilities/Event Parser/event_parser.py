@@ -25,7 +25,7 @@ c30675a44cff'''
 #this has all our lookup dictionaries
 from event_data import *
 
-data = raw_input("paste your event here, no newlines: ")
+data = input("paste your event here, no newlines: ")
 
 #we're going to increment the pointer very first, so we want it to be at 0 AFTERWARD
 pointer = -2
@@ -144,4 +144,4 @@ while pointer < len(data) - 2:
 
         commented += line
 
-print commented
+print(commented)
