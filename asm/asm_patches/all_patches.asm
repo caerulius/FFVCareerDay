@@ -1,5 +1,5 @@
 incsrc bigbridge_gilgamesh2.asm
-incsrc exdeath1_gilgamesh1.asm
+incsrc exdeathcastle1_gilgamesh.asm
 incsrc hiryuuvalley_end.asm
 incsrc kelb_firstvisit.asm
 incsrc moogleforest_firstmeet.asm
@@ -22,6 +22,13 @@ incsrc zeza_entertower.asm
 incsrc barriertower_inside.asm
 incsrc barriertower_top.asm
 incsrc guido_firsttalk.asm
+incsrc intro_cutscene.asm
+incsrc muaforest_enter.asm
+incsrc muaforest_fire.asm
+incsrc muaforest_boss.asm
+incsrc exdeathcastle2_transform.asm
+incsrc exdeathcastle2_gilgamesh.asm
+incsrc exdeathcastle2_boss_w3.asm
 incsrc tule.asm
 incsrc after_tule_boat_cutscene.asm
 incsrc canal_gate.asm

@@ -32,6 +32,22 @@ db $14                          ;Player pose: face down, left hand forward
 db $CB, $3E, $02                        ;Clear Flag 2/3/4/5/3E 02
 db $CB, $3F, $02                        ;Clear Flag 2/3/4/5/3F 02
 db $A4, $3C                     ;Set Event Flag 13C
+
+
+; set event flags for Moogle searching in Village 
+db $A4, $2C                     ;Set Event Flag 12C
+db $CB, $E6, $01                ;Clear Flag 2/3/4/5/E6 01
+db $CB, $E7, $01                ;Clear Flag 2/3/4/5/E7 01
+db $CB, $DF, $01                ;Clear Flag 2/3/4/5/DF 01
+db $CA, $E0, $01                ;Set Flag 2/3/4/5/E0 01
+db $CA, $E1, $01                ;Set Flag 2/3/4/5/E1 01
+db $CA, $E2, $01                ;Set Flag 2/3/4/5/E2 01
+db $CA, $E3, $01                ;Set Flag 2/3/4/5/E3 01
+db $CA, $E4, $01                ;Set Flag 2/3/4/5/E4 01
+db $CA, $E5, $01                ;Set Flag 2/3/4/5/E5 01
+db $A4, $2D                     ;Set Event Flag 12D
+
+
 db $FF                                 ;End Event
 
 
