@@ -59,7 +59,6 @@ db $CA, $3E, $00	;Set Flag 2/3/4/5/3E 00
 db $CA, $3F, $00	;Set Flag 2/3/4/5/3F 00
 db $CB, $6B, $00	;Clear Flag 2/3/4/5/6B 00
 db $CB, $57, $00	;Clear Flag 2/3/4/5/57 00
-db $CB, $58, $00	;Clear Flag 2/3/4/5/58 00
 db $CA, $0D, $00	;Set Flag 2/3/4/5/0D 00
 db $CB, $7E, $00	;Clear Flag 2/3/4/5/7E 00
 db $CA, $77, $00	;Set Flag 2/3/4/5/77 00

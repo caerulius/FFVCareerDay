@@ -1,7 +1,7 @@
 hirom
 !base = $C00000
 
-; disables canal gate cutscene, skips straight to opening
+; disables canal gate cutscene, skips straight to opening.
 ; the left and right gate tiles have their own events, so this
 ; has to be duplicated
 
