@@ -29,9 +29,6 @@ incsrc muaforest_boss.asm
 incsrc exdeathcastle2_transform.asm
 incsrc exdeathcastle2_gilgamesh.asm
 incsrc exdeathcastle2_boss_w3.asm
-incsrc tule.asm
-incsrc after_tule_boat_cutscene.asm
-incsrc canal_gate.asm
 incsrc tycoon_w3_cutscenes.asm
 incsrc boco_w3.asm
 incsrc antlion_cutscenes.asm
@@ -39,3 +36,16 @@ incsrc w3_guido.asm
 incsrc pyramid_enter.asm
 incsrc pyramid_top.asm
 incsrc merugene.asm
+incsrc after_tule_boat_cutscene.asm
+incsrc canal_gate.asm
+incsrc tule.asm
+incsrc canal_gate.asm
+incsrc intro_cutscene.asm
+incsrc pass_end.asm
+incsrc pass_first_hole.asm
+incsrc pirate_button.asm
+incsrc pirate_cove_outside.asm
+incsrc pirate_ship.asm
+incsrc spring.asm
+incsrc sleeping_pirates.asm
+incsrc tycoon_meteor_galuf_wakeup.asm
