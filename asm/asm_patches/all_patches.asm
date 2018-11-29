@@ -32,3 +32,10 @@ incsrc exdeathcastle2_boss_w3.asm
 incsrc tule.asm
 incsrc after_tule_boat_cutscene.asm
 incsrc canal_gate.asm
+incsrc tycoon_w3_cutscenes.asm
+incsrc boco_w3.asm
+incsrc antlion_cutscenes.asm
+incsrc w3_guido.asm
+incsrc pyramid_enter.asm
+incsrc pyramid_top.asm
+incsrc merugene.asm

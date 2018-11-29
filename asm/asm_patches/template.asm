@@ -1,10 +1,10 @@
 hirom
 !base = $C00000
 
-; $C → $C
+; $ → $
 
-org $C
+org $
 
 
 padbyte $00
-pad $C
+pad $
