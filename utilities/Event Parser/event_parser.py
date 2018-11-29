@@ -127,8 +127,10 @@ while pointer < len(data) - 2:
         #translate a status effect into a status effect name
         #also indicate which character it's applying to
         if byte == "BA" or byte == "BB" or byte == "BC":
-            byte_data[0] = character[byte_data[0]]
-            byte_data[1] = status[byte_data[1]]
+            if(byte_data[0] in character):   
+                byte_data[0] = character[byte_data[0]]
+            if(byte_data[1] in status):
+                byte_data[1] = status[byte_data[1]]
 
         #translate a magic spell byte into the name of the spell
         if byte == "AC":
