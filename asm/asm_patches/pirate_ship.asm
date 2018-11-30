@@ -23,6 +23,7 @@ db $CA, $38, $00		;Set Flag 2/3/4/5/38 00
 db $CA, $39, $00		;Set Flag 2/3/4/5/39 00
 db $CA, $3A, $00		;Set Flag 2/3/4/5/3A 00
 db $A2, $15			;Set Event Flag 015
+db $FF				;End Event
 
 padbyte $00
 pad $C96E50
