@@ -75,3 +75,4 @@ incsrc cleft_twintania.asm
 incsrc magisa.asm
 incsrc carwen_lady.asm
 incsrc hiryuu_north_mountain.asm
+incsrc walse_meteor_falls.asm
