@@ -52,3 +52,4 @@ incsrc tycoon_meteor_galuf_wakeup.asm
 incsrc first_save_point.asm
 incsrc wind_shrine_chancellor.asm
 incsrc wind_crystal.asm
+incsrc leaving_wind_shrine.asm
