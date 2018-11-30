@@ -52,3 +52,17 @@ incsrc tycoon_meteor_galuf_wakeup.asm
 incsrc first_save_point.asm
 incsrc wind_shrine_chancellor.asm
 incsrc wind_crystal.asm
+incsrc w3_airshipget.asm
+incsrc solitaryisland_enter.asm
+incsrc secondtablet.asm
+incsrc forktower.asm
+incsrc w3_getsub.asm
+incsrc istoryfalls_enter.asm
+incsrc istoryfalls_end.asm
+incsrc greattrench_enter.asm
+incsrc greattrench_end.asm
+incsrc kuzar.asm
+incsrc northmountain_bahamut.asm
+incsrc phoenixtower.asm
+incsrc cleft_enter.asm
+incsrc cleft_halicarnassus.asm
