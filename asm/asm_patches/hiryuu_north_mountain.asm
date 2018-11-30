@@ -10,14 +10,15 @@ db $01                  ;Player move up
 db $01                  ;Player move up
 db $01                  ;Player move up
 db $01                  ;Player move up
-db $04
-db $01
-db $2C
-db $73
-db $0C
-db $05
-db $02
-db $0A
+db $04					;Player move left
+db $01                  ;Player move up
+db $2C					;Player do pose: face right, right hand raised
+db $73					;Pause for a short while
+db $0C 					;Freezes sprite until next pose
+db $05					;Player Bounce Slow
+db $02					;Player Move Right
+db $0A					;Player Hide
+db $10     				;face up, left hand forward (clears 0C state);
 db $84, $04			;Sprite 084 do event: Move Left
 db $84, $20			;Sprite 084 do event: face down, left hand raised out
 db $80, $0C			;Sprite 080 do event: 0C
@@ -55,6 +56,7 @@ db $CB, $97, $00		;Clear Flag 2/3/4/5/97 00
 db $CB, $99, $00		;Clear Flag 2/3/4/5/99 00
 db $CA, $88, $00		;Set Flag 2/3/4/5/88 00
 db $CA, $83, $00		;Set Flag 2/3/4/5/83 00
+db $FF					;End Event
 
 padbyte $00
 pad $C86F12
