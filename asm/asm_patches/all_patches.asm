@@ -65,4 +65,7 @@ incsrc kuzar.asm
 incsrc northmountain_bahamut.asm
 incsrc phoenixtower.asm
 incsrc cleft_enter.asm
-incsrc cleft_halicarnassus.asm
+incsrc cleft_calofisteri.asm
+incsrc cleft_halicarnaso.asm
+incsrc cleft_apanda.asm
+incsrc cleft_twintania.asm
