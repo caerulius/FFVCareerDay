@@ -72,3 +72,6 @@ incsrc cleft_calofisteri.asm
 incsrc cleft_halicarnaso.asm
 incsrc cleft_apanda.asm
 incsrc cleft_twintania.asm
+incsrc magisa.asm
+incsrc carwen_lady.asm
+incsrc hiryuu_north_mountain.asm
