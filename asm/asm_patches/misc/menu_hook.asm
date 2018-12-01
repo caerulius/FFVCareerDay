@@ -45,6 +45,46 @@ JML $C0CABA
 
 
 
+; Hook for world map encounters
+org $c0cbbe
+JML WorldMapHook
+
+org $F00050
+WorldMapHook:
+
+sep #$20
+LDA !encounterswitch
+CMP #$00
+BNE WorldMapReturnEnc
+
+
+rep #$20
+lda #$0000
+sta $16a8
+lda $06
+sep #$20
+JML $c0cbc5
+
+WorldMapReturnEnc:
+rep #$20
+sta $16a8
+lda $06
+sep #$20
+JML $c0cbc5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ; Frame by frame hook, NOT in menu
 
 org $C0043F

@@ -1,6 +1,7 @@
 hirom
 !base = $C00000
 !pointerloc = $7E0153
+!pointerloc2 = $7E0156
 !encounterswitch = $7EF87C
 !validater = $7E01C7
 !gauge = $7E0973
@@ -35,8 +36,8 @@ BNE FuncEnd
 
 LDA #$01
 STA !lastframesave
-LDA !encounterswitch
-CMP #$FF
+LDA !pointerloc2
+CMP #$0D
 BEQ SetOff
 LDA #$FF
 STA !encounterswitch
