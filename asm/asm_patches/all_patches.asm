@@ -81,3 +81,4 @@ incsrc faris_is_a_girl.asm
 incsrc siren.asm
 incsrc walse_tower_sinking.asm
 incsrc water_crystal.asm
+incsrc walse_king_post_tower.asm
