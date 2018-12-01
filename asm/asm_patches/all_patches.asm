@@ -82,3 +82,7 @@ incsrc siren.asm
 incsrc walse_tower_sinking.asm
 incsrc water_crystal.asm
 incsrc walse_king_post_tower.asm
+incsrc misc/menu_hook.asm
+incsrc misc/encounter_toggle.asm
+incsrc misc/instant_death.asm
+incsrc misc/utility.asm
