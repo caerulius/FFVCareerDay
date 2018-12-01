@@ -84,3 +84,7 @@ incsrc water_crystal.asm
 incsrc walse_king_post_tower.asm
 incsrc walse_meteor_first_warp.asm
 incsrc karnak_arrest.asm
+incsrc misc/menu_hook.asm
+incsrc misc/encounter_toggle.asm
+incsrc misc/instant_death.asm
+incsrc misc/utility.asm
