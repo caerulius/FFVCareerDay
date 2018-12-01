@@ -18,7 +18,6 @@ db $84, $03					;Sprite 084 do event: Move Down
 db $84, $03					;Sprite 084 do event: Move Down
 db $84, $0A					;Sprite 084 do event: Hide
 db $BD, $06, $FF			;Start Event Battle 06
-;db $B9, $67				;Toggle Subtracitve Tint by 67
 db $01						;Player Move Up
 db $01						;Player Move Up
 db $75						;Extremely long pause
@@ -32,8 +31,8 @@ db $D3, $93, $30, $30		;Sprite 93 set map position 30, 30
 db $87, $0A					;Sprite 087 do event: Hide
 db $88, $0A					;Sprite 088 do event: Hide
 db $B2, $01					;Pause for 01 cycles
-db $C1, $02					;<Unknown>
-db $D9, $0A, $04, $B5		;Unknown
+;db $C1, $02					;<Unknown>
+;db $D9, $0A, $04, $B5		;Unknown
 db $81, $BF					;Sprite 081 do event: BF
 db $B9, $78					;Toggle Subtracitve Tint by 78
 db $C1, $00					;<Unknown>
