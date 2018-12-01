@@ -82,3 +82,4 @@ incsrc siren.asm
 incsrc walse_tower_sinking.asm
 incsrc water_crystal.asm
 incsrc walse_king_post_tower.asm
+incsrc walse_meteor_first_warm.asm
