@@ -76,3 +76,6 @@ incsrc magisa.asm
 incsrc carwen_lady.asm
 incsrc hiryuu_north_mountain.asm
 incsrc walse_meteor_falls.asm
+incsrc pirate_ship_out_window.asm
+incsrc faris_is_a_girl.asm
+incsrc siren.asm
