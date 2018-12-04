@@ -85,6 +85,8 @@ incsrc walse_king_post_tower.asm
 incsrc walse_meteor_first_warp.asm
 incsrc karnak_arrest.asm
 incsrc cid_in_cell.asm
+incsrc karnak_werewolf.asm
+incsrc cid_on_steamship.asm
 
 incsrc misc/menu_hook.asm
 incsrc misc/encounter_toggle.asm
