@@ -67,3 +67,20 @@ db $FF				;End Event
 
 padbyte $00
 pad $C863F1
+
+
+; disable faris leaving at weapon shop
+org $C9B9A3
+db $A1, $00			;Run Shop Tule Weapon
+db $FF				;End Event
+
+padbyte $00
+pad $C9B9AF
+
+; disable faris leaving at armor shop
+org $C9B9B0
+db $A1, $01			;Run Shop Tule Armor
+db $FF				;End Event
+
+padbyte $00
+pad $C9B9BC

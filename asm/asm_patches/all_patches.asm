@@ -36,7 +36,7 @@ incsrc w3_guido.asm
 incsrc pyramid_enter.asm
 incsrc pyramid_top.asm
 incsrc merugene.asm
-incsrc after_tule_boat_cutscene.asm
+;incsrc after_tule_boat_cutscene.asm
 incsrc canal_gate.asm
 incsrc tule.asm
 incsrc canal_gate.asm
