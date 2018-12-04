@@ -10,6 +10,12 @@ hirom
 ; Original value: $06
 org $C01248
 db $00
+; world map
+; Original value: $00
+org $C01A24
+lda #$01
+nop
+
 
 ; Learning/Passages
 ; Original values: $A9, $10, $EA

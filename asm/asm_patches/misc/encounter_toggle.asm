@@ -1,6 +1,7 @@
 hirom
 !base = $C00000
 !pointerloc = $7E0153
+!pointerloc2 = $7E0156
 !encounterswitch = $7EF87C
 !validater = $7E01C7
 !gauge = $7E0973
@@ -11,7 +12,7 @@ db $64, $87, $7C, $88, $8E, $87, $8D, $7E, $8B, $8C ; "Encounters"
 org $E73215
 db $64, $87, $7C, $88, $8E, $87, $8D, $7E, $8B, $8C ; "Encounters"
 
-org $C2F746
+org $c2f737
 JML MainHook
 
 
@@ -35,8 +36,8 @@ BNE FuncEnd
 
 LDA #$01
 STA !lastframesave
-LDA !encounterswitch
-CMP #$FF
+LDA !pointerloc2
+CMP #$0D
 BEQ SetOff
 LDA #$FF
 STA !encounterswitch
@@ -51,16 +52,22 @@ JML FuncEnd
 
 FuncEnd:
 PLA ; restore a
-plx
-lda $c0f0a7,x
-ora $0970,y
-sta $0970,y
-JML $C2F751
+lda $c0f0a5,x
+tay
+JML $c2f73c
 
-; FuncEnd:
-; PLA ; restore a
-; plx
-; JML $C2F751
+
+; the below code disables gauge changing. it is always on, value #$80, loaded upon every battle.
+; the address it loads from is the bitwise config option in WRAM $7E0973
+org $C104f7
+lda #$80
+nop
+nop
+nop
+nop
+nop
+
+
 
 
 
