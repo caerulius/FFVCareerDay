@@ -15,8 +15,10 @@ db $87, $0A					;Sprite 087 do event: Hide
 db $88, $0A					;Sprite 088 do event: Hide
 db $89, $0A					;Sprite 089 do event: Hide
 db $CD, $C8, $02			;Run event index 02C8
+db $A2, $A4                 ;Set Event Flag 0A4
+db $A2, $2A                 ;Set Event Flag 02A
 
-db $ff
+db $FF						;End Event
 
 
 padbyte $00
