@@ -88,6 +88,7 @@ incsrc cid_in_cell.asm
 incsrc karnak_werewolf.asm
 incsrc cid_on_steamship.asm
 incsrc karnak_queen_fight.asm
+incsrc fire_crystal.asm
 
 incsrc misc/menu_hook.asm
 incsrc misc/encounter_toggle.asm
