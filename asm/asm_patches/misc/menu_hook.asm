@@ -1,12 +1,15 @@
 hirom
 !base = $C00000
 !input = $7E0114
-!encounterswitch = $7EF87C
+!input2 = $7E0B03
+!configmenucheck = $7E0159 ; when this is #$06, player is in config menu
+!speedvalue = $7E0BC0
+!encounterswitch = $7E0973
 !lastframesave = $7EF87E
 
 org $C0CAB2
 ; Step counter increaser area 
-
+; These are the step increasers
 JML EncounterHook
 nop
 nop
@@ -18,8 +21,8 @@ EncounterHook:
 sep #$20
 
 LDA !encounterswitch
-CMP $00
-BNE EncountersOn
+AND #$80
+BPL EncountersOn
 
 ; Code executes if encounters are off
 LDA $00
@@ -39,13 +42,15 @@ ADC $c0cb09,x
 
 JML $C0CABA
 
-; c0cab2 lda $16a8     [0016a8] A:0000 X:0000 Y:0000 S:1ffd D:0b00 DB:00 nvmxdiZc V: 21 H:236 F: 9
-; c0cab5 clc                    A:0000 X:0000 Y:0000 S:1ffd D:0b00 DB:00 nvmxdiZc V: 21 H:265 F: 1
-; c0cab6 adc $c0cb09,x [c0cb09] A:0000 X:0000 Y:0000 S:1ffd D:0b00 DB:00 nvmxdiZc V: 21 H:268 F: 1
+
+
+
+
 
 
 
 ; Hook for world map encounters
+; These are the step increasers
 org $c0cbbe
 JML WorldMapHook
 
@@ -53,9 +58,14 @@ org $F00050
 WorldMapHook:
 
 sep #$20
+
+; swap speed if input == B:
+JSL SpeedHookGeneric
+STA !speedvalue
+
 LDA !encounterswitch
-CMP #$00
-BNE WorldMapReturnEnc
+AND #$80
+BPL WorldMapReturnEnc
 
 
 rep #$20
@@ -85,6 +95,10 @@ JML $c0cbc5
 
 
 
+
+
+
+
 ; Frame by frame hook, NOT in menu
 
 org $C0043F
@@ -98,31 +112,12 @@ FrameHook:
 
 
 PHA
-; LDA !input
-; CMP #$0020 ; if l pushed
-; BEQ LPushed
-; CMP #$0010 ; if r pushed
-; BEQ RPushed
-; JMP FrameFinish
-
-; ; if pushed, execute below
-; LPushed:
-; LDA #$0000
-; STA !encounterswitch
-; BEQ FrameFinish
-
-; ; if pushed, execute below
-; RPushed:
-; LDA #$FFFF
-; STA !encounterswitch
-; BEQ FrameFinish
 
 
-FrameFinish:
-sep #$20
-LDA #$00
-STA !lastframesave
-rep #$20
+; do stuff 
+
+
+
 PLA ; pull A from above
 
 
@@ -146,6 +141,14 @@ JML $C00445
 
 
 
+
+
+
+
+
+
+
+
 ; For MENU frame by frame
 org $C2FBE9
 JML FrameHookMenu
@@ -153,7 +156,48 @@ JML FrameHookMenu
 org $F18000
 
 FrameHookMenu:
+
 PHA
+
+
+; this code will block out the 5/6 on the config menu
+; due to the index system and ROM data, the game automatically copies the "1 2 3 4 5 6 " twice from ROM, so it's not possible to isolate "1 2 3 4" for walk speed
+; therefore, we use vram to block it out, which is only active in the config menu 
+
+sep #$20
+lda !configmenucheck ; load config menu id
+CMP #$06 ; if anything else, branch 
+bne FinishFrameHookMenu
+
+
+; this writes to vram 
+LDA #$57  ; WRITE address  - location of "5" 
+STA $002116
+LDA #$11  ; WRITE address
+STA $002117
+LDA #$80
+STA $002115
+
+LDA #$96
+STA $002118
+
+LDA #$59  ; WRITE address  - location of "6" 
+STA $002116
+LDA #$11  ; WRITE address
+STA $002117
+LDA #$80
+STA $002115
+
+LDA #$96
+STA $002118
+
+lda #$00
+sta $7E5000
+rep #$20
+
+FinishFrameHookMenu:
+
+; this old code was for switching a value based on L/R input 
 ; LDA !input
 ; CMP #$0020 ; if l pushed
 ; BEQ LPushedMenu
@@ -174,7 +218,9 @@ PHA
 ; BEQ FrameFinishMenu
 
 
-FrameFinishMenu:
+;FrameFinishMenu:
+
+; this old code was for switching a value based on L/R input 
 ; ; write the last frame
 ; LDA !lastframesave
 ; CMP #$0001
@@ -185,9 +231,14 @@ FrameFinishMenu:
 ; Save1:
 ; LDA #$0000
 ; STA !lastframesave
+
+
 sep #$20
+; original instructions
 LDA #$00
 STA !lastframesave
+lda #$08
+sta $7E0BC0
 rep #$20
 
 
@@ -195,6 +246,7 @@ rep #$20
 
 ; original instructions
 PLA
+
 LDA #$0001
 clc
 ADC $094a
