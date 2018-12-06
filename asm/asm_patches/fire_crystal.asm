@@ -67,8 +67,8 @@ db $CB, $73, $01				;Clear Flag 2/3/4/5/73 01
 db $CB, $74, $01				;Clear Flag 2/3/4/5/74 01
 db $CB, $75, $01				;Clear Flag 2/3/4/5/75 01
 db $CB, $76, $01				;Clear Flag 2/3/4/5/76 01
-db $A4, $DB						;Set Event Flag 1DB
 db $D7, $96, $20, $05			;(Timer?) 96 20 05
+db $A4, $DB						;Set Event Flag 1DB
 db $74							;Medium-long pause
 db $E1, $92, $00, $B9, $3C, $00	;Return from cutscene? 92 00 B9 3C 00
 db $C3, $0C						;Fade in at speed $0C

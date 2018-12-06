@@ -4,10 +4,22 @@ hirom
 ; Cutscene and job acquisition after Karnak
 org $C87F79
 
-db $7C							;<Unknown>
+db $7C							;Stops the timer
+db $D2, $00, $54, $4F, $B5		;(Map) 00 54 4F B5
+db $C4, $0C						;Fade out Speed 0C
+db $A5, $FF						;Clear Event Flag 1FF
+db $D0, $F0, $00				;(Music) F0 00
+db $E1, $00, $00, $53, $4E, $00	;Return from cutscene? 00 00 53 4E 00
+db $A4, $FE						;Set Event Flag 1FE
 db $E1, $A3, $00, $21, $08, $00	;Return from cutscene? A3 00 21 08 00
+db $A5, $FE						;Clear Event Flag 1FE
+db $C1, $00						;<Unknown>
+db $B1, $02						;Set Player Sprite 02
+db $09							;Player Show
+db $7D							;<Unknown>
+db $C3, $0C						;Fade in Speed 0C
 db $BE, $00						;Rumble effect of 00 magnitude
-db $D9, $0A, $03, $70			;Unknown (im guessing this stops the timer)
+db $D9, $0A, $03, $70			;Unknown
 db $B1, $02						;Set Player Sprite 02
 db $09							;Player Show
 db $23							;Sprite 080 do event: face down, right hand raised out
@@ -40,6 +52,8 @@ db $C6, $16						;Add job 16
 db $C6, $08						;Add job Mystic Knight
 db $C6, $03						;Add job Dragoon
 db $C6, $16						;Add job 16
+db $A5, $FF						;Clear Event Flag 1FF
+db $A5, $FE						;Clear Event Flag 1FE
 db $A4, $E4						;Set Event Flag 1E4
 db $A4, $19						;Set Event Flag 119
 db $CB, $81, $01				;Clear Flag 2/3/4/5/81 01
