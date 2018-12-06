@@ -90,6 +90,13 @@ incsrc cid_on_steamship.asm
 incsrc karnak_queen_fight.asm
 incsrc fire_crystal.asm
 incsrc after_karnak_escape.asm
+incsrc sol_cannon.asm
+incsrc archeoavis.asm
+incsrc earth_crystal.asm
+incsrc tycoon_meteor_afterearth.asm
+incsrc walse_meteor_afterearth.asm
+incsrc karnak_meteor_afterearth.asm
+incsrc ruins_meteor_afterearth.asm
 
 incsrc misc/menu_hook.asm
 incsrc misc/encounter_toggle.asm
