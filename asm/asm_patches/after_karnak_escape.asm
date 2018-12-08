@@ -53,11 +53,14 @@ db $C6, $08						;Add job Mystic Knight
 db $C6, $03						;Add job Dragoon
 db $C6, $16						;Add job 16
 db $A5, $FF						;Clear Event Flag 1FF
-db $A5, $FE						;Clear Event Flag 1FE
 db $A4, $E4						;Set Event Flag 1E4
 db $A4, $19						;Set Event Flag 119
 db $CB, $81, $01				;Clear Flag 2/3/4/5/81 01
 db $CA, $9D, $02				;Set Flag 2/3/4/5/9D 02
+;db $CB, $54, $01				;Clear Flag 2/3/4/5/54 01
+;db $CA, $51, $01				;Set Flag 2/3/4/5/51 01
+;db $A2, $32						;Set Event Flag 032
+;db $A2, $33						;Set Event Flag 033
 db $E3, $00, $00, $53, $4E, $00	;Inter-map cutscene? 00 00 53 4E 00
 db $DB							;Restore Player status
 db $B4, $23						;Play Background Music Four Valiant Hearts
