@@ -100,6 +100,7 @@ incsrc first_entering_crescent.asm
 incsrc black_chocobo.asm
 incsrc tycoon_return.asm
 incsrc telling_mid_cid_about_steamship.asm
+incsrc sandworm.asm
 
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
