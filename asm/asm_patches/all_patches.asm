@@ -96,6 +96,7 @@ incsrc mid_after_byblos.asm
 incsrc mid_with_book.asm
 incsrc steamship_repair.asm
 incsrc mid_cid_wakeup.asm
+incsrc first_entering_crescent.asm
 
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
