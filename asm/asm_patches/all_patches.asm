@@ -91,6 +91,7 @@ incsrc karnak_queen_fight.asm
 incsrc fire_crystal.asm
 incsrc after_karnak_escape.asm
 incsrc ifrit.asm
+incsrc byblos.asm
 
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
