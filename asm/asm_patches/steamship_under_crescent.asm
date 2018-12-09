@@ -1,7 +1,7 @@
 hirom
 !base = $C00000
 
-; teleporter and explosion beneath ruined city
+; discovering the steamship
 org $C895D8
 
 db $CD, $94, $00				;Run event index 0094

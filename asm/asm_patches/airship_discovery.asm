@@ -1,7 +1,7 @@
 hirom
 !base = $C00000
 
-; teleporter and explosion beneath ruined city
+; discovering the airship
 org $C89678
 
 db $A2, $43						;Set Event Flag 043
