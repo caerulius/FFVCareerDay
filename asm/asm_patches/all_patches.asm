@@ -92,6 +92,7 @@ incsrc fire_crystal.asm
 incsrc after_karnak_escape.asm
 incsrc ifrit.asm
 incsrc byblos.asm
+incsrc mid_after_byblos.asm
 
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
