@@ -94,6 +94,7 @@ incsrc ifrit.asm
 incsrc byblos.asm
 incsrc mid_after_byblos.asm
 incsrc mid_with_book.asm
+incsrc steamship_repair.asm
 
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
