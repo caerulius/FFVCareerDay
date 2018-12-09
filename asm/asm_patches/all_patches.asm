@@ -98,6 +98,7 @@ incsrc steamship_repair.asm
 incsrc mid_cid_wakeup.asm
 incsrc first_entering_crescent.asm
 incsrc black_chocobo.asm
+incsrc tycoon_return.asm
 
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
