@@ -12,6 +12,8 @@ db $CA, $78, $01				;Set Flag 2/3/4/5/78 01
 db $CA, $79, $01				;Set Flag 2/3/4/5/79 01
 db $A2, $37						;Set Event Flag 037
 db $E1, $9C, $00, $8C, $11, $00	;Return from cutscene? 9C 00 8C 11 00
+db $CD, $B9, $01				;Run event index 01B9
+db $CD, $7F, $05				;Run event index 057F
 db $C3, $0C						;Fade in Speed 04
 db $FF							;End Event
 
