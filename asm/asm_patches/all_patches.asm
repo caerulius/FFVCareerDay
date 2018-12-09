@@ -104,6 +104,7 @@ incsrc sandworm.asm
 incsrc ruined_city.asm
 incsrc teleporter_beneath_ruined_city.asm
 incsrc steamship_under_crescent.asm
+incsrc airship_discovery.asm
 
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
