@@ -49,7 +49,7 @@ incsrc pirate_ship.asm
 incsrc spring.asm
 incsrc sleeping_pirates.asm
 incsrc tycoon_meteor_galuf_wakeup.asm
-;incsrc first_save_point.asm
+incsrc first_save_point.asm
 incsrc wind_shrine_chancellor.asm
 incsrc wind_crystal.asm
 incsrc leaving_wind_shrine.asm
@@ -90,6 +90,7 @@ incsrc cid_on_steamship.asm
 incsrc karnak_queen_fight.asm
 incsrc fire_crystal.asm
 incsrc after_karnak_escape.asm
+incsrc ifrit.asm
 
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
@@ -102,4 +103,4 @@ incsrc ruins_meteor_afterearth.asm
 ;incsrc misc/menu_hook.asm
 incsrc misc/encounter_toggle.asm
 incsrc misc/instant_death.asm
-ncsrc misc/utility.asm
+incsrc misc/utility.asm
