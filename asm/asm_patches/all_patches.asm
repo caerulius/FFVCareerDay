@@ -101,6 +101,8 @@ incsrc black_chocobo.asm
 incsrc tycoon_return.asm
 incsrc telling_mid_cid_about_steamship.asm
 incsrc sandworm.asm
+incsrc ruined_city.asm
+incsrc teleporter_beneath_ruined_city.asm
 
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
