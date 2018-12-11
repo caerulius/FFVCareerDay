@@ -69,9 +69,9 @@ incsrc galuf_opening_meteor.asm
 incsrc adamantium_get.asm
 incsrc adamantoise.asm                                    ; 14 Crescent Island
 incsrc upgrading_ship.asm
+incsrc sol_cannon.asm
 
                                                           ; 15 Lonka Ruins
-incsrc sol_cannon.asm
 incsrc archeoavis.asm
 incsrc earth_crystal.asm                          ; 16 Four Meteors
 incsrc tycoon_return.asm

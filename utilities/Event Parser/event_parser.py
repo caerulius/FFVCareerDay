@@ -30,6 +30,12 @@ data = input("paste your event here, no newlines: ")
 #we're going to increment the pointer very first, so we want it to be at 0 AFTERWARD
 pointer = -2
 commented = ""
+a2index = 0x7E0A14
+a3index = 0x7E0A14
+a4index = 0x7E0A34
+a5index = 0x7E0A34
+caindex = 0x7E0A54
+cbindex = 0x7E0A54
 
 #allow either lowercase or uppercase input, fix it here
 data = data.upper().replace('\n', '')
@@ -105,9 +111,13 @@ while pointer < len(data) - 2:
             line += "\t"
 
         #translate our job byte into an actual job name
+        #currently commented out because the table i found
+        #wasn't referring to the jobs correctly
+        '''
         if byte == "C6":
             if byte_data[0] in jobs:
                 byte_data[0] = jobs[byte_data[0]]
+        '''
 
         #translate our shop byte into an actual shop name
         if byte == "A1":
@@ -132,6 +142,40 @@ while pointer < len(data) - 2:
             if(byte_data[1] in status):
                 byte_data[1] = status[byte_data[1]]
 
+        #translate a bit setting into which actual flag is being set/unset
+        if byte == "A2":
+            bit = bitset[int('0x' + byte_data[0], 16) % 0x08]
+            index = a2index + int('0x' + byte_data[0], 16) // 0x08
+            byte_data[0] = "Turn on bit " + bit + " at address " + str(hex(index))
+        if byte == "A3":
+            bit = bitset[int('0x' + byte_data[0], 16) % 0x08]
+            index = a3index + int('0x' + byte_data[0], 16) // 0x08
+            byte_data[0] = "Turn off bit " + bit + " at address " + str(hex(index))
+
+        if byte == "A4":
+            bit = bitset[int('0x' + byte_data[0], 16) % 0x08]
+            index = a4index + int('0x' + byte_data[0], 16) // 0x08
+            byte_data[0] = "Turn on bit " + bit + " at address " + str(hex(index))
+        if byte == "A5":
+            bit = bitset[int('0x' + byte_data[0], 16) % 0x08]
+            index = a5index + int('0x' + byte_data[0], 16) // 0x08
+            byte_data[0] = "Turn off bit " + bit + " at address " + str(hex(index))
+
+        if byte == "CA":
+            bit = bitset[int('0x' + byte_data[0], 16) % 0x08]
+            index = caindex + int('0x' + byte_data[0], 16) // 0x08
+            bigindex = int(byte_data[1]) * 0x20
+            index = index + bigindex
+            byte_data[0] = "Turn on bit " + bit + " at address "
+            byte_data[1] = hex(index)
+        if byte == "CB":
+            bit = bitset[int('0x' + byte_data[0], 16) % 0x08]
+            index = caindex + int('0x' + byte_data[0], 16) // 0x08
+            bigindex = int(byte_data[1]) * 0x20
+            index = index + bigindex
+            byte_data[0] = "Turn off bit " + bit + " at address "
+            byte_data[1] = hex(index)
+
         #translate a magic spell byte into the name of the spell
         if byte == "AC":
             byte_data[0] = magic[byte_data[0]]
@@ -140,7 +184,7 @@ while pointer < len(data) - 2:
         if byte == "AA" or byte == "AB":
             byte_data[0] = items[byte_data[0]]
 
-        #add the comment (beginning with ; for asara) to the end of the line
+        #add the comment (beginning with ; for asar) to the end of the line
         line += ";" + opcodes[byte].format(*byte_data) + "\n"
 
         #you can put in as much event data at once as you want, add a delineator
