@@ -67,7 +67,9 @@ incsrc ruined_city_rising.asm							  ; 12 Lonka Ruins
 incsrc cid_mid_after_city_flies.asm                       ; 13 Tycoon Meteor
 incsrc galuf_opening_meteor.asm
 incsrc adamantium_get.asm
-                                                          ; 14 Crescent Island
+incsrc adamantoise.asm                                    ; 14 Crescent Island
+incsrc upgrading_ship.asm
+
                                                           ; 15 Lonka Ruins
 incsrc sol_cannon.asm
 incsrc archeoavis.asm
