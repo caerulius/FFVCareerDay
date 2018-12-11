@@ -65,6 +65,7 @@ incsrc airship_discovery.asm
 incsrc cid_on_flying_ship.asm          					  
 incsrc ruined_city_rising.asm							  ; 12 Lonka Ruins
 incsrc cid_mid_after_city_flies.asm                       ; 13 Tycoon Meteor
+incsrc galuf_opening_meteor.asm
                                                           ; 14 Crescent Island
                                                           ; 15 Lonka Ruins
 incsrc sol_cannon.asm
