@@ -55,23 +55,23 @@ incsrc steamship_repair.asm                     ; 0F Crescent Island
 
 incsrc first_entering_crescent.asm             
 incsrc black_chocobo.asm                        ; 10 Ancient Library
-incsrc telling_mid_cid_about_steamship.asm
+incsrc telling_mid_cid_about_steamship.asm ; 11 Desert
 
-incsrc sandworm.asm                              ; 11 Ruined City
+incsrc sandworm.asm                              
 incsrc ruined_city.asm
 incsrc teleporter_beneath_ruined_city.asm
 incsrc steamship_under_crescent.asm 
 incsrc airship_discovery.asm
-incsrc cid_on_flying_ship.asm          					  
-incsrc ruined_city_rising.asm							  ; 12 Lonka Ruins
+incsrc cid_on_flying_ship.asm          					  ; 11 Desert
+incsrc ruined_city_rising.asm							  ; 14 Crescent Island
 incsrc cid_mid_after_city_flies.asm                       ; 13 Tycoon Meteor
 incsrc galuf_opening_meteor.asm
-incsrc adamantium_get.asm
+incsrc adamantium_get.asm                               
 incsrc adamantoise.asm                                    ; 14 Crescent Island
-incsrc upgrading_ship.asm
+incsrc upgrading_ship.asm                               ; 12 Lonka Ruins (Ascend)
 incsrc sol_cannon.asm
 
-                                                          ; 15 Lonka Ruins
+
 incsrc archeoavis.asm
 incsrc earth_crystal.asm                          ; 16 Four Meteors
 incsrc tycoon_return.asm
@@ -148,9 +148,9 @@ incsrc cleft_twintania.asm
 incsrc misc/menu_hook.asm
 incsrc misc/encounter_toggle.asm
 incsrc misc/new_event.asm
-incsrc misc/instant_death.asm
+;incsrc misc/instant_death.asm
 incsrc misc/utility.asm
 incsrc misc/walk_speed.asm
 incsrc misc/destination.asm
 
-incsrc balancing/boss_balancing.asm
+;incsrc balancing/boss_balancing.asm
