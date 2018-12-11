@@ -20,7 +20,7 @@ db $83, $02						;Sprite 083 do event: move right
 db $83, $02						;Sprite 083 do event: move right
 db $83, $02						;Sprite 083 do event: move right
 db $83, $01						;Sprite 083 do event: move up
-db $83, $0A
+db $83, $0A						;Sprite 083 do event: hide
 db $CB, $51, $01				;Clear Flag 2/3/4/5/51 01
 db $A2, $36						;Set Event Flag 036
 db $CB, $73, $01				;Clear Flag 2/3/4/5/73 01
@@ -30,4 +30,4 @@ db $CB, $76, $01				;Clear Flag 2/3/4/5/76 01
 db $FF							;End Event
 
 padbyte $00
-pad $C88849
+pad $C88270

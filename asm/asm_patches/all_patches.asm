@@ -48,8 +48,8 @@ incsrc after_karnak_escape.asm
 
 incsrc ifrit.asm
 incsrc byblos.asm                                   ; 0D Karnak Pub
-incsrc mid_after_byblos.asm
-incsrc mid_with_book.asm
+;incsrc mid_after_byblos.asm
+;incsrc mid_with_book.asm
 incsrc telling_mid_cid_about_steamship.asm
 incsrc mid_cid_wakeup.asm                       ; 0E Karnak Steamship
 incsrc steamship_repair.asm                     ; 0F Crescent Island
