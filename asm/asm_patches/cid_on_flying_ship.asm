@@ -14,7 +14,7 @@ db $A3, $B0						;Clear Event Flag 0B0
 db $A3, $B2						;Clear Event Flag 0B2
 db $A2, $B1						;Set Event Flag 0B1
 
-db $CC, $12                 	;Custom destination flag 12
+db $CC, $11                 	;Custom destination flag 12
 db $FF							;End event
 
 padbyte $00
