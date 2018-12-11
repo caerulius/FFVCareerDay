@@ -58,6 +58,7 @@ db $CD, $B7, $04                ;Run event index 04B7
 db $CB, $36, $01                ;Clear Flag 2/3/4/5/36 01
 db $A2, $54                     ;Set Event Flag 054
 db $A3, $BC                     ;Clear Event Flag 0BC
+db $CC, $17                  ;Custom destination flag 17
 db $FF                          ;End Event
 
 pad $C986E7

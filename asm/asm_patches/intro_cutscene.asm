@@ -17,6 +17,7 @@ db $CB, $58, $00	            ;Clear Flag 2/3/4/5/58 00 ;removes faris sleeping i
 db $A4, $DC                     ;Set Event Flag 1DC
 db $A4, $FF                     ;Set Event Flag 1FF
 db $A4, $BE                     ;Set Event Flag 1BE
+db $CC, $00                  ;Custom destination flag 00
 db $C3, $08                     ;Fade in Speed 08
 db $73                          ;Long pause
 db $FF                          ;End Event

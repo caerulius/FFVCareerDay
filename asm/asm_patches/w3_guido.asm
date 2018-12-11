@@ -263,7 +263,7 @@ db $A4, $7C                     ;Set Event Flag 17C
 db $A5, $FE                     ;Clear Event Flag 1FE
 db $A2, $BD                     ;Set Event Flag 0BD
 
-
+db $CC, $26                  ;Custom destination flag 26
 
 
 db $FF                          ;End Event

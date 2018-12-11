@@ -23,6 +23,7 @@ db $09                          ;Player Show
 db $0B                          ;<Unknown>
 db $C3, $02                     ;Fade in Speed 02
 db $03                          ;Player Move Down
+db $CC, $19                  ;Custom destination flag 19
 db $FF                          ;End Event
 
 ; d3888f0fb1048803880371c402709024

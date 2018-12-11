@@ -23,6 +23,7 @@ db $A4, $7D                     ;Set Event Flag 17D
 
 ; Set flag for Cleft of Dimensions first visit
 db $A4, $7E                     ;Set Event Flag 17E
+db $CC, $28                  ;Custom destination flag 28
 
 db $FF                          ;End Event
 

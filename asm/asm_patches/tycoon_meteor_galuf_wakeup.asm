@@ -34,6 +34,7 @@ db $B7, $89			;Add/Remove character 89
 db $A5, $C7			;Clear Event Flag 1C7
 db $CD, $7F, $05		;Run event index 057F
 db $A5, $FE			;Clear Event Flag 1FE
+db $CC, $01                  ;Custom destination flag 01
 db $FF				;End Event
 
 padbyte $00

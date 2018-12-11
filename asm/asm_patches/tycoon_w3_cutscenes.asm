@@ -70,7 +70,7 @@ db $CA, $0D, $01                ;Set Flag 2/3/4/5/0D 01
 db $A2, $7B                     ;Set Event Flag 07B
 db $A4, $F0                     ;Set Event Flag 1F0
 db $A4, $FC                     ;Set Event Flag 1FC
-
+db $CC, $25                  ;Custom destination flag 25
 db $FF                          ;End Event
 padbyte $00
 pad $C8E157

@@ -39,6 +39,7 @@ db $C1, $00					;<Unknown>
 db $CD, $8D, $03			;Run event index 038D
 db $87, $0A					;Sprite 087 do event: Hide
 db $88, $0A					;Sprite 088 do event: Hide
+db $CC, $09                  ;Custom destination flag 09
 
 db $FF						;End event
 

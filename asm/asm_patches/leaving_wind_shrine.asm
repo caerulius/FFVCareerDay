@@ -10,6 +10,7 @@ db $E3, $00, $00, $B6, $35, $00	;Inter-map cutscene? 00 00 B6 35 00
 db $09							;Player Show
 db $D3, $80, $40, $07			;Sprite 80 set map position 40, 07
 db $C3, $02						;Fade in Speed 02
+db $CC, $03                  ;Custom destination flag 03
 db $FF							;End Event
 
 padbyte $00

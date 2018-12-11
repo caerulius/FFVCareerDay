@@ -20,6 +20,7 @@ db $8A, $0A				;Sprite 08A do event: Hide
 db $8B, $0A             ;Sprite 08B do event: Hide
 db $BD, $03, $06		;Start Event Battle 03
 db $A2, $21				;Set Event Flag 021
+db $CC, $06                  ;Custom destination flag 06
 db $FF					;End Event
 
 padbyte $00

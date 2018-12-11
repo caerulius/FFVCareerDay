@@ -30,6 +30,7 @@ db $CB, $7C, $02                ;Clear Flag 2/3/4/5/7C 02
 db $CB, $6A, $02                ;Clear Flag 2/3/4/5/6A 02
 db $CB, $6C, $02                ;Clear Flag 2/3/4/5/6C 02
 db $A5, $C4                     ;Clear Event Flag 1C4
+db $CC, $1D                  ;Custom destination flag 1D
 db $FF                          ;End Event
 
 padbyte $00

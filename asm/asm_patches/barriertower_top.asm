@@ -50,6 +50,7 @@ db $C3, $02                     ;Fade in Speed 0A
 db $CA, $0E, $00                ;Set Flag 2/3/4/5/0E 00
 ; db $B7, $02                     ;Add/Remove character 02
 db $A3, $C1                     ;Clear Event Flag 0C1
+db $CC, $21                  ;Custom destination flag 21
 
 db $FF                          ;End Event
 

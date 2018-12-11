@@ -39,6 +39,7 @@ db $73				;Long pause
 db $BE, $00			;Rumble effect of 00 magnitude
 db $A2, $1E			;Set Event Flag 01E
 db $A5, $FE			;Clear Event Flag 1FE
+db $CC, $05                  ;Custom destination flag 05
 db $FF				;End Event
 
 

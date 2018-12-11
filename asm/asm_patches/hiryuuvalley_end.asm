@@ -27,6 +27,7 @@ db $B4, $2C                     ;Play Background Music Walking the Snowy Mountai
 db $CB, $D3, $02                ;Clear Flag 2/3/4/5/D3 02
 db $A4, $C4                     ;Set Event Flag 1C4
 db $A2, $66                     ;Set Event Flag 066
+db $CC, $1C                  ;Custom destination flag 1C
 db $FF                          ;End Event
 
 

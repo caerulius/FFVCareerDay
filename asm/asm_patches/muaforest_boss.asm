@@ -1627,6 +1627,7 @@ db $CA, $4D, $02                ;Set Flag 2/3/4/5/4D 02
 db $C3, $02
 db $09                          ;Player Show
 db $14                          ;Player pose: face down, left hand forward
+db $CC, $23                  ;Custom destination flag 23
 db $EB, $FF                     ;Unknown
 
 padbyte $00

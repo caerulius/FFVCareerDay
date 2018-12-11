@@ -56,6 +56,7 @@ db $CA, $78, $02                        ;Set Flag 2/3/4/5/78 02
 db $CA, $79, $02                        ;Set Flag 2/3/4/5/79 02
 db $CA, $7A, $02                        ;Set Flag 2/3/4/5/7A 02
 db $A2, $60                     ;Set Event Flag 060 (this is taken from Cara's cutscene with Hiryuu to immediately set flag)
+db $CC, $1B                  ;Custom destination flag 1B
 db $FF                                ;End Event
 
 ; e30e010b0900c302db1409800aa25fca

@@ -37,6 +37,7 @@ db $A4, $F3                     ;Set Event Flag 1F3
 db $CB, $08, $00                ;Clear Flag 2/3/4/5/08 00
 db $A2, $83                     ;Set Event Flag 083
 db $A4, $CD                     ;Set Event Flag 1CD
+db $CC, $27                  ;Custom destination flag 27
 db $FF                          ;End Event
 
 padbyte $00

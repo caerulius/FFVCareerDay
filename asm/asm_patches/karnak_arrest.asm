@@ -25,6 +25,7 @@ db $51			;Player or Sprite Pose
 db $74				;Very long pause
 db $BE, $00			;Rumble effect of 00 magnitude
 db $83, $11			;Sprite 083 do event: face up, right hand forward
+db $CC, $0B                  ;Custom destination flag 0B
 db $FF				;End Event
 db $ff
 

@@ -9,6 +9,7 @@ org $C90E7C
 
 
 db $A2, $5E                     ;Set Event Flag 05E
+;db $CC, $20
 db $FF                                 ;End Event
 
 padbyte $00

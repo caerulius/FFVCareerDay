@@ -3,9 +3,14 @@ hirom
 !input = $7E0114
 !input2 = $7E0B03
 !configmenucheck = $7E0159 ; when this is #$06, player is in config menu
+!menutype = $7E0143
+!itemmenuvalidater = $7E01E0
+!itemmenuloc = $7E0200
 !speedvalue = $7E0BC0
+!itemboxwriter = $7E7511
 !encounterswitch = $7E0973
 !lastframesave = $7EF87E
+!destinationindex = $7EF87F
 
 org $C0CAB2
 ; Step counter increaser area 
@@ -156,9 +161,9 @@ JML FrameHookMenu
 org $F18000
 
 FrameHookMenu:
-
 PHA
-
+PHX
+PHY
 
 ; this code will block out the 5/6 on the config menu
 ; due to the index system and ROM data, the game automatically copies the "1 2 3 4 5 6 " twice from ROM, so it's not possible to isolate "1 2 3 4" for walk speed
@@ -167,7 +172,7 @@ PHA
 sep #$20
 lda !configmenucheck ; load config menu id
 CMP #$06 ; if anything else, branch 
-bne FinishFrameHookMenu
+bne CheckDestinationWriter
 
 
 ; this writes to vram 
@@ -194,45 +199,106 @@ STA $002118
 lda #$00
 sta $7E5000
 rep #$20
+JML FinishFrameHookMenu
+
+
+; this code will check for destinations
+; it confirms if in the item menu $7E0143 == $07
+; then confirms if the pointer is on the Rare icon $7E0200 == $A8
+; then confirms if the "Rare" menu is actually selected $7E01E0 == $00, then triggers text
+; if all conditions met, then write destination data and trigger via storing $01 in $7E7511
+
+; still in 8 bit mode
+CheckDestinationWriter:
+lda !menutype
+CMP #$07
+BNE FinishFrameHookMenuHook
+lda !itemmenuloc 
+CMP #$A8
+BNE FinishFrameHookMenuHook
+lda !itemmenuvalidater
+CMP #$00
+BNE ClearItemText ; here, if leaving the "Rare" menu, set back to no text
+BEQ FillItemText
+
+FinishFrameHookMenuHook:
+JML FinishFrameHookMenu
+; if conditions met, then execute destination writer
+; F18200 - lookup table for index 
+; Load in value at $7EF87F and asl 5 times to get an index location
+; Example base F18300
+; Value at $7EF87F is 02
+; $0002 asl x5 → $0020
+; then index will be $F18500
+
+; 28 characters per per line
+FillItemText:
+ldx #$0000 ; First loop for "Destination"
+ldy #$0000 ; First loop for "Destination"
+FillTextLoop1st:
+    lda $F18200, x ; begins at index, increases x until 28 char limit
+    sta $51C4, y
+    inx
+    iny
+    iny
+    CPY #$0038 ; Max chars in hex
+    BNE FillTextLoop1st
+
+rep #$20
+lda #$0000
+sep #$20
+lda !destinationindex
+rep #$20
+asl
+asl
+asl
+asl
+asl  ; now an index 
+TAX
+sep #$20
+
+ldy #$0000 ; 28 character limit to length of line 
+FillTextLoop:
+    lda $F18220, x ; begins at index, increases x until 28 char limit
+    sta $5244, y
+    inx
+    iny
+    iny
+    CPY #$0038 ; Max chars in hex
+    BNE FillTextLoop
+
+lda #$01
+sta !itemboxwriter
+JML FinishFrameHookMenu
+
+ClearItemText:
+LDA #$FF
+LDX #$0000
+ClearTextLoop1st:
+    sta $51C4, x
+    inx
+    inx
+    CPX #$0038 ; Max chars in hex
+    BNE ClearTextLoop1st
+LDX #$0000    
+ClearTextLoop:
+    sta $5244, x
+    inx
+    inx
+    CPX #$0038 ; Max chars in hex
+    BNE ClearTextLoop
+
+lda #$01
+sta !itemboxwriter
+JML FinishFrameHookMenu
+
+
+
+
+
+
 
 FinishFrameHookMenu:
-
-; this old code was for switching a value based on L/R input 
-; LDA !input
-; CMP #$0020 ; if l pushed
-; BEQ LPushedMenu
-; CMP #$0010 ; if r pushed
-; BEQ RPushedMenu
-; JMP FrameFinishMenu
-
-; ; if pushed, execute below
-; LPushedMenu:
-; LDA #$0000
-; STA !encounterswitch
-; BEQ FrameFinishMenu
-
-; ; if pushed, execute below
-; RPushedMenu:
-; LDA #$FFFF
-; STA !encounterswitch
-; BEQ FrameFinishMenu
-
-
-;FrameFinishMenu:
-
-; this old code was for switching a value based on L/R input 
-; ; write the last frame
-; LDA !lastframesave
-; CMP #$0001
-; BEQ Save1
-; LDA #$0001
-; STA !lastframesave
-; JML FinishEnd
-; Save1:
-; LDA #$0000
-; STA !lastframesave
-
-
 sep #$20
 ; original instructions
 LDA #$00
@@ -245,6 +311,8 @@ rep #$20
 ; FinishEnd:
 
 ; original instructions
+PLY
+PLX
 PLA
 
 LDA #$0001

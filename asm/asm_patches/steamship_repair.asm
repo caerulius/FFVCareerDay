@@ -15,6 +15,7 @@ db $E1, $9C, $00, $8C, $11, $00	;Return from cutscene? 9C 00 8C 11 00
 db $CD, $B9, $01				;Run event index 01B9
 db $CD, $7F, $05				;Run event index 057F
 db $C3, $0C						;Fade in Speed 04
+db $CC, $0F                  ;Custom destination flag 0F
 db $FF							;End Event
 
 padbyte $00

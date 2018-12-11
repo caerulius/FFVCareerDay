@@ -72,6 +72,7 @@ db $DB                          ;Restore Player status
 db $10                          ;Player pose: face up, left hand forward
 db $C3, $02                     ;Fade in Speed 06
 db $75                          ;Extremely long pause
+db $CC, $24                  ;Custom destination flag 24
 db $FF                          ;End Event
 
 padbyte $00

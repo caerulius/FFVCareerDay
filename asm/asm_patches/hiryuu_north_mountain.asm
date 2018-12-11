@@ -37,6 +37,7 @@ db $CB, $97, $00				;Clear Flag 2/3/4/5/97 00
 db $CB, $99, $00				;Clear Flag 2/3/4/5/99 00
 db $CA, $88, $00				;Set Flag 2/3/4/5/88 00
 db $CA, $83, $00				;Set Flag 2/3/4/5/83 00
+db $CC, $07                  ;Custom destination flag 07
 db $FF							;End Event
 
 padbyte $00

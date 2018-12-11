@@ -34,6 +34,7 @@ db $B7, $09			;Add/Remove character 09
 db $B7, $0B			;Add/Remove character 0B
 db $CA, $FD, $01		;Set Flag 2/3/4/5/FD 01
 db $A2, $3A			;Set Event Flag 03A
+db $CC, $10                  ;Custom destination flag 10
 db $FF				;End Event
 
 padbyte $00

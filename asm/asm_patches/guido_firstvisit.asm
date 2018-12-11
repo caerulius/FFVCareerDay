@@ -81,6 +81,7 @@ db $09                          ;Player Show
 db $C3, $0A                     ;Fade in Speed 0A
 db $B4, $1D                     ;Play Background Music The Dragon Spreads its Wings
 db $7B                          ;*YOU DIDNT MEAN TO USE THIS*
+db $CC, $1E                  ;Custom destination flag 1E
 db $FF                          ;End Event
 
 padbyte $00

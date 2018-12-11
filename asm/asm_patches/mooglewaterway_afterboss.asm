@@ -46,7 +46,7 @@ db $CA, $E3, $01                ;Set Flag 2/3/4/5/E3 01
 db $CA, $E4, $01                ;Set Flag 2/3/4/5/E4 01
 db $CA, $E5, $01                ;Set Flag 2/3/4/5/E5 01
 db $A4, $2D                     ;Set Event Flag 12D
-
+db $CC, $1A                  ;Custom destination flag 1A
 
 db $FF                                 ;End Event
 

@@ -104,6 +104,7 @@ db $A3, $B8                     ;Clear Event Flag 0B8
 ; set flags for airship scene after leaving and landing
 db $A5, $FE                     ;Clear Event Flag 1FE
 db $A2, $4D                     ;Set Event Flag 04D
+db $CC, $16                  ;Custom destination flag 16
 
 db $FF                          ;End Event
 

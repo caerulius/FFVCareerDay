@@ -84,6 +84,7 @@ db $3F                          ;Player pose: face down, looking left, eyes lowe
 db $14                          ;Player pose: face down, left hand forward
 
 db $CD, $D9, $03                ;Run event index 03D9
+db $CC, $20                  ;Custom destination flag 20
 db $FF                          ;End Event
 
 
