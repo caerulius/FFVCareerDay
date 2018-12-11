@@ -48,20 +48,21 @@ incsrc after_karnak_escape.asm
 
 incsrc ifrit.asm
 incsrc byblos.asm                                   ; 0D Karnak Pub
-;incsrc mid_after_byblos.asm
-;incsrc mid_with_book.asm
-incsrc telling_mid_cid_about_steamship.asm
-incsrc mid_cid_wakeup.asm                       ; 0E Karnak Steamship
+incsrc mid_after_byblos.asm
+incsrc mid_with_book.asm                       ; 0E Karnak Steamship
+incsrc mid_cid_wakeup.asm                       
 incsrc steamship_repair.asm                     ; 0F Crescent Island
 
 incsrc first_entering_crescent.asm             
 incsrc black_chocobo.asm                        ; 10 Ancient Library
+incsrc telling_mid_cid_about_steamship.asm
 
 incsrc sandworm.asm                              ; 11 Ruined City
 incsrc ruined_city.asm
 incsrc teleporter_beneath_ruined_city.asm
 incsrc steamship_under_crescent.asm 
-incsrc airship_discovery.asm                    ; 12 Lonka Ruins
+incsrc airship_discovery.asm
+incsrc cid_on_flying_ship.asm          					  ; 12 Lonka Ruins
                                                           ; 13 Tycoon Meteor
                                                           ; 14 Crescent Island
                                                           ; 15 Lonka Ruins

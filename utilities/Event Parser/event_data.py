@@ -60,6 +60,7 @@ operands['DC'] = 3 #guess
 operands['DD'] = 3 #guess
 operands['DE'] = 3
 operands['DF'] = 3
+operands['E0'] = 5
 operands['E1'] = 5
 operands['E3'] = 5
 operands['EC'] = 0

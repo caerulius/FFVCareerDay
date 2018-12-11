@@ -19,7 +19,6 @@ db $CA, $7C, $01				;Set Flag 2/3/4/5/7C 01
 db $CA, $7D, $01				;Set Flag 2/3/4/5/7D 01
 db $CA, $7E, $01				;Set Flag 2/3/4/5/7E 01
 db $CA, $7F, $01				;Set Flag 2/3/4/5/7F 01
-db $CC, $0E                  ;Custom destination flag 0E
 db $FF							;End Event
 
 padbyte $00

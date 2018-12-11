@@ -4,9 +4,8 @@ hirom
 ; discovering the airship
 org $C89678
 
-db $A2, $43						;Set Event Flag 043
-db $CC, $12                  ;Custom destination flag 12
-db $FF							;End event
+db $A2, $43					;Set Event Flag 043
+db $FF						;End event
 
 padbyte $00
 pad $C89715
