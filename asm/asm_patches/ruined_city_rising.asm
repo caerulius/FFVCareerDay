@@ -11,7 +11,7 @@ db $09							;Player Show
 db $C3, $02						;Fade in Speed 02
 db $A5, $FE						;Clear Event Flag 1FE
 
-db $CC, $12                 	;Custom destination flag 12
+db $CC, $14                  ;Custom destination flag 14
 db $FF							;End event
 
 padbyte $00

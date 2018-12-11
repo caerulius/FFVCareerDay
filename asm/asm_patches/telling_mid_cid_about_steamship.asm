@@ -22,6 +22,7 @@ db $14							;Player pose: face down, left hand forward
 db $C3, $08						;Fade in Speed 08
 db $74							;Very long pause
 db $A2, $3B						;Set Event Flag 03B
+db $CC, $11                  ;Custom destination flag 11
 db $FF							;End Event
 
 padbyte $00

@@ -36,7 +36,6 @@ db $84, $11				;Sprite 084 do event: face up, right hand forward
 db $72					;Shortish pause
 db $A2, $3E				;Set Event Flag 03E
 db $CD, $99, $03		;Run event index 0399
-db $CC, $11                  ;Custom destination flag 11
 db $FF					;End Event
 
 padbyte $00

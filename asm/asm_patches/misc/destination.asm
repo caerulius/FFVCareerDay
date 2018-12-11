@@ -131,9 +131,9 @@ db $60, $71, $78, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
 org $F18440 
-db $71, $74, $68, $6D
-db $64, $63, $FF, $62
-db $68, $73, $78, $FF
+db $63, $64, $72, $64
+db $71, $63, $FF, $FF
+db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
@@ -141,8 +141,8 @@ org $F18460
 db $6B, $6E, $6D, $6A
 db $60, $FF, $71, $74
 db $68, $6D, $72, $FF
-db $FF, $FF, $FF, $FF
-db $FF, $FF, $FF, $FF
+db $9E, $60, $72, $62
+db $64, $6D, $63, $9F
 db $FF, $FF
 org $F18480 
 db $73, $78, $62, $6E
