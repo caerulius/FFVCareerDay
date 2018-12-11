@@ -24,6 +24,7 @@ c30675a44cff'''
 
 #this has all our lookup dictionaries
 from event_data import *
+import sys
 
 data = input("paste your event here, no newlines: ")
 
@@ -39,6 +40,9 @@ cbindex = 0x7E0A54
 
 #allow either lowercase or uppercase input, fix it here
 data = data.upper().replace('\n', '')
+if len(data) % 2 != 0:
+    print("Can't parse half a byte, validate your input")
+    sys.exit()
 
 #there's probably a better way to do this, but i think this might be
 #the best way to achieve what is essentially a pass by reference
@@ -87,6 +91,12 @@ while pointer < len(data) - 2:
         #if our opcode is in our operands table, it has a number of operands other than 1
         if byte in operands:
             num_operands = operands[byte]
+  
+        if (len(data) - (pointer + 2)) / 2 < num_operands:
+            if len(commented) > 0:
+                print(commented)
+            print("Byte " + str(byte) + " at index " + str(pointer) + " does not have enough operands")
+            sys.exit()
 
         #for every operand, grab one byte and load them into an array of operands
         for x in range(0, num_operands):
