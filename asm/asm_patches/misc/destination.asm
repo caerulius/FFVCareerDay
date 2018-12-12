@@ -158,13 +158,13 @@ db $FF, $68, $72, $6B
 db $60, $6D, $63, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F184C0 
-db $6B, $6E, $6D, $6A
-db $60, $FF, $71, $74
-db $68, $6D, $72, $FF
-db $FF, $FF, $FF, $FF
-db $FF, $FF, $FF, $FF
-db $FF, $FF
+; org $F184C0  ; unused for now
+; db $6B, $6E, $6D, $6A
+; db $60, $FF, $71, $74
+; db $68, $6D, $72, $FF
+; db $FF, $FF, $FF, $FF
+; db $FF, $FF, $FF, $FF
+; db $FF, $FF
 org $F184E0 
 db $65, $6E, $74, $71
 db $FF, $6C, $64, $73

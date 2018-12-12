@@ -154,3 +154,4 @@ incsrc misc/walk_speed.asm
 incsrc misc/destination.asm
 
 ;incsrc balancing/boss_balancing.asm
+;incsrc balancing/exp_abp_modifier.asm

@@ -1,6 +1,11 @@
 hirom
 !base = $C00000
 !walkingspeedconfig = $7E0970 
+!airshipenabled = $7E0AF2
+!hiryuuenabled = $7E0AE6
+!chocoboenabled = $7E0ADC
+!blackchocoboenabled = $7E0B00
+!submarineenabled = $7E0AE9
 !worldmapspeed = $C0573E
 !worldmapflag = $7E0B53 ; if this is 1, not in world map
 !blackchocospeed = $C008B5
@@ -50,7 +55,8 @@ org $F35000
 SpeedHookGeneric:
 
 
-; first check world map vs. dungeons 
+
+; next check world map vs. dungeons 
 lda !worldmapflag
 CMP #$00
 BEQ HandleWorldMapSpeed ; world map
@@ -91,7 +97,7 @@ CMP #$10
 BEQ SpeedSettingWMFast2
 ; setting 1
 CMP #$00
-BEQ SpeedSettingWMFast3
+BEQ SpeedSettingWMFast2
 
 SpeedSettingWMDefault:
 lda #$04
@@ -205,7 +211,8 @@ JML ChocoboHandlerMount
 
 org $F35200
 ChocoboHandlerMount:
-JSL SpeedHookGeneric
+;JSL SpeedHookGeneric
+lda #$10
 sta $c0
 JML $C007C1
 
@@ -218,7 +225,8 @@ nop
 org $F35300
 ChocoboHandlerDismount:
 sta $0add, y
-JSL SpeedHookGeneric
+;JSL SpeedHookGeneric
+lda #$10
 sta $c0
 JML $C00882
 
@@ -230,11 +238,29 @@ nop
 org $F35400
 BoatHandlerDismount:
 sta $0add, y
-JSL SpeedHookGeneric
+;JSL SpeedHookGeneric
+lda #$10
 sta $c0
 JML $C01112
 
+; Boat to airship hook
+org $C00C08
+JML BoatHandlerToAirship
+nop
 
+org $F35480
+BoatHandlerToAirship:
+sta $0adb
+;JSL SpeedHookGeneric
+lda #$10
+sta $c0
+JML $C00C0F
+
+
+; ; remove storing 0 when on airship
+; org $C05532
+; nop
+; nop
 
 ; walking speed in config $7E0BC0
 ; 00, 10, 20, 30, 40, 50 
