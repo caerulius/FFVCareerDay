@@ -2,8 +2,13 @@ hirom
 !base = $C00000
 
 ; $C84C80 → $C84FD0
+; Intro cutscene skips
+; Apparently, the first two lines spawn the Tycoon meteor, but another event doesn't appear to be called. Unsure atm 
 
 org $C84C80
+
+db $E1, $10, $00, $91, $1C, $00 ;Return from cutscene? 10 00 91 1C 00
+db $A4, $E0                     ;Turn on bit 01 at address 0x7e0a50
 
 db $E1, $00, $00, $9C, $96, $00 ;Return from cutscene? 00 00 9C 96 00
 db $B1, $07                     ;Set Player Sprite 07
