@@ -145,6 +145,8 @@ incsrc cleft_halicarnassus.asm
 incsrc cleft_twintania.asm
 
 ; other patches
+; incsrc events.asm
+
 incsrc misc/menu_hook.asm
 incsrc misc/encounter_toggle.asm
 incsrc misc/new_event.asm
@@ -152,6 +154,9 @@ incsrc misc/new_event.asm
 incsrc misc/utility.asm
 incsrc misc/walk_speed.asm
 incsrc misc/destination.asm
+
+incsrc recovery/all_inns.asm
+incsrc recovery/tent.asm
 
 ;incsrc balancing/boss_balancing.asm
 ;incsrc balancing/exp_abp_modifier.asm

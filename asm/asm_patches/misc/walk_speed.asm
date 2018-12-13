@@ -15,33 +15,19 @@ hirom
 ; change text in config menu
 org $E731DB
 db $76, $7A, $85, $84, $96, $72, $89, $7D, $A3 ; "Walk Spd."
-; org $E731F9
-; db $96, $96, $96 ; Remove option "5" and "6" from speed
 
 ; change config to only allow for 4 options
-; this was discontinued - unfortunately with Battle Speed and Walking Speed, they share the same ROM text address, so I cannot whitespace out only the Walking Speed without affecting Battle Speed numbers. 
-; If you really wanted this, you could do something janky with VRAM where the values on screen (which can be live edited) are changed to whitespace for 5/6 upon loading 
 org $C0F078
 db $04 ; change 'too far' metric to be $05, meaning it will revert back to $04, which is 2 from the farthest right 
-
-
 
 ; make conditional true for any player to always execute dash when b is held
 org $c01261
 lda #$FF
 
-; make holding B half your speed instead of double
-; refer to  [SPEED_NOTE_1] for an explanation, we hook in every frame to check speed values (to enable "hold B" functionality on world map)
-
 ; make hold b to dash here not effective
 org $c01278
 nop
 nop
-; lsr $c0
-
-
-
-
 
 
 
@@ -54,8 +40,6 @@ nop
 org $F35000
 SpeedHookGeneric:
 
-
-
 ; next check world map vs. dungeons 
 lda !worldmapflag
 CMP #$00
@@ -63,8 +47,6 @@ BEQ HandleWorldMapSpeed ; world map
 BNE HandleRegularSpeed ; anywhere else
 
 ; world map
-; base speed:       SpeedSetting3
-; run speed max:    SpeedSetting5
 HandleWorldMapSpeed:
 
 lda !input 
@@ -114,8 +96,6 @@ RTL
 
 
 ; towns/dungeons
-; base speed:          SpeedSetting2
-; run speed max:    SpeedSetting4
 
 HandleRegularSpeed:
 
@@ -200,8 +180,17 @@ JML WorldMapHandler
 org $F35100
 WorldMapHandler:
 sep #$20
+; handle airship
+lda $7E0B3D
+CMP #$40
+BEQ AirshipSpeed
 JSL SpeedHookGeneric
+JMP FinishedAirshipSpeed
+AirshipSpeed:
+lda #$10
+FinishedAirshipSpeed:
 rep #$20
+
 sta $c0
 JML $C056F1
 
@@ -225,8 +214,7 @@ nop
 org $F35300
 ChocoboHandlerDismount:
 sta $0add, y
-;JSL SpeedHookGeneric
-lda #$10
+JSL SpeedHookGeneric
 sta $c0
 JML $C00882
 
@@ -238,8 +226,7 @@ nop
 org $F35400
 BoatHandlerDismount:
 sta $0add, y
-;JSL SpeedHookGeneric
-lda #$10
+JSL SpeedHookGeneric
 sta $c0
 JML $C01112
 
