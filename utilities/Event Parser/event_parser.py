@@ -95,7 +95,7 @@ while pointer < len(data) - 2:
         if (len(data) - (pointer + 2)) / 2 < num_operands:
             if len(commented) > 0:
                 print(commented)
-            print("Byte " + str(byte) + " at index " + str(pointer) + " does not have enough operands")
+            print("Byte " + str(byte) + " at cursor location " + str(pointer) + " does not have enough operands")
             sys.exit()
 
         #for every operand, grab one byte and load them into an array of operands
