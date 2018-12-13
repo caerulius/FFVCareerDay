@@ -241,11 +241,12 @@ color: #fff;
 }
 .service-list-col1 i{
 	font-style:normal;
-	font-size:38px;
+	font-size:45px;
 	display:block;
 	color:#222;
 	font-family: 'FontAwesome';
 	line-height:38px;
+	margin-top:4px;
 }
 .service-list-col2{
 	overflow:hidden;	
