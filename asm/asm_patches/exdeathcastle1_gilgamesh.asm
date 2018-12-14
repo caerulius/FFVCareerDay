@@ -131,21 +131,29 @@ db $A2, $59                     ;Set Event Flag 059
 db $FF                          ;End Event
 
 
-; 8324d386320a00000000000083138304
-; ce03028303bd94ff830a0acb1803e1e2
-; 00330d00d3893310c3108907ce030289
-; 01b58ebe45f3330b20071701be408010
-; 81108210c706890380038102c7088904
-; 8003810382048922cf04068003810382
-; 038026812616b105820a09ce04248026
-; 8126892616b20380208120892010b203
-; 80228122892212b20380248124892414
-; b2038048814889483871813080308930
-; 20810b800b890b0c81058005890505c7
-; 078100800089000070810b800b890b0b
-; c7050389028001810a890a800ab700b7
-; 09b70bdbcb1503cb1603cb1703cb1b03
-; ca0e00a258a259ff
-
 padbyte $00
 pad $C93D11
+
+
+; enemy gates right side
+org $c98722
+db $B1, $02                     ;Set Player Sprite 02
+db $04                          ;Player move Left
+db $3F                          ;Player pose: face down, looking left, eyes lowered
+db $32                          ;Player pose: collapsed, facing left
+db $0C                          ;<Unknown>
+db $FF                          ;End Event
+
+pad $C9872D
+
+
+
+org $C98716
+db $B1, $02                     ;Set Player Sprite 02
+db $02                          ;Player Move Right
+db $40                          ;Player pose: face down, looking right, eyes lowered
+db $33                          ;Player pose: collapsed, facing right
+db $0C                          ;<Unknown>
+db $FF                          ;End Event
+
+pad $C98721

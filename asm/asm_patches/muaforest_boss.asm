@@ -1330,27 +1330,19 @@ db $CD, $73, $07                ;Run event index 0773
 ; ;db $C8, $DF, $05                ;Display Message/Text/Dialogue DF 05
 
 
-db $71                          ;Short pause
 db $88, $03                     ;Sprite 088 do event: Move Down
 db $88, $03                     ;Sprite 088 do event: Move Down
-db $71                          ;Short pause
-;db $C8, $E0, $05                ;Display Message/Text/Dialogue E0 05
-db $71                          ;Short pause
 db $88, $3E                     ;Sprite 088 do event: face up, both arms raised in
-db $B3, $0A                     ;Pause for 0A0 cycles
-;db $C8, $E1, $05                ;Display Message/Text/Dialogue E1 05
-db $75
-db $B3, $0A                     ;Pause for 0A0 cycles
+;db $B3, $0A                     ;Pause for 0A0 cycles
+;db $75
+;db $B3, $0A                     ;Pause for 0A0 cycles
 db $88, $24                     ;Sprite 088 do event: face down, right hand raised in
-;db $73                          ;Long pause
 db $86, $01                     ;Sprite 086 do event: Move Up
 db $C5                          ;<unknown>
 db $40                          ;Player pose: face down, looking right, eyes lowered
 db $86, $0A                     ;Sprite 086 do event: Hide
-db $70                          ;Very short pause
 db $C5                          ;<unknown>
 db $40                          ;Player pose: face down, looking right, eyes lowered
-db $70                          ;Very short pause
 db $C5                          ;<unknown>
 db $40                          ;Player pose: face down, looking right, eyes lowered
 db $C8, $E2, $05                ;Display Message/Text/Dialogue E2 05
@@ -1624,8 +1616,8 @@ db $CA, $4A, $02                ;Set Flag 2/3/4/5/4A 02
 db $CA, $4B, $02                ;Set Flag 2/3/4/5/4B 02
 db $CA, $4C, $02                ;Set Flag 2/3/4/5/4C 02
 db $CA, $4D, $02                ;Set Flag 2/3/4/5/4D 02
-db $C3, $02
 db $09                          ;Player Show
+db $C3, $02
 db $14                          ;Player pose: face down, left hand forward
 db $CC, $23                  ;Custom destination flag 23
 db $EB, $FF                     ;Unknown

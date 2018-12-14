@@ -8,12 +8,9 @@ hirom
 ; $C8C868 → $C8C8D0
 
 ; This sets the flag instantly upon visiting Kelb for the Kelgar cutscene. 
+; Everything here was moved to the previous event, so that when loading Kelb for the first time, everything is spawned and open
 
 org $C8C814
-
-db $DB                          ;Restore Player status
-db $A2, $62                     ;Set Event Flag 062 (this cutscene)
-db $A2, $64                     ;Set Event Flag 062 (Kelgar cutscene)
 db $FF                          ;End Event
 
 padbyte $00

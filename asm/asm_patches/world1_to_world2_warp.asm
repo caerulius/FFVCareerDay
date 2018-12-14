@@ -56,6 +56,7 @@ db $C2, $03                     ;Map 03
 db $B7, $F0                     ;Add/Remove character F0
 db $B7, $F1                     ;Add/Remove character F1
 db $B7, $F3                     ;Add/Remove character F3
+db $A5, $F8                     ;Turn off bit 01 at address 0x7e0a53 (removes world map 4 meteors waypoint)
 db $CC, $18                  ;Custom destination flag 18
 db $FF                          ;End Event
 

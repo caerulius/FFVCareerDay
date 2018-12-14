@@ -1,5 +1,23 @@
 hirom
 !base = $C00000
+padbyte $00
+
+; Talking to Moogle first time in house
+org $C97579
+db $80, $10                     ;Sprite 080 do event: face up, left hand forward
+db $80, $05                     ;Sprite 080 do event: Bounce
+db $80, $00                     ;Sprite 080 do event: Hold
+db $80, $05                     ;Sprite 080 do event: Bounce
+db $80, $00                     ;Sprite 080 do event: Hold
+db $80, $54                     ;Sprite 080 do event: 54
+db $80, $24                     ;Sprite 080 do event: face down, right hand raised in
+db $80, $54                     ;Sprite 080 do event: 54
+db $80, $24                     ;Sprite 080 do event: face down, right hand raised in
+db $80, $11                     ;Sprite 080 do event: face up, right hand forward
+db $A4, $2E                     ;Turn on bit 40 at address 0x7e0a39
+db $D1, $01, $73, $04           ;(Timer?) 14 73 04
+db $FF                          ;End Event
+pad $C9759B
 
 org $C975D5
 
@@ -19,7 +37,7 @@ db $C4, $02                      ;Fade out Speed 02
 db $CD, $EF, $00                 ;Run event index 00EF
 db $FF                          ;End Event
 
-padbyte $00
+
 pad $C97A2E
 
         

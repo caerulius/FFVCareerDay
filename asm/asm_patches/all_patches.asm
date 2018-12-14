@@ -145,7 +145,6 @@ incsrc cleft_halicarnassus.asm
 incsrc cleft_twintania.asm
 
 ; other patches
-; incsrc events.asm
 
 incsrc misc/menu_hook.asm
 incsrc misc/encounter_toggle.asm

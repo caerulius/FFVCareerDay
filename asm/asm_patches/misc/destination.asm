@@ -132,7 +132,7 @@ db $FF, $FF, $FF, $FF
 db $FF, $FF
 org $F18440 
 db $63, $64, $72, $64
-db $71, $63, $FF, $FF
+db $71, $73, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
