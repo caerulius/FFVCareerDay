@@ -149,7 +149,6 @@ incsrc cleft_twintania.asm
 incsrc misc/menu_hook.asm
 incsrc misc/encounter_toggle.asm
 incsrc misc/new_event.asm
-;incsrc misc/instant_death.asm
 incsrc misc/utility.asm
 incsrc misc/walk_speed.asm
 incsrc misc/destination.asm
@@ -157,5 +156,7 @@ incsrc misc/destination.asm
 incsrc recovery/all_inns.asm
 incsrc recovery/tent.asm
 
-;incsrc balancing/boss_balancing.asm
-;incsrc balancing/exp_abp_modifier.asm
+incsrc colors/desaturate2.asm
+
+; optionals
+incsrc optionals.asm

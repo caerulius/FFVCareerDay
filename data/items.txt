@@ -1,0 +1,44 @@
+When using items in main inventory:
+
+Item inventory start:
+7E0640 
+
+$C0EED0 - This is the 'usable item' index system for the item inventory. The IDs here correspond with the only usable items 
+$c2a341 - First evidence where pressing a button on menu branches (checks stored A button press)
+
+
+Selected item ID is loaded into $7E29E7
+Then indexed & data from $D10A80 is loaded into adjacent WRAM bytes:
+
+This ONLY has to do with restoratives in the restore menu. Need to understand what signifies restorative vs. not 
+7E29E7 - index
+7E29E8 - qty of item
+7E29EA-D - Character selected
+7E29EF - Set to $32 when using a potion, not changed on elixir. $32 = integer 50 
+7E29F6 - restorative ID...? 81 = hp, 82 = mp, 83 = both
+
+7E29F8 - restorative power
+7E29F9 - restorative power (multiply F8 by F9)
+
+
+
+
+Index table for asl'd item indexes:
+7ED000 → 7ED1FF
+
+Starting around code $C2BB2B:
+(first checks for Tent/Cabin and branches)
+(then branches for stuff >= $F8?)
+
+Loads index
+ASL's it
+Transfer to X
+Uses X as an offset from lda $7ed000,x to get the specific location in D10A80 area, loads into A 
+Transfer to X
+Loads Y with some immediate #$29F3
+Then moves item data based on index above 
+
+
+
+For summons:
+Takes index for summons, which are F9 FA FB, subtracts F8 to get an index of 01 02 03, then loads from (code C2BB6E) $C0EEAE, x
