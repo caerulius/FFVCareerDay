@@ -99,7 +99,7 @@ p{
 	text-align:center;
 	background: url(../img/main-bg.png) no-repeat center top fixed;
 	background-size: 200rem 60rem;
-	padding:280px 0;
+	padding:280px 0px 100px 0px;
 }
 .logo{
 	width:130px;
@@ -226,7 +226,7 @@ color: #fff;
 .service-list{
 	padding: 7px;
 	font-size:14px;
-	margin-bottom:80px;
+	margin-bottom:40px;
 	border-color: lightgrey;
 	border-style: solid;
 }

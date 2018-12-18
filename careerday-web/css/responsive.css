@@ -6,7 +6,7 @@
 @media only screen and (min-width: 992px) {
 	/****Ipad Landscape 1024 Container 970 ****/
 
-	.service-list{ margin-bottom:80px;}
+	.service-list{ margin-bottom:33px;}
 	.c-logo-part ul li{ margin:0 15px;}
 	.form{ margin:0 0 0 20px}
 	.main-nav{ display:block !important; }
