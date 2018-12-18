@@ -12,18 +12,11 @@ db $03                          ;Player Move Down
 db $03                          ;Player Move Down
 db $03                          ;Player Move Down
 db $03                          ;Player Move Down
-db $76							; Wait
-db $76							; Wait
-db $76							; Wait
-db $C4, $01					   ; Fade out	
-
-
-db $DB                          ;Restore Player status
+db $71							; Wait
+db $C4, $03					   ; Fade out	
 db $E3, $01, $20, $55, $B0, $6C ;Inter-map cutscene? 01 20 55 B0 6C
 db $09                          ;Player Show
 db $14                          ;Player pose: face down, left hand forward
-db $C3, $01					   ; Fade in	
-db $74                          ;Very long pause
 db $A2, $68                     ;Set Event Flag 068
 db $CB, $73, $02                ;Clear Flag 2/3/4/5/73 02
 db $CB, $7C, $02                ;Clear Flag 2/3/4/5/7C 02
@@ -31,6 +24,9 @@ db $CB, $6A, $02                ;Clear Flag 2/3/4/5/6A 02
 db $CB, $6C, $02                ;Clear Flag 2/3/4/5/6C 02
 db $A5, $C4                     ;Clear Event Flag 1C4
 db $CC, $1D                  ;Custom destination flag 1D
+db $C3, $03					   ; Fade out	
+db $74							; Wait
+db $DB                          ;Restore Player status
 db $FF                          ;End Event
 
 padbyte $00

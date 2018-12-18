@@ -1,0 +1,133 @@
+When using items in main inventory:
+
+7E0640 - Item inventory start:
+E10042 - "Obtained" xx "!" text
+E76B98 - "Ice Shield" text 
+001b00 - Next text box message area 
+	001B3C - where text actually starts
+
+$C0EED0 - This is the 'usable item' index system for the item inventory. The IDs here correspond with the only usable items 
+$c2a341 - First evidence where pressing a button on menu branches (checks stored A button press)
+
+
+Selected item ID is loaded into $7E29E7
+Then indexed & data from $D10A80 is loaded into adjacent WRAM bytes:
+
+This ONLY has to do with restoratives in the restore menu. Need to understand what signifies restorative vs. not 
+7E29E7 - index
+7E29E8 - qty of item
+7E29EA-D - Character selected
+7E29EF - Set to $32 when using a potion, not changed on elixir. $32 = integer 50 
+7E29F6 - restorative ID...? 81 = hp, 82 = mp, 83 = both
+
+7E29F8 - restorative power
+7E29F9 - restorative power (multiply F8 by F9)
+
+
+
+
+Index table for asl'd item indexes:
+7ED000 → 7ED1FF
+
+Starting around code $C2BB2B:
+(first checks for Tent/Cabin and branches)
+(then branches for stuff >= $F8?)
+
+Loads index
+ASL's it
+Transfer to X
+Uses X as an offset from lda $7ed000,x to get the specific location in D10A80 area, loads into A 
+Transfer to X
+Loads Y with some immediate #$29F3
+Then moves item data based on index above 
+
+
+
+For summons:
+Takes index for summons, which are F9 FA FB, subtracts F8 to get an index of 01 02 03, then loads from (code C2BB6E) $C0EEAE, x
+
+
+
+
+
+Chests
+
+Code that takes values from chest in area $D133B0
+
+C00E3A First loads in type (chest, gil, encounter)
+Checks if top 3 bits are set via AND #$E0 (all ids are above this except Gil)
+C00E63 Then checks Magic
+
+000b11 - Where the type ID is temporarily stored
+000b12 - Where the reward ID is temporarily stored
+
+Chest IDs:
+00 → 1F - Gil
+20 → 3F - Magic
+40 → 7F - Item
+80 → FF - Monster in a box
+
+Start of Item reward code:
+c0bfdd - Stores reward ID to $0016A2, then checks if its in the player inventory. 
+c00ead - BEFORE LEAVING, store the TYPE of textbox/reward at $000BAF
+c00eb2 - Now we're done finding item & increasing it by 1
+c08405 - load in some value associated with type of reward... 
+
+e02d41 - Code rleated to storing a value into $000BB1, which is a 'type' of text box 
+If you mess with these vals, need to change both A and this value at $BB1
+00 - "Nothing happened"
+01 - Can't carry items
+02 - Item
+03 - Magic
+04 - Monster in a box
+05 - Gil
+06 - "It's empty"
+07 - "Please select a name"
+08 - "Opened lock."
+09 - Inn message
+0A - 
+OE - Big fuck up, lots of text
+0F - "Please come again."
+10 - No message, glitched text box
+11 - "Pretty good." "Received 100 Gil"
+12 - "Locked from inside"
+...
+FF - "..."
+
+
+
+Stores this ID into $BB1, then asl/adc's, transfer to X, then loads from E013F2 offset for 3 vals. Saved BACK into $BB1 (16 bit), then also into $0019D5 (8 bit). 
+
+c08bd3 - Some generic handler for text boxes. When this subroutine gets called, a bunch of text box related things happen. 
+
+JSL to E02D60 with $BB1 in X, which is the code from E013F2
+
+This value per the current system will always be loaded in as $E1 from $19D5. But $BB1 must matter
+
+$BB1's value after the asl from area E013F2:
+41 - Item
+50 - Gil
+61 - Magic
+70 - Monster in a box
+8F - Empty
+
+Begins loading in data into 001B00. The 00's and 01's at the start of the pull from above $BB1 is important apparently. It sets up FFs compared to $000b23 until it hits, then moves onto text data
+
+Then loads in values from $E10000,x which are actual text box data offset by this X value (from $BB1). Once it hits $FF, branches to C08451, then continues back the loop. But next time, itll load the value after $FF as a variable(?) from $C08B13,x  and stores it to $000b23, then indirect jumps to the value at $000b23 (C0844e). 
+
+$11 appears to be some special value 'variable' in the text as $E10000. ($e1004c in ice shield example)
+$11 = text
+$12 = magic
+$13 = j chars 
+
+And $00 is a terminator 
+
+There's some branch if carry set happening when it's checking $11 versus the others. It takes this $11 value and stores it into $00B23 (as described above) to do some specific "variable" code. 
+
+THEN takes the reward ID from $0016A2 (originally from $D13320) and starts to look up. This takes the reward ID, asl's it 3 times, stores to $0f, clears carry, asl's again, ADDS the value at $0f just stored, transfers to X. THIS is how it looks up from area $e75860. You don't have to have this system, it's just for current Item IDs. You can use what's stored at the reward ID based on job/song and completely go elsewhere. 
+
+Notice that Y is not changed this entire process - it is the index from $001b00 where to store values 
+
+
+YOUR JOB is to set up the values at $001b00 correctly. So theoretically if you follow the correct JSR/RTSs and hook in, set up $001b00, then leave, it _should_ work.
+You can try setting up the $E10000 area with a new 'job' and 'song' handler that will have its own new 'variable' (i.e., $11, $12). There's free space at $E1FC20. 
