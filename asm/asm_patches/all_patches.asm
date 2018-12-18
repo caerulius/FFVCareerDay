@@ -71,7 +71,6 @@ incsrc adamantoise.asm                                    ; 14 Crescent Island
 incsrc upgrading_ship.asm                               ; 12 Lonka Ruins (Ascend)
 incsrc sol_cannon.asm
 
-
 incsrc archeoavis.asm
 incsrc earth_crystal.asm                          ; 16 Four Meteors
 incsrc tycoon_return.asm
@@ -79,8 +78,6 @@ incsrc tycoon_meteor_afterearth.asm
 incsrc walse_meteor_afterearth.asm          
 incsrc karnak_meteor_afterearth.asm
 incsrc ruins_meteor_afterearth.asm           ; 17 Bahamut Peninsula 
-
-
 
 ; world 2
 incsrc world1_to_world2_warp.asm            ; 18 Big Bridge
@@ -156,7 +153,7 @@ incsrc misc/destination.asm
 incsrc recovery/all_inns.asm
 incsrc recovery/tent.asm
 
-incsrc colors/desaturate2.asm
+;incsrc colors/desaturate2.asm
 
 ; optionals
-incsrc optionals.asm
+;incsrc optionals.asm
