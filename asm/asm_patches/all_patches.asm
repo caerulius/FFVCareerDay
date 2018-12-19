@@ -149,6 +149,7 @@ incsrc misc/new_event.asm
 incsrc misc/utility.asm
 incsrc misc/walk_speed.asm
 incsrc misc/destination.asm
+incsrc misc/chest_textbox.asm
 
 incsrc recovery/all_inns.asm
 incsrc recovery/tent.asm

@@ -131,3 +131,5 @@ Notice that Y is not changed this entire process - it is the index from $001b00 
 
 YOUR JOB is to set up the values at $001b00 correctly. So theoretically if you follow the correct JSR/RTSs and hook in, set up $001b00, then leave, it _should_ work.
 You can try setting up the $E10000 area with a new 'job' and 'song' handler that will have its own new 'variable' (i.e., $11, $12). There's free space at $E1FC20. 
+
+The current item reward index is set to be LDA $E75860,x. There's free space at E77560, which is 1D00 away. Check if Job reward ID, if so, add 1D00 to current indexing system, then continue 
