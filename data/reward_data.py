@@ -1,29 +1,43 @@
 # -*- coding: utf-8 -*-
 
 import pandas as pd 
-import random
 
-df_item_id = pd.read_excel('item_id.xlsx',index_col='item_id',dtype=str)
-df_magic_id = pd.read_excel('magic_id.xlsx',index_col='magic_id',dtype=str)
+df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
+df_magic_id = pd.read_csv('magic_id.csv',index_col='magic_id',dtype=str)
+df_crystal_id = pd.read_csv('crystal_id.csv',index_col='crystal_id',dtype=str)
+df_ability_id = pd.read_csv('ability_id.csv',index_col='ability_id',dtype=str)
 
 class Item():
+    reward_type = '40'
     def __init__(self,item_id):
         data = df_item_id.loc[item_id]
-        self.item_id = item_id
-        self.name = data['item_name']
+        self.reward_id = item_id
+        self.reward_name = data['item_name']
         self.type = data['type']
         self.subtype = data['subtype']
         
 
 class Magic():
+    reward_type = '20'
     def __init__(self,magic_id):
         data = df_magic_id.loc[magic_id]
-        self.item_id = magic_id
-        self.name = data['magic_name']
+        self.reward_id = magic_id
+        self.reward_name = data['magic_name']
         self.type = data['type']
 
-
-
+class Crystal():
+    reward_type = '50'
+    def __init__(self,crystal_id):
+        data = df_crystal_id.loc[crystal_id]
+        self.reward_id = crystal_id
+        self.reward_name = data['crystal_name']
+        
+class Ability():
+    reward_type = '60'
+    def __init__(self,ability_id):
+        data = df_ability_id.loc[ability_id]
+        self.reward_id = ability_id
+        self.reward_name = data['ability_name']
 
 
 
@@ -352,3 +366,172 @@ Magic_Song_Love = Magic('5D')
 Magic_Song_Charm = Magic('5E')
 
 all_magic = [Magic_Sword_Fire,Magic_Sword_Ice,Magic_Sword_Bolt,Magic_Sword_Venom,Magic_Sword_Mute,Magic_Sword_Sleep,Magic_Sword_Fire2,Magic_Sword_Ice2,Magic_Sword_Bolt2,Magic_Sword_Drain,Magic_Sword_Break,Magic_Sword_Bio,Magic_Sword_Fire3,Magic_Sword_Ice3,Magic_Sword_Bolt3,Magic_Sword_Holy,Magic_Sword_Flare,Magic_Sword_Psych,Magic_White_Cure,Magic_White_Scan,Magic_White_Antdt,Magic_White_Mute,Magic_White_Armor,Magic_White_Size,Magic_White_Cure2,Magic_White_Life,Magic_White_Charm,Magic_White_Image,Magic_White_Shell,Magic_White_Heal,Magic_White_Cure3,Magic_White_Wall,Magic_White_Bersk,Magic_White_Life2,Magic_White_Holy,Magic_White_Dispel,Magic_Black_Fire,Magic_Black_Ice,Magic_Black_Bolt,Magic_Black_Venom,Magic_Black_Sleep,Magic_Black_Toad,Magic_Black_Fire2,Magic_Black_Ice2,Magic_Black_Bolt2,Magic_Black_Drain,Magic_Black_Break,Magic_Black_Bio,Magic_Black_Fire3,Magic_Black_Ice3,Magic_Black_Bolt3,Magic_Black_Flare,Magic_Black_Doom,Magic_Black_Psych,Magic_Time_Drag,Magic_Time_Slow,Magic_Time_Regen,Magic_Time_Void,Magic_Time_Haste,Magic_Time_Float,Magic_Time_Demi,Magic_Time_Stop,Magic_Time_Exit,Magic_Time_Comet,Magic_Time_Slow2,Magic_Time_Reset,Magic_Time_Qrter,Magic_Time_Hast2,Magic_Time_Old,Magic_Time_Meteo,Magic_Time_Quick,Magic_Time_Xzone,Magic_Esper_Chocob,Magic_Esper_Sylph,Magic_Esper_Remora,Magic_Esper_Shiva,Magic_Esper_Ramuh,Magic_Esper_Ifrit,Magic_Esper_Titan,Magic_Esper_Golem,Magic_Esper_Shoat,Magic_Esper_Crbnkl,Magic_Esper_Syldra,Magic_Esper_Odin,Magic_Esper_Phenix,Magic_Esper_Levia,Magic_Esper_Bahmut,Magic_Song_Power,Magic_Song_Speed,Magic_Song_Vitality,Magic_Song_Magic,Magic_Song_Hero,Magic_Song_Requiem,Magic_Song_Love,Magic_Song_Charm]
+
+Knight_Crystal = Crystal('00')
+Monk_Crystal = Crystal('01')
+Thief_Crystal = Crystal('02')
+Dragoon_Crystal = Crystal('03')
+Ninja_Crystal = Crystal('04')
+Samurai_Crystal = Crystal('05')
+Berserker_Crystal = Crystal('06')
+Hunter_Crystal = Crystal('07')
+MysticKnight_Crystal = Crystal('08')
+WhiteMage_Crystal = Crystal('09')
+BlackMage_Crystal = Crystal('0A')
+TimeMage_Crystal = Crystal('0B')
+Summoner_Crystal = Crystal('0C')
+BlueMage_Crystal = Crystal('0D')
+RedMage_Crystal = Crystal('0E')
+Mediator_Crystal = Crystal('0F')
+Chemist_Crystal = Crystal('10')
+Geomancer_Crystal = Crystal('11')
+Bard_Crystal = Crystal('12')
+Dancer_Crystal = Crystal('13')
+Mimic_Crystal = Crystal('14')
+Freelancer_Crystal = Crystal('15')
+
+all_crystals = [Knight_Crystal,Monk_Crystal,Thief_Crystal,Dragoon_Crystal,Ninja_Crystal,Samurai_Crystal,Berserker_Crystal,Hunter_Crystal,MysticKnight_Crystal,WhiteMage_Crystal,BlackMage_Crystal,TimeMage_Crystal,Summoner_Crystal,BlueMage_Crystal,RedMage_Crystal,Mediator_Crystal,Chemist_Crystal,Geomancer_Crystal,Bard_Crystal,Dancer_Crystal,Mimic_Crystal,Freelancer_Crystal]
+
+Other_Ability=Ability('00')
+Item_Ability=Ability('01')
+Row_Ability=Ability('02')
+Def_Ability=Ability('03')
+Attack_Ability=Ability('04')
+Guard_Ability=Ability('05')
+Kick_Ability=Ability('06')
+BuildUp_Ability=Ability('07')
+Mantra_Ability=Ability('08')
+Escape_Ability=Ability('09')
+Steal_Ability=Ability('0A')
+Capture_Ability=Ability('0B')
+Jump_Ability=Ability('0C')
+DrgnSwd_Ability=Ability('0D')
+Smoke_Ability=Ability('0E')
+Image_Ability=Ability('0F')
+Throw_Ability=Ability('10')
+SwdSlap_Ability=Ability('11')
+GilToss_Ability=Ability('12')
+Slash_Ability=Ability('13')
+Animals_Ability=Ability('14')
+Aim_Ability=Ability('15')
+XFight_Ability=Ability('16')
+Conjure_Ability=Ability('17')
+Observe_Ability=Ability('18')
+Analyze_Ability=Ability('19')
+Tame_Ability=Ability('1A')
+Control_Ability=Ability('1B')
+Catch_Ability=Ability('1C')
+Release_Ability=Ability('1D')
+Combine_Ability=Ability('1E')
+Drink_Ability=Ability('1F')
+Pray_Ability=Ability('20')
+Revive_Ability=Ability('21')
+Terrain_Ability=Ability('22')
+Dummy01_Ability=Ability('23')
+Hide_Ability=Ability('24')
+Show_Ability=Ability('25')
+Dummy02_Ability=Ability('26')
+Sing_Ability=Ability('27')
+Flirt_Ability=Ability('28')
+Dance_Ability=Ability('29')
+Mimic_Ability=Ability('2A')
+Blank18_Ability=Ability('2B')
+Blank19_Ability=Ability('2C')
+Blank20_Ability=Ability('2D')
+Blank21_Ability=Ability('2E')
+Blank22_Ability=Ability('2F')
+MgcSwrd_Lv2_Ability=Ability('30')
+MgcSwrd_Lv3_Ability=Ability('31')
+MgcSwrd_Lv4_Ability=Ability('32')
+MgcSwrd_Lv5_Ability=Ability('33')
+MgcSwrd_Lv6_Ability=Ability('34')
+MgcSwrd_Lv7_Ability=Ability('35')
+Blank23_Ability=Ability('36')
+Blank24_Ability=Ability('37')
+White_Lv1_Ability=Ability('38')
+White_Lv2_Ability=Ability('39')
+White_Lv3_Ability=Ability('3A')
+White_Lv4_Ability=Ability('3B')
+White_Lv5_Ability=Ability('3C')
+White_Lv6_Ability=Ability('3D')
+Blank25_Ability=Ability('3E')
+Blank26_Ability=Ability('3F')
+Black_Lv1_Ability=Ability('40')
+Black_Lv2_Ability=Ability('41')
+Black_Lv3_Ability=Ability('42')
+Black_Lv4_Ability=Ability('43')
+Black_Lv5_Ability=Ability('44')
+Black_Lv6_Ability=Ability('45')
+Blank1_Ability=Ability('46')
+Blank2_Ability=Ability('47')
+Dimen_Lv1_Ability=Ability('48')
+Dimen_Lv2_Ability=Ability('49')
+Dimen_Lv3_Ability=Ability('4A')
+Dimen_Lv4_Ability=Ability('4B')
+Dimen_Lv5_Ability=Ability('4C')
+Dimen_Lv6_Ability=Ability('4D')
+Blank3_Ability=Ability('4E')
+Blank4_Ability=Ability('4F')
+Summon_Lv1_Ability=Ability('50')
+Summon_Lv2_Ability=Ability('51')
+Summon_Lv3_Ability=Ability('52')
+Summon_Lv4_Ability=Ability('53')
+Summon_Lv5_Ability=Ability('54')
+Blank5_Ability=Ability('55')
+Blank6_Ability=Ability('56')
+Blank7_Ability=Ability('57')
+Red_Lv1_Ability=Ability('58')
+Red_Lv2_Ability=Ability('59')
+Red_Lv3_Ability=Ability('5A')
+Blank8_Ability=Ability('5B')
+Blank9_Ability=Ability('5C')
+Blank10_Ability=Ability('5D')
+Blank11_Ability=Ability('5E')
+Blank27_Ability=Ability('5F')
+XMagic_Ability=Ability('60')
+Blue_Ability=Ability('61')
+Blank12_Ability=Ability('62')
+Blank13_Ability=Ability('63')
+Blank14_Ability=Ability('64')
+Blank15_Ability=Ability('65')
+Blank16_Ability=Ability('66')
+Blank17_Ability=Ability('67')
+Equip_Shield_Ability=Ability('68')
+Equip_Armors_Ability=Ability('69')
+Equip_Ribbon_Ability=Ability('6A')
+Equip_Swords_Ability=Ability('6B')
+Equip_Spears_Ability=Ability('6C')
+Equip_Katana_Ability=Ability('6D')
+Equip_Axes_Ability=Ability('6E')
+Equip_Bows_Ability=Ability('6F')
+Equip_Whips_Ability=Ability('70')
+Equip_Harps_Ability=Ability('71')
+Agility_Ability=Ability('72')
+HP_10_Ability=Ability('73')
+HP_20_Ability=Ability('74')
+HP_30_Ability=Ability('75')
+MP_10_Ability=Ability('76')
+MP_30_Ability=Ability('77')
+Brawl_Ability=Ability('78')
+Dbl_Grip_Ability=Ability('79')
+TwoHanded_Ability=Ability('7A')
+Medicine_Ability=Ability('7B')
+Cover_Ability=Ability('7C')
+Counter_Ability=Ability('7D')
+Evade_Ability=Ability('7E')
+Learning_Ability=Ability('7F')
+Barrier_Ability=Ability('80')
+Berserk_Ability=Ability('81')
+Caution_Ability=Ability('82')
+Preemptive_Ability=Ability('83')
+Passages_Ability=Ability('84')
+DmgFloor_Ability=Ability('85')
+Pitfalls_Ability=Ability('86')
+Equip_Rods_Ability=Ability('87')
+Dash_Ability=Ability('88')
+
+all_abilities = [Other_Ability,Item_Ability,Row_Ability,Def_Ability,Attack_Ability,Guard_Ability,Kick_Ability,BuildUp_Ability,Mantra_Ability,Escape_Ability,Steal_Ability,Capture_Ability,Jump_Ability,DrgnSwd_Ability,Smoke_Ability,Image_Ability,Throw_Ability,SwdSlap_Ability,GilToss_Ability,Slash_Ability,Animals_Ability,Aim_Ability,XFight_Ability,Conjure_Ability,Observe_Ability,Analyze_Ability,Tame_Ability,Control_Ability,Catch_Ability,Release_Ability,Combine_Ability,Drink_Ability,Pray_Ability,Revive_Ability,Terrain_Ability,Dummy01_Ability,Hide_Ability,Show_Ability,Dummy02_Ability,Sing_Ability,Flirt_Ability,Dance_Ability,Mimic_Ability,Blank18_Ability,Blank19_Ability,Blank20_Ability,Blank21_Ability,Blank22_Ability,MgcSwrd_Lv2_Ability,MgcSwrd_Lv3_Ability,MgcSwrd_Lv4_Ability,MgcSwrd_Lv5_Ability,MgcSwrd_Lv6_Ability,MgcSwrd_Lv7_Ability,Blank23_Ability,Blank24_Ability,White_Lv1_Ability,White_Lv2_Ability,White_Lv3_Ability,White_Lv4_Ability,White_Lv5_Ability,White_Lv6_Ability,Blank25_Ability,Blank26_Ability,Black_Lv1_Ability,Black_Lv2_Ability,Black_Lv3_Ability,Black_Lv4_Ability,Black_Lv5_Ability,Black_Lv6_Ability,Blank1_Ability,Blank2_Ability,Dimen_Lv1_Ability,Dimen_Lv2_Ability,Dimen_Lv3_Ability,Dimen_Lv4_Ability,Dimen_Lv5_Ability,Dimen_Lv6_Ability,Blank3_Ability,Blank4_Ability,Summon_Lv1_Ability,Summon_Lv2_Ability,Summon_Lv3_Ability,Summon_Lv4_Ability,Summon_Lv5_Ability,Blank5_Ability,Blank6_Ability,Blank7_Ability,Red_Lv1_Ability,Red_Lv2_Ability,Red_Lv3_Ability,Blank8_Ability,Blank9_Ability,Blank10_Ability,Blank11_Ability,Blank27_Ability,XMagic_Ability,Blue_Ability,Blank12_Ability,Blank13_Ability,Blank14_Ability,Blank15_Ability,Blank16_Ability,Blank17_Ability,Equip_Shield_Ability,Equip_Armors_Ability,Equip_Ribbon_Ability,Equip_Swords_Ability,Equip_Spears_Ability,Equip_Katana_Ability,Equip_Axes_Ability,Equip_Bows_Ability,Equip_Whips_Ability,Equip_Harps_Ability,Agility_Ability,HP_10_Ability,HP_20_Ability,HP_30_Ability,MP_10_Ability,MP_30_Ability,Brawl_Ability,Dbl_Grip_Ability,TwoHanded_Ability,Medicine_Ability,Cover_Ability,Counter_Ability,Evade_Ability,Learning_Ability,Barrier_Ability,Berserk_Ability,Caution_Ability,Preemptive_Ability,Passages_Ability,DmgFloor_Ability,Pitfalls_Ability,Equip_Rods_Ability,Dash_Ability]
+
+all_rewards = all_magic + all_items + all_crystals + all_abilities
+
+# list(random.choices(all_magic,k=5))

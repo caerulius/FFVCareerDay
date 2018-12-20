@@ -1,0 +1,257 @@
+﻿item_id,item_name,type,subtype
+00,<blank>,dummy,dummy
+01,Empty,dummy,dummy
+02,Knife,weapon,knife
+03,Dagger,weapon,knife
+04,Mythril Knife,weapon,knife
+05,Kunai,weapon,knife
+06,Mage Masher,weapon,knife
+07,Guardian,weapon,knife
+08,Kodachi,weapon,knife
+09,Orialcon,weapon,knife
+0A,Air Lance,weapon,knife
+0B,Assassin,weapon,knife
+0C,Sasuke,weapon,knife
+0D,Broadsword,weapon,sword
+0E,RegalCut,weapon,sword
+0F,Mythril Sword,weapon,sword
+10,Coral Sword,weapon,sword
+11,Ancient Sword,weapon,sword
+12,Epee Sword,weapon,sword
+13,Slumber Sword,weapon,sword
+14,Defender Sword,weapon,sword
+15,Excalibur,weapon,sword
+16,Ragnarok,weapon,sword
+17,Javelin,weapon,spear
+18,Spear,weapon,spear
+19,Mythril Spear,weapon,spear
+1A,Trident,weapon,spear
+1B,Wind Spear,weapon,spear
+1C,Partisan,weapon,spear
+1D,Gungnir,weapon,spear
+1E,DblLance,weapon,spear
+1F,Holy Lance,weapon,spear
+20,Dragoon Lance,weapon,spear
+21,Battle Axe,weapon,axe
+22,Mythril Hammer,weapon,axe
+23,Ogre Killer,weapon,axe
+24,War Hammer,weapon,axe
+25,Venom Axe,weapon,axe
+26,Earth Hammer,weapon,axe
+27,Rune Axe,weapon,axe
+28,Thor Hammer,weapon,axe
+29,Katana,weapon,katana
+2A,Air Blade,weapon,katana
+2B,Kotetsu,weapon,katana
+2C,Bizen,weapon,katana
+2D,Forged,weapon,katana
+2E,Murasume,weapon,katana
+2F,Masamune,weapon,katana
+30,Tempest,weapon,katana
+31,Rod,weapon,rod
+32,Fire Rod,weapon,rod
+33,Ice Rod,weapon,rod
+34,Thunder Rod,weapon,rod
+35,Venom Rod,weapon,rod
+36,Lillith Rod,weapon,rod
+37,Wizard Rod,weapon,rod
+38,Staff,weapon,staff
+39,Mythril Staff,weapon,staff
+3A,Power Staff,weapon,staff
+3B,Healing Staff,weapon,staff
+3C,Staff of Light,weapon,staff
+3D,Sage's Staff,weapon,staff
+3E,Judgement Staff,weapon,staff
+3F,Fire Bow,weapon,bow
+40,Ice Bow,weapon,bow
+41,Thunder Bow,weapon,bow
+42,Darkness Bow,weapon,bow
+43,Killer Bow,weapon,bow
+44,Elven Bow,weapon,bow
+45,Yoichi Bow,weapon,bow
+46,Artemis Bow,weapon,bow
+47,Silver Harp,weapon,harp
+48,Dream Harp,weapon,harp
+49,Lamia's Harp,weapon,harp
+4A,Apollo's Harp,weapon,harp
+4B,Whip,weapon,whip
+4C,Chain Whip,weapon,whip
+4D,Thunder Whip,weapon,whip
+4E,Flame Whip,weapon,whip
+4F,Dragon's Whisker,weapon,whip
+50,Giyaman,weapon,bell
+51,Earth Bell,weapon,bell
+52,Rune Chime,weapon,bell
+53,Tinkerbell,weapon,bell
+54,Sabre (*Dummy),dummy,dummy
+55,Drain Sword,weapon,sword
+56,RuneEdge,weapon,sword
+57,Flametongue,weapon,sword
+58,IceBrand,weapon,sword
+59,Full Moon,weapon,flail
+5A,Shuriken,item,throw
+5B,Pinwheel,item,throw
+5C,Excailbur,item,throw
+5D,BeastKiller,weapon,whip
+5E,Flail,weapon,flail
+5F,Morning Star,weapon,flail
+60,Wonder Wand,weapon,rod
+61,Brave Blade,weapon,sword
+62,Soot,weapon,flail
+63,Chicken Knife,weapon,knife
+64,RisingSun,item,throw
+65,Silver Bow,weapon,bow
+66,Gale Bow,weapon,bow
+67,AntiMagic Bow,weapon,bow
+68,Avis Killer,weapon,bow
+69,DoomCut,weapon,axe
+6A,Giant's Axe,weapon,axe
+6B,ManEater,weapon,knife
+6C,Thief Knife,weapon,knife
+6D,Dancing Dagger,weapon,knife
+6E,Enhancer,weapon,sword
+6F,L. Hand,dummy,dummy
+70,R. Hand,dummy,dummy
+71,<dummy>,dummy,dummy
+72,<dummy>,dummy,dummy
+73,<dummy>,dummy,dummy
+74,<dummy>,dummy,dummy
+75,<dummy>,dummy,dummy
+76,<dummy>,dummy,dummy
+77,<dummy>,dummy,dummy
+78,<dummy>,dummy,dummy
+79,<dummy>,dummy,dummy
+7A,<dummy>,dummy,dummy
+7B,<dummy>,dummy,dummy
+7C,<dummy>,dummy,dummy
+7D,<dummy>,dummy,dummy
+7E,<dummy>,dummy,dummy
+7F,<dummy>,dummy,dummy
+80,<blank>,dummy,dummy
+81,Leather Shield,armor,shield
+82,Bronze Shield,armor,shield
+83,Iron Shield,armor,shield
+84,Mythril Shield,armor,shield
+85,Golden Shield,armor,shield
+86,Aegis Shield,armor,shield
+87,Diamond Shield,armor,shield
+88,Crystal Shield,armor,shield
+89,Leather Cap,armor,helm
+8A,Bronze Helm,armor,helm
+8B,Iron Helm,armor,helm
+8C,Mythril Helm,armor,helm
+8D,Golden Helm,armor,helm
+8E,Diamond Helm,armor,helm
+8F,Crystal Helm,armor,helm
+90,Plumed Hat,armor,helm
+91,Tricorn Hat,armor,helm
+92,Magus,armor,helm
+93,Circlet,armor,helm
+94,Gold Hairpin,armor,helm
+95,Ribbon,armor,helm
+96,Bandana,armor,helm
+97,GrnBeret,armor,helm
+98,DarkHood,armor,helm
+99,Lamia's Tiara,armor,helm
+9A,Leather Armor,armor,armor
+9B,Bronze Armor,armor,armor
+9C,Iron Armor,armor,armor
+9D,Mythril Armor,armor,armor
+9E,Golden Armor,armor,armor
+9F,Diamond Armor,armor,armor
+A0,Crystal Armor,armor,armor
+A1,CopperPlt,armor,armor
+A2,Training Suit,armor,armor
+A3,Silver Plate,armor,armor
+A4,Stealth Suit,armor,armor
+A5,DiamndPlt,armor,armor
+A6,DarkSuit,armor,armor
+A7,Cotton Robe,armor,armor
+A8,Silk robe,armor,armor
+A9,Gaia Gear,armor,armor
+AA,Bard's Surplice,armor,armor
+AB,Lumina Robe,armor,armor
+AC,Black Robe,armor,armor
+AD,White Robe,armor,armor
+AE,Mirage Vest,armor,armor
+AF,Guard Ring,armor,acc
+B0,Thief's Glove,armor,acc
+B1,Giant's Gloves,armor,acc
+B2,Elf Cape,armor,acc
+B3,Cursed Ring,armor,acc
+B4,Glasses,armor,acc
+B5,Running Shoes,armor,acc
+B6,Mythril Glove,armor,acc
+B7,Silver Armlet,armor,acc
+B8,Diamond Armlet,armor,acc
+B9,Strength,armor,acc
+BA,Power Wrist,armor,acc
+BB,Angel Gwn,armor,acc
+BC,Angel Ring,armor,acc
+BD,Flame Ring,armor,acc
+BE,Coral Ring,armor,acc
+BF,Bone Mail,armor,armor
+C0,Leather Shoes,armor,acc
+C1,Kaiser Knuckles,armor,acc
+C2,Gauntlets,armor,acc
+C3,Tiger Mask,armor,acc
+C4,Flame Shield,armor,shield
+C5,CornaJar,armor,acc
+C6,Genji Shield,armor,shield
+C7,Genji Helm,armor,helm
+C8,Genji Armor,armor,armor
+C9,Genji Gloves,armor,acc
+CA,Wall Ring,armor,acc
+CB,Coronet,armor,helm
+CC,Thornlet,armor,helm
+CD,Ice Shield,armor,shield
+CE,Cursed Shield,armor,shield
+CF,Rainbow Dress,armor,armor
+D0,Red Shoes,armor,acc
+D1,<dummy>,dummy,dummy
+D2,<dummy>,dummy,dummy
+D3,<dummy>,dummy,dummy
+D4,<dummy>,dummy,dummy
+D5,<dummy>,dummy,dummy
+D6,<dummy>,dummy,dummy
+D7,<dummy>,dummy,dummy
+D8,<dummy>,dummy,dummy
+D9,<dummy>,dummy,dummy
+DA,<dummy>,dummy,dummy
+DB,<dummy>,dummy,dummy
+DC,<dummy>,dummy,dummy
+DD,<dummy>,dummy,dummy
+DE,<dummy>,dummy,dummy
+DF,<dummy>,dummy,dummy
+E0,Potion,item,restore
+E1,HiPotion,item,restore
+E2,Ether,item,restore
+E3,Elixir,item,restore
+E4,Phoenix Down,item,restore
+E5,Maiden's Kiss,item,restore
+E6,Revivify,item,restore
+E7,TurtleShell,item,mix
+E8,Antidote,item,restore
+E9,Eyedrop,item,restore
+EA,DragonFang,item,mix
+EB,DarkMatter,item,mix
+EC,Soft,item,restore
+ED,LuckMallet,item,restore
+EE,<dummy>,dummy,dummy
+EF,Magic Lamp,item,special
+F0,Tent,item,restore
+F1,Cabin,item,restore
+F2,Giant Drink,item,mix
+F3,Power Drink,item,mix
+F4,Speed Drink,item,mix
+F5,Protect Drink,item,mix
+F6,Hero Drink,item,mix
+F7,DrgnCrest,item,special
+F8,OmegaMedl,item,special
+F9,Ramuh,item,summon
+FA,Shoat,item,summon
+FB,Golem,item,summon
+FC,Flame Scroll,item,throw
+FD,Water Scroll,item,throw
+FE,Thunder Scroll,item,throw
+FF,<dummy>,dummy,dummy

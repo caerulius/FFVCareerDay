@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 import pandas as pd 
+from reward_data import *
 import random
 
 df_chest_table = pd.read_excel('chest_table.xlsx', dtype=str)
 df_chest_table['idx'] = df_chest_table['idx'].astype(int)
-df_item_id = pd.read_excel('item_id.xlsx',index_col='item_id',dtype=str)
+df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
 df_chest_id = pd.read_excel('chest_id.xlsx',index_col='chest_id',dtype=str)
 
-item_id_dict = pd.read_excel('item_id.xlsx',index_col='item_id',dtype=str).to_dict()['item_name'] # id first
+item_id_dict = pd.read_csv('item_id.csv',index_col='item_id',dtype=str).to_dict()['item_name'] # id first
 item_id_dict2 = dict((v,k) for k,v in item_id_dict.items()) # item first
 chest_id_dict = pd.read_excel('chest_id.xlsx',index_col='chest_id',dtype=str).to_dict()['chest_name'] # id first
 chest_id_dict2 = dict((v,k) for k,v in chest_id_dict.items()) # item first
@@ -37,11 +38,11 @@ class Chest(object):
         self.chest_contents = [self.type, self.id, self.reward_type, self.reward]
         self.data = self.loc1 + self.loc2 + self.type + self.id
         self.asar_output = f";{self.original_reward}→{self.reward}\norg ${self.address} \ndb ${self.loc1}, ${self.loc2}, ${self.type}, ${self.id} "
-    def random_item(self):
-        random_item = random.choice(list(item_id_dict2.items()))
-        self.reward = random_item[0]
-        self.type = '40'
-        self.id = random_item[1]
+    def random_reward(self):
+        random_item = random.choice(all_rewards)
+        self.reward = random_item.reward_name
+        self.type = random_item.reward_type
+        self.id = random_item.reward_id
         self.update_contents()
     def update_item(self,item_type,item):
         '''

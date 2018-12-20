@@ -27,5 +27,5 @@ import random
 
 # Chest_1.update_item('item','Wonder Wand')
 for chest in all_chests:
-    chest.random_item()
+    chest.random_reward()
     print(chest.asar_output)
