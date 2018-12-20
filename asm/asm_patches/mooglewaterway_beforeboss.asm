@@ -8,8 +8,23 @@ org $C90E7C
 ; Sets flag, immediately ends. Player won't notice
 
 
+; db $DE, $00		; set up reward
+; db $DF			; call text handler 
+; db $A2, $5E                     ;Set Event Flag 05E
+; db $FF                                 ;End Event
+
+; padbyte $00
+; pad $C90E94
+
+
+
+
+
+
+
+
+; preserved
 db $A2, $5E                     ;Set Event Flag 05E
-;db $CC, $20
 db $FF                                 ;End Event
 
 padbyte $00
