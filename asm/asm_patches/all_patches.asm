@@ -155,7 +155,5 @@ incsrc misc/chest_magicreward.asm
 incsrc recovery/all_inns.asm
 incsrc recovery/tent.asm
 
-;incsrc colors/desaturate2.asm
-
 ; optionals
 ;incsrc optionals.asm

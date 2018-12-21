@@ -13,7 +13,7 @@ lda $D13213,x
 STA !rewardid
 LDA !typeid
 CMP #$50 ; if new id 'JOB' 
-BEQ BranchToJobReward
+BEQ IntermediateBranchToJobReward
 LDA !typeid
 CMP #$60
 BEQ IntermediateBranchToAbilityReward
@@ -22,10 +22,15 @@ BPL BranchIfPlusChestIDBranch
 JML $C00E44
 
 IntermediateBranchToAbilityReward:
-JMP BranchToAbilityReward
+JSL BranchToAbilityReward
+JML $c00e74
 
 BranchIfPlusChestIDBranch:
-JMP BranchIfPlusChestID
+JML $C00E47
+
+IntermediateBranchToJobReward:
+JSL BranchToJobReward
+JML $c00e74
 
 BranchToJobReward:
 LDA !rewardid
@@ -187,7 +192,7 @@ LDA #$02
 STA $AF
 LDA !rewardid
 STA $16a2
-JML $c00e74
+RTL
 
 
 
@@ -235,8 +240,6 @@ JML JobsAssigned
 
 
 
-BranchIfPlusChestID:
-JML $C00E47
 
 
 

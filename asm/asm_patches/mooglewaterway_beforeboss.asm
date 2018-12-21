@@ -10,11 +10,17 @@ org $C90E7C
 
 ; db $DE, $00		; set up reward
 ; db $DF			; call text handler 
-; db $A2, $5E                     ;Set Event Flag 05E
-; db $FF                                 ;End Event
+; db $DE, $01		; set up reward
+; db $DF			; call text handler 
+; db $DE, $02		; set up reward
+; db $DF			; call text handler 
+; db $DE, $03		; set up reward
+; db $DF			; call text handler 
+db $A2, $5E                     ;Set Event Flag 05E
+db $FF                                 ;End Event
 
-; padbyte $00
-; pad $C90E94
+padbyte $00
+pad $C90E94
 
 
 
@@ -24,8 +30,8 @@ org $C90E7C
 
 
 ; preserved
-db $A2, $5E                     ;Set Event Flag 05E
-db $FF                                 ;End Event
+; db $A2, $5E                     ;Set Event Flag 05E
+; db $FF                                 ;End Event
 
-padbyte $00
-pad $C90E94
+; padbyte $00
+; pad $C90E94
