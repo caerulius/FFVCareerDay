@@ -1,16 +1,18 @@
 hirom
 !base = $C00000
-!walkingspeedconfig = $7E0970 
-!airshipenabled = $7E0AF2
-!hiryuuenabled = $7E0AE6
-!chocoboenabled = $7E0ADC
-!blackchocoboenabled = $7E0B00
-!submarineenabled = $7E0AE9
+!walkingspeedconfig = $0970 
+!airshipenabled = $0AF2
+!hiryuuenabled = $0AE6
+!chocoboenabled = $0ADC
+!blackchocoboenabled = $0B00
+!submarineenabled = $0AE9
 !worldmapspeed = $C0573E
-!worldmapflag = $7E0B53 ; if this is 1, not in world map
+!worldmapflag = $0B53 ; if this is 1, not in world map
+!vehicleswitcher = $169C
+!vehicleswitcher2 = $169B
 !blackchocospeed = $C008B5
 !boatspeed = $C008B8
-!input = $7E0b03
+!input = $0b03
 
 ; change text in config menu
 org $E731DB
@@ -40,6 +42,36 @@ nop
 org $F35000
 SpeedHookGeneric:
 
+; Sometimes, when leaving the map or standard menu, even in a vehicle this generic handler gets called 
+; Fix by branching on vehicle 
+; check vehicle values at $00169C
+; Walking: $FC
+; Choco : $00
+; BlackChoco : $04
+; Airship/steamship : $14
+; Submarine : $0C
+
+LDA !vehicleswitcher
+CMP #$FC ; Walking
+BEQ HandleWalkingSpeed
+CMP #$00 ; Choco
+BEQ SpeedSettingWMFast1
+CMP #$04 ; BChoco
+BEQ SpeedSettingWMFast1
+CMP #$14 ; Airship
+BEQ HandleWeirdAirship
+CMP #$0C ; Submarine
+BEQ SpeedSettingWMFast1
+BRA HandleWalkingSpeed ; if nothing else met, continue
+
+HandleWeirdAirship: 
+
+lda !vehicleswitcher2
+BEQ SpeedSettingWMFast1; if $00 (equal), then on boat, not airship
+BNE SpeedSettingWMFast3 ; otherwise airship speed
+
+
+HandleWalkingSpeed:
 ; next check world map vs. dungeons 
 lda !worldmapflag
 CMP #$00
@@ -180,6 +212,10 @@ JML WorldMapHandler
 org $F35100
 WorldMapHandler:
 sep #$20
+; handle submarine underwater
+lda $169B
+CMP #$20
+BEQ SubmarineSpeed
 ; handle airship
 lda $7E0B3D
 CMP #$40
@@ -187,7 +223,10 @@ BEQ AirshipSpeed
 JSL SpeedHookGeneric
 JMP FinishedAirshipSpeed
 AirshipSpeed:
-lda #$10
+lda #$20
+JMP FinishedAirshipSpeed
+SubmarineSpeed:
+lda #$08
 FinishedAirshipSpeed:
 rep #$20
 
@@ -201,7 +240,24 @@ JML ChocoboHandlerMount
 org $F35200
 ChocoboHandlerMount:
 ;JSL SpeedHookGeneric
+; This isn't actually just Chocobo, also airships (sometimes...)
+lda $169C
+CMP #$14
+BEQ ChocoboAirshipMount
+lda #$08
+sta $c0
+JML $C007C1
+ChocoboAirshipMount:
+; now check if actually on boat or airship
+; This does need to get fixed at some point - the vehicleswitcher2 is set to $08 whenever you use the boat function at all, so if you never use it, airship speed will be $10 instead of $20 until you menu/map
+LDA !vehicleswitcher2
+CMP #$08
+BEQ FinishAirshipMount
 lda #$10
+sta $c0
+JML $C007C1
+FinishAirshipMount:
+lda #$20
 sta $c0
 JML $C007C1
 
@@ -239,96 +295,10 @@ org $F35480
 BoatHandlerToAirship:
 sta $0adb
 ;JSL SpeedHookGeneric
-lda #$10
+lda #$20
 sta $c0
 JML $C00C0F
 
-
-; ; remove storing 0 when on airship
-; org $C05532
-; nop
-; nop
-
-; walking speed in config $7E0BC0
-; 00, 10, 20, 30, 40, 50 
-
-; functions that change walking speed
-; in town, every step
-;c01242
-;c01278 <<<<< if you wanna use the same lookup table for all, then you need to disable the asl's here bc it doubles speed in towns/dungeons
-
-; enter world map
-; c056ef
-
-;board bchoco/boat/choco
-;c007bf
-
-;dismount bchoco
-;c00880
-
-;dismount boat
-;c01110
-
-; mount airship
-; c00c0d
-
-; dismount airship
-; c00bb9
-
-
-
-
-; old code for towns/dungeons before generic handler was made
-
-; org $c0123e
-; JML SpeedHookTownsDungeons
-
-; org $F34000
-; SpeedHookTownsDungeons:
-
-; ; ; first check for B input. If so, immediately set speed to Speed3
-; ; lda !input
-; ; and #$80
-; ; BNE Speed3
-
-; ; otherwise use config
-; lda !walkingspeedconfig
-; and #$70
-; CMP #$50
-; BEQ Speed0
-; CMP #$40
-; BEQ Speed0
-; CMP #$30
-; BEQ Speed2
-; CMP #$20
-; BEQ Speed3
-; CMP #$10
-; BEQ Speed4
-; CMP #$00
-; BEQ Speed5
-
-; ; default condition if others aren't met
-
-
-
-; Speed0:
-; lda #$01 ; duplicate for now, setting to zero literally doesnt move char
-; JML SpeedHookTownsDungeonsFinish
-; Speed2:
-; lda #$01
-; JML SpeedHookTownsDungeonsFinish
-; Speed3:
-; lda #$02
-; JML SpeedHookTownsDungeonsFinish
-; Speed4:
-; lda #$04
-; JML SpeedHookTownsDungeonsFinish
-; Speed5:
-; lda #$08
-; JML SpeedHookTownsDungeonsFinish
-
-
-; ; lda $c0171c, x
-; SpeedHookTownsDungeonsFinish:
-; sta $c0
-; JML $C01244
+; ; Boat from airship hook
+org $C00BB7
+lda #$08
