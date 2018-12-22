@@ -165,8 +165,8 @@ PHA
 PHX
 PHY
 
-; this code will block out the 5/6 on the config menu
-; due to the index system and ROM data, the game automatically copies the "1 2 3 4 5 6 " twice from ROM, so it's not possible to isolate "1 2 3 4" for walk speed
+; this code will block out the 4/5/6 on the config menu
+; due to the index system and ROM data, the game automatically copies the "1 2 3 4 5 6 " twice from ROM, so it's not possible to isolate "1 2 3" for walk speed
 ; therefore, we use vram to block it out, which is only active in the config menu 
 
 sep #$20
@@ -176,6 +176,18 @@ bne CheckDestinationWriter
 
 
 ; this writes to vram 
+LDA #$55  ; WRITE address  - location of "4" 
+STA $002116
+LDA #$11  ; WRITE address
+STA $002117
+LDA #$80
+STA $002115
+
+LDA #$96
+STA $002118
+
+
+
 LDA #$57  ; WRITE address  - location of "5" 
 STA $002116
 LDA #$11  ; WRITE address
@@ -299,18 +311,8 @@ JML FinishFrameHookMenu
 
 
 FinishFrameHookMenu:
-sep #$20
 ; original instructions
-LDA #$00
-STA !lastframesave
-lda #$08
-sta $7E0BC0
 rep #$20
-
-
-; FinishEnd:
-
-; original instructions
 PLY
 PLX
 PLA
