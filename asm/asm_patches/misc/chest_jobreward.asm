@@ -208,6 +208,11 @@ BranchToAbilityReward:
 !3pabilities = $091F
 !4pabilities = $0933
 
+!1pabilitiescount = $08F3
+!2pabilitiescount = $08F4
+!3pabilitiescount = $08F5
+!4pabilitiescount = $08F6
+
 LDA !rewardid
 pha
 lsr a
@@ -233,9 +238,13 @@ lda !4pabilities, y
 ora $C0C9B9,X
 sta !4pabilities, y
 
+inc !1pabilitiescount
+inc !2pabilitiescount
+inc !3pabilitiescount
+inc !4pabilitiescount
+
 ; end with generic finisher
 JML JobsAssigned
-
 
 
 

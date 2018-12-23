@@ -62,7 +62,7 @@ BEQ EventRewardAbility
 JMP FinishRewardEvent ; in case no matches
 
 
-EventRewardItem: ; give item  <<<<<<<<<<<<<<<< FIX THIS: Use chest routine to identify problem at $c0bfe5 $c00e83 (end of inventory loop)
+EventRewardItem: ; give item
 lda !rewardid
 sta $16a2				; another reward id
 jsr $bfdd ; this subroutine handles awarding item based on cycling through inventory
