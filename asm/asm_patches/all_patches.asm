@@ -1,3 +1,7 @@
+; conditionals
+!vanillarewards = 0
+
+
 ; world 1                                   Destinations:
 incsrc world1/intro_cutscene.asm           ; 00 Tycoon Meteor
 incsrc world1/tycoon_meteor_01_mount.asm
@@ -154,6 +158,10 @@ incsrc misc/chest_magicreward.asm
 
 incsrc recovery/all_inns.asm
 incsrc recovery/tent.asm
+
+; reward events
+incsrc reward_events/piratescave_syldra.asm
+incsrc reward_events/balcastle_odin.asm
 
 ; optionals
 ;incsrc misc/optionals.asm

@@ -15,15 +15,29 @@ pad $C88D0B
 ; From catching the chocobo to taking off for real
 org $C94606
 
-db $0A								;Player Hide
-db $A0, $09							;(Message) 09
-db $70								;Very short pause
-db $A0, $06							;(Message) 06
-db $CB, $FD, $01					;Clear Flag 2/3/4/5/FD 01
-db $A4, $FE							;Set Event Flag 1FE
-db $CD, $96, $03					;Run event index 0396
-db $C6, $15							;Add job 15
-db $C6, $00							;Add job Knight
+if !vanillarewards == 1
+	db $0A								;Player Hide
+	db $A0, $09							;(Message) 09 ; <---reward--->
+	db $70								;Very short pause
+	db $A0, $06							;(Message) 06 ; <---reward--->
+	db $CB, $FD, $01					;Clear Flag 2/3/4/5/FD 01
+	db $A4, $FE							;Set Event Flag 1FE
+	db $CD, $96, $03					;Run event index 0396
+	db $C6, $15							;Add job 15  		; <---reward--->
+	db $C6, $00							;Add job Knight  		; <---reward--->
+else
+	db $0A								;Player Hide
+	db $DE, $0A		; set up reward
+	db $DF			; call text handler
+	db $70								;Very short pause
+	db $DE, $0B		; set up reward
+	db $DF			; call text handler
+	db $CB, $FD, $01					;Clear Flag 2/3/4/5/FD 01
+	db $A4, $FE							;Set Event Flag 1FE
+	db $CD, $96, $03					;Run event index 0396
+endif
+
+
 db $B7, $02							;Add/Remove character 02
 db $B7, $09							;Add/Remove character 09
 db $B7, $0B							;Add/Remove character 0B

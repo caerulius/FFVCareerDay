@@ -3,8 +3,13 @@ hirom
 org $C92706
 
 db $80, $16                     ;Sprite 080 do event: face left, standing
-db $C8, $37, $05                ;Display Message/Text/Dialogue 37 05
-db $AC, $58                     ;Add Magic Speed Song
+if !vanillarewards == 1
+	db $C8, $37, $05                ;Display Message/Text/Dialogue 37 05
+	db $AC, $58                     ;Add Magic Speed Song
+else
+	db $DE, $1B				; set up reward
+	db $DF					; call text handler
+endif
 db $80, $16                     ;Sprite 080 do event: face left, standing
 db $71                          ;Short pause
 db $80, $0A                     ;Sprite 080 do event: Hide

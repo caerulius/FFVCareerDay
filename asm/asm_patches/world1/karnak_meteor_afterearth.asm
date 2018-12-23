@@ -35,7 +35,14 @@ db $87, $0A                     ;Sprite 087 do event: Hide
 db $BD, $11, $FF                ;Start Event Battle 11
 db $72                          ;Medium pause
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
-db $C8, $F0, $03                ;Display Message/Text/Dialogue F0 03
+if !vanillarewards == 1
+	db $C8, $F0, $03                ;Display Message/Text/Dialogue F0 03 ; <---reward--->
+	db $AC, $4E                     ;Add Magic Titan ; <---reward--->
+else
+	db $DE, $11				; set up reward
+	db $DF					; call text handler
+endif
+
 db $73
 db $CB, $F9, $00                ;Clear Flag 2/3/4/5/F9 00
 db $CB, $FB, $00                ;Clear Flag 2/3/4/5/FB 00
@@ -47,7 +54,6 @@ db $C3, $10                     ;Fade in Speed 10
 db $80, $10                     ;Sprite 080 do event: face up, left hand forward
 db $81, $10                     ;Sprite 081 do event: face up, left hand forward
 db $CD, $B7, $04                ;Run event index 04B7
-db $AC, $4E                     ;Add Magic Titan
 db $CB, $FC, $00                ;Clear Flag 2/3/4/5/FC 00
 db $A3, $BB                     ;Clear Event Flag 0BB
 db $A2, $50                     ;Set Event Flag 050

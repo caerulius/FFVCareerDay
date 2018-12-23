@@ -59,7 +59,12 @@ db $00                          ;Player Hold
 db $86, $03                     ;Sprite 086 do event: Move Down
 db $86, $0A                     ;Sprite 086 do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $15                     ;Add Item Excalibur
+if !vanillarewards == 1
+	db $AA, $15                     ;Add Item Excalibur
+else
+	db $DE, $29				; set up reward
+endif
+
 db $CB, $24, $01                ;Clear Flag 2/3/4/5/24 01
 db $FF                          ;End Event
 
@@ -86,7 +91,11 @@ db $00                          ;Player Hold
 db $87, $03                     ;Sprite 087 do event: Move Down
 db $87, $0A                     ;Sprite 087 do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $0B                     ;Add Item Assassin Dagger
+if !vanillarewards == 1
+	db $AA, $0B                     ;Add Item Assassin Dagger
+else
+	db $DE, $2A				; set up reward
+endif
 db $CB, $25, $01                ;Clear Flag 2/3/4/5/25 01
 db $FF                          ;End Event
 
@@ -112,7 +121,11 @@ db $00                          ;Player Hold
 db $88, $03                     ;Sprite 088 do event: Move Down
 db $88, $0A                     ;Sprite 088 do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $0C                     ;Add Item Hardened Dagger
+if !vanillarewards == 1
+	db $AA, $0C                     ;Add Item Assassin Dagger
+else
+	db $DE, $2B				; set up reward
+endif
 db $CB, $26, $01                ;Clear Flag 2/3/4/5/26 01
 db $FF                          ;End Event
 
@@ -138,7 +151,11 @@ db $00                          ;Player Hold
 db $89, $03                     ;Sprite 089 do event: Move Down
 db $89, $0A                     ;Sprite 089 do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $1F                     ;Add Item Holy Spear
+if !vanillarewards == 1
+	db $AA, $1F                     ;Add Item 
+else
+	db $DE, $2C				; set up reward
+endif
 db $CB, $27, $01                ;Clear Flag 2/3/4/5/27 01
 db $FF                          ;End Event
 
@@ -164,7 +181,11 @@ db $00                          ;Player Hold
 db $8A, $03                     ;Sprite 08A do event: Move Down
 db $8A, $0A                     ;Sprite 08A do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $27                     ;Add Item Rune Axe
+if !vanillarewards == 1
+	db $AA, $27                     ;Add Item
+else
+	db $DE, $2D				; set up reward
+endif
 db $CB, $28, $01                ;Clear Flag 2/3/4/5/28 01
 db $FF                          ;End Event
 
@@ -190,7 +211,11 @@ db $00                          ;Player Hold
 db $8B, $03                     ;Sprite 08B do event: Move Down
 db $8B, $0A                     ;Sprite 08B do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $2F                     ;Add Item Masamune
+if !vanillarewards == 1
+	db $AA, $2F                     ;Add Item
+else
+	db $DE, $2E				; set up reward
+endif
 db $CB, $29, $01                ;Clear Flag 2/3/4/5/29 01
 db $FF                          ;End Event
 
@@ -216,7 +241,11 @@ db $00                          ;Player Hold
 db $8C, $03                     ;Sprite 08C do event: Move Down
 db $8C, $0A                     ;Sprite 08C do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $45                     ;Add Item Yoichi Bow
+if !vanillarewards == 1
+	db $AA, $45                     ;Add Item
+else
+	db $DE, $2F				; set up reward
+endif
 db $CB, $2A, $01                ;Clear Flag 2/3/4/5/2A 01
 db $FF                          ;End Event
 
@@ -242,7 +271,11 @@ db $00                          ;Player Hold
 db $8D, $03                     ;Sprite 08D do event: Move Down
 db $8D, $0A                     ;Sprite 08D do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $4E                     ;Add Item Flame Whip
+if !vanillarewards == 1
+	db $AA, $4E                     ;Add Item
+else
+	db $DE, $30				; set up reward
+endif
 db $CB, $2B, $01                ;Clear Flag 2/3/4/5/2B 01
 db $FF                          ;End Event
 
@@ -268,7 +301,11 @@ db $00                          ;Player Hold
 db $8E, $03                     ;Sprite 08E do event: Move Down
 db $8E, $0A                     ;Sprite 08E do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $3D                     ;Add Item Sage Staff
+if !vanillarewards == 1
+	db $AA, $3D                     ;Add Item
+else
+	db $DE, $31				; set up reward
+endif
 
 db $CB, $2C, $01                ;Turn off bit 10 at address  0x7e0a79
 db $FF                          ;End Event
@@ -295,7 +332,11 @@ db $00                          ;Player Hold
 db $8F, $03                     ;Sprite 08F do event: Move Down
 db $8F, $0A                     ;Sprite 08F do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $37                     ;Add Item Wizard Rod
+if !vanillarewards == 1
+	db $AA, $37                     ;Add Item
+else
+	db $DE, $32				; set up reward
+endif
 db $CB, $2D, $01                ;Clear Flag 2/3/4/5/2D 01
 db $FF                          ;End Event
 
@@ -321,7 +362,11 @@ db $00                          ;Player Hold
 db $90, $03                     ;Sprite 190 do event: Move Down
 db $90, $0A                     ;Sprite 190 do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $4A                     ;Add Item Apollo Harp
+if !vanillarewards == 1
+	db $AA, $4A                     ;Add Item
+else
+	db $DE, $33				; set up reward
+endif
 db $CB, $2E, $01                ;Clear Flag 2/3/4/5/2E 01
 db $FF                          ;End Event
 
@@ -347,7 +392,11 @@ db $00                          ;Player Hold
 db $91, $03                     ;Sprite 191 do event: Move Down
 db $91, $0A                     ;Sprite 191 do event: Hide
 db $CD, $B2, $06                ;Run event index 06B2
-db $AA, $51                     ;Add Item Earth Bell
+if !vanillarewards == 1
+	db $AA, $51                     ;Add Item
+else
+	db $DE, $34				; set up reward
+endif
 db $CB, $2F, $01                ;Clear Flag 2/3/4/5/2F 01
 db $FF                          ;End Event
 

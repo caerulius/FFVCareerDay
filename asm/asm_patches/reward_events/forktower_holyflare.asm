@@ -27,18 +27,21 @@ db $E3, $9D, $01, $2D, $23, $00 ;Inter-map cutscene? 9D 01 2D 23 00
 db $09                          ;Player Show
 db $76                          ;<Unknown>
 db $C3, $0C                     ;Fade in Speed 0C
-db $74                          ;Very long pause
 db $80, $03                     ;Sprite 080 do event: Move Down
 db $80, $0A                     ;Sprite 080 do event: Hide
-db $70                          ;Very short pause
 db $BD, $30, $FF                ;Start Event Battle 30
-db $71                          ;Short pause
 db $C5, $80                     ;<unknown>
-db $71                          ;Short pause
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 db $39                          ;Player pose: face down, both arms raised
 db $C5, $80                     ;<unknown>
-db $C8, $39, $07                ;Display Message/Text/Dialogue 39 07  ; OBTAINED WHITE MAGIC HOLY
+if !vanillarewards == 1
+	db $C8, $39, $07                ;Display Message/Text/Dialogue 39 07  ; OBTAINED WHITE MAGIC HOLY
+else
+	db $DE, $1F				; set up reward
+	db $DF					; call text handler
+endif
+
+
 db $E4, $E3                     ;Unknown
 db $93, $01                     ;Sprite 193 do event: Move Up
 db $2D                          ;Player pose: face right, right hand out
@@ -64,18 +67,23 @@ db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 db $39                          ;Player pose: face down, both arms raised
 db $C5, $20                     ;<unknown>
 db $71                          ;Short pause
-db $C8, $38, $07                ;Display Message/Text/Dialogue 38 07 ; OBTAINED BLACK MAGIC FLARE
+if !vanillarewards == 1
+	db $C8, $38, $07                ;Display Message/Text/Dialogue 38 07 ; OBTAINED BLACK MAGIC FLARE
+	db $AC, $0F                     ;Add Magic Holy
+	db $AC, $22                     ;Add Magic Holy
+	db $AC, $10                     ;Add Magic Flare
+	db $AC, $33                     ;Add Magic Flare
+else
+	db $DE, $20				; set up reward
+	db $DF					; call text handler
+endif
 db $E4, $14                     ;Unknown
 db $B9, $63                     ;Toggle Subtracitve Tint by 63
 db $B3, $10                     ;Pause for 100 cycles
 db $12                          ;Player pose: face right, standing
-db $70                          ;Very short pause
 db $16                          ;Player pose: face left, standing
-db $70                          ;Very short pause
 db $12                          ;Player pose: face right, standing
-db $70                          ;Very short pause
 db $16                          ;Player pose: face left, standing
-db $70                          ;Very short pause
 db $14                          ;Player pose: face down, left hand forward
 db $71                          ;Short pause
 db $C8, $3A, $07                ;Display Message/Text/Dialogue 3A 07
@@ -89,10 +97,6 @@ db $B7, $0B                     ;Add/Remove character 0B
 db $B7, $0C                     ;Add/Remove character 0C
 db $7D                          ;<Unknown>
 db $14                          ;Player pose: face down, left hand forward
-db $AC, $0F                     ;Add Magic Holy
-db $AC, $10                     ;Add Magic Flare
-db $AC, $22                     ;Add Magic Holy
-db $AC, $33                     ;Add Magic Flare
 db $DB                          ;Restore Player status
 db $C3, $02                     ;Fade in Speed 02
 db $B3, $10                     ;Pause for 100 cycles

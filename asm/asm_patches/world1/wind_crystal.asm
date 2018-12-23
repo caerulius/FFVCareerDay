@@ -103,14 +103,30 @@ db $8B, $0A			;Sprite 08B do event: Hide
 db $8C, $0A			;Sprite 08C do event: Hide
 db $8D, $0A			;Sprite 08D do event: Hide
 db $72
-db $C6, $05			;Add job Samurai
-db $C6, $06			;Add job Berserker
-db $C6, $07			;Add job Hunter
-db $C6, $0A			;Add job Black Mage
-db $C6, $0D			;Add job Blue Mage
-db $C6, $0E			;Add job Red Mage
 db $23				;Player pose: face up, left hand forward
-db $C8, $A9, $00	;Display Message/Text/Dialogue AA 00
+if !vanillarewards == 1
+	db $C8, $A9, $00	;Display Message/Text/Dialogue AA 00 		; <---reward--->
+	db $C6, $05			;Add job Samurai		; <---reward--->
+	db $C6, $06			;Add job Berserker		; <---reward--->
+	db $C6, $07			;Add job Hunter		; <---reward--->
+	db $C6, $0A			;Add job Black Mage		; <---reward--->
+	db $C6, $0D			;Add job Blue Mage		; <---reward--->
+	db $C6, $0E			;Add job Red Mage		; <---reward--->
+else
+	db $DE, $01		; set up reward  		; <---reward--->
+	db $DF			; call text handler  	; <---reward--->
+	db $DE, $02		; set up reward  		; <---reward--->
+	db $DF			; call text handler  	; <---reward--->
+	db $DE, $03		; set up reward  		; <---reward--->
+	db $DF			; call text handler  	; <---reward--->
+	db $DE, $04		; set up reward  		; <---reward--->
+	db $DF			; call text handler  	; <---reward--->
+	db $DE, $05		; set up reward  		; <---reward--->
+	db $DF			; call text handler  	; <---reward--->
+	db $DE, $06		; set up reward  		; <---reward--->
+	db $DF			; call text handler  	; <---reward--->
+endif
+
 db $B4, $29			;Play Background Music Fanfare 1 (short)
 db $75
 db $75

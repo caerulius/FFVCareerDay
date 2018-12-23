@@ -6,22 +6,7 @@ hirom
 
 org $C99EC2
 
-; db $C8, $61, $07                ;Display Message/Text/Dialogue 61 07
-; db $73                          ;Long pause
-; db $B5, $93                     ;Play Sound Effect Evil appears
-; db $CE, $1E, $08                ;Play next 08 bytes 1E times
-; db $8B, $0A                     ;Sprite 08B do event: Hide
-; db $B2, $02                     ;Pause for 02 cycles
-; db $8B, $09                     ;Sprite 08B do event: Show
-; db $B2, $02                     ;Pause for 02 cycles
-; db $73                          ;Long pause
-; db $C8, $62, $07                ;Display Message/Text/Dialogue 62 07
-; db $71                          ;Short pause
-; db $BE, $05                     ;Rumble effect of 05 magnitude
 db $B4, $17                     ;Play Background Music Danger!
-; db $74                          ;Very long pause
-; db $8B, $16                     ;Sprite 08B do event: face left, standing
-; db $73                          ;Long pause
 db $8A, $09                     ;Sprite 08A do event: Show
 db $0A                          ;Player Hide
 db $77                          ;<Unknown>
@@ -36,24 +21,7 @@ db $09                          ;Player Show
 db $8A, $0A                     ;Sprite 08A do event: Hide
 db $B5, $4A                     ;Play Sound Effect Tsunami
 db $BE, $0A                     ;Rumble effect of 0A magnitude
-; db $71                          ;Short pause
-; db $C5                          ;<unknown>
-; db $80, $71                     ;Sprite 080 do event: 71
-; db $C5                          ;<unknown>
-; db $80, $71                     ;Sprite 080 do event: 71
-; db $CE, $14, $08                ;Play next 08 bytes 14 times
-; db $8B, $09                     ;Sprite 08B do event: Show
-; db $B2, $02                     ;Pause for 02 cycles
-; db $8B, $0A                     ;Sprite 08B do event: Hide
-; db $B2, $02                     ;Pause for 02 cycles
-; db $B5, $3B                     ;Play Sound Effect Trap floor
-; db $C5                          ;<unknown>
-; db $80, $71                     ;Sprite 080 do event: 71
-; db $BE, $05                     ;Rumble effect of 05 magnitude
-; db $75                          ;Extremely long pause
 db $BE, $00                     ;Rumble effect of 00 magnitude
-; db $71                          ;Short pause
-; db $C8, $5E, $87                ;Display Message/Text/Dialogue 5E 87
 db $A4, $7B                     ;Set Event Flag 17B
 db $CB, $5C, $02                ;Clear Flag 2/3/4/5/5C 02
 db $FF                          ;End Event
@@ -97,10 +65,15 @@ db $C5                          ;<unknown>
 db $80, $39                     ;Sprite 080 do event: face down, both arms raised
 db $71                          ;Short pause
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
-db $C8, $60, $07                ;Display Message/Text/Dialogue 60 07
+if !vanillarewards == 1
+	db $C8, $60, $07                ;Display Message/Text/Dialogue 60 07  		; <---reward--->
+	db $AC, $55                     ;Add Magic Levia  		; <---reward--->
+else
+	db $DE, $10				; set up reward
+	db $DF					; call text handler
+endif
 db $E4, $B4                     ;Unknown
 db $24                          ;Player pose: face down, right hand raised in
-db $AC, $55                     ;Add Magic Levia
 db $A2, $92                     ;Set Event Flag 092
 db $FF                          ;End Event
 

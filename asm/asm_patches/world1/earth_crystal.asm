@@ -45,8 +45,27 @@ db $85, $0A
 db $97, $0A
 db $C3, $03                    ;Fade in Speed 0A
 db $73
-db $C8, $6C, $88                ;Display Message/Text/Dialogue 6C 88
-db $C8, $BF, $83                ;Display Message/Text/Dialogue BF 83
+
+if !vanillarewards == 1
+	db $C8, $6C, $88                ;Display Message/Text/Dialogue 6C 88
+	db $C8, $BF, $83                ;Display Message/Text/Dialogue BF 83
+	db $C6, $14                     ;Add job Mimic
+	db $C6, $17                     ;Add job 17
+	db $C6, $04                     ;Add job Ninja
+	db $C6, $02                     ;Add job Thief
+else
+	db $DE, $0C				; set up reward
+	db $DF					; call text handler
+	db $DE, $0D				; set up reward
+	db $DF					; call text handler
+	db $DE, $0E				; set up reward
+	db $DF					; call text handler
+	db $DE, $0F				; set up reward
+	db $DF					; call text handler
+endif
+
+
+
 
 db $C7, $08                     ;Play next 06 bytes simultaneously
 db $89, $04                     ;Sprite 08B do event: Move Left
@@ -83,10 +102,6 @@ db $DB                          ;Restore Player status
 db $09                          ;Player Show
 db $C3, $10                     ;Fade in Speed 10
 db $7B                          ;*YOU DIDNT MEAN TO USE THIS*
-db $C6, $14                     ;Add job Mimic
-db $C6, $17                     ;Add job 17
-db $C6, $04                     ;Add job Ninja
-db $C6, $02                     ;Add job Thief
 db $CB, $0E, $00                ;Clear Flag 2/3/4/5/0E 00
 db $CB, $01, $02                ;Clear Flag 2/3/4/5/01 02
 db $CB, $FD, $01                ;Clear Flag 2/3/4/5/FD 01

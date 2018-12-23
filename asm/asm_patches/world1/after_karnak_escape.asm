@@ -7,17 +7,18 @@ org $C87F79
 db $7C							;Stops the timer
 db $D2, $00, $54, $4F, $B5		;(Map) 00 54 4F B5
 db $C4, $0C						;Fade out Speed 0C
+db $73
 db $A5, $FF						;Clear Event Flag 1FF
 db $D0, $F0, $00				;(Music) F0 00
-db $E1, $00, $00, $53, $4E, $00	;Return from cutscene? 00 00 53 4E 00
+; db $E1, $00, $00, $53, $4E, $00	;Return from cutscene? 00 00 53 4E 00
 db $A4, $FE						;Set Event Flag 1FE
 db $E1, $A3, $00, $21, $08, $00	;Return from cutscene? A3 00 21 08 00
+; db $C4, $0F						;Fade in Speed 0C
 db $A5, $FE						;Clear Event Flag 1FE
 db $C1, $00						;<Unknown>
 db $B1, $02						;Set Player Sprite 02
 db $09							;Player Show
 db $7D							;<Unknown>
-db $C3, $0C						;Fade in Speed 0C
 db $BE, $00						;Rumble effect of 00 magnitude
 db $D9, $0A, $03, $70			;Unknown
 db $B1, $02						;Set Player Sprite 02
@@ -27,31 +28,60 @@ db $B4, $08						;Play Background Music The Prelude
 db $85, $09						;Sprite 085 do event: Show
 db $86, $09						;Sprite 086 do event: Show
 db $87, $09						;Sprite 087 do event: Show
-db $C5, $80, $C8				;<unknown>
-db $6C							;Player or Sprite Pose
-db $08							;<Unknown>
-db $C8, $73, $02				;Display Message/Text/Dialogue 73 02
-db $85, $02						;Sprite 085 do event: Move Right
-db $85, $0A						;Sprite 085 do event: Hide
-db $C5, $80, $C8				;<unknown>
-db $6C							;Player or Sprite Pose
-db $08							;<Unknown>
-db $C8, $74, $02				;Display Message/Text/Dialogue 74 02
-db $86, $03						;Sprite 086 do event: Move Down
-db $86, $0A						;Sprite 086 do event: Hide
-db $C5, $80, $C8				;<unknown>
-db $6C							;Player or Sprite Pose
-db $08							;<Unknown>
-db $C8, $75, $02				;Display Message/Text/Dialogue 75 02
-db $87, $04						;Sprite 087 do event: Move Left
-db $87, $0A						;Sprite 087 do event: Hide
-db $73							;Medium pause
-db $C6, $08						;Add job Mystic Knight
-db $C6, $03						;Add job Dragoon
-db $C6, $16						;Add job 16
-db $C6, $08						;Add job Mystic Knight
-db $C6, $03						;Add job Dragoon
-db $C6, $16						;Add job 16
+db $C3, $0C						;Fade in Speed 0C
+db $73
+if !vanillarewards == 1
+	db $C5, $80, $C8				;<unknown>
+	db $6C							;Player or Sprite Pose
+	db $08							;<Unknown>
+	db $C8, $73, $02				;Display Message/Text/Dialogue 73 02  		; <---reward--->
+	db $85, $02						;Sprite 085 do event: Move Right
+	db $85, $0A						;Sprite 085 do event: Hide
+	; db $C5, $80, $C8				;<unknown>
+	; db $6C							;Player or Sprite Pose
+	; db $08							;<Unknown>
+	db $C8, $74, $02				;Display Message/Text/Dialogue 74 02  		; <---reward--->
+	db $86, $03						;Sprite 086 do event: Move Down
+	db $86, $0A						;Sprite 086 do event: Hide
+	; db $C5, $80, $C8				;<unknown>
+	; db $6C							;Player or Sprite Pose
+	; db $08							;<Unknown>
+	db $C8, $75, $02				;Display Message/Text/Dialogue 75 02  		; <---reward--->
+	db $87, $04						;Sprite 087 do event: Move Left
+	db $87, $0A						;Sprite 087 do event: Hide
+	db $73							;Medium pause
+	db $C6, $08						;Add job Mystic Knight  		; <---reward--->
+	db $C6, $03						;Add job Dragoon  		; <---reward--->
+	db $C6, $16						;Add job 16  		; <---reward--->
+	db $C6, $08						;Add job Mystic Knight  		; <---reward--->
+	db $C6, $03						;Add job Dragoon  		; <---reward--->
+	db $C6, $16						;Add job 16  		; <---reward--->
+else
+	db $DE, $07		; set up reward  		; <---reward--->
+	db $DF			; call text handler  	; <---reward--->
+	db $85, $02						;Sprite 085 do event: Move Right
+	db $85, $0A						;Sprite 085 do event: Hide
+	; db $C5, $80, $C8				;<unknown>
+	; db $6C							;Player or Sprite Pose
+	; db $08							;<Unknown>
+	db $DE, $08		; set up reward  		; <---reward--->
+	db $DF			; call text handler  	; <---reward--->
+	db $86, $03						;Sprite 086 do event: Move Down
+	db $86, $0A						;Sprite 086 do event: Hide
+	; db $C5, $80, $C8				;<unknown>
+	; db $6C							;Player or Sprite Pose
+	; db $08							;<Unknown>
+	db $DE, $09		; set up reward  		; <---reward--->
+	db $DF			; call text handler  	; <---reward--->
+	db $87, $04						;Sprite 087 do event: Move Left
+	db $87, $0A						;Sprite 087 do event: Hide
+	db $73							;Medium pause
+	
+	
+
+
+endif
+
 db $A5, $FF						;Clear Event Flag 1FF
 db $A4, $E4						;Set Event Flag 1E4
 db $A4, $19						;Set Event Flag 119
