@@ -1,5 +1,5 @@
 ; conditionals
-!vanillarewards = 0
+!vanillarewards = 1
 
 
 ; world 1                                   Destinations:
