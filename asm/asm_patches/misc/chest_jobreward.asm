@@ -9,6 +9,7 @@ JML ChestHook1
 
 org $F01000
 ChestHook1:
+STZ $BB0
 lda $D13213,x
 STA !rewardid
 LDA !typeid
@@ -277,10 +278,38 @@ sep #$20
 LDA !typeid ; $000B11, the reward type (50 = JOB)
 CMP #$50
 BEQ AddJobIndex
+CMP #$30
+BEQ AddKeyItemIndex
 CMP #$60
 BEQ AddAbilityIndex
 BNE DoNotAddJobIndex
 
+
+; if job, then add #$1D00 to index
+AddJobIndex:
+rep #$20
+PLA
+STA $0F ; store A into $000B0F
+LDA #$1D00
+CLC
+ADC $0F ; original contents + 1D00
+; continue as usual
+TAX
+LDA $06
+JML $C08AC7
+
+AddKeyItemIndex:
+; if ability, then add #$1F40 (for E78100 starting)
+rep #$20
+PLA
+STA $0F ; store A into $000B0F
+LDA #$1D60
+CLC
+ADC $0F ; original contents + 1D00
+; continue as usual
+TAX
+LDA $06
+JML $C08AC7
 
 AddAbilityIndex:
 ; if ability, then add #$2EA0 (for E78700 starting)
@@ -297,18 +326,6 @@ JML $C08AC7
 
 
 
-; if job, then add #$1D00 to index
-AddJobIndex:
-rep #$20
-PLA
-STA $0F ; store A into $000B0F
-LDA #$1D00
-CLC
-ADC $0F ; original contents + 1D00
-; continue as usual
-TAX
-LDA $06
-JML $C08AC7
 
 DoNotAddJobIndex:
 rep #$20
