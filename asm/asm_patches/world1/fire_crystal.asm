@@ -74,7 +74,6 @@ db $E1, $92, $00, $B9, $3C, $00	;Return from cutscene? 92 00 B9 3C 00
 db $C3, $0C						;Fade in at speed $0C
 db $B9, $C1						;Toggle Subtracitve Tint by C1
 db $B4, $26						;Play Background Music Hurry! Hurry!
-db $CC, $0C                  ;Custom destination flag 0C
 db $ff
 
 padbyte $00
