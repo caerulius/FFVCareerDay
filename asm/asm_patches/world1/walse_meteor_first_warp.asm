@@ -24,3 +24,27 @@ db $FF						;End Event
 
 padbyte $00
 pad $C8739A
+
+; meteor warp east to west speedup: 
+org $C9320D
+
+db $CD, $8E, $04                ;Run event index 048E
+db $E3, $7F, $00, $92, $34, $00 ;Inter-map cutscene? 7F 00 92 34 00
+db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
+db $09                          ;Player Show
+db $DB                          ;Restore Player status
+db $C3, $10                     ;Fade in Speed 10
+db $A4, $FC                     ;Turn on bit 10 at address 0x7e0a53
+db $FF                          ;End Event
+
+pad $C9322E
+
+org $C93252
+db $CD, $8E, $04                ;Run event index 048E
+db $E3, $79, $00, $92, $34, $00 ;Inter-map cutscene? 79 00 92 34 00
+db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
+db $09                          ;Player Show
+db $C3, $10                     ;Fade in Speed 10
+db $A4, $FC                     ;Turn on bit 10 at address 0x7e0a53
+db $FF                          ;End Event
+pad $C93272
