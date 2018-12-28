@@ -1,5 +1,5 @@
 ; conditionals
-!vanillarewards = 1
+!vanillarewards = 0
 
 
 ; world 1                                   Destinations:
@@ -45,9 +45,9 @@ incsrc world1/karnak_arrest.asm                          ; 0B Karnak Steamship
 incsrc world1/cid_in_cell.asm
 incsrc world1/karnak_queen_fight.asm
 incsrc world1/karnak_werewolf.asm
-incsrc world1/cid_mid_in_airship.asm
+incsrc world1/cid_mid_in_airship.asm                    ; 0C Ancient Library
 incsrc world1/cid_on_steamship.asm
-incsrc world1/fire_crystal.asm                             ; 0C Ancient Library
+incsrc world1/fire_crystal.asm
 incsrc world1/after_karnak_escape.asm
 
 incsrc world1/ifrit.asm
@@ -155,6 +155,7 @@ incsrc misc/walk_speed.asm
 incsrc misc/destination.asm
 incsrc misc/chest_jobreward.asm
 incsrc misc/chest_magicreward.asm
+incsrc misc/key_items.asm
 
 incsrc recovery/all_inns.asm
 incsrc recovery/tent.asm
@@ -162,6 +163,25 @@ incsrc recovery/tent.asm
 ; reward events
 incsrc reward_events/piratescave_syldra.asm
 incsrc reward_events/balcastle_odin.asm
+incsrc reward_events/forktower_holyflare.asm
+incsrc reward_events/istory_lovesong.asm
+incsrc reward_events/kelb_cornajar.asm
+incsrc reward_events/kelb_requiem.asm
+incsrc reward_events/lix_temptationsong.asm
+incsrc reward_events/miragevillage_miragevest.asm
+incsrc reward_events/pirate_potions.asm
+incsrc reward_events/piratescave_syldra.asm
+incsrc reward_events/rugor_ribbon.asm
+incsrc reward_events/surgate_speedsong.asm
+incsrc reward_events/tycoon_chancellor_reward.asm
+incsrc reward_events/windshrine_potions.asm
+incsrc reward_events/ancientlibrary_magicsong.asm
+incsrc reward_events/balcastle_odin.asm
+incsrc reward_events/crescent_herosong.asm
+incsrc reward_events/crescent_lifesong.asm
+incsrc reward_events/crescent_powersong.asm
+incsrc reward_events/exdeathcastle_carbuncle.asm
+incsrc reward_events/walse_shiva.asm
 
 ; optionals
-;incsrc misc/optionals.asm
+incsrc misc/optionals.asm

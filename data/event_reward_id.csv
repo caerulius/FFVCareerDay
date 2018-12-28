@@ -1,0 +1,55 @@
+event,hex_id,address,idx,type
+Wind Crystal,01,C0FAB2,1,crystal
+Wind Crystal,02,C0FAB4,2,crystal
+Wind Crystal,03,C0FAB6,3,crystal
+Wind Crystal,04,C0FAB8,4,crystal
+Wind Crystal,05,C0FABA,5,crystal
+Wind Crystal,06,C0FABC,6,crystal
+Fire Crystal,07,C0FABE,7,crystal
+Fire Crystal,08,C0FAC0,8,crystal
+Fire Crystal,09,C0FAC2,9,crystal
+Black Choco Crystals,0A,C0FAC4,10,crystal
+Black Choco Crystals,0B,C0FAC6,11,crystal
+Earth Crystal,0C,C0FAC8,12,crystal
+Earth Crystal,0D,C0FACA,13,crystal
+Earth Crystal,0E,C0FACC,14,crystal
+Earth Crystal,0F,C0FACE,15,crystal
+Leviathan Esper,10,C0FAD0,16,esper
+Titan,11,C0FAD2,17,esper
+Carbuncle,12,C0FAD4,18,esper
+Syldra,13,C0FAD6,19,esper
+Odin,14,C0FAD8,20,esper
+Phoenix,15,C0FADA,21,esper
+Bahamut,16,C0FADC,22,esper
+Life (or Strength) Song from Crescent Town bard,17,C0FADE,23,song
+Temptation Song at Lix,18,C0FAE0,24,song
+Love Song at Istory,19,C0FAE2,25,song
+Requiem Song at Kelb,1A,C0FAE4,26,song
+Speed Song at Surgate,1B,C0FAE6,27,song
+Magic Song at Ancient Library,1C,C0FAE8,28,song
+Power Song from Crescent Town,1D,C0FAEA,29,song
+Hero Song from Crescent Town,1E,C0FAEC,30,song
+"Fork Tower, two Magics",1F,C0FAEE,31,magic
+"Fork Tower, two Magics",20,C0FAF0,32,magic
+Meteo,21,C0FAF2,33,magic
+"5 potions in Wind Shrine, bottom left guy",22,C0FAF4,34,item
+"8 potions, Pirate after Torna Canal Key acquired",23,C0FAF6,35,item
+Chancellor at Tycoon,24,C0FAF8,36,item
+Magisa & Forza,25,C0FAFA,37,item
+CornaJar at Kelb,26,C0FAFC,38,item
+Ribbon from girl in Rugor,27,C0FAFE,39,item
+Mirage Vest from Chocobo Tour/Mirage Village,28,C0FB00,40,item
+12 Kuzar Events,29,C0FB02,41,item
+12 Kuzar Events,2A,C0FB04,42,item
+12 Kuzar Events,2B,C0FB06,43,item
+12 Kuzar Events,2C,C0FB08,44,item
+12 Kuzar Events,2D,C0FB0A,45,item
+12 Kuzar Events,2E,C0FB0C,46,item
+12 Kuzar Events,2F,C0FB0E,47,item
+12 Kuzar Events,30,C0FB10,48,item
+12 Kuzar Events,31,C0FB12,49,item
+12 Kuzar Events,32,C0FB14,50,item
+12 Kuzar Events,33,C0FB16,51,item
+12 Kuzar Events,34,C0FB18,52,item
+Shiva,35,C0FB1A,53,esper
+Ifrit,36,C0FB1C,54,esper

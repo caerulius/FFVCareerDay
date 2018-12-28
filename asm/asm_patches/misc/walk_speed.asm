@@ -7,7 +7,7 @@ hirom
 
 ; change text in config menu
 org $E731DB
-db $76, $7A, $85, $84, $96, $72, $89, $7D, $A3 ; "Walk Spd."
+db $63, $7A, $8C, $81, $96, $72, $89, $7D, $A3 ; "Dash Spd."
 
 ; change config to only allow for 4 options
 org $C0F078
@@ -127,6 +127,8 @@ org $C008B3
 db $08, $08, $08, $08
 db $08, $08, $20
 ; more speed doubling
+org $C0573E
+db $04
 org $C05740
 db $08, $00
 db $08, $00

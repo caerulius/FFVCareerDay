@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pandas as pd 
+import random
 
 df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
 df_magic_id = pd.read_csv('magic_id.csv',index_col='magic_id',dtype=str)
@@ -13,6 +14,7 @@ class Item():
         data = df_item_id.loc[item_id]
         self.reward_id = item_id
         self.reward_name = data['item_name']
+        self.reward_value = int(data['value'])
         self.type = data['type']
         self.subtype = data['subtype']
         
@@ -23,6 +25,7 @@ class Magic():
         data = df_magic_id.loc[magic_id]
         self.reward_id = magic_id
         self.reward_name = data['magic_name']
+        self.reward_value = int(data['value'])
         self.type = data['type']
 
 class Crystal():
@@ -30,6 +33,7 @@ class Crystal():
     def __init__(self,crystal_id):
         data = df_crystal_id.loc[crystal_id]
         self.reward_id = crystal_id
+        self.reward_value = 3
         self.reward_name = data['crystal_name']
         
 class Ability():
@@ -37,6 +41,7 @@ class Ability():
     def __init__(self,ability_id):
         data = df_ability_id.loc[ability_id]
         self.reward_id = ability_id
+        self.reward_value = int(data['value'])
         self.reward_name = data['ability_name']
 
 

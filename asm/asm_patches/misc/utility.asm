@@ -1,12 +1,4 @@
 hirom
-!base = $C00000
-
-; Patches for:
-; Always Blue Mage learning passive
-; Always passages
-
-
-; Learning/Passages
 
 ; Learning in battles will always pass the check against original 'AND #$10' check
 org $C24C87

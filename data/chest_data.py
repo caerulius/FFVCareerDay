@@ -7,6 +7,8 @@ df_chest_table = pd.read_excel('chest_table.xlsx', dtype=str)
 df_chest_table['idx'] = df_chest_table['idx'].astype(int)
 df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
 df_chest_id = pd.read_excel('chest_id.xlsx',index_col='chest_id',dtype=str)
+df_event_reward_table = pd.read_csv('event_reward_id.csv',dtype=str)
+df_event_reward_table['idx'] = df_event_reward_table['idx'].astype(int)
 
 item_id_dict = pd.read_csv('item_id.csv',index_col='item_id',dtype=str).to_dict()['item_name'] # id first
 item_id_dict2 = dict((v,k) for k,v in item_id_dict.items()) # item first
@@ -22,6 +24,7 @@ class Chest(object):
         self.data = self.loc1 + self.loc2 + self.type + self.id
         self.original_reward = self.reward
         self.asar_output = f";{self.original_reward}→{self.reward}\norg ${self.address} \ndb ${self.loc1}, ${self.loc2}, ${self.type}, ${self.id} "
+        self.output_short = f"Chest: {self.idx}\t{self.original_reward} → {self.reward}"
     def generate_from_df(self, df):
         s = df[df['idx']==self.idx].iloc[0]
         if s.empty:
@@ -38,28 +41,96 @@ class Chest(object):
         self.chest_contents = [self.type, self.id, self.reward_type, self.reward]
         self.data = self.loc1 + self.loc2 + self.type + self.id
         self.asar_output = f";{self.original_reward}→{self.reward}\norg ${self.address} \ndb ${self.loc1}, ${self.loc2}, ${self.type}, ${self.id} "
+        self.output_short = f"Chest: {self.idx}\t{self.original_reward} → {self.reward}"
     def random_reward(self):
-        random_item = random.choice(all_rewards)
+        random_item = value_rewards.pop()
         self.reward = random_item.reward_name
         self.type = random_item.reward_type
         self.id = random_item.reward_id
         self.update_contents()
-    def update_item(self,item_type,item):
-        '''
-        item_type: item, 
-        '''
-        print("Updating")
-        if item_type == 'item':
-            new_item_id = item_id_dict2[item]
-            self.type = '40'
-            self.id = new_item_id
+
+
+class RewardEvent(object):
+    ''' Event rewards are not given their initial values, instead are just replaced with whatever the randomizer dictates'''
+    def __init__(self,index):
+        self.idx = index
+        self.generate_from_df(df_event_reward_table)
+        self.type = ''
+        self.id = ''
+        self.reward = ''
+        self.asar_output = f";Event: {self.event}→{self.reward}\norg ${self.address} \ndb ${self.type}, ${self.id} "
+        self.output_short = f"Event: \t\t{self.event} → {self.reward}"
+    def generate_from_df(self, df):
+        s = df[df['idx']==self.idx].iloc[0]
+        if s.empty:
+            print("No match on index found for Chest class "+self.boss_name)
         else:
-            print("No item type match.")
-        self.update_contents()                
-        
-    def update_asar_output(self):
-        self.asar_output = f";{self.original_reward}→{self.reward}\norg ${self.address} \ndb ${self.loc1}, ${self.loc2}, ${self.type}, ${self.id} "
-                
+            for index in s.index:
+                setattr(self,index,s.loc[index])        
+    def random_reward(self):
+        random_item = value_rewards.pop()
+        self.reward = random_item.reward_name
+        self.type = random_item.reward_type
+        self.id = random_item.reward_id
+        self.asar_output = f";Event: {self.event}→{self.reward}\norg ${self.address} \ndb ${self.type}, ${self.id} "
+        self.output_short = f"Event: \t\t{self.event} → {self.reward}"
+ 
+RewardEvent_1 = RewardEvent(1)
+RewardEvent_2 = RewardEvent(2)
+RewardEvent_3 = RewardEvent(3)
+RewardEvent_4 = RewardEvent(4)
+RewardEvent_5 = RewardEvent(5)
+RewardEvent_6 = RewardEvent(6)
+RewardEvent_7 = RewardEvent(7)
+RewardEvent_8 = RewardEvent(8)
+RewardEvent_9 = RewardEvent(9)
+RewardEvent_10 = RewardEvent(10)
+RewardEvent_11 = RewardEvent(11)
+RewardEvent_12 = RewardEvent(12)
+RewardEvent_13 = RewardEvent(13)
+RewardEvent_14 = RewardEvent(14)
+RewardEvent_15 = RewardEvent(15)
+RewardEvent_16 = RewardEvent(16)
+RewardEvent_17 = RewardEvent(17)
+RewardEvent_18 = RewardEvent(18)
+RewardEvent_19 = RewardEvent(19)
+RewardEvent_20 = RewardEvent(20)
+RewardEvent_21 = RewardEvent(21)
+RewardEvent_22 = RewardEvent(22)
+RewardEvent_23 = RewardEvent(23)
+RewardEvent_24 = RewardEvent(24)
+RewardEvent_25 = RewardEvent(25)
+RewardEvent_26 = RewardEvent(26)
+RewardEvent_27 = RewardEvent(27)
+RewardEvent_28 = RewardEvent(28)
+RewardEvent_29 = RewardEvent(29)
+RewardEvent_30 = RewardEvent(30)
+RewardEvent_31 = RewardEvent(31)
+RewardEvent_32 = RewardEvent(32)
+RewardEvent_33 = RewardEvent(33)
+RewardEvent_34 = RewardEvent(34)
+RewardEvent_35 = RewardEvent(35)
+RewardEvent_36 = RewardEvent(36)
+RewardEvent_37 = RewardEvent(37)
+RewardEvent_38 = RewardEvent(38)
+RewardEvent_39 = RewardEvent(39)
+RewardEvent_40 = RewardEvent(40)
+RewardEvent_41 = RewardEvent(41)
+RewardEvent_42 = RewardEvent(42)
+RewardEvent_43 = RewardEvent(43)
+RewardEvent_44 = RewardEvent(44)
+RewardEvent_45 = RewardEvent(45)
+RewardEvent_46 = RewardEvent(46)
+RewardEvent_47 = RewardEvent(47)
+RewardEvent_48 = RewardEvent(48)
+RewardEvent_49 = RewardEvent(49)
+RewardEvent_50 = RewardEvent(50)
+RewardEvent_51 = RewardEvent(51)
+RewardEvent_52 = RewardEvent(52)
+RewardEvent_53 = RewardEvent(53)
+RewardEvent_54 = RewardEvent(54)
+
+all_event_rewards = [RewardEvent_1,RewardEvent_2,RewardEvent_3,RewardEvent_4,RewardEvent_5,RewardEvent_6,RewardEvent_7,RewardEvent_8,RewardEvent_9,RewardEvent_10,RewardEvent_11,RewardEvent_12,RewardEvent_13,RewardEvent_14,RewardEvent_15,RewardEvent_16,RewardEvent_17,RewardEvent_18,RewardEvent_19,RewardEvent_20,RewardEvent_21,RewardEvent_22,RewardEvent_23,RewardEvent_24,RewardEvent_25,RewardEvent_26,RewardEvent_27,RewardEvent_28,RewardEvent_29,RewardEvent_30,RewardEvent_31,RewardEvent_32,RewardEvent_33,RewardEvent_34,RewardEvent_35,RewardEvent_36,RewardEvent_37,RewardEvent_38,RewardEvent_39,RewardEvent_40,RewardEvent_41,RewardEvent_42,RewardEvent_43,RewardEvent_44,RewardEvent_45,RewardEvent_46,RewardEvent_47,RewardEvent_48,RewardEvent_49,RewardEvent_50,RewardEvent_51,RewardEvent_52,RewardEvent_53,RewardEvent_54]
 Chest_1 = Chest(1)
 Chest_2 = Chest(2)
 Chest_3 = Chest(3)
@@ -314,3 +385,19 @@ Chest_251 = Chest(251)
 Chest_252 = Chest(252)
 
 all_chests = [Chest_1,Chest_2,Chest_3,Chest_4,Chest_5,Chest_6,Chest_7,Chest_8,Chest_9,Chest_10,Chest_11,Chest_12,Chest_13,Chest_14,Chest_15,Chest_16,Chest_17,Chest_18,Chest_19,Chest_20,Chest_21,Chest_22,Chest_23,Chest_24,Chest_25,Chest_26,Chest_27,Chest_28,Chest_29,Chest_30,Chest_31,Chest_32,Chest_33,Chest_34,Chest_35,Chest_36,Chest_37,Chest_38,Chest_39,Chest_40,Chest_41,Chest_42,Chest_43,Chest_44,Chest_45,Chest_46,Chest_47,Chest_48,Chest_49,Chest_50,Chest_51,Chest_52,Chest_53,Chest_54,Chest_55,Chest_56,Chest_57,Chest_58,Chest_59,Chest_60,Chest_61,Chest_62,Chest_63,Chest_64,Chest_65,Chest_66,Chest_67,Chest_68,Chest_69,Chest_70,Chest_71,Chest_72,Chest_73,Chest_74,Chest_75,Chest_76,Chest_77,Chest_78,Chest_79,Chest_80,Chest_81,Chest_82,Chest_83,Chest_84,Chest_85,Chest_86,Chest_87,Chest_88,Chest_89,Chest_90,Chest_91,Chest_92,Chest_93,Chest_94,Chest_95,Chest_96,Chest_97,Chest_98,Chest_99,Chest_100,Chest_101,Chest_102,Chest_103,Chest_104,Chest_105,Chest_106,Chest_107,Chest_108,Chest_109,Chest_110,Chest_111,Chest_112,Chest_113,Chest_114,Chest_115,Chest_116,Chest_117,Chest_118,Chest_119,Chest_120,Chest_121,Chest_122,Chest_123,Chest_124,Chest_125,Chest_126,Chest_127,Chest_128,Chest_129,Chest_130,Chest_131,Chest_132,Chest_133,Chest_134,Chest_135,Chest_136,Chest_137,Chest_138,Chest_139,Chest_140,Chest_141,Chest_142,Chest_143,Chest_144,Chest_145,Chest_146,Chest_147,Chest_148,Chest_149,Chest_150,Chest_151,Chest_152,Chest_153,Chest_154,Chest_155,Chest_156,Chest_157,Chest_158,Chest_159,Chest_160,Chest_161,Chest_162,Chest_163,Chest_164,Chest_165,Chest_166,Chest_167,Chest_168,Chest_169,Chest_170,Chest_171,Chest_172,Chest_173,Chest_174,Chest_175,Chest_176,Chest_177,Chest_178,Chest_179,Chest_180,Chest_181,Chest_182,Chest_183,Chest_184,Chest_185,Chest_186,Chest_187,Chest_188,Chest_189,Chest_190,Chest_191,Chest_192,Chest_193,Chest_194,Chest_195,Chest_196,Chest_197,Chest_198,Chest_199,Chest_200,Chest_201,Chest_202,Chest_203,Chest_204,Chest_205,Chest_206,Chest_207,Chest_208,Chest_209,Chest_210,Chest_211,Chest_212,Chest_213,Chest_214,Chest_215,Chest_216,Chest_217,Chest_218,Chest_219,Chest_220,Chest_221,Chest_222,Chest_223,Chest_224,Chest_225,Chest_226,Chest_227,Chest_228,Chest_229,Chest_230,Chest_231,Chest_232,Chest_233,Chest_234,Chest_235,Chest_236,Chest_237,Chest_238,Chest_239,Chest_240,Chest_241,Chest_242,Chest_243,Chest_244,Chest_245,Chest_246,Chest_247,Chest_248,Chest_249,Chest_250,Chest_251,Chest_252]
+
+all_checks = all_event_rewards + all_chests
+
+value_rewards = []
+for i in all_rewards:
+    if i.reward_value >= 2:   
+        value_rewards.append(i)
+        
+value_rewards = random.sample(value_rewards,(len(all_checks)))
+
+for check in all_checks:
+    check.random_reward()
+    print(check.asar_output)
+print("-------------------------")
+for check in all_checks:
+    print(check.output_short)
