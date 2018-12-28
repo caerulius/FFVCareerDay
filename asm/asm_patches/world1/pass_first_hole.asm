@@ -70,4 +70,4 @@ db $80, $0A			;Sprite 080 do event: Hide
 db $FF				;End Event
 
 padbyte $00
-pad $C8520A
+pad $C85204

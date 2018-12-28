@@ -69,6 +69,7 @@ db $CB, $7E, $00	;Clear Flag 2/3/4/5/7E 00
 db $CA, $77, $00	;Set Flag 2/3/4/5/77 00
 db $A4, $C5			;Set Event Flag 1C5
 db $CC, $04                  ;Custom destination flag 04
+db $A4, $4C			;Set Event Flag 14C (this disables the boat after_tule_boat_cutscene entirely )
 db $FF				;End Event
 
 padbyte $00
