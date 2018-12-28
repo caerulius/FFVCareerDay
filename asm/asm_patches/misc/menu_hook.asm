@@ -10,7 +10,7 @@ hirom
 !itemboxwriter = $7E7511
 !encounterswitch = $7E0973
 !lastframesave = $7EF87E
-!destinationindex = $7EF87F
+!destinationindex = $7E06A0
 
 org $C0CAB2
 ; Step counter increaser area 
