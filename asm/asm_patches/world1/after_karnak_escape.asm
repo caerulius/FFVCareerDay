@@ -91,6 +91,7 @@ db $CB, $54, $01				;Clear Flag 2/3/4/5/54 01
 db $CA, $51, $01				;Set Flag 2/3/4/5/51 01
 db $A2, $32						;Set Event Flag 032
 db $A2, $33						;Set Event Flag 033
+db $CC, $0C                  ;Custom destination flag 0C
 db $E3, $00, $00, $53, $4E, $00	;Inter-map cutscene? 00 00 53 4E 00
 db $DB							;Restore Player status
 db $B4, $23						;Play Background Music Four Valiant Hearts

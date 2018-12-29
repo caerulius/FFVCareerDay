@@ -13,21 +13,14 @@ hirom
 ; In fact, as long as this hack is run before the second one, you don't even have
 ; to be as precise with the padding as I have been (the second patch will overwrite the 00s)
 org $C878DA
-
-db $01							;Player move up
-db $04							;Player move left
-db $04							;Player move left
-db $01							;Player move up
-db $01							;Player move up
-db $04							;Player move left
-db $04							;Player move left
-db $04							;Player move left
-db $CE, $06, $01				;Repeat the next 01 byte 06 times
-db $01							;Player move up
-db $04							;Player move left
-db $01							;Player move up
-db $C4, $0C						;Fade out at speed 0C
-db $01							;Player move up
+db $01				;Player Move Up
+db $01				;Player Move Up
+db $F3, $1A, $0E, $22, $8B, $D4 ;Set Map Tiles 1A 0E 22 8B D4
+db $8D, $E3                     ;Sprite 08D do event: E3
+db $E4, $E5                     ;Unknown
+db $F3, $F4, $F5, $73, $BE, $00 ;Set Map Tiles F4 F5 73 BE 00
+db $C4, $03						;Fade out at speed 0C
+db $73
 db $CD, $76, $07				;Run event index 0776
 db $A4, $FE						;Set Event Flag 1FE
 db $CB, $57, $01				;Clear Flag 2/3/4/5/57 01
@@ -69,12 +62,12 @@ db $CB, $75, $01				;Clear Flag 2/3/4/5/75 01
 db $CB, $76, $01				;Clear Flag 2/3/4/5/76 01
 db $D7, $96, $20, $05			;(Timer?) 96 20 05
 db $A4, $DB						;Set Event Flag 1DB
-db $74							;Medium-long pause
 db $E1, $92, $00, $B9, $3C, $00	;Return from cutscene? 92 00 B9 3C 00
-db $C3, $0C						;Fade in at speed $0C
-db $B9, $C1						;Toggle Subtracitve Tint by C1
 db $B4, $26						;Play Background Music Hurry! Hurry!
-db $ff
+db $B9, $C1						;Toggle Subtracitve Tint by C1
+db $C3, $03						;Fade in at speed $0C
+db $74							;Medium-long pause
+db $FF
 
 padbyte $00
 pad $C87EEF

@@ -14,6 +14,8 @@ db $04							;Player move Left
 db $04							;Player move Left
 db $04							;Player move Left
 db $03							;Player Move Down
+db $71
+db $83, $10
 db $83, $02						;Sprite 083 do event: move right
 db $83, $01						;Sprite 083 do event: move up
 db $83, $02						;Sprite 083 do event: move right

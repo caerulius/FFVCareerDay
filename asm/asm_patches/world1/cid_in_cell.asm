@@ -4,8 +4,8 @@ hirom
 ; Just fade out and come back with the door open and Cid gone
 org $C875CA
 
-db $C4, $02				;Fade out speed 02
-db $74					;Wait a bit
+db $C4, $03				;Fade out speed 02
+db $73					;Wait a bit
 db $83, $0A
 db $B5, $8E				;Play Sound Effect Treasure chest
 db $F3, $18, $37, $20	;Set Map Tiles 18 37 20
@@ -32,7 +32,9 @@ db $CA, $74, $01		;Set Flag 2/3/4/5/74 01
 db $CA, $75, $01		;Set Flag 2/3/4/5/75 01
 db $CA, $76, $01		;Set Flag 2/3/4/5/76 01
 db $CB, $56, $01		;Clear Flag 2/3/4/5/56 01
-db $C3, $02				;Fade in speed 02
+db $CA, $52, $01			;Set Flag 2/3/4/5/52 01
+db $A2, $2E					;Set Event Flag 02E
+db $C3, $03				;Fade in speed 02
 db $73					;Wait a bit
 db $FF					;End Event
 

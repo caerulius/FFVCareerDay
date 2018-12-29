@@ -6,9 +6,9 @@ org $C9707A
 
 db $01				;Player move up
 db $01				;Player move up
-db $01				;Player move up
 db $CD, $10, $04	;Run event index 0410
-db $85, $0A			;Hide sprite 084
+db $85, $0A			
+db $86, $09
 db $BD, $07, $FF	;Start Event Battle 07
 db $B4, $18			;Play Background Music The Fired Powered Ship
 db $CA, $81, $01	;Set Flag 2/3/4/5/81 01
