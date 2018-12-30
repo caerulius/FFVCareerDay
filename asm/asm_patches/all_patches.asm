@@ -56,14 +56,15 @@ incsrc world1/after_karnak_escape.asm
 
 incsrc world1/ifrit.asm
 incsrc world1/byblos.asm                                   
-incsrc world1/mid_after_byblos.asm					; 0D Karnak Pub
-incsrc world1/mid_with_book.asm                       ; 0E Karnak Steamship
+incsrc world1/mid_after_byblos.asm					   ; 0D Karnak Pub
+incsrc world1/mid_with_book.asm                        ; 0E Karnak Steamship
 incsrc world1/mid_cid_wakeup.asm                       
 incsrc world1/steamship_repair.asm                     ; 0F Crescent Island
 
 incsrc world1/first_entering_crescent.asm             
 incsrc world1/black_chocobo.asm                        ; 10 Ancient Library
-incsrc world1/telling_mid_cid_about_steamship.asm ; 11 Desert
+incsrc world1/lix.asm
+incsrc world1/telling_mid_cid_about_steamship.asm      ; 11 Desert
 
 incsrc world1/sandworm.asm                              
 incsrc world1/ruined_city.asm
