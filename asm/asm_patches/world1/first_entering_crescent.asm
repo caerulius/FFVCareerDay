@@ -10,6 +10,7 @@ hirom
 ; enter crescent.
 org $C889D9
 
+db $B4, $17						;Play Background Music Danger!
 db $BE, $4A						;Rumble effect of 4A magnitude
 db $73
 db $7C							;<Unknown>
