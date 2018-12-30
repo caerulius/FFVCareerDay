@@ -35,7 +35,10 @@ incsrc world1/hiryuu_north_mountain.asm            ; 07 Walse Castle
 incsrc world1/carwen_lady.asm  
 
 incsrc world1/walse_king_post_tower.asm       
-incsrc world1/walse_meteor_falls.asm                   ; 08 Walse Tower 
+incsrc world1/walse_meteor_falls.asm                   ; 08 Walse Tower
+incsrc world1/lone_wolf_text.asm
+incsrc world1/lone_wolf_cell_trap_disable.asm
+incsrc world1/guy_next_to_lone_wolf.asm
 incsrc world1/walse_tower_sinking.asm
 incsrc world1/water_crystal.asm                          ; 09 Walse Meteor
 incsrc world1/whirlpool.asm
