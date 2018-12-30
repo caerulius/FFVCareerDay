@@ -4,6 +4,9 @@ hirom
 ; talking to cid on flying airship and crayclaw fight
 org $C8BA3C
 
+db $83, $55
+db $30
+db $73
 db $BD, $35, $FF				;Start Event Battle 35
 db $A5, $FE						;Clear Event Flag 1FE
 db $CD, $15, $00				;Run event index 0015
