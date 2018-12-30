@@ -9,7 +9,7 @@ db $A6, $1B						;Set Flag 1B
 db $E3, $C0, $00, $A6, $1E, $00	;Inter-map cutscene? C0 00 A6 1E 00
 db $A5, $FE						;Clear Event Flag 1FE
 db $D4, $3D, $48, $0F			;(Music) 3D 48 0F
-db $C3, $10						;Fade in Speed 10
+db $C3, $02						;Fade in Speed 02
 db $FF							;End event
 
 padbyte $00
