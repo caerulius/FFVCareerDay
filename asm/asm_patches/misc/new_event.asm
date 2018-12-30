@@ -47,6 +47,7 @@ tax
 
 lda !eventrewardindex+1, x ; load in reward id 
 sta !rewardid
+sta $16a2				; another reward id
 lda !eventrewardindex, x ; load in type id 
 sta !typeid
 

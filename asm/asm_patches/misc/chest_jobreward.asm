@@ -299,11 +299,11 @@ LDA $06
 JML $C08AC7
 
 AddKeyItemIndex:
-; if ability, then add #$1F40 (for E78100 starting)
+; if ability, then add #$28A0 (for E78100 starting)
 rep #$20
 PLA
 STA $0F ; store A into $000B0F
-LDA #$1D60
+LDA #$28A0
 CLC
 ADC $0F ; original contents + 1D00
 ; continue as usual
