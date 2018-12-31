@@ -23,7 +23,7 @@ class Chest(object):
         self.chest_contents = [self.type, self.id, self.reward_type, self.reward]
         self.data = self.loc1 + self.loc2 + self.type + self.id
         self.original_reward = self.reward
-        self.asar_output = f";{self.original_reward}→{self.reward}\norg ${self.address} \ndb ${self.loc1}, ${self.loc2}, ${self.type}, ${self.id} "
+        self.asar_output = f";org ${self.address} \ndb ${self.loc1}, ${self.loc2}, ${self.type}, ${self.id} "
         self.output_short = f"Chest: {self.idx}\t{self.original_reward} → {self.reward}"
     def generate_from_df(self, df):
         s = df[df['idx']==self.idx].iloc[0]
@@ -40,7 +40,7 @@ class Chest(object):
             self.reward = item_id_dict[self.id]
         self.chest_contents = [self.type, self.id, self.reward_type, self.reward]
         self.data = self.loc1 + self.loc2 + self.type + self.id
-        self.asar_output = f";{self.original_reward}→{self.reward}\norg ${self.address} \ndb ${self.loc1}, ${self.loc2}, ${self.type}, ${self.id} "
+        self.asar_output = f"org ${self.address} \ndb ${self.loc1}, ${self.loc2}, ${self.type}, ${self.id} "
         self.output_short = f"Chest: {self.idx}\t{self.original_reward} → {self.reward}"
     def random_reward(self):
         random_item = value_rewards.pop()
@@ -58,8 +58,8 @@ class RewardEvent(object):
         self.type = ''
         self.id = ''
         self.reward = ''
-        self.asar_output = f";Event: {self.event}→{self.reward}\norg ${self.address} \ndb ${self.type}, ${self.id} "
-        self.output_short = f"Event: \t\t{self.event} → {self.reward}"
+        self.asar_output = f"org ${self.address} \ndb ${self.type}, ${self.id} "
+        self.output_short = f"Event: {self.idx}\t{self.event} → {self.reward}"
     def generate_from_df(self, df):
         s = df[df['idx']==self.idx].iloc[0]
         if s.empty:
@@ -72,8 +72,8 @@ class RewardEvent(object):
         self.reward = random_item.reward_name
         self.type = random_item.reward_type
         self.id = random_item.reward_id
-        self.asar_output = f";Event: {self.event}→{self.reward}\norg ${self.address} \ndb ${self.type}, ${self.id} "
-        self.output_short = f"Event: \t\t{self.event} → {self.reward}"
+        self.asar_output = f"org ${self.address} \ndb ${self.type}, ${self.id} "
+        self.output_short = f"Event: {self.idx}\t{self.event} → {self.reward}"
  
 RewardEvent_1 = RewardEvent(1)
 RewardEvent_2 = RewardEvent(2)
@@ -129,8 +129,14 @@ RewardEvent_51 = RewardEvent(51)
 RewardEvent_52 = RewardEvent(52)
 RewardEvent_53 = RewardEvent(53)
 RewardEvent_54 = RewardEvent(54)
+RewardEvent_55 = RewardEvent(55)
+RewardEvent_56 = RewardEvent(56)
+RewardEvent_57 = RewardEvent(57)
+RewardEvent_58 = RewardEvent(58)
+RewardEvent_59 = RewardEvent(59)
 
-all_event_rewards = [RewardEvent_1,RewardEvent_2,RewardEvent_3,RewardEvent_4,RewardEvent_5,RewardEvent_6,RewardEvent_7,RewardEvent_8,RewardEvent_9,RewardEvent_10,RewardEvent_11,RewardEvent_12,RewardEvent_13,RewardEvent_14,RewardEvent_15,RewardEvent_16,RewardEvent_17,RewardEvent_18,RewardEvent_19,RewardEvent_20,RewardEvent_21,RewardEvent_22,RewardEvent_23,RewardEvent_24,RewardEvent_25,RewardEvent_26,RewardEvent_27,RewardEvent_28,RewardEvent_29,RewardEvent_30,RewardEvent_31,RewardEvent_32,RewardEvent_33,RewardEvent_34,RewardEvent_35,RewardEvent_36,RewardEvent_37,RewardEvent_38,RewardEvent_39,RewardEvent_40,RewardEvent_41,RewardEvent_42,RewardEvent_43,RewardEvent_44,RewardEvent_45,RewardEvent_46,RewardEvent_47,RewardEvent_48,RewardEvent_49,RewardEvent_50,RewardEvent_51,RewardEvent_52,RewardEvent_53,RewardEvent_54]
+
+all_event_rewards = [RewardEvent_1,RewardEvent_2,RewardEvent_3,RewardEvent_4,RewardEvent_5,RewardEvent_6,RewardEvent_7,RewardEvent_8,RewardEvent_9,RewardEvent_10,RewardEvent_11,RewardEvent_12,RewardEvent_13,RewardEvent_14,RewardEvent_15,RewardEvent_16,RewardEvent_17,RewardEvent_18,RewardEvent_19,RewardEvent_20,RewardEvent_21,RewardEvent_22,RewardEvent_23,RewardEvent_24,RewardEvent_25,RewardEvent_26,RewardEvent_27,RewardEvent_28,RewardEvent_29,RewardEvent_30,RewardEvent_31,RewardEvent_32,RewardEvent_33,RewardEvent_34,RewardEvent_35,RewardEvent_36,RewardEvent_37,RewardEvent_38,RewardEvent_39,RewardEvent_40,RewardEvent_41,RewardEvent_42,RewardEvent_43,RewardEvent_44,RewardEvent_45,RewardEvent_46,RewardEvent_47,RewardEvent_48,RewardEvent_49,RewardEvent_50,RewardEvent_51,RewardEvent_52,RewardEvent_53,RewardEvent_54,RewardEvent_55,RewardEvent_56,RewardEvent_57,RewardEvent_58,RewardEvent_59]
 Chest_1 = Chest(1)
 Chest_2 = Chest(2)
 Chest_3 = Chest(3)
@@ -397,7 +403,18 @@ value_rewards = random.sample(value_rewards,(len(all_checks)))
 
 for check in all_checks:
     check.random_reward()
-    print(check.asar_output)
-print("-------------------------")
-for check in all_checks:
     print(check.output_short)
+print("-------------------------")
+print("-------------------------")
+print("-------------------------")
+print("-------------------------")
+print("-------------------------")    
+print("COPY DATA FROM HERE DOWN-")    
+print("-------------------------")    
+print("-------------------------")    
+print("-------------------------")    
+print("-------------------------")    
+print("-------------------------")    
+for check in all_checks:
+    print(check.asar_output)
+
