@@ -35,7 +35,10 @@ incsrc world1/hiryuu_north_mountain.asm            ; 07 Walse Castle
 incsrc world1/carwen_lady.asm  
 
 incsrc world1/walse_king_post_tower.asm       
-incsrc world1/walse_meteor_falls.asm                   ; 08 Walse Tower 
+incsrc world1/walse_meteor_falls.asm                   ; 08 Walse Tower
+incsrc world1/lone_wolf_text.asm
+incsrc world1/lone_wolf_cell_trap_disable.asm
+incsrc world1/guy_next_to_lone_wolf.asm
 incsrc world1/walse_tower_sinking.asm
 incsrc world1/water_crystal.asm                          ; 09 Walse Meteor
 incsrc world1/whirlpool.asm
@@ -53,14 +56,15 @@ incsrc world1/after_karnak_escape.asm
 
 incsrc world1/ifrit.asm
 incsrc world1/byblos.asm                                   
-incsrc world1/mid_after_byblos.asm					; 0D Karnak Pub
-incsrc world1/mid_with_book.asm                       ; 0E Karnak Steamship
+incsrc world1/mid_after_byblos.asm					   ; 0D Karnak Pub
+incsrc world1/mid_with_book.asm                        ; 0E Karnak Steamship
 incsrc world1/mid_cid_wakeup.asm                       
 incsrc world1/steamship_repair.asm                     ; 0F Crescent Island
 
 incsrc world1/first_entering_crescent.asm             
 incsrc world1/black_chocobo.asm                        ; 10 Ancient Library
-incsrc world1/telling_mid_cid_about_steamship.asm ; 11 Desert
+incsrc world1/lix.asm
+incsrc world1/telling_mid_cid_about_steamship.asm      ; 11 Desert
 
 incsrc world1/sandworm.asm                              
 incsrc world1/ruined_city.asm

@@ -5,11 +5,13 @@ hirom
 ; this also sets all the other flags so you can go right to the end
 org $C93843
 
-db $A2, $3D			;Set Event Flag 03D
-db $A2, $AB			;Set Event Flag 0AB ; first king tycoon
-db $A2, $AE			;Set Event Flag 0AE	; second king tycoon
-db $A4, $00			;Set Event Flag 100 ; third king tycoon
-db $FF				;End event
+db $D3, $83, $22, $13		;Sprite 83 set map position 10, 10
+db $83, $09					;Sprite 083 do event: Show
+db $A2, $3D					;Set Event Flag 03D
+db $A2, $AB					;Set Event Flag 0AB ; first king tycoon
+db $A2, $AE					;Set Event Flag 0AE	; second king tycoon
+db $A4, $00					;Set Event Flag 100 ; third king tycoon
+db $FF						;End event
 
 padbyte $00
 pad $C93888

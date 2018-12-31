@@ -12,6 +12,8 @@ db $89, $09						;Sprite 089 do event: Show
 db $C3, $0C						;Fade in Speed 0C
 db $01							;Player move up
 db $01							;Player move up
+db $88, $10
+db $89, $10
 db $CF, $05, $04				;Play next 04 bytes simultaneously 05 times
 db $88, $03						;Sprite 088 do event: Move Down
 db $89, $03						;Sprite 089 do event: Move Down
