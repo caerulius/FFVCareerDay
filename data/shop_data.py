@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import pandas as pd 
+from reward_data import *
 import random
 
 
@@ -27,14 +28,10 @@ shop_id_dict = {
 class Shop(object):
     def __init__(self,index):
         self.idx = index
+        self.shop_count = 0
         self.generate_from_df(df_shop_table)
         self.output = f"Shop index: {self.idx}\nShop type: {self.shop_type_name}\n{self.slot1_name}\n{self.slot2_name}\n{self.slot3_name}\n{self.slot4_name}\n{self.slot5_name}\n{self.slot6_name}\n{self.slot7_name}\n{self.slot8_name}"
-#        self.address = hex(int(self.base_address,base=16)+int(self.offset,base=16)).replace("0x","").upper()
-#        self.chest_contents = [self.type, self.id, self.reward_type, self.reward]
-#        self.data = self.loc1 + self.loc2 + self.type + self.id
-#        self.original_reward = self.reward
-#        self.asar_output = f";{self.original_reward}→{self.reward}\norg ${self.address} \ndb ${self.loc1}, ${self.loc2}, ${self.type}, ${self.id} "
-#        self.output_short = f"Chest: {self.idx}\t{self.original_reward} → {self.reward}"
+        self.asar_output = f";Shop index: {self.idx}\norg ${self.address}\ndb ${self.shop_type}, ${self.slot1}, ${self.slot2}, ${self.slot3}, ${self.slot4}, ${self.slot5}, ${self.slot6}, ${self.slot7}, ${self.slot8}"
     def generate_from_df(self, df):
         s = df[df.index==self.idx].iloc[0]
         if s.empty:
@@ -43,28 +40,48 @@ class Shop(object):
             for index in s.index:
                 setattr(self,index,s.loc[index])
         self.shop_type_name = shop_id_dict[self.shop_type]
+        
+        # this looks up the string name for each magic ID, then change slot to Class object
         if self.shop_type_name == 'Magic':
-            self.slot1_name = magic_id_dict[self.slot1.upper()]
-            self.slot2_name = magic_id_dict[self.slot2.upper()]
-            self.slot3_name = magic_id_dict[self.slot3.upper()]
-            self.slot4_name = magic_id_dict[self.slot4.upper()]
-            self.slot5_name = magic_id_dict[self.slot5.upper()]
-            self.slot6_name = magic_id_dict[self.slot6.upper()]
-            self.slot7_name = magic_id_dict[self.slot7.upper()]
-            self.slot8_name = magic_id_dict[self.slot8.upper()]        
+            for attr in list(self.__dict__):
+                if 'slot' in attr:
+                    setattr(self,attr+"_name",magic_id_dict[getattr(self,attr)])
+                    setattr(self,attr+"_reward",Magic(getattr(self,attr)))
+        # this looks up the string name for each item ID, then change slot to Class object
         else:
-            self.slot1_name = item_id_dict[self.slot1.upper()]
-            self.slot2_name = item_id_dict[self.slot2.upper()]
-            self.slot3_name = item_id_dict[self.slot3.upper()]
-            self.slot4_name = item_id_dict[self.slot4.upper()]
-            self.slot5_name = item_id_dict[self.slot5.upper()]
-            self.slot6_name = item_id_dict[self.slot6.upper()]
-            self.slot7_name = item_id_dict[self.slot7.upper()]
-            self.slot8_name = item_id_dict[self.slot8.upper()]
-        for key, val in list(self.__dict__.items()):
-            if "00" in str(val) and key is not 'shop_type':
-                setattr(self,key+"_name","")
-                
+            for attr in list(self.__dict__):
+                if 'slot' in attr:
+                    setattr(self,attr+"_name",item_id_dict[getattr(self,attr)])
+                    setattr(self,attr+"_reward",Item(getattr(self,attr)))
+        # if blank, set to blank string
+        
+        slots_only = ['slot1','slot2','slot3','slot4','slot5','slot6','slot7','slot8']
+        for slot in slots_only:
+            if "00" in str(getattr(self,slot)):
+                setattr(self,slot+"_name","")
+            else:
+                self.shop_count = self.shop_count + 1
+    def randomize_shop(self,shop_reward_count=None):
+        if shop_reward_count is None:
+            shop_reward_count = self.shop_count            
+        if self.shop_type_name == 'Magic':
+            all_magic_local = all_magic[:]
+            random.shuffle(all_magic_local)
+            for reward_num in range(shop_reward_count+1):
+                new_magic = all_magic_local.pop()
+                setattr(self,"slot"+str(reward_num),new_magic.reward_id)
+                setattr(self,"slot"+str(reward_num)+"_name",new_magic.reward_name)
+                setattr(self,"slot"+str(reward_num)+"_reward",new_magic)
+        else:
+            all_item_local = all_items[:]
+            random.shuffle(all_item_local)
+            for reward_num in range(shop_reward_count+1):
+                new_item = all_item_local.pop()
+                setattr(self,"slot"+str(reward_num),new_item.reward_id)
+                setattr(self,"slot"+str(reward_num)+"_name",new_item.reward_name)
+                setattr(self,"slot"+str(reward_num)+"_reward",new_item)
+        self.output = f"Shop index: {self.idx}\nShop type: {self.shop_type_name}\n{self.slot1_name}\n{self.slot2_name}\n{self.slot3_name}\n{self.slot4_name}\n{self.slot5_name}\n{self.slot6_name}\n{self.slot7_name}\n{self.slot8_name}"
+        self.asar_output = f";Shop index: {self.idx}\norg ${self.address}\ndb ${self.shop_type}, ${self.slot1}, ${self.slot2}, ${self.slot3}, ${self.slot4}, ${self.slot5}, ${self.slot6}, ${self.slot7}, ${self.slot8}"
 
 Shop_1 = Shop(1)
 Shop_2 = Shop(2)
@@ -134,5 +151,6 @@ Shop_64 = Shop(64)
 all_shops = [Shop_1,Shop_2,Shop_3,Shop_4,Shop_5,Shop_6,Shop_7,Shop_8,Shop_9,Shop_10,Shop_11,Shop_12,Shop_13,Shop_14,Shop_15,Shop_16,Shop_17,Shop_18,Shop_19,Shop_20,Shop_21,Shop_22,Shop_23,Shop_24,Shop_25,Shop_26,Shop_27,Shop_28,Shop_29,Shop_30,Shop_31,Shop_32,Shop_33,Shop_34,Shop_35,Shop_36,Shop_37,Shop_38,Shop_39,Shop_40,Shop_41,Shop_42,Shop_43,Shop_44,Shop_45,Shop_46,Shop_47,Shop_48,Shop_49,Shop_50,Shop_51,Shop_52,Shop_53,Shop_54,Shop_55,Shop_56,Shop_57,Shop_58,Shop_59,Shop_60,Shop_61,Shop_62,Shop_63,Shop_64]
 
 for shop in all_shops:
-    print(shop.output)
-    print("----------")
+    shop.randomize_shop()
+    print(shop.asar_output)
+    # print("----------")
