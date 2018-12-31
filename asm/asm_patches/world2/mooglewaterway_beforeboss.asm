@@ -8,7 +8,7 @@ org $C90E7C
 ; Sets flag, immediately ends. Player won't notice
 
 
-db $A1, $00
+; db $A1, $00
 db $A2, $5E                     ;Set Event Flag 05E
 db $FF                                 ;End Event
 
