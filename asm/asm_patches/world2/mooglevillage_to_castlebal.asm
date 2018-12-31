@@ -48,10 +48,6 @@ org $C8C3EE
 ; Enter Bal with Hiryuu
 
 db $E3, $0E, $01, $0B, $09, $00 ;Inter-map cutscene? 0E 01 0B 09 00
-db $C3, $02                     ;Fade in Speed 02
-db $DB                                 ;Restore Player status
-db $14                          ;Player pose: face down, left hand forward
-db $09                                 ;Player Show
 db $80, $0A                      ;Sprite 080 do event Hide
 db $A2, $5F                     ;Set Event Flag 05F
 db $CA, $69, $02                        ;Set Flag 2/3/4/5/69 02
@@ -74,15 +70,31 @@ db $CA, $78, $02                        ;Set Flag 2/3/4/5/78 02
 db $CA, $79, $02                        ;Set Flag 2/3/4/5/79 02
 db $CA, $7A, $02                        ;Set Flag 2/3/4/5/7A 02
 db $A2, $60                     ;Set Event Flag 060 (this is taken from Cara's cutscene with Hiryuu to immediately set flag)
+; Kelb unlock cutscenes
+db $A2, $62                     ;Set Event Flag 062 (this cutscene)
+db $A2, $64                     ;Set Event Flag 062 (Kelgar cutscene)
+db $CA, $AE, $02                ;Turn on bit 40 at address  0x7e0aa9
+db $CA, $AF, $02                ;Turn on bit 80 at address  0x7e0aa9
+db $CA, $B0, $02                ;Turn on bit 01 at address  0x7e0aaa
+db $CA, $B1, $02                ;Turn on bit 02 at address  0x7e0aaa
+db $CA, $B2, $02                ;Turn on bit 04 at address  0x7e0aaa
+db $CA, $B5, $02                ;Turn on bit 20 at address  0x7e0aaa
+db $CA, $B6, $02                ;Turn on bit 40 at address  0x7e0aaa
+db $CA, $B7, $02                ;Turn on bit 80 at address  0x7e0aaa
+db $CA, $C1, $02                ;Turn on bit 02 at address  0x7e0aac
+db $CB, $C2, $02                ;Turn off bit 04 at address  0x7e0aac
+db $CB, $A1, $02                ;Turn off bit 02 at address  0x7e0aa8
+db $CA, $29, $00                ;Turn on bit 02 at address  0x7e0a59
+db $CA, $2A, $00                ;Turn on bit 04 at address  0x7e0a59
 db $CC, $1B                  ;Custom destination flag 1B
+db $14                          ;Player pose: face down, left hand forward
+db $C3, $02                     ;Fade in Speed 02
+db $73
+db $DB                                 ;Restore Player status
+db $09                                 ;Player Show
+
+
 db $FF                                ;End Event
-
-; e30e010b0900c302db1409800aa25fca
-; 6902ca6a02ca6b02ca6c02ca6d02ca6e
-; 02ca6f02ca7002ca7102ca7202ca7302
-; ca7c02ca7402ca7502ca7602ca7702ca
-; 7802ca7902ca7a02ff00
-
 
 padbyte $00
 pad $C8C71C

@@ -29,6 +29,9 @@ db $87, $24                     ;Sprite 087 do event face down, right hand raise
 db $F0, $B7, $04              ;Conditional yes/no dialogue at 04B7
 db $CD, $08, $04                ;Run event index 0408
 db $FF                          ;End Event
+db $CD, $09, $04                ;Run event index 0409
+db $FF                          ;End Event
+db $FF                          ;End Event
 
 padbyte $00
 pad $C8C80E
@@ -181,23 +184,6 @@ db $BD, $1D, $FF                ;Start Event Battle 1D
 db $A2, $61                     ;Set Event Flag 061
 db $CB, $6B, $02                ;Clear Flag 2/3/4/5/6B 02
 
-
-; Kelb unlock cutscenes
-db $A2, $62                     ;Set Event Flag 062 (this cutscene)
-db $A2, $64                     ;Set Event Flag 062 (Kelgar cutscene)
-db $CA, $AE, $02                ;Turn on bit 40 at address  0x7e0aa9
-db $CA, $AF, $02                ;Turn on bit 80 at address  0x7e0aa9
-db $CA, $B0, $02                ;Turn on bit 01 at address  0x7e0aaa
-db $CA, $B1, $02                ;Turn on bit 02 at address  0x7e0aaa
-db $CA, $B2, $02                ;Turn on bit 04 at address  0x7e0aaa
-db $CA, $B5, $02                ;Turn on bit 20 at address  0x7e0aaa
-db $CA, $B6, $02                ;Turn on bit 40 at address  0x7e0aaa
-db $CA, $B7, $02                ;Turn on bit 80 at address  0x7e0aaa
-db $CA, $C1, $02                ;Turn on bit 02 at address  0x7e0aac
-db $CB, $C2, $02                ;Turn off bit 04 at address  0x7e0aac
-db $CB, $A1, $02                ;Turn off bit 02 at address  0x7e0aa8
-db $CA, $29, $00                ;Turn on bit 02 at address  0x7e0a59
-db $CA, $2A, $00                ;Turn on bit 04 at address  0x7e0a59
 ; db $DB                          ;Restore Player statuss
 
 

@@ -8,14 +8,7 @@ org $C90E7C
 ; Sets flag, immediately ends. Player won't notice
 
 
-; db $DE, $00		; set up reward
-; db $DF			; call text handler 
-; db $DE, $01		; set up reward
-; db $DF			; call text handler 
-; db $DE, $02		; set up reward
-; db $DF			; call text handler 
-; db $DE, $03		; set up reward
-; db $DF			; call text handler 
+db $A1, $00
 db $A2, $5E                     ;Set Event Flag 05E
 db $FF                                 ;End Event
 

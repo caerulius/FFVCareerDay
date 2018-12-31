@@ -18,6 +18,8 @@ pad $C872D2
 ; Walse tower sink cutscene
 org $C88B26
 
+db $C4, $04
+db $75
 db $BE, $00						;Rumble effect of 4F magnitude
 db $A4, $E3						;Set Event Flag 1E3
 db $E1, $00, $00, $CB, $57, $00	;Return from cutscene? 00 00 CB 57 00

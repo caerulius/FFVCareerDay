@@ -1,5 +1,5 @@
 ; conditionals
-!vanillarewards = 1
+!vanillarewards = 0
 
 
 ; world 1                                   Destinations:
@@ -183,6 +183,7 @@ incsrc reward_events/crescent_lifesong.asm
 incsrc reward_events/crescent_powersong.asm
 incsrc reward_events/exdeathcastle_carbuncle.asm
 incsrc reward_events/walse_shiva.asm
+incsrc reward_events/watercrystal_obtainshards.asm
 
 ; optionals
 incsrc misc/optionals.asm

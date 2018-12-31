@@ -165,7 +165,6 @@ db $CA, $05, $03                ;Set Flag 2/3/4/5/05 03
 db $CA, $06, $03                ;Set Flag 2/3/4/5/06 03
 db $CA, $07, $03                ;Set Flag 2/3/4/5/07 03
 db $A2, $AA                     ;Set Event Flag 0AA
-db $CC, $1F                  ;Custom destination flag 1F
 db $FF                          ;End Event
 
 
@@ -223,6 +222,7 @@ db $CB, $F6, $02                ;Clear Flag 2/3/4/5/F6 02
 db $CB, $F7, $02                ;Clear Flag 2/3/4/5/F7 02
 db $CB, $F8, $02                ;Clear Flag 2/3/4/5/F8 02
 db $CB, $F9, $02                ;Clear Flag 2/3/4/5/F9 02
+db $CC, $1F                  ;Custom destination flag 1F
 db $FF                          ;End Event
 
 padbyte $00
