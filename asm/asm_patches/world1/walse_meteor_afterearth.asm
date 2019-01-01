@@ -48,6 +48,7 @@ db $81, $24                     ;Sprite 081 do event: face down, right hand rais
 ;db $A0, $03                     ;(Message) 03
 db $A3, $BA                     ;Clear Event Flag 0BA
 db $A2, $53                     ;Set Event Flag 053
+db $CC, $2B                  ;Custom destination flag
 db $FF                          ;End Event
 
 padbyte $00

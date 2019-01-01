@@ -21,6 +21,7 @@ db $CB, $34, $01                ;Clear Flag 2/3/4/5/34 01
 db $CB, $F8, $00                ;Clear Flag 2/3/4/5/F8 00
 db $CB, $01, $02                ;Clear Flag 2/3/4/5/01 02
 db $CB, $2D, $00                ;Clear Flag 2/3/4/5/2D 00
+db $CC, $29                  ;Custom destination flag
 db $A2, $4F                     ;Set Event Flag 04F
 db $FF                          ;End Event
 

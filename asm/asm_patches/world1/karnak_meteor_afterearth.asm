@@ -55,6 +55,7 @@ db $80, $10                     ;Sprite 080 do event: face up, left hand forward
 db $81, $10                     ;Sprite 081 do event: face up, left hand forward
 db $CD, $B7, $04                ;Run event index 04B7
 db $CB, $FC, $00                ;Clear Flag 2/3/4/5/FC 00
+db $CC, $2A                  ;Custom destination flag
 db $A3, $BB                     ;Clear Event Flag 0BB
 db $A2, $50                     ;Set Event Flag 050
 db $FF                          ;End Event

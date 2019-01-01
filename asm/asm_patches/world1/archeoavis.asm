@@ -42,7 +42,7 @@ db $01                          ;Player Move Up
 db $80, $01                     ;Sprite 080 do event: Move Up
 db $80, $0A                     ;Sprite 080 do event: Hide
 db $70                          ;Very short pause
-db $F3, $17, $0D, $10           ;Set Map Tiles 17 0D 10
+db $F3, $17, $0D, $10, $42, $52 ;Set Map Tiles 17 0D 10 42 52
 db $42                          ;Player pose: garbage
 db $DB                          ;Restore Player status
 db $CB, $CD, $00                ;Clear Flag 2/3/4/5/CD 00

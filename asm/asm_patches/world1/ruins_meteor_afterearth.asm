@@ -45,9 +45,18 @@ db $80, $02                     ;Sprite 080 do event: Move Right
 db $81, $04                     ;Sprite 081 do event: Move Left
 db $80, $0A                     ;Sprite 080 do event: Hide
 db $81, $0A                     ;Sprite 081 do event: Hide
+
+db $84, $0A                     ;Sprite 084 do event: Hide
+db $85, $09                     ;Sprite 085 do event: Show
+db $82, $0A                     ;Sprite 082 do event: Hide
+db $83, $09                     ;Sprite 083 do event: Show
+db $83, $20                     ;Sprite 083 do event: face down, left hand raised out
+db $85, $20                     ;Sprite 085 do event: face down, left hand raised out
 db $BD, $10, $FF                ;Start Event Battle 10
+db $C4, $04
+db $73
 db $E1, $80, $00, $90, $10, $00 ;Return from cutscene? 80 00 90 10 00
-db $C3, $10                     ;Fade in Speed 10
+db $C3, $03                     ;Fade in Speed 10
 db $03                          ;Player Move Down
 db $03                          ;Player Move Down
 db $D3, $80, $90, $0F           ;Sprite 80 set map position 90, 0F
@@ -62,3 +71,23 @@ db $CC, $17                  ;Custom destination flag 17
 db $FF                          ;End Event
 
 pad $C986E7
+
+org $C94B8A
+db $07, $07, $07
+
+org $C8DD65
+
+db $C3, $10                     ;Fade in Speed 10
+db $2F                          ;Player pose: face up, head lowered
+db $71                          ;Short pause
+db $10                          ;Player pose: face up, left hand forward
+db $72                          ;Medium pause
+db $03                          ;Player Move Down
+db $03                          ;Player Move Down
+db $80, $12                     ;Sprite 080 do event: face right, standing
+db $81, $12                     ;Sprite 081 do event: face right, standing
+db $83, $12                     ;Sprite 083 do event: face right, standing
+db $A4, $EF                     ;Turn on bit 80 at address 0x7e0a51
+db $FF                          ;End Event
+
+pad $C8DD84

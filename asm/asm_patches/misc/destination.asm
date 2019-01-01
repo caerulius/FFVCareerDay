@@ -299,9 +299,58 @@ db $64, $73, $72, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
 
-
-
-
+;Karnak Meteor
+org $F18740
+db $6A
+db $60
+db $71
+db $6D
+db $60
+db $6A
+db $96
+db $6C
+db $64
+db $73
+db $64
+db $6E
+db $71
+db $FF
+;Walse Meteor
+org $F18760
+db $76
+db $60
+db $6B
+db $72
+db $64
+db $96
+db $6C
+db $64
+db $73
+db $64
+db $6E
+db $71
+db $FF
+;Ruined City Meteor
+org $F18780
+db $71
+db $74
+db $68
+db $6D
+db $64
+db $63
+db $96
+db $62
+db $68
+db $73
+db $78
+db $96
+db $6C
+db $64
+db $73
+db $64
+db $6E
+db $71
+db $FF
 
 
 

@@ -9,8 +9,8 @@ db $84, $09				;Sprite 084 do event: Show
 db $CF, $0e, $01        ;Play the next 03 bytes simultaneously 07 times
 db $04                  ;Player move Left
 db $BB, $01, $04		;Set Character Lenna  Curable status to Poison
-db $84, $0A				;Sprite 084 do event: Hide
 db $73
+db $84, $0A				;Sprite 084 do event: Hide
 db $BD, $04, $FF		;Start Event Battle 04
 db $DB					;Restore Player status
 if !vanillarewards == 1
