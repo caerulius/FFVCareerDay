@@ -47,6 +47,7 @@ db $A5, $FE                     ;Clear Event Flag 1FE
 db $E1, $03, $20, $A9, $A5, $91 ;Return from cutscene? 03 20 A9 A5 91
 db $DB                          ;Restore Player status
 db $C3, $02                     ;Fade in Speed 0A
+db $73
 db $CA, $0E, $00                ;Set Flag 2/3/4/5/0E 00
 ; db $B7, $02                     ;Add/Remove character 02
 db $A3, $C1                     ;Clear Event Flag 0C1

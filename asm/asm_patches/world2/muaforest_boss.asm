@@ -1223,7 +1223,7 @@ db $BD, $21, $FF                ;Start Event Battle 21
 ; db $92, $11                     ;Sprite 192 do event: face up, right hand forward
 ; db $92, $43                     ;Sprite 192 do event: face down, looking right, pointing finger right
 db $75
-db $C4, $00
+db $C4, $02
 db $A2, $75                     ;Set Event Flag 075
 ;db $D1, $1E, $EC, $00           ;(Timer?) 1E EC 00
 ;db $FF                          ;End Event
@@ -1309,6 +1309,7 @@ db $CD, $40, $04                ;Run event index 0440
 db $88, $09                     ;Sprite 088 do event: Show
 db $88, $24                     ;Sprite 088 do event: face down, right hand raised in
 db $0A                          ;Player Hide
+db $B4, $30                     ;Play Background Music The Day Will Come
 db $D3, $82, $93, $0F           ;Sprite 82 set map position 93, 0F
 db $D3, $83, $93, $11           ;Sprite 83 set map position 93, 11
 db $D3, $85, $93, $11           ;Sprite 85 set map position 93, 11
@@ -1316,17 +1317,17 @@ db $C3, $02                     ;Fade in Speed 08
 db $B3, $10                     ;Pause for 100 cycles
 db $CD, $73, $07                ;Run event index 0773
 ;db $C8, $DE, $05                ;Display Message/Text/Dialogue DE 05
-; db $88, $02                     ;Sprite 088 do event: Move Right
+ db $88, $02                     ;Sprite 088 do event: Move Right
 ; db $70                          ;Very short pause
-; db $88, $04                     ;Sprite 088 do event: Move Left
-; db $88, $04                     ;Sprite 088 do event: Move Left
+ db $88, $04                     ;Sprite 088 do event: Move Left
+ db $88, $04                     ;Sprite 088 do event: Move Left
 ; db $71                          ;Short pause
-; db $CD, $73, $07                ;Run event index 0773
-; db $88, $20                     ;Sprite 088 do event: face down, left hand raised out
+ db $CD, $73, $07                ;Run event index 0773
+ db $88, $20                     ;Sprite 088 do event: face down, left hand raised out
 ; db $74                          ;Very long pause
-; db $B4, $30                     ;Play Background Music The Day Will Come
-; db $CD, $88, $07                ;Run event index 0788
-; db $CD, $73, $07                ;Run event index 0773
+db $B4, $30                     ;Play Background Music The Day Will Come
+ db $CD, $88, $07                ;Run event index 0788
+ db $CD, $73, $07                ;Run event index 0773
 ; ;db $C8, $DF, $05                ;Display Message/Text/Dialogue DF 05
 
 
@@ -1620,6 +1621,9 @@ db $09                          ;Player Show
 db $C3, $02
 db $14                          ;Player pose: face down, left hand forward
 db $CC, $23                  ;Custom destination flag 23
+
+db $A4, $45					; Trigger for Exdeath cutscene
+
 db $EB, $FF                     ;Unknown
 
 padbyte $00

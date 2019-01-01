@@ -145,10 +145,10 @@ Shop_59 = Shop(59)
 Shop_60 = Shop(60)
 Shop_61 = Shop(61)
 Shop_62 = Shop(62)
-Shop_63 = Shop(63)
-Shop_64 = Shop(64)
+# Shop_63 = Shop(63)
+# Shop_64 = Shop(64)
 
-all_shops = [Shop_1,Shop_2,Shop_3,Shop_4,Shop_5,Shop_6,Shop_7,Shop_8,Shop_9,Shop_10,Shop_11,Shop_12,Shop_13,Shop_14,Shop_15,Shop_16,Shop_17,Shop_18,Shop_19,Shop_20,Shop_21,Shop_22,Shop_23,Shop_24,Shop_25,Shop_26,Shop_27,Shop_28,Shop_29,Shop_30,Shop_31,Shop_32,Shop_33,Shop_34,Shop_35,Shop_36,Shop_37,Shop_38,Shop_39,Shop_40,Shop_41,Shop_42,Shop_43,Shop_44,Shop_45,Shop_46,Shop_47,Shop_48,Shop_49,Shop_50,Shop_51,Shop_52,Shop_53,Shop_54,Shop_55,Shop_56,Shop_57,Shop_58,Shop_59,Shop_60,Shop_61,Shop_62,Shop_63,Shop_64]
+all_shops = [Shop_1,Shop_2,Shop_3,Shop_4,Shop_5,Shop_6,Shop_7,Shop_8,Shop_9,Shop_10,Shop_11,Shop_12,Shop_13,Shop_14,Shop_15,Shop_16,Shop_17,Shop_18,Shop_19,Shop_20,Shop_21,Shop_22,Shop_23,Shop_24,Shop_25,Shop_26,Shop_27,Shop_28,Shop_29,Shop_30,Shop_31,Shop_32,Shop_33,Shop_34,Shop_35,Shop_36,Shop_37,Shop_38,Shop_39,Shop_40,Shop_41,Shop_42,Shop_43,Shop_44,Shop_45,Shop_46,Shop_47,Shop_48,Shop_49,Shop_50,Shop_51,Shop_52,Shop_53,Shop_54,Shop_55,Shop_56,Shop_57,Shop_58,Shop_59,Shop_60,Shop_61,Shop_62]
 
 for shop in all_shops:
     shop.randomize_shop()

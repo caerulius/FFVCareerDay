@@ -38,8 +38,7 @@ db $70                          ;Medium pause
 db $B4, $31                     ;Play Background Music Run!
 db $BE, $41                     ;Rumble effect of 41 magnitude
 db $B5, $84                     ;Play Sound Effect Exdeath destroyed 2
-db $70                          ;Medium pause
-db $70                          ;Long pause
+db $71
 db $B5, $84                     ;Play Sound Effect Exdeath destroyed 2
 db $BE, $4F                     ;Rumble effect of 4F magnitude
 db $3A                          ;Player pose: face down, surprised
@@ -54,10 +53,11 @@ db $10                          ;Player pose: face up, left hand forward
 db $80, $26                     ;Sprite 080 do event: face up, right hand raised out
 db $70                          ;Very short pause
 db $82, $22                     ;Sprite 082 do event: face down, left hand on head
-db $BE, $40                     ;Rumble effect of 40 magnitude
 db $A4, $E8                     ;Set Event Flag 1E8
 db $A4, $E9                     ;Set Event Flag 1E9
-db $C4, $03                     ;Fade out Speed 08
+; db $C4, $03                     ;Fade out Speed 08
+db $72
+db $BE, $40                     ;Rumble effect of 40 magnitude
 db $E3, $01, $00, $70, $65, $6C ;Inter-map cutscene? 01 00 70 65 6C
 db $C1, $00                     ;<Unknown>
 db $DB                          ;Restore Player status
@@ -66,6 +66,7 @@ db $C3, $03                     ;Fade in Speed 0A
 db $B4, $1D                     ;Play Background Music The Dragon Spreads its Wings
 db $7B                          ;*YOU DIDNT MEAN TO USE THIS*
 db $CC, $1E                  ;Custom destination flag 1E
+db $A2, $6B                     ;Set Event Flag 06B
 db $FF                          ;End Event
 
 padbyte $00

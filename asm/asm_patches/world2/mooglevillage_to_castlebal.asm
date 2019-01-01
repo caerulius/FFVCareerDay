@@ -88,9 +88,9 @@ db $CA, $29, $00                ;Turn on bit 02 at address  0x7e0a59
 db $CA, $2A, $00                ;Turn on bit 04 at address  0x7e0a59
 db $CC, $1B                  ;Custom destination flag 1B
 db $14                          ;Player pose: face down, left hand forward
+db $DB                                 ;Restore Player status
 db $C3, $02                     ;Fade in Speed 02
 db $73
-db $DB                                 ;Restore Player status
 db $09                                 ;Player Show
 
 

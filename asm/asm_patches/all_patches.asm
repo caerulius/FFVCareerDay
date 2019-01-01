@@ -1,5 +1,5 @@
 ; conditionals
-!vanillarewards = 0
+!vanillarewards = 1
 
 
 ; world 1                                   Destinations:
@@ -111,6 +111,7 @@ incsrc world2/zezafleet_sleep.asm
 incsrc world2/zeza_entertower.asm                       ; 20 Barrier Tower
 incsrc world2/barriertower_inside.asm        
 incsrc world2/barriertower_top.asm                       ; 21 Submerged Guido Cave
+incsrc world2/guido_chests.asm                          
 incsrc world2/guido_firsttalk.asm                          ; 22 Mua Forest
 incsrc world2/muaforest_enter.asm
 incsrc world2/muaforest_fire.asm  

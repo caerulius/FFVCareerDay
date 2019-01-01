@@ -41,7 +41,7 @@ db $03                          ;Player Move Down
 db $B5, $8E                     ;Play Sound Effect Treasure chest
 db $F3, $1B, $1E, $00           ;Set Map Tiles 1B 1E 00
 db $12                          ;Player pose: face right, standing
-db $3F                          ;Player pose: face down, looking left, eyes lowered
+; db $3F                          ;Player pose: face down, looking left, eyes lowered
 db $CA, $15, $03                ;Set Flag 2/3/4/5/15 03
 db $CB, $2D, $03                ;Clear Flag 2/3/4/5/2D 03
 db $CB, $2E, $03                ;Clear Flag 2/3/4/5/2E 03

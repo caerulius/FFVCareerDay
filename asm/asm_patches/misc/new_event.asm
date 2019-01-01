@@ -1,18 +1,8 @@
 hirom
-!destinationindex = $7E06A0
+!destinationindex = $7E1E20
 !eventrewardindex = $C0FAB0
 !typeid = $11
 !rewardid = $12
-
-
-org !eventrewardindex
-db $40, $1F
-org !eventrewardindex+2
-db $20, $8a
-org !eventrewardindex+4
-db $50, $12
-org !eventrewardindex+6
-db $60, $78
 
 
 ; DESTINATION : Code $CC
