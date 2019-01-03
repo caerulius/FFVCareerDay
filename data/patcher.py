@@ -26,7 +26,7 @@ os.mkdir(directory)
 urllib.request.urlretrieve("http://polywhack.com/ffv.sfc", directory + "/ffv.sfc")
 
 log = ""
-patch = ""
+patch = "hirom\n"
 
 for check in chest_data.all_checks:
     log += check.output_short + "\n"
