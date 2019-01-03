@@ -46,7 +46,10 @@ db $A2, $2C                     ;Set Event Flag 02C
 db $A2, $98                     ;Set Event Flag 098
 db $A4, $FE                     ;Set Event Flag 1FE
 db $E3, $4C, $00, $23, $13, $00 ;Inter-map cutscene? 4C 00 23 13 00
+; db $02, $02, $02, $02, $02, $02
+; db $11
 db $C3, $03
+db $73
 db $FF                          ;End Event
 
 padbyte $00

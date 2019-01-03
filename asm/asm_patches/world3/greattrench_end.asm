@@ -18,6 +18,7 @@ db $B5, $96                     ;Play Sound Effect Evil disappears
 db $84, $09                     ;Sprite 084 do event: Show
 db $B5, $96                     ;Play Sound Effect Evil disappears
 db $85, $09                     ;Sprite 085 do event: Show
+db $71
 db $C7, $06                     ;Play next 06 bytes simultaneously
 db $83, $03                     ;Sprite 083 do event: Move Down
 db $84, $03                     ;Sprite 084 do event: Move Down

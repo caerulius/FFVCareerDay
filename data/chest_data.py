@@ -28,7 +28,7 @@ class Chest(object):
     def generate_from_df(self, df):
         s = df[df['idx']==self.idx].iloc[0]
         if s.empty:
-            print("No match on index found for Chest class "+self.boss_name)
+            print("No match on index found for Chest class "+self.idx)
         else:
             for index in s.index:
                 setattr(self,index,s.loc[index])
@@ -63,7 +63,7 @@ class RewardEvent(object):
     def generate_from_df(self, df):
         s = df[df['idx']==self.idx].iloc[0]
         if s.empty:
-            print("No match on index found for Chest class "+self.boss_name)
+            print("No match on index found for Chest class "+self.idx)
         else:
             for index in s.index:
                 setattr(self,index,s.loc[index])        
