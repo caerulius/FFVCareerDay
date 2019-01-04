@@ -28,11 +28,14 @@ urllib.request.urlretrieve("http://polywhack.com/ffv.sfc", directory + "/ffv.sfc
 log = ""
 patch = "hirom\n"
 
-for check in chest_data.all_checks:
+all_checks = chest_data.randomize(args.seed)
+all_shops = shop_data.randomize(args.seed)
+
+for check in all_checks:
     log += check.output_short + "\n"
     patch += check.asar_output + "\n"
 
-for shop in shop_data.all_shops:
+for shop in all_shops:
     #log += shop.asar_output + "\n"
     patch += shop.asar_output + "\n"
 
@@ -42,7 +45,10 @@ with open(directory + "/spoilerlog.txt", "w+", encoding="utf-8") as file:
 with open(directory + "/patch.asm", "w+", encoding="utf-8") as file:
     file.write(patch)
 
-subprocess.call(['asar/asar.exe', '--fix-checksum=off', directory + "/patch.asm", \
+subprocess.run(['asar/asar.exe', '--fix-checksum=off', directory + "../asm/asm_patches/all_patchese.asm", \
+                 directory + "/ffv.sfc"])
+
+subprocess.run(['asar/asar.exe', '--fix-checksum=off', directory + "/patch.asm", \
                  directory + "/ffv.sfc"])
 
 print("Success")

@@ -83,9 +83,12 @@ class Shop(object):
         self.output = f"Shop index: {self.idx}\nShop type: {self.shop_type_name}\n{self.slot1_name}\n{self.slot2_name}\n{self.slot3_name}\n{self.slot4_name}\n{self.slot5_name}\n{self.slot6_name}\n{self.slot7_name}\n{self.slot8_name}"
         self.asar_output = f";Shop index: {self.idx}\norg ${self.address}\ndb ${self.shop_type}, ${self.slot1}, ${self.slot2}, ${self.slot3}, ${self.slot4}, ${self.slot5}, ${self.slot6}, ${self.slot7}, ${self.slot8}"
 
-all_shops = [Shop(x) for x in range(1, 63)]
+def randomize(seed):
+    random.seed(seed)
+    
+    all_shops = [Shop(x) for x in range(1, 63)]
 
-for shop in all_shops:
-    shop.randomize_shop()
-    #print(shop.asar_output)
-    # print("----------")
+    for shop in all_shops:
+        shop.randomize_shop()
+
+    return all_shops

@@ -75,35 +75,41 @@ class RewardEvent(object):
         self.asar_output = f"org ${self.address} \ndb ${self.type}, ${self.id} "
         self.output_short = f"Event: {self.idx}\t{self.event} → {self.reward}"
 
-all_event_rewards = [RewardEvent(x) for x in range(1, 60)]
+def randomize(seed):
+    random.seed(seed)
+    
+    all_event_rewards = [RewardEvent(x) for x in range(1, 60)]
 
-all_chests = [Chest(x) for x in range(1, 253)]
+    all_chests = [Chest(x) for x in range(1, 253)]
 
-all_checks = all_event_rewards + all_chests
+    all_checks = all_event_rewards + all_chests
 
-value_rewards = []
-for i in all_rewards:
-    if i.reward_value >= 2:   
-        value_rewards.append(i)
+    global value_rewards
+    value_rewards = []
+    for i in all_rewards:
+        if i.reward_value >= 2:   
+            value_rewards.append(i)
+            
+    value_rewards = random.sample(value_rewards,(len(all_checks)))
+
+    for check in all_checks:
+        check.random_reward()
+        #print(check.output_short)
         
-value_rewards = random.sample(value_rewards,(len(all_checks)))
+    '''
+    print("-------------------------")
+    print("-------------------------")
+    print("-------------------------")
+    print("-------------------------")
+    print("-------------------------")    
+    print("COPY DATA FROM HERE DOWN-")    
+    print("-------------------------")    
+    print("-------------------------")    
+    print("-------------------------")    
+    print("-------------------------")    
+    print("-------------------------")    
+    for check in all_checks:
+        print(check.asar_output)
+    '''
 
-for check in all_checks:
-    check.random_reward()
-    #print(check.output_short)
-'''
-print("-------------------------")
-print("-------------------------")
-print("-------------------------")
-print("-------------------------")
-print("-------------------------")    
-print("COPY DATA FROM HERE DOWN-")    
-print("-------------------------")    
-print("-------------------------")    
-print("-------------------------")    
-print("-------------------------")    
-print("-------------------------")    
-for check in all_checks:
-    print(check.asar_output)
-'''
-
+    return all_checks
