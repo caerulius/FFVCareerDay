@@ -1,4 +1,4 @@
-﻿item_id,item_name,type,subtype,value
+item_id,readable_name,type,subtype,value
 00,<blank>,dummy,dummy,0
 01,Empty,dummy,dummy,0
 02,Knife,weapon,knife,1

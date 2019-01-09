@@ -1,4 +1,4 @@
-﻿magic_id,magic_name,type,value,
+magic_id,readable_name,type,value
 00,Fire,Sword,2
 01,Ice,Sword,2
 02,Bolt,Sword,2
