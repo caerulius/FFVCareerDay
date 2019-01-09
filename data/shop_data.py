@@ -8,8 +8,8 @@ import random
 # Value lookup
 
 df_shop_table = pd.read_csv('shop_id.csv',index_col='id_num',dtype=str)
-item_id_dict = pd.read_csv('item_id.csv',index_col='item_id',dtype=str).to_dict()['item_name'] # id first
-magic_id_dict = pd.read_csv('magic_id.csv',index_col='magic_id',dtype=str).to_dict()['magic_name'] # id first
+item_id_dict = pd.read_csv('item_id.csv',index_col='item_id',dtype=str).to_dict()['readable_name'] # id first
+magic_id_dict = pd.read_csv('magic_id.csv',index_col='magic_id',dtype=str).to_dict()['readable_name'] # id first
 shop_id_dict = {
         '00' : 'Magic',
         '01' : 'Weapon',

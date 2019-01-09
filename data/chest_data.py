@@ -10,9 +10,9 @@ df_chest_id = pd.read_excel('chest_id.xlsx',index_col='chest_id',dtype=str)
 df_event_reward_table = pd.read_csv('event_reward_id.csv',dtype=str)
 df_event_reward_table['idx'] = df_event_reward_table['idx'].astype(int)
 
-item_id_dict = pd.read_csv('item_id.csv',index_col='item_id',dtype=str).to_dict()['item_name'] # id first
+item_id_dict = pd.read_csv('item_id.csv',index_col='item_id',dtype=str).to_dict()['readable_name'] # id first
 item_id_dict2 = dict((v,k) for k,v in item_id_dict.items()) # item first
-chest_id_dict = pd.read_excel('chest_id.xlsx',index_col='chest_id',dtype=str).to_dict()['chest_name'] # id first
+chest_id_dict = pd.read_excel('chest_id.xlsx',index_col='chest_id',dtype=str).to_dict()['readable_name'] # id first
 chest_id_dict2 = dict((v,k) for k,v in chest_id_dict.items()) # item first
 
 class Chest(object):

@@ -13,7 +13,7 @@ class Item():
     def __init__(self,item_id):
         data = df_item_id.loc[item_id]
         self.reward_id = item_id
-        self.reward_name = data['item_name']
+        self.reward_name = data['readable_name']
         self.reward_value = int(data['value'])
         self.type = data['type']
         self.subtype = data['subtype']
@@ -24,7 +24,7 @@ class Magic():
     def __init__(self,magic_id):
         data = df_magic_id.loc[magic_id]
         self.reward_id = magic_id
-        self.reward_name = data['magic_name']
+        self.reward_name = data['readable_name']
         self.reward_value = int(data['value'])
         self.type = data['type']
 
@@ -34,7 +34,7 @@ class Crystal():
         data = df_crystal_id.loc[crystal_id]
         self.reward_id = crystal_id
         self.reward_value = 3
-        self.reward_name = data['crystal_name']
+        self.reward_name = data['readable_name']
         
 class Ability():
     reward_type = '60'
@@ -42,7 +42,7 @@ class Ability():
         data = df_ability_id.loc[ability_id]
         self.reward_id = ability_id
         self.reward_value = int(data['value'])
-        self.reward_name = data['ability_name']
+        self.reward_name = data['readable_name']
 
 
 

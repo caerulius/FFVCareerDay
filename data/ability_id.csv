@@ -1,4 +1,4 @@
-﻿ability_id,ability_name,valid,value
+ability_id,readable_name,valid,value
 00,Other,,0
 01,Item,x,0
 02,Row,,0

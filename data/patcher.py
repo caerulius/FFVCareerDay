@@ -45,7 +45,7 @@ with open(directory + "/spoilerlog.txt", "w+", encoding="utf-8") as file:
 with open(directory + "/patch.asm", "w+", encoding="utf-8") as file:
     file.write(patch)
 
-subprocess.run(['asar/asar.exe', '--fix-checksum=off', directory + "../asm/asm_patches/all_patchese.asm", \
+subprocess.run(['asar/asar.exe', '--fix-checksum=off', "../asm/asm_patches/all_patches.asm", \
                  directory + "/ffv.sfc"])
 
 subprocess.run(['asar/asar.exe', '--fix-checksum=off', directory + "/patch.asm", \
