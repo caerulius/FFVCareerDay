@@ -3,5 +3,6 @@ Design Notes for Theme:
 Main highlight Color: #A651BC
 Button darken Color : #844096
 Hover link Color    : #C996D6
+Very light accent   : #EDDDF2
 
 Title should be written <b>Project <i>Demi</i></b>
