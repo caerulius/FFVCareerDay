@@ -151,7 +151,7 @@ color: #fff;
 
 .link{
 	padding:15px 35px;
-	background:#a651bc;
+	background:#EDDDF2;
 	color:#fff !important;
 	font-size:16px;
 	font-weight:400;
@@ -165,7 +165,8 @@ color: #fff;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;
 }
-.link:hover {
+
+/*.link:hover {
 	background: #844096;
 	text-decoration:none;
 }
@@ -173,6 +174,7 @@ color: #fff;
 .link:active, .link:focus {
 	background: #844096;
 }
+*/
 
 /* Navigation
 ---------------------------------*/
