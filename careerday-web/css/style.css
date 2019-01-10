@@ -786,15 +786,15 @@ border: 2px solid #fff;
 ---------------------------------*/
 
 .footer{
-	background:url(../img/pw_maze_black_2X.png) left top repeat;
+	background-color:#edddf2;
 	padding:35px 0 35px;
 }
 .footer-logo{
 	margin:15px auto 35px;
-	width: 76px;
+	width: 50%;
 }
 .copyright, .credits{
-	color:#cccccc;
+	color:#000000;
 	font-size:14px;
 	display:block;
 	text-align:center;
