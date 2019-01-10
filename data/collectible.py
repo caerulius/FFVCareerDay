@@ -16,3 +16,13 @@ class Collectible:
         return self.name + " " + self.collectible_type + " from " + self.location + \
                " (" + self.item_address + ": " + self.item_data + ")"
 
+
+    def patch_code(self):
+        code = ""
+        if self.type_address != "-":
+            code += "org $" + self.type_address
+            code += "\ndb $" + self.type_data + "\n"
+        code += "org $" + self.item_address
+        code += "\ndb $" + self.item_data
+
+        return code

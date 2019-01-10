@@ -12,15 +12,30 @@ class RandoConductor():
                                     row.type, row.type_address, row.type_data, \
                                     row.item_address, row.item_data, row.kind))
 
+    def shuffle_all_within_kind(self):
+        self.shuffle_kind("Reward")
+        self.shuffle_kind("Shop")
+        self.shuffle_kind("Loot")
+
     def shuffle_kind(self, kind, iterations=5):
         kl = [x for x in self.collectibles if x.kind == kind]
+        if kind == "Shop":
+            kl = [x for x in self.collectibles if x.kind == kind and x.collectible_type == "Item"]
 
         for loops in range(0, iterations):
             for item in kl:
                 result = self.swap(item, random.choice(kl))
                 self.collectibles[result[0].id] = result[0]
                 self.collectibles[result[1].id] = result[1]
-    
+
+        if kind == "Shop":
+            kl = [x for x in self.collectibles if x.kind == kind and x.collectible_type == "Magic"]
+            for loops in range(0, iterations):
+                for item in kl:
+                    result = self.swap(item, random.choice(kl))
+                    self.collectibles[result[0].id] = result[0]
+                    self.collectibles[result[1].id] = result[1]
+
     def swap(self, c1, c2):
         temp = copy.deepcopy(c1)
         c1.name = c2.name
@@ -36,11 +51,12 @@ class RandoConductor():
         c2.kind = temp.kind
 
         return (c1, c2)
+        
 
 
 conductor = RandoConductor('collectibles.csv')
-conductor.shuffle_kind('Reward')
+conductor.shuffle_all_within_kind()
 
-for i in [x for x in conductor.collectibles if x.kind == 'Reward']:
-    print(i, end="")
-    print(" started as: " + i.original)
+for i in [x for x in conductor.collectibles if x.kind == "Shop"]:
+    print(i)
+    print(i.patch_code())
