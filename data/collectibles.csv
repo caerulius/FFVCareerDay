@@ -251,66 +251,66 @@ id,readable_name,readable_location,type,type_address,type_data,item_address,item
 250,Elixir,The Void Chest,Item,D135F6,40,D135F7,E3,Reward
 251,Ragnarok,The Void Chest,Monster,D135FA,AE,D135FB,16,Reward
 252,Pinwheel,The Void Chest,Item,D135FE,40,D135FF,5B,Reward
-253,Knight,Wind Crystal,Crystal,C0FAB2,50,C0FAB3,0,Event
-254,Monk,Wind Crystal,Crystal,C0FAB4,50,C0FAB5,1,Event
-255,Thief,Wind Crystal,Crystal,C0FAB6,50,C0FAB7,2,Event
-256,WhiteMage,Wind Crystal,Crystal,C0FAB8,50,C0FAB9,9,Event
-257,BlackMage,Wind Crystal,Crystal,C0FABA,50,C0FABB,0A,Event
-258,BlueMage,Wind Crystal,Crystal,C0FABC,50,C0FABD,0D,Event
-259,Mediator,Fire Crystal,Crystal,C0FABE,50,C0FABF,0F,Event
-260,Geomancer,Fire Crystal,Crystal,C0FAC0,50,C0FAC1,11,Event
-261,Ninja,Fire Crystal,Crystal,C0FAC2,50,C0FAC3,4,Event
-262,Hunter,Black Choco Crystals,Crystal,C0FAC4,50,C0FAC5,7,Event
-263,Bard,Black Choco Crystals,Crystal,C0FAC6,50,C0FAC7,12,Event
-264,Chemist,Earth Crystal,Crystal,C0FAC8,50,C0FAC9,10,Event
-265,Dancer,Earth Crystal,Crystal,C0FACA,50,C0FACB,13,Event
-266,Dragoon,Earth Crystal,Crystal,C0FACC,50,C0FACD,3,Event
-267,Samurai,Earth Crystal,Crystal,C0FACE,50,C0FACF,5,Event
-268,Levia,Leviathan,Magic,C0FAD0,20,C0FAD1,55,Event
-269,Titan,Titan,Magic,C0FAD2,20,C0FAD3,4E,Event
-270,Crbnkl,Carbuncle,Magic,C0FAD4,20,C0FAD5,51,Event
-271,Syldra,Syldra,Magic,C0FAD6,20,C0FAD7,52,Event
-272,Odin,Odin,Magic,C0FAD8,20,C0FAD9,53,Event
-273,Phenix,Phoenix,Magic,C0FADA,20,C0FADB,54,Event
-274,Bahmut,Bahamut,Magic,C0FADC,20,C0FADD,56,Event
-275,Vitality,Life Song from Crescent Town bard,Magic,C0FADE,20,C0FADF,59,Event
-276,Charm,Temptation Song at Lix,Magic,C0FAE0,20,C0FAE1,5E,Event
-277,Love,Love Song at Istory,Magic,C0FAE2,20,C0FAE3,5D,Event
-278,Requiem,Requiem Song at Kelb,Magic,C0FAE4,20,C0FAE5,5C,Event
-279,Speed,Speed Song at Surgate,Magic,C0FAE6,20,C0FAE7,58,Event
-280,Magic,Magic Song at Ancient Library,Magic,C0FAE8,20,C0FAE9,5A,Event
-281,Power,Power Song from Crescent Town,Magic,C0FAEA,20,C0FAEB,57,Event
-282,Hero,Hero Song from Crescent Town,Magic,C0FAEC,20,C0FAED,5B,Event
-283,Holy,"Fork Tower, two Magics",Magic,C0FAEE,20,C0FAEF,0F,Event
-284,Flare,"Fork Tower, two Magics",Magic,C0FAF0,20,C0FAF1,10,Event
-285,Meteo,Meteo,Magic,C0FAF2,20,C0FAF3,45,Event
-286,Potion,"5 potions in Wind Shrine, bottom left guy",Item,C0FAF4,40,C0FAF5,E0,Event
-287,Potion,"8 potions, Pirate after Torna Canal Key acquired",Item,C0FAF6,40,C0FAF7,E0,Event
-288,Staff of Light,Chancellor at Tycoon,Item,C0FAF8,40,C0FAF9,3C,Event
-289,Mythril Helm,Magisa & Forza,Item,C0FAFA,40,C0FAFB,8C,Event
-290,CornaJar,CornaJar at Kelb,Item,C0FAFC,40,C0FAFD,C5,Event
-291,Ribbon,Ribbon from girl in Rugor,Item,C0FAFE,40,C0FAFF,95,Event
-292,Mirage Vest,Mirage Vest from Chocobo Tour/Mirage Village,Item,C0FB00,40,C0FB01,AE,Event
-293,Excalibur,12 Kuzar Events,Item,C0FB02,40,C0FB03,15,Event
-294,Assassin,12 Kuzar Events,Item,C0FB04,40,C0FB05,0B,Event
-295,Sasuke,12 Kuzar Events,Item,C0FB06,40,C0FB07,0C,Event
-296,Holy Lance,12 Kuzar Events,Item,C0FB08,40,C0FB09,1F,Event
-297,Rune Axe,12 Kuzar Events,Item,C0FB0A,40,C0FB0B,27,Event
-298,Masamune,12 Kuzar Events,Item,C0FB0C,40,C0FB0D,2F,Event
-299,Yoichi Bow,12 Kuzar Events,Item,C0FB0E,40,C0FB0F,45,Event
-300,Flame Whip,12 Kuzar Events,Item,C0FB10,40,C0FB11,4E,Event
-301,Sage's Staff,12 Kuzar Events,Item,C0FB12,40,C0FB13,3D,Event
-302,Wizard Rod,12 Kuzar Events,Item,C0FB14,40,C0FB15,37,Event
-303,Apollo's Harp,12 Kuzar Events,Item,C0FB16,40,C0FB17,4A,Event
-304,Earth Bell,12 Kuzar Events,Item,C0FB18,40,C0FB19,51,Event
-305,Shiva,Shiva,Magic,C0FB1A,20,C0FB1B,4B,Event
-306,Ifrit,Ifrit,Magic,C0FB1C,20,C0FB1D,4D,Event
-307,TimeMage,Water Crystal,Crystal,C0FB1E,50,C0FB1F,0B,Event
-308,Summoner,Water Crystal,Crystal,C0FB20,50,C0FB21,0C,Event
-309,Berserker,Water Crystal,Crystal,C0FB22,50,C0FB23,6,Event
-310,MysticKnight,Water Crystal,Crystal,C0FB24,50,C0FB25,8,Event
-311,RedMage,Water Crystal,Crystal,C0FB26,50,C0FB27,0E,Event
-312,Mimic,GoGo's Crystal,Crystal,C0FB28,50,C0FB29,14,Event
+253,Knight,Wind Crystal,Crystal,C0FAB2,50,C0FAB3,0,Reward
+254,Monk,Wind Crystal,Crystal,C0FAB4,50,C0FAB5,1,Reward
+255,Thief,Wind Crystal,Crystal,C0FAB6,50,C0FAB7,2,Reward
+256,WhiteMage,Wind Crystal,Crystal,C0FAB8,50,C0FAB9,9,Reward
+257,BlackMage,Wind Crystal,Crystal,C0FABA,50,C0FABB,0A,Reward
+258,BlueMage,Wind Crystal,Crystal,C0FABC,50,C0FABD,0D,Reward
+259,Mediator,Fire Crystal,Crystal,C0FABE,50,C0FABF,0F,Reward
+260,Geomancer,Fire Crystal,Crystal,C0FAC0,50,C0FAC1,11,Reward
+261,Ninja,Fire Crystal,Crystal,C0FAC2,50,C0FAC3,4,Reward
+262,Hunter,Black Choco Crystals,Crystal,C0FAC4,50,C0FAC5,7,Reward
+263,Bard,Black Choco Crystals,Crystal,C0FAC6,50,C0FAC7,12,Reward
+264,Chemist,Earth Crystal,Crystal,C0FAC8,50,C0FAC9,10,Reward
+265,Dancer,Earth Crystal,Crystal,C0FACA,50,C0FACB,13,Reward
+266,Dragoon,Earth Crystal,Crystal,C0FACC,50,C0FACD,3,Reward
+267,Samurai,Earth Crystal,Crystal,C0FACE,50,C0FACF,5,Reward
+268,Levia,Leviathan,Magic,C0FAD0,20,C0FAD1,55,Reward
+269,Titan,Titan,Magic,C0FAD2,20,C0FAD3,4E,Reward
+270,Crbnkl,Carbuncle,Magic,C0FAD4,20,C0FAD5,51,Reward
+271,Syldra,Syldra,Magic,C0FAD6,20,C0FAD7,52,Reward
+272,Odin,Odin,Magic,C0FAD8,20,C0FAD9,53,Reward
+273,Phenix,Phoenix,Magic,C0FADA,20,C0FADB,54,Reward
+274,Bahmut,Bahamut,Magic,C0FADC,20,C0FADD,56,Reward
+275,Vitality,Life Song from Crescent Town bard,Magic,C0FADE,20,C0FADF,59,Reward
+276,Charm,Temptation Song at Lix,Magic,C0FAE0,20,C0FAE1,5E,Reward
+277,Love,Love Song at Istory,Magic,C0FAE2,20,C0FAE3,5D,Reward
+278,Requiem,Requiem Song at Kelb,Magic,C0FAE4,20,C0FAE5,5C,Reward
+279,Speed,Speed Song at Surgate,Magic,C0FAE6,20,C0FAE7,58,Reward
+280,Magic,Magic Song at Ancient Library,Magic,C0FAE8,20,C0FAE9,5A,Reward
+281,Power,Power Song from Crescent Town,Magic,C0FAEA,20,C0FAEB,57,Reward
+282,Hero,Hero Song from Crescent Town,Magic,C0FAEC,20,C0FAED,5B,Reward
+283,Holy,"Fork Tower, two Magics",Magic,C0FAEE,20,C0FAEF,0F,Reward
+284,Flare,"Fork Tower, two Magics",Magic,C0FAF0,20,C0FAF1,10,Reward
+285,Meteo,Meteo,Magic,C0FAF2,20,C0FAF3,45,Reward
+286,Potion,"5 potions in Wind Shrine, bottom left guy",Item,C0FAF4,40,C0FAF5,E0,Reward
+287,Potion,"8 potions, Pirate after Torna Canal Key acquired",Item,C0FAF6,40,C0FAF7,E0,Reward
+288,Staff of Light,Chancellor at Tycoon,Item,C0FAF8,40,C0FAF9,3C,Reward
+289,Mythril Helm,Magisa & Forza,Item,C0FAFA,40,C0FAFB,8C,Reward
+290,CornaJar,CornaJar at Kelb,Item,C0FAFC,40,C0FAFD,C5,Reward
+291,Ribbon,Ribbon from girl in Rugor,Item,C0FAFE,40,C0FAFF,95,Reward
+292,Mirage Vest,Mirage Vest from Chocobo Tour/Mirage Village,Item,C0FB00,40,C0FB01,AE,Reward
+293,Excalibur,12 Kuzar Events,Item,C0FB02,40,C0FB03,15,Reward
+294,Assassin,12 Kuzar Events,Item,C0FB04,40,C0FB05,0B,Reward
+295,Sasuke,12 Kuzar Events,Item,C0FB06,40,C0FB07,0C,Reward
+296,Holy Lance,12 Kuzar Events,Item,C0FB08,40,C0FB09,1F,Reward
+297,Rune Axe,12 Kuzar Events,Item,C0FB0A,40,C0FB0B,27,Reward
+298,Masamune,12 Kuzar Events,Item,C0FB0C,40,C0FB0D,2F,Reward
+299,Yoichi Bow,12 Kuzar Events,Item,C0FB0E,40,C0FB0F,45,Reward
+300,Flame Whip,12 Kuzar Events,Item,C0FB10,40,C0FB11,4E,Reward
+301,Sage's Staff,12 Kuzar Events,Item,C0FB12,40,C0FB13,3D,Reward
+302,Wizard Rod,12 Kuzar Events,Item,C0FB14,40,C0FB15,37,Reward
+303,Apollo's Harp,12 Kuzar Events,Item,C0FB16,40,C0FB17,4A,Reward
+304,Earth Bell,12 Kuzar Events,Item,C0FB18,40,C0FB19,51,Reward
+305,Shiva,Shiva,Magic,C0FB1A,20,C0FB1B,4B,Reward
+306,Ifrit,Ifrit,Magic,C0FB1C,20,C0FB1D,4D,Reward
+307,TimeMage,Water Crystal,Crystal,C0FB1E,50,C0FB1F,0B,Reward
+308,Summoner,Water Crystal,Crystal,C0FB20,50,C0FB21,0C,Reward
+309,Berserker,Water Crystal,Crystal,C0FB22,50,C0FB23,6,Reward
+310,MysticKnight,Water Crystal,Crystal,C0FB24,50,C0FB25,8,Reward
+311,RedMage,Water Crystal,Crystal,C0FB26,50,C0FB27,0E,Reward
+312,Mimic,GoGo's Crystal,Crystal,C0FB28,50,C0FB29,14,Reward
 313,Potion,Goblin Rare Steal,Item,-,40,D05001,E0,Loot
 314,Leather Cap,Goblin Common Drop,Item,-,40,D05002,89,Loot
 315,Potion,Killer Bee Common Steal,Item,-,40,D05004,E0,Loot

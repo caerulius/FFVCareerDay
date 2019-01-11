@@ -14,11 +14,12 @@ class Collectible:
         self.item_address = item_address
         self.item_data = item_data
         self.kind = kind
+        self.category = C_Cat[self.kind.name + self.collectible_type.name]
 
     def __str__(self):
-        return self.original_name + " " + self.original_collectible_type + \
+        return self.original_name + " " + self.original_collectible_type.name + \
                " at " + self.location + " -> " + self.name + " " + \
-               self.collectible_type + "\n"
+               self.collectible_type.name + "\n"
 
 
     def patch_code(self):
@@ -42,3 +43,36 @@ class C_Kind(Enum):
     REWARD = 1,
     LOOT = 2,
     SHOP = 3
+
+class C_Cat(Enum):
+    REWARDITEM = 1,
+    REWARDGIL = 2,
+    REWARDCRYSTAL = 3,
+    REWARDMAGIC = 4,
+    REWARDMONSTER = 5,
+    LOOTITEM = 6,
+    SHOPITEM = 7,
+    SHOPMAGIC = 8
+
+slicer = {}
+slicer[C_Cat.REWARDITEM] = \
+        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
+         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER, C_Cat.SHOPITEM]
+slicer[C_Cat.REWARDGIL] = \
+        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
+         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER]
+slicer[C_Cat.REWARDCRYSTAL] = \
+        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
+         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER]
+slicer[C_Cat.REWARDMAGIC] = \
+        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
+         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER, C_Cat.SHOPMAGIC] 
+slicer[C_Cat.REWARDMONSTER] = \
+        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
+         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER]
+slicer[C_Cat.LOOTITEM] = \
+        [C_Cat.LOOTITEM]
+slicer[C_Cat.SHOPITEM] = \
+        [C_Cat.REWARDITEM, C_Cat.SHOPITEM]
+slicer[C_Cat.SHOPMAGIC] = \
+        [C_Cat.REWARDMAGIC, C_Cat.SHOPMAGIC]
