@@ -129,6 +129,7 @@ incsrc world3/boco_w3.asm
 incsrc world3/antlion_cutscenes.asm
 incsrc world3/boko_after_antlion.asm
 incsrc world3/w3_guido.asm                                   ; 26 Pyramid
+incsrc world3/guido_text_after_giving_book.asm
 
 incsrc world3/pyramid_enter.asm
 incsrc world3/pyramid_top.asm                               ; 27 Airship
