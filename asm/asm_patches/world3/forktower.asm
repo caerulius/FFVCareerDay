@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C99F7D → $C99FCC
 ; First dialogue, remove text boxes
 ; There's a ton of events during the char switching, which was not changed
 
@@ -25,23 +24,14 @@ db $14                          ;Player pose: face down, left hand forward
 db $80, $20                     ;Sprite 080 do event: face down, left hand raised out
 db $81, $20                     ;Sprite 081 do event: face down, left hand raised out
 db $82, $20                     ;Sprite 082 do event: face down, left hand raised out
-; db $71                          ;Short pause
-; db $C8, $2D, $07                ;Display Message/Text/Dialogue 2D 07
-; db $72                          ;Medium pause
 db $2E                          ;Player pose: face down, head lowered
-; db $70                          ;Very short pause
 db $14                          ;Player pose: face down, left hand forward
-; db $71                          ;Short pause
-; db $C8, $2E, $07                ;Display Message/Text/Dialogue 2E 07
-; db $72                          ;Medium pause
 db $82, $3F                     ;Sprite 082 do event: face down, looking left, eyes lowered
 db $80, $3F                     ;Sprite 080 do event: face down, looking left, eyes lowered
 db $81, $3F                     ;Sprite 081 do event: face down, looking left, eyes lowered
-; db $70                          ;Very short pause
 db $80, $20                     ;Sprite 080 do event: face down, left hand raised out
 db $81, $20                     ;Sprite 081 do event: face down, left hand raised out
 db $82, $20                     ;Sprite 082 do event: face down, left hand raised out
-; db $73                          ;Long pause
 db $C8, $2F, $07                ;Display Message/Text/Dialogue 2F 07
 db $A4, $5E                     ;Set Event Flag 15E
 db $A4, $60                     ;Set Event Flag 160

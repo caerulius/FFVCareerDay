@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C9C8B7 → $C9C917
 ; Boss of great trench
 
 org $C9C8B7

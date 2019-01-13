@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C9C4D4 → $C9C504
 ; Twin Tania text box
 
 org $C9C4D4

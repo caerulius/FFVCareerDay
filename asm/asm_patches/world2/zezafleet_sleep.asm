@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C93725 → $C9377F
 ; Sleep at Zeza cabin. Preserved, only text box removed
 ; Zeza talk flag triggered instantly
 

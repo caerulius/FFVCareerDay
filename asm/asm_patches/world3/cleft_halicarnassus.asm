@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C9C3C4 → $C9C40E
 ; Halicarnassus minor speed ups
 
 org $C9C3C4
@@ -24,9 +23,7 @@ db $B5, $93                     ;Play Sound Effect Evil appears
 db $CE, $0F, $06                ;Play next 0C bytes 0F times
 db $80, $0A                     ;Sprite 080 do event: Hide
 db $82, $09                     ;Sprite 082 do event: Show
-;db $B2, $04                     ;Pause for 04 cycles
 db $80, $09                     ;Sprite 080 do event: Show
-;db $B2, $04                     ;Pause for 04 cycles
 db $C5                          ;<unknown>
 db $E0, $73                     ;Unknown
 db $82, $0A                     ;Sprite 082 do event: Hide

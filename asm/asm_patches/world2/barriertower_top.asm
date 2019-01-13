@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C8D4C9 → $C8D9AA
 ; Pre dialogue, Atomos, post
 
 org $C8D4C9
@@ -39,8 +38,6 @@ db $CB, $E5, $02                ;Clear Flag 2/3/4/5/E5 02
 db $CB, $11, $03                ;Clear Flag 2/3/4/5/11 03
 db $CB, $0E, $00                ;Clear Flag 2/3/4/5/0E 00
 
-
-
 ; below skips sub cutscene with Galuf waiting. No timer is ever set, Galuf never removed from party
 
 db $A5, $FE                     ;Clear Event Flag 1FE
@@ -49,7 +46,6 @@ db $DB                          ;Restore Player status
 db $C3, $02                     ;Fade in Speed 0A
 db $73
 db $CA, $0E, $00                ;Set Flag 2/3/4/5/0E 00
-; db $B7, $02                     ;Add/Remove character 02
 db $A3, $C1                     ;Clear Event Flag 0C1
 db $CC, $21                  ;Custom destination flag 21
 

@@ -136,6 +136,8 @@ db $08, $00
 db $08, $00
 db $08, $00
 db $20, $00
+org $c00c0c ; airship/sub vehicle in w3
+db $20
 
 
 ; disable post event speed doubling...?

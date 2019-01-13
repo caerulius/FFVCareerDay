@@ -3,12 +3,8 @@ hirom
 
 org $C93C1E
 
-
-; Addresses $C93C1E → $C93D11
 ; Gilgamesh first fight, getting back companions
-
 ; Keeps some animations but cuts out dialogue & waiting
-
 
 db $83, $24                     ;Sprite 083 do event face down, right hand raised in
 db $D3, $86, $32, $0A           ;Sprite 86 set map position 32, 0A
