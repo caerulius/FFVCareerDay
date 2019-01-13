@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C9AEDC → $C9AEFF
 ; Gargoyles at Great Trench
 
 org $C9AEDC
@@ -10,9 +9,7 @@ db $88, $0A                     ;Sprite 088 do event: Hide
 db $89, $0A                     ;Sprite 089 do event: Hide
 db $8A, $0A                     ;Sprite 08A do event: Hide
 db $8B, $0A                     ;Sprite 08B do event: Hide
-; db $75                          ;Extremely long pause
 db $CD, $8B, $00                ;Run event index 008B
-; db $C8, $53, $07                ;Display Message/Text/Dialogue 53 07
 db $CD, $8C, $00                ;Run event index 008C
 db $CD, $BA, $00                ;Run event index 00BA
 db $F4, $00                     ;Unknown

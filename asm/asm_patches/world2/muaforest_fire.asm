@@ -5,9 +5,7 @@ hirom
 ; Will speed up first fire cutscene
 ; Then as soon as enter Moogle pit, immediately go to post-fire state
 
-; $C8DB99 → $C8DCD2
 ; First fire cutscene
-
 
 org $C8DB99
 
@@ -73,18 +71,11 @@ db $70                          ;Extremely long pause
 db $14                          ;Player pose: face down, left hand forward
 db $81, $26                     ;Sprite 081 do event: face up, right hand raised out
 db $70                          ;Short pause
-;db $C8, $9B, $00                ;Display Message/Text/Dialogue 9B 00
 db $82, $24                     ;Sprite 082 do event: face down, right hand raised in
 db $80, $24                     ;Sprite 080 do event: face down, right hand raised in
-;db $75                          ;Extremely long pause
 db $A4, $FE                     ;Set Event Flag 1FE
 db $C4, $02                     ;Fade out Speed 0A
 db $75
-;db $E3, $01, $20, $2C, $82, $D8 ;Inter-map cutscene? 01 20 2C 82 D8
-;db $BE, $40                     ;Rumble effect of 40 magnitude
-;db $0A                          ;Player Hide
-;db $D9, $0A, $03, $BF           ;Unknown
-;db $14                          ;Player pose: face down, left hand forward
 db $CA, $4D, $03                ;Set Flag 2/3/4/5/4D 03
 db $E1, $6B, $01, $24, $0B, $00 ;Return from cutscene? 6B 01 24 0B 00
 db $A5, $FE                     ;Clear Event Flag 1FE
@@ -156,7 +147,6 @@ db $82, $20                     ;Sprite 082 do event: face down, left hand raise
 db $14                          ;Player pose: face down, left hand forward
 db $72                          ;Medium pause
 db $BE, $45                     ;Rumble effect of 45 magnitude
-;db $C8, $B5, $05                ;Display Message/Text/Dialogue B5 05
 db $D0, $82, $80                ;(Music) 82 80
 db $CF, $02, $06                ;Play next 06 bytes simultaneously 02 times
 db $81, $04                     ;Sprite 081 do event: Move Left
@@ -219,7 +209,6 @@ pad $C8DCD2
 
 ; Underground moogle cave
 ; Immediately set flag to enter
-; $C8DD49 → C8DD61
 
 org $C8DD49
 

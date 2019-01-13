@@ -3,10 +3,7 @@ hirom
 
 org $c8b745
 
-
-; $c8b745 → $C8BA3B
 ; Big Bridge: End of bridge → placement on continent
-
 
 db $D3, $88, $8F, $0F           ;Sprite 88 set map position 8F, 0F
 db $B1, $04                     ;Set Player Sprite 04

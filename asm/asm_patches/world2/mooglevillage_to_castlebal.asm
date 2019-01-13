@@ -27,7 +27,6 @@ org $C975D5
 ; 1) Moogle cutscene immediately branches to Bal after a fade-out
 ; 2) Bal cutscene immediately does "inter-event map change", then sets all flags and resumes player status
 
-; $C975D5 → $C97A2E
 ; Moogle summons Hiryuu
 ; >>>>>   This plays from start of cutscene until on Castle Bal Map
 ;             It ends with "Run Event Index 00EF"
@@ -36,15 +35,12 @@ org $C975D5
 db $C4, $02                      ;Fade out Speed 02
 db $CD, $EF, $00                 ;Run event index 00EF
 db $FF                          ;End Event
-
-
 pad $C97A2E
 
         
         
 org $C8C3EE
 
-; $C8C3EE → C8C71C
 ; Enter Bal with Hiryuu
 
 db $E3, $0E, $01, $0B, $09, $00 ;Inter-map cutscene? 0E 01 0B 09 00
@@ -92,8 +88,6 @@ db $DB                                 ;Restore Player status
 db $C3, $02                     ;Fade in Speed 02
 db $73
 db $09                                 ;Player Show
-
-
 db $FF                                ;End Event
 
 padbyte $00

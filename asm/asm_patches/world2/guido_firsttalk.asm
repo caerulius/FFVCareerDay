@@ -1,7 +1,5 @@
 hirom
 !base = $C00000
-
-; $C8DA2B → $C8DB7C
 ; Talk with Guido
 
 org $C8DA2B

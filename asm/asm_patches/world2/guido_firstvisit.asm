@@ -1,8 +1,6 @@
 hirom
 !base = $C00000
 
-; $C8CECB → $C8CFE9
-
 org $C8CECB
 
 db $E0, $2A                     ;Unknown
@@ -55,7 +53,6 @@ db $70                          ;Very short pause
 db $82, $22                     ;Sprite 082 do event: face down, left hand on head
 db $A4, $E8                     ;Set Event Flag 1E8
 db $A4, $E9                     ;Set Event Flag 1E9
-; db $C4, $03                     ;Fade out Speed 08
 db $72
 db $BE, $40                     ;Rumble effect of 40 magnitude
 db $E3, $01, $00, $70, $65, $6C ;Inter-map cutscene? 01 00 70 65 6C
