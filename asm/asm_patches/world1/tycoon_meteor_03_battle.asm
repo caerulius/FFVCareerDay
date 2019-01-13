@@ -26,7 +26,7 @@ db $8B, $0A                     ;Sprite 08B do event: Hide
 db $8C, $0A                     ;Sprite 08C do event: Hide
 db $BD, $00, $FF                ;Start Event Battle 00
 db $84, $20                     ;Sprite 084 do event: face down, left hand raised out
-db $D0, $80, $00                ;(Music) 80 00
+db $B4, $0D                     ;Play Background Music Lenna's Theme
 db $A4, $FE                     ;Set Event Flag 1FE
 db $C4, $04                     ;Fade out Speed 04
 db $74                          ;Very long pause
