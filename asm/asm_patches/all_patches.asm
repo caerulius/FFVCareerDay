@@ -17,6 +17,8 @@ incsrc world1/pirate_cove_outside.asm
 incsrc world1/pirate_ship.asm                            ; 02 Wind Shrine
 incsrc world1/pirate_ship_out_window.asm
 incsrc world1/sleeping_pirates.asm 
+incsrc world1/pirate_cove_outside_return.asm
+incsrc world1/boko_resting.asm
 
 incsrc world1/wind_shrine_chancellor.asm
 incsrc world1/wind_crystal.asm
