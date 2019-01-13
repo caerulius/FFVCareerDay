@@ -19,6 +19,7 @@ incsrc world1/pirate_ship_out_window.asm
 incsrc world1/sleeping_pirates.asm 
 incsrc world1/pirate_cove_outside_return.asm
 incsrc world1/boko_resting.asm
+incsrc world1/leaving_zokks_house_early.asm
 
 incsrc world1/wind_shrine_chancellor.asm
 incsrc world1/wind_crystal.asm
@@ -126,6 +127,7 @@ incsrc world2/exdeathcastle2_boss_w3.asm             ; 24 Tycoon Castle
 incsrc world3/tycoon_w3_cutscenes.asm                  ; 25 Guido Cave
 incsrc world3/boco_w3.asm
 incsrc world3/antlion_cutscenes.asm
+incsrc world3/boko_after_antlion.asm
 incsrc world3/w3_guido.asm                                   ; 26 Pyramid
 
 incsrc world3/pyramid_enter.asm
