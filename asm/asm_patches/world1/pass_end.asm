@@ -27,9 +27,11 @@ db $A4, $E1         				;Set Event Flag 1E1
 db $A2, $11							;Set Event Flag 011
 db $CD, $7F, $05					;Run event index 057F
 db $A4, $FF							;Set Event Flag 1FF
+db $A4, $FE							;Clear Event Flag 1FE
 db $BE, $00							;Rumble effect of 00 magnitude
 db $E1, $00, $00, $9C, $8B, $00		;Return from cutscene? 00 00 9C 8B 00
-db $C3, $02							;Fade in Speed 04
+db $C3, $02							;Fade in Speed 02
+db $74
 db $B4, $23         				;Play overworld music
 db $FF              				;End event
 
