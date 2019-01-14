@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C8BD45 → $C8BE7C
 ; Fall → antlion
 
 org $C8BD45
@@ -9,13 +8,9 @@ org $C8BD45
 db $03                          ;Player Move Down
 db $B5, $84                     ;Play Sound Effect Exdeath destroyed 2
 db $BE, $05                     ;Rumble effect of 05 magnitude
-;db $71                          ;Short pause
 db $12                          ;Player pose: face right, standing
-;db $71                          ;Short pause
 db $16                          ;Player pose: face left, standing
-;db $71                          ;Short pause
 db $BE, $0A                     ;Rumble effect of 0A magnitude
-;db $71                          ;Short pause
 db $14                          ;Player pose: face down, left hand forward
 db $B5, $7E                     ;Play Sound Effect ?
 db $F3, $09, $1F, $24           ;Set Map Tiles 09 1F 24
@@ -29,8 +24,6 @@ db $0A                          ;Player Hide
 db $70                          ;Very short pause
 db $D0, $F0, $00                ;(Music) F0 00
 db $E3, $73, $01, $20, $17, $00 ;Inter-map cutscene? 73 01 20 17 00
-
-
 db $BE, $00                     ;Rumble effect of 00 magnitude
 db $D0, $80, $00                ;(Music) 80 00
 db $0A                          ;Player Hide
@@ -79,22 +72,15 @@ db $BE, $00                     ;Rumble effect of 00 magnitude
 db $73                          ;Long pause
 db $81, $22                     ;Sprite 081 do event: face down, left hand on head
 db $14                          ;Player pose: face down, left hand forward
-;db $71                          ;Short pause
-;db $c8, $3E, $06                ;Display Message/Text/Dialogue 3E 06
-;db $71                          ;Short pause
 db $81, $03                     ;Sprite 081 do event: Move Down
 db $81, $22                     ;Sprite 081 do event: face down, left hand on head
-;db $71                          ;Short pause
 db $16                          ;Player pose: face left, standing
 db $73                          ;Long pause
 db $30                          ;Player pose: face left, head lowered
 db $74                          ;Very long pause
 db $04                          ;Player move Left
-;db $71                          ;Short pause
 db $2A                          ;Player pose: face left, left hand raised
 db $73                          ;Long pause
-;db $c8, $3F, $06                ;Display Message/Text/Dialogue 3F 06
-;db $71                          ;Short pause
 db $80, $5B                     ;Sprite 080 do event: 5B
 db $80, $0B                     ;Sprite 080 do event: 0B
 db $80, $05                     ;Sprite 080 do event: Bounce
@@ -109,9 +95,6 @@ db $81, $03                     ;Sprite 081 do event: Move Down
 db $81, $02                     ;Sprite 081 do event: Move Right
 db $81, $02                     ;Sprite 081 do event: Move Right
 db $81, $20                     ;Sprite 081 do event: face down, left hand raised out
-;db $71                          ;Short pause
-;db $c8, $40, $06                ;Display Message/Text/Dialogue 40 06
-;db $71                          ;Short pause
 db $14                          ;Player pose: face down, left hand forward
 db $72                          ;Medium pause
 db $2E                          ;Player pose: face down, head lowered
@@ -123,13 +106,8 @@ db $81, $02                     ;Sprite 081 do event: Move Right
 db $80, $22                     ;Sprite 080 do event: face down, left hand on head
 db $81, $01                     ;Sprite 081 do event: Move Up
 db $81, $26                     ;Sprite 081 do event: face up, right hand raised out
-;db $71                          ;Short pause
 db $81, $22                     ;Sprite 081 do event: face down, left hand on head
-;db $71                          ;Short pause
 db $81, $3D                     ;Sprite 081 do event: face up, both arms raised out
-;db $71                          ;Short pause
-;db $c8, $41, $06                ;Display Message/Text/Dialogue 41 06
-;db $71                          ;Short pause
 db $14                          ;Player pose: face down, left hand forward
 db $70                          ;Very short pause
 db $12                          ;Player pose: face right, standing
@@ -151,7 +129,6 @@ db $CF, $02, $04                ;Play next 04 bytes simultaneously 02 times
 db $82, $02                     ;Sprite 082 do event: Move Right
 db $83, $04                     ;Sprite 083 do event: Move Left
 db $80, $24                     ;Sprite 080 do event: face down, right hand raised in
-;db $71                          ;Short pause
 db $BE, $0A                     ;Rumble effect of 0A magnitude
 db $73                          ;Long pause
 db $C5                          ;<unknown>
@@ -166,9 +143,6 @@ db $82, $0A                     ;Sprite 082 do event: Hide
 db $83, $0A                     ;Sprite 083 do event: Hide
 db $70                          ;Very short pause
 db $BD, $25, $FF                ;Start Event Battle 25
-
-
-
 db $E3, $02, $00, $79, $59, $24 ;Inter-map cutscene? 02 00 79 59 24
 db $09                          ;Player Show
 db $14                          ;Player pose: face down, left hand forward

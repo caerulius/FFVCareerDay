@@ -3,7 +3,6 @@ hirom
 
 ; Leave Castle Bal through gates
 ; $C8C7DF → $C8C80E is the first event called, which then branches (after saying yes to dialogue) to:
-; $C952B7 → $C953D7
 
 ; The flag is set in bigbridge_endofbigbridge to completely bypass the Cara cutscene with Hiryuu at $C8C71D, so the guards let you leave right away upon entering Bal
 
@@ -183,8 +182,7 @@ db $87, $0A                     ;Sprite 087 do event: Hide
 db $BD, $1D, $FF                ;Start Event Battle 1D
 db $A2, $61                     ;Set Event Flag 061
 db $CB, $6B, $02                ;Clear Flag 2/3/4/5/6B 02
-
-; db $DB                          ;Restore Player statuss
+db $FF
 
 
 

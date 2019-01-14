@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C8D34E → $C8D3CB
 ; First talk with Zeza in tower 
 
 org $C8D34E

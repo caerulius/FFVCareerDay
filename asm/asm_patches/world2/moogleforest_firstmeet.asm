@@ -3,7 +3,6 @@ hirom
 
 org $c96ef4
 
-; $c96ef4 → $C96F8A
 ; Moogle first meet in forest 
 
 db $80, $13                     ;Sprite 080 do event face right, down hand backward
@@ -38,12 +37,6 @@ db $DB                          ;Restore Player status
 db $CB, $50, $02                ;Clear Flag 2/3/4/5/50 02
 db $A2, $5D                     ;Set Event Flag 05D
 db $FF                          ;End Event
-
-
-; 8013805b800b8005800080058000800b
-; 800580028002800312ce05028002be05
-; b57ef31914011516be00805b800b8005
-; 8000800ace060102dbcb5002a25dff
 
 padbyte $00
 pad $C96F8A

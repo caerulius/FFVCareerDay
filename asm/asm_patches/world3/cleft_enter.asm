@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C9E728 → $C9E755
 ; Cutscene at first door in sand area
 ; This is going to be used as the main trigger for setting most cutscenes watched flags
 ; If space is ran out, use 
@@ -36,7 +35,7 @@ padbyte $00
 pad $C99E39
 
 
-; clear out Exdeath's final castle, lots of space
+; clear out Exdeath's final cutscene, lots of space
 org $C9DCCE
 
 db $FF

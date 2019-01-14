@@ -4,11 +4,7 @@ hirom
 
 org $C99537
 
-
-
-; $C99537 → $C99592
 ; Gilgamesh before Exdeath cutscene
-
 
 db $80, $09                     ;Sprite 080 do event: Show
 db $80, $03                     ;Sprite 080 do event: Move Down

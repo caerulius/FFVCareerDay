@@ -1,8 +1,6 @@
 hirom
 !base = $C00000
 
-; $C8AD91 → $C8AEF0
-
 org $C8AD91
 
 db $D0, $80, $80                ;(Music) 80 80

@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; C9F7AE → $C9F7ED
 ; NPC Halicarnaso sprite w/ hearts
 
 org $C9F7AE
@@ -23,18 +22,13 @@ db $88, $03                     ;Sprite 088 do event: Move Down
 db $04                          ;Player move Left
 db $0B                          ;<Unknown>
 db $88, $26                     ;Sprite 088 do event: face up, right hand raised out
-; db $71                          ;Short pause
 db $89, $09                     ;Sprite 089 do event: Show
 db $89, $05                     ;Sprite 089 do event: Bounce
 db $89, $00                     ;Sprite 089 do event: Hold
-; db $71                          ;Short pause
-; db $C8, $FA, $07                ;Display Message/Text/Dialogue FA 07
-; db $70                          ;Very short pause
 db $89, $05                     ;Sprite 089 do event: Bounce
 db $89, $04                     ;Sprite 089 do event: Move Left
 db $89, $03                     ;Sprite 089 do event: Move Down
 db $89, $0A                     ;Sprite 089 do event: Hide
-; db $71                          ;Short pause
 db $88, $13                     ;Sprite 088 do event: face right, down hand backward
 db $CE, $05, $02                ;Play next 02 bytes 05 times
 db $88, $01                     ;Sprite 088 do event: Move Up
@@ -75,9 +69,7 @@ db $B5, $93                     ;Play Sound Effect Evil appears
 db $CE, $0F, $06                ;Play next 0C bytes 0F times
 db $80, $0A                     ;Sprite 080 do event: Hide
 db $82, $09                     ;Sprite 082 do event: Show
-;db $B2, $04                     ;Pause for 04 cycles
 db $80, $09                     ;Sprite 080 do event: Show
-;db $B2, $04                     ;Pause for 04 cycles
 db $C5                          ;<unknown>
 db $E0, $73                     ;Unknown
 db $82, $0A                     ;Sprite 082 do event: Hide

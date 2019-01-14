@@ -1,8 +1,6 @@
 hirom
 !base = $C00000
 
-; $C8D048 → $CC8D14B
-
 org $C8d048
 
 db $E3, $46, $01, $8D, $25, $00 ;Inter-map cutscene? 46 01 8D 25 00
