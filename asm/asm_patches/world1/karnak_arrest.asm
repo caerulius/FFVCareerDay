@@ -36,12 +36,6 @@ org $C9FB6F
 db $D0, $80, $40                ;(Music) 80 40
 db $C4, $03                     ;Fade out Speed 08
 db $74
-; db $CF, $04, $05                ;Play next 05 bytes simultaneously 04 times
-; db $03                          ;Player Move Down
-; db $83, $03                     ;Sprite 083 do event: Move Down
-; db $84, $03                     ;Sprite 084 do event: Move Down
-; db $71                          ;Short pause
-; db $0B                          ;<Unknown>
 db $D0, $F0, $00                ;(Music) F0 00
 db $E1, $8A, $00, $94, $38, $00 ;Return from cutscene? 8A 00 94 38 00
 db $D0, $F0, $00                ;(Music) F0 00

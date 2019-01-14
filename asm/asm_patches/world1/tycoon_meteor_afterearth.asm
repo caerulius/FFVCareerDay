@@ -42,8 +42,6 @@ db $80, $05                     ;Sprite 080 do event: Bounce
 db $80, $00                     ;Sprite 080 do event: Hold
 db $81, $0B                     ;Sprite 081 do event: 0B
 db $80, $0B                     ;Sprite 080 do event: 0B
-;db $71                          ;Short pause
-;db $C8, $F9, $83                ;Display Message/Text/Dialogue F9 83
 db $CF, $02, $04                ;Play next 04 bytes simultaneously 02 times
 db $81, $04                     ;Sprite 081 do event: Move Left
 db $80, $04                     ;Sprite 080 do event: Move Left

@@ -22,9 +22,3 @@ db $FF							;End Event
 
 padbyte $00
 pad $C97DB5
-
-; org $
-
-
-
-; pad $

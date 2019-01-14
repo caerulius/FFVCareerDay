@@ -8,6 +8,7 @@ db $B9, $62                     ;Toggle Subtracitve Tint by 62
 db $CD, $CC, $03                ;Run event index 03CC
 db $B9, $62                     ;Toggle Subtracitve Tint by 62
 db $DB                          ;Restore Player status
+db $73                          ;Very long pause
 db $FF                          ;End Event
 
 
@@ -22,7 +23,6 @@ db $14                          ;Player pose: face down, left hand forward
 db $B1, $0B                     ;Set Player Sprite 0B
 db $73                          ;Very long pause
 db $CD, $8A, $03                ;Run event index 038A
-db $73                          ;Very long pause
 db $FF                          ;End Event
 
 pad $C94BF5
@@ -35,7 +35,6 @@ db $14                          ;Player pose: face down, left hand forward
 db $B1, $0C                     ;Set Player Sprite 0C
 db $73                          
 db $CD, $7F, $05                ;Run event index 057F
-db $73                          ;Very long pause
 db $FF                          ;End Event
 
 pad $C931B2
