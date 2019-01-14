@@ -12,8 +12,6 @@ hirom
 ; text area start for blue magic: $E78430 → 
 ; 'id' for blue magic start: $82 → $9F
 
-org $D133FE ; temp
-db $60, $07
 
 org $C08AAF ; change magic textbox to be 24 chars instead of 6
 db $18

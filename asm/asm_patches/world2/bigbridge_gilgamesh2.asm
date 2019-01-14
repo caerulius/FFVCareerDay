@@ -1,7 +1,7 @@
 hirom
 !base = $C00000
 
-org $c8b64f
+org $C8B64F
 db $CD, $F5, $03                ;Run event index 03F5
 db $D3, $82, $AC, $27           ;Sprite 82 set map position AC, 27
 db $D3, $83, $AC, $27           ;Sprite 83 set map position AC, 27
@@ -30,7 +30,7 @@ db $FF                          ;End Event
 
 padbyte $00
 pad $C8B68B
-org $c9872e
+org $C9872E
 
 ; Gilgamesh at Big Bridge
 ; $c9872e → $C9875D

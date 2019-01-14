@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C99EC2 → $
 ; Lev cutscene with minion destroyed
 
 org $C99EC2

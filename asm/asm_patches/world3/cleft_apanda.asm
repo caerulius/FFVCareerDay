@@ -1,7 +1,6 @@
 hirom
 !base = $C00000
 
-; $C9C24D → $C9C275
 ; Apanda text box
 
 org $C9C24D

@@ -1,9 +1,7 @@
 hirom
 !base = $C00000
 
-; $C99619 → $C9986C
 ; Exdeath pre-dialogue → Warp to World 3
-
 
 org $C99619
 
