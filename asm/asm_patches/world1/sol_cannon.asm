@@ -5,8 +5,6 @@ hirom
 
 org $C98247
 
-; db $C4, $03                     ;Fade out
-; db $75
 db $CA, $FD, $00                ;Set Flag 2/3/4/5/FD 00
 db $E3, $DD, $20, $07, $09, $D8 ;Inter-map cutscene? DD 20 07 09 D8
 db $A5, $FE                     ;Clear Event Flag 1FE
