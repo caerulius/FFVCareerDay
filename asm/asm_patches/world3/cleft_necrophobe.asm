@@ -24,4 +24,4 @@ db $A4, $78			;Turn on bit 01 at address 0x7e0a43
 db $FF				;End Event
 
 padbyte $00
-pad $C9C5DD
+pad $C9C56D
