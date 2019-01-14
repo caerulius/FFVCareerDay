@@ -11,14 +11,14 @@ alt="" width="240" height="180" border="10" /></a>
 
 #  Features
 - Cutscenes are removed or abbreviated. The design approach was to keep the spirit of the game in tact, but to largely cut out content that detracts from core gameplay.
-- Both default speed and dash speed is increased. World map allows for dashing, and vehicle speeds are doubled. 
+- Both default speed and dash speed is increased. World map allows for dashing, and vehicle speeds are doubled.
 - Destination information is located in the "Key" area in the item menu. While playing the main game, it is possible the player becomes lost as a result of abbreviated cutscenes. 'Destination' will guide the player on where to go next. 
-- Encounters can be toggled on/off within the config menu. 
+- Encounters can be toggled on/off within the in-game "Config" menu. 
 - The abilities "Dash", "Passages" and "Learning" are always active. 
 #### Optional features
 - Patches for blanket ABP/EXP modifiers are available, providing a multiplier to these rewards. 
 - A patch for awarding boss EXP is available. With this patch, fighting bosses alone will yield a Level ~35 party throughout the game, fluctuating with optional bosses. 
-- A patch for doubled in-battle ATB is available. Simply, this patch will make ATB run twice as fast. 
+- A patch for doubled in-battle ATB is available. Simply, this patch will make ATB run twice as fast. Using "Wait" battle speed is recommended.
 
 # Patch
 IPS patches are available within the `patches` directory. Use [Lunar IPS](https://fusoya.eludevisibility.org/lips/) or a similar IPS patcher to apply directly to a Final Fantasy V ROM with the [RPGe patch](http://www.romhacking.net/translations/353/) applied. 
@@ -26,8 +26,15 @@ IPS patches are available within the `patches` directory. Use [Lunar IPS](https:
 ffv_project_demi_main.ips    (primary patch)
 ffv_project_demi_expabp2.ips (2x multiplier to EXP/ABP)
 ffv_project_demi_expabp4.ips (4x multiplier to EXP/ABP)
+ffv_project_demi_boss.ips    (award boss EXP to a level ~35 endgame curve)
 ffv_project_demi_atb2.ips    (2x multiplier to ATB)
 ```
+
+# Other notes
+- Most gameplay elements are unchanged, where the player progresses events & bosses normally through the game. In some cases, in the spirit of creating fluid gameplay, some changes were implemented. Currently there are the following changes:
+  - After warping from World 1 to World 2, the Solitary Island tent & Abductor sequence was removed. The player will transition straight from World 1 to playing as Galuf in Exdeath's castle in World 2. 
+  - After the Guardians battle in Mua Forest, the Galuf x Exdeath cutscene battle is removed. After battle, Cara will receive the Bracelet, then the game will continue. 
+  
 # [Discord](https://discord.gg/6Yw6HbK)
 Our community Discord for development is [located here](https://discord.gg/6Yw6HbK), open to everyone. Please direct all identified gameplay bugs and comments here. 
 
