@@ -156,7 +156,7 @@ incsrc world3/cleft_apocalypse.asm
 incsrc world3/cleft_halicarnaso.asm
 incsrc world3/cleft_halicarnassus.asm
 incsrc world3/cleft_twintania.asm
-;incsrc world3/cleft_necrophobe.asm
+incsrc world3/cleft_necrophobe.asm
 
 ; other patches
 
