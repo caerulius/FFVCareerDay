@@ -1,0 +1,8 @@
+*.asm	text
+*.md	text
+*.py	text
+*.css	text
+*.html	text
+*.csv	text
+*.csv#	text
+*.json	text
