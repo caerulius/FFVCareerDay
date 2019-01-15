@@ -29,6 +29,25 @@ db $80, $01                     ;Sprite 080 do event: Move Up
 db $80, $07                     ;Sprite 080 do event: 07
 db $80, $08                     ;Sprite 080 do event: 08
 
+db $C4, $03                   ; Fade out, although nice, was causing problems with a blip 
+db $73
+db $E1, $D2, $00, $9C, $14, $00 ;Return from cutscene? D2 00 9C 14 00
+db $01
+db $01
+db $01
+db $01
+db $01
+db $01
+db $01
+db $02
+db $01
+db $01
+db $02
+db $01
+db $11
+db $C3, $03                   ; Fade out, although nice, was causing problems with a blip 
+db $73
+db $C8, $72, $07                ;Display Message/Text/Dialogue 72 07
 
 db $E3, $02, $00, $CE, $C8, $D8 ;Inter-map cutscene? 02 00 CE C8 D8
 db $BE, $40                     ;Rumble effect of 40 magnitude
