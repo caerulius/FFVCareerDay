@@ -5,7 +5,6 @@ import struct
 import sys
 import os
 import gzip
-from io import BytesIO
 
 VERSION      = '0.1'
 
@@ -26,7 +25,7 @@ def applyPatch(originalFile, patchFile, newFile):
     # handling programmer errors
     assert type(originalFile) is type(''), '\'originalFile\' must be a string.'
     assert type(patchFile) is type(''), '\'modifiedFile\' must be a string.'
-    #assert type(newFile) is type(''), '\'patchFile must\' be a string.'
+    assert type(newFile) is type(''), '\'patchFile must\' be a string.'
 
     # handling operational errors
     
@@ -45,22 +44,19 @@ def applyPatch(originalFile, patchFile, newFile):
     except :
         return (False, 'There was a problem trying to read \'patchFile\'.')
 
-    try:
-        if type(newFile) is BytesIO:
-            newFile.write(original)
-            return newFile
-        else:
-            new = open(newFile, 'wb') #file object
-            os.write(new.fileno(), original)
-    except Exception as E:
-        return (E, 'There was a problem trying to write to \'newFile\'.')
+    # buffer for writing
+    try :
+        new = open(newFile, 'wb') #file object
+        os.write(new.fileno(), original)
+    except :
+        return (False, 'There was a problem trying to write to \'newFile\'.')
 
     # disk space
 
     directory =  os.path.dirname(os.path.abspath(newFile))
     if directory == '' :
         directory = '.'
-    
+        
     if shutil.disk_usage(directory).free <=  FILE_LIMIT:
         return (False, 'Not enough space for creating a patch at specified path.')
 
@@ -86,7 +82,7 @@ def applyPatch(originalFile, patchFile, newFile):
         )[0]
         
         #write record content to file
-
+        
         os.lseek(new.fileno(), offset, 0)
         
         if size != 0 :
@@ -116,7 +112,7 @@ def applyPatch(originalFile, patchFile, newFile):
             #update loop address
             a += 8
 
-    return new
+    new.close()
     return (False, 'Patch hadn\'t an EOF flag.')
 
 def createPatch(originalFile, modifiedFile, patchFile):
