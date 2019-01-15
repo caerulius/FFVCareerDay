@@ -102,6 +102,8 @@ incsrc world2/mooglewaterway_afterboss.asm         ; 1A Moogle Village
 incsrc world2/mooglewaterway_beforeboss.asm
 incsrc world2/mooglevillage_to_castlebal.asm           ; 1B Hiryuu Mountain
 
+incsrc world2/kuzar_firstvisit.asm
+
 incsrc world2/balcastle_leavegates.asm
 incsrc world2/kelb_firstvisit.asm
 incsrc world2/hiryuuvalley_end.asm                         ; 1C Bal Castle
