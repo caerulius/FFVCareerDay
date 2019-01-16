@@ -18,7 +18,6 @@ alt="" width="240" height="180" border="10" /></a>
 #### Optional features
 - Patches for blanket ABP/EXP modifiers are available, providing a multiplier to these rewards. 
 - A patch for awarding boss EXP is available. With this patch, fighting bosses alone will yield a Level ~35 party throughout the game, fluctuating with optional bosses. 
-- A patch for doubled in-battle ATB is available. Simply, this patch will make ATB run twice as fast. Using "Wait" battle speed is recommended.
 
 # Patch
 IPS patches are available within the `patches` directory. Use [Lunar IPS](https://fusoya.eludevisibility.org/lips/) or a similar IPS patcher to apply directly to a Final Fantasy V ROM with the [RPGe patch](http://www.romhacking.net/translations/353/) applied. 
@@ -27,7 +26,6 @@ ffv_project_demi_main.ips    (primary patch)
 ffv_project_demi_expabp2.ips (2x multiplier to EXP/ABP)
 ffv_project_demi_expabp4.ips (4x multiplier to EXP/ABP)
 ffv_project_demi_boss.ips    (award boss EXP to a level ~35 endgame curve)
-ffv_project_demi_atb2.ips    (2x multiplier to ATB)
 ```
 
 # Other notes
