@@ -16,11 +16,13 @@ alt="" width="240" height="180" border="10" /></a>
 - Encounters can be toggled on/off within the in-game "Config" menu. 
 - The abilities "Dash", "Passages" and "Learning" are always active. 
 #### Optional features
-- Patches for blanket ABP/EXP modifiers are available, providing a multiplier to these rewards. 
+- Patches for ABP/EXP modifications are available, providing a 2x or 4x multiplier to these rewards. 
 - A patch for awarding boss EXP is available. With this patch, fighting bosses alone will yield a Level ~35 party throughout the game, fluctuating with optional bosses. 
 
 # Patch
 IPS patches are available within the `patches` directory. Use [Lunar IPS](https://fusoya.eludevisibility.org/lips/) or a similar IPS patcher to apply directly to a Final Fantasy V ROM with the [RPGe patch](http://www.romhacking.net/translations/353/) applied. 
+
+Please patch `main.ips` first, then patch any other patches. 
 ```
 ffv_project_demi_main.ips    (primary patch)
 ffv_project_demi_expabp2.ips (2x multiplier to EXP/ABP)
