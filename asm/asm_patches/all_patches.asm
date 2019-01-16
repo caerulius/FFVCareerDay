@@ -2,6 +2,9 @@
 !vanillarewards = 1
 
 
+; init
+incsrc misc/init.asm
+
 ; world 1                                   Destinations:
 incsrc world1/intro_cutscene.asm           ; 00 Tycoon Meteor
 incsrc world1/tycoon_meteor_01_mount.asm
