@@ -13,7 +13,7 @@ lda $3F0B, x
 
 ; for each multipler, add an asl command. its effectively 2x to the value for exp 
 asl ;2x
-asl ;4x
+; asl ;4x
 ; asl ;8x
 sta $2267,y
 JML $C23F94
@@ -37,7 +37,7 @@ BNE FinishABPHook
 lda $d03000,x
 ; for each multipler, add an asl command. its effectively 2x to the value for abp
 asl ;2x
-asl ;4x
+; asl ;4x
 ;asl ;8x
 
 
