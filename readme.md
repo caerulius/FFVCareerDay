@@ -14,7 +14,7 @@ alt="" width="240" height="180" border="10" /></a>
 - Both default speed and dash speed is increased. World map allows for dashing, and vehicle speeds are doubled.
 - Destination information is located in the "Key" area in the item menu. While playing the main game, it is possible the player becomes lost as a result of abbreviated cutscenes. 'Destination' will guide the player on where to go next. 
 - Encounters can be toggled on/off within the in-game "Config" menu. 
-- The abilities "Dash", "Passages" and "Learning" are always active. 
+- The abilities "Dash", "Passages", "Learning", and "Pitfalls" are always active. 
 #### Optional features
 - Patches for blanket ABP/EXP modifiers are available, providing a multiplier to these rewards. 
 - A patch for awarding boss EXP is available. With this patch, fighting bosses alone will yield a Level ~35 party throughout the game, fluctuating with optional bosses. 

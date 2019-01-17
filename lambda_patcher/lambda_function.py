@@ -9,9 +9,10 @@ VANILLA_ROM = 'vanilla/ff5-j.smc'
 LOCAL_PATCH = '/tmp/rpge.ips'
 LOCAL_VANILLA = '/tmp/ff5-j.smc'
 LOCAL_PATCHED_ROM = '/tmp/ff5-rpge.smc'
-UPLOAD_PATCHED_ROM_KEY = str(time.time()) + '/ff5-rpge.smc'
 
 def lambda_handler(event, context):
+    uploaded_file = event['Records'][0]['s3']['object']['key']
+    upload_patched_rom_key = 'downloads/' + uploaded_file.strip('uploads/')
     client = boto3.client('s3')
 
     try:
@@ -23,11 +24,11 @@ def lambda_handler(event, context):
         print(e)
 
     try:
-        print("Downloading vanilla rom...")
-        patch = client.download_file(BUCKET_NAME, VANILLA_ROM, LOCAL_VANILLA)
-        print("Vanilla rom downloaded")
+        print("Downloading provided rom...")
+        patch = client.download_file(BUCKET_NAME, uploaded_file, LOCAL_VANILLA)
+        print("Vanilla rom downloaded: " + uploaded_file)
     except Exception as e:
-        print("Error downloading vanilla rom: ", end="")
+        print("Error downloading provided rom: ", end="")
         print(e)
 
     try:
@@ -40,8 +41,8 @@ def lambda_handler(event, context):
 
     try:
         print("Uploading patched rom...")
-        client.upload_file(LOCAL_PATCHED_ROM, BUCKET_NAME, UPLOAD_PATCHED_ROM_KEY)
-        print("Patched rom uploaded to:" + UPLOAD_PATCHED_ROM_KEY)
+        client.upload_file(LOCAL_PATCHED_ROM, BUCKET_NAME, upload_patched_rom_key)
+        print("Patched rom uploaded to:" + upload_patched_rom_key)
     except Exception as e:
         print("Error uploading patched rom: ", end="")
         print(e)
@@ -56,4 +57,4 @@ def lambda_handler(event, context):
         print("Error cleaning up files: ", end="")
         print(e)
 
-    return UPLOAD_PATCHED_ROM_KEY
+    return upload_patched_rom_key
