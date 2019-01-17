@@ -1,9 +1,10 @@
 # FFV: Project Demi
 
-Use the included Lunar IPS program to apply these patches onto an FF5 rom patched with the RPGe translation patch (https://www.romhacking.net/translations/353/).
-Lunar IPS can also be used to patch a Japanese FF5 rom with the RPGe patch. 
+Included in this release is a program called Lunar IPS that can apply these patches to your own rom of FF5.
+Make sure you patch these onto an FF5 rom that is already patched with the RPGe Translation Patch.
+That patch is located here (https://www.romhacking.net/translations/353/), and Lunar IPS can be used to patch that onto a FF5 Japanese Rom.
 
-***Please patch `main.ips` first, then patch any other patches. ***
+***Please patch 'main.ips' first, then patch any other patches. ***
 
 ffv_project_demi_main.ips    (primary patch)
 
