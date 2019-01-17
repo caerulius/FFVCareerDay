@@ -2,6 +2,9 @@
 !vanillarewards = 1
 
 
+; init
+incsrc misc/init.asm
+
 ; world 1                                   Destinations:
 incsrc world1/intro_cutscene.asm           ; 00 Tycoon Meteor
 incsrc world1/tycoon_meteor_01_mount.asm
@@ -199,6 +202,3 @@ incsrc reward_events/exdeathcastle_carbuncle.asm
 incsrc reward_events/walse_shiva.asm
 incsrc reward_events/watercrystal_obtainshards.asm
 incsrc reward_events/chicken_knife_brave_blade.asm
-
-; optionals
-incsrc misc/optionals.asm
