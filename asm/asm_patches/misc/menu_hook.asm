@@ -176,6 +176,19 @@ bne CheckDestinationWriter
 
 
 ; this writes to vram 
+
+LDA #$53  ; WRITE address  - location of "3" 
+STA $002116
+LDA #$11  ; WRITE address
+STA $002117
+LDA #$80
+STA $002115
+
+LDA #$96
+STA $002118
+
+
+
 LDA #$55  ; WRITE address  - location of "4" 
 STA $002116
 LDA #$11  ; WRITE address

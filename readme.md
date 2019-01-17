@@ -35,6 +35,9 @@ ffv_project_demi_boss.ips    (award boss EXP to a level ~35 endgame curve)
   - After warping from World 1 to World 2, the Solitary Island tent & Abductor sequence was removed. The player will transition straight from World 1 to playing as Galuf in Exdeath's castle in World 2. 
   - After the Guardians battle in Mua Forest, the Galuf x Exdeath cutscene battle is removed. After battle, Cara will receive the Bracelet, then the game will continue. 
   
+# Known bugs
+- In the Moogle Forest area in World 2, dash speed on the world map will lock based whether or not the player is in an encounter area or not. This is a known side-effect of how dashing on the world map works, which is triggered when encounter-less tiles are present. 
+  
 # [Discord](https://discord.gg/6Yw6HbK)
 Our community Discord for development is [located here](https://discord.gg/6Yw6HbK), open to everyone. Please direct all identified gameplay bugs and comments here. 
 
