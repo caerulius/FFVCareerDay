@@ -62,6 +62,12 @@ db $CB, $47, $00                ;Clear Flag 2/3/4/5/47 00
 db $CB, $48, $00                ;Clear Flag 2/3/4/5/48 00
 db $CB, $49, $00                ;Clear Flag 2/3/4/5/49 00
 db $CB, $30, $00                ;Clear Flag 2/3/4/5/30 00
+
+; tycoon chancellor & guard already set. by the time you get to w3, force this 
+db $CB, $01, $01                ;Turn off bit 02 at address  0x7e0a74
+db $CA, $0A, $01                ;Turn on bit 04 at address  0x7e0a75
+db $A2, $52                     ;Turn on bit 04 at address 0x7e0a1e
+
 db $A4, $FF                     ;Set Event Flag 1FF
 db $A5, $9A                     ;Clear Event Flag 19A
 db $CA, $73, $02                ;Set Flag 2/3/4/5/73 02

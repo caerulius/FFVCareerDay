@@ -11,11 +11,12 @@ db $63, $7A, $8C, $81, $96, $72, $89, $7D, $A3 ; "Dash Spd."
 
 ; change config to only allow for 4 options
 org $C0F078
-db $03 ; change 'too far' metric to be $05, meaning it will revert back to $04, which is 2 from the farthest right 
+db $02 ; change 'too far' metric
 
 ; make conditional true for any player to always execute dash when b is held
 org $c01261
 lda #$FF
+
 
 ; make hold b to dash here not effective
 org $c01278
@@ -55,15 +56,12 @@ RunSpeedWorldMap:
 lda !walkingspeedconfig
 and #$70
 
-; setting 3
-CMP #$20
-BEQ SpeedSettingDefault
 ; setting 2
 CMP #$10
-BEQ SpeedSettingFast1
+BEQ SpeedSettingDefault
 ; setting 1
 CMP #$00
-BEQ SpeedSettingFast2
+BEQ SpeedSettingFast1
 
 
 
@@ -85,15 +83,12 @@ RunSpeed:
 lda !walkingspeedconfig
 and #$70
 
-; setting 3
-CMP #$20
-BEQ SpeedSettingDefault
 ; setting 2
 CMP #$10
-BEQ SpeedSettingFast1
+BEQ SpeedSettingDefault
 ; setting 1
 CMP #$00
-BEQ SpeedSettingFast2
+BEQ SpeedSettingFast1
 
 SpeedSettingDefault:
 lda #$04

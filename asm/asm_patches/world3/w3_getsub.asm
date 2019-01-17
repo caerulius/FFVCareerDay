@@ -44,7 +44,7 @@ db $01
 db $01
 db $02
 db $01
-db $11
+db $14
 db $C3, $03                   ; Fade out, although nice, was causing problems with a blip 
 db $73
 db $C8, $72, $07                ;Display Message/Text/Dialogue 72 07
