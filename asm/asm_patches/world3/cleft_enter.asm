@@ -37,7 +37,26 @@ pad $C99E39
 
 ; clear out Exdeath's final cutscene, lots of space
 org $C9DCCE
-
+db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
+db $A4, $9F                     ;Turn on bit 80 at address 0x7e0a47
+db $CB, $97, $03                ;Turn off bit 80 at address  0x7e0ac6
 db $FF
 
 pad $C9E727
+
+; if you leave the cleft, disable cutscene:
+
+org $C93038
+
+db $B5, $AE                     ;Play Sound Effect The Void
+db $BF, $0E                     ;Sprite effect 0E
+db $E1, $0D, $00, $00, $00, $00 ;Return from cutscene? 0D 00 00 00 00
+db $0A                          ;Player Hide
+db $C3, $0A                     ;Fade in Speed 0A
+db $70                          ;Very short pause
+db $C4, $0A                     ;Fade out Speed 0A
+db $71                          ;Short pause
+db $CD, $FB, $03                ;Run event index 03FB
+db $FF                          ;End Event
+
+pad $C93051
