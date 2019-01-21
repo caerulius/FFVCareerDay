@@ -78,6 +78,7 @@ db $C3, $02                     ;Fade in Speed 06
 db $75                          ;Extremely long pause
 db $CC, $24                  	;Custom destination flag 24
 db $A4, $FB						;Turn on bit 08 at address 0x7e0a53 ;Enables the world map right before we transition to world 3 in case you haven't picked it up
+db $CD, $7F, $05				;Run event index 057F ; Party Heal
 db $FF                          ;End Event
 
 padbyte $00

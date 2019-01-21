@@ -14,7 +14,7 @@ db $02							;Player move right
 db $73
 db $E1, $9C, $00, $8C, $11, $00	;Return from cutscene? 9C 00 8C 11 00
 db $CD, $B9, $01				;Run event index 01B9
-db $CD, $7F, $05				;Run event index 057F
+db $CD, $7F, $05				;Run event index 057F ; Party Heal
 db $71
 db $C3, $03
 db $73

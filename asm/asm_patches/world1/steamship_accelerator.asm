@@ -1,6 +1,6 @@
 hirom
 
-org $c913A2
+org $C913A2
 
 db $B5, $3A                     ;Play Sound Effect Quick
 db $F3, $08, $32, $00, $6E, $80 ;Set Map Tiles 08 32 00 6E 80
