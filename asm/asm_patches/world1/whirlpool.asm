@@ -32,6 +32,7 @@ db $C4, $0C						;Fade out Speed 0C
 db $74							;Longish pause
 db $B1, $02						;Set Player Sprite 02
 db $E1, $2B, $00, $8B, $19, $00	;Return from cutscene? 2B 00 8B 19 00
+db $CD, $7F, $05				;Run event index 057F ;Party Heal
 db $C3, $08						;Fade in Speed 0C
 db $FF
 
