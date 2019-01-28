@@ -68,23 +68,3 @@ nop
 nop
 nop
 nop
-
-
-
-
-
-
-; Saving these for reference. It shows up 8 times in the ROM data, but only need the above 2 to work. 
-; org $EF3215
-; db $64, $87, $7C, $88, $8E, $87, $8D, $7E, $8B, $8C ; "Encounters"
-; org $EF3D0E
-; db $64, $87, $7C, $88, $8E, $87, $8D, $7E, $8B, $8C ; "Encounters"
-; org $F73215
-; db $64, $87, $7C, $88, $8E, $87, $8D, $7E, $8B, $8C ; "Encounters"
-; org $F73D0E
-; db $64, $87, $7C, $88, $8E, $87, $8D, $7E, $8B, $8C ; "Encounters"
-; org $FF3215
-; db $64, $87, $7C, $88, $8E, $87, $8D, $7E, $8B, $8C ; "Encounters"
-; org $FF3D0E
-; db $64, $87, $7C, $88, $8E, $87, $8D, $7E, $8B, $8C ; "Encounters"
-

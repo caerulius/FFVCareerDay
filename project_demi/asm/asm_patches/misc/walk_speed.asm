@@ -29,7 +29,7 @@ nop
 ; func for speed
 ; uses 'a' only, not x/y
 ; returns 'a' value with speed based on config
-org $F35000
+org $F00180
 SpeedHookGeneric:
 
 
@@ -109,7 +109,7 @@ RTL
 org $c0123e
 JML TownDungeonHandler
 
-org $F35500
+org $F001E0
 TownDungeonHandler:
 JSL SpeedHookGeneric
 sta $c0

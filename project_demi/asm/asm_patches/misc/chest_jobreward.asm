@@ -7,7 +7,7 @@ hirom
 org $c00e3a
 JML ChestHook1
 
-org $F01000
+org $F00200
 ChestHook1:
 STZ $BB0
 lda $D13213,x
