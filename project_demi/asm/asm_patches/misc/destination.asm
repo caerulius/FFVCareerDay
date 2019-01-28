@@ -1,297 +1,297 @@
 hirom
-; addresses 7E5244 → 7E527A
+; addresses 005244 → 00527A
 
-org $F18200
+org $E79400
 padbyte $FF
-pad $F18800
+pad $E79A00
 
-; this will say Destination: and will never change 
-org $F18200
+; this will say Destination: and will never change
+org $E79400
 db $63, $7e, $8c, $8d
-db $82, $87, $7a, $8d 
+db $82, $87, $7a, $8d
 db $82, $88, $87, $9b
 
-org $F18220 
+org $E79420
 db $73, $78, $62, $6E
 db $6E, $6D, $FF, $6C
 db $64, $73, $64, $6E
 db $71, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18240 
+org $E79440
 db $6F, $68, $71, $60
 db $73, $64, $FF, $67
 db $68, $63, $64, $6E
 db $74, $73, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18260 
+org $E79460
 db $76, $68, $6D, $63
 db $FF, $72, $67, $71
 db $68, $6D, $64, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18280 
+org $E79480
 db $73, $74, $6B, $64
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F182A0 
+org $E794A0
 db $73, $6E, $71, $6D
 db $60, $FF, $62, $60
 db $6D, $60, $6B, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F182C0 
+org $E794C0
 db $72, $67, $68, $6F
 db $FF, $66, $71, $60
 db $75, $64, $78, $60
 db $71, $63, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F182E0 
+org $E794E0
 db $67, $68, $71, $78
 db $74, $74, $FF, $6C
 db $6E, $74, $6D, $73
 db $60, $68, $6D, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18300 
+org $E79500
 db $76, $60, $6B, $72
 db $64, $FF, $62, $60
 db $72, $73, $6B, $64
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18320 
+org $E79520
 db $76, $60, $6B, $72
 db $64, $FF, $73, $6E
 db $76, $64, $71, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18340 
+org $E79540
 db $76, $60, $6B, $72
 db $64, $FF, $6C, $64
 db $73, $64, $6E, $71
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18360 
+org $E79560
 db $6A, $60, $71, $6D
 db $60, $6A, $FF, $73
 db $6E, $76, $6D, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18380 
+org $E79580
 db $6A, $60, $71, $6D
 db $60, $6A, $FF, $72
 db $73, $64, $60, $6C
 db $72, $67, $68, $6F
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F183A0 
+org $E795A0
 db $60, $6D, $62, $68
 db $64, $6D, $73, $FF
 db $6B, $68, $61, $71
 db $60, $71, $78, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F183C0 
+org $E795C0
 db $6A, $60, $71, $6D
 db $60, $6A, $FF, $6F
 db $74, $61, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F183E0 
+org $E795E0
 db $6A, $60, $71, $6D
 db $60, $6A, $FF, $72
 db $73, $64, $60, $6C
 db $72, $67, $68, $6F
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18400 
+org $E79600
 db $62, $71, $64, $72
 db $62, $64, $6D, $73
 db $FF, $68, $72, $6B
 db $60, $6D, $63, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18420 
+org $E79620
 db $60, $6D, $62, $68
 db $64, $6D, $73, $FF
 db $6B, $68, $61, $71
 db $60, $71, $78, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18440 
+org $E79640
 db $63, $64, $72, $64
 db $71, $73, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18460 
+org $E79660
 db $6B, $6E, $6D, $6A
 db $60, $FF, $71, $74
 db $68, $6D, $72, $FF
 db $9E, $60, $72, $62
 db $64, $6D, $63, $9F
 db $FF, $FF
-org $F18480 
+org $E79680
 db $73, $78, $62, $6E
 db $6E, $6D, $FF, $6C
 db $64, $73, $64, $6E
 db $71, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F184A0 
+org $E796A0
 db $62, $71, $64, $72
 db $62, $64, $6D, $73
 db $FF, $68, $72, $6B
 db $60, $6D, $63, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-; org $F184C0  ; unused for now
+; org $E796C0 ; unused for now
 ; db $6B, $6E, $6D, $6A
 ; db $60, $FF, $71, $74
 ; db $68, $6D, $72, $FF
 ; db $FF, $FF, $FF, $FF
 ; db $FF, $FF, $FF, $FF
 ; db $FF, $FF
-org $F184E0 
+org $E796E0
 db $65, $6E, $74, $71
 db $FF, $6C, $64, $73
 db $64, $6E, $71, $72
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18500 
+org $E79700
 db $61, $60, $67, $60
 db $6C, $74, $73, $FF
 db $6F, $64, $6D, $68
 db $6D, $72, $74, $6B
 db $60, $FF, $FF, $FF
 db $FF, $FF
-org $F18520 
+org $E79720
 db $61, $68, $66, $FF
 db $61, $71, $68, $63
 db $66, $64, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18540 
+org $E79740
 db $6C, $6E, $6E, $66
 db $6B, $64, $FF, $65
 db $6E, $71, $64, $72
 db $73, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18560 
+org $E79760
 db $6C, $6E, $6E, $66
 db $6B, $64, $FF, $75
 db $68, $6B, $6B, $60
 db $66, $64, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18580 
+org $E79780
 db $67, $68, $71, $78
 db $74, $74, $FF, $6C
 db $6E, $74, $6D, $73
 db $60, $68, $6D, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F185A0 
+org $E797A0
 db $61, $60, $6B, $FF
 db $62, $60, $72, $73
 db $6B, $64, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F185C0 
+org $E797C0
 db $66, $74, $68, $63
 db $6E, $FF, $62, $60
 db $75, $64, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F185E0 
+org $E797E0
 db $79, $64, $79, $60
 db $FF, $65, $6B, $64
 db $64, $73, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18600 
+org $E79800
 db $79, $64, $79, $60
 db $FF, $65, $6B, $64
 db $64, $73, $FF, $62
 db $60, $61, $68, $6D
 db $72, $FF, $FF, $FF
 db $FF, $FF
-org $F18620 
+org $E79820
 db $61, $60, $71, $71
 db $68, $64, $71, $FF
 db $73, $6E, $76, $64
 db $71, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18640 
+org $E79840
 db $72, $74, $61, $6C
 db $64, $71, $66, $64
 db $63, $FF, $66, $74
 db $68, $63, $6E
 db $FF, $62, $60
 db $75, $64, $FF, $FF
-org $F18660 
+org $E79860
 db $6C, $74, $60, $FF
 db $65, $6E, $71, $64
 db $72, $73, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18680 
+org $E79880
 db $64, $77, $63, $64
 db $60, $73, $67, $FF
 db $62, $60, $72, $73
 db $6B, $64, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F186A0 
+org $E798A0
 db $73, $78, $62, $6E
 db $6E, $6D, $FF, $62
 db $60, $72, $73, $6B
 db $64, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F186C0 
+org $E798C0
 db $66, $74, $68, $63
 db $6E, $FF, $62, $60
 db $75, $64, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F186E0 
+org $E798E0
 db $6F, $78, $71, $60
 db $6C, $68, $63, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18700 
+org $E79900
 db $60, $68, $71, $72
 db $67, $68, $6F, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF, $FF, $FF
 db $FF, $FF
-org $F18720 
+org $E79920
 db $62, $6B, $64, $65
 db $73, $FF, $A0, $FF
 db $73, $60, $61, $6B
@@ -300,7 +300,7 @@ db $FF, $FF, $FF, $FF
 db $FF, $FF
 
 ;Karnak Meteor
-org $F18740
+org $E79940
 db $6A
 db $60
 db $71
@@ -316,7 +316,7 @@ db $6E
 db $71
 db $FF
 ;Walse Meteor
-org $F18760
+org $E79960
 db $76
 db $60
 db $6B
@@ -331,7 +331,7 @@ db $6E
 db $71
 db $FF
 ;Ruined City Meteor
-org $F18780
+org $E79980
 db $71
 db $74
 db $68
@@ -351,7 +351,6 @@ db $64
 db $6E
 db $71
 db $FF
-
 
 
 

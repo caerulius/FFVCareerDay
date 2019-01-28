@@ -2,10 +2,10 @@ hirom
 !base = $C00000
 
 org $C22075
-JML Hook
+JML DoubleSpeedHook
 
-org $F30000
-Hook:
+org $F00100
+DoubleSpeedHook:
 
 lda $3d75,x
 CMP #$01

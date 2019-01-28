@@ -11,6 +11,8 @@ hirom
 !encounterswitch = $7E0973
 !lastframesave = $7EF87E
 !destinationindex = $7E1E20
+!destinationdata1 = $E79400
+!destinationdata2 = $E79420
 
 org $C0CAB2
 ; Step counter increaser area 
@@ -104,36 +106,36 @@ JML $c0cbc5
 
 
 
-; Frame by frame hook, NOT in menu
+; ; Frame by frame hook, NOT in menu
 
-org $C0043F
-nop
-nop
+; org ###$C0043F
+; nop
+; nop
 
-JML FrameHook
+; JML FrameHook
 
-org $F10000
-FrameHook:
-
-
-PHA
+; org $
+; FrameHook:
 
 
-; do stuff 
+; PHA
+
+
+; ; do stuff 
 
 
 
-PLA ; pull A from above
+; PLA ; pull A from above
 
 
-; original instructions
-PLD
-PLB
-PLY
-PLX
-PLA
-PLP
-JML $C00445
+; ; original instructions
+; PLD
+; PLB
+; PLY
+; PLX
+; PLA
+; PLP
+; JML $C00445
 
 
 
@@ -158,7 +160,7 @@ JML $C00445
 org $C2FBE9
 JML FrameHookMenu
 
-org $F18000
+org $F00500
 
 FrameHookMenu:
 PHA
@@ -249,9 +251,9 @@ BEQ FillItemText
 FinishFrameHookMenuHook:
 JML FinishFrameHookMenu
 ; if conditions met, then execute destination writer
-; F18200 - lookup table for index 
+; !destinationdata2 - lookup table for index 
 ; Load in value at $7EF87F and asl 5 times to get an index location
-; Example base F18300
+; Example base F18300 (UPDATE: old code, changed to $E7 bank instead of $F1)
 ; Value at $7EF87F is 02
 ; $0002 asl x5 → $0020
 ; then index will be $F18500
@@ -261,7 +263,7 @@ FillItemText:
 ldx #$0000 ; First loop for "Destination"
 ldy #$0000 ; First loop for "Destination"
 FillTextLoop1st:
-    lda $F18200, x ; begins at index, increases x until 28 char limit
+    lda !destinationdata1, x ; begins at index, increases x until 28 char limit
     sta $51C4, y
     inx
     iny
@@ -284,7 +286,7 @@ sep #$20
 
 ldy #$0000 ; 28 character limit to length of line 
 FillTextLoop:
-    lda $F18220, x ; begins at index, increases x until 28 char limit
+    lda !destinationdata2, x ; begins at index, increases x until 28 char limit
     sta $5244, y
     inx
     iny
