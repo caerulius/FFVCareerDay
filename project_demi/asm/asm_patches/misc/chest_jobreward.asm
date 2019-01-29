@@ -270,7 +270,7 @@ JML JobsAssigned
 org $C08AC2
 JML JobIndexing
 
-org $F01200
+org $F00400
 JobIndexing:
 ADC $0F
 PHA
