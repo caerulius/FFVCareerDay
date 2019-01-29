@@ -19,7 +19,7 @@ db $18
 org $C08A85
 JML MagicIndexing
 
-org $F01280
+org $F00480
 MagicIndexing:
 lda $16a3
 rep #$20

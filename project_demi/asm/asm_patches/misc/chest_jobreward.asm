@@ -7,7 +7,7 @@ hirom
 org $c00e3a
 JML ChestHook1
 
-org $F01000
+org $F00200
 ChestHook1:
 STZ $BB0
 lda $D13213,x
@@ -270,7 +270,7 @@ JML JobsAssigned
 org $C08AC2
 JML JobIndexing
 
-org $F01200
+org $F00400
 JobIndexing:
 ADC $0F
 PHA
