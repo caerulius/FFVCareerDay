@@ -1,62 +1,62 @@
-event,hex_id,address,idx,type
-Wind Crystal,01,C0FAB2,1,crystal
-Wind Crystal,02,C0FAB4,2,crystal
-Wind Crystal,03,C0FAB6,3,crystal
-Wind Crystal,04,C0FAB8,4,crystal
-Wind Crystal,05,C0FABA,5,crystal
-Wind Crystal,06,C0FABC,6,crystal
-Fire Crystal,07,C0FABE,7,crystal
-Fire Crystal,08,C0FAC0,8,crystal
-Fire Crystal,09,C0FAC2,9,crystal
-Black Choco Crystals,0A,C0FAC4,10,crystal
-Black Choco Crystals,0B,C0FAC6,11,crystal
-Earth Crystal,0C,C0FAC8,12,crystal
-Earth Crystal,0D,C0FACA,13,crystal
-Earth Crystal,0E,C0FACC,14,crystal
-Earth Crystal,0F,C0FACE,15,crystal
-Leviathan Esper,10,C0FAD0,16,esper
-Titan,11,C0FAD2,17,esper
-Carbuncle,12,C0FAD4,18,esper
-Syldra,13,C0FAD6,19,esper
-Odin,14,C0FAD8,20,esper
-Phoenix,15,C0FADA,21,esper
-Bahamut,16,C0FADC,22,esper
-Life (or Strength) Song from Crescent Town bard,17,C0FADE,23,song
-Temptation Song at Lix,18,C0FAE0,24,song
-Love Song at Istory,19,C0FAE2,25,song
-Requiem Song at Kelb,1A,C0FAE4,26,song
-Speed Song at Surgate,1B,C0FAE6,27,song
-Magic Song at Ancient Library,1C,C0FAE8,28,song
-Power Song from Crescent Town,1D,C0FAEA,29,song
-Hero Song from Crescent Town,1E,C0FAEC,30,song
-"Fork Tower, two Magics",1F,C0FAEE,31,magic
-"Fork Tower, two Magics",20,C0FAF0,32,magic
-Meteo,21,C0FAF2,33,magic
-"5 potions in Wind Shrine, bottom left guy",22,C0FAF4,34,item
-"8 potions, Pirate after Torna Canal Key acquired",23,C0FAF6,35,item
-Chancellor at Tycoon,24,C0FAF8,36,item
-Magisa & Forza,25,C0FAFA,37,item
-CornaJar at Kelb,26,C0FAFC,38,item
-Ribbon from girl in Rugor,27,C0FAFE,39,item
-Mirage Vest from Chocobo Tour/Mirage Village,28,C0FB00,40,item
-12 Kuzar Events,29,C0FB02,41,item
-12 Kuzar Events,2A,C0FB04,42,item
-12 Kuzar Events,2B,C0FB06,43,item
-12 Kuzar Events,2C,C0FB08,44,item
-12 Kuzar Events,2D,C0FB0A,45,item
-12 Kuzar Events,2E,C0FB0C,46,item
-12 Kuzar Events,2F,C0FB0E,47,item
-12 Kuzar Events,30,C0FB10,48,item
-12 Kuzar Events,31,C0FB12,49,item
-12 Kuzar Events,32,C0FB14,50,item
-12 Kuzar Events,33,C0FB16,51,item
-12 Kuzar Events,34,C0FB18,52,item
-Shiva,35,C0FB1A,53,esper
-Ifrit,36,C0FB1C,54,esper
-Water Crystal,37,C0FB1E,55,crystal
-Water Crystal,38,C0FB20,56,crystal
-Water Crystal,39,C0FB22,57,crystal
-Water Crystal,3A,C0FB24,58,crystal
-Water Crystal,3B,C0FB26,59,crystal
-Brave Blade,3C,C0FB28,60,item
-Chicken Knife,3D,C0FB2A,61,item
+event,hex_id,address,idx,type,area
+Wind Crystal,01,C0FAB2,1,crystal,Wind Shrine
+Wind Crystal,02,C0FAB4,2,crystal,Wind Shrine
+Wind Crystal,03,C0FAB6,3,crystal,Wind Shrine
+Wind Crystal,04,C0FAB8,4,crystal,Wind Shrine
+Wind Crystal,05,C0FABA,5,crystal,Wind Shrine
+Wind Crystal,06,C0FABC,6,crystal,Wind Shrine
+Fire Crystal,07,C0FABE,7,crystal,Karnak
+Fire Crystal,08,C0FAC0,8,crystal,Karnak
+Fire Crystal,09,C0FAC2,9,crystal,Karnak
+Black Choco Crystals,0A,C0FAC4,10,crystal,Crescent Island
+Black Choco Crystals,0B,C0FAC6,11,crystal,Crescent Island
+Earth Crystal,0C,C0FAC8,12,crystal,Flying Lonka Ruins
+Earth Crystal,0D,C0FACA,13,crystal,Flying Lonka Ruins
+Earth Crystal,0E,C0FACC,14,crystal,Flying Lonka Ruins
+Earth Crystal,0F,C0FACE,15,crystal,Flying Lonka Ruins
+Leviathan Esper,10,C0FAD0,16,esper,Istory Falls
+Titan,11,C0FAD2,17,esper,Karnak
+Carbuncle,12,C0FAD4,18,esper,Exdeath’s Castle
+Syldra,13,C0FAD6,19,esper,Pirate’s Cave
+Odin,14,C0FAD8,20,esper,Bal Castle
+Phoenix,15,C0FADA,21,esper,Phoenix Tower
+Bahamut,16,C0FADC,22,esper,Hiryuu Valley
+Life (or Strength) Song from Crescent Town bard,17,C0FADE,23,song,Crescent Island
+Temptation Song at Lix,18,C0FAE0,24,song,Lix
+Love Song at Istory,19,C0FAE2,25,song,Istory Falls
+Requiem Song at Kelb,1A,C0FAE4,26,song,Kelb
+Speed Song at Surgate,1B,C0FAE6,27,song,Surgate Castle
+Magic Song at Ancient Library,1C,C0FAE8,28,song,Ancient Library
+Power Song from Crescent Town,1D,C0FAEA,29,song,Crescent Island
+Hero Song from Crescent Town,1E,C0FAEC,30,song,Crescent Island
+"Fork Tower, two Magics",1F,C0FAEE,31,magic,Fork Tower
+"Fork Tower, two Magics",20,C0FAF0,32,magic,Fork Tower
+Meteo,21,C0FAF2,33,magic,Great Trench
+"5 potions in Wind Shrine, bottom left guy",22,C0FAF4,34,item,Wind Shrine
+"8 potions, Pirate after Torna Canal Key acquired",23,C0FAF6,35,item,Pirate’s Cave
+Chancellor at Tycoon,24,C0FAF8,36,item,Tycoon Castle
+Magisa & Forza,25,C0FAFA,37,item,North Mountain
+CornaJar at Kelb,26,C0FAFC,38,item,Kelb
+Ribbon from girl in Rugor,27,C0FAFE,39,item,Rugor
+Mirage Vest from Chocobo Tour/Mirage Village,28,C0FB00,40,item,Mirage Village
+12 Kuzar Events,29,C0FB02,41,item,Kuzar
+12 Kuzar Events,2A,C0FB04,42,item,Kuzar
+12 Kuzar Events,2B,C0FB06,43,item,Kuzar
+12 Kuzar Events,2C,C0FB08,44,item,Kuzar
+12 Kuzar Events,2D,C0FB0A,45,item,Kuzar
+12 Kuzar Events,2E,C0FB0C,46,item,Kuzar
+12 Kuzar Events,2F,C0FB0E,47,item,Kuzar
+12 Kuzar Events,30,C0FB10,48,item,Kuzar
+12 Kuzar Events,31,C0FB12,49,item,Kuzar
+12 Kuzar Events,32,C0FB14,50,item,Kuzar
+12 Kuzar Events,33,C0FB16,51,item,Kuzar
+12 Kuzar Events,34,C0FB18,52,item,Kuzar
+Shiva,35,C0FB1A,53,esper,Walse
+Ifrit,36,C0FB1C,54,esper,Ancient Library
+Water Crystal,37,C0FB1E,55,crystal,Walse
+Water Crystal,38,C0FB20,56,crystal,Walse
+Water Crystal,39,C0FB22,57,crystal,Walse
+Water Crystal,3A,C0FB24,58,crystal,Walse
+Water Crystal,3B,C0FB26,59,crystal,Walse
+Brave Blade,3C,C0FB28,60,item,Mua Forest
+Chicken Knife,3D,C0FB2A,61,item,Mua Forest
