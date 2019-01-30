@@ -1,138 +1,36 @@
-ability_id,readable_name,valid,value
-00,Other,,0
-01,Item,x,0
-02,Row,,0
-03,Def.,,0
-04,Attack,x,0
-05,Guard,x,0
-06,Kick,x,1
-07,BuildUp,x,2
-08,Mantra,x,2
-09,Escape,x,0
-0A,Steal,x,1
-0B,Capture,x,2
-0C,Jump,x,2
-0D,DrgnSwd,x,2
-0E,Smoke,x,2
-0F,Image,x,2
-10,Throw,x,2
-11,SwdSlap,x,2
-12,GilToss,x,2
-13,Slash,x,2
-14,Animals,x,2
-15,Aim,x,2
-16,X-Fight,x,2
-17,Conjure,x,2
-18,Observe,x,2
-19,Analyze,x,2
-1A,Tame,x,2
-1B,Control,x,2
-1C,Catch,x,2
-1D,Release,x,2
-1E,Combine,x,2
-1F,Drink,x,2
-20,Pray,x,2
-21,Revive,x,2
-22,Terrain,x,2
-23,*Dummy01,,0
-24,Hide,x,1
-25,Show,,0
-26,*Dummy02,,0
-27,Sing,x,2
-28,Flirt,x,2
-29,Dance,x,2
-2A,Mimic,x,2
-2B,Blank18,,0
-2C,Blank19,,0
-2D,Blank20,,0
-2E,Blank21,,0
-2F,Blank22,,0
-30,MgcSwrd Lv.2,x,1
-31,MgcSwrd Lv.3,x,1
-32,MgcSwrd Lv.4,x,2
-33,MgcSwrd Lv.5,x,2
-34,MgcSwrd Lv.6,x,3
-35,MgcSwrd Lv.7,x,3
-36,Blank23,,0
-37,Blank24,,0
-38,White Lv.1,x,1
-39,White Lv.2,x,1
-3A,White Lv.3,x,1
-3B,White Lv.4,x,2
-3C,White Lv.5,x,2
-3D,White Lv.6,x,3
-3E,Blank25,,0
-3F,Blank26,,0
-40,Black Lv.1,x,1
-41,Black Lv.2,x,1
-42,Black Lv.3,x,1
-43,Black Lv.4,x,2
-44,Black Lv.5,x,2
-45,Black Lv.6,x,3
-46,Blank1,,0
-47,Blank2,,0
-48,Dimen Lv.1,x,1
-49,Dimen Lv.2,x,1
-4A,Dimen Lv.3,x,1
-4B,Dimen Lv.4,x,2
-4C,Dimen Lv.5,x,2
-4D,Dimen Lv.6,x,3
-4E,Blank3,,0
-4F,Blank4,,0
-50,Summon Lv.1,x,1
-51,Summon Lv.2,x,1
-52,Summon Lv.3,x,1
-53,Summon Lv.4,x,2
-54,Summon Lv.5,x,3
-55,Blank5,,0
-56,Blank6,,0
-57,Blank7,,0
-58,Red Lv.1,x,1
-59,Red Lv.2,x,2
-5A,Red Lv.3,x,3
-5B,Blank8,,0
-5C,Blank9,,0
-5D,Blank10,,0
-5E,Blank11,,0
-5F,Blank27,,0
-60,X-Magic,x,3
-61,Blue,x,2
-62,Blank12,,0
-63,Blank13,,0
-64,Blank14,,0
-65,Blank15,,0
-66,Blank16,,0
-67,Blank17,,0
-68,Equip Shield,x,2
-69,Equip Armors,x,2
-6A,Equip Ribbon,x,2
-6B,Equip Swords,x,2
-6C,Equip Spears,x,2
-6D,Equip Katana,x,2
-6E,Equip Axes,x,2
-6F,Equip Bows,x,2
-70,Equip Whips,x,2
-71,Equip Harps,x,2
-72,Agility,x,2
-73,HP +10%,x,2
-74,HP +20%,x,2
-75,HP +30%,x,2
-76,MP +10%,x,2
-77,MP +30%,x,2
-78,Brawl,x,2
-79,Dbl Grip,x,2
-7A,2-Handed,x,2
-7B,Medicine,x,2
-7C,Cover,x,2
-7D,Counter,x,2
-7E,Evade,x,2
-7F,Learning,,0
-80,Barrier,x,2
-81,Berserk,x,2
-82,Caution,x,2
-83,Preemptive,x,2
-84,Passages,,0
-85,DmgFloor,x,2
-86,Pitfalls,x,2
-87,Equip Rods,x,2
-88,Dash,,0
+area_id,area_name,capacity,order
+33,Pirate’s Cave,8,1
+20,Wind Shrine,23,2
+8,Tule,16,3
+22,Ship Graveyard,12,4
+1,Carwen,4,5
+34,Jacole,4,5
+31,North Mountain,5,5
+17,Tycoon Castle,28,5
+15,Walse,36,6
+27,Karnak,48,7
+19,Kelb,3,8
+0,Steamship,24,8
+32,Ancient Library,11,9
+30,Crescent Island,12,10
+14,Lix,2,10
+16,Ruined City,8,11
+12,Bal Castle,9,12
+9,Flying Lonka Ruins,37,12
+11,Hiryuu Valley,13,13
+24,Surgate Castle,4,13
+29,Barrier Tower,7,14
+21,Moogle Village,13,15
+7,Mua,24,15
+23,Exdeath’s Castle,39,16
+3,Pyramid,75,17
+13,Fork Tower,16,18
+6,Solitary Island,32,19
+28,Great Trench,16,20
+10,Istory Falls,46,20
+26,Mirage Village,7,20
+5,Phoenix Tower,15,20
+2,Rugor,4,20
+4,Kuzar,36,21
+25,Rift,54,22
+18,Void,17,23

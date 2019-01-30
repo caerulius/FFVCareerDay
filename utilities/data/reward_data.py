@@ -58,7 +58,7 @@ class Collectibles():
         for i in self.collectibles:
             if i.reward_type == reward_type and i.reward_id == reward_id:
                 return i
-        raise KeyError("Collectible with id: " + reward_id + "and type: " \
+        raise KeyError("Collectible with id: " + reward_id + " and type: " \
                        + reward_type + " was not found in list of collectibles")
             
 

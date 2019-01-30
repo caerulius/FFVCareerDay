@@ -2,10 +2,11 @@
 import pandas as pd 
 from reward_data import *
 import random
+import operator
+
 
 df_chest_table = pd.read_excel('chest_table.xlsx', dtype=str)
 df_chest_table['idx'] = df_chest_table['idx'].astype(int)
-#df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
 df_chest_id = pd.read_excel('chest_id.xlsx',index_col='chest_id',dtype=str)
 df_event_reward_table = pd.read_csv('event_reward_id.csv',dtype=str)
 df_event_reward_table['idx'] = df_event_reward_table['idx'].astype(int)
@@ -63,7 +64,7 @@ class RewardEvent(object):
     def generate_from_df(self, df):
         s = df[df['idx']==self.idx].iloc[0]
         if s.empty:
-            print("No match on index found for Chest class "+self.idx)
+            print("No match on index found for RewardEvent class "+self.idx)
         else:
             for index in s.index:
                 setattr(self,index,s.loc[index])        
@@ -85,12 +86,16 @@ def randomize(seed):
     all_checks = all_event_rewards + all_chests
 
     capacity = {}
-    for check in all_checks:
-        print(check.idx)
+    for check in all_chests:
+        if check.type[0] == '0':
+            continue
+        if check.type[0] == 'A' or check.type[0] == 'E':
+            check.type = '40'
         if check.area in capacity.keys():
-            capacity[check.area] = capacity[check.area] + all_rewards[check.idx].reward_value
+            capacity[check.area] = capacity[check.area] + CollectibleManager.get_by_id_and_type(check.id, check.type).reward_value
         else:
-            capacity[check.area] = all_rewards[check.idx].reward_value
+            capacity[check.area] = CollectibleManager.get_by_id_and_type(check.id, check.type).reward_value
+    print(sorted(capacity.items(), key=operator.itemgetter(1), reverse=True))
 
     global value_rewards
     value_rewards = []
