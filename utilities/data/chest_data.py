@@ -5,7 +5,7 @@ import random
 
 df_chest_table = pd.read_excel('chest_table.xlsx', dtype=str)
 df_chest_table['idx'] = df_chest_table['idx'].astype(int)
-df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
+#df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
 df_chest_id = pd.read_excel('chest_id.xlsx',index_col='chest_id',dtype=str)
 df_event_reward_table = pd.read_csv('event_reward_id.csv',dtype=str)
 df_event_reward_table['idx'] = df_event_reward_table['idx'].astype(int)
@@ -84,6 +84,14 @@ def randomize(seed):
 
     all_checks = all_event_rewards + all_chests
 
+    capacity = {}
+    for check in all_checks:
+        print(check.idx)
+        if check.area in capacity.keys():
+            capacity[check.area] = capacity[check.area] + all_rewards[check.idx].reward_value
+        else:
+            capacity[check.area] = all_rewards[check.idx].reward_value
+
     global value_rewards
     value_rewards = []
     for i in all_rewards:
@@ -113,3 +121,5 @@ def randomize(seed):
     '''
 
     return all_checks
+
+randomize(1)
