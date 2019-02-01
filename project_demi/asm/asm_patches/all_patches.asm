@@ -166,11 +166,11 @@ incsrc world3/cleft_necrophobe.asm
 ; other patches
 
 incsrc misc/menu_hook.asm
-incsrc misc/encounter_toggle.asm
+;incsrc misc/encounter_toggle.asm
 incsrc misc/new_event.asm
 incsrc misc/utility.asm
 incsrc misc/walk_speed.asm
-incsrc misc/destination.asm
+;incsrc misc/destination.asm
 incsrc misc/chest_jobreward.asm
 incsrc misc/chest_magicreward.asm
 incsrc misc/key_items.asm

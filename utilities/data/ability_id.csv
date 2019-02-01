@@ -1,138 +1,138 @@
-ability_id,readable_name,valid,value
-00,Other,,0
-01,Item,x,0
-02,Row,,0
-03,Def.,,0
-04,Attack,x,0
-05,Guard,x,0
-06,Kick,x,1
-07,BuildUp,x,2
-08,Mantra,x,2
-09,Escape,x,0
-0A,Steal,x,1
-0B,Capture,x,2
-0C,Jump,x,2
-0D,DrgnSwd,x,2
-0E,Smoke,x,2
-0F,Image,x,2
-10,Throw,x,2
-11,SwdSlap,x,2
-12,GilToss,x,2
-13,Slash,x,2
-14,Animals,x,2
-15,Aim,x,2
-16,X-Fight,x,2
-17,Conjure,x,2
-18,Observe,x,2
-19,Analyze,x,2
-1A,Tame,x,2
-1B,Control,x,2
-1C,Catch,x,2
-1D,Release,x,2
-1E,Combine,x,2
-1F,Drink,x,2
-20,Pray,x,2
-21,Revive,x,2
-22,Terrain,x,2
-23,*Dummy01,,0
-24,Hide,x,1
-25,Show,,0
-26,*Dummy02,,0
-27,Sing,x,2
-28,Flirt,x,2
-29,Dance,x,2
-2A,Mimic,x,2
-2B,Blank18,,0
-2C,Blank19,,0
-2D,Blank20,,0
-2E,Blank21,,0
-2F,Blank22,,0
-30,MgcSwrd Lv.2,x,1
-31,MgcSwrd Lv.3,x,1
-32,MgcSwrd Lv.4,x,2
-33,MgcSwrd Lv.5,x,2
-34,MgcSwrd Lv.6,x,3
-35,MgcSwrd Lv.7,x,3
-36,Blank23,,0
-37,Blank24,,0
-38,White Lv.1,x,1
-39,White Lv.2,x,1
-3A,White Lv.3,x,1
-3B,White Lv.4,x,2
-3C,White Lv.5,x,2
-3D,White Lv.6,x,3
-3E,Blank25,,0
-3F,Blank26,,0
-40,Black Lv.1,x,1
-41,Black Lv.2,x,1
-42,Black Lv.3,x,1
-43,Black Lv.4,x,2
-44,Black Lv.5,x,2
-45,Black Lv.6,x,3
-46,Blank1,,0
-47,Blank2,,0
-48,Dimen Lv.1,x,1
-49,Dimen Lv.2,x,1
-4A,Dimen Lv.3,x,1
-4B,Dimen Lv.4,x,2
-4C,Dimen Lv.5,x,2
-4D,Dimen Lv.6,x,3
-4E,Blank3,,0
-4F,Blank4,,0
-50,Summon Lv.1,x,1
-51,Summon Lv.2,x,1
-52,Summon Lv.3,x,1
-53,Summon Lv.4,x,2
-54,Summon Lv.5,x,3
-55,Blank5,,0
-56,Blank6,,0
-57,Blank7,,0
-58,Red Lv.1,x,1
-59,Red Lv.2,x,2
-5A,Red Lv.3,x,3
-5B,Blank8,,0
-5C,Blank9,,0
-5D,Blank10,,0
-5E,Blank11,,0
-5F,Blank27,,0
-60,X-Magic,x,3
-61,Blue,x,2
-62,Blank12,,0
-63,Blank13,,0
-64,Blank14,,0
-65,Blank15,,0
-66,Blank16,,0
-67,Blank17,,0
-68,Equip Shield,x,2
-69,Equip Armors,x,2
-6A,Equip Ribbon,x,2
-6B,Equip Swords,x,2
-6C,Equip Spears,x,2
-6D,Equip Katana,x,2
-6E,Equip Axes,x,2
-6F,Equip Bows,x,2
-70,Equip Whips,x,2
-71,Equip Harps,x,2
-72,Agility,x,2
-73,HP +10%,x,2
-74,HP +20%,x,2
-75,HP +30%,x,2
-76,MP +10%,x,2
-77,MP +30%,x,2
-78,Brawl,x,2
-79,Dbl Grip,x,2
-7A,2-Handed,x,2
-7B,Medicine,x,2
-7C,Cover,x,2
-7D,Counter,x,2
-7E,Evade,x,2
-7F,Learning,,0
-80,Barrier,x,2
-81,Berserk,x,2
-82,Caution,x,2
-83,Preemptive,x,2
-84,Passages,,0
-85,DmgFloor,x,2
-86,Pitfalls,x,2
-87,Equip Rods,x,2
-88,Dash,,0
+ability_id,readable_name,valid,value,length_8_address,length_8_name
+00,Other,,0,E79A00,Other  
+01,Item,x,0,E79A08,Item   
+02,Row,,0,E79A10,Row    
+03,Def.,,0,E79A18,Def.   
+04,Attack,x,0,E79A20,Fight  
+05,Guard,x,0,E79A28,Guard  
+06,Kick,x,1,E79A30,Kick   
+07,BuildUp,x,2,E79A38,BuildUp
+08,Mantra,x,2,E79A40,Mantra 
+09,Escape,x,0,E79A48,Escape 
+0A,Steal,x,1,E79A50,Steal  
+0B,Capture,x,2,E79A58,Capture
+0C,Jump,x,2,E79A60,Jump   
+0D,DrgnSwd,x,2,E79A68,DrgnSwd
+0E,Smoke,x,2,E79A70,Smoke  
+0F,Image,x,2,E79A78,Image  
+10,Throw,x,2,E79A80,Throw  
+11,SwdSlap,x,2,E79A88,SwdSlap
+12,GilToss,x,2,E79A90,GilToss
+13,Slash,x,2,E79A98,Slash  
+14,Animals,x,2,E79AA0,Animals
+15,Aim,x,2,E79AA8,Aim    
+16,X-Fight,x,2,E79AB0,X-Fight
+17,Conjure,x,2,E79AB8,Conjure
+18,Observe,x,2,E79AC0,Observe
+19,Analyze,x,2,E79AC8,Analyze
+1A,Tame,x,2,E79AD0,Tame   
+1B,Control,x,2,E79AD8,Control
+1C,Catch,x,2,E79AE0,Catch  
+1D,Release,x,2,E79AE8,Release
+1E,Combine,x,2,E79AF0,Combine
+1F,Drink,x,2,E79AF8,Drink  
+20,Pray,x,2,E79B00,Pray   
+21,Revive,x,2,E79B08,Revive 
+22,Terrain,x,2,E79B10,Terrain
+23,*Dummy01,,0,E79B18,Dummy01
+24,Hide,x,1,E79B20,Hide   
+25,Show,,0,E79B28,Show   
+26,*Dummy02,,0,E79B30,Dummy02
+27,Sing,x,2,E79B38,Sing   
+28,Flirt,x,2,E79B40,Flirt  
+29,Dance,x,2,E79B48,Dance  
+2A,Mimic,x,2,E79B50,Mimic  
+2B,Blank18,,0,E79B58,txterr
+2C,Blank19,,0,E79B60,txterr
+2D,Blank20,,0,E79B68,txterr
+2E,Blank21,,0,E79B70,txterr
+2F,Blank22,,0,E79B78,txterr
+30,MgcSwrd Lv.2,x,1,E79B80,MgcSwrd1
+31,MgcSwrd Lv.3,x,1,E79B88,MgcSwrd2
+32,MgcSwrd Lv.4,x,2,E79B90,MgcSwrd3
+33,MgcSwrd Lv.5,x,2,E79B98,MgcSwrd4
+34,MgcSwrd Lv.6,x,3,E79BA0,MgcSwrd5
+35,MgcSwrd Lv.7,x,3,E79BA8,MgcSwrd6
+36,Blank23,,0,E79BB0,txterr
+37,Blank24,,0,E79BB8,txterr
+38,White Lv.1,x,1,E79BC0,White 1
+39,White Lv.2,x,1,E79BC8,White 2
+3A,White Lv.3,x,1,E79BD0,White 3
+3B,White Lv.4,x,2,E79BD8,White 4
+3C,White Lv.5,x,2,E79BE0,White 5
+3D,White Lv.6,x,3,E79BE8,White 6
+3E,Blank25,,0,E79BF0,txterr
+3F,Blank26,,0,E79BF8,txterr
+40,Black Lv.1,x,1,E79C00,Black 1
+41,Black Lv.2,x,1,E79C08,Black 2
+42,Black Lv.3,x,1,E79C10,Black 3
+43,Black Lv.4,x,2,E79C18,Black 4
+44,Black Lv.5,x,2,E79C20,Black 5
+45,Black Lv.6,x,3,E79C28,Black 6
+46,Blank1,,0,E79C30,txterr
+47,Blank2,,0,E79C38,txterr
+48,Dimen Lv.1,x,1,E79C40,Dimen 1
+49,Dimen Lv.2,x,1,E79C48,Dimen 2
+4A,Dimen Lv.3,x,1,E79C50,Dimen 3
+4B,Dimen Lv.4,x,2,E79C58,Dimen 4
+4C,Dimen Lv.5,x,2,E79C60,Dimen 5
+4D,Dimen Lv.6,x,3,E79C68,Dimen 6
+4E,Blank3,,0,E79C70,txterr
+4F,Blank4,,0,E79C78,txterr
+50,Summon Lv.1,x,1,E79C80,Summon 1
+51,Summon Lv.2,x,1,E79C88,Summon 2
+52,Summon Lv.3,x,1,E79C90,Summon 3
+53,Summon Lv.4,x,2,E79C98,Summon 4
+54,Summon Lv.5,x,3,E79CA0,Summon 5
+55,Blank5,,0,E79CA8,txterr
+56,Blank6,,0,E79CB0,txterr
+57,Blank7,,0,E79CB8,txterr
+58,Red Lv.1,x,1,E79CC0,Red 1
+59,Red Lv.2,x,2,E79CC8,Red 2
+5A,Red Lv.3,x,3,E79CD0,Red 3
+5B,Blank8,,0,E79CD8,txterr
+5C,Blank9,,0,E79CE0,txterr
+5D,Blank10,,0,E79CE8,txterr
+5E,Blank11,,0,E79CF0,txterr
+5F,Blank27,,0,E79CF8,txterr
+60,X-Magic,x,3,E79D00,X-Magic
+61,Blue,x,2,E79D08,Blue 
+62,Blank12,,0,E79D10,txterr
+63,Blank13,,0,E79D18,txterr
+64,Blank14,,0,E79D20,txterr
+65,Blank15,,0,E79D28,txterr
+66,Blank16,,0,E79D30,txterr
+67,Blank17,,0,E79D38,txterr
+68,Equip Shield,x,2,E79D40,Equip <Shld> 
+69,Equip Armors,x,2,E79D48,Equip <Armr> 
+6A,Equip Ribbon,x,2,E79D50,Equip <Ribn> 
+6B,Equip Swords,x,2,E79D58,Equip <Swrd> 
+6C,Equip Spears,x,2,E79D60,Equip <Sper> 
+6D,Equip Katana,x,2,E79D68,Equip <Katn> 
+6E,Equip Axes,x,2,E79D70,Equip <Axe><Hamr>
+6F,Equip Bows,x,2,E79D78,Equip <Bow> 
+70,Equip Whips,x,2,E79D80,Equip <Whip> 
+71,Equip Harps,x,2,E79D88,Equip <Harp> 
+72,Agility,x,2,E79D90,Agility 
+73,HP +10%,x,2,E79D98,HP +10% 
+74,HP +20%,x,2,E79DA0,HP +20% 
+75,HP +30%,x,2,E79DA8,HP +30% 
+76,MP +10%,x,2,E79DB0,MP +10% 
+77,MP +30%,x,2,E79DB8,MP +30% 
+78,Brawl,x,2,E79DC0,Brawl   
+79,Dbl Grip,x,2,E79DC8,Dbl Grip
+7A,2-Handed,x,2,E79DD0,2-Handed
+7B,Medicine,x,2,E79DD8,Medicine
+7C,Cover,x,2,E79DE0,Cover   
+7D,Counter,x,2,E79DE8,Counter 
+7E,Evade,x,2,E79DF0,Evade   
+7F,Learning,,0,E79DF8,Learning
+80,Barrier,x,2,E79E00,Barrier 
+81,Berserk,x,2,E79E08,Berserk 
+82,Caution,x,2,E79E10,Caution 
+83,Preemptive,x,2,E79E18,Preemptiv
+84,Passages,,0,E79E20,Passages
+85,DmgFloor,x,2,E79E28,DmgFloor
+86,Pitfalls,x,2,E79E30,Pitfalls
+87,Equip Rods,x,2,E79E38,Equip <Rod> 
+88,Dash,,0,E79E40,Dash

@@ -69,7 +69,6 @@ CE,/
 CF,:
 E2,+
 97,li
-A6,Bl
 20,A
 21,B
 22,C
@@ -127,8 +126,8 @@ A2,?
 A3,.
 A4,ti
 A5,fi
-A6,Bla
-A7,
+A6,Bl
+A7,a
 A8,pel
 A9,
 AA,(apostrophe)
