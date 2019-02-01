@@ -3,6 +3,7 @@
 import pandas as pd 
 import random
 from abc import ABC, abstractmethod
+from fuzzywuzzy import fuzz
 
 df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
 df_magic_id = pd.read_csv('magic_id.csv',index_col='magic_id',dtype=str)
@@ -48,10 +49,16 @@ class Collectibles():
         self.collectibles = collectibles
 
     def get_by_name(self, name):
+        best_match = None
         for i in self.collectibles:
-            if i.reward_name == name:
-                return i
-        raise KeyError("Collectible name: " + name + " was not found " \
+            ratio = fuzz.partial_ratio(i.reward_name, name)
+            if best_match is None or best_match[1] < ratio:
+                best_match = (i, ratio)
+
+        if best_match[1] > 0:
+            return best_match[0]
+        else:
+            raise KeyError("Collectible name: " + name + " was not found " \
                        "in list of collectibles")
 
     def get_by_id_and_type(self, reward_id, reward_type):

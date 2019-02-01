@@ -1,78 +1,82 @@
-from enum import Enum
+# -*- coding: utf-8 -*-
 
-class Collectible:
-    def __init__(self, id, name, location, collectible_type, \
-                 type_address, type_data, item_address, item_data, kind):
-        self.id = id
-        self.name = name
-        self.original_name = name
-        self.original_collectible_type = collectible_type
-        self.location = location
-        self.collectible_type = collectible_type
-        self.type_address = type_address
-        self.type_data = type_data
-        self.item_address = item_address
-        self.item_data = item_data
-        self.kind = kind
-        self.category = C_Cat[self.kind.name + self.collectible_type.name]
+import pandas as pd 
+import random
+from abc import ABC, abstractmethod
+from fuzzywuzzy import fuzz
 
-    def __str__(self):
-        return self.original_name + " " + self.original_collectible_type.name + \
-               " at " + self.location + " -> " + self.name + " " + \
-               self.collectible_type.name + "\n"
+df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
+df_magic_id = pd.read_csv('magic_id.csv',index_col='magic_id',dtype=str)
+df_crystal_id = pd.read_csv('crystal_id.csv',index_col='crystal_id',dtype=str)
+df_ability_id = pd.read_csv('ability_id.csv',index_col='ability_id',dtype=str)
 
+class Collectible(ABC):
+    def __init__(self, reward_id, reward_name, reward_value):
+        self.reward_id = reward_id
+        self.reward_name = reward_name
+        self.reward_value = reward_value
 
-    def patch_code(self):
-        code = ""
-        if self.type_address != "-":
-            code += "org $" + self.type_address
-            code += "\ndb $" + self.type_data + "\n"
-        code += "org $" + self.item_address
-        code += "\ndb $" + self.item_data + "\n\n"
+class Item(Collectible):
+    reward_type = '40'
+    def __init__(self,item_id):
+        data = df_item_id.loc[item_id]
+        self.type = data['type']
+        self.subtype = data['subtype']
+        super().__init__(item_id, data['readable_name'], int(data['value']))
+        
 
-        return code
+class Magic(Collectible):
+    reward_type = '20'
+    def __init__(self,magic_id):
+        data = df_magic_id.loc[magic_id]
+        self.type = data['type']
+        super().__init__(magic_id, data['readable_name'], int(data['value']))
 
-class C_Type(Enum):
-    ITEM = 1,
-    GIL = 2,
-    CRYSTAL = 3,
-    MAGIC = 4,
-    MONSTER = 5
+class Crystal(Collectible):
+    reward_type = '50'
+    def __init__(self,crystal_id):
+        data = df_crystal_id.loc[crystal_id]
+        super().__init__(crystal_id, data['readable_name'], int(data['value']))
+        
+class Ability(Collectible):
+    reward_type = '60'
+    def __init__(self,ability_id):
+        data = df_ability_id.loc[ability_id]
+        super().__init__(ability_id, data['readable_name'], int(data['value']))
 
-class C_Kind(Enum):
-    REWARD = 1,
-    LOOT = 2,
-    SHOP = 3
+class Collectibles():
+    def __init__(self, collectibles):
+        self.collectibles = collectibles
 
-class C_Cat(Enum):
-    REWARDITEM = 1,
-    REWARDGIL = 2,
-    REWARDCRYSTAL = 3,
-    REWARDMAGIC = 4,
-    REWARDMONSTER = 5,
-    LOOTITEM = 6,
-    SHOPITEM = 7,
-    SHOPMAGIC = 8
+    def get_by_name(self, name):
+        best_match = None
+        for i in self.collectibles:
+            ratio = fuzz.partial_ratio(i.reward_name, name)
+            if best_match is None or best_match[1] < ratio:
+                best_match = (i, ratio)
 
-slicer = {}
-slicer[C_Cat.REWARDITEM] = \
-        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
-         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER, C_Cat.SHOPITEM]
-slicer[C_Cat.REWARDGIL] = \
-        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
-         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER]
-slicer[C_Cat.REWARDCRYSTAL] = \
-        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
-         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER]
-slicer[C_Cat.REWARDMAGIC] = \
-        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
-         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER, C_Cat.SHOPMAGIC] 
-slicer[C_Cat.REWARDMONSTER] = \
-        [C_Cat.REWARDITEM, C_Cat.REWARDGIL, C_Cat.REWARDCRYSTAL, \
-         C_Cat.REWARDMAGIC, C_Cat.REWARDMONSTER]
-slicer[C_Cat.LOOTITEM] = \
-        [C_Cat.LOOTITEM]
-slicer[C_Cat.SHOPITEM] = \
-        [C_Cat.REWARDITEM, C_Cat.SHOPITEM]
-slicer[C_Cat.SHOPMAGIC] = \
-        [C_Cat.REWARDMAGIC, C_Cat.SHOPMAGIC]
+        if best_match[1] > 0:
+            return best_match[0]
+        else:
+            raise KeyError("Collectible name: " + name + " was not found " \
+                       "in list of collectibles")
+
+    def get_by_id_and_type(self, reward_id, reward_type):
+        for i in self.collectibles:
+            if i.reward_type == reward_type and i.reward_id == reward_id:
+                return i
+        raise KeyError("Collectible with id: " + reward_id + " and type: " \
+                       + reward_type + " was not found in list of collectibles")
+            
+
+all_items = [Item(x) for x in df_item_id.index.values]
+
+all_magic = [Magic(x) for x in df_magic_id.index.values]
+
+all_crystals = [Crystal(x) for x in df_crystal_id.index.values]
+
+all_abilities = [Ability(x) for x in df_ability_id.index.values]
+
+all_rewards = all_magic + all_items + all_crystals + all_abilities
+
+CollectibleManager = Collectibles(all_rewards)

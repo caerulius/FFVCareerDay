@@ -24,11 +24,6 @@ class Area_Manager():
         self.easy_start = False
         self.total_random = False
 
-    def apply_easy_start(self):
-        for x in self.areas:
-            if x.area_order < 6:
-                x.area_capacity = x.area_capacity + 5
-
     def initialize_areas(self, csvpath):
         df_areas = pd.read_csv(csvpath,index_col='area_id',dtype=str)
         for index, row in df_areas.iterrows():
@@ -46,19 +41,3 @@ class Area_Manager():
 
 AM = Area_Manager()
 AM.initialize_areas('areas.csv')
-AM.apply_easy_start()
-
-while AM.any_areas_not_full():
-    next_add = AM.random.randint(1,5)
-    next_area = AM.get_next_area(next_add)
-    print("Next area to insert is: " + next_area.area_name + " (" + str(next_area.area_capacity) + ")")
-    print(next_area.area_name + " current volume is " + str(next_area.current_volume))
-    print("Adding an item of size: " + str(next_add))
-    next_area.current_volume = next_area.current_volume + next_add
-    print()
-
-print("----------")
-
-for i in AM.areas:
-    print(i.area_name)
-    print(str(i.current_volume) + " / " + str(i.area_capacity))
