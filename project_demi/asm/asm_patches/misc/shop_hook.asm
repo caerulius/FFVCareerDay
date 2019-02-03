@@ -1,14 +1,12 @@
 hirom
 
-incsrc shop_text.asm
-
 ; Allows pivot on ability shop
 org $C0F1F3
 db $C0 
 
 
 org $d12d76
-db $07, $11, $1A, $90, $15, $18, $9E, $9A, $17
+db $07, $11, $1A, $89, $15, $18, $8B, $8E, $17
 ; db $01, $79, $9A, $9B, $9C, $9D, $9E, $9F, $98
 org $C2F12B
 JML ShopHook
