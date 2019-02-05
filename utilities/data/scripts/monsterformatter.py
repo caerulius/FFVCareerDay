@@ -1,6 +1,6 @@
 import pandas as pd
 
-df_monster_table = pd.read_csv('monster_data.csv', dtype=str)
+df_monster_table = pd.read_csv('..\\tables\\monster_data.csv', dtype=str)
 
 text = ""
 

@@ -6,10 +6,10 @@ from abc import ABC, abstractmethod
 from fuzzywuzzy import fuzz
 import math
 
-df_item_id = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
-df_magic_id = pd.read_csv('magic_id.csv',index_col='magic_id',dtype=str)
-df_crystal_id = pd.read_csv('crystal_id.csv',index_col='crystal_id',dtype=str)
-df_ability_id = pd.read_csv('ability_id.csv',index_col='ability_id',dtype=str)
+df_item_id = pd.read_csv('..\\tables\\item_id.csv',index_col='item_id',dtype=str)
+df_magic_id = pd.read_csv('..\\tables\\magic_id.csv',index_col='magic_id',dtype=str)
+df_crystal_id = pd.read_csv('..\\tables\\crystal_id.csv',index_col='crystal_id',dtype=str)
+df_ability_id = pd.read_csv('..\\tables\\ability_id.csv',index_col='ability_id',dtype=str)
 
 class Collectible(ABC):
     def __init__(self, reward_id, reward_name, reward_value, related_jobs,

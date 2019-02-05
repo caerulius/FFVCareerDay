@@ -6,12 +6,16 @@ import operator
 from collectible import *
 from reward import *
 from shop import *
+from shop_price import *
+from area import *
 
 class Conductor():
     def __init__(self):
-        self.CM = CollectibleManager()      #Set up collectibles. Includes Items, magic, crystals, and abilities
-        self.RM = RewardManager(self.CM)    #Set up rewards. Includes chests and events
-        self.SM = ShopManager(self.CM)      #Set up shops.
+        self.CM = CollectibleManager()        #Set up collectibles. Includes Items, magic, crystals, and abilities
+        self.RM = RewardManager(self.CM)      #Set up rewards. Includes chests and events
+        self.SM = ShopManager(self.CM)        #Set up shops.
+        self.SPM = ShopPriceManager(self.CM)  #Set up shop prices
+        self.AM = AreaManager()               #Set up areas. Tule, The Void, etc
         
         self.difficulty = random.randint(1,10)
         self.chosen_crystals = self.get_crystals()
@@ -148,13 +152,12 @@ class Conductor():
                 contents.append(None)
                 
             value.contents = contents
-            #print(value.short_output)
 
 C = Conductor()
 C.randomize_rewards()
 C.randomize_shops()
-C.RM.print_spoiler()
-C.SM.print_spoiler()
+#C.RM.print_spoiler()
+#C.SM.print_spoiler()
 #input()
-C.RM.print_patch()
-C.SM.print_patch()
+#C.RM.print_patch()
+#C.SM.print_patch()

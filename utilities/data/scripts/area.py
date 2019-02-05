@@ -9,10 +9,11 @@ class Area():
         self.area_order = int(area_order)
         self.current_volume = 0
         
-class Area_Manager():
+class AreaManager():
     def __init__(self, areas=None, random=None):
         if areas is None:
             self.areas = []
+            self.initialize_areas("..\\tables\\areas.csv")
         else:
             self.areas = areas
         
@@ -38,6 +39,3 @@ class Area_Manager():
         
     def any_areas_not_full(self):
         return any(x.current_volume < x.area_capacity for x in self.areas)
-
-AM = Area_Manager()
-AM.initialize_areas('areas.csv')

@@ -3,7 +3,7 @@ import random
 
 
 # Load data, create initial formation names of enemies
-df_formation = pd.read_csv('formation_id.csv')
+df_formation = pd.read_csv('..\\tables\\formation_id.csv')
 df_formation['formation_names'] = df_formation['enemy_1_name'] + " " + df_formation['enemy_2_name'] + " " + df_formation['enemy_3_name'] + " " + df_formation['enemy_4_name'] + " " + df_formation['enemy_5_name'] + " " + df_formation['enemy_6_name'] + " " + df_formation['enemy_7_name'] + " " + df_formation['enemy_8_name']
 df_formation['formation_names'] = df_formation['formation_names'].str.strip()
 

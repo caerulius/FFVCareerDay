@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 import pandas as pd 
-#from collectible import *
 import random
 import operator
 
 NUM_REWARDS = 314
 
-df_reward_table = pd.read_csv('rewards.csv', dtype=str)
+df_reward_table = pd.read_csv('..\\tables\\rewards.csv', dtype=str)
 df_reward_table['idx'] = df_reward_table['idx'].astype(int)
-
-#df_chest_id = pd.read_excel('chest_id.xlsx',index_col='chest_id',dtype=str)
 
 class Reward:
     def __init__(self, index, collectible_manager):

@@ -5,10 +5,9 @@ import random
 
 NUM_SHOPS = 64
 
-df_shop_table = pd.read_csv('shop_id.csv',dtype=str)
+df_shop_table = pd.read_csv('..\\tables\\shop_id.csv',dtype=str)
 df_shop_table['idx'] = df_shop_table['idx'].astype(int)
-#item_id_dict = pd.read_csv('item_id.csv',index_col='item_id',dtype=str).to_dict()['readable_name'] # id first
-#magic_id_dict = pd.read_csv('magic_id.csv',index_col='magic_id',dtype=str).to_dict()['readable_name'] # id first
+
 shop_id_dict = {
         '00' : 'Magic',
         '01' : 'Weapon',
