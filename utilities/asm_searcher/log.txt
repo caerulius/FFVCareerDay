@@ -1,0 +1,135 @@
+exdeathcastle_carbuncle.asm
+db $BD, $22, $FF                ;Start Event Battle 22
+
+forktower_holyflare.asm
+db $BD, $30, $FF                ;Start Event Battle 30
+
+forktower_holyflare.asm
+db $BD, $2F, $FF                ;Start Event Battle 2F
+
+walse_shiva.asm
+db $BD, $05, $FF                ;Start Event Battle 05
+
+adamantoise.asm
+db $BD, $0B, $FF					;Start Event Battle 0B
+
+archeoavis.asm
+db $BD, $0F, $FF                ;Start Event Battle 0F
+
+byblos.asm
+db $BD, $09, $FF                ;Start Event Battle 09
+
+cid_on_flying_ship.asm
+db $BD, $35, $FF				;Start Event Battle 35
+
+ifrit.asm
+db $BD, $39, $FF		;Start Event Battle 39
+
+karnak_meteor_afterearth.asm
+db $BD, $11, $FF                ;Start Event Battle 11
+
+karnak_queen_fight.asm
+db $BD, $07, $FF	;Start Event Battle 07
+
+magisa.asm
+db $BD, $04, $FF		;Start Event Battle 04
+
+ruins_meteor_afterearth.asm
+db $BD, $10, $FF                ;Start Event Battle 10
+
+sandworm.asm
+db $BD, $0A, $FF				;Start Event Battle 0A
+
+siren.asm
+db $BD, $03, $06		;Start Event Battle 03
+
+tycoon_meteor_03_battle.asm
+db $BD, $00, $FF                ;Start Event Battle 00
+
+walse_meteor_afterearth.asm
+db $BD, $12, $FF                ;Start Event Battle 12
+
+water_crystal.asm
+db $BD, $06, $FF                ;Start Event Battle 06
+
+whirlpool.asm
+db $BD, $02, $FF				;Start Event Battle 02
+
+balcastle_leavegates.asm
+db $BD, $1D, $FF                ;Start Event Battle 1D
+
+barriertower_top.asm
+db $BD, $20, $FF          ;Start Event Battle 20
+
+bigbridge_gilgamesh2.asm
+db $BD, $16, $FF                ;Start Event Battle 16
+
+bigbridge_gilgamesh2.asm
+db $BD, $1B, $FF                ;Start Event Battle 1B
+
+exdeathcastle1_gilgamesh.asm
+db $BD, $94, $FF                ;Start Event Battle 94
+
+exdeathcastle2_boss_w3.asm
+db $BD, $24, $FF                ;Start Event Battle 24
+
+exdeathcastle2_gilgamesh.asm
+db $BD, $23, $FF                ;Start Event Battle 23
+
+hiryuuvalley_end.asm
+db $BD, $1E, $FF                ;Start Event Battle 1E
+
+hiryuuvalley_end.asm
+; db $BD, $1E, $FF                ;Start Event Battle 1E
+
+mooglewaterway_afterboss.asm
+db $BD, $1C, $06                        ;Start Event Battle 1C
+
+muaforest_boss.asm
+db $BD, $21, $FF                ;Start Event Battle 21
+
+zezafleet_battle.asm
+db $BD, $29, $FF                ;Start Event Battle 29
+
+zezafleet_battle.asm
+db $BD, $1F, $FF                ;Start Event Battle 1F
+
+antlion_cutscenes.asm
+db $BD, $25, $FF                ;Start Event Battle 25
+
+cleft_apanda.asm
+db $BD, $36, $FF                ;Start Event Battle 36
+
+cleft_apocalypse.asm
+db $BD, $48, $FF		;Start Event Battle 48
+
+cleft_calofisteri.asm
+db $BD, $47, $FF                ;Start Event Battle 47
+
+cleft_halicarnaso.asm
+db $BD, $38, $FF                ;Start Event Battle 38
+
+cleft_halicarnassus.asm
+db $BD, $38, $FF                ;Start Event Battle 38
+
+cleft_necrophobe.asm
+db $BD, $4B, $FF	;Start Event Battle 4B
+
+cleft_twintania.asm
+db $BD, $4A, $FF                ;Start Event Battle 4A
+
+greattrench_end.asm
+db $BD, $32, $FF                ;Start Event Battle 32
+
+istoryfalls_end.asm
+db $BD, $31, $FF                ;Start Event Battle 31
+
+merugene.asm
+db $BD, $2B, $FF                ;Start Event Battle 2B
+
+northmountain_bahamut.asm
+db $BD, $34, $FF                ;Start Event Battle 34
+
+secondtablet.asm
+db $BD, $2E, $FF                ;Start Event Battle 2E
+

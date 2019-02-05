@@ -1,0 +1,2728 @@
+**********************************************
+Event Codes
+**********************************************
+00				Player Hold
+01				Player Move Up
+02				Player Move Right
+03				Player Move Down
+04				Player Move Left
+
+05				(Player Bounce)
+06
+07
+08
+09				Player Show
+0A				Player Hide
+0B
+0C
+0D
+0E
+0F
+
+10-6F				Player Poses (-10 for Sprites)
+11              unclear
+12              face right standing
+13              face right down hand backward
+14              face down left hand forward
+15              face down right hand forward
+16              face left standing
+17              face left down hand backward
+
+70-7F				Timing?
+7A					Naming Character
+
+8x yy				Sprite 0x Do Event yy
+9x yy				(Sprite 1x Do Event yy)
+
+A0 xx				(Message)
+A1 xx				Run Shop xx
+A2 xx				Set Event Flag 0xx
+A3 xx				Clear Event Flag 0xx
+A4 xx				Set Event Flag 1xx
+A5 xx				Clear Event Flag 1xx
+A6 xx				Set Flag xx
+A7 xx				Clear Flag xx
+A8 xx				Adjust Character HP
+A9 xx				Adjust Character MP
+AA xx				Add Item xx
+AB xx				Remove Item xx
+AC xx				Add Magic xx
+AD xx				Run Inn xx
+AE xx				Blur Screen
+AF xx				Add GP
+
+B0 xx				Subtract GP
+B1 xx				Set Player Sprite xx
+B2 xx				Pause xx Cycles	
+B3 xx				Pause xx0 Cycles
+B4 xx				Play Background Music xx
+B5 xx				Play Sound Effect xx
+B6 xx				Play Movie xx
+B7 xy				Add/Remove Character y
+B8 xx				Toggle Additive Tint
+B9 xx				Toggle Subtractive Tint
+BA xx yy    	    Clear Character xx Status 0 yy
+BB xx yy        	Set Character xx Status 0 yy
+BC xx yy			Toggle Character xx Status 0 yy
+BD xx				Start Event Battle xx0
+BE xy				Rumble Effect
+BF xx				(Sprite Effect xx)
+
+C0 xx				(Circle Mask)
+C1 xx
+C2 xx				(Map)
+C3 xx				Fade In Speed
+C4 xx				Fade Out Speed
+C5
+C6 xx				Add Job xx
+C7 xx				Play Next xx Bytes Simultaneously
+C8 xx yy			Display Message/Text/Dialogue
+C9 xx yy			(Music)
+CA xx yy			(Set Flag 2/3/4/5xx)
+CB xx yy			(Clear Flag 2/3/4/5xx)
+CC					(No Function)
+CD xx yy			Run Event Index yyxx
+CE xx yy    	 	Play Next yy Bytes xx Times
+CF xx yy			Play Next yy Bytes Simultaneously xx Times
+
+D0 xx yy			(Music)
+D1 xx yy zz			(Timer?)
+D2 xx yy zz ww		(Map)
+D3 8x yy zz			Sprite x Set Map Position yy,zz
+D4 xx yy zz			(Music)
+D5 xx yy zz			(Sound)
+D6 xx yy zz			(Map)
+D7 xx yy zz			(Timer?)
+D8
+D9
+DA
+DB					Restore Player Status
+DC
+DD
+DE					(No Function)
+DF					(No Function)
+
+E0
+E1 xx yy zz ww vv   (Return From Cutscene?)
+E2
+E3 xx yy zz ww vv	(Inter-Map Cutscene?)
+E4
+E5
+E6
+E7
+E8
+E9
+EA
+EB
+EC					(No Function)
+ED					(No Function)
+EE					(No Function)
+EF					(No Function)
+
+F0
+F1
+F2					(No Function)
+F3 xx yy zw	**		Set Map Tiles
+F4
+F5					(No Function)
+F6					(No Function)
+F7					(No Function)
+F8					(No Function)
+F9					(No Function)
+FA					(No Function)
+FB					(No Function)
+FC					(No Function)
+FD					(No Function)
+FE					(No Function)
+FF					End Event
+
+**********************************************
+Indirect Call to Fxn
+**********************************************
+C0/A24C A0 05 00    LDY #$0005              
+C0/A24F B7 D6       LDA [$D6],y[$C8:4A3E]   
+C0/A251 85 E3       STA $E3       
+C0/A253 88          DEY                     
+C0/A254 B7 D6       LDA [$D6],y[$C8:4A3D]   
+C0/A256 85 E2       STA $E2       
+C0/A258 88          DEY                     
+C0/A259 B7 D6       LDA [$D6],y[$C8:4A3C]   
+C0/A25B 85 E1       STA $E1       
+C0/A25D 88          DEY                     
+C0/A25E B7 D6       LDA [$D6],y[$C8:4A3B]   
+C0/A260 85 E0       STA $E0       
+C0/A262 88          DEY                     
+C0/A263 B7 D6       LDA [$D6],y[$C8:4A3A]   
+C0/A265 85 DF       STA $DF       
+C0/A267 88          DEY                     
+C0/A268 B7 D6       LDA [$D6],y[$C8:4A39]   
+C0/A26A 85 DE       STA $DE       
+
+C0/A26C C9 C7       CMP #$C7                
+C0/A26E D0 08       BNE $A278
+C0/A270 E6 D2       INC $D2			; Set D2 Flag
+C0/A272 20 0A A4    JSR $A40A		; Function Call, See Below
+C0/A275 4C CB A2    JMP $A2CB
+
+C0/A278 C9 CF       CMP #$CF                
+C0/A27A D0 08       BNE $A284
+C0/A27C E6 D2       INC $D2
+C0/A27E 20 C9 A3    JSR $A3C9
+C0/A281 4C CB A2    JMP $A2CB
+
+C0/A284 C9 CE       CMP #$CE                
+C0/A286 D0 06       BNE $A28E      
+C0/A288 20 C9 A3    JSR $A3C9
+C0/A28B 4C CB A2    JMP $A2CB
+
+C0/A28E C9 CD       CMP #$CD                
+C0/A290 D0 06       BNE $A298      
+C0/A292 20 80 A3    JSR $A380
+C0/A295 4C CB A2    JMP $A2CB
+
+C0/A298 C9 FF       CMP #$FF                
+C0/A29A D0 0A       BNE $A2A6      
+C0/A29C A4 D4       LDY $D4
+C0/A29E F0 7C       BEQ $A31C      
+C0/A2A0 20 65 A3    JSR $A365
+C0/A2A3 4C CB A2    JMP $A2CB
+
+C0/A2A6 C9 05       CMP #$05 		; If #00 - #04
+C0/A2A8 90 12       BCC $A2BC
+C0/A2AA C9 70       CMP #$70 		; If #05 - #6F
+C0/A2AC 90 1A       BCC $A2C8
+C0/A2AE C9 80       CMP #$80		; If #70 - #7F
+C0/A2B0 90 07       BCC $A2B9
+C0/A2B2 C9 A0       CMP #$A0 		; If #80 - #9F
+C0/A2B4 90 09       BCC $A2BF
+C0/A2B6 38          SEC      
+C0/A2B7 E9 20       SBC #$20 
+C0/A2B9 4C 49 A4    JMP $A449		; If #A0 - #FF
+
+*** 00-04
+C0/A2BC 4C 5F A4    JMP $A45F
+
+*** 80-9F
+C0/A2BF A5 DF       LDA $DF
+C0/A2C1 C9 05       CMP #$05
+C0/A2C3 90 F7       BCC $A2BC
+C0/A2C5 4C F9 C7    JMP $C7F9
+
+*** A0-FF
+C0/A449 38          SEC			; Code - #90 (-70 here, -20 before)
+C0/A44A E9 70       SBC #$70
+C0/A44C C2 20       REP #$20       
+C0/A44E 0A          ASL A
+C0/A44F AA          TAX
+C0/A450 BF 08 A5 C0 LDA $C0A508,x	; Index Table
+C0/A454 85 23       STA $23
+C0/A456 A5 06       LDA $06		; $06 high, $DF low
+C0/A458 E2 20       SEP #$20       
+C0/A45A A5 DF       LDA $DF
+C0/A45C 6C 23 0B    JMP ($0B23)	; Indirect Jump
+
+**********************************************
+Index Table
+**********************************************
+90: BCCE  91: BCCE  92: BCCE  93: BCCE  94: BCCE  95: BCCE  96: C27C  97: C28A  
+98: C282  99: BA98  9A: BD0D  9B: BAFF  9C: C56F  9D: C64B  9E: C6A7  9F: BB24  
+A0: C735  A1: BD1E  A2: C758  A3: C77C  A4: C76A  A5: C78E  A6: BAEF  A7: BAF7  
+A8: C04B  A9: C0E0  AA: BF92  AB: BFC0  AC: BC64  AD: BB4C  AE: BAE1  AF: BF07  
+B0: BF10  B1: C6D4  B2: C70B  B3: C71C  B4: C212  B5: C25A  B6: BAD9  B7: BE62  
+B8: C67D  B9: C692  BA: BFF1  BB: C00F  BC: C02D  BD: BD8D  BE: C6C4  BF: A672  
+C0: BC6C  C1: C6CB  C2: C1AA  C3: C6AC  C4: C6B7  C5: C65A  C6: BEE9  C7: 0000  
+C8: C7A4  C9: C1ED  CA: C9CE  CB: C9E4  CC: 0000  CD: 0000  CE: 0000  CF: 0000  
+D0: BCB4  D1: C5FB  D2: C1BB  D3: C5C4  D4: C236  D5: C266  D6: C362  D7: C623  
+D8: C57A  D9: BAA8  DA: B9EF  DB: BA9E  DC: BCF5  DD: B9E5  DE: 0000  DF: 0000  
+E0: C3D3  E1: C3F7  E2: BDBC  E3: C418  E4: B9D5  E5: B9DD  E6: B9CF  E7: B991  
+E8: BD36  E9: B8C8  EA: B8A0  EB: B8B7  EC: 0000  ED: 0000  EE: 0000  EF: 0000  
+F0: C2AF  F1: C292  F2: 0000  F3: C504  F4: C4E0  F5: 0000  F6: 0000  F7: 0000  
+F8: 0000  F9: 0000  FA: 0000  FB: 0000  FC: 0000  FD: 0000  FE: 0000  FF: 0000  
+
+**********************************************
+90/91/92/93/94/95:
+**********************************************
+C0/BCCE A5 DE       LDA $DE		; Get code (cc)
+C0/BCD0 38          SEC
+C0/BCD1 E9 70       SBC #$70		; cc - #70 to X
+C0/BCD3 AA          TAX
+C0/BCD4 BF EF BC C0 LDA $C0BCEF,x	; Get value to X
+	[01 02 03 04 06 08]
+C0/BCD8 AA          TAX
+C0/BCD9 DA          PHX			; Push X
+
+C0/BCDA A0 0F 00    LDY #$000F		; Push #000F
+C0/BCDD 5A          PHY
+C0/BCDE 20 DE C6    JSR $C6DE
+	C0/C6DE 20 95 4C    JSR $4C95
+	C0/C6E1 A5 53       LDA $53
+	C0/C6E3 D0 13       BNE $C6F8
+	C0/C6E5 20 1D 1A    JSR $1A1D
+	C0/C6E8 20 37 21    JSR $2137
+	C0/C6EB 20 C5 1E    JSR $1EC5
+	C0/C6EE 20 64 1E    JSR $1E64
+	C0/C6F1 20 0A 42    JSR $420A
+	C0/C6F4 20 2B 61    JSR $612B
+	C0/C6F7 60          RTS
+	
+	C0/C6F8 20 E4 1A    JSR $1AE4
+	C0/C6FB 20 AC 3B    JSR $3BAC
+	C0/C6FE 20 7C 23    JSR $237C
+	C0/C701 20 B3 39    JSR $39B3
+	C0/C704 20 42 28    JSR $2842
+	C0/C707 20 0A 42    JSR $420A
+	C0/C70A 60          RTS
+
+C0/BCE1 20 41 4E    JSR $4E41		; Wait for $0B51 to be set (sync?)
+	C0/4E41 64 51       STZ $51		; Note: Bank #0B
+	C0/4E43 A5 51       LDA $51
+	C0/4E45 F0 FC       BEQ $44E3
+	C0/4E47 64 51       STZ $51
+	C0/4E49 60          RTS
+
+C0/BCE4 7A          PLY			; Loop 16 times
+C0/BCE5 88          DEY
+C0/BCE6 D0 F5       BNE $BCDD
+
+C0/BCE8 FA          PLX			; Loop number of times (see above)
+C0/BCE9 CA          DEX
+C0/BCEA D0 ED       BNE $BCD9
+
+C0/BCEC 4C 28 A6    JMP $A628
+
+**********************************************
+A0 xx: (Message)
+**********************************************
+C0/C735 A5 DF       LDA $DF			; xx * 2
+C0/C737 0A          ASL A                   
+C0/C738 AA          TAX                     
+C0/C739 BC D6 13    LDY $13D6,x		; Load 7E13D6,x
+C0/C73C 84 AF       STY $AF 
+C0/C73E AE D6 0A    LDX $0AD6		; If on a World Map, skip fxns
+C0/C741 E0 05 00    CPX #$0005              
+C0/C744 90 0C       BCC $C752
+
+C0/C746 20 95 4C    JSR $4C95
+	C0/4C95 A2 00 02    LDX #$0200              
+	C0/4C98 A9 F0       LDA #$F0                
+	C0/4C9A 9D FD 01    STA $01FD,x		; Clear $01FD
+	C0/4C9D CA          DEX                    
+	C0/4C9E CA          DEX                     
+	C0/4C9F CA          DEX                     
+	C0/4CA0 CA          DEX                     
+	C0/4CA1 D0 F7       BNE $4C9A
+	C0/4CA3 A2 20 00    LDX #$0020              
+	C0/4CA6 9E FF 03    STZ $03FF,x		; Clear 03FF
+	C0/4CA9 CA          DEX                     
+	C0/4CAA D0 FA       BNE $4CA6
+	C0/4CAC 60          RTS
+C0/C749 20 7C 23    JSR $237C
+
+C0/C74C 20 B3 39    JSR $39B3
+
+C0/C74F 20 42 28    JSR $2842
+
+C0/C752 20 AE 83    JSR $83AE
+
+C0/C755 4C 30 A6    JMP $A630		; Exit
+
+
+**********************************************
+A1 xx: 
+**********************************************
+C0/BD1E A5 DF       LDA $DF       
+C0/BD20 8D 35 01    STA $0135     
+C0/BD23 A9 02       LDA #$02                
+C0/BD25 8D 34 01    STA $0134     
+C0/BD28 20 4C 45    JSR $454C     
+C0/BD2B E6 55       INC $55       
+C0/BD2D 20 7C 57    JSR $577C     
+C0/BD30 20 00 61    JSR $6100     
+C0/BD33 4C 30 A6    JMP $A630     
+
+**********************************************
+A2 xx: Set Event Flag 0xx
+**********************************************
+C0/C758 A5 DF       LDA $DF    				; Get xx
+C0/C75A 20 49 CA    JSR $CA49				; Return byte/bit for write
+	C0/CA49 C2 20       REP #$20       
+	C0/CA4B AA          TAX					; xx to X
+	C0/CA4C 4A          LSR A				; xx / 8 to Y
+	C0/CA4D 4A          LSR A
+	C0/CA4E 4A          LSR A
+	C0/CA4F A8          TAY
+	C0/CA50 A5 06       LDA $06				; $06 to B
+	C0/CA52 E2 20       SEP #$20       
+	C0/CA54 8A          TXA					; xx to A
+	C0/CA55 29 07       AND #$07
+	C0/CA57 AA          TAX					; xx #00 to #07 to X
+	C0/CA58 60          RTS  
+C0/C75D B9 14 0A    LDA $0A14,y				; Set event flag
+C0/C760 1F 59 CA C0 ORA $C0CA59,x
+	[01 02 04 08 10 20 40 80]
+C0/C764 99 14 0A    STA $0A14,y
+C0/C767 4C 30 A6    JMP $A630  
+
+**********************************************
+A3 xx: Clear Event Flag 0xx
+**********************************************
+C0/C77C A5 DF       LDA $DF    
+C0/C77E 20 49 CA    JSR $CA49  
+C0/C781 B9 14 0A    LDA $0A14,y				; Clear event flag
+C0/C784 3F 61 CA C0 AND $C0CA61,x
+	[FE FD FB F7 EF DF BF 7F]
+C0/C788 99 14 0A    STA $0A14,y
+C0/C78B 4C 30 A6    JMP $A630  
+
+**********************************************
+A4 xx: Set Event Flag 1xx
+**********************************************
+C0/C76A A5 DF       LDA $DF    
+C0/C76C 20 49 CA    JSR $CA49  
+C0/C76F B9 34 0A    LDA $0A34,y				; Set event flag
+C0/C772 1F 59 CA C0 ORA $C0CA59,x
+C0/C776 99 34 0A    STA $0A34,y
+C0/C779 4C 30 A6    JMP $A630  
+
+**********************************************
+A5 xx: Clear Event Flag 1xx
+**********************************************
+C0/C78E A5 DF       LDA $DF
+C0/C790 20 96 C7    JSR $C796
+	C0/C796 20 49 CA    JSR $CA49
+	C0/C799 B9 34 0A    LDA $0A34,y
+	C0/C79C 3F 61 CA C0 AND $C0CA61,x
+	C0/C7A0 99 34 0A    STA $0A34,y
+	C0/C7A3 60          RTS        
+C0/C793 4C 30 A6    JMP $A630
+
+**********************************************
+A6 xx: Set Flag xx
+**********************************************
+C0/BAEF A5 DF       LDA $DF  
+C0/BAF1 20 FA C9    JSR $C9FA
+	C0/C9FA 20 49 CA    JSR $CA49
+	C0/C9FD B9 B4 09    LDA $09B4,y
+	C0/CA00 1F 59 CA C0 ORA $C0CA59,x
+	C0/CA04 99 B4 09    STA $09B4,y
+	C0/CA07 60          RTS
+C0/BAF4 4C 30 A6    JMP $A630
+
+**********************************************
+A7 xx: Clear Flag xx
+**********************************************
+C0/BAF7 A5 DF       LDA $DF
+C0/BAF9 20 08 CA    JSR $CA08
+	C0/CA08 20 49 CA    JSR $CA49  
+	C0/CA0B B9 B4 09    LDA $09B4,y
+	C0/CA0E 3F 61 CA C0 AND $C0CA61,x
+	C0/CA12 99 B4 09    STA $09B4,y
+	C0/CA15 60          RTS
+C0/BAFC 4C 30 A6    JMP $A630
+
+**********************************************
+A8 xx: Adjust Character HP (C0, 20, 1F)
+**********************************************
+C0/C04B A5 DF       LDA $DF					; Get Character Number
+C0/C04D 29 C0       AND #$C0                
+C0/C04F 4A          LSR A                   
+C0/C050 4A          LSR A                   
+C0/C051 4A          LSR A                   
+C0/C052 4A          LSR A                   
+C0/C053 4A          LSR A                   
+C0/C054 4A          LSR A                   
+
+C0/C055 20 64 C1    JSR $C164
+	C0/C164 85 09       STA $09				; If Character is Galuf/Cara, jump
+	C0/C166 C9 02       CMP #$02                
+	C0/C168 F0 19       BEQ $C183      
+	C0/C16A C9 04       CMP #$04                
+	C0/C16C F0 15       BEQ $C183      
+	
+	C0/C16E A4 06       LDY $06				; Load Offset
+	C0/C170 B9 00 05    LDA $0500,y			; If this Slot is Character move on
+	C0/C173 29 07       AND #$07                
+	C0/C175 C5 09       CMP $09    
+	C0/C177 F0 23       BEQ $C19C      
+											; Else get next Slot:
+	C0/C179 20 9D C1    JSR $C19D   		; Y + #0050
+	C0/C17C C0 40 01    CPY #$0140          ; If it's last slot, move one    
+	C0/C17F F0 1B       BEQ $C19C      		
+	C0/C181 80 ED       BRA $C170      
+
+	(Handling Galuf/Cara)
+	C0/C183 A4 06       LDY $06  			; Loop through Slots until get Galuf/Cara
+	C0/C185 B9 00 05    LDA $0500,y
+	C0/C188 29 07       AND #$07                
+	C0/C18A C9 02       CMP #$02                
+	C0/C18C F0 0E       BEQ $C19C      
+	C0/C18E C9 04       CMP #$04                
+	C0/C190 F0 0A       BEQ $C19C      
+	C0/C192 20 9D C1    JSR $C19D			; Y + #0050
+		C0/C19D C2 20       REP #$20                
+		C0/C19F 98          TYA                     
+		C0/C1A0 18          CLC                     
+		C0/C1A1 69 50 00    ADC #$0050              
+		C0/C1A4 A8          TAY                     
+		C0/C1A5 A5 06       LDA $06
+		C0/C1A7 E2 20       SEP #$20                
+		C0/C1A9 60          RTS                     
+	C0/C195 C0 40 01    CPY #$0140			; If Y = #0140, exit              
+	C0/C198 F0 02       BEQ $C19C      
+	C0/C19A 80 E9       BRA $C185      		; Else Loop
+	C0/C19C 60          RTS                    
+	
+C0/C058 C0 40 01    CPY #$0140              ; If character not slotted, exit
+C0/C05B F0 70       BEQ $C0CD      
+
+C0/C05D B9 00 05    LDA $0500,y				; If bit 6 set (presence/absence?), exit
+C0/C060 29 40       AND #$40                
+C0/C062 D0 69       BNE $C0CD      
+
+C0/C064 A5 DF       LDA $DF					; Subtract HP if set
+C0/C066 29 20       AND #$20                
+C0/C068 D0 33       BNE $C09D
+
+(Add Full HP)      
+C0/C06A A5 DF       LDA $DF  				; If #1F, restore full HP
+C0/C06C 29 1F       AND #$1F                
+C0/C06E C9 1F       CMP #$1F                
+C0/C070 D0 0E       BNE $C080      
+C0/C072 C2 20       REP #$20                
+C0/C074 B9 08 05    LDA $0508,y
+C0/C077 99 06 05    STA $0506,y
+C0/C07A A5 06       LDA $06    
+C0/C07C E2 20       SEP #$20                
+C0/C07E 80 4D       BRA $C0CD
+
+(Add Partial HP)      
+C0/C080 0A          ASL A                   
+C0/C081 AA          TAX
+C0/C082 C2 20       REP #$20                
+C0/C084 B9 06 05    LDA $0506,y
+C0/C087 18          CLC                     
+C0/C088 7F D0 C0 C0 ADC $C0C0D0,x
+	[000A 0014 0032 0064 00C8 01F4 03E8 07D0]
+	(10/20/50/100/200/500/1000/2000)
+C0/C08C D9 08 05    CMP $0508,y
+C0/C08F 90 03       BCC $C094      
+C0/C091 B9 08 05    LDA $0508,y
+C0/C094 99 06 05    STA $0506,y
+C0/C097 A5 06       LDA $06    
+C0/C099 E2 20       SEP #$20                
+C0/C09B 80 30       BRA $C0CD      		; Exit
+
+C0/C09D A5 DF       LDA $DF    			; If xx is not 1F, goto Subtract HP
+C0/C09F 29 1F       AND #$1F                
+C0/C0A1 C9 1F       CMP #$1F                
+C0/C0A3 D0 0B       BNE $C0B0    
+C0/C0A5 C2 20       REP #$20                
+C0/C0A7 A5 06       LDA $06    			; Set cHP to $06 (possibly 0?)
+C0/C0A9 99 06 05    STA $0506,y
+C0/C0AC E2 20       SEP #$20                
+C0/C0AE 80 1D       BRA $C0CD			; Exit
+
+(Subtract HP)      
+C0/C0B0 0A          ASL A                   
+C0/C0B1 AA          TAX                     
+C0/C0B2 C2 20       REP #$20                
+C0/C0B4 B9 06 05    LDA $0506,y
+C0/C0B7 38          SEC                     
+C0/C0B8 FF D0 C0 C0 SBC $C0C0D0,x
+C0/C0BC F0 05       BEQ $C0C3 			; If HP = 0, set to 1     
+C0/C0BE C9 0F 27    CMP #$270F          ; If HP < 9999, set HP, else set to 1    
+C0/C0C1 90 03       BCC $C0C6      
+C0/C0C3 A9 01 00    LDA #$0001              
+C0/C0C6 99 06 05    STA $0506,y
+C0/C0C9 A5 06       LDA $06
+C0/C0CB E2 20       SEP #$20
+                
+C0/C0CD 4C 30 A6    JMP $A630
+
+**********************************************
+A9 xx: Adjust Character MP
+**********************************************
+C0/C0E0 A5 DF       LDA $DF       
+C0/C0E2 29 C0       AND #$C0                
+C0/C0E4 4A          LSR A                   
+C0/C0E5 4A          LSR A                   
+C0/C0E6 4A          LSR A                   
+C0/C0E7 4A          LSR A                   
+C0/C0E8 4A          LSR A                   
+C0/C0E9 4A          LSR A                   
+C0/C0EA 20 64 C1    JSR $C164     
+C0/C0ED C0 40 01    CPY #$0140              
+C0/C0F0 F0 61       BEQ $61    [$C153]      
+C0/C0F2 B9 00 05    LDA $0500,y   
+C0/C0F5 29 40       AND #$40                
+C0/C0F7 D0 5A       BNE $5A    [$C153]      
+C0/C0F9 A5 DF       LDA $DF       
+C0/C0FB 29 20       AND #$20                
+C0/C0FD D0 33       BNE $33    [$C132]      
+C0/C0FF A5 DF       LDA $DF       
+C0/C101 29 1F       AND #$1F                
+C0/C103 C9 1F       CMP #$1F                
+C0/C105 D0 0E       BNE $0E    [$C115]      
+C0/C107 C2 20       REP #$20                
+C0/C109 B9 0C 05    LDA $050C,y   
+C0/C10C 99 0A 05    STA $050A,y   
+C0/C10F A5 06       LDA $06       
+C0/C111 E2 20       SEP #$20                
+C0/C113 80 3E       BRA $3E    [$C153]      
+C0/C115 0A          ASL A                   
+C0/C116 AA          TAX                     
+C0/C117 C2 20       REP #$20                
+C0/C119 B9 0A 05    LDA $050A,y   
+C0/C11C 18          CLC                     
+C0/C11D 7F 56 C1 C0 ADC $C0C156,x 
+C0/C121 D9 0C 05    CMP $050C,y   
+C0/C124 90 03       BCC $03    [$C129]      
+C0/C126 B9 0C 05    LDA $050C,y   
+C0/C129 99 0A 05    STA $050A,y   
+C0/C12C A5 06       LDA $06       
+C0/C12E E2 20       SEP #$20                
+C0/C130 80 21       BRA $21    [$C153]      
+C0/C132 A5 DF       LDA $DF       
+C0/C134 29 1F       AND #$1F                
+C0/C136 0A          ASL A                   
+C0/C137 AA          TAX                     
+C0/C138 C2 20       REP #$20                
+C0/C13A B9 0A 05    LDA $050A,y   
+C0/C13D 38          SEC                     
+C0/C13E FF 56 C1 C0 SBC $C0C156,x 
+C0/C142 F0 05       BEQ $05    [$C149]      
+C0/C144 C9 0F 27    CMP #$270F              
+C0/C147 90 03       BCC $03    [$C14C]      
+C0/C149 A9 01 00    LDA #$0001              
+C0/C14C 99 0A 05    STA $050A,y   
+C0/C14F A5 06       LDA $06       
+C0/C151 E2 20       SEP #$20                
+C0/C153 4C 30 A6    JMP $A630     
+
+**********************************************
+AA xx: Add Item xx
+**********************************************
+C0/BF92 A5 DF       LDA $DF
+C0/BF94 20 DD BF    JSR $BFDD			; Get item ID location
+	C0/BFDD 8D A2 16    STA $16A2
+	C0/BFE0 A4 06       LDY $06
+	C0/BFE2 B9 40 06    LDA $0640,y
+	C0/BFE5 CD A2 16    CMP $16A2
+	C0/BFE8 F0 06       BEQ $BFF0
+	C0/BFEA C8          INY
+	C0/BFEB C0 00 01    CPY #$0100
+	C0/BFEE D0 F2       BNE $BFE2
+	C0/BFF0 60          RTS
+C0/BF97 C0 00 01    CPY #$0100
+C0/BF9A F0 0D       BEQ $BFA9
+
+C0/BF9C B9 40 07    LDA $0740,y			; If item quant < 99, add one item
+C0/BF9F C9 63       CMP #$63
+C0/BFA1 F0 1A       BEQ $BFBD
+C0/BFA3 1A          INC A				
+C0/BFA4 99 40 07    STA $0740,y
+C0/BFA7 80 14       BRA $BFBD
+
+C0/BFA9 A4 06       LDY $06				; If empty slot, add item
+C0/BFAB B9 40 06    LDA $0640,y
+C0/BFAE F0 03       BEQ $BFB3
+
+C0/BFB3 A5 DF       LDA $DF				; If don't have, add item to empty slot
+C0/BFB5 99 40 06    STA $0640,y
+C0/BFB8 A9 01       LDA #$01
+C0/BFBA 99 40 07    STA $0740,y
+C0/BFBD 4C 30 A6    JMP $A630
+
+**********************************************
+AB xx: Remove Item xx
+**********************************************
+C0/BFC0 A5 DF       LDA $DF       
+C0/BFC2 20 DD BF    JSR $BFDD     
+C0/BFC5 C0 00 01    CPY #$0100              
+C0/BFC8 F0 10       BEQ $10    [$BFDA]      
+C0/BFCA B9 40 07    LDA $0740,y   
+C0/BFCD F0 0B       BEQ $0B    [$BFDA]      
+C0/BFCF 3A          DEC A                   
+C0/BFD0 99 40 07    STA $0740,y   
+C0/BFD3 D0 05       BNE $05    [$BFDA]      
+C0/BFD5 A9 00       LDA #$00                
+C0/BFD7 99 40 06    STA $0640,y   
+C0/BFDA 4C 30 A6    JMP $A630     
+
+
+**********************************************
+AC xx: Add Magic xx
+**********************************************
+C0/BC64 A5 DF       LDA $DF       
+C0/BC66 20 A5 C9    JSR $C9A5     
+	C0/C9A5 48          PHA                     
+	C0/C9A6 4A          LSR A                   
+	C0/C9A7 4A          LSR A                   
+	C0/C9A8 4A          LSR A                   
+	C0/C9A9 A8          TAY                     
+	C0/C9AA 68          PLA                     
+	C0/C9AB 29 07       AND #$07                
+	C0/C9AD AA          TAX                     
+	C0/C9AE B9 50 09    LDA $0950,y   
+	C0/C9B1 1F B9 C9 C0 ORA $C0C9B9,x[$C0:C9B9] 
+	C0/C9B5 99 50 09    STA $0950,y   
+	C0/C9B8 60          RTS                     
+C0/BC69 4C 30 A6    JMP $A630     
+
+
+**********************************************
+AD xx: (Money, Text, Load Shop?)
+**********************************************
+C0/BB4C 20 51 BC    JSR $BC51
+	C0/BC51 A5 DF       LDA $DF       
+	C0/BC53 0A          ASL A                   
+	C0/BC54 AA          TAX                     
+	C0/BC55 BF 41 BC C0 LDA $C0BC41,x[$C0:BC41] 
+	C0/BC59 85 37       STA $37       
+	C0/BC5B BF 42 BC C0 LDA $C0BC42,x[$C0:BC42] 
+	C0/BC5F 85 38       STA $38       
+	C0/BC61 64 39       STZ $39       
+	C0/BC63 60          RTS                     
+     
+	[0A 00 14 00 1E 00 28 00 32 00 3C 00 46 00 50 00]
+	[000A 0014 001E 0028 0032 003C 0046 0050] 
+C0/BB4F 20 D7 4D    JSR $4DD7     
+	C0/4DD7 DA          PHX                     
+	C0/4DD8 5A          PHY                     
+	C0/4DD9 A6 06       LDX $06       
+	C0/4DDB A0 00 00    LDY #$0000              
+	C0/4DDE 64 3A       STZ $3A       
+
+	C0/4DE0 C2 20       REP #$20                
+	C0/4DE2 A5 37       LDA $37       
+	C0/4DE4 38          SEC                     
+	C0/4DE5 FF 21 4E C0 SBC $C04E21,x
+	C0/4DE9 85 37       STA $37       
+	C0/4DEB A5 39       LDA $39       
+	C0/4DED FF 31 4E C0 SBC $C04E31,x
+	C0/4DF1 85 39       STA $39       
+	C0/4DF3 90 04       BCC $04    [$4DF9]      
+	C0/4DF5 C8          INY                     
+	C0/4DF6 4C E0 4D    JMP $4DE0     
+
+	C0/4DF9 A5 37       LDA $37       
+	C0/4DFB 18          CLC                     
+	C0/4DFC 7F 21 4E C0 ADC $C04E21,x
+	C0/4E00 85 37       STA $37       
+	C0/4E02 A5 39       LDA $39       
+	C0/4E04 7F 31 4E C0 ADC $C04E31,x
+	C0/4E08 85 39       STA $39       
+	C0/4E0A A5 06       LDA $06       
+	C0/4E0C E2 20       SEP #$20                
+	C0/4E0E DA          PHX                     
+	C0/4E0F 8A          TXA                     
+	C0/4E10 4A          LSR A                   
+	C0/4E11 AA          TAX                     
+	C0/4E12 98          TYA                     
+	C0/4E13 9D AC 10    STA $10AC,x   
+	C0/4E16 FA          PLX                     
+	C0/4E17 E8          INX                     
+	C0/4E18 E8          INX                     
+	C0/4E19 E0 10 00    CPX #$0010              
+	C0/4E1C D0 BD       BNE $BD    [$4DDB]      
+
+	C0/4E1E 7A          PLY                     
+	C0/4E1F FA          PLX                     
+	C0/4E20 60          RTS                     
+
+C0/BB52 A2 0D 00    LDX #$000D              
+C0/BB55 86 AF       STX $AF       
+C0/BB57 20 01 84    JSR $8401     
+	C0/8401 64 B3       STZ $B3
+	C0/8403 C2 20       REP #$20       
+	C0/8405 A5 AF       LDA $AF
+	C0/8407 29 FF 7F    AND #$7FFF
+	C0/840A 22 40 2D E0 JSL $E02D40
+		$E0/2D40 08          PHP                     
+		$E0/2D41 85 B1       STA $B1       
+		$E0/2D43 0A          ASL A                   
+		$E0/2D44 18          CLC                     
+		$E0/2D45 65 B1       ADC $B1       
+		$E0/2D47 AA          TAX                     
+		$E0/2D48 BF F0 13 E0 LDA $E013F0,x[$E0:13F0] 
+		$E0/2D4C 85 B1       STA $B1       
+		$E0/2D4E E2 20       SEP #$20                
+		$E0/2D50 BF F2 13 E0 LDA $E013F2,x[$E0:13F2] 
+		$E0/2D54 8D D5 19    STA $19D5     
+		$E0/2D57 28          PLP                     
+		$E0/2D58 6B          RTL                     
+	C0/840E EA          NOP
+	C0/840F EA          NOP
+	C0/8410 EA          NOP
+	C0/8411 EA          NOP
+	C0/8412 A5 06       LDA $06
+	C0/8414 E2 20       SEP #$20       
+	C0/8416 A5 B0       LDA $B0
+	C0/8418 30 05       BMI $841F
+	C0/841A A9 01       LDA #$01
+	C0/841C 4C 21 84    JMP $8421
+	C0/841F A9 08       LDA #$08
+	C0/8421 85 B4       STA $B4
+	C0/8423 20 40 94    JSR $9440
+	C0/8426 60          RTS
+	
+C0/BB5A 20 54 8F    JSR $8F54     
+C0/BB5D A6 B1       LDX $B1       
+C0/BB5F 22 60 2D E0 JSL $E02D60[$E0:2D60]   
+C0/BB63 F0 25       BEQ $25    [$BB8A]
+      
+C0/BB65 20 27 84    JSR $8427     
+C0/BB68 A4 06       LDY $06       
+C0/BB6A 84 AB       STY $AB       
+
+C0/BB6C 20 3B 8D    JSR $8D3B     
+C0/BB6F 20 41 4E    JSR $4E41     
+C0/BB72 A4 AB       LDY $AB       
+C0/BB74 C0 F0 00    CPY #$00F0              
+C0/BB77 D0 F3       BNE $F3    [$BB6C]      
+C0/BB79 A5 B3       LDA $B3       
+C0/BB7B D0 0D       BNE $0D    [$BB8A]      
+C0/BB7D 20 AD 4A    JSR $4AAD     
+C0/BB80 20 C1 4A    JSR $4AC1     
+C0/BB83 E6 A5       INC $A5       
+C0/BB85 20 41 4E    JSR $4E41     
+C0/BB88 80 D0       BRA $D0    [$BB5A]      
+
+C0/BB8A AD 47 09    LDA $0947     
+C0/BB8D 85 37       STA $37       
+C0/BB8F AD 48 09    LDA $0948     
+C0/BB92 85 38       STA $38       
+C0/BB94 AD 49 09    LDA $0949     
+C0/BB97 85 39       STA $39       
+C0/BB99 20 D7 4D    JSR $4DD7     
+C0/BB9C 20 33 91    JSR $9133     
+C0/BB9F 20 ED 8F    JSR $8FED     
+C0/BBA2 A9 80       LDA #$80                
+C0/BBA4 8D 97 16    STA $1697     
+C0/BBA7 20 41 4E    JSR $4E41     
+C0/BBAA A5 03       LDA $03       
+C0/BBAC 29 0C       AND #$0C                
+C0/BBAE F0 0D       BEQ $0D    [$BBBD]      
+C0/BBB0 C9 08       CMP #$08                
+C0/BBB2 D0 04       BNE $04    [$BBB8]      
+C0/BBB4 A9 80       LDA #$80                
+C0/BBB6 80 02       BRA $02    [$BBBA]      
+C0/BBB8 A9 81       LDA #$81                
+C0/BBBA 8D 97 16    STA $1697     
+C0/BBBD A5 03       LDA $03       
+C0/BBBF 10 07       BPL $07    [$BBC8]      
+C0/BBC1 A9 01       LDA #$01                
+C0/BBC3 8D 97 16    STA $1697     
+C0/BBC6 80 0E       BRA $0E    [$BBD6]      
+C0/BBC8 A5 02       LDA $02       
+C0/BBCA 29 80       AND #$80                
+C0/BBCC F0 D9       BEQ $D9    [$BBA7]      
+C0/BBCE AD B8 10    LDA $10B8     
+C0/BBD1 D0 D4       BNE $D4    [$BBA7]      
+C0/BBD3 EE B8 10    INC $10B8     
+C0/BBD6 AD 97 16    LDA $1697     
+C0/BBD9 29 01       AND #$01                
+C0/BBDB 8D 97 16    STA $1697     
+C0/BBDE 20 AD 90    JSR $90AD     
+C0/BBE1 20 41 4E    JSR $4E41     
+C0/BBE4 20 ED 91    JSR $91ED     
+C0/BBE7 20 41 4E    JSR $4E41     
+C0/BBEA 20 A8 94    JSR $94A8     
+C0/BBED 20 41 4E    JSR $4E41     
+C0/BBF0 E6 A5       INC $A5       
+C0/BBF2 20 41 4E    JSR $4E41     
+C0/BBF5 AD 97 16    LDA $1697     
+C0/BBF8 D0 44       BNE $44    [$BC3E]      
+C0/BBFA 20 51 BC    JSR $BC51     
+C0/BBFD AD 47 09    LDA $0947     
+C0/BC00 38          SEC                     
+C0/BC01 E5 37       SBC $37       
+C0/BC03 85 08       STA $08       
+C0/BC05 AD 48 09    LDA $0948     
+C0/BC08 E5 38       SBC $38       
+C0/BC0A 85 09       STA $09       
+C0/BC0C AD 49 09    LDA $0949     
+C0/BC0F E5 38       SBC $38       
+C0/BC11 85 0A       STA $0A       
+C0/BC13 B0 0A       BCS $0A    [$BC1F]      
+C0/BC15 A2 0F 00    LDX #$000F              
+C0/BC18 86 AF       STX $AF       
+C0/BC1A 20 AE 83    JSR $83AE     
+C0/BC1D 80 1F       BRA $1F    [$BC3E]      
+C0/BC1F A5 08       LDA $08       
+C0/BC21 8D 47 09    STA $0947     
+C0/BC24 A5 09       LDA $09       
+C0/BC26 8D 48 09    STA $0948     
+C0/BC29 A5 0A       LDA $0A       
+C0/BC2B 8D 49 09    STA $0949     
+C0/BC2E A2 0E 00    LDX #$000E              
+C0/BC31 86 AF       STX $AF       
+C0/BC33 20 AE 83    JSR $83AE     
+C0/BC36 A9 02       LDA #$02                
+C0/BC38 20 60 A6    JSR $A660     
+C0/BC3B 4C CB A2    JMP $A2CB     
+C0/BC3E 4C 1C A3    JMP $A31C     
+
+
+
+**********************************************
+AE xx: Blur Screen
+**********************************************
+C0/BAE1 A5 DF       LDA $DF       
+C0/BAE3 8D AA 16    STA $16AA     
+C0/BAE6 A2 00 1E    LDX #$1E00              
+C0/BAE9 8E AB 16    STX $16AB     
+C0/BAEC 4C 30 A6    JMP $A630     
+
+
+
+**********************************************
+AF xx: (Add GP?)
+**********************************************
+C0/BF07 20 3F BF    JSR $BF3F				; Multiply by 10/1000
+	C0/BF3F A5 DF       LDA $DF				; If xx bit 7 set, xx * 1000
+	C0/BF41 30 15       BMI $BF58			;	Else xx * 10		
+	
+	C0/BF43 29 7F       AND #$7F					
+	C0/BF45 C2 20       REP #$20       
+	C0/BF47 0A          ASL A				; xx * 10
+	C0/BF48 85 37       STA $37
+	C0/BF4A 0A          ASL A				
+	C0/BF4B 0A          ASL A
+	C0/BF4C 18          CLC
+	C0/BF4D 65 37       ADC $37
+	C0/BF4F 85 37       STA $37
+	
+	C0/BF51 A5 06       LDA $06				; exit 
+	C0/BF53 E2 20       SEP #$20       
+	C0/BF55 64 39       STZ $39
+	C0/BF57 60          RTS
+
+	C0/BF58 29 7F       AND #$7F                
+	C0/BF5A C2 20       REP #$20                
+	C0/BF5C 48          PHA               	; Push xx      
+
+	C0/BF5D 0A          ASL A               ; xx * #18
+	C0/BF5E 0A          ASL A                   
+	C0/BF5F 0A          ASL A                   
+	C0/BF60 85 0D       STA $0D       
+	C0/BF62 0A          ASL A                   
+	C0/BF63 18          CLC                     
+	C0/BF64 65 0D       ADC $0D       
+	C0/BF66 85 0D       STA $0D       
+
+	C0/BF68 68          PLA					; xx * #100
+	C0/BF69 EB          XBA                     
+	C0/BF6A 85 37       STA $37       
+	
+	C0/BF6C A5 06       LDA $06       
+	C0/BF6E E2 20       SEP #$20                
+	C0/BF70 64 39       STZ $39       
+
+	C0/BF72 06 37       ASL $37       		; * 4 (three byte)
+	C0/BF74 26 38       ROL $38       		; (xx * #400)
+	C0/BF76 26 39       ROL $39       
+	C0/BF78 06 37       ASL $37       
+	C0/BF7A 26 38       ROL $38       
+	C0/BF7C 26 39       ROL $39       
+	
+	C0/BF7E A5 37       LDA $37       		; Return xx * 1000
+	C0/BF80 38          SEC                 ;	(xx * #3E8)    
+	C0/BF81 E5 0D       SBC $0D       
+	C0/BF83 85 37       STA $37       
+	C0/BF85 A5 38       LDA $38       
+	C0/BF87 E5 0E       SBC $0E       
+	C0/BF89 85 38       STA $38       
+	C0/BF8B A5 39       LDA $39       
+	C0/BF8D E9 00       SBC #$00                
+	C0/BF8F 85 39       STA $39       
+	C0/BF91 60          RTS                     	
+	
+C0/BF0A 20 FE 0E    JSR $0EFE
+	C0/0EFE AD 47 09    LDA $0947
+	C0/0F01 18          CLC
+	C0/0F02 65 37       ADC $37
+	C0/0F04 8D 47 09    STA $0947
+	
+	C0/0F07 AD 48 09    LDA $0948
+	C0/0F0A 65 38       ADC $38
+	C0/0F0C 8D 48 09    STA $0948
+	
+	C0/0F0F AD 49 09    LDA $0949
+	C0/0F12 65 39       ADC $39
+	C0/0F14 8D 49 09    STA $0949
+	C0/0F17 C9 98       CMP #$98			; Cap at 9,999,999 GP Max
+	C0/0F19 F0 04       BEQ $0F1F
+	C0/0F1B 90 1F       BCC $0F3C
+
+	C0/0F1F AD 48 09    LDA $0948     
+	C0/0F22 C9 96       CMP #$96                
+	C0/0F24 F0 04       BEQ $04    [$0F2A]      
+	C0/0F26 90 14       BCC $14    [$0F3C]      
+	C0/0F28 B0 07       BCS $07    [$0F31]
+	
+	C0/0F2A AD 47 09    LDA $0947     
+	C0/0F2D C9 7F       CMP #$7F                
+	C0/0F2F 90 0B       BCC $0B    [$0F3C]      
+
+	C0/0F31 A2 96 98    LDX #$9896              
+	C0/0F34 8E 48 09    STX $0948     
+	C0/0F37 A9 7F       LDA #$7F                
+	C0/0F39 8D 47 09    STA $0947     
+
+	C0/0F3C 60          RTS                     
+	
+C0/BF0D 4C 30 A6    JMP $A630
+
+
+**********************************************
+B0 xx: (Remove GP?)
+**********************************************
+C0/BF10 20 3F BF    JSR $BF3F     
+C0/BF13 AD 47 09    LDA $0947     
+C0/BF16 38          SEC                     
+C0/BF17 ED 37 0B    SBC $0B37     
+C0/BF1A 8D 47 09    STA $0947     
+C0/BF1D AD 48 09    LDA $0948     
+C0/BF20 ED 38 0B    SBC $0B38     
+C0/BF23 8D 48 09    STA $0948     
+C0/BF26 AD 49 09    LDA $0949     
+C0/BF29 ED 39 0B    SBC $0B39     
+C0/BF2C 8D 49 09    STA $0949     
+C0/BF2F C9 9A       CMP #$9A                
+C0/BF31 90 09       BCC $09    [$BF3C]      
+C0/BF33 9C 47 09    STZ $0947     
+C0/BF36 9C 48 09    STZ $0948     
+C0/BF39 9C 49 09    STZ $0949     
+C0/BF3C 4C 30 A6    JMP $A630     
+
+
+**********************************************
+B1 xx: Set Player Sprite
+**********************************************
+C0/C6D4 A5 DF       LDA $DF
+C0/C6D6 8D DA 0A    STA $0ADA
+C0/C6D9 E6 A1       INC $A1
+C0/C6DB 4C 30 A6    JMP $A630
+
+
+**********************************************
+B2 xx: Pause xx Cycles
+**********************************************
+C0/C70B A5 DF       LDA $DF
+C0/C70D AA          TAX
+C0/C70E DA          PHX
+C0/C70F 20 DE C6    JSR $C6DE
+	C0/C6DE 20 95 4C    JSR $4C95
+	C0/C6E1 A5 53       LDA $53
+	C0/C6E3 D0 13       BNE $C6F8
+	C0/C6E5 20 1D 1A    JSR $1A1D
+	C0/C6E8 20 37 21    JSR $2137
+	C0/C6EB 20 C5 1E    JSR $1EC5
+	C0/C6EE 20 64 1E    JSR $1E64
+	C0/C6F1 20 0A 42    JSR $420A
+	C0/C6F4 20 2B 61    JSR $612B
+	C0/C6F7 60          RTS
+C0/C712 20 41 4E    JSR $4E41			; Wait for Screen Refresh
+	C0/4E41 64 51       STZ $51
+	C0/4E43 A5 51       LDA $51
+	C0/4E45 F0 FC       BEQ $4E43
+	C0/4E47 64 51       STZ $51
+	C0/4E49 60          RTS	
+C0/C715 FA          PLX
+C0/C716 CA          DEX
+C0/C717 D0 F5       BNE $C70E
+C0/C719 4C 30 A6    JMP $A630
+
+
+**********************************************
+B3 xx: Pause xx0 Cycles
+**********************************************
+C0/C71C A5 DF       LDA $DF
+C0/C71E AA          TAX
+C0/C71F DA          PHX
+C0/C720 A0 0F 00    LDY #$000F
+C0/C723 5A          PHY
+
+C0/C724 20 DE C6    JSR $C6DE
+C0/C727 20 41 4E    JSR $4E41
+
+C0/C72A 7A          PLY
+C0/C72B 88          DEY
+C0/C72C D0 F5       BNE $C723
+C0/C72E FA          PLX
+C0/C72F CA          DEX
+C0/C730 D0 ED       BNE $C71F
+C0/C732 4C 30 A6    JMP $A630
+
+
+**********************************************
+B4 xx: Play BGM xx
+**********************************************
+C0/C212 A5 DF       LDA $DF
+C0/C214 8D 01 1D    STA $1D01
+C0/C217 A9 01       LDA #$01
+C0/C219 8D 00 1D    STA $1D00
+C0/C21C A9 08       LDA #$08
+C0/C21E 8D 02 1D    STA $1D02
+C0/C221 A9 0F       LDA #$0F
+C0/C223 8D 03 1D    STA $1D03
+C0/C226 A9 01       LDA #$01
+C0/C228 85 5C       STA $5C
+C0/C22A 22 04 00 C4 JSL $C40004
+C0/C22E 20 41 4E    JSR $4E41
+C0/C231 64 5C       STZ $5C
+C0/C233 4C 30 A6    JMP $A630
+
+
+**********************************************
+B5 xx: Play Sound Effect xx
+**********************************************
+C0/C25A A5 DF       LDA $DF
+C0/C25C 20 3C 46    JSR $463C
+	C0/463C 8D 01 1D    STA $1D01
+	C0/463F A9 02       LDA #$02
+	C0/4641 8D 00 1D    STA $1D00
+	C0/4644 A9 0F       LDA #$0F
+	C0/4646 8D 02 1D    STA $1D02
+	C0/4649 A9 88       LDA #$88
+	C0/464B 8D 03 1D    STA $1D03
+C0/464E 22 04 00 C4 JSL $C40004
+C0/4652 60          RTS
+
+C0/C25F 22 04 00 C4 JSL $C40004
+C0/C263 4C 30 A6    JMP $A630
+
+
+**********************************************
+B6 xx: (Text Related?)
+**********************************************
+C0/BAD9 A5 DF       LDA $DF
+C0/BADB 20 C8 44    JSR $44C8
+	C0/44C8 48          PHA                     
+	C0/44C9 9C 0B 42    STZ $420B     
+	C0/44CC 9C 0C 42    STZ $420C     
+	C0/44CF A9 00       LDA #$00                
+	C0/44D1 8D 00 42    STA $4200     
+	C0/44D4 A9 80       LDA #$80                
+	C0/44D6 8D 00 21    STA $2100     
+	C0/44D9 78          SEI                     
+	C0/44DA 68          PLA                     
+	C0/44DB 22 00 00 C3 JSL $C30000
+	C0/44DF 20 E3 44    JSR $44E3
+		C0/44E3 C2 10       REP #$10                
+		C0/44E5 E2 20       SEP #$20                       
+		C0/44E7 A9 00       LDA #$00                
+		C0/44E9 48          PHA                     
+		C0/44EA AB          PLB                     
+		C0/44EB A2 00 0B    LDX #$0B00              
+		C0/44EE DA          PHX                     
+		C0/44EF 2B          PLD                     
+		C0/44F0 9C 0B 42    STZ $420B     
+		C0/44F3 9C 0C 42    STZ $420C     
+		C0/44F6 A9 8F       LDA #$8F                
+		C0/44F8 8D 00 21    STA $2100     
+		C0/44FB A9 00       LDA #$00                
+		C0/44FD 8D 00 42    STA $4200     
+		C0/4500 A9 00       LDA #$00                
+		C0/4502 EB          XBA                     
+		C0/4503 20 4A 4E    JSR $4E4A
+		C0/4506 20 69 4E    JSR $4E69
+		C0/4509 60          RTS
+	C0/44E2 60          RTS
+C0/BADE 4C 30 A6    JMP $A630
+
+
+
+**********************************************
+B7 xx: (Add/Remove Character xx?)
+**********************************************
+C0/BE62 A5 DF       LDA $DF       
+C0/BE64 30 46       BMI $46    [$BEAC]      
+
+C0/BE66 29 07       AND #$07                
+C0/BE68 48          PHA                     
+C0/BE69 C9 04       CMP #$04                
+C0/BE6B D0 11       BNE $11    [$BE7E]      
+C0/BE6D A9 02       LDA #$02                
+C0/BE6F 20 64 C1    JSR $C164     
+C0/BE72 B9 00 05    LDA $0500,y   
+C0/BE75 29 80       AND #$80                
+C0/BE77 05 DF       ORA $DF       
+C0/BE79 99 00 05    STA $0500,y   
+C0/BE7C 80 0B       BRA $0B    [$BE89]      
+C0/BE7E 20 64 C1    JSR $C164     
+C0/BE81 B9 00 05    LDA $0500,y   
+C0/BE84 29 BF       AND #$BF                
+C0/BE86 99 00 05    STA $0500,y   
+C0/BE89 68          PLA                     
+C0/BE8A 0A          ASL A                   
+C0/BE8B 85 08       STA $08       
+C0/BE8D 0A          ASL A                   
+C0/BE8E 18          CLC                     
+C0/BE8F 65 08       ADC $08       
+C0/BE91 A8          TAY                     
+C0/BE92 18          CLC                     
+C0/BE93 65 08       ADC $08       
+C0/BE95 AA          TAX                     
+C0/BE96 F0 11       BEQ $11    [$BEA9]      
+C0/BE98 A9 06       LDA #$06                
+C0/BE9A 85 09       STA $09       
+C0/BE9C BF C1 BE C0 LDA $C0BEC1,x[$C0:BEC1] 
+C0/BEA0 99 90 09    STA $0990,y   
+C0/BEA3 E8          INX                     
+C0/BEA4 C8          INY                     
+C0/BEA5 C6 09       DEC $09       
+C0/BEA7 D0 F3       BNE $F3    [$BE9C]      
+C0/BEA9 4C 30 A6    JMP $A630     
+
+C0/BEAC 29 07       AND #$07                
+C0/BEAE 20 64 C1    JSR $C164     
+C0/BEB1 C0 40 01    CPY #$0140              
+C0/BEB4 F0 08       BEQ $08    [$BEBE]      
+C0/BEB6 B9 00 05    LDA $0500,y   
+C0/BEB9 09 40       ORA #$40                
+C0/BEBB 99 00 05    STA $0500,y   
+C0/BEBE 4C 30 A6    JMP $A630     
+
+
+**********************************************
+B8 xx:
+**********************************************
+C0/C67D A5 46       LDA $46       			; If not set, exit
+C0/C67F D0 08       BNE $C689
+      
+C0/C681 A5 DF       LDA $DF       			
+C0/C683 20 D7 49    JSR $49D7     
+	C0/49D7 48          PHA					; Store xx
+	C0/49D8 A5 47       LDA $47				
+	C0/49DA 85 48       STA $48
+	C0/49DC A5 49       LDA $49
+	C0/49DE 85 4A       STA $4A
+	C0/49E0 64 49       STZ $49
+	C0/49E2 A9 07       LDA #$07
+	C0/49E4 85 47       STA $47
+	C0/49E6 68          PLA
+	C0/49E7 80 10       BRA $49F9
+	
+	C0/49F9 20 44 4A    JSR $4A44
+		C0/4A44 48          PHA
+		C0/4A45 48          PHA
+		
+		C0/4A46 29 E0       AND #$E0
+		C0/4A48 85 08       STA $08
+		
+		C0/4A4A 68          PLA
+		C0/4A4B 29 07       AND #$07
+		C0/4A4D 0A          ASL A
+		C0/4A4E 0A          ASL A
+		C0/4A4F 18          CLC
+		C0/4A50 69 03       ADC #$03
+		C0/4A52 05 08       ORA $08
+		C0/4A54 85 4C       STA $4C
+		
+		C0/4A56 68          PLA
+		C0/4A57 29 18       AND #$18
+		C0/4A59 4A          LSR A
+		C0/4A5A 4A          LSR A
+		C0/4A5B 4A          LSR A
+		C0/4A5C AA          TAX
+		C0/4A5D BF 64 4A C0 LDA $C04A64,x		[81 82 84 84]
+		C0/4A61 85 44       STA $44
+		C0/4A63 60          RTS
+	C0/49FC 64 46       STZ $46
+	C0/49FE 60          RTS
+C0/C686 4C 30 A6    JMP $A630     
+
+C0/C689 A5 44       LDA $44       
+C0/C68B 29 7F       AND #$7F                
+C0/C68D 85 44       STA $44       
+C0/C68F 4C 30 A6    JMP $A630     
+
+**********************************************
+B9 xx:
+**********************************************
+C0/C692 A5 46       LDA $46
+C0/C694 D0 08       BNE $C69E
+
+C0/C696 A5 DF       LDA $DF
+C0/C698 20 E9 49    JSR $49E9
+	C0/49E9 48          PHA
+	C0/49EA A5 47       LDA $47
+	C0/49EC 85 48       STA $48
+	C0/49EE A5 49       LDA $49
+	C0/49F0 85 4A       STA $4A
+	C0/49F2 64 49       STZ $49
+	C0/49F4 A9 87       LDA #$87
+	C0/49F6 85 47       STA $47
+	C0/49F8 68          PLA
+	C0/49F9 20 44 4A    JSR $4A44
+	C0/49FC 64 46       STZ $46
+	C0/49FE 60          RTS
+C0/C69B 4C 30 A6    JMP $A630
+
+C0/C69E A5 44       LDA $44       
+C0/C6A0 29 7F       AND #$7F                
+C0/C6A2 85 44       STA $44       
+C0/C6A4 4C 30 A6    JMP $A630     
+
+
+**********************************************
+BA xx yy: Clear Character xx Status 0 yy
+**********************************************
+C0/BFF1 A5 DF       LDA $DF 
+C0/BFF3 29 07       AND #$07 
+C0/BFF5 20 64 C1    JSR $C164			; Get Character Slot
+C0/BFF8 C0 40 01    CPY #$0140			; If not slotted, exit
+C0/BFFB F0 0F       BEQ $C00C
+
+C0/BFFD B9 00 05    LDA $0500,y		; If bit 6, exit
+C0/C000 29 40       AND #$40 
+C0/C002 D0 08       BNE $C00C
+
+C0/C004 B9 1A 05    LDA $051A,y		; Clear Status 0
+C0/C007 25 E0       AND $E0    
+C0/C009 99 1A 05    STA $051A,y
+
+C0/C00C 4C 38 A6    JMP $A638 
+
+**********************************************
+BB xx yy: Set Character xx Status 0 yy
+**********************************************
+C0/C00F A5 DF       LDA $DF       
+C0/C011 29 07       AND #$07                
+C0/C013 20 64 C1    JSR $C164     
+C0/C016 C0 40 01    CPY #$0140              
+C0/C019 F0 0F       BEQ $0F    [$C02A]      
+C0/C01B B9 00 05    LDA $0500,y   
+C0/C01E 29 40       AND #$40                
+C0/C020 D0 08       BNE $08    [$C02A]      
+C0/C022 B9 1A 05    LDA $051A,y   
+C0/C025 05 E0       ORA $E0       
+C0/C027 99 1A 05    STA $051A,y   
+C0/C02A 4C 38 A6    JMP $A638     
+
+
+
+**********************************************
+BC xx yy:  
+**********************************************
+$C0/C02D A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C02F 29 07       AND #$07                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C031 20 64 C1    JSR $C164  [$00:C164]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C034 C0 40 01    CPY #$0140              A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C037 F0 0F       BEQ $0F    [$C048]      A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C039 B9 00 05    LDA $0500,y[$00:0500]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C03C 29 40       AND #$40                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C03E D0 08       BNE $08    [$C048]      A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C040 B9 1A 05    LDA $051A,y[$00:051A]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C043 45 E0       EOR $E0    [$00:00E0]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C045 99 1A 05    STA $051A,y[$00:051A]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C048 4C 38 A6    JMP $A638  [$00:A638]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+
+
+**********************************************
+BD xx: Start Event Battle xx
+**********************************************
+C0/BD8D A5 DF       LDA $DF
+C0/BD8F 29 7F       AND #$7F
+C0/BD91 20 E6 BD    JSR $BDE6
+	C0/BDE6 A6 06       LDX $06
+	C0/BDE8 8E A8 16    STX $16A8
+	C0/BDEB C2 20       REP #$20       
+	C0/BDED 0A          ASL A
+	C0/BDEE 0A          ASL A
+	C0/BDEF AA          TAX
+	C0/BDF0 A5 06       LDA $06
+	C0/BDF2 E2 20       SEP #$20       
+	C0/BDF4 20 52 CC    JSR $CC52
+	C0/BDF7 C9 C0       CMP #$C0
+	C0/BDF9 90 02       BCC $BDFD
+	C0/BDFD C2 20       REP #$20       
+	C0/BDFF BF 00 78 D0 LDA $D07800,x
+	C0/BE03 8D F0 04    STA $04F0
+	C0/BE06 A5 06       LDA $06
+	C0/BE08 E2 20       SEP #$20       
+	C0/BE0A A5 E0       LDA $E0
+	C0/BE0C C9 FF       CMP #$FF
+	C0/BE0E D0 03       BNE $BE13
+	C0/BE10 AD 24 11    LDA $1124
+	C0/BE13 8D F2 04    STA $04F2
+	C0/BE16 E6 55       INC $55
+	C0/BE18 A9 6F       LDA #$6F
+	C0/BE1A 20 3C 46    JSR $463C
+	C0/BE1D 20 DD CC    JSR $CCDD
+	C0/BE20 9C 0B 42    STZ $420B
+	C0/BE23 9C 0C 42    STZ $420C
+	C0/BE26 A9 00       LDA #$00
+	C0/BE28 8D 00 42    STA $4200
+	C0/BE2B A9 80       LDA #$80
+	C0/BE2D 8D 00 21    STA $2100
+	C0/BE30 78          SEI
+	C0/BE31 22 00 00 C2 JSL $C20000
+$C0/BD94 AD C4 09    LDA $09C4  [$00:09C4]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BD97 29 01       AND #$01                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BD99 F0 08       BEQ $08    [$BDA3]      A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BD9B A9 F0       LDA #$F0                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BD9D 8D 00 1D    STA $1D00  [$00:1D00]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDA0 4C 00 00    JMP $0000  [$00:0000]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+$C0/BDA3 20 7C 57    JSR $577C  [$00:577C]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDA6 A9 F0       LDA #$F0                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDA8 85 43       STA $43    [$00:0043]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDAA 64 45       STZ $45    [$00:0045]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDAC A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDAE 30 03       BMI $03    [$BDB3]      A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDB0 20 00 61    JSR $6100  [$00:6100]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDB3 A9 81       LDA #$81                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDB5 8D 00 42    STA $4200  [$00:4200]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDB8 58          CLI                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/BDB9 4C 38 A6    JMP $A638  [$00:A638]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+
+
+**********************************************
+BE xy: Rumble Effect
+**********************************************
+C0/C6C4 A5 DF       LDA $DF
+C0/C6C6 85 D3       STA $D3
+C0/C6C8 4C 30 A6    JMP $A630
+
+
+
+**********************************************
+BF: ???
+**********************************************
+C0/A672 A5 DF       LDA $DF
+C0/A674 C2 20       REP #$20       
+C0/A676 0A          ASL A
+C0/A677 AA          TAX
+C0/A678 BF E8 A5 C0 LDA $C0A5E8,x
+C0/A67C 85 23       STA $23
+C0/A67E A5 06       LDA $06
+C0/A680 E2 20       SEP #$20       
+C0/A682 6C 23 0B    JMP ($0B23)
+
+44 B0 4C B0 A7 B0 B0 B6 59 B2 85 B1 48 B5 37 AC
+4A AC 65 AC 71 AC B1 B5 34 B8 48 B8 3A B8 01 AC
+1C AC 0B B1 65 AB 49 AB 8B A9 6D A8 52 B0 0E B6
+66 A7 C9 A7 85 A6
+
+
+
+**********************************************
+C0 xx: (Circle Effect)
+**********************************************
+C0/BC6C A5 DF       LDA $DF    		; Get xx
+C0/BC6E 29 7F       AND #$7F   
+C0/BC70 8D 9A 16    STA $169A  		; low 7 store
+C0/BC73 D0 15       BNE $BC8A		; If not 0, jump
+
+C0/BC75 A9 BF       LDA #$BF 		
+C0/BC77 8D 23 21    STA $2123
+C0/BC7A A9 0B       LDA #$0B 
+C0/BC7C 8D 24 21    STA $2124
+C0/BC7F A9 01       LDA #$01 
+C0/BC81 8D 2A 21    STA $212A
+C0/BC84 20 7B 8C    JSR $8C7B
+C0/BC87 4C 30 A6    JMP $A630
+
+C0/BC8A A5 DF       LDA $DF  
+C0/BC8C 10 0B       BPL $BC99
+C0/BC8E A9 FF       LDA #$FF 
+C0/BC90 8D 23 21    STA $2123
+C0/BC93 8D 24 21    STA $2124
+C0/BC96 8D 2A 21    STA $212A
+C0/BC99 20 30 5D    JSR $5D30
+C0/BC9C 4C 30 A6    JMP $A630
+
+
+
+**********************************************
+C1 xx: ???
+**********************************************
+C0/C6CB A5 DF       LDA $DF
+C0/C6CD 85 A4       STA $A4
+C0/C6CF E6 A2       INC $A2
+C0/C6D1 4C 30 A6    JMP $A630
+
+
+
+**********************************************
+C2 xx: (Set some flag)
+**********************************************
+C0/C1AA A5 DF       LDA $DF       
+C0/C1AC 3A          DEC A                   
+C0/C1AD 0A          ASL A                   
+C0/C1AE 0A          ASL A                   
+C0/C1AF A8          TAY                     
+C0/C1B0 B9 DE 0A    LDA $0ADE,y   
+C0/C1B3 09 80       ORA #$80                
+C0/C1B5 99 DE 0A    STA $0ADE,y   
+C0/C1B8 4C 30 A6    JMP $A630
+     
+
+	 
+**********************************************
+C3 xx: Fade In Speed xx
+**********************************************
+C0/C6AC A5 DF       LDA $DF    
+C0/C6AE 85 43       STA $43    
+C0/C6B0 A9 10       LDA #$10                
+C0/C6B2 85 45       STA $45
+C0/C6B4 4C 30 A6    JMP $A630
+
+**********************************************
+C4 xx: Fade Out Speed xx
+**********************************************
+C0/C6B7 A5 DF       LDA $DF       
+C0/C6B9 09 80       ORA #$80                
+C0/C6BB 85 43       STA $43       
+C0/C6BD A9 F0       LDA #$F0                
+C0/C6BF 85 45       STA $45       
+C0/C6C1 4C 30 A6    JMP $A630     
+
+
+
+**********************************************
+C5 xx: ??? (graphics related?)
+**********************************************
+
+
+
+**********************************************
+C6 xx: Toggle Job Bit
+**********************************************
+C0/BEE9 A5 DF       LDA $DF			; Get xx
+C0/BEEB C2 20       REP #$20      
+C0/BEED AA          TAX				; Store xx in X
+C0/BEEE 4A          LSR A			; Divide by 8, store in Y
+C0/BEEF 4A          LSR A			;   (Gets byte to write to)
+C0/BEF0 4A          LSR A
+C0/BEF1 A8          TAY
+C0/BEF2 A5 06       LDA $06			; Load $0B06
+C0/BEF4 E2 20       SEP #$20       
+C0/BEF6 8A          TXA				; Get xx && #07
+C0/BEF7 29 07       AND #$07		;    (Gets bit to toggle)
+C0/BEF9 AA          TAX
+C0/BEFA B9 40 08    LDA $0840,y		; Set job bit
+C0/BEFD 1F 59 CA C0 ORA $C0CA59,x
+C0/BF01 99 40 08    STA $0840,y
+C0/BF04 4C 30 A6    JMP $A630
+
+
+
+**********************************************
+C7 xx: Play Next xx Bytes Simultaneously
+**********************************************
+C0/A26C C9 C7       CMP #$C7                
+C0/A26E D0 08       BNE $A278
+C0/A270 E6 D2       INC $D2			; Set D2 Flag
+C0/A272 20 0A A4    JSR $A40A		; Function Call, See Below
+	C0/A40A C2 20       REP #$20       
+	C0/A40C A6 D4       LDX $D4				; Offset Flag?
+	C0/A40E A9 01 00    LDA #$0001          ; Store TRUE in 1166,x
+	C0/A411 9D 66 11    STA $1166,x
+
+	C0/A414 A5 D6       LDA $D6    			; Pointer += 2
+	C0/A416 18          CLC                     
+	C0/A417 69 02 00    ADC #$0002              
+	C0/A41A 85 D6       STA $D6    			
+	C0/A41C 9D 26 11    STA $1126,x			; Store startpoint
+
+	C0/A41F A5 06       LDA $06    			; $D8 += $06
+	C0/A421 65 D8       ADC $D8    
+	C0/A423 85 D8       STA $D8    
+	C0/A425 9D 28 11    STA $1128,x
+
+	C0/A428 A5 DF       LDA $DF    			; xx + new pointer
+	C0/A42A 29 FF 00    AND #$00FF              
+	C0/A42D 18          CLC                     
+	C0/A42E 7D 26 11    ADC $1126,x			; Store endpoint
+	C0/A431 9D 46 11    STA $1146,x
+
+	C0/A434 A5 06       LDA $06    
+	C0/A436 7D 28 11    ADC $1128,x
+	C0/A439 9D 48 11    STA $1148,x
+
+	C0/A43C E6 D4       INC $D4    			; $D4 += 4
+	C0/A43E E6 D4       INC $D4    
+	C0/A440 E6 D4       INC $D4    
+	C0/A442 E6 D4       INC $D4    
+	C0/A444 A5 06       LDA $06    
+	C0/A446 E2 20       SEP #$20       
+	C0/A448 60          RTS
+C0/A275 4C CB A2    JMP $A2CB
+	C0/A2CB C2 20       REP #$20      		; If D4 Flag 0, exit                 
+	C0/A2CD A6 D4       LDX $D4
+	C0/A2CF F0 44       BEQ $A315      
+
+	C0/A2D1 A5 D6       LDA $D6
+	C0/A2D3 DD 42 11    CMP $1142,x
+	C0/A2D6 D0 3D       BNE $A315      
+
+	C0/A2D8 A5 D8       LDA $D8
+	C0/A2DA DD 44 11    CMP $1144,x
+	C0/A2DD D0 36       BNE $A315      
+
+	C0/A2DF BD 62 11    LDA $1162,x			; $1162--
+	C0/A2E2 3A          DEC A                   
+	C0/A2E3 9D 62 11    STA $1162,x
+	C0/A2E6 D0 23       BNE $A30B      
+
+	C0/A2E8 C6 D4       DEC $D4
+	C0/A2EA C6 D4       DEC $D4
+	C0/A2EC C6 D4       DEC $D4
+	C0/A2EE C6 D4       DEC $D4
+	C0/A2F0 A6 D4       LDX $D4
+	C0/A2F2 BD 46 11    LDA $1146,x			; Get $1146 + $D4
+	C0/A2F5 85 D6       STA $D6
+	C0/A2F7 BD 48 11    LDA $1148,x
+	C0/A2FA 85 D8       STA $D8
+	C0/A2FC A5 06       LDA $06
+	C0/A2FE E2 20       SEP #$20                       
+	C0/A300 64 D2       STZ $D2
+	C0/A302 C2 20       REP #$20                       
+	C0/A304 E0 00 00    CPX #$0000              
+	C0/A307 F0 0C       BEQ $A315
+	C0/A309 80 C0       BRA $A2CB
+
+	C0/A30B BD 22 11    LDA $1122,x
+	C0/A30E 85 D6       STA $D6
+	C0/A310 BD 24 11    LDA $1124,x
+	C0/A313 85 D8       STA $D8
+
+	C0/A315 A5 06       LDA $06
+	C0/A317 E2 20       SEP #$20       
+	C0/A319 4C 48 A2    JMP $A248
+
+**********************************************
+C8 xx yy: Display Message
+**********************************************
+C0/C7A4 C2 20       REP #$20			      
+C0/C7A6 A5 DF       LDA $DF				; Store xx
+C0/C7A8 85 AF       STA $AF
+C0/C7AA A5 06       LDA $06				; A = $06
+C0/C7AC E2 20       SEP #$20
+C0/C7AE AE D6 0A    LDX $0AD6			; If $0AD6 < #0005, jump
+C0/C7B1 E0 05 00    CPX #$0005			
+C0/C7B4 90 0C       BCC $C7C2			; Else all this shit
+C0/C7B6 20 95 4C    JSR $4C95
+	C0/4C95 A2 00 02    LDX #$0200              
+	C0/4C98 A9 F0       LDA #$F0                
+	C0/4C9A 9D FD 01    STA $01FD,x
+	C0/4C9D CA          DEX                     
+	C0/4C9E CA          DEX                     
+	C0/4C9F CA          DEX                     
+	C0/4CA0 CA          DEX                     
+	C0/4CA1 D0 F7       BNE $4C9A
+	C0/4CA3 A2 20 00    LDX #$0020              
+	C0/4CA6 9E FF 03    STZ $03FF,x
+	C0/4CA9 CA          DEX                     
+	C0/4CAA D0 FA       BNE $4CA6
+	C0/4CAC 60          RTS
+C0/C7B9 20 7C 23    JSR $237C
+C0/C7BC 20 B3 39    JSR $39B3
+	C0/39BC 84 23       STY $23       
+	C0/39BE 64 E5       STZ $E5       
+	C0/39C0 A5 E6       LDA $E6       
+	C0/39C2 48          PHA                     
+	C0/39C3 A4 E9       LDY $E9       
+	C0/39C5 AD 9F 16    LDA $169F     
+	C0/39C8 F0 08       BEQ $39D2      
+	C0/39CA C0 28 00    CPY #$0028              
+	C0/39CD B0 03       BCS $39D2      
+	C0/39CF 4C 67 3B    JMP $3B67     
+
+	C0/39D2 B9 85 14    LDA $1485,y
+	C0/39D5 29 01       AND #$01
+	C0/39D7 D0 03       BNE $39DC
+	C0/39D9 4C 67 3B    JMP $3B67
+
+	C0/3B67 C2 20       REP #$20                       
+	C0/3B69 A5 23       LDA $23       
+	C0/3B6B 18          CLC                     
+	C0/3B6C 69 08 00    ADC #$0008              
+	C0/3B6F 85 23       STA $23       
+	C0/3B71 A5 E9       LDA $E9       
+	C0/3B73 18          CLC                     
+	C0/3B74 69 14 00    ADC #$0014              
+	C0/3B77 85 E9       STA $E9       
+	C0/3B79 A5 06       LDA $06       
+	C0/3B7B E2 20       SEP #$20                       
+	C0/3B7D 68          PLA                     
+	C0/3B7E 3A          DEC A                   
+	C0/3B7F F0 03       BEQ $3B84      
+	C0/3B81 4C C2 39    JMP $39C2     
+	
+	C0/3B84 20 8E 35    JSR $358E
+		C0/358E AD 9F 16    LDA $169F     
+		C0/3591 F0 07       BEQ $359A      
+		C0/3593 AD 85 14    LDA $1485     
+		C0/3596 29 01       AND #$01                
+		C0/3598 D0 01       BNE $359B
+		C0/359A 60          RTS
+
+		C0/359B A9 AA       LDA #$AA                
+		C0/359D 8D 00 04    STA $0400     
+		C0/35A0 8D 01 04    STA $0401     
+		C0/35A3 8D 02 04    STA $0402     
+		C0/35A6 8D 03 04    STA $0403     
+		C0/35A9 A9 A0       LDA #$A0                
+		C0/35AB 8D 1F 04    STA $041F     
+		C0/35AE AD 7C 14    LDA $147C     
+		C0/35B1 4A          LSR A                   
+		C0/35B2 4A          LSR A                   
+		C0/35B3 4A          LSR A                   
+		C0/35B4 85 0C       STA $0C       
+		C0/35B6 AD 7E 14    LDA $147E     
+		C0/35B9 29 04       AND #$04                
+		C0/35BB F0 08       BEQ $35C5      
+		C0/35BD A9 01       LDA #$01                
+		C0/35BF 85 0C       STA $0C       
+		C0/35C1 A9 07       LDA #$07                
+		C0/35C3 80 30       BRA $35F5
+		C0/35C5 AD 85 14    LDA $1485
+		C0/35C8 29 08       AND #$08
+		C0/35CA F0 11       BEQ $35DD
+
+		C0/35DD AD 85 14    LDA $1485
+		C0/35E0 10 0E       BPL $35F0
+		C0/35E2 A5 3E       LDA $3E
+		C0/35E4 4A          LSR A
+		C0/35E5 4A          LSR A
+		C0/35E6 4A          LSR A
+		C0/35E7 29 03       AND #$03
+		C0/35E9 AA          TAX
+		C0/35EA BF BD 37 C0 LDA $C037BD,x
+		C0/35EE 80 05       BRA $35F5
+		C0/35F0 AD 7C 14    LDA $147C
+		C0/35F3 29 07       AND #$07
+		C0/35F5 C2 20       REP #$20                       
+		C0/35F7 0A          ASL A                   
+		C0/35F8 0A          ASL A                   
+		C0/35F9 0A          ASL A                   
+		C0/35FA 0A          ASL A                   
+		C0/35FB 85 23       STA $23       
+		C0/35FD 0A          ASL A                   
+		C0/35FE 18          CLC                     
+		C0/35FF 65 23       ADC $23       
+		C0/3601 AA          TAX                     
+		C0/3602 AD 77 14    LDA $1477     
+		C0/3605 4A          LSR A                   
+		C0/3606 4A          LSR A                   
+		C0/3607 4A          LSR A                   
+		C0/3608 18          CLC                     
+		C0/3609 69 10 00    ADC #$0010              
+		C0/360C 38          SEC                     
+		C0/360D E5 61       SBC $61       
+		C0/360F 85 13       STA $13       
+		C0/3611 AD 79 14    LDA $1479     
+		C0/3614 4A          LSR A                   
+		C0/3615 4A          LSR A                   
+		C0/3616 4A          LSR A                   
+		C0/3617 18          CLC                     
+		C0/3618 69 18 00    ADC #$0018              
+		C0/361B 38          SEC                     
+		C0/361C E5 63       SBC $63       
+		C0/361E 85 15       STA $15       
+		C0/3620 AD 88 14    LDA $1488     
+		C0/3623 F0 2D       BEQ $3652
+
+		C0/3652 A5 06       LDA $06       
+		C0/3654 A8          TAY                     
+		C0/3655 E2 20       SEP #$20                       
+		C0/3657 C2 20       REP #$20                       
+		C0/3659 C0 00 00    CPY #$0000              
+		C0/365C D0 13       BNE $3671      
+		C0/365E A5 0C       LDA $0C       
+		C0/3660 29 07 00    AND #$0007              
+		C0/3663 DA          PHX                     
+		C0/3664 0A          ASL A                   
+		C0/3665 AA          TAX                     
+		C0/3666 BF C9 37 C0 LDA $C037C9,x 
+		C0/366A FA          PLX                     
+		C0/366B 1F D5 37 C0 ORA $C037D5,x 
+		C0/366F 80 04       BRA $3675      
+		C0/3671 BF D5 37 C0 LDA $C037D5,x 
+		C0/3675 99 02 02    STA $0202,y   
+		C0/3678 29 FF 01    AND #$01FF              
+		C0/367B F0 39       BEQ $36B6      
+		C0/367D BF D3 37 C0 LDA $C037D3,x 
+		C0/3681 29 FF 00    AND #$00FF              
+		C0/3684 C9 80 00    CMP #$0080              
+		C0/3687 90 03       BCC $368C      
+		C0/3689 09 00 FF    ORA #$FF00
+		C0/368C 65 13       ADC $13       
+		C0/368E 29 FF 07    AND #$07FF              
+		C0/3691 C9 00 02    CMP #$0200              
+		C0/3694 B0 20       BCS $36B6      
+		C0/3696 4A          LSR A                   
+		C0/3697 38          SEC                     
+		C0/3698 E9 08 00    SBC #$0008              
+		C0/369B 85 0D       STA $0D       
+		C0/369D BF D4 37 C0 LDA $C037D4,x 
+		C0/36A1 29 FF 00    AND #$00FF              
+		C0/36A4 C9 80 00    CMP #$0080              
+		C0/36A7 90 03       BCC $36AC      
+		C0/36A9 09 00 FF    ORA #$FF00              
+		C0/36AC 65 15       ADC $15       
+		C0/36AE 29 FF 07    AND #$07FF              
+		C0/36B1 C9 E0 01    CMP #$01E0              
+		C0/36B4 90 07       BCC $36BD      
+		C0/36B6 A9 F0 00    LDA #$00F0              
+		C0/36B9 85 0F       STA $0F       
+		C0/36BB 80 18       BRA $36D5      
+		C0/36BD 4A          LSR A                   
+		C0/36BE 38          SEC                     
+		C0/36BF E9 10 00    SBC #$0010              
+		C0/36C2 85 0F       STA $0F       
+		C0/36C4 C0 00 00    CPY #$0000              
+		C0/36C7 D0 0C       BNE $36D5
+		C0/36C9 A5 0C       LDA $0C       
+		C0/36CB 29 08 00    AND #$0008              
+		C0/36CE 4A          LSR A                   
+		C0/36CF 4A          LSR A                   
+		C0/36D0 18          CLC                     
+		C0/36D1 65 0F       ADC $0F       
+		C0/36D3 85 0F       STA $0F
+		C0/36D5 A5 06       LDA $06       
+		C0/36D7 E2 20       SEP #$20                       
+		C0/36D9 A5 0D       LDA $0D       
+		C0/36DB C9 F8       CMP #$F8                
+		C0/36DD 90 1A       BCC $36F9      
+		C0/36F9 A5 0D       LDA $0D       
+		C0/36FB 99 00 02    STA $0200,y   
+		C0/36FE A5 0F       LDA $0F       
+		C0/3700 99 01 02    STA $0201,y   
+		C0/3703 E8          INX                     
+		C0/3704 E8          INX                     
+		C0/3705 E8          INX                     
+		C0/3706 E8          INX                     
+		C0/3707 C8          INY                     
+		C0/3708 C8          INY                     
+		C0/3709 C8          INY                     
+		C0/370A C8          INY                     
+		C0/370B C0 30 00    CPY #$0030              
+		C0/370E F0 03       BEQ $3713      
+		C0/3710 4C 57 36    JMP $3657     
+		
+		C0/3713 C2 20       REP #$20                       
+		C0/3715 AD 8B 14    LDA $148B     
+		C0/3718 4A          LSR A                   
+		C0/3719 4A          LSR A                   
+		C0/371A 4A          LSR A                   
+		C0/371B 18          CLC                     
+		C0/371C 69 10 00    ADC #$0010              
+		C0/371F 38          SEC                     
+		C0/3720 E5 61       SBC $61       
+		C0/3722 85 13       STA $13       
+		C0/3724 AD 8D 14    LDA $148D     
+		C0/3727 4A          LSR A                   
+		C0/3728 4A          LSR A                   
+		C0/3729 4A          LSR A                   
+		C0/372A 18          CLC                     
+		C0/372B 69 18 00    ADC #$0018              
+		C0/372E 38          SEC                     
+		C0/372F E5 63       SBC $63       
+		C0/3731 85 15       STA $15       
+		C0/3733 A5 06       LDA $06       
+		C0/3735 E2 20       SEP #$20                       
+		C0/3737 A6 06       LDX $06       
+		C0/3739 A4 06       LDY $06       
+		C0/373B C2 20       REP #$20                       
+		C0/373D BF C3 37 C0 LDA $C037C3,x 
+		C0/3741 99 FA 03    STA $03FA,y   
+		C0/3744 BF C1 37 C0 LDA $C037C1,x 
+		C0/3748 29 FF 00    AND #$00FF              
+		C0/374B C9 80 00    CMP #$0080              
+		C0/374E 90 03       BCC $3753      
+		C0/3750 09 00 FF    ORA #$FF00              
+		C0/3753 65 13       ADC $13       
+		C0/3755 29 FF 07    AND #$07FF              
+		C0/3758 C9 00 02    CMP #$0200              
+		C0/375B B0 18       BCS $3775      
+		C0/375D 4A          LSR A                   
+		C0/375E 38          SEC                     
+		C0/375F E9 08 00    SBC #$0008              
+		C0/3762 85 0D       STA $0D       
+		C0/3764 BF C2 37 C0 LDA $C037C2,x 
+		C0/3768 29 FF 00    AND #$00FF              
+		C0/376B 65 15       ADC $15       
+		C0/376D 29 FF 07    AND #$07FF              
+		C0/3770 C9 E0 01    CMP #$01E0              
+		C0/3773 90 07       BCC $377C      
+		C0/3775 A9 F0 00    LDA #$00F0              
+		C0/3778 85 0F       STA $0F       
+		C0/377A 80 07       BRA $3783      
+		C0/377C 4A          LSR A                   
+		C0/377D 38          SEC                     
+		C0/377E E9 10 00    SBC #$0010              
+		C0/3781 85 0F       STA $0F
+		C0/3783 A5 06       LDA $06       
+		C0/3785 E2 20       SEP #$20                       
+		C0/3787 A5 0D       LDA $0D       
+		C0/3789 C9 F8       CMP #$F8                
+		C0/378B 90 14       BCC $37A1      
+		C0/37A1 A5 0D       LDA $0D       
+		C0/37A3 99 F8 03    STA $03F8,y   
+		C0/37A6 A5 0F       LDA $0F       
+		C0/37A8 99 F9 03    STA $03F9,y   
+		C0/37AB C8          INY                     
+		C0/37AC C8          INY                     
+		C0/37AD C8          INY                     
+		C0/37AE C8          INY                     
+		C0/37AF E8          INX                     
+		C0/37B0 E8          INX                     
+		C0/37B1 E8          INX                     
+		C0/37B2 E8          INX                     
+		C0/37B3 C0 08 00    CPY #$0008              
+		C0/37B6 D0 83       BNE $373B
+		C0/37B8 60          RTS
+	C0/3B87 60          RTS
+C0/C7BF 20 42 28    JSR $2842
+
+
+C0/C7C2 20 AE 83    JSR $83AE				; FUUUUUUUU
+	C0/83AE 20 01 84    JSR $8401
+	C0/83B1 20 54 8F    JSR $8F54
+	C0/83B4 A6 B1       LDX $B1
+	C0/83B6 22 60 2D E0 JSL $E02D60
+	C0/83BA F0 3E       BEQ $83FA
+	C0/83BC 20 27 84    JSR $8427
+	C0/83BF A4 06       LDY $06
+	C0/83C1 84 AB       STY $AB
+	C0/83C3 20 3B 8D    JSR $8D3B
+	C0/83C6 20 41 4E    JSR $4E41
+	C0/83C9 20 7C 23    JSR $237C
+	C0/83CC 20 B3 39    JSR $39B3
+	C0/83CF 20 42 28    JSR $2842
+	C0/83D2 A4 AB       LDY $AB
+	C0/83D4 C0 F0 00    CPY #$00F0
+	C0/83D7 D0 EA       BNE $83C3
+	C0/83D9 A5 B8       LDA $B8
+	C0/83DB D0 09       BNE $83E6
+	C0/83DD 20 AD 4A    JSR $4AAD
+	C0/83E0 20 C1 4A    JSR $4AC1
+	C0/83E3 20 AD 4A    JSR $4AAD
+	C0/83E6 64 B8       STZ $B8
+	C0/83E8 E6 A5       INC $A5
+	C0/83EA 20 41 4E    JSR $4E41
+	C0/83ED 20 7C 23    JSR $237C
+	C0/83F0 20 B3 39    JSR $39B3
+	C0/83F3 20 42 28    JSR $2842
+	C0/83F6 A5 B3       LDA $B3
+	C0/83F8 F0 B7       BEQ $83B1
+	C0/83FA 20 A8 94    JSR $94A8
+	C0/83FD 20 41 4E    JSR $4E41
+	C0/8400 60          RTS
+C0/C7C5 4C 38 A6    JMP $A638
+
+
+**********************************************
+C9 xx yy: (Music Related - Change Speed?)
+**********************************************
+$C0/C1ED A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C1EF 8D 02 1D    STA $1D02  [$00:1D02]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C1F2 A5 E0       LDA $E0    [$00:00E0]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C1F4 8D 03 1D    STA $1D03  [$00:1D03]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C1F7 AD 09 1D    LDA $1D09  [$00:1D09]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C1FA 8D 01 1D    STA $1D01  [$00:1D01]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C1FD A9 01       LDA #$01                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C1FF 8D 00 1D    STA $1D00  [$00:1D00]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C202 A9 01       LDA #$01                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C204 85 5C       STA $5C    [$00:005C]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C206 22 04 00 C4 JSL $C40004[$C4:0004]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C20A 20 41 4E    JSR $4E41  [$00:4E41]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C20D 64 5C       STZ $5C    [$00:005C]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C20F 4C 38 A6    JMP $A638  [$00:A638]   A:0000 X:0000 Y:0000 P:EnvMxdIz
+
+**********************************************
+CA xx yy: Set Flag 2/3/4/5xx
+**********************************************
+$C0/C9CE C2 20       REP #$20                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9D0 A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C9D2 E2 20       SEP #$20                A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C9D4 20 49 CA    JSR $CA49  [$00:CA49]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9D7 B9 54 0A    LDA $0A54,y[$00:0A54]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9DA 1F 59 CA C0 ORA $C0CA59,x[$C0:CA59] A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9DE 99 54 0A    STA $0A54,y[$00:0A54]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9E1 4C 38 A6    JMP $A638  [$00:A638]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+**********************************************
+CB xx yy: Clear Flag 2/3/4/5xx
+**********************************************
+$C0/C9E4 C2 20       REP #$20                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9E6 A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C9E8 E2 20       SEP #$20                A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C9EA 20 49 CA    JSR $CA49  [$00:CA49]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9ED B9 54 0A    LDA $0A54,y[$00:0A54]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9F0 3F 61 CA C0 AND $C0CA61,x[$C0:CA61] A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9F4 99 54 0A    STA $0A54,y[$00:0A54]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C9F7 4C 38 A6    JMP $A638  [$00:A638]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+
+*********************************************
+CC: No Function (per asm)
+**********************************************
+
+
+*********************************************
+CD xx yy: Run Event Index yyxx
+**********************************************
+C0/A28E C9 CD       CMP #$CD                
+C0/A290 D0 06       BNE $A298      
+C0/A292 20 80 A3    JSR $A380
+	C0/A380 C2 20       REP #$20                       
+	C0/A382 A4 D4       LDY $D4    [$00:0BD4]   
+	C0/A384 A9 01 00    LDA #$0001              
+	C0/A387 99 66 11    STA $1166,y[$00:1166]   
+	C0/A38A A5 D6       LDA $D6    [$00:0BD6]   
+	C0/A38C 18          CLC                     
+	C0/A38D 69 03 00    ADC #$0003              
+	C0/A390 99 46 11    STA $1146,y[$00:1146]   
+	C0/A393 A5 06       LDA $06    [$00:0B06]   
+	C0/A395 65 D8       ADC $D8    [$00:0BD8]   
+	C0/A397 99 48 11    STA $1148,y[$00:1148]   
+	C0/A39A A5 DF       LDA $DF    [$00:0BDF]   
+	C0/A39C 0A          ASL A                   
+	C0/A39D 18          CLC                     
+	C0/A39E 65 DF       ADC $DF    [$00:0BDF]   
+	C0/A3A0 AA          TAX                     
+	C0/A3A1 BF 20 33 C8 LDA $C83320,x[$C8:3392] 
+	C0/A3A5 99 26 11    STA $1126,y[$00:1126]   
+	C0/A3A8 85 D6       STA $D6    [$00:0BD6]   
+	C0/A3AA BF 22 33 C8 LDA $C83322,x[$C8:3394] 
+	C0/A3AE 29 FF 00    AND #$00FF              
+	C0/A3B1 99 28 11    STA $1128,y[$00:1128]   
+	C0/A3B4 85 D8       STA $D8    [$00:0BD8]   
+	C0/A3B6 A9 01 00    LDA #$0001              
+	C0/A3B9 99 66 11    STA $1166,y[$00:1166]   
+	C0/A3BC E6 D4       INC $D4    [$00:0BD4]   
+	C0/A3BE E6 D4       INC $D4    [$00:0BD4]   
+	C0/A3C0 E6 D4       INC $D4    [$00:0BD4]   
+	C0/A3C2 E6 D4       INC $D4    [$00:0BD4]   
+	C0/A3C4 A5 06       LDA $06    [$00:0B06]   
+	C0/A3C6 E2 20       SEP #$20                       
+	C0/A3C8 60          RTS
+C0/A295 4C CB A2    JMP $A2CB
+	C0/A2CB C2 20       REP #$20                       
+	C0/A2CD A6 D4       LDX $D4    [$00:0BD4]   
+	C0/A2CF F0 44       BEQ $A315      
+	C0/A2D1 A5 D6       LDA $D6    [$00:0BD6]   
+	C0/A2D3 DD 42 11    CMP $1142,x
+	C0/A2D6 D0 3D       BNE $A315      
+	C0/A2D8 A5 D8       LDA $D8    [$00:0BD8]   
+	C0/A2DA DD 44 11    CMP $1144,x
+	C0/A2DD D0 36       BNE $A315      
+	C0/A2DF BD 62 11    LDA $1162,x
+	C0/A2E2 3A          DEC A                   
+	C0/A2E3 9D 62 11    STA $1162,x
+	C0/A2E6 D0 23       BNE $A30B      
+	C0/A2E8 C6 D4       DEC $D4    [$00:0BD4]   
+	C0/A2EA C6 D4       DEC $D4    [$00:0BD4]   
+	C0/A2EC C6 D4       DEC $D4    [$00:0BD4]   
+	C0/A2EE C6 D4       DEC $D4    [$00:0BD4]   
+	C0/A2F0 A6 D4       LDX $D4    [$00:0BD4]   
+	C0/A2F2 BD 46 11    LDA $1146,x
+	C0/A2F5 85 D6       STA $D6    [$00:0BD6]   
+	C0/A2F7 BD 48 11    LDA $1148,x
+	C0/A2FA 85 D8       STA $D8    [$00:0BD8]   
+	C0/A2FC A5 06       LDA $06    [$00:0B06]   
+	C0/A2FE E2 20       SEP #$20                       
+	C0/A300 64 D2       STZ $D2    [$00:0BD2]   
+	C0/A302 C2 20       REP #$20                       
+	C0/A304 E0 00 00    CPX #$0000              
+	C0/A307 F0 0C       BEQ $A315
+	C0/A309 80 C0       BRA $A2CB
+	C0/A30B BD 22 11    LDA $1122,x
+	C0/A30E 85 D6       STA $D6    [$00:0BD6]   
+	C0/A310 BD 24 11    LDA $1124,x
+	C0/A313 85 D8       STA $D8
+	C0/A315 A5 06       LDA $06
+	C0/A317 E2 20       SEP #$20       
+	C0/A319 4C 48 A2    JMP $A248
+
+
+*********************************************
+CE xx:
+**********************************************
+
+
+*********************************************
+CF xx:
+**********************************************
+
+
+*********************************************
+D0 xx yy: (Music Related)
+**********************************************
+C0/BCB4 A5 DF       LDA $DF
+C0/BCB6 8D 00 1D    STA $1D00
+C0/BCB9 A5 E0       LDA $E0
+C0/BCBB 8D 01 1D    STA $1D01
+C0/BCBE A9 01       LDA #$01
+C0/BCC0 85 5C       STA $5C
+C0/BCC2 22 04 00 C4 JSL $C40004
+C0/BCC6 20 41 4E    JSR $4E41
+C0/BCC9 64 5C       STZ $5C
+C0/BCCB 4C 38 A6    JMP $A638
+
+
+
+*********************************************
+D1 xx yy zz: (xx, zzyy - Timed, see D7)
+**********************************************
+$C0/C5FB A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C5FD 8D 02 42    STA $4202  [$00:4202]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C600 A9 3C       LDA #$3C                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C602 8D 03 42    STA $4203  [$00:4203]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C605 EA          NOP                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C606 EA          NOP                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C607 EA          NOP                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C608 EA          NOP                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C609 C2 20       REP #$20                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C60B AD 16 42    LDA $4216  [$00:4216]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C60E 1A          INC A                   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C60F 8D FC 0A    STA $0AFC  [$00:0AFC]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C612 A5 E0       LDA $E0    [$00:00E0]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C614 8D FE 0A    STA $0AFE  [$00:0AFE]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C617 A5 06       LDA $06    [$00:0006]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C619 E2 20       SEP #$20                A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C61B A9 01       LDA #$01                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C61D 8D FB 0A    STA $0AFB  [$00:0AFB]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C620 4C 40 A6    JMP $A640  [$00:A640]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+
+
+**********************************************
+D2 xx yy zz ww: (Map)
+**********************************************
+C0/C1BB A5 E2       LDA $E2       
+C0/C1BD 29 E0       AND #$E0                
+C0/C1BF 4A          LSR A                   
+C0/C1C0 4A          LSR A                   
+C0/C1C1 4A          LSR A                   
+C0/C1C2 38          SEC                     
+C0/C1C3 E9 04       SBC #$04                
+C0/C1C5 A8          TAY                     
+C0/C1C6 A5 DF       LDA $DF       
+C0/C1C8 0A          ASL A                   
+C0/C1C9 0A          ASL A                   
+C0/C1CA 0A          ASL A                   
+C0/C1CB 0A          ASL A                   
+C0/C1CC 0A          ASL A                   
+C0/C1CD 85 08       STA $08       
+C0/C1CF A5 E2       LDA $E2       
+C0/C1D1 29 1F       AND #$1F                
+C0/C1D3 05 08       ORA $08       
+C0/C1D5 99 DD 0A    STA $0ADD,y   
+C0/C1D8 A5 E0       LDA $E0       
+C0/C1DA 99 DF 0A    STA $0ADF,y   
+C0/C1DD A5 E1       LDA $E1       
+C0/C1DF 99 E0 0A    STA $0AE0,y   
+C0/C1E2 B9 DE 0A    LDA $0ADE,y   
+C0/C1E5 29 7F       AND #$7F                
+C0/C1E7 99 DE 0A    STA $0ADE,y   
+C0/C1EA 4C 48 A6    JMP $A648     
+
+
+**********************************************
+D3 8x yy zz: Sprite x Set Map Position yy,zz
+**********************************************
+C0/C5C4 A5 DF       LDA $DF    [$00:0BDF]   
+C0/C5C6 20 E4 C5    JSR $C5E4
+C0/C5C9 A5 E0       LDA $E0    [$00:0BE0]   
+C0/C5CB 29 C0       AND #$C0                
+C0/C5CD 4A          LSR A                   
+C0/C5CE 4A          LSR A                   
+C0/C5CF 4A          LSR A                   
+C0/C5D0 4A          LSR A                   
+C0/C5D1 4A          LSR A                   
+C0/C5D2 99 7C 14    STA $147C,y[$00:1490]   
+C0/C5D5 A5 E0       LDA $E0    [$00:0BE0]   
+C0/C5D7 29 3F       AND #$3F                
+C0/C5D9 99 78 14    STA $1478,y[$00:148C]   
+C0/C5DC A5 E1       LDA $E1    [$00:0BE1]   
+C0/C5DE 99 7A 14    STA $147A,y[$00:148E]   
+C0/C5E1 4C 40 A6    JMP $A640
+
+
+**********************************************
+D4 xx yy zz: (Music)
+**********************************************
+$C0/C236 A5 E0       LDA $E0    [$00:00E0]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C238 8D 02 1D    STA $1D02  [$00:1D02]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C23B A5 E1       LDA $E1    [$00:00E1]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C23D 8D 03 1D    STA $1D03  [$00:1D03]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C240 A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C242 8D 01 1D    STA $1D01  [$00:1D01]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C245 A9 01       LDA #$01                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C247 8D 00 1D    STA $1D00  [$00:1D00]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C24A A9 01       LDA #$01                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C24C 85 5C       STA $5C    [$00:005C]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C24E 22 04 00 C4 JSL $C40004[$C4:0004]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C252 20 41 4E    JSR $4E41  [$00:4E41]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C255 64 5C       STZ $5C    [$00:005C]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C257 4C 40 A6    JMP $A640  [$00:A640]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+
+
+**********************************************
+D5 xx yy zz: (Sound)
+**********************************************
+$C0/C266 A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C268 20 3C 46    JSR $463C  [$00:463C]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C26B A5 E0       LDA $E0    [$00:00E0]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C26D 8D 02 1D    STA $1D02  [$00:1D02]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C270 A5 E1       LDA $E1    [$00:00E1]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C272 8D 03 1D    STA $1D03  [$00:1D03]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C275 22 04 00 C4 JSL $C40004[$C4:0004]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C279 4C 40 A6    JMP $A640  [$00:A640]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+
+
+**********************************************
+D6 xx yy zz: (Map)
+**********************************************
+$C0/C362 20 E8 4C    JSR $4CE8  [$00:4CE8]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C365 9C 9E 16    STZ $169E  [$00:169E]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C368 AD D8 0A    LDA $0AD8  [$00:0AD8]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C36B 8D 88 10    STA $1088  [$00:1088]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C36E AD D9 0A    LDA $0AD9  [$00:0AD9]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C371 8D 89 10    STA $1089  [$00:1089]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C374 C2 20       REP #$20                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C376 A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C378 29 FF 1F    AND #$1FFF              A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C37B 8D D4 0A    STA $0AD4  [$00:0AD4]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C37E 8D D6 0A    STA $0AD6  [$00:0AD6]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C381 A5 06       LDA $06    [$00:0006]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C383 E2 20       SEP #$20                A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C385 A5 E1       LDA $E1    [$00:00E1]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C387 4A          LSR A                   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C388 4A          LSR A                   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C389 4A          LSR A                   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C38A 4A          LSR A                   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C38B 4A          LSR A                   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C38C 8D DC 0A    STA $0ADC  [$00:0ADC]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C38F F0 2E       BEQ $2E    [$C3BF]      A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C391 3A          DEC A                   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C392 0A          ASL A                   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C393 0A          ASL A                   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C394 A8          TAY                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C395 A5 E1       LDA $E1    [$00:00E1]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C397 29 1F       AND #$1F                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C399 99 DD 0A    STA $0ADD,y[$00:0ADD]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C39C A9 80       LDA #$80                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C39E 99 DE 0A    STA $0ADE,y[$00:0ADE]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3A1 A5 E0       LDA $E0    [$00:00E0]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3A3 29 20       AND #$20                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3A5 F0 18       BEQ $18    [$C3BF]      A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3A7 B9 DE 0A    LDA $0ADE,y[$00:0ADE]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3AA 09 0F       ORA #$0F                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3AC 99 DE 0A    STA $0ADE,y[$00:0ADE]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3AF B9 DD 0A    LDA $0ADD,y[$00:0ADD]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3B2 29 1C       AND #$1C                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3B4 C9 18       CMP #$18                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3B6 D0 07       BNE $07    [$C3BF]      A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3B8 B9 DE 0A    LDA $0ADE,y[$00:0ADE]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3BB 0A          ASL A                   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3BC 99 DE 0A    STA $0ADE,y[$00:0ADE]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3BF 20 28 55    JSR $5528  [$00:5528]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3C2 A9 81       LDA #$81                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3C4 8D 00 42    STA $4200  [$00:4200]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3C7 58          CLI                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3C8 20 41 4E    JSR $4E41  [$00:4E41]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3CB A9 04       LDA #$04                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3CD 20 60 A6    JSR $A660  [$00:A660]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C3D0 4C CB A2    JMP $A2CB  [$00:A2CB]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+
+**********************************************
+D7 xx yy zz: (xx, zzyy - Timed, see D1)
+**********************************************
+$C0/C623 A5 DF       LDA $DF    [$00:00DF]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C625 8D 02 42    STA $4202  [$00:4202]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C628 A9 F0       LDA #$F0                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C62A 8D 03 42    STA $4203  [$00:4203]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C62D EA          NOP                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C62E EA          NOP                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C62F EA          NOP                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C630 EA          NOP                     A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C631 C2 20       REP #$20                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C633 AD 16 42    LDA $4216  [$00:4216]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C636 1A          INC A                   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C637 8D FC 0A    STA $0AFC  [$00:0AFC]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C63A A5 E0       LDA $E0    [$00:00E0]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C63C 8D FE 0A    STA $0AFE  [$00:0AFE]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C63F A5 06       LDA $06    [$00:0006]   A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C641 E2 20       SEP #$20                A:0000 X:0000 Y:0000 P:EnvmxdIzc
+$C0/C643 A9 02       LDA #$02                A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C645 8D FB 0A    STA $0AFB  [$00:0AFB]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+$C0/C648 4C 40 A6    JMP $A640  [$00:A640]   A:0000 X:0000 Y:0000 P:EnvMxdIzc
+
+
+**********************************************
+D8:
+**********************************************
+
+
+**********************************************
+D9:
+**********************************************
+
+
+**********************************************
+DA:
+**********************************************
+
+
+**********************************************
+DB: Restore Player Status (Frog/Mini)
+**********************************************
+C0/BA9E 20 E2 1C    JSR $1CE2
+	C0/1CE2 A4 06       LDY $06
+	C0/1CE4 B9 00 05    LDA $0500,y
+	C0/1CE7 29 40       AND #$40  
+	C0/1CE9 D0 24       BNE $1D0F
+	C0/1CEB B9 00 05    LDA $0500,y
+	C0/1CEE 29 07       AND #$07
+	C0/1CF0 1A          INC A   
+	C0/1CF1 1A          INC A   
+	C0/1CF2 8D DA 0A    STA $0ADA
+	C0/1CF5 B9 1A 05    LDA $051A,y
+	C0/1CF8 29 20       AND #$20
+	C0/1CFA F0 07       BEQ $1D03
+	C0/1CFC A9 01       LDA #$01
+	C0/1CFE 8D DA 0A    STA $0ADA
+	C0/1D01 80 1A       BRA $1D1D
+	C0/1D03 B9 1A 05    LDA $051A,y
+	C0/1D06 29 10       AND #$10
+	C0/1D08 F0 13       BEQ $1D1D
+	C0/1D0A 9C DA 0A    STZ $0ADA
+	C0/1D0D 80 0E       BRA $1D1D
+	C0/1D0F C2 20       REP #$20
+	C0/1D11 98          TYA
+	C0/1D12 18          CLC
+	C0/1D13 69 50 00    ADC #$0050
+	C0/1D16 A8          TAY
+	C0/1D17 A5 06       LDA $06
+	C0/1D19 E2 20       SEP #$20
+	C0/1D1B 80 C7       BRA $1CE4
+	C0/1D1D 60          RTS
+ 
+C0/BAA1 A9 01       LDA #$01  
+C0/BAA3 85 A1       STA $A1   
+C0/BAA5 4C 28 A6    JMP $A628
+
+**********************************************
+E1 xx yy zz ww vv
+**********************************************
+C0/C3F7 20 3F C4    JSR $C43F						; See E3
+C0/C3FA AE D6 0A    LDX $0AD6
+C0/C3FD E0 05 00    CPX #$0005
+C0/C400 B0 05       BCS $C407
+C0/C402 20 28 55    JSR $5528						; See E3
+C0/C405 80 03       BRA $C40A
+C0/C407 20 4C 57    JSR $574C						; See E3
+C0/C40A 20 FA 4C    JSR $4CFA						;
+C0/C40D 20 41 4E    JSR $4E41						; See E3				
+C0/C410 A9 06       LDA #$06						; Advance six bytes
+C0/C412 20 60 A6    JSR $A660
+C0/C415 4C CB A2    JMP $A2CB
+
+
+**********************************************
+E3 xx yy zz ww vv
+**********************************************
+C0/C418 20 81 60    JSR $6081  
+	C0/6081 AD 9E 16    LDA $169E
+	C0/6084 D0 03       BNE $6089
+	C0/6086 20 71 4A    JSR $4A71
+		C0/4A71 A9 90       LDA #$90
+		C0/4A73 85 43       STA $43
+		C0/4A75 A9 F0       LDA #$F0
+		C0/4A77 85 45       STA $45
+		C0/4A79 60          RTS
+	C0/6089 64 42       STZ $42
+	C0/608B 20 41 4E    JSR $4E41
+		C0/4E41 64 51       STZ $51
+		C0/4E43 A5 51       LDA $51
+		C0/4E45 F0 FC       BEQ $4E43
+		C0/4E47 64 51       STZ $51
+		C0/4E49 60          RTS	
+	C0/608E AD 9E 16    LDA $169E
+	C0/6091 F0 0E       BEQ $60A1
+	C0/60A1 E6 42       INC $42
+	C0/60A3 A5 45       LDA $45
+	C0/60A5 D0 E4       BNE $608B
+	C0/60A7 60          RTS
+
+C0/C41B 20 3F C4    JSR $C43F  
+	C0/C43F 20 E8 4C    JSR $4CE8     
+		C0/4CE8 9C 0B 42    STZ $420B     	; Initialize
+		C0/4CEB 9C 0C 42    STZ $420C     
+		C0/4CEE A9 80       LDA #$80                
+		C0/4CF0 8D 00 21    STA $2100     
+		C0/4CF3 A9 00       LDA #$00                
+		C0/4CF5 8D 00 42    STA $4200     
+		C0/4CF8 78          SEI             ; Prevent interrupts        
+		C0/4CF9 60          RTS
+	C0/C442 9C A0 16    STZ $16A0     
+	C0/C445 AE D6 0A    LDX $0AD6     		; If not on a World Map, jump
+	C0/C448 E0 05 00    CPX #$0005              
+	C0/C44B B0 0F       BCS $C45C      
+
+	C0/C44D A5 E0       LDA $E0       		; Get yy bit
+	C0/C44F 29 40       AND #$40                
+	C0/C451 F0 09       BEQ $C45C      
+	C0/C453 8E F5 0A    STX $0AF5     
+	C0/C456 AE D8 0A    LDX $0AD8     
+	C0/C459 8E F7 0A    STX $0AF7     
+
+	C0/C45C 9C 9E 16    STZ $169E     		; Clear var
+
+	C0/C45F A5 E2       LDA $E2       		; Store ww
+	C0/C461 8D 89 10    STA $1089     
+
+	C0/C464 A5 E3       LDA $E3       		; vv / #20
+	C0/C466 4A          LSR A                   
+	C0/C467 4A          LSR A                   
+	C0/C468 4A          LSR A                   
+	C0/C469 4A          LSR A                   
+	C0/C46A 4A          LSR A                   
+	C0/C46B 8D DC 0A    STA $0ADC     
+	C0/C46E F0 2E       BEQ $C49E      		; If no sprite change, jump
+	C0/C470 3A          DEC A                   
+	C0/C471 0A          ASL A                   
+	C0/C472 0A          ASL A                   
+	C0/C473 A8          TAY                     
+
+	C0/C474 A5 E3       LDA $E3       
+	C0/C476 29 1F       AND #$1F                
+	C0/C478 99 DD 0A    STA $0ADD,y   
+
+	C0/C47B A9 80       LDA #$80                
+	C0/C47D 99 DE 0A    STA $0ADE,y   
+
+	C0/C480 A5 E0       LDA $E0       
+	C0/C482 29 20       AND #$20                
+	C0/C484 F0 18       BEQ $C49E      
+	C0/C486 B9 DE 0A    LDA $0ADE,y   
+	C0/C489 09 0F       ORA #$0F                
+	C0/C48B 99 DE 0A    STA $0ADE,y   
+	C0/C48E B9 DD 0A    LDA $0ADD,y   
+	C0/C491 29 1C       AND #$1C                
+	C0/C493 C9 18       CMP #$18                
+	C0/C495 D0 07       BNE $C49E      
+	C0/C497 B9 DE 0A    LDA $0ADE,y   
+	C0/C49A 0A          ASL A                   
+	C0/C49B 99 DE 0A    STA $0ADE,y   
+
+	C0/C49E C2 20       REP #$20                ;
+	C0/C4A0 A5 DF       LDA $DF       
+	C0/C4A2 29 FF 03    AND #$03FF              
+	C0/C4A5 8D D4 0A    STA $0AD4     
+	C0/C4A8 8D D6 0A    STA $0AD6     
+	C0/C4AB A8          TAY                     
+	C0/C4AC A5 06       LDA $06       
+	C0/C4AE E2 20       SEP #$20                
+	C0/C4B0 C0 05 00    CPY #$0005              
+	C0/C4B3 B0 08       BCS $C4BD      
+	C0/C4B5 A5 E1       LDA $E1       
+	C0/C4B7 8D 88 10    STA $1088     
+	C0/C4BA 4C DF C4    JMP $C4DF     
+
+	C0/C4BD A5 E0       LDA $E0       
+	C0/C4BF 10 03       BPL $C4C4      
+	C0/C4C1 EE A0 16    INC $16A0     
+	C0/C4C4 A5 E1       LDA $E1       
+	C0/C4C6 4A          LSR A                   
+	C0/C4C7 4A          LSR A                   
+	C0/C4C8 4A          LSR A                   
+	C0/C4C9 4A          LSR A                   
+	C0/C4CA 4A          LSR A                   
+	C0/C4CB 4A          LSR A                   
+	C0/C4CC 48          PHA                     
+	C0/C4CD 85 B9       STA $B9       
+	C0/C4CF 0A          ASL A                   
+	C0/C4D0 85 BB       STA $BB       
+	C0/C4D2 68          PLA                     
+	C0/C4D3 1A          INC A                   
+	C0/C4D4 85 BA       STA $BA       
+	C0/C4D6 85 BF       STA $BF       
+	C0/C4D8 A5 E1       LDA $E1       
+	C0/C4DA 29 3F       AND #$3F                
+	C0/C4DC 8D 88 10    STA $1088     
+	C0/C4DF 60          RTS
+
+C0/C41E AE D6 0A    LDX $0AD6  
+C0/C421 E0 05 00    CPX #$0005
+C0/C424 B0 05       BCS $C42B
+
+C0/C426 20 28 55    JSR $5528
+	C0/5528 AD DC 0A    LDA $0ADC
+	C0/552B F0 05       BEQ $5537
+	C0/5532 64 53       STZ $53
+	C0/5534 9C 9A 16    STZ $169A
+	C0/5537 20 A7 54    JSR $54A7
+C0/C429 80 03       BRA $C42E
+
+C0/C42B 20 4C 57    JSR $574C
+
+C0/C42E A9 81       LDA #$81 
+C0/C430 8D 00 42    STA $4200
+C0/C433 58          CLI      
+C0/C434 20 41 4E    JSR $4E41
+
+C0/C437 A9 06       LDA #$06				; Advance six bytes
+C0/C439 20 60 A6    JSR $A660
+C0/C43C 4C CB A2    JMP $A2CB
+
+**********************************************
+F3 xx yy zw **: Set Map Tiles
+**********************************************
+C0/C504 A5 DF       LDA $DF     
+C0/C506 29 C0       AND #$C0                
+C0/C508 4A          LSR A      		; / 4             
+C0/C509 4A          LSR A                   
+C0/C50A C2 20       REP #$20                       
+C0/C50C EB          XBA        		; * #100 (in effect)             
+C0/C50D 85 73       STA $73    		; $73 = * #40
+
+C0/C50F A5 06       LDA $06			; Restore B
+C0/C511 E2 20       SEP #$20                       
+
+C0/C513 A5 DF       LDA $DF			; $75 = low xx
+C0/C515 29 3F       AND #$3F                
+C0/C517 85 75       STA $75
+
+C0/C519 A5 E0       LDA $E0			; $76 = yy
+C0/C51B 85 76       STA $76
+
+C0/C51D A5 E1       LDA $E1			; $2C = low zz + 1
+C0/C51F 29 0F       AND #$0F                
+C0/C521 1A          INC A                   
+C0/C522 85 2C       STA $2C
+C0/C524 8D 02 42    STA $4202
+
+C0/C527 A5 E1       LDA $E1			; $2D = high zz + 1
+C0/C529 4A          LSR A                   
+C0/C52A 4A          LSR A                   
+C0/C52B 4A          LSR A                   
+C0/C52C 4A          LSR A                   
+C0/C52D 1A          INC A                   
+C0/C52E 85 2D       STA $2D
+C0/C530 8D 03 42    STA $4203
+
+C0/C533 EA          NOP           	; $0D = 4202*4203 (16bit)          
+C0/C534 EA          NOP                     
+C0/C535 EA          NOP                     
+C0/C536 EA          NOP                     
+C0/C537 C2 20       REP #$20                       
+C0/C539 AD 16 42    LDA $4216
+C0/C53C 85 0D       STA $0D
+
+C0/C53E A5 06       LDA $06    		; Restore B
+C0/C540 E2 20       SEP #$20
+                       
+C0/C542 A0 04 00    LDY #$0004              
+C0/C545 A6 06       LDX $06    
+C0/C547 B7 D6       LDA [$D6],y		; Get next $0D bytes
+C0/C549 9D B3 16    STA $16B3,x		; Store at $16B3
+C0/C54C C8          INY                     
+C0/C54D E8          INX                     
+C0/C54E E4 0D       CPX $0D
+C0/C550 D0 F5       BNE $C547		; Loop until done
+      
+C0/C552 C2 20       REP #$20                       
+C0/C554 A5 0D       LDA $0D    		; Update event pointer
+C0/C556 18          CLC                     
+C0/C557 69 04 00    ADC #$0004              
+C0/C55A 18          CLC                     
+C0/C55B 65 D6       ADC $D6    
+C0/C55D 85 D6       STA $D6    
+C0/C55F A5 06       LDA $06 		; Update $D8
+C0/C561 65 D8       ADC $D8    
+C0/C563 85 D8       STA $D8    
+C0/C565 A5 06       LDA $06    
+C0/C567 E2 20       SEP #$20                       
+C0/C569 20 08 6F    JSR $6F08
+	C0/6F08 A5 76       LDA $76			; yy * #40 + $73
+	C0/6F0A 29 3F       AND #$3F                
+	C0/6F0C EB          XBA                     
+	C0/6F0D C2 20       REP #$20                       
+	C0/6F0F 4A          LSR A                   
+	C0/6F10 4A          LSR A                   
+	C0/6F11 05 73       ORA $73
+	C0/6F13 85 0D       STA $0D
+	
+	C0/6F15 A5 75       LDA $75			; + xx 
+	C0/6F17 29 3F 00    AND #$003F              
+	C0/6F1A 05 0D       ORA $0D
+	C0/6F1C AA          TAX    
+	
+	C0/6F1D A5 06       LDA $06			; Clear A/Y?1
+	C0/6F1F E2 20       SEP #$20                       
+	C0/6F21 A4 06       LDY $06
+	
+	C0/6F23 A5 2D       LDA $2D			; Set up counters	
+	C0/6F25 85 15       STA $15
+	C0/6F27 A5 2C       LDA $2C
+	C0/6F29 85 13       STA $13
+	
+	C0/6F2B DA          PHX             ; Store w bytes in 7F bank        
+	C0/6F2C B9 B3 16    LDA $16B3,y
+	C0/6F2F 9F 00 00 7F STA $7F0000,x
+	C0/6F33 C8          INY                     
+	C0/6F34 E8          INX                     
+	C0/6F35 C6 13       DEC $13
+	C0/6F37 D0 F3       BNE $6F2C
+	
+	C0/6F39 C2 20       REP #$20       	; X += #0040
+	C0/6F3B 68          PLA
+	C0/6F3C 18          CLC
+	C0/6F3D 69 40 00    ADC #$0040
+	C0/6F40 AA          TAX
+	
+	C0/6F41 A5 06       LDA $06			; Loop z times
+	C0/6F43 E2 20       SEP #$20       
+	C0/6F45 C6 15       DEC $15
+	C0/6F47 D0 DE       BNE $6F27
+	
+	C0/6F49 A4 73       LDY $73			; If xx > 40, jump
+	C0/6F4B D0 0C       BNE $6F59
+	
+	C0/6F4D AD D8 0A    LDA $0AD8		; Get X/Y coordinates
+	C0/6F50 85 75       STA $75  
+	C0/6F52 AD D9 0A    LDA $0AD9
+	C0/6F55 85 76       STA $76  
+	C0/6F57 80 17       BRA $6F70
+	
+	C0/6F59 C0 00 10    CPY #$1000		; Huh?
+	C0/6F5C D0 0A       BNE $6F68
+	C0/6F68 A5 79       LDA $79    		; Get $79/7A
+	C0/6F6A 85 75       STA $75    
+	C0/6F6C A5 7A       LDA $7A    
+	C0/6F6E 85 76       STA $76
+	
+	C0/6F70 A5 76       LDA $76    		; $23 = ($76 - #08) * #40 + $73
+	C0/6F72 38          SEC                     
+	C0/6F73 E9 08       SBC #$08                
+	C0/6F75 29 3F       AND #$3F                
+	C0/6F77 EB          XBA                     
+	C0/6F78 C2 20       REP #$20                       
+	C0/6F7A 4A          LSR A                   
+	C0/6F7B 4A          LSR A                   
+	C0/6F7C 05 73       ORA $73
+	C0/6F7E 85 23       STA $23
+	
+	C0/6F80 A5 06       LDA $06
+	C0/6F82 E2 20       SEP #$20
+	
+	C0/6F84 A5 75       LDA $75    		; $23 += $75 - #07
+	C0/6F86 38          SEC                     
+	C0/6F87 E9 07       SBC #$07                
+	C0/6F89 29 3F       AND #$3F                
+	C0/6F8B 05 23       ORA $23    
+	C0/6F8D 85 23       STA $23    
+	
+	C0/6F8F A5 76       LDA $76			; $26 = ($76 - #08) * #80
+	C0/6F91 38          SEC                     
+	C0/6F92 E9 08       SBC #$08                
+	C0/6F94 29 0F       AND #$0F                
+	C0/6F96 EB          XBA                     
+	C0/6F97 C2 20       REP #$20                       
+	C0/6F99 4A          LSR A                   
+	C0/6F9A 85 26       STA $26
+	
+	C0/6F9C A5 06       LDA $06   
+	C0/6F9E E2 20       SEP #$20
+	
+	C0/6FA0 A5 75       LDA $75    		; $0D = $75 - #07
+	C0/6FA2 38          SEC                     
+	C0/6FA3 E9 07       SBC #$07                
+	C0/6FA5 85 0D       STA $0D    
+	
+	C0/6FA7 64 0E       STZ $0E    		; $0E = #10
+	C0/6FA9 29 10       AND #$10                
+	C0/6FAB D0 05       BNE $6FB2		; Set Y = #0000/#0800
+	C0/6FAD A0 00 00    LDY #$0000
+	C0/6FB0 80 03       BRA $6FB5
+	C0/6FB2 A0 00 08    LDY #$0800	
+
+	C0/6FB5 A5 0D       LDA $0D   		; $0D * #04
+	C0/6FB7 29 0F       AND #$0F                
+	C0/6FB9 0A          ASL A                   
+	C0/6FBA 0A          ASL A                   
+	C0/6FBB 85 0D       STA $0D    
+	
+	C0/6FBD C2 20       REP #$20		; $26 += $0D + Y           
+	C0/6FBF 98          TYA                     
+	C0/6FC0 18          CLC                     
+	C0/6FC1 65 0D       ADC $0D    
+	C0/6FC3 18          CLC                     
+	C0/6FC4 65 26       ADC $26    
+	C0/6FC6 85 26       STA $26    
+	
+	C0/6FC8 29 80 0F    AND #$0F80		;
+	C0/6FCB 49 00 08    EOR #$0800              
+	C0/6FCE 85 29       STA $29    
+
+	C0/6FD0 A5 06       LDA $06       
+	C0/6FD2 E2 20       SEP #$20                       
+	C0/6FD4 A9 7F       LDA #$7F                
+	C0/6FD6 48          PHA                     
+	C0/6FD7 AB          PLB                     
+	C0/6FD8 C2 20       REP #$20                       
+	C0/6FDA A9 10 00    LDA #$0010              
+	C0/6FDD 85 11       STA $11       
+	C0/6FDF A6 23       LDX $23       
+	C0/6FE1 86 0D       STX $0D       
+	C0/6FE3 A4 26       LDY $26       
+	C0/6FE5 20 3E 70    JSR $703E
+	C0/6FE8 A4 29       LDY $29       
+	C0/6FEA 20 3E 70    JSR $703E
+	C0/6FED A5 23       LDA $23       
+	C0/6FEF 18          CLC                     
+	C0/6FF0 69 40 00    ADC #$0040              
+	C0/6FF3 29 FF 0F    AND #$0FFF              
+	C0/6FF6 05 73       ORA $73       
+	C0/6FF8 85 23       STA $23       
+	C0/6FFA A5 26       LDA $26       
+	C0/6FFC 18          CLC                     
+	C0/6FFD 69 80 00    ADC #$0080              
+	C0/7000 85 26       STA $26       
+	C0/7002 29 FF 07    AND #$07FF              
+	C0/7005 C9 80 00    CMP #$0080              
+	C0/7008 B0 08       BCS $7012      
+	C0/700A A5 26       LDA $26       
+	C0/700C 38          SEC                     
+	C0/700D E9 00 08    SBC #$0800              
+	C0/7010 85 26       STA $26
+	C0/7012 A5 29       LDA $29       
+	C0/7014 18          CLC                     
+	C0/7015 69 80 00    ADC #$0080              
+	C0/7018 85 29       STA $29       
+	C0/701A 29 FF 07    AND #$07FF              
+	C0/701D C9 80 00    CMP #$0080              
+	C0/7020 B0 08       BCS $702A      
+	C0/7022 A5 29       LDA $29       
+	C0/7024 38          SEC                     
+	C0/7025 E9 00 08    SBC #$0800              
+	C0/7028 85 29       STA $29
+	C0/702A C6 11       DEC $11       
+	C0/702C D0 B1       BNE $6FDF
+	C0/702E A5 06       LDA $06       
+	C0/7030 E2 20       SEP #$20                       
+	C0/7032 48          PHA                     
+	C0/7033 AB          PLB                     
+	C0/7034 E6 A0       INC $A0       
+	C0/7036 20 41 4E    JSR $4E41
+	C0/7039 A5 A0       LDA $A0
+	C0/703B D0 F9       BNE $7036
+	C0/703D 60          RTS
+
+
+C0/C56C 4C CB A2    JMP $A2CB
