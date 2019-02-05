@@ -18,7 +18,6 @@ class Reward:
         '''
         self.address (address of two byte value, id definition)
         self.type (crystal, esper, magic, etc)
-        self.reward_type (40, 50, 20, 03, etc)
         self.original_reward (Knight, Potion, Crbnkl, etc)
         self.area (Wind Shrine, Karnak, etc)
         self.description (Wind Crystal, Beginner's House Chest, etc)
@@ -28,11 +27,11 @@ class Reward:
 
     @property
     def asar_output(self):
-        return f";org ${self.address} \ndb ${self.reward_type}, ${self.collectible.reward_id}"
+        return f"org ${self.address} \ndb ${self.collectible.reward_type}, ${self.collectible.reward_id}"
     
     @property
     def short_output(self):
-        return f"{self.description} {self.original_reward} -> {self.reward}"
+        return f"{self.description} {self.original_reward} -> {self.collectible.reward_name}"
 
     def generate_from_df(self, df):
         s = df[df['idx']==self.idx].iloc[0]
@@ -46,7 +45,6 @@ class Reward:
         if collectible is None:
             pass
         self.collectible = collectible
-        print(self.original_reward + " @ " + self.description + " -> " + self.collectible.reward_name)
 
 class RewardManager:
     def __init__(self, collectible_manager):
@@ -55,3 +53,11 @@ class RewardManager:
     def get_random_reward(self, random_engine, area=None):
         if area is None:
             return random_engine.choice(self.rewards)
+
+    def print_patch(self):
+        for i in self.rewards:
+            print(i.asar_output)
+
+    def print_spoiler(self):
+        for i in self.rewards:
+            print(i.short_output)

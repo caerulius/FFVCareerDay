@@ -37,6 +37,7 @@ class Shop(object):
         self.num_items
         '''
         self.valid = self.valid  == 'TRUE'
+        self.num_items = int(self.num_items)
         #shops can only sell items or magic, by default
         if self.shop_type == '00':
             collectible_type = '20' #magic
@@ -56,7 +57,7 @@ class Shop(object):
     @property
     def asar_output(self):
         output = "org $" + self.address + "\n"
-        output = output + "$" + self.shop_type
+        output = output + "db $" + self.shop_type
         for i in self.contents:
             if i is None:
                 output = output + ", $00"
@@ -100,3 +101,11 @@ class ShopManager(object):
             self.shops = [Shop(x, collectible_manager) for x in range(1, NUM_SHOPS+1)]
         else:    
             self.shops = shops
+
+    def print_patch(self):
+        for i in [x for x in self.shops if x.valid]:
+            print(i.asar_output)
+
+    def print_spoiler(self):
+        for i in [x for x in self.shops if x.valid]:
+            print(i.short_output)

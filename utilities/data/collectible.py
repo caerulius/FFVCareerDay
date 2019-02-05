@@ -48,7 +48,7 @@ class Magic(Collectible):
         self.type = data['type']
         related_jobs = data['related_jobs'].strip('][').split(',')
         super().__init__(magic_id, data['readable_name'], int(data['value']),
-                         related_jobs, data['max_count'])
+                         related_jobs, data['max_count'], data['valid'])
 
 class Crystal(Collectible):
     reward_type = '50'
@@ -102,21 +102,25 @@ class CollectibleManager():
                        + reward_type + " was not found in list of collectibles")'''
 
     def get_all_of_type(self, t):
+        if type(t) is list or type(t) is tuple:
+            return [x for x in self.collectibles if type(x) in t]
         return [x for x in self.collectibles if type(x) is t]
 
-    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False):
+    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None):
+        if of_type is not None:
+            working_list = [x for x in self.get_all_of_type(of_type) if x.valid]
+        else:
+            working_list = [x for x in self.collectibles if x.valid]
         if monitor_counts is True:
-            search_list = [x for x in self.collectibles if x.valid and
+            working_list = [x for x in working_list if
                (x not in self.placement_history.keys() or
                 x.max_count is None or
                 x.max_count < self.placement_history[x])]
-        else:
-            search_list = [x for x in self.collectibles if x.valid]
-        
+
         if respect_weight is False:
-            choice = random_engine.choice(search_list)
+            choice = random_engine.choice(working_list)
         else:
-            choice = random_engine.choices(search_list, [y.place_weight for y in search_list])[0]
+            choice = random_engine.choices(working_list, [y.place_weight for y in working_list])[0]
 
         if monitor_counts is True:
             self.add_to_placement_history(choice)
