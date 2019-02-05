@@ -1,126 +1,126 @@
-magic_id,readable_name,type,value
-00,Fire,Sword,2
-01,Ice,Sword,2
-02,Bolt,Sword,2
-03,Venom,Sword,2
-04,Mute,Sword,2
-05,Sleep,Sword,2
-06,Fire2,Sword,2
-07,Ice2,Sword,2
-08,Bolt2,Sword,2
-09,Drain,Sword,3
-0A,Break,Sword,3
-0B,Bio,Sword,3
-0C,Fire3,Sword,3
-0D,Ice3,Sword,3
-0E,Bolt3,Sword,3
-0F,Holy,Sword,3
-10,Flare,Sword,3
-11,Psych,Sword,3
-12,Cure,White,2
-13,Scan,White,2
-14,Antdt,White,2
-15,Mute,White,2
-16,Armor,White,2
-17,Size,White,2
-18,Cure2,White,2
-19,Life,White,2
-1A,Charm,White,2
-1B,Image,White,2
-1C,Shell,White,2
-1D,Heal,White,2
-1E,Cure3,White,2
-1F,Wall,White,2
-20,Bersk,White,2
-21,Life2,White,2
-22,Holy,White,2
-23,Dispel,White,2
-24,Fire,Black,2
-25,Ice,Black,2
-26,Bolt,Black,2
-27,Venom,Black,2
-28,Sleep,Black,2
-29,Toad,Black,2
-2A,Fire2,Black,2
-2B,Ice2,Black,2
-2C,Bolt2,Black,2
-2D,Drain,Black,2
-2E,Break,Black,2
-2F,Bio,Black,2
-30,Fire3,Black,2
-31,Ice3,Black,2
-32,Bolt3,Black,2
-33,Flare,Black,2
-34,Doom,Black,2
-35,Psych,Black,2
-36,Drag,Time,2
-37,Slow,Time,2
-38,Regen,Time,2
-39,Void,Time,2
-3A,Haste,Time,2
-3B,Float,Time,2
-3C,Demi,Time,2
-3D,Stop,Time,2
-3E,Exit,Time,2
-3F,Comet,Time,2
-40,Slow2,Time,2
-41,Reset,Time,2
-42,Qrter,Time,2
-43,Hast2,Time,2
-44,Old,Time,2
-45,Meteo,Time,2
-46,Quick,Time,2
-47,Xzone,Time,2
-48,Chocob,Esper,2
-49,Sylph,Esper,2
-4A,Remora,Esper,2
-4B,Shiva,Esper,2
-4C,Ramuh,Esper,2
-4D,Ifrit,Esper,2
-4E,Titan,Esper,2
-4F,Golem,Esper,2
-50,Shoat,Esper,2
-51,Crbnkl,Esper,2
-52,Syldra,Esper,2
-53,Odin,Esper,2
-54,Phenix,Esper,2
-55,Levia,Esper,2
-56,Bahmut,Esper,2
-57,Power,Song,2
-58,Speed,Song,2
-59,Vitality,Song,2
-5A,Magic,Song,2
-5B,Hero,Song,2
-5C,Requiem,Song,2
-5D,Love,Song,2
-5E,Charm,Song,2
-82,Condemn,Blue,2
-83,Roulette,Blue,2
-84,AquaRake,Blue,2
-85,L5 Doom,Blue,2
-86,L4 Qrter,Blue,2
-87,L2 Old,Blue,2
-88,L3 Flare,Blue,2
-89,FrogSong,Blue,2
-8A,TinySong,Blue,2
-8B,Flash,Blue,2
-8C,Time Slip,Blue,2
-8D,MoonFlut,Blue,2
-8E,DethClaw,Blue,2
-8F,Aero,Blue,2
-90,Aero 2,Blue,2
-91,Aero 3,Blue,2
-92,Emission,Blue,2
-93,GblinPnch,Blue,2
-94,DrkShock,Blue,2
-95,GuardOff,Blue,2
-96,Fusion,Blue,2
-97,MindBlst,Blue,2
-98,Vampire,Blue,2
-99,Hammer,Blue,2
-9A,MgthyGrd,Blue,2
-9B,Exploder,Blue,2
-9C,????,Blue,2
-9D,Blowfish,Blue,2
-9E,WhiteWind,Blue,2
-9F,Missile,Blue,2
+magic_id,readable_name,type,value,max_count,related_jobs
+00,Fire,Sword,2,1,[“MysticKnight”]
+01,Ice,Sword,2,1,[“MysticKnight”]
+02,Bolt,Sword,2,1,[“MysticKnight”]
+03,Venom,Sword,2,1,[“MysticKnight”]
+04,Mute,Sword,2,1,[“MysticKnight”]
+05,Sleep,Sword,2,1,[“MysticKnight”]
+06,Fire2,Sword,2,1,[“MysticKnight”]
+07,Ice2,Sword,2,1,[“MysticKnight”]
+08,Bolt2,Sword,2,1,[“MysticKnight”]
+09,Drain,Sword,3,1,[“MysticKnight”]
+0A,Break,Sword,3,1,[“MysticKnight”]
+0B,Bio,Sword,3,1,[“MysticKnight”]
+0C,Fire3,Sword,3,1,[“MysticKnight”]
+0D,Ice3,Sword,3,1,[“MysticKnight”]
+0E,Bolt3,Sword,3,1,[“MysticKnight”]
+0F,Holy,Sword,3,1,[“MysticKnight”]
+10,Flare,Sword,3,1,[“MysticKnight”]
+11,Psych,Sword,3,1,[“MysticKnight”]
+12,Cure,White,2,1,"[“WhiteMage”, “RedMage”]"
+13,Scan,White,2,1,"[“WhiteMage”, “RedMage”]"
+14,Antdt,White,2,1,"[“WhiteMage”, “RedMage”]"
+15,Mute,White,2,1,"[“WhiteMage”, “RedMage”]"
+16,Armor,White,2,1,"[“WhiteMage”, “RedMage”]"
+17,Size,White,2,1,"[“WhiteMage”, “RedMage”]"
+18,Cure2,White,2,1,"[“WhiteMage”, “RedMage”]"
+19,Life,White,2,1,"[“WhiteMage”, “RedMage”]"
+1A,Charm,White,2,1,"[“WhiteMage”, “RedMage”]"
+1B,Image,White,2,1,[“WhiteMage”]
+1C,Shell,White,2,1,[“WhiteMage”]
+1D,Heal,White,2,1,[“WhiteMage”]
+1E,Cure3,White,2,1,[“WhiteMage”]
+1F,Wall,White,2,1,[“WhiteMage”]
+20,Bersk,White,2,1,[“WhiteMage”]
+21,Life2,White,2,1,[“WhiteMage”]
+22,Holy,White,2,1,[“WhiteMage”]
+23,Dispel,White,2,1,[“WhiteMage”]
+24,Fire,Black,2,1,"[“BlackMage”, “RedMage”]"
+25,Ice,Black,2,1,"[“BlackMage”, “RedMage”]"
+26,Bolt,Black,2,1,"[“BlackMage”, “RedMage”]"
+27,Venom,Black,2,1,"[“BlackMage”, “RedMage”]"
+28,Sleep,Black,2,1,"[“BlackMage”, “RedMage”]"
+29,Toad,Black,2,1,"[“BlackMage”, “RedMage”]"
+2A,Fire2,Black,2,1,"[“BlackMage”, “RedMage”]"
+2B,Ice2,Black,2,1,"[“BlackMage”, “RedMage”]"
+2C,Bolt2,Black,2,1,"[“BlackMage”, “RedMage”]"
+2D,Drain,Black,2,1,[“BlackMage”]
+2E,Break,Black,2,1,[“BlackMage”]
+2F,Bio,Black,2,1,[“BlackMage”]
+30,Fire3,Black,2,1,[“BlackMage”]
+31,Ice3,Black,2,1,[“BlackMage”]
+32,Bolt3,Black,2,1,[“BlackMage”]
+33,Flare,Black,2,1,[“BlackMage”]
+34,Doom,Black,2,1,[“BlackMage”]
+35,Psych,Black,2,1,[“BlackMage”]
+36,Drag,Time,2,1,[“TimeMage”]
+37,Slow,Time,2,1,[“TimeMage”]
+38,Regen,Time,2,1,[“TimeMage”]
+39,Void,Time,2,1,[“TimeMage”]
+3A,Haste,Time,2,1,[“TimeMage”]
+3B,Float,Time,2,1,[“TimeMage”]
+3C,Demi,Time,2,1,[“TimeMage”]
+3D,Stop,Time,2,1,[“TimeMage”]
+3E,Exit,Time,2,1,[“TimeMage”]
+3F,Comet,Time,2,1,[“TimeMage”]
+40,Slow2,Time,2,1,[“TimeMage”]
+41,Reset,Time,2,1,[“TimeMage”]
+42,Qrter,Time,2,1,[“TimeMage”]
+43,Hast2,Time,2,1,[“TimeMage”]
+44,Old,Time,2,1,[“TimeMage”]
+45,Meteo,Time,2,1,[“TimeMage”]
+46,Quick,Time,2,1,[“TimeMage”]
+47,Xzone,Time,2,1,[“TimeMage”]
+48,Chocob,Esper,2,1,[“Summoner”]
+49,Sylph,Esper,2,1,[“Summoner”]
+4A,Remora,Esper,2,1,[“Summoner”]
+4B,Shiva,Esper,2,1,[“Summoner”]
+4C,Ramuh,Esper,2,1,[“Summoner”]
+4D,Ifrit,Esper,2,1,[“Summoner”]
+4E,Titan,Esper,2,1,[“Summoner”]
+4F,Golem,Esper,2,1,[“Summoner”]
+50,Shoat,Esper,2,1,[“Summoner”]
+51,Crbnkl,Esper,2,1,[“Summoner”]
+52,Syldra,Esper,2,1,[“Summoner”]
+53,Odin,Esper,2,1,[“Summoner”]
+54,Phenix,Esper,2,1,[“Summoner”]
+55,Levia,Esper,2,1,[“Summoner”]
+56,Bahmut,Esper,2,1,[“Summoner”]
+57,Power,Song,2,1,[“Bard”]
+58,Speed,Song,2,1,[“Bard”]
+59,Vitality,Song,2,1,[“Bard”]
+5A,Magic,Song,2,1,[“Bard”]
+5B,Hero,Song,2,1,[“Bard”]
+5C,Requiem,Song,2,1,[“Bard”]
+5D,Love,Song,2,1,[“Bard”]
+5E,Charm,Song,2,1,[“Bard”]
+82,Condemn,Blue,2,1,[“BlueMage”]
+83,Roulette,Blue,2,1,[“BlueMage”]
+84,AquaRake,Blue,2,1,[“BlueMage”]
+85,L5 Doom,Blue,2,1,[“BlueMage”]
+86,L4 Qrter,Blue,2,1,[“BlueMage”]
+87,L2 Old,Blue,2,1,[“BlueMage”]
+88,L3 Flare,Blue,2,1,[“BlueMage”]
+89,FrogSong,Blue,2,1,[“BlueMage”]
+8A,TinySong,Blue,2,1,[“BlueMage”]
+8B,Flash,Blue,2,1,[“BlueMage”]
+8C,Time Slip,Blue,2,1,[“BlueMage”]
+8D,MoonFlut,Blue,2,1,[“BlueMage”]
+8E,DethClaw,Blue,2,1,[“BlueMage”]
+8F,Aero,Blue,2,1,[“BlueMage”]
+90,Aero 2,Blue,2,1,[“BlueMage”]
+91,Aero 3,Blue,2,1,[“BlueMage”]
+92,Emission,Blue,2,1,[“BlueMage”]
+93,GblinPnch,Blue,2,1,[“BlueMage”]
+94,DrkShock,Blue,2,1,[“BlueMage”]
+95,GuardOff,Blue,2,1,[“BlueMage”]
+96,Fusion,Blue,2,1,[“BlueMage”]
+97,MindBlst,Blue,2,1,[“BlueMage”]
+98,Vampire,Blue,2,1,[“BlueMage”]
+99,Hammer,Blue,2,1,[“BlueMage”]
+9A,MgthyGrd,Blue,2,1,[“BlueMage”]
+9B,Exploder,Blue,2,1,[“BlueMage”]
+9C,????,Blue,2,1,[“BlueMage”]
+9D,Blowfish,Blue,2,1,[“BlueMage”]
+9E,WhiteWind,Blue,2,1,[“BlueMage”]
+9F,Missile,Blue,2,1,[“BlueMage”]

@@ -1,257 +1,257 @@
-item_id,readable_name,type,subtype,value
-00,<blank>,dummy,dummy,0
-01,Empty,dummy,dummy,0
-02,Knife,weapon,knife,1
-03,Dagger,weapon,knife,1
-04,Mythril Knife,weapon,knife,1
-05,Kunai,weapon,knife,2
-06,Mage Masher,weapon,knife,2
-07,Guardian,weapon,knife,3
-08,Kodachi,weapon,knife,3
-09,Orialcon,weapon,knife,3
-0A,Air Lance,weapon,knife,3
-0B,Assassin,weapon,knife,4
-0C,Sasuke,weapon,knife,4
-0D,Broadsword,weapon,sword,1
-0E,RegalCut,weapon,sword,1
-0F,Mythril Sword,weapon,sword,2
-10,Coral Sword,weapon,sword,2
-11,Ancient Sword,weapon,sword,2
-12,Epee Sword,weapon,sword,3
-13,Slumber Sword,weapon,sword,3
-14,Defender Sword,weapon,sword,4
-15,Excalibur,weapon,sword,4
-16,Ragnarok,weapon,sword,5
-17,Javelin,weapon,spear,1
-18,Spear,weapon,spear,2
-19,Mythril Spear,weapon,spear,2
-1A,Trident,weapon,spear,2
-1B,Wind Spear,weapon,spear,3
-1C,Partisan,weapon,spear,3
-1D,Gungnir,weapon,spear,3
-1E,DblLance,weapon,spear,4
-1F,Holy Lance,weapon,spear,4
-20,Dragoon Lance,weapon,spear,5
-21,Battle Axe,weapon,axe,2
-22,Mythril Hammer,weapon,axe,2
-23,Ogre Killer,weapon,axe,3
-24,War Hammer,weapon,axe,3
-25,Venom Axe,weapon,axe,3
-26,Earth Hammer,weapon,axe,4
-27,Rune Axe,weapon,axe,4
-28,Thor Hammer,weapon,axe,4
-29,Katana,weapon,katana,2
-2A,Air Blade,weapon,katana,2
-2B,Kotetsu,weapon,katana,3
-2C,Bizen,weapon,katana,3
-2D,Forged,weapon,katana,3
-2E,Murasume,weapon,katana,4
-2F,Masamune,weapon,katana,4
-30,Tempest,weapon,katana,4
-31,Rod,weapon,rod,1
-32,Fire Rod,weapon,rod,2
-33,Ice Rod,weapon,rod,2
-34,Thunder Rod,weapon,rod,2
-35,Venom Rod,weapon,rod,3
-36,Lillith Rod,weapon,rod,3
-37,Wizard Rod,weapon,rod,4
-38,Staff,weapon,staff,1
-39,Mythril Staff,weapon,staff,1
-3A,Power Staff,weapon,staff,2
-3B,Healing Staff,weapon,staff,2
-3C,Staff of Light,weapon,staff,3
-3D,Sage's Staff,weapon,staff,3
-3E,Judgement Staff,weapon,staff,4
-3F,Fire Bow,weapon,bow,2
-40,Ice Bow,weapon,bow,2
-41,Thunder Bow,weapon,bow,2
-42,Darkness Bow,weapon,bow,2
-43,Killer Bow,weapon,bow,3
-44,Elven Bow,weapon,bow,3
-45,Yoichi Bow,weapon,bow,4
-46,Artemis Bow,weapon,bow,4
-47,Silver Harp,weapon,harp,2
-48,Dream Harp,weapon,harp,2
-49,Lamia's Harp,weapon,harp,2
-4A,Apollo's Harp,weapon,harp,3
-4B,Whip,weapon,whip,1
-4C,Chain Whip,weapon,whip,1
-4D,Thunder Whip,weapon,whip,2
-4E,Flame Whip,weapon,whip,3
-4F,Dragon's Whisker,weapon,whip,4
-50,Giyaman,weapon,bell,1
-51,Earth Bell,weapon,bell,2
-52,Rune Chime,weapon,bell,3
-53,Tinkerbell,weapon,bell,4
-54,Sabre (*Dummy),dummy,dummy,0
-55,Drain Sword,weapon,sword,3
-56,RuneEdge,weapon,sword,3
-57,Flametongue,weapon,sword,3
-58,IceBrand,weapon,sword,3
-59,Full Moon,weapon,flail,3
-5A,Shuriken,item,throw,3
-5B,Pinwheel,item,throw,3
-5C,Excailbur,item,throw,4
-5D,BeastKiller,weapon,whip,3
-5E,Flail,weapon,flail,2
-5F,Morning Star,weapon,flail,2
-60,Wonder Wand,weapon,rod,3
-61,Brave Blade,weapon,sword,3
-62,Soot,weapon,flail,2
-63,Chicken Knife,weapon,knife,3
-64,RisingSun,item,throw,3
-65,Silver Bow,weapon,bow,2
-66,Gale Bow,weapon,bow,3
-67,AntiMagic Bow,weapon,bow,4
-68,Avis Killer,weapon,bow,4
-69,DoomCut,weapon,axe,4
-6A,Giant's Axe,weapon,axe,3
-6B,ManEater,weapon,knife,3
-6C,Thief Knife,weapon,knife,3
-6D,Dancing Dagger,weapon,knife,2
-6E,Enhancer,weapon,sword,4
-6F,L. Hand,dummy,dummy,0
-70,R. Hand,dummy,dummy,0
-71,<dummy>,dummy,dummy,0
-72,<dummy>,dummy,dummy,0
-73,<dummy>,dummy,dummy,0
-74,<dummy>,dummy,dummy,0
-75,<dummy>,dummy,dummy,0
-76,<dummy>,dummy,dummy,0
-77,<dummy>,dummy,dummy,0
-78,<dummy>,dummy,dummy,0
-79,<dummy>,dummy,dummy,0
-7A,<dummy>,dummy,dummy,0
-7B,<dummy>,dummy,dummy,0
-7C,<dummy>,dummy,dummy,0
-7D,<dummy>,dummy,dummy,0
-7E,<dummy>,dummy,dummy,0
-7F,<dummy>,dummy,dummy,0
-80,<blank>,dummy,dummy,0
-81,Leather Shield,armor,shield,1
-82,Bronze Shield,armor,shield,1
-83,Iron Shield,armor,shield,2
-84,Mythril Shield,armor,shield,2
-85,Golden Shield,armor,shield,3
-86,Aegis Shield,armor,shield,4
-87,Diamond Shield,armor,shield,4
-88,Crystal Shield,armor,shield,4
-89,Leather Cap,armor,helm,1
-8A,Bronze Helm,armor,helm,1
-8B,Iron Helm,armor,helm,2
-8C,Mythril Helm,armor,helm,2
-8D,Golden Helm,armor,helm,3
-8E,Diamond Helm,armor,helm,3
-8F,Crystal Helm,armor,helm,4
-90,Plumed Hat,armor,helm,1
-91,Tricorn Hat,armor,helm,1
-92,Magus,armor,helm,2
-93,Circlet,armor,helm,3
-94,Gold Hairpin,armor,helm,4
-95,Ribbon,armor,helm,4
-96,Bandana,armor,helm,1
-97,GrnBeret,armor,helm,2
-98,DarkHood,armor,helm,3
-99,Lamia's Tiara,armor,helm,3
-9A,Leather Armor,armor,armor,1
-9B,Bronze Armor,armor,armor,1
-9C,Iron Armor,armor,armor,2
-9D,Mythril Armor,armor,armor,2
-9E,Golden Armor,armor,armor,3
-9F,Diamond Armor,armor,armor,3
-A0,Crystal Armor,armor,armor,4
-A1,CopperPlt,armor,armor,2
-A2,Training Suit,armor,armor,2
-A3,Silver Plate,armor,armor,3
-A4,Stealth Suit,armor,armor,3
-A5,DiamndPlt,armor,armor,4
-A6,DarkSuit,armor,armor,4
-A7,Cotton Robe,armor,armor,1
-A8,Silk robe,armor,armor,1
-A9,Gaia Gear,armor,armor,2
-AA,Bard's Surplice,armor,armor,2
-AB,Lumina Robe,armor,armor,3
-AC,Black Robe,armor,armor,3
-AD,White Robe,armor,armor,3
-AE,Mirage Vest,armor,armor,4
-AF,Guard Ring,armor,acc,3
-B0,Thief's Glove,armor,acc,3
-B1,Giant's Gloves,armor,acc,3
-B2,Elf Cape,armor,acc,4
-B3,Cursed Ring,armor,acc,3
-B4,Glasses,armor,acc,3
-B5,Running Shoes,armor,acc,4
-B6,Mythril Glove,armor,acc,2
-B7,Silver Armlet,armor,acc,2
-B8,Diamond Armlet,armor,acc,3
-B9,Strength,armor,acc,3
-BA,Power Wrist,armor,acc,3
-BB,Angel Gwn,armor,acc,3
-BC,Angel Ring,armor,acc,4
-BD,Flame Ring,armor,acc,4
-BE,Coral Ring,armor,acc,4
-BF,Bone Mail,armor,armor,3
-C0,Leather Shoes,armor,acc,3
-C1,Kaiser Knuckles,armor,acc,3
-C2,Gauntlets,armor,acc,3
-C3,Tiger Mask,armor,acc,3
-C4,Flame Shield,armor,shield,3
-C5,CornaJar,armor,acc,4
-C6,Genji Shield,armor,shield,4
-C7,Genji Helm,armor,helm,4
-C8,Genji Armor,armor,armor,4
-C9,Genji Gloves,armor,acc,4
-CA,Wall Ring,armor,acc,3
-CB,Coronet,armor,helm,2
-CC,Thornlet,armor,helm,3
-CD,Ice Shield,armor,shield,3
-CE,Cursed Shield,armor,shield,1
-CF,Rainbow Dress,armor,armor,3
-D0,Red Shoes,armor,acc,3
-D1,<dummy>,dummy,dummy,0
-D2,<dummy>,dummy,dummy,0
-D3,<dummy>,dummy,dummy,0
-D4,<dummy>,dummy,dummy,0
-D5,<dummy>,dummy,dummy,0
-D6,<dummy>,dummy,dummy,0
-D7,<dummy>,dummy,dummy,0
-D8,<dummy>,dummy,dummy,0
-D9,<dummy>,dummy,dummy,0
-DA,<dummy>,dummy,dummy,0
-DB,<dummy>,dummy,dummy,0
-DC,<dummy>,dummy,dummy,0
-DD,<dummy>,dummy,dummy,0
-DE,<dummy>,dummy,dummy,0
-DF,<dummy>,dummy,dummy,0
-E0,Potion,item,restore,1
-E1,HiPotion,item,restore,1
-E2,Ether,item,restore,2
-E3,Elixir,item,restore,3
-E4,Phoenix Down,item,restore,2
-E5,Maiden's Kiss,item,restore,2
-E6,Revivify,item,restore,2
-E7,TurtleShell,item,mix,2
-E8,Antidote,item,restore,2
-E9,Eyedrop,item,restore,2
-EA,DragonFang,item,mix,3
-EB,DarkMatter,item,mix,3
-EC,Soft,item,restore,2
-ED,LuckMallet,item,restore,2
-EE,<dummy>,dummy,dummy,0
-EF,Magic Lamp,item,special,4
-F0,Tent,item,restore,1
-F1,Cabin,item,restore,1
-F2,Giant Drink,item,mix,2
-F3,Power Drink,item,mix,2
-F4,Speed Drink,item,mix,2
-F5,Protect Drink,item,mix,2
-F6,Hero Drink,item,mix,2
-F7,DrgnCrest,item,special,0
-F8,OmegaMedl,item,special,0
-F9,Ramuh,item,summon,3
-FA,Shoat,item,summon,3
-FB,Golem,item,summon,3
-FC,Flame Scroll,item,throw,2
-FD,Water Scroll,item,throw,2
-FE,Thunder Scroll,item,throw,2
-FF,<dummy>,dummy,dummy,0
+item_id,readable_name,valid,type,subtype,value,max_count,related_jobs
+00,<blank>,FALSE,dummy,dummy,0,0,[]
+01,Empty,FALSE,dummy,dummy,0,0,[]
+02,Knife,TRUE,weapon,knife,1,,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+03,Dagger,TRUE,weapon,knife,1,,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+04,Mythril Knife,TRUE,weapon,knife,1,,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+05,Kunai,TRUE,weapon,knife,2,,[“Ninja”]
+06,Mage Masher,TRUE,weapon,knife,2,,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+07,Guardian,TRUE,weapon,knife,3,,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+08,Kodachi,TRUE,weapon,knife,3,,[“Ninja”]
+09,Orialcon,TRUE,weapon,knife,3,,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+0A,Air Lance,TRUE,weapon,knife,3,,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+0B,Assassin,TRUE,weapon,knife,4,1,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+0C,Sasuke,TRUE,weapon,knife,4,1,[“Ninja”]
+0D,Broadsword,TRUE,weapon,sword,1,,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
+0E,RegalCut,TRUE,weapon,sword,1,,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
+0F,Mythril Sword,TRUE,weapon,sword,2,,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
+10,Coral Sword,TRUE,weapon,sword,2,,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
+11,Ancient Sword,TRUE,weapon,sword,2,,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
+12,Epee Sword,TRUE,weapon,sword,3,,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
+13,Slumber Sword,TRUE,weapon,sword,3,,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
+14,Defender Sword,TRUE,weapon,sword,4,,[“Knight”]
+15,Excalibur,TRUE,weapon,sword,4,1,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
+16,Ragnarok,TRUE,weapon,sword,5,1,[“Knight”]
+17,Javelin,TRUE,weapon,spear,1,,[“Dragoon”]
+18,Spear,TRUE,weapon,spear,2,,[“Dragoon”]
+19,Mythril Spear,TRUE,weapon,spear,2,,[“Dragoon”]
+1A,Trident,TRUE,weapon,spear,2,,[“Dragoon”]
+1B,Wind Spear,TRUE,weapon,spear,3,,[“Dragoon”]
+1C,Partisan,TRUE,weapon,spear,3,,[“Dragoon”]
+1D,Gungnir,TRUE,weapon,spear,3,,[“Dragoon”]
+1E,DblLance,TRUE,weapon,spear,4,,"[“Thief”, “Ninja”, “Mimic”]"
+1F,Holy Lance,TRUE,weapon,spear,4,1,[“Dragoon”]
+20,Dragoon Lance,TRUE,weapon,spear,5,1,[“Dragoon”]
+21,Battle Axe,TRUE,weapon,axe,2,,[“Berserker”]
+22,Mythril Hammer,TRUE,weapon,axe,2,,[“Berserker”]
+23,Ogre Killer,TRUE,weapon,axe,3,,[“Berserker”]
+24,War Hammer,TRUE,weapon,axe,3,,[“Berserker”]
+25,Venom Axe,TRUE,weapon,axe,3,,[“Berserker”]
+26,Earth Hammer,TRUE,weapon,axe,4,,[“Berserker”]
+27,Rune Axe,TRUE,weapon,axe,4,,[“Berserker”]
+28,Thor Hammer,TRUE,weapon,axe,4,1,[“Berserker”]
+29,Katana,TRUE,weapon,katana,2,,[“Samurai”]
+2A,Air Blade,TRUE,weapon,katana,2,,[“Samurai”]
+2B,Kotetsu,TRUE,weapon,katana,3,,[“Samurai”]
+2C,Bizen,TRUE,weapon,katana,3,,[“Samurai”]
+2D,Forged,TRUE,weapon,katana,3,,[“Samurai”]
+2E,Murasume,TRUE,weapon,katana,4,1,[“Samurai”]
+2F,Masamune,TRUE,weapon,katana,4,1,[“Samurai”]
+30,Tempest,TRUE,weapon,katana,4,1,[“Samurai”]
+31,Rod,TRUE,weapon,rod,1,,"[“BlackMage”, “TimeMage”, “Summoner”, “RedMage”, “Mimic”]"
+32,Fire Rod,TRUE,weapon,rod,2,,"[“BlackMage”, “TimeMage”, “Summoner”, “RedMage”, “Mimic”]"
+33,Ice Rod,TRUE,weapon,rod,2,,"[“BlackMage”, “TimeMage”, “Summoner”, “RedMage”, “Mimic”]"
+34,Thunder Rod,TRUE,weapon,rod,2,,"[“BlackMage”, “TimeMage”, “Summoner”, “RedMage”, “Mimic”]"
+35,Venom Rod,TRUE,weapon,rod,3,,"[“BlackMage”, “TimeMage”, “Summoner”, “RedMage”, “Mimic”]"
+36,Lillith Rod,TRUE,weapon,rod,3,,"[“BlackMage”, “TimeMage”, “Summoner”, “RedMage”, “Mimic”]"
+37,Wizard Rod,TRUE,weapon,rod,4,,"[“BlackMage”, “TimeMage”, “Summoner”, “RedMage”, “Mimic”]"
+38,Staff,TRUE,weapon,staff,1,,"[“WhiteMage”, “TimeMage”, “RedMage”, “Chemist”, “Mimic”]"
+39,Mythril Staff,TRUE,weapon,staff,1,,"[“WhiteMage”, “TimeMage”, “RedMage”, “Chemist”, “Mimic”]"
+3A,Power Staff,TRUE,weapon,staff,2,,"[“WhiteMage”, “TimeMage”, “RedMage”, “Chemist”, “Mimic”]"
+3B,Healing Staff,TRUE,weapon,staff,2,,"[“WhiteMage”, “TimeMage”, “RedMage”, “Chemist”, “Mimic”]"
+3C,Staff of Light,TRUE,weapon,staff,3,,"[“WhiteMage”, “TimeMage”, “RedMage”, “Chemist”, “Mimic”]"
+3D,Sage's Staff,TRUE,weapon,staff,3,,"[“WhiteMage”, “TimeMage”, “RedMage”, “Chemist”, “Mimic”]"
+3E,Judgement Staff,TRUE,weapon,staff,4,1,"[“WhiteMage”, “TimeMage”, “RedMage”, “Chemist”, “Mimic”]"
+3F,Fire Bow,TRUE,weapon,bow,2,,[“Hunter”]
+40,Ice Bow,TRUE,weapon,bow,2,,[“Hunter”]
+41,Thunder Bow,TRUE,weapon,bow,2,,[“Hunter”]
+42,Darkness Bow,TRUE,weapon,bow,2,,[“Hunter”]
+43,Killer Bow,TRUE,weapon,bow,3,,[“Hunter”]
+44,Elven Bow,TRUE,weapon,bow,3,,[“Hunter”]
+45,Yoichi Bow,TRUE,weapon,bow,4,1,[“Hunter”]
+46,Artemis Bow,TRUE,weapon,bow,4,1,[“Hunter”]
+47,Silver Harp,TRUE,weapon,harp,2,,[“Bard”]
+48,Dream Harp,TRUE,weapon,harp,2,,[“Bard”]
+49,Lamia's Harp,TRUE,weapon,harp,2,,[“Bard”]
+4A,Apollo's Harp,TRUE,weapon,harp,3,1,[“Bard”]
+4B,Whip,TRUE,weapon,whip,1,,[“Mediator”]
+4C,Chain Whip,TRUE,weapon,whip,1,,[“Mediator”]
+4D,Thunder Whip,TRUE,weapon,whip,2,,[“Mediator”]
+4E,Flame Whip,TRUE,weapon,whip,3,,[“Mediator”]
+4F,Dragon's Whisker,TRUE,weapon,whip,4,1,[“Mediator”]
+50,Giyaman,TRUE,weapon,bell,1,,[“Geomancer”]
+51,Earth Bell,TRUE,weapon,bell,2,,[“Geomancer”]
+52,Rune Chime,TRUE,weapon,bell,3,1,[“Geomancer”]
+53,Tinkerbell,TRUE,weapon,bell,4,1,[“Geomancer”]
+54,Sabre (*Dummy),FALSE,dummy,dummy,0,0,[]
+55,Drain Sword,TRUE,weapon,sword,3,,[“Knight”]
+56,RuneEdge,TRUE,weapon,sword,3,,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
+57,Flametongue,TRUE,weapon,sword,3,,[“Knight”]
+58,IceBrand,TRUE,weapon,sword,3,,[“Knight”]
+59,Full Moon,TRUE,weapon,flail,3,,"[“Thief”, “Ninja”, “Mimic”]"
+5A,Shuriken,TRUE,item,throw,3,,[“Ninja”]
+5B,Pinwheel,TRUE,item,throw,3,,[“Ninja”]
+5C,Excailbur,TRUE,item,throw,4,1,"[""Knight"", ""Mystic Knight"", ""Blue Mage"", ""Red Mage""]"
+5D,BeastKiller,TRUE,weapon,whip,3,,[“Mediator”]
+5E,Flail,TRUE,weapon,flail,2,,"[“WhiteMage”, “TimeMage”, “RedMage”, “Chemist”, “Mimic”]"
+5F,Morning Star,TRUE,weapon,flail,2,,"[“WhiteMage”, “TimeMage”, “RedMage”, “Chemist”, “Mimic”]"
+60,Wonder Wand,TRUE,weapon,rod,3,1,"[“Black Mage”, “Time Mage”, “Summoner”, “Red Mage”, “Mimic”]"
+61,Brave Blade,TRUE,weapon,sword,3,1,[“Knight”]
+62,Soot,TRUE,weapon,flail,2,,[“Ninja”]
+63,Chicken Knife,TRUE,weapon,knife,3,1,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""Mystic Knight"", ""Black Mage"", ""Time Mage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+64,RisingSun,TRUE,item,throw,3,,"[“Thief”, “Ninja”, “Mimic”]"
+65,Silver Bow,TRUE,weapon,bow,2,,[“Hunter”]
+66,Gale Bow,TRUE,weapon,bow,3,,[“Hunter”]
+67,AntiMagic Bow,TRUE,weapon,bow,4,,[“Hunter”]
+68,Avis Killer,TRUE,weapon,bow,4,,[“Hunter”]
+69,DoomCut,TRUE,weapon,axe,4,,[“Berserker”]
+6A,Giant's Axe,TRUE,weapon,axe,3,,[“Berserker”]
+6B,ManEater,TRUE,weapon,knife,3,,[“Dancer”]
+6C,Thief Knife,TRUE,weapon,knife,3,1,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""Mystic Knight"", ""Black Mage"", ""Time Mage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+6D,Dancing Dagger,TRUE,weapon,knife,2,1,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""Mystic Knight"", ""Black Mage"", ""Time Mage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+6E,Enhancer,TRUE,weapon,sword,4,,"[""Knight"", ""Mystic Knight"", ""Blue Mage"", ""Red Mage""]"
+6F,L. Hand,FALSE,dummy,dummy,0,0,[]
+70,R. Hand,FALSE,dummy,dummy,0,0,[]
+71,<dummy>,FALSE,dummy,dummy,0,0,[]
+72,<dummy>,FALSE,dummy,dummy,0,0,[]
+73,<dummy>,FALSE,dummy,dummy,0,0,[]
+74,<dummy>,FALSE,dummy,dummy,0,0,[]
+75,<dummy>,FALSE,dummy,dummy,0,0,[]
+76,<dummy>,FALSE,dummy,dummy,0,0,[]
+77,<dummy>,FALSE,dummy,dummy,0,0,[]
+78,<dummy>,FALSE,dummy,dummy,0,0,[]
+79,<dummy>,FALSE,dummy,dummy,0,0,[]
+7A,<dummy>,FALSE,dummy,dummy,0,0,[]
+7B,<dummy>,FALSE,dummy,dummy,0,0,[]
+7C,<dummy>,FALSE,dummy,dummy,0,0,[]
+7D,<dummy>,FALSE,dummy,dummy,0,0,[]
+7E,<dummy>,FALSE,dummy,dummy,0,0,[]
+7F,<dummy>,FALSE,dummy,dummy,0,0,[]
+80,<blank>,FALSE,dummy,dummy,0,0,[]
+81,Leather Shield,TRUE,armor,shield,1,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+82,Bronze Shield,TRUE,armor,shield,1,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+83,Iron Shield,TRUE,armor,shield,2,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+84,Mythril Shield,TRUE,armor,shield,2,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+85,Golden Shield,TRUE,armor,shield,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+86,Aegis Shield,TRUE,armor,shield,4,1,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+87,Diamond Shield,TRUE,armor,shield,4,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+88,Crystal Shield,TRUE,armor,shield,4,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+89,Leather Cap,TRUE,armor,helm,1,,[“All”]
+8A,Bronze Helm,TRUE,armor,helm,1,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+8B,Iron Helm,TRUE,armor,helm,2,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+8C,Mythril Helm,TRUE,armor,helm,2,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+8D,Golden Helm,TRUE,armor,helm,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+8E,Diamond Helm,TRUE,armor,helm,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+8F,Crystal Helm,TRUE,armor,helm,4,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+90,Plumed Hat,TRUE,armor,helm,1,,[“All”]
+91,Tricorn Hat,TRUE,armor,helm,1,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+92,Magus,TRUE,armor,helm,2,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+93,Circlet,TRUE,armor,helm,3,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+94,Gold Hairpin,TRUE,armor,helm,4,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+95,Ribbon,TRUE,armor,helm,4,,[“Dancer”]
+96,Bandana,TRUE,armor,helm,1,,"[""Monk"", ""Thief"", ""Ninja"", ""Hunter"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+97,GrnBeret,TRUE,armor,helm,2,,"[""Monk"", ""Thief"", ""Ninja"", ""Hunter"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+98,DarkHood,TRUE,armor,helm,3,,"[""Monk"", ""Thief"", ""Ninja"", ""Hunter"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+99,Lamia's Tiara,TRUE,armor,helm,3,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+9A,Leather Armor,TRUE,armor,armor,1,,[“All”]
+9B,Bronze Armor,TRUE,armor,armor,1,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+9C,Iron Armor,TRUE,armor,armor,2,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+9D,Mythril Armor,TRUE,armor,armor,2,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+9E,Golden Armor,TRUE,armor,armor,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+9F,Diamond Armor,TRUE,armor,armor,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+A0,Crystal Armor,TRUE,armor,armor,4,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+A1,CopperPlt,TRUE,armor,armor,2,,"[""Knight"", ""Monk"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+A2,Training Suit,TRUE,armor,armor,2,,"[""Knight"", ""Monk"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+A3,Silver Plate,TRUE,armor,armor,3,,"[""Knight"", ""Monk"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+A4,Stealth Suit,TRUE,armor,armor,3,,"[""Knight"", ""Monk"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+A5,DiamndPlt,TRUE,armor,armor,4,,"[""Knight"", ""Monk"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+A6,DarkSuit,TRUE,armor,armor,4,,"[""Knight"", ""Monk"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+A7,Cotton Robe,TRUE,armor,armor,1,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+A8,Silk robe,TRUE,armor,armor,1,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+A9,Gaia Gear,TRUE,armor,armor,2,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+AA,Bard's Surplice,TRUE,armor,armor,2,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+AB,Lumina Robe,TRUE,armor,armor,3,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+AC,Black Robe,TRUE,armor,armor,3,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+AD,White Robe,TRUE,armor,armor,3,,"[""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+AE,Mirage Vest,TRUE,armor,armor,4,,"[""Knight"", ""Monk"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+AF,Guard Ring,TRUE,armor,acc,3,,[“All”]
+B0,Thief's Glove,TRUE,armor,acc,3,,"[“Thief”, “Mimic”]"
+B1,Giant's Gloves,TRUE,armor,acc,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+B2,Elf Cape,TRUE,armor,acc,4,,[“All”]
+B3,Cursed Ring,TRUE,armor,acc,3,,[“All”]
+B4,Glasses,TRUE,armor,acc,3,,[“All”]
+B5,Running Shoes,TRUE,armor,acc,4,,[“All”]
+B6,Mythril Glove,TRUE,armor,acc,2,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+B7,Silver Armlet,TRUE,armor,acc,2,,"[""Monk"", ""Thief"", ""Ninja"", ""Hunter"", ""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+B8,Diamond Armlet,TRUE,armor,acc,3,,"[""Monk"", ""Thief"", ""Ninja"", ""Hunter"", ""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+B9,Strength,TRUE,armor,acc,3,,"[""Knight"", ""Monk"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+BA,Power Wrist,TRUE,armor,acc,3,,"[""Monk"", ""Thief"", ""Ninja"", ""Hunter"", ""WhiteMage"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
+BB,Angel Gwn,TRUE,armor,acc,3,,"[“Chemist”, “Mimic”]"
+BC,Angel Ring,TRUE,armor,acc,4,,[“All”]
+BD,Flame Ring,TRUE,armor,acc,4,,[“All”]
+BE,Coral Ring,TRUE,armor,acc,4,,[“All”]
+BF,Bone Mail,TRUE,armor,armor,3,1,"[""Knight"", ""Monk"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+C0,Leather Shoes,TRUE,armor,acc,3,,[“All”]
+C1,Kaiser Knuckles,TRUE,armor,acc,3,1,[“All”]
+C2,Gauntlets,TRUE,armor,acc,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+C3,Tiger Mask,TRUE,armor,acc,3,,"[""Monk"", ""Thief"", ""Ninja"", ""Hunter"", ""BlueMage"", ""RedMage"", ""Mediator"", ""Chemist"", ""Dancer"", ""Mimic""]"
+C4,Flame Shield,TRUE,armor,shield,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+C5,CornaJar,TRUE,armor,acc,4,1,[“All”]
+C6,Genji Shield,TRUE,armor,shield,4,1,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+C7,Genji Helm,TRUE,armor,helm,4,1,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+C8,Genji Armor,TRUE,armor,armor,4,1,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+C9,Genji Gloves,TRUE,armor,acc,4,1,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+CA,Wall Ring,TRUE,armor,acc,3,,[“All”]
+CB,Coronet,TRUE,armor,helm,2,,[“All”]
+CC,Thornlet,TRUE,armor,helm,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""Mimic""]"
+CD,Ice Shield,TRUE,armor,shield,3,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+CE,Cursed Shield,TRUE,armor,shield,1,,"[""Knight"", ""Dragoon"", ""Samurai"", ""Berserker"", ""MysticKnight"", ""BlueMage"", ""Mimic""]"
+CF,Rainbow Dress,TRUE,armor,armor,3,1,[“Dancer”]
+D0,Red Shoes,TRUE,armor,acc,3,1,[“Dancer”]
+D1,<dummy>,FALSE,dummy,dummy,0,,[]
+D2,<dummy>,FALSE,dummy,dummy,0,,[]
+D3,<dummy>,FALSE,dummy,dummy,0,,[]
+D4,<dummy>,FALSE,dummy,dummy,0,,[]
+D5,<dummy>,FALSE,dummy,dummy,0,,[]
+D6,<dummy>,FALSE,dummy,dummy,0,,[]
+D7,<dummy>,FALSE,dummy,dummy,0,,[]
+D8,<dummy>,FALSE,dummy,dummy,0,,[]
+D9,<dummy>,FALSE,dummy,dummy,0,,[]
+DA,<dummy>,FALSE,dummy,dummy,0,,[]
+DB,<dummy>,FALSE,dummy,dummy,0,,[]
+DC,<dummy>,FALSE,dummy,dummy,0,,[]
+DD,<dummy>,FALSE,dummy,dummy,0,,[]
+DE,<dummy>,FALSE,dummy,dummy,0,,[]
+DF,<dummy>,FALSE,dummy,dummy,0,,[]
+E0,Potion,TRUE,item,restore,1,,[“All”]
+E1,HiPotion,TRUE,item,restore,1,,[“All”]
+E2,Ether,TRUE,item,restore,2,,[“All”]
+E3,Elixir,TRUE,item,restore,3,,[“All”]
+E4,Phoenix Down,TRUE,item,restore,2,,[“All”]
+E5,Maiden's Kiss,TRUE,item,restore,2,,[“All”]
+E6,Revivify,TRUE,item,restore,2,,[“All”]
+E7,TurtleShell,TRUE,item,mix,2,,[“Chemist”]
+E8,Antidote,TRUE,item,restore,2,,[“All”]
+E9,Eyedrop,TRUE,item,restore,2,,[“All”]
+EA,DragonFang,TRUE,item,mix,3,,[“Chemist”]
+EB,DarkMatter,TRUE,item,mix,3,,[“Chemist”]
+EC,Soft,TRUE,item,restore,2,,[“All”]
+ED,LuckMallet,TRUE,item,restore,2,,[“All”]
+EE,<dummy>,TRUE,dummy,dummy,0,,[]
+EF,Magic Lamp,TRUE,item,special,4,,[“All”]
+F0,Tent,TRUE,item,restore,1,,[“All”]
+F1,Cabin,TRUE,item,restore,1,,[“All”]
+F2,Giant Drink,TRUE,item,mix,2,,[“Chemist”]
+F3,Power Drink,TRUE,item,mix,2,,[“Chemist”]
+F4,Speed Drink,TRUE,item,mix,2,,[“Chemist”]
+F5,Protect Drink,TRUE,item,mix,2,,[“Chemist”]
+F6,Hero Drink,TRUE,item,mix,2,,[“Chemist”]
+F7,DrgnCrest,TRUE,item,special,0,,[]
+F8,OmegaMedl,TRUE,item,special,0,,[]
+F9,Ramuh,TRUE,item,summon,3,,[“Summoner”]
+FA,Shoat,TRUE,item,summon,3,,[“Summoner”]
+FB,Golem,TRUE,item,summon,3,,[“Summoner”]
+FC,Flame Scroll,TRUE,item,throw,2,,[“Ninja”]
+FD,Water Scroll,TRUE,item,throw,2,,[“Ninja”]
+FE,Thunder Scroll,TRUE,item,throw,2,,[“Ninja”]
+FF,<dummy>,FALSE,dummy,dummy,0,,[]
