@@ -1,23 +1,23 @@
-crystal_id,shop_id,readable_name,value,related_jobs,max_count
-00,89,Knight,1,[“Knight”],1
-01,8A,Monk,1,[“Monk”],1
-02,8B,Thief,1,[“Thief”],1
-03,8C,Dragoon,1,[“Dragoon”],1
-04,8D,Ninja,2,[“Ninja”],1
-05,8E,Samurai,2,[“Samurai”],1
-06,8F,Berserker,0,[“Berserker”],1
-07,90,Hunter,1,[“Hunter”],1
-08,91,MysticKnight,2,[“MysticKnight”],1
-09,92,WhiteMage,1,[“WhiteMage”],1
-0A,93,BlackMage,1,[“BlackMage”],1
-0B,94,TimeMage,1,[“TimeMage”],1
-0C,95,Summoner,2,[“Summoner”],1
-0D,96,BlueMage,2,[“BlueMage”],1
-0E,97,RedMage,1,[“RedMage”],1
-0F,98,Mediator,0,[“Mediator”],1
-10,99,Chemist,2,[“Chemist”],1
-11,9A,Geomancer,1,[“Geomancer”],1
-12,9B,Bard,1,[“Bard”],1
-13,9C,Dancer,1,[“Dancer”],1
-14,9D,Mimic,2,[“Mimic”],1
-15,9E,Freelancer,0,[“Freelancer”],1
+crystal_id,shop_id,readable_name,value,related_jobs,max_count,starting_weapon,starting_weapon_id,starting_spell_list,starting_spell_ids
+00,89,Knight,1,[“Knight”],1,Knife,02,[],[“FF”]
+01,8A,Monk,1,[“Monk”],1,Nothing,01,[],[“FF”]
+02,8B,Thief,1,[“Thief”],1,Knife,02,[],[“FF”]
+03,8C,Dragoon,1,[“Dragoon”],1,Knife,02,[],[“FF”]
+04,8D,Ninja,2,[“Ninja”],1,Knife,02,[],[“FF”]
+05,8E,Samurai,2,[“Samurai”],1,Knife,02,[],[“FF”]
+06,8F,Berserker,0,[“Berserker”],1,Knife,02,[],[“FF”]
+07,90,Hunter,1,[“Hunter”],1,Knife,02,[],[“FF”]
+08,91,MysticKnight,2,[“MysticKnight”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”]","[“00”, “01, “02”]"
+09,92,WhiteMage,1,[“WhiteMage”],1,Staff,38,"[“Cure”, “Scan”, “Antdt”]","[“12”, “13”, “14”]"
+0A,93,BlackMage,1,[“BlackMage”],1,Rod,31,"[“Fire”, “Ice”, “Bolt”]","[“24”, “25, “26”]"
+0B,94,TimeMage,1,[“TimeMage”],1,Rod,31,"[“Drag”, “Slow”, “Regen”]","[“36”, “37”, “38”]"
+0C,95,Summoner,2,[“Summoner”],1,Rod,31,"[“Chocob”, “Sylph”, “Remora”]","[“48”, “49”, “4A”]"
+0D,96,BlueMage,2,[“BlueMage”],1,Knife,02,"[“Aero”, “GblinPnch”, “Hammer”]","[“8F”, “93” ,”99”]"
+0E,97,RedMage,1,[“RedMage”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”, “Cure”, “Scan”, “Antdt”]","[“00”, “01, “02”, “12”, “13”, “14”]"
+0F,98,Mediator,0,[“Mediator”],1,Whip,4B,[],[“FF”]
+10,99,Chemist,2,[“Chemist”],1,Staff,38,[],[“FF”]
+11,9A,Geomancer,1,[“Geomancer”],1,Giyaman,50,[],[“FF”]
+12,9B,Bard,1,[“Bard”],1,Knife,02,"[“Power”, “Speed”, “Vitality”]","[“57”, “58”, “59”]"
+13,9C,Dancer,1,[“Dancer”],1,Knife,02,[],[“FF”]
+14,9D,Mimic,2,[“Mimic”],1,Knife,02,[],[“FF”]
+15,9E,Freelancer,0,[“Freelancer”],1,Knife,02,[],[“FF”]

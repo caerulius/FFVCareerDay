@@ -1,36 +1,36 @@
-area_id,area_name,capacity,order
-3,Pyramid,70,17
-25,Rift,49,22
-10,Istory Falls,44,20
-27,Karnak,42,7
-23,Exdeath’s Castle,37,16
-4,Kuzar,35,21
-6,Solitary Island,31,19
-9,Flying Lonka Ruins,30,12
-17,Tycoon Castle,28,5
-15,Walse,27,6
-0,Steamship,24,8
-7,Mua,20,15
-18,Void,17,23
-8,Tule,16,3
-13,Fork Tower,16,18
-20,Wind Shrine,14,2
-28,Great Trench,14,20
-5,Phoenix Tower,14,20
-21,Moogle Village,12,15
-11,Hiryuu Valley,12,13
-22,Ship Graveyard,12,4
-32,Ancient Library,11,9
-30,Crescent Island,9,10
-12,Bal Castle,9,12
-16,Ruined City,8,11
-33,Pirate’s Cave,7,1
-29,Barrier Tower,7,14
-31,North Mountain,6,5
-19,Kelb,6,8
-26,Mirage Village,5,20
-1,Carwen,4,5
-34,Jacole,4,5
-24,Surgate Castle,4,13
-2,Rugor,4,20
-14,Lix,2,10
+area_id,area_name,capacity,order,num_checks
+3,Pyramid,70,17,28
+25,Rift,49,22,17
+10,Istory Falls,44,20,17
+27,Karnak,42,7,19
+23,Exdeath’s Castle,37,16,16
+4,Kuzar,35,21,12
+6,Solitary Island,31,19,14
+9,Flying Lonka Ruins,30,12,15
+17,Tycoon Castle,28,5,14
+15,Walse,27,6,18
+0,Steamship,24,8,10
+7,Mua,20,15,12
+18,Void,17,23,5
+8,Tule,16,3,11
+13,Fork Tower,16,18,6
+20,Wind Shrine,14,2,11
+28,Great Trench,14,20,6
+5,Phoenix Tower,14,20,11
+21,Moogle Village,12,15,9
+11,Hiryuu Valley,12,13,8
+22,Ship Graveyard,12,4,8
+32,Ancient Library,11,9,5
+30,Crescent Island,9,10,5
+12,Bal Castle,9,12,4
+16,Ruined City,8,11,3
+33,Pirate’s Cave,7,1,6
+29,Barrier Tower,7,14,4
+31,North Mountain,6,5,3
+19,Kelb,6,8,2
+26,Mirage Village,5,20,2
+1,Carwen,4,5,3
+34,Jacole,4,5,2
+24,Surgate Castle,4,13,3
+2,Rugor,4,20,1
+14,Lix,2,10,1

@@ -55,6 +55,18 @@ class Crystal(Collectible):
     def __init__(self,crystal_id):
         data = df_crystal_id.loc[crystal_id]
         self.shop_id = data['shop_id']
+        self.starting_weapon = data['starting_weapon']
+        self.starting_weapon_id = data['starting_weapon_id']
+        self.starting_spell_list = data['starting_spell_list'].strip('][').split(',')
+        self.starting_spell_list = [x.replace('"', '').replace(' ', '')
+                                     .replace('“', '').replace('”', '')
+                                    for x in self.starting_spell_list]
+        self.starting_spell_ids = data['starting_spell_ids'].strip('][').split(',')
+        self.starting_spell_ids = [x.replace('"', '').replace(' ', '')
+                                     .replace('“', '').replace('”', '')
+                                    for x in self.starting_spell_ids]
+        self.starting_spell = ""
+        self.starting_spell_id = ""
         related_jobs = data['related_jobs'].strip('][').split(',')
         super().__init__(crystal_id, data['readable_name'], int(data['value']),
                          related_jobs, data['max_count'])
@@ -126,6 +138,26 @@ class CollectibleManager():
             self.add_to_placement_history(choice)
 
         return choice
+
+    def get_min_value_collectible(self, random_engine):
+        return random_engine.choice([x for x in self.get_all_of_type(Item)
+                                     if  x.reward_value == 1
+                                     and x.max_count is None
+                                     and x.valid])
+
+    def get_of_value_or_lower(self, random_engine, value):
+        val_list = [x for x in self.collectibles if x.reward_value == value
+                    and self.placement_history[x] < x.max_count
+                    and x.valid]
+        if len(val_list) == 0:
+            val_list = [x for x in self.collectibles if x.reward_value < value
+                        and self.placement_history[x] < x.max_count
+                        and x.valid]
+        if len(val_list) == 0:
+            return None #some you can place forever, so this should never happen
+
+        return random_engine.choice(val_list)
+        
     
     def add_to_placement_history(self, collectible):
         if collectible in self.placement_history.keys():

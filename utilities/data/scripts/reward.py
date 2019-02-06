@@ -21,6 +21,7 @@ class Reward:
         self.reward_style (event, chest)
         '''
         self.collectible = collectible_manager.get_by_name(self.original_reward)
+        self.randomized = False
 
     @property
     def asar_output(self):
