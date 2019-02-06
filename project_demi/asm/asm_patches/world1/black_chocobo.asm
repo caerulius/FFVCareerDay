@@ -4,10 +4,10 @@ hirom
 ;Remove part before black chocobo chase
 org $C88D00
 
-db $CD, $A5, $00		;Run event index 00A5
-db $CD, $98, $03		;Run event index 0398
-db $A2, $A8				;Set Event Flag 0A8
-db $FF					;End Event
+db $CD, $A5, $00						;Run event index 00A5
+db $CD, $98, $03						;Run event index 0398
+db $A2, $A8								;Set Event Flag 0A8
+db $FF									;End Event
 	
 padbyte $00
 pad $C88D0B
@@ -49,8 +49,8 @@ pad $C94774
 ;Remove text after catching black chocobo (from right)
 org $C93719
 
-db $CD, $92, $03		;Run event index 0392
-db $FF					;End Event
+db $CD, $92, $03						;Run event index 0392
+db $FF									;End Event
 
 padbyte $00
 pad $C93724
@@ -58,8 +58,8 @@ pad $C93724
 ;Remove text after catching black chocobo (from left)
 org $C9370D
 
-db $CD, $92, $03		;Run event index 0392
-db $FF					;End Event
+db $CD, $92, $03						;Run event index 0392
+db $FF									;End Event
 
 padbyte $00
 pad $C93718
@@ -67,8 +67,8 @@ pad $C93718
 ;Remove text after catching black chocobo (from top)
 org $C93701
 
-db $CD, $92, $03		;Run event index 0392
-db $FF					;End Event
+db $CD, $92, $03						;Run event index 0392
+db $FF									;End Event
 
 padbyte $00
 pad $C9370C
@@ -76,8 +76,8 @@ pad $C9370C
 ;Remove text after catching black chocobo (from bottom)
 org $C936F5
 
-db $CD, $92, $03		;Run event index 0392
-db $FF					;End Event
+db $CD, $92, $03						;Run event index 0392
+db $FF									;End Event
 
 padbyte $00
 pad $C93700
