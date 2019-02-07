@@ -158,3 +158,81 @@ MagicTextBox:
 lda #$04
 sta $DF 
 JMP $C7A4 ; branch the fk out and hope it works (it does)
+
+
+
+
+; org $E79F00
+; db $09, $38, $13
+
+; RANDOMIZER JOB SETTING  : Code $EC
+; On rando seeds, this will trigger from the values written to E79F00:
+; $00 = job id
+; $01 = starting weapon
+; $02 = starting magic
+
+org $C0A5C0
+db $20, $CE ; branch to $C0CE20
+
+org $C0CE20
+pha
+phx
+
+; turn off freelancer
+LDA #$00
+STA $000842
+
+
+; set job value to learned jobs
+LDX #$0000
+LDA $E79F00
+AND #$07
+tax
+LDA $C0C9B9,X
+pha
+LDA $E79F00
+lsr
+lsr
+lsr
+tax
+pla
+ora $0840,x
+sta $0840,x
+
+; set characters to default job
+LDA $E79F00
+STA $0501
+STA $0551
+STA $05A1
+STA $05F1
+
+; set characters' default weapon to right hard
+LDA $E79F01
+STA $0513
+STA $0563
+STA $05B3
+STA $0603
+
+; set default magic
+
+LDA $E79F02
+AND #$07
+tax
+LDA $C0C9B9,X
+pha
+LDA $E79F02
+lsr
+lsr
+lsr
+tax
+pla
+ora $0950,x
+sta $0950,x
+
+
+
+plx
+pla
+
+JMP $A630 ; hopefully this works 
+

@@ -2,17 +2,11 @@ hirom
 !base = $C00000
 
 org $C22075
-<<<<<<< HEAD:project_demi/asm/asm_patches/misc/double_battle_speed.asm
 JML DoubleSpeedHook
 
 org $F00100
 DoubleSpeedHook:
-=======
-JML Hook
 
-org $F30000
-Hook:
->>>>>>> master:asm/asm_patches/misc/double_battle_speed.asm
 
 lda $3d75,x
 CMP #$01

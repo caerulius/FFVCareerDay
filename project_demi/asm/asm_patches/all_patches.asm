@@ -1,5 +1,5 @@
 ; conditionals
-!vanillarewards = 1
+!vanillarewards = 0
 
 
 ; init
@@ -174,6 +174,10 @@ incsrc misc/destination.asm
 incsrc misc/chest_jobreward.asm
 incsrc misc/chest_magicreward.asm
 incsrc misc/key_items.asm
+incsrc misc/magic_ability_crystal_shop_prices.asm
+incsrc misc/shop_hook.asm
+incsrc misc/shop_text.asm
+
 
 incsrc recovery/all_inns.asm
 incsrc recovery/tent.asm
