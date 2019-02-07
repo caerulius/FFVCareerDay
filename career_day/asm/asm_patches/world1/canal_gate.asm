@@ -45,3 +45,15 @@ db $FF				;End Event
 
 padbyte $00
 pad $C8645E
+
+;CAREERDAY
+
+; Set airship upon leaving instead of pirate ship. This changes the 5th argument in the warp code (event code $E1)
+
+org $C86415
+db $C0
+
+; Always allow canal access regardless of vehicle type
+
+org $C00628
+db $05

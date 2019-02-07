@@ -4,7 +4,7 @@ hirom
 org $E79A00
 
 padbyte $FF
-pad $E79FFF
+pad $E79EFF
 ; all abilities pre-appended with $A1 for "!" 
 ; should make it clear they're abilities 
 ;Other  

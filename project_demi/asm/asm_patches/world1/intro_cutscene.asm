@@ -23,6 +23,11 @@ db $A4, $DC                     ;Set Event Flag 1DC
 db $A4, $FF                     ;Set Event Flag 1FF
 db $A4, $BE                     ;Set Event Flag 1BE
 
+
+if !vanillarewards == 0
+    db $EC
+endif
+
 ; tycoon chancellor & guard already set
 ;db $CB, $01, $01                ;Turn off bit 02 at address  0x7e0a74
 ;db $CA, $0A, $01                ;Turn on bit 04 at address  0x7e0a75
