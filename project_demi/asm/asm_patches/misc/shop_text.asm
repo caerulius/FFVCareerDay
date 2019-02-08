@@ -43,7 +43,7 @@ db $FF
 ;Def.   
 org $E79A18
 db $A1
-db $22
+db $23
 db $7E
 db $7F
 db $D2
@@ -153,7 +153,7 @@ db $FF
 ;DrgnSwd
 org $E79A68
 db $A1
-db $22
+db $23
 db $8B
 db $80
 db $87
@@ -351,7 +351,7 @@ db $FF
 ;Drink  
 org $E79AF8
 db $A1
-db $22
+db $23
 db $8B
 db $82
 db $87
@@ -461,7 +461,7 @@ db $FF
 ;Dance  
 org $E79B48
 db $A1
-db $22
+db $23
 db $7A
 db $87
 db $7C
@@ -697,7 +697,7 @@ db $FF
 ;Dimen 1
 org $E79C40
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
@@ -708,7 +708,7 @@ db $FF
 ;Dimen 2
 org $E79C48
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
@@ -719,7 +719,7 @@ db $FF
 ;Dimen 3
 org $E79C50
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
@@ -730,7 +730,7 @@ db $FF
 ;Dimen 4
 org $E79C58
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
@@ -741,7 +741,7 @@ db $FF
 ;Dimen 5
 org $E79C60
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
@@ -752,7 +752,7 @@ db $FF
 ;Dimen 6
 org $E79C68
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
@@ -875,14 +875,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $32
-db $81
-db $85
-db $7D
-db $96
-db $FF
+db $F1
 db $FF
 ;Equip <Armr> 
 org $E79D48
@@ -892,14 +885,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $20
-db $8B
-db $86
-db $8B
-db $96
-db $FF
+db $F3
 db $FF
 ;Equip <Ribn> 
 org $E79D50
@@ -909,14 +895,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $31
-db $82
-db $7B
-db $87
-db $96
-db $FF
+db $C1
 db $FF
 ;Equip <Swrd> 
 org $E79D58
@@ -926,14 +905,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $32
-db $90
-db $8B
-db $7D
-db $96
-db $FF
+db $E3
 db $FF
 ;Equip <Sper> 
 org $E79D60
@@ -943,14 +915,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $32
-db $89
-db $7E
-db $8B
-db $96
-db $FF
+db $E8
 db $FF
 ;Equip <Katn> 
 org $E79D68
@@ -960,35 +925,16 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $2A
-db $7A
-db $8D
-db $87
-db $96
-db $FF
+db $EA
 db $FF
 ;Equip <Axe><Hamr>
 org $E79D70
 db $A1
 db $24
 db $8A
-db $8E
-db $82
 db $89
-db $FF
-db $96
-db $20
-db $91
-db $7E
-db $96
-db $96
-db $27
-db $7A
-db $86
-db $8B
-db $96
+db $E9
+db $BF
 db $FF
 ;Equip <Bow> 
 org $E79D78
@@ -998,13 +944,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $21
-db $88
-db $90
-db $96
-db $FF
+db $ED
 db $FF
 ;Equip <Whip> 
 org $E79D80
@@ -1014,14 +954,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $36
-db $81
-db $82
-db $89
-db $96
-db $FF
+db $EF
 db $FF
 ;Equip <Harp> 
 org $E79D88
@@ -1031,14 +964,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $27
-db $7A
-db $8B
-db $89
-db $96
-db $FF
+db $EE
 db $FF
 ;Agility 
 org $E79D90
@@ -1127,7 +1053,7 @@ db $FF
 ;Dbl Grip
 org $E79DC8
 db $A1
-db $22
+db $23
 db $7B
 db $85
 db $FF
@@ -1272,7 +1198,7 @@ db $FF
 ;DmgFloor
 org $E79E28
 db $A1
-db $22
+db $23
 db $86
 db $80
 db $25
@@ -1301,18 +1227,12 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $31
-db $88
-db $7D
-db $96
-db $FF
+db $EB
 db $FF
 ;Dash
 org $E79E40
 db $A1
-db $22
+db $23
 db $7A
 db $8C
 db $81
