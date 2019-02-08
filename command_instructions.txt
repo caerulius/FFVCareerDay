@@ -1,0 +1,32 @@
+STEPS TO COMPILE AND CREATE PATCH:
+
+All of these assume you're in the correct directory where either the ROM is or asar is. 
+
+1) Copy rom file via command line (copy and paste works too):
+
+copy ffv.sfc ffv_hacks.sfc /y
+
+
+
+2) Apply asm patches. In this example, all_patches. Make sure settings such as vanillarewards are set correctly. Multiple patches here are fine, but make sure to do all_patches.asm first. 
+
+"asar.exe" --fix-checksum=off "FFVCareerDay\project_demi\asm\asm_patches\all_patches.asm" "ffv_hacks.sfc
+
+
+
+3) Use Lunar IPS to 'Create Patch', first select 'ffv.sfc', then select 'ffv_hacks.sfc'. 
+
+If you want 1 patch that handles everything for all_patches and randomizer, then simply patch everything via step 2 then create one IPS file.
+
+
+
+If you want to patch a main.ips base (all_patches), then make a randomizer file: 
+- Step 1
+- Step 2, only all_patches
+- Step 3, generating main.ips
+- Step 1
+- Step 2, only randomizer patch
+- Step 3, generating random.ips
+- Step 1
+
+Then both IPS files can be applied independently. DO REALIZE that the randomizer file needs main.ips to be along with it in order for randomization to work.  If !vanillarewards == 0 in main_patches, then it's expecting to assign jobs at the beginning of the game (address $E79F00), and will cause glitched jobs if randomizer patch isn't applied. 

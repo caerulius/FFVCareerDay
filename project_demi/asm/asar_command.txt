@@ -1,4 +1,0 @@
-(first make sure FFV is a SFC file, not SMC. Then savestate at tycoon meteor)
-
-copy ffv.sfc "ffv - Copy.sfc" /y
-asar.exe --fix-checksum=off asm_patches/tycoon_meteor_01_mount.asm "ffv - Copy.sfc"
