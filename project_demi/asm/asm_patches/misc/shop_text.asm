@@ -1281,7 +1281,7 @@ db $FF
 ;Dragoon 
 org $E79E60
 db $C8
-db $22
+db $23
 db $8B
 db $7A
 db $80
@@ -1476,7 +1476,7 @@ db $FF
 ;Dancer  
 org $E79EE0
 db $C8
-db $22
+db $23
 db $7A
 db $87
 db $7C
