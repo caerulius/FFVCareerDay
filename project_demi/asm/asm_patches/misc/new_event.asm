@@ -229,6 +229,12 @@ pla
 ora $0950,x
 sta $0950,x
 
+; set characters' default ability
+LDA $E79F03
+STA $0517
+STA $0567
+STA $05B7
+STA $0607
 
 
 plx
