@@ -5,7 +5,7 @@ import operator
 
 NUM_REWARDS = 314
 
-df_reward_table = pd.read_csv('..\\tables\\rewards.csv', dtype=str)
+df_reward_table = pd.read_csv('tables/rewards.csv', dtype=str)
 df_reward_table['idx'] = df_reward_table['idx'].astype(int)
 
 class Reward:

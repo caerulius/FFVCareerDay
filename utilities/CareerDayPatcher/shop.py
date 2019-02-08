@@ -5,7 +5,7 @@ import random
 
 NUM_SHOPS = 64
 
-df_shop_table = pd.read_csv('..\\tables\\shop_id.csv',dtype=str)
+df_shop_table = pd.read_csv('tables/shop_id.csv',dtype=str)
 df_shop_table['idx'] = df_shop_table['idx'].astype(int)
 
 shop_id_dict = {

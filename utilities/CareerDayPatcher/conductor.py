@@ -250,10 +250,12 @@ class Conductor():
         spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.RM.get_spoiler()
         spoiler = spoiler + self.SM.get_spoiler()
+        #spoiler = spoiler + self.SPM.get_spoiler() #not including for now
 
         patch = ""
         patch = patch + self.starting_crystal_patch()
         patch = patch + self.RM.get_patch()
         patch = patch + self.SM.get_patch()
+        patch = patch + self.SPM.get_patch()
 
         return(spoiler, patch)
