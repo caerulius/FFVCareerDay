@@ -10,7 +10,7 @@ copy ffv.sfc ffv_hacks.sfc /y
 
 2) Apply asm patches. In this example, all_patches. Make sure settings such as vanillarewards are set correctly. Multiple patches here are fine, but make sure to do all_patches.asm first. 
 
-"asar.exe" --fix-checksum=off "FFVCareerDay\project_demi\asm\asm_patches\all_patches.asm" "ffv_hacks.sfc
+"asar.exe" --fix-checksum=off "FFVCareerDay\project_demi\asm\asm_patches\all_patches.asm" "ffv_hacks.sfc"
 
 
 
