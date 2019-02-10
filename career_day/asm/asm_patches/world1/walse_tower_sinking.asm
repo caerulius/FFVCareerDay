@@ -18,11 +18,14 @@ pad $C872D2
 ; Walse tower sink cutscene
 org $C88B26
 
+
+
 db $C4, $04
 db $75
 db $BE, $00						;Rumble effect of 4F magnitude
 db $A4, $E3						;Set Event Flag 1E3
 db $E1, $00, $00, $CB, $57, $00	;Return from cutscene? 00 00 CB 57 00
+db $D2, $00, $CA, $57, $D8
 db $D2, $00, $CD, $56, $6C		;(Map) 00 CD 56 6C
 db $DB							;Restore Player status
 db $C3, $04						;Fade in Speed 04
