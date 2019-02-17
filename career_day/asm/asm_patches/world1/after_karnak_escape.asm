@@ -5,7 +5,6 @@ hirom
 org $C87F79
 
 db $7C							;Stops the timer
-db $D2, $00, $54, $4F, $B5		;(Map) 00 54 4F B5
 db $C4, $0C						;Fade out Speed 0C
 db $73
 db $A5, $FF						;Clear Event Flag 1FF
@@ -75,6 +74,11 @@ db $CA, $51, $01				;Set Flag 2/3/4/5/51 01
 db $A2, $32						;Set Event Flag 032
 db $A2, $33						;Set Event Flag 033
 db $CC, $0C                  ;Custom destination flag 0C
+
+; CAREERDAY
+db $D2, $00, $54, $4E, $D8          ; set airship again
+; db $D2, $00, $54, $4F, $B5		; disable standard steamship
+
 db $E3, $00, $00, $53, $4E, $00	;Inter-map cutscene? 00 00 53 4E 00
 db $DB							;Restore Player status
 db $B4, $23						;Play Background Music Four Valiant Hearts

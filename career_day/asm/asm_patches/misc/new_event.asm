@@ -44,8 +44,8 @@ sta !typeid
 CMP #$40 ; compare type id
 BEQ EventRewardItem
 ; below is for key items, need a deeper system for event flags, not just the 'item' itself. All this does is set up a textbox appropriately
-; CMP #$30 ; compare type id
-; BEQ EventRewardKeyItem
+CMP #$30 ; compare type id
+BEQ EventRewardKeyItem
 CMP #$20 ; compare type id
 BEQ EventRewardMagic
 CMP #$50 ; compare type id 
@@ -98,9 +98,9 @@ JMP FinishRewardEvent
 
 
 
-; EventRewardKeyItem: ; give key item
-; JSL BranchToKeyItemReward
-; JMP FinishRewardEvent
+EventRewardKeyItem: ; give key item
+JSL BranchToKeyItemReward
+JMP FinishRewardEvent
 
 
 EventRewardMagic: ; give magic

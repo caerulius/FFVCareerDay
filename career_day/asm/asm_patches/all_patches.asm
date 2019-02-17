@@ -210,3 +210,8 @@ incsrc reward_events/chicken_knife_brave_blade.asm
 
 ; open world
 incsrc open_world/canal_fix.asm
+incsrc open_world/open_world.asm
+incsrc open_world/world2_to_world1_warp.asm
+incsrc open_world/world3_to_world2_warp.asm
+
+incsrc world2/mooglewaterway_encounters.asm

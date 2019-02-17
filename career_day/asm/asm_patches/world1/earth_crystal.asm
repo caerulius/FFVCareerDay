@@ -113,8 +113,12 @@ db $CB, $DE, $00                ;Clear Flag 2/3/4/5/DE 00
 db $CA, $33, $01                ;Set Flag 2/3/4/5/33 01
 db $CA, $34, $01                ;Set Flag 2/3/4/5/34 01
 db $CA, $F8, $00                ;Set Flag 2/3/4/5/F8 00
-db $A5, $FA                     ;Clear Event Flag 1FA
+
 db $A3, $B8                     ;Clear Event Flag 0B8
+
+; CAREERDAY
+; Remove event flag disabling free access back to Lonka
+; db $A5, $FA                     ;Clear Event Flag 1FA
 
 ; set flags for airship scene after leaving and landing
 db $A5, $FE                     ;Clear Event Flag 1FE

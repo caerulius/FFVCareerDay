@@ -19,11 +19,18 @@ LDA !typeid
 CMP #$60
 BEQ IntermediateBranchToAbilityReward
 LDA !typeid
+CMP #$30
+BEQ IntermediateBranchToKeyItemReward
+LDA !typeid
 BPL BranchIfPlusChestIDBranch
 JML $C00E44
 
 IntermediateBranchToAbilityReward:
 JSL BranchToAbilityReward
+JML $c00e74
+
+IntermediateBranchToKeyItemReward:
+JSL BranchToKeyItemReward
 JML $c00e74
 
 BranchIfPlusChestIDBranch:
@@ -250,8 +257,33 @@ JML JobsAssigned
 
 
 
+; this code will set the proper bits per key item
+; refer to key_items.asm 
+BranchToKeyItemReward:
+
+; these are set up manually. this is for debugging & cleanliness
+; no reason to come up with a complex indexing table here
+
+; we're going to be using a custom bit setter 
+; so we'll push A and X
+pha 
+phx
+LDA !rewardid
+CMP #$00
+BEQ KeyItemTornaCanalLocator
+BNE EndKeyItemReward
+
+KeyItemTornaCanalLocator:
+JSL KeyItemTornaCanal
 
 
+EndKeyItemReward:
+
+plx
+pla
+
+; end with generic finisher
+JML JobsAssigned
 
 
 

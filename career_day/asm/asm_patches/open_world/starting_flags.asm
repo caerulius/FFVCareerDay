@@ -7,10 +7,14 @@ db $B7, $02							;Add/Remove character 02
 db $B7, $09							;Add/Remove character 09
 db $B7, $03							;Add/Remove character 09
 
-; set airship
-; spawns right under player, tweak $9C,$96 to change X/Y coord. $D8 controls type of vehicle
 
-db $D2, $00, $9C, $96, $D8
+; world map
+db $A4, $FB            ; set address 000A53 bit ON 08
+
+; Spawn steamship at karnak
+; Disabled, if you want to enable it, you have to control the karnak_warp_meteor flags so that the steamship is not immediately rideable 
+
+; db $D2, $00, $54, $4F, $B5		;(Map) 00 54 4F B5
 
 
 ; PIRATES CAVE
@@ -97,6 +101,27 @@ db $CA, $A0, $00            ; set address 000A68 bit ON 01
 ; ANCIENT LIBRARY
 ; untouched for now. everything spawns 
 
+; CRESCENT ISLAND
+; allows access to Bchoco 
+
+db $A2, $39            ; set address 000A1B bit ON 02
+db $CB, $EE, $01            ; set address 000A91 bit OFF 40
+db $CB, $EC, $01            ; set address 000A91 bit OFF 10
+db $CA, $EA, $01            ; set address 000A91 bit ON 04
+db $CA, $E9, $01            ; set address 000A91 bit ON 02
+db $CA, $FD, $01            ; set address 000A93 bit ON 20
+db $CA, $77, $03            ; set address 000AC2 bit ON 80
+db $CA, $76, $03            ; set address 000AC2 bit ON 40
+db $CA, $75, $03            ; set address 000AC2 bit ON 20
+
+
+; SANDWORM
+; Allows immediate access to Sandworm fight
+db $A2, $3B            ; set address 000A1B bit ON 08
+
+
+
+
 ; RUINED CITY
 
 
@@ -107,3 +132,282 @@ db $CA, $A0, $00            ; set address 000A68 bit ON 01
 ; Bitwise 04 on address A53 (the event problematic address) controls world map access to ronka area 
 ; Doesnt break if you leave it on in world 3
 ; If you warp between worlds, theoretically you could set it so its only active in world 1. 
+db $A4, $FA            ; set address 000A53 bit ON 04
+
+; Set side cannons to defeated
+db $A2, $B7            ; set address 000A2A bit ON 80
+db $A2, $B6            ; set address 000A2A bit ON 40
+db $A2, $B5            ; set address 000A2A bit ON 20
+db $A2, $B4            ; set address 000A2A bit ON 10
+db $A2, $B3            ; set address 000A2A bit ON 08
+db $CA, $FD, $00            ; set address 000A73 bit ON 20
+
+; Set crystal to despawn. This causes a hard crash if left unmanaged when interacting with it
+db $CB, $3B, $01            ; set address 000A7B bit OFF 08
+
+
+
+; METEOR RAID
+; Cutscene after galuf leaves, after Earth crystal
+db $A2, $4D            ; set address 000A1D bit ON 20
+; Set Tycoon Cid/Mid check already accessed
+db $A2, $4F            ; set address 000A1D bit ON 20
+db $A2, $47            ; set address 000A1C bit ON 80
+db $A2, $46            ; set address 000A1C bit ON 40
+
+; WARP TO WORLD 2
+db $A4, $EF            ; set address 000A51 bit ON 80
+
+
+; EXDEATH CASTLE
+; Unlock doors
+; Sets Gilga 1 to complete
+db $CB, $15, $03                ;Clear Flag 2/3/4/5/15 03
+db $CB, $16, $03                ;Clear Flag 2/3/4/5/16 03
+db $CB, $17, $03                ;Clear Flag 2/3/4/5/17 03
+db $CB, $1B, $03                ;Clear Flag 2/3/4/5/1B 03
+db $CA, $0E, $00                ;Set Flag 2/3/4/5/0E 00
+db $A2, $58                     ;Set Event Flag 058
+db $A2, $59                     ;Set Event Flag 059
+
+
+; BIG BRIDGE
+; Set all events except Gilga fight
+
+; gilga fight = $A1C bit 20
+
+; Set big bridge encounters complete, full walk access
+; db $A2, $61            ; set address 000A20 bit ON 02 (bal castle gates)
+db $A2, $5D            ; set address 000A1F bit ON 20
+db $CB, $2E, $03            ; set address 000AB9 bit OFF 40
+db $CB, $2D, $03            ; set address 000AB9 bit OFF 20
+
+
+; MOOGLE FOREST
+; set waterway not open, but moogle active
+
+db $A3, $5D            ; set address 000A1F bit OFF 20
+
+
+; MOOGLE VILLAGE
+; Set flags for open village
+db $CB, $3E, $02                        ;Clear Flag 2/3/4/5/3E 02
+db $CB, $3F, $02                        ;Clear Flag 2/3/4/5/3F 02
+db $A4, $3C                     ;Set Event Flag 13C
+db $A4, $2C                     ;Set Event Flag 12C
+db $CB, $E6, $01                ;Clear Flag 2/3/4/5/E6 01
+db $CB, $E7, $01                ;Clear Flag 2/3/4/5/E7 01
+db $CB, $DF, $01                ;Clear Flag 2/3/4/5/DF 01
+db $CA, $E0, $01                ;Set Flag 2/3/4/5/E0 01
+db $CA, $E1, $01                ;Set Flag 2/3/4/5/E1 01
+db $CA, $E2, $01                ;Set Flag 2/3/4/5/E2 01
+db $CA, $E3, $01                ;Set Flag 2/3/4/5/E3 01
+db $CA, $E4, $01                ;Set Flag 2/3/4/5/E4 01
+db $CA, $E5, $01                ;Set Flag 2/3/4/5/E5 01
+db $A4, $2D                     ;Set Event Flag 12D
+
+; BAL CASTLE
+db $A2, $5F                     ;Set Event Flag 05F
+db $CA, $69, $02                        ;Set Flag 2/3/4/5/69 02
+db $CA, $6A, $02                        ;Set Flag 2/3/4/5/6A 02
+db $CA, $6B, $02                        ;Set Flag 2/3/4/5/6B 02
+db $CA, $6C, $02                        ;Set Flag 2/3/4/5/6C 02
+db $CA, $6D, $02                        ;Set Flag 2/3/4/5/6D 02
+db $CA, $6E, $02                        ;Set Flag 2/3/4/5/6E 02
+db $CA, $6F, $02                        ;Set Flag 2/3/4/5/6F 02
+db $CA, $70, $02                        ;Set Flag 2/3/4/5/70 02
+db $CA, $71, $02                        ;Set Flag 2/3/4/5/71 02
+db $CA, $72, $02                        ;Set Flag 2/3/4/5/72 02
+db $CA, $73, $02                        ;Set Flag 2/3/4/5/73 02
+db $CA, $7C, $02                        ;Set Flag 2/3/4/5/7C 02
+db $CA, $74, $02                        ;Set Flag 2/3/4/5/74 02
+db $CA, $75, $02                        ;Set Flag 2/3/4/5/75 02
+db $CA, $76, $02                        ;Set Flag 2/3/4/5/76 02
+db $CA, $77, $02                        ;Set Flag 2/3/4/5/77 02
+db $CA, $78, $02                        ;Set Flag 2/3/4/5/78 02
+db $CA, $79, $02                        ;Set Flag 2/3/4/5/79 02
+db $CA, $7A, $02                        ;Set Flag 2/3/4/5/7A 02
+db $A2, $60                     ;Set Event Flag 060 (this is taken from Cara's cutscene with Hiryuu to immediately set flag)
+
+	; guards after balcastle_leavesgates
+; db $A2, $61                     ;Set Event Flag 061 (bal castle gates)
+db $CB, $6B, $02                ;Clear Flag 2/3/4/5/6B 02
+
+
+; after hiryuu reentering
+db $A4, $1D                     ;Set Event Flag 11D
+db $CB, $69, $02                ;Clear Flag 2/3/4/5/69 02
+db $CA, $7B, $02                ;Set Flag 2/3/4/5/7B 02
+db $A2, $67                     ;Set Event Flag 067 (this is speaking with Cara cutscene)
+
+; KELB VILLAGE
+db $A2, $62                     ;Set Event Flag 062 (this cutscene)
+db $A2, $64                     ;Set Event Flag 062 (Kelgar cutscene)
+db $CA, $AE, $02                ;Turn on bit 40 at address  0x7e0aa9
+db $CA, $AF, $02                ;Turn on bit 80 at address  0x7e0aa9
+db $CA, $B0, $02                ;Turn on bit 01 at address  0x7e0aaa
+db $CA, $B1, $02                ;Turn on bit 02 at address  0x7e0aaa
+db $CA, $B2, $02                ;Turn on bit 04 at address  0x7e0aaa
+db $CA, $B5, $02                ;Turn on bit 20 at address  0x7e0aaa
+db $CA, $B6, $02                ;Turn on bit 40 at address  0x7e0aaa
+db $CA, $B7, $02                ;Turn on bit 80 at address  0x7e0aaa
+db $CA, $C1, $02                ;Turn on bit 02 at address  0x7e0aac
+db $CB, $C2, $02                ;Turn off bit 04 at address  0x7e0aac
+db $CB, $A1, $02                ;Turn off bit 02 at address  0x7e0aa8
+db $CA, $29, $00                ;Turn on bit 02 at address  0x7e0a59
+db $CA, $2A, $00                ;Turn on bit 04 at address  0x7e0a59
+
+
+
+; HIRYUU VALLEY
+db $CB, $D3, $02                ;Clear Flag 2/3/4/5/D3 02
+db $A4, $C4                     ;Set Event Flag 1C4
+
+
+; GUIDO ISLAND
+db $A2, $6B                     ;Set Event Flag 06B
+db $A4, $E8                     ;Set Event Flag 1E8
+db $A4, $E9                     ;Set Event Flag 1E9
+
+
+; SURGATE CASTLE
+db $A2, $6A 						; Set event flag for playing Surgate cutscene 
+
+
+
+; SUBMARINE ACCESS
+; disables zeza in submarine cutscene
+db $A2, $6E            ; set address 000A21 bit ON 40
+db $CB, $DB, $00            ; set address 000A6F bit OFF 08
+db $CB, $DA, $00            ; set address 000A6F bit OFF 04
+db $CB, $D8, $00            ; set address 000A6F bit OFF 01
+
+; GUIDO CAVE
+; award branch, trigger discussion flag
+; db $A2, $71                     ;Set Event Flag 071
+; db $A4, $CF                     ;Set Event Flag 1CF (awards actual key item in Key area )
+
+; MUA FOREST
+; Mua's event was changed to refer to this. Refer to open_world.asm for explanation
+
+db $A2, $72                     ;Set Event Flag 072
+
+; End of forest after battle:
+db $A2, $75                     ;Set Event Flag 075
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $25                     ;Set Event Flag 125
+db $CB, $0E, $00                ;Clear Flag 2/3/4/5/0E 00
+db $CA, $0F, $00                ;Set Flag 2/3/4/5/0F 00
+db $CB, $1A, $03                ;Clear Flag 2/3/4/5/1A 03
+db $A4, $BF                     ;Set Event Flag 1BF
+db $CB, $44, $02                ;Clear Flag 2/3/4/5/44 02
+db $CB, $45, $02                ;Clear Flag 2/3/4/5/45 02
+db $CB, $46, $02                ;Clear Flag 2/3/4/5/46 02
+db $CB, $47, $02                ;Clear Flag 2/3/4/5/47 02
+db $CB, $48, $02                ;Clear Flag 2/3/4/5/48 02
+db $CB, $7B, $02                ;Clear Flag 2/3/4/5/7B 02
+db $CA, $49, $02                ;Set Flag 2/3/4/5/49 02
+db $CA, $4A, $02                ;Set Flag 2/3/4/5/4A 02
+db $CA, $4B, $02                ;Set Flag 2/3/4/5/4B 02
+db $CA, $4C, $02                ;Set Flag 2/3/4/5/4C 02
+db $CA, $4D, $02                ;Set Flag 2/3/4/5/4D 02
+
+
+
+; WORLD 3
+
+; CLEFT ACCESS
+; Sets first cleft cutscene to watched
+; Important, as we use this cutscene for world traversing
+db $A4, $7E            ; set address 000A43 bit ON 40
+
+; TYCOON
+
+; db $A5, $7F                     ;Clear Event Flag 17F
+; db $CB, $96, $01                ;Clear Flag 2/3/4/5/96 01
+; db $A2, $79                     ;Set Event Flag 079
+; db $CB, $7C, $01                ;Clear Flag 2/3/4/5/7C 01
+; db $CB, $7D, $01                ;Clear Flag 2/3/4/5/7D 01
+; db $CB, $7E, $01                ;Clear Flag 2/3/4/5/7E 01
+; db $CB, $7F, $01                ;Clear Flag 2/3/4/5/7F 01
+; db $CB, $89, $01                ;Clear Flag 2/3/4/5/89 01
+; db $CB, $8A, $01                ;Clear Flag 2/3/4/5/8A 01
+; db $CB, $8B, $01                ;Clear Flag 2/3/4/5/8B 01
+; db $CB, $8C, $01                ;Clear Flag 2/3/4/5/8C 01
+; db $CA, $51, $00                ;Set Flag 2/3/4/5/51 00
+; db $CA, $52, $00                ;Set Flag 2/3/4/5/52 00
+; db $CA, $53, $00                ;Set Flag 2/3/4/5/53 00
+; db $CA, $54, $00                ;Set Flag 2/3/4/5/54 00
+; db $CA, $55, $00                ;Set Flag 2/3/4/5/55 00
+; db $CA, $98, $03                ;Set Flag 2/3/4/5/98 03
+; db $CA, $7D, $03                ;Set Flag 2/3/4/5/7D 03
+; db $CA, $7E, $03                ;Set Flag 2/3/4/5/7E 03
+; db $CA, $7F, $03                ;Set Flag 2/3/4/5/7F 03
+; db $CA, $80, $03                ;Set Flag 2/3/4/5/80 03
+; db $CA, $81, $03                ;Set Flag 2/3/4/5/81 03
+; db $CA, $82, $03                ;Set Flag 2/3/4/5/82 03
+; db $CB, $44, $00                ;Clear Flag 2/3/4/5/44 00
+; db $CB, $45, $00                ;Clear Flag 2/3/4/5/45 00
+; db $CB, $46, $00                ;Clear Flag 2/3/4/5/46 00
+; db $CB, $47, $00                ;Clear Flag 2/3/4/5/47 00
+; db $CB, $48, $00                ;Clear Flag 2/3/4/5/48 00
+; db $CB, $49, $00                ;Clear Flag 2/3/4/5/49 00
+; db $CB, $30, $00                ;Clear Flag 2/3/4/5/30 00
+
+; PIRATE'S HIDEOUT
+; Make Syldra event automatic
+db $A2, $81            ; set address 000A24 bit ON 02
+
+
+
+; GUIDO CAVE
+db $A4, $F5                     ;Set Event Flag 1F5
+db $CB, $30, $03                ;Clear Flag 2/3/4/5/30 03
+db $CB, $17, $01                ;Clear Flag 2/3/4/5/17 01
+db $A5, $C8                     ;Clear Event Flag 1C8
+db $A2, $80                     ;Set Event Flag 080
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $7F                     ;Set Event Flag 17F
+db $A5, $FF                     ;Clear Event Flag 1FF
+db $A4, $CE                     ;Set Event Flag 1CE
+db $A5, $C8                     ;Clear Event Flag 1C8
+db $CA, $98, $03                ;Set Flag 2/3/4/5/98 03
+
+; MUA TREE
+; First Tree visit flag
+db $A4, $7C                     ;Set Event Flag 17C
+
+; PYRAMID
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $BD                     ;Set Event Flag 0BD
+
+
+; KUZAR CASTLE
+; Set flags for spawned wind shrine guy
+db $CA, $7F, $03            ; set address 000AC3 bit ON 80
+db $A2, $5C                     ;Turn on bit 10 at address 0x7e0a1f (this is for first Kuzar event)
+
+
+; MELUSINE FIGHT
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $F3                     ;Set Event Flag 1F3
+db $CB, $08, $00                ;Clear Flag 2/3/4/5/08 00
+db $A2, $83                     ;Set Event Flag 083
+db $A4, $CD                     ;Set Event Flag 1CD
+
+
+; player position
+; set airship
+; spawns right under player, tweak $9C,$96 to change X/Y coord. $D8 controls type of vehicle
+; OG CORRECT WARPS
+;db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
+;db $D2, $00, $91, $74, $D8
+
+db $E1, $02, $00, $93, $52, $00 ;Return from cutscene? 00 00 9C 96 00
+db $D2, $02, $93, $51, $D8     ; airship
+
+
+
+
+
+db $14

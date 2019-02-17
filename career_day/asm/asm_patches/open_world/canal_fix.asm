@@ -19,7 +19,7 @@ CMP #$06
 BEQ CanalAccessFixAirshipShip
 CanalAccessFixBranchOut2:
 LDA $0ADC
-JML $C0062E
+JML $C0062B
 
 CanalAccessFixBranchOut1:
 LDA $0ADC

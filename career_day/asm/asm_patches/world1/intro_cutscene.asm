@@ -7,10 +7,13 @@ hirom
 
 org $C84C80
 
-db $E1, $10, $00, $91, $1C, $00 ;Return from cutscene? 10 00 91 1C 00
+; all flags related to setting up open world are in this file
+incsrc ../open_world/starting_flags.asm
+
+;db $E1, $10, $00, $91, $1C, $00 ;Return from cutscene? 10 00 91 1C 00
 db $A4, $E0                     ;Turn on bit 01 at address 0x7e0a50
 
-db $E1, $00, $00, $9C, $96, $00 ;Return from cutscene? 00 00 9C 96 00
+
 db $B1, $05                     ;Set Player Sprite 07 (Faris ;])
 db $09                          ;Player Show
 ; db $02                          ;Player Move Right
@@ -24,8 +27,7 @@ db $A4, $FF                     ;Set Event Flag 1FF
 db $A4, $BE                     ;Set Event Flag 1BE
 
 
-; all flags related to setting up open world are in this file
-incsrc ../open_world/starting_flags.asm
+
 
 
 

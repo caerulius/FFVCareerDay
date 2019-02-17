@@ -30,11 +30,16 @@ db $BD, $24, $FF                ;Start Event Battle 24
 db $75
 db $C4, $02                     ;Fade in Speed 06
 db $75
+
+; CAREERDAY
+; db $E1, $02, $00, $B7, $89, $00 ;Return from cutscene? 02 00 B7 89 00
+db $E1, $01, $00, $A0, $9D, $00 ;Return from cutscene? 
+
+
+
 db $A5, $7F                     ;Clear Event Flag 17F
-db $E1, $02, $00, $B7, $89, $00 ;Return from cutscene? 02 00 B7 89 00
 db $CB, $96, $01                ;Clear Flag 2/3/4/5/96 01
 db $A2, $79                     ;Set Event Flag 079
-db $D2, $02, $92, $73, $D8      ;(Map) 02 92 73 D8
 db $CB, $7C, $01                ;Clear Flag 2/3/4/5/7C 01
 db $CB, $7D, $01                ;Clear Flag 2/3/4/5/7D 01
 db $CB, $7E, $01                ;Clear Flag 2/3/4/5/7E 01
@@ -62,6 +67,11 @@ db $CB, $47, $00                ;Clear Flag 2/3/4/5/47 00
 db $CB, $48, $00                ;Clear Flag 2/3/4/5/48 00
 db $CB, $49, $00                ;Clear Flag 2/3/4/5/49 00
 db $CB, $30, $00                ;Clear Flag 2/3/4/5/30 00
+db $A5, $9A                     ;Clear Event Flag 19A
+db $CA, $73, $02                ;Set Flag 2/3/4/5/73 02
+db $A4, $C8                     ;Set Event Flag 1C8
+
+
 
 ; tycoon chancellor & guard already set. by the time you get to w3, force this 
 db $CB, $01, $01                ;Turn off bit 02 at address  0x7e0a74
@@ -69,9 +79,6 @@ db $CA, $0A, $01                ;Turn on bit 04 at address  0x7e0a75
 db $A2, $52                     ;Turn on bit 04 at address 0x7e0a1e
 
 db $A4, $FF                     ;Set Event Flag 1FF
-db $A5, $9A                     ;Clear Event Flag 19A
-db $CA, $73, $02                ;Set Flag 2/3/4/5/73 02
-db $A4, $C8                     ;Set Event Flag 1C8
 db $DB                          ;Restore Player status
 db $10                          ;Player pose: face up, left hand forward
 db $C3, $02                     ;Fade in Speed 06
