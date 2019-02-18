@@ -17,7 +17,7 @@ db $CB, $9D, $00				;Clear Flag 2/3/4/5/9D 00
 db $CB, $9E, $00				;Clear Flag 2/3/4/5/9E 00
 db $CA, $9F, $00				;Set Flag 2/3/4/5/9F 00
 db $CA, $A0, $00				;Set Flag 2/3/4/5/A0 00
-db $CC, $08                  	;Custom destination flag 08
+db $CC, $09                  	;Custom destination flag 09
 db $A4, $E2						;Set Event Flag 1E2
 db $FF
 

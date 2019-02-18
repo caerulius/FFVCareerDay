@@ -12,6 +12,11 @@ db $01
 db $C4, $03
 db $74
 db $80, $0A                     ;Sprite 080 do event: Hide
+db $81, $0A
+db $82, $0A
+db $83, $0A
+db $84, $0A
+db $85, $0A
 db $C3, $03
 db $74
 if !vanillarewards == 1

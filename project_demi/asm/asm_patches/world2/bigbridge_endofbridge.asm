@@ -19,6 +19,7 @@ db $14                          ;Player Move Down
 db $C3, $03                     ;Fade in Speed 02
 db $74                          ;Timing
 db $A2, $5C                     ;Turn on bit 10 at address 0x7e0a1f (this is for first Kuzar event)
+db $A2, $5B                     ;Turn on bit 08 at address 0x7e0a1f Rugor inn cutscene
 db $CC, $19                  ;Custom destination flag 19
 db $FF                          ;End Event
 

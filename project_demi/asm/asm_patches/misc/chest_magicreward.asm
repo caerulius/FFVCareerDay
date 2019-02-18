@@ -129,7 +129,7 @@ db $65
 db $82
 db $8B
 db $7E
-db $96
+db $55
 db $96
 db $72
 db $90
@@ -143,7 +143,7 @@ org $E778A8
 db $68
 db $7C
 db $7E
-db $96
+db $55
 db $96
 db $72
 db $90
@@ -158,7 +158,7 @@ db $61
 db $88
 db $85
 db $8D
-db $96
+db $55
 db $96
 db $72
 db $90
@@ -216,7 +216,7 @@ db $65
 db $82
 db $8B
 db $7E
-db $96
+db $56
 db $96
 db $72
 db $90
@@ -230,7 +230,7 @@ org $E77938
 db $68
 db $7C
 db $7E
-db $96
+db $56
 db $96
 db $72
 db $90
@@ -245,7 +245,7 @@ db $61
 db $88
 db $85
 db $8D
-db $96
+db $56
 db $96
 db $72
 db $90
@@ -390,7 +390,7 @@ db $62
 db $8E
 db $8B
 db $7E
-db $96
+db $55
 db $96
 db $76
 db $81
@@ -478,7 +478,7 @@ db $62
 db $8E
 db $8B
 db $7E
-db $96
+db $56
 db $96
 db $76
 db $81
@@ -522,7 +522,7 @@ db $6B
 db $82
 db $7F
 db $7E
-db $96
+db $55
 db $96
 db $76
 db $81
@@ -652,7 +652,7 @@ db $65
 db $82
 db $8B
 db $7E
-db $96
+db $55
 db $96
 db $61
 db $85
@@ -666,7 +666,7 @@ org $E77C08
 db $68
 db $7C
 db $7E
-db $96
+db $55
 db $96
 db $61
 db $85
@@ -681,7 +681,7 @@ db $61
 db $88
 db $85
 db $8D
-db $96
+db $55
 db $96
 db $61
 db $85
@@ -739,7 +739,7 @@ db $65
 db $82
 db $8B
 db $7E
-db $96
+db $56
 db $96
 db $61
 db $85
@@ -753,7 +753,7 @@ org $E77C98
 db $68
 db $7C
 db $7E
-db $96
+db $56
 db $96
 db $61
 db $85
@@ -768,7 +768,7 @@ db $61
 db $88
 db $85
 db $8D
-db $96
+db $56
 db $96
 db $61
 db $85
@@ -961,7 +961,7 @@ db $72
 db $85
 db $88
 db $90
-db $96
+db $55
 db $96
 db $73
 db $82
@@ -1004,7 +1004,7 @@ db $7A
 db $8C
 db $8D
 db $7E
-db $96
+db $55
 db $96
 db $73
 db $82
@@ -1463,7 +1463,7 @@ db $FF
 ;L5 Doom Blue Magic
 org $E78478
 db $6B
-db $96
+db $58
 db $96
 db $63
 db $88
@@ -1484,7 +1484,7 @@ db $FF
 ;L4 Qrter Blue Magic
 org $E78490
 db $6B
-db $96
+db $57
 db $96
 db $70
 db $8B
@@ -1506,7 +1506,7 @@ db $FF
 ;L2 Old Blue Magic
 org $E784A8
 db $6B
-db $96
+db $55
 db $96
 db $6E
 db $85
@@ -1526,7 +1526,7 @@ db $FF
 ;L3 Flare Blue Magic
 org $E784C0
 db $6B
-db $96
+db $56
 db $96
 db $65
 db $85
@@ -1699,7 +1699,7 @@ db $60
 db $7E
 db $8B
 db $88
-db $96
+db $55
 db $96
 db $96
 db $61
@@ -1719,7 +1719,7 @@ db $60
 db $7E
 db $8B
 db $88
-db $96
+db $56
 db $96
 db $96
 db $61
