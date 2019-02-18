@@ -1,9 +1,9 @@
-area_id,area_name,capacity,order,num_checks
+﻿area_id,area_name,capacity,order,num_checks
 3,Pyramid,70,17,28
 25,Rift,49,22,17
 10,Istory Falls,44,20,17
 27,Karnak,42,7,19
-23,Exdeath’s Castle,37,16,16
+23,Exdeath's Castle,37,16,16
 4,Kuzar,35,21,12
 6,Solitary Island,31,19,14
 9,Flying Lonka Ruins,30,12,15
@@ -24,7 +24,7 @@ area_id,area_name,capacity,order,num_checks
 30,Crescent Island,9,10,5
 12,Bal Castle,9,12,4
 16,Ruined City,8,11,3
-33,Pirate’s Cave,7,1,6
+33,Pirate's Cave,7,1,6
 29,Barrier Tower,7,14,4
 31,North Mountain,6,5,3
 19,Kelb,6,8,2

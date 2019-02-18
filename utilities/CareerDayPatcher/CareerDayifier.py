@@ -21,12 +21,12 @@ from conductor import *
 
 os.chdir(writedirectory)
 
-RPGE_PATH = os.path.join(app_path, "patches\\rpge.ips")
-MAIN_PATH = os.path.join(app_path, "patches\\ffv_project_demi_main.ips")
-MAIN_RANDO_PATH = os.path.join(app_path, "patches\\ffv_project_demi_main_rando.ips")
-X2_EXP_PATH = os.path.join(app_path, "patches\\ffv_project_demi_expabp2.ips")
-X4_EXP_PATH = os.path.join(app_path, "patches\\ffv_project_demi_expabp4.ips")
-BOSS_EXP_PATH = os.path.join(app_path, "patches\\ffv_project_demi_boss.ips")
+RPGE_PATH = os.path.join(app_path, "patches/rpge.ips")
+MAIN_PATH = os.path.join(app_path, "patches/ffv_project_demi_main.ips")
+MAIN_RANDO_PATH = os.path.join(app_path, "patches/ffv_project_demi_main_rando.ips")
+X2_EXP_PATH = os.path.join(app_path, "patches/ffv_project_demi_expabp2.ips")
+X4_EXP_PATH = os.path.join(app_path, "patches/ffv_project_demi_expabp4.ips")
+BOSS_EXP_PATH = os.path.join(app_path, "patches/ffv_project_demi_boss.ips")
 ASAR_PATH = os.path.join(app_path, "asar.exe")
 
 while True:
@@ -290,7 +290,6 @@ if rand:
 
     with open(patchfile, "w+") as f:
         f.write("hirom\n")
-        f.write("!base = $C00000\n")
         f.write(spoilerandpatch[1])
 
     command = ASAR_PATH + " --no-title-check " + patchfile + " " + local_path

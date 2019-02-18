@@ -1,2 +1,0 @@
-Eel>=0.9.9
-PyInstaller>=3.4

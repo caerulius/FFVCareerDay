@@ -16,8 +16,8 @@ idx,address,original_reward,area,description,reward_style
 15,C0FACE,Dancer,Flying Lonka Ruins,Earth Crystal,event
 16,C0FAD0,Levia,Istory Falls,Leviathan Esper,event
 17,C0FAD2,Titan,Karnak,Titan,event
-18,C0FAD4,Crbnkl,Exdeath’s Castle,Carbuncle,event
-19,C0FAD6,Syldra,Pirate’s Cave,Syldra,event
+18,C0FAD4,Crbnkl,Exdeath's Castle,Carbuncle,event
+19,C0FAD6,Syldra,Pirate's Cave,Syldra,event
 20,C0FAD8,Odin,Bal Castle,Odin,event
 21,C0FADA,Phenix,Phoenix Tower,Phoenix,event
 22,C0FADC,Bahmut,Hiryuu Valley,Bahamut,event
@@ -33,14 +33,14 @@ idx,address,original_reward,area,description,reward_style
 32,C0FAF0,Flare,Fork Tower,"Fork Tower, two Magics",event
 33,C0FAF2,Meteo,Great Trench,Meteo,event
 34,C0FAF4,Potion,Wind Shrine,"5 potions in Wind Shrine, bottom left guy",event
-35,C0FAF6,Potion,Pirate’s Cave,"8 potions, Pirate after Torna Canal Key acquired",event
+35,C0FAF6,Potion,Pirate's Cave,"8 potions, Pirate after Torna Canal Key acquired",event
 36,C0FAF8,Healing Staff,Tycoon Castle,Chancellor at Tycoon,event
 37,C0FAFA,Mythril Helm,North Mountain,Magisa & Forza,event
 38,C0FAFC,CornaJar,Kelb,CornaJar at Kelb,event
 39,C0FAFE,Ribbon,Rugor,Ribbon from girl in Rugor,event
 40,C0FB00,Mirage Vest,Mirage Village,Mirage Vest from Chocobo Tour/Mirage Village,event
 41,C0FB02,Assassin,Kuzar,12 Kuzar Events,event
-42,C0FB04,Apollo’s Harp,Kuzar,12 Kuzar Events,event
+42,C0FB04,Apollo's Harp,Kuzar,12 Kuzar Events,event
 43,C0FB06,Excalibur,Kuzar,12 Kuzar Events,event
 44,C0FB08,Flame Whip,Kuzar,12 Kuzar Events,event
 45,C0FB0A,Earth Bell,Kuzar,12 Kuzar Events,event
@@ -48,7 +48,7 @@ idx,address,original_reward,area,description,reward_style
 47,C0FB0E,Masamune,Kuzar,12 Kuzar Events,event
 48,C0FB10,Wizard Rod,Kuzar,12 Kuzar Events,event
 49,C0FB12,Rune Axe,Kuzar,12 Kuzar Events,event
-50,C0FB14,Sage’s Staff,Kuzar,12 Kuzar Events,event
+50,C0FB14,Sage's Staff,Kuzar,12 Kuzar Events,event
 51,C0FB16,Sasuke,Kuzar,12 Kuzar Events,event
 52,C0FB18,Yoichi Bow,Kuzar,12 Kuzar Events,event
 53,C0FB1A,Shiva,Walse,Shiva,event
@@ -61,16 +61,16 @@ idx,address,original_reward,area,description,reward_style
 60,C0FB28,Brave Blade,Mua Forest,Brave Blade,event
 61,C0FB2A,Chicken Knife,Mua Forest,Chicken Knife,event
 62,D13212,Broadsword,Wind Shrine,Wind Shrine Chest,chest
-63,D13216,Ether,Tule,Beginner’s House Chest,chest
-64,D1321A,100,Tule,Beginner’s House Chest,chest
-65,D1321E,Potion,Tule,Beginner’s House Chest,chest
-66,D13222,Phoenix Down,Tule,Beginner’s House Chest,chest
-67,D13226,Tent,Tule,Beginner’s House Chest,chest
-68,D1322A,Leather Shoes,Tule,Beginner’s House Chest,chest
-69,D1322E,Leather Cap,Pirate’s Cave,Pirate’s Cave Chest,chest
-70,D13232,Tent,Pirate’s Cave,Pirate’s Cave Chest,chest
-71,D13236,Ether,Pirate’s Cave,Pirate’s Cave Chest,chest
-72,D1323A,300,Pirate’s Cave,Pirate’s Cave Chest,chest
+63,D13216,Ether,Tule,Beginner's House Chest,chest
+64,D1321A,100,Tule,Beginner's House Chest,chest
+65,D1321E,Potion,Tule,Beginner's House Chest,chest
+66,D13222,Phoenix Down,Tule,Beginner's House Chest,chest
+67,D13226,Tent,Tule,Beginner's House Chest,chest
+68,D1322A,Leather Shoes,Tule,Beginner's House Chest,chest
+69,D1322E,Leather Cap,Pirate's Cave,Pirate's Cave Chest,chest
+70,D13232,Tent,Pirate's Cave,Pirate's Cave Chest,chest
+71,D13236,Ether,Pirate's Cave,Pirate's Cave Chest,chest
+72,D1323A,300,Pirate's Cave,Pirate's Cave Chest,chest
 73,D1323E,Tent,Wind Shrine,Wind Shrine Chest,chest
 74,D13242,Leather Cap,Wind Shrine,Wind Shrine Chest,chest
 75,D13246,Staff,Wind Shrine,Wind Shrine Chest,chest
@@ -161,21 +161,21 @@ idx,address,original_reward,area,description,reward_style
 160,D1339A,Full Moon,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
 161,D1339E,Power Wrist,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
 162,D133A2,Ether,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
-163,D133A6,Cabin,Exdeath’s Castle,Flying Lonka Ruins Chest,chest
-164,D133AA,Ether,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-165,D133AE,Diamond Shield,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-166,D133B2,Ice Shield,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-167,D133B6,Ether,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-168,D133BA,Elixir,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-169,D133BE,Gale Bow,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-170,D133C2,IceBrand,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-171,D133C6,Kotetsu,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-172,D133CA,9900,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-173,D133CE,Elixir,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-174,D133D2,8000,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-175,D133D6,DblLance,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-176,D133DA,Partisan,Exdeath’s Castle,Exdeath’s Castle Chest,chest
-177,D133DE,Pinwheel,Exdeath’s Castle,Exdeath’s Castle Chest,chest
+163,D133A6,Cabin,Exdeath's Castle,Flying Lonka Ruins Chest,chest
+164,D133AA,Ether,Exdeath's Castle,Exdeath's Castle Chest,chest
+165,D133AE,Diamond Shield,Exdeath's Castle,Exdeath's Castle Chest,chest
+166,D133B2,Ice Shield,Exdeath's Castle,Exdeath's Castle Chest,chest
+167,D133B6,Ether,Exdeath's Castle,Exdeath's Castle Chest,chest
+168,D133BA,Elixir,Exdeath's Castle,Exdeath's Castle Chest,chest
+169,D133BE,Gale Bow,Exdeath's Castle,Exdeath's Castle Chest,chest
+170,D133C2,IceBrand,Exdeath's Castle,Exdeath's Castle Chest,chest
+171,D133C6,Kotetsu,Exdeath's Castle,Exdeath's Castle Chest,chest
+172,D133CA,9900,Exdeath's Castle,Exdeath's Castle Chest,chest
+173,D133CE,Elixir,Exdeath's Castle,Exdeath's Castle Chest,chest
+174,D133D2,8000,Exdeath's Castle,Exdeath's Castle Chest,chest
+175,D133D6,DblLance,Exdeath's Castle,Exdeath's Castle Chest,chest
+176,D133DA,Partisan,Exdeath's Castle,Exdeath's Castle Chest,chest
+177,D133DE,Pinwheel,Exdeath's Castle,Exdeath's Castle Chest,chest
 178,D133E2,4400,Moogle Village,Moogle Cave Chest,chest
 179,D133E6,Phoenix Down,Moogle Village,Moogle Cave Chest,chest
 180,D133EA,Cabin,Moogle Village,Moogle Village Chest,chest
