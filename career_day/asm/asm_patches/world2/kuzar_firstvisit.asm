@@ -18,4 +18,4 @@ db $09                          ;Player Show
 db $A2, $0D                     ;Turn on bit 20 at address 0x7e0a15
 db $FF                          ;End Event
 
-pad $C93DF2
+pad $C93DED
