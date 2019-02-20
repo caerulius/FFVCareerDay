@@ -251,6 +251,10 @@ inc !2pabilitiescount
 inc !3pabilitiescount
 inc !4pabilitiescount
 
+
+; Check innates
+; JSL CheckInnateAbility
+
 ; end with generic finisher
 JML JobsAssigned
 
@@ -292,7 +296,15 @@ JML JobsAssigned
 
 
 
+; Innate checking
+; org $F01100
+; CheckInnateAbility:
+; !1pinnate = $054E
+; !2pinnate = $059E
+; !3pinnate = $05EE
+; !4pinnate = $063E
 
+; LDA !rewardid
 
 
 

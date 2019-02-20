@@ -23,8 +23,9 @@ db $AA, $E0                     ;Add Item Potion
 db $AA, $E0                     ;Add Item Potion
 db $CB, $58, $00	            ;Clear Flag 2/3/4/5/58 00 ;removes faris sleeping in tule
 db $A4, $DC                     ;Set Event Flag 1DC
-db $A4, $FF                     ;Set Event Flag 1FF
+; db $A4, $FF                     ;Set Event Flag 1FF *this ordinarily disables enka*
 db $A4, $BE                     ;Set Event Flag 1BE
+db $EC                          ;Set starting randomizer job
 
 
 

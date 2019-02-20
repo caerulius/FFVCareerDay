@@ -23,7 +23,7 @@ JMP $A630
 ; Apparently free space in area C0FAB0, used here for event reward indexing 
 
 org $C0A5A4 ; new offset for generic event handler
-db $A0, $CD ; this will make the new loading code for this $C0CD9A0
+db $A0, $CD ; this will make the new loading code for this $C0CDA0
 
 org $C0CDA0
 pha
@@ -43,7 +43,6 @@ sta !typeid
 
 CMP #$40 ; compare type id
 BEQ EventRewardItem
-; below is for key items, need a deeper system for event flags, not just the 'item' itself. All this does is set up a textbox appropriately
 CMP #$30 ; compare type id
 BEQ EventRewardKeyItem
 CMP #$20 ; compare type id
@@ -122,7 +121,17 @@ ply
 plx
 pla 
 ;sta !destinationindex
-JMP $A630
+JML $C0A630
+
+
+
+; Ran into space issues
+; For the base case 
+
+
+
+
+
 
 
 ; REWARD TEXT BOX SWITCHER : Code $DF
@@ -172,9 +181,14 @@ db $09, $38, $13
 ; $02 = starting magic
 
 org $C0A5C0
-db $20, $CE ; branch to $C0CE20
+db $F0, $CE ; branch to $C0CE20
 
-org $C0CE20
+org $C0CEF0
+JML RandomizerJobSetting
+
+org $F01000
+RandomizerJobSetting:
+
 pha
 phx
 
@@ -234,5 +248,5 @@ sta $0950,x
 plx
 pla
 
-JMP $A630 ; hopefully this works 
+JML $C0A630 ; hopefully this works 
 

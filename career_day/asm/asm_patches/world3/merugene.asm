@@ -30,13 +30,13 @@ db $02                          ;Player Move Right
 db $02                          ;Player Move Right
 db $03                          ;Player Move Down
 db $73
-db $A4, $F6                     ;Set Event Flag 1F6
-db $A5, $FE                     ;Clear Event Flag 1FE
+; db $A4, $F6                     ;Set Event Flag 1F6
+; db $A5, $FE                     ;Clear Event Flag 1FE
 db $87, $0A
 db $BD, $2B, $FF                ;Start Event Battle 2B
 db $71
 db $03
-db $D2, $02, $57, $69, $D5      ;(Map) 02 57 69 D5
+; db $D2, $02, $57, $69, $D5      ;(Map) 02 57 69 D5
 
 db $C4, $02
 db $75
@@ -47,15 +47,16 @@ db $09                          ;Player Show
 db $02                          ;Player Move Right
 db $C3, $02                     ;Fade in Speed 08
 db $73                          ;Long pause
+; CAREERDAY
 db $A2, $81                     ;Set Event Flag 081
-db $CA, $99, $03                ;Set Flag 2/3/4/5/99 03
-db $CA, $5D, $02                ;Set Flag 2/3/4/5/5D 02
-db $CA, $5E, $02                ;Set Flag 2/3/4/5/5E 02
-db $CA, $0C, $00                ;Set Flag 2/3/4/5/0C 00
-db $A4, $F6                     ;Set Event Flag 1F6
-db $B7, $09                     ;Add/Remove character 09
-db $A8, $7F                     ;Adjust Character HP by 7F
-db $BB, $01, $80                ;Set Character Lenna  Curable status to Wounded
+; db $CA, $99, $03                ;Set Flag 2/3/4/5/99 03
+; db $CA, $5D, $02                ;Set Flag 2/3/4/5/5D 02
+; db $CA, $5E, $02                ;Set Flag 2/3/4/5/5E 02
+; db $CA, $0C, $00                ;Set Flag 2/3/4/5/0C 00
+; db $A4, $F6                     ;Set Event Flag 1F6
+; db $B7, $09                     ;Add/Remove character 09
+; db $A8, $7F                     ;Adjust Character HP by 7F
+; db $BB, $01, $80                ;Set Character Lenna  Curable status to Wounded
 db $FF                          ;End Event
 
 

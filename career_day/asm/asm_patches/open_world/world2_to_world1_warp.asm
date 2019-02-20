@@ -4,6 +4,18 @@ hirom
 
 org $C8332C
 db $00, $00, $F9
+org $C8361A
+db $00, $00, $F9
+
+; disable event flag at surage so the left guard's dialogue doesnt change to `world 3 warp`
+org $C935D7
+db $00, $00
+
+; if you're still having guard problems, it's because of a pyramid/melusine flag (A24 '02'). 
+; this is when dialogue permanently shifts
+; so fix when the guards are conditional on this bit and instead make it always treat it as if
+; $A24 '02' is set 
+
 
 ; World 1 Warp Dialogue
 org $F90000
@@ -32,6 +44,8 @@ db $14
 db $A5, $F9            ; set address 000A53 bit OFF 02
 ; Lonka ruin access
 db $A4, $FA            ; set address 000A53 bit ON 04
+; Set world 3 off status
+db $A3, $79            ; set address 000A23 bit OFF 02
 
 db $C3, $03
 db $73
@@ -45,19 +59,25 @@ db $FF
 
 org $C83329
 db $80, $00, $F9
-
+org $C83326
+db $80, $00, $F9
 ; World 3 Warp Dialogue
 org $F90080
 
 db $F0, $02, $01              ;Conditional yes/no dialogue at 04B7
-db $CD, $C7, $06                ;Run event index 0408
+db $CD, $A4, $04				;Run event index 04A4
 db $FF
 db $FF
 
 
 
-; this overwrites the first entering void cutscene
-org $C84775
+
+
+
+
+
+; this overwrites an event from ruined_city_rising that does not get called any longer. $CD, $A4, $04
+org $C8410C
 db $80, $01, $F9
 
 ; world 3 warp
@@ -71,6 +91,9 @@ db $D2, $02, $93, $51, $D8     ; airship
 db $A4, $F9            ; set address 000A53 bit ON 02
 ; Lonka ruin restrict access
 db $A5, $FA            ; set address 000A53 bit OFF 04
+; Set world 3 on status
+db $A2, $79            ; set address 000A23 bit ON 02
+
 
 db $14
 db $C3, $03

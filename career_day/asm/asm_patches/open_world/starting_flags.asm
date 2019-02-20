@@ -356,30 +356,37 @@ db $A4, $7E            ; set address 000A43 bit ON 40
 
 ; PIRATE'S HIDEOUT
 ; Make Syldra event automatic
-db $A2, $81            ; set address 000A24 bit ON 02
+
+; This is tied to Melusine! Cannot activate automatically. 
+; db $A2, $81            ; set address 000A24 bit ON 02
 
 
 
 ; GUIDO CAVE
-db $A4, $F5                     ;Set Event Flag 1F5
-db $CB, $30, $03                ;Clear Flag 2/3/4/5/30 03
-db $CB, $17, $01                ;Clear Flag 2/3/4/5/17 01
-db $A5, $C8                     ;Clear Event Flag 1C8
-db $A2, $80                     ;Set Event Flag 080
-db $A5, $FE                     ;Clear Event Flag 1FE
-db $A4, $7F                     ;Set Event Flag 17F
-db $A5, $FF                     ;Clear Event Flag 1FF
-db $A4, $CE                     ;Set Event Flag 1CE
-db $A5, $C8                     ;Clear Event Flag 1C8
-db $CA, $98, $03                ;Set Flag 2/3/4/5/98 03
+db $A4, $F5                     ;Turn on bit 20 at address 0x7e0a52
+db $CB, $30, $03                ;Turn off bit 01 at address  0x7e0aba
+db $CB, $17, $01                ;Turn off bit 80 at address  0x7e0a76
+db $A5, $C8                     ;Turn off bit 01 at address 0x7e0a4d
+db $A2, $80                     ;Turn on bit 01 at address 0x7e0a24
+db $A4, $7F                     ;Turn on bit 80 at address 0x7e0a43
+db $A4, $CE                     ;Turn on bit 40 at address 0x7e0a4d
+db $A5, $C8                     ;Turn off bit 01 at address 0x7e0a4d
+db $CA, $98, $03                ;Turn on bit 01 at address  0x7e0ac7
+db $A4, $50                     ;Turn on bit 01 at address 0x7e0a3e
 
 ; MUA TREE
 ; First Tree visit flag
 db $A4, $7C                     ;Set Event Flag 17C
 
+
+; What is this...?
+db $A2, $BD                     ;Turn on bit 20 at address 0x7e0a2b
+
+
 ; PYRAMID
-db $A5, $FE                     ;Clear Event Flag 1FE
-db $A2, $BD                     ;Set Event Flag 0BD
+; allows getting the tablet...?
+db $CA, $08, $00            ; set address 000A55 bit ON 01
+db $A5, $F7                     ;Turn off bit 80 at address 0x7e0a52
 
 
 ; KUZAR CASTLE
@@ -388,23 +395,26 @@ db $CA, $7F, $03            ; set address 000AC3 bit ON 80
 db $A2, $5C                     ;Turn on bit 10 at address 0x7e0a1f (this is for first Kuzar event)
 
 
-; MELUSINE FIGHT
-db $A5, $FE                     ;Clear Event Flag 1FE
-db $A4, $F3                     ;Set Event Flag 1F3
-db $CB, $08, $00                ;Clear Flag 2/3/4/5/08 00
-db $A2, $83                     ;Set Event Flag 083
-db $A4, $CD                     ;Set Event Flag 1CD
+; MELUSINE 
+db $A4, $F3                     ;Turn on bit 08 at address 0x7e0a52
+db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
+; db $A2, $83                     ;Turn on bit 08 at address 0x7e0a24 (THIS IS TABLET 1 FOR KUZAR, NOT KEY ITEM, ACTUAL TABLET)
+db $A4, $CD                     ;Turn on bit 20 at address 0x7e0a4d
+
+; SECOND TABLET → FORK TOWER
+db $A4, $5B            ; set address 000A3F bit ON 08
 
 
 ; player position
 ; set airship
 ; spawns right under player, tweak $9C,$96 to change X/Y coord. $D8 controls type of vehicle
 ; OG CORRECT WARPS
-;db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
-;db $D2, $00, $91, $74, $D8
+db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
+db $D2, $00, $91, $74, $D8
 
-db $E1, $02, $00, $93, $52, $00 ;Return from cutscene? 00 00 9C 96 00
-db $D2, $02, $93, $51, $D8     ; airship
+;db $E1, $02, $00, $93, $52, $00 ;Return from cutscene? 00 00 9C 96 00
+;db $D2, $02, $93, $51, $D8     ; airship
+
 
 
 

@@ -1,12 +1,12 @@
 ; conditionals
-!vanillarewards = 1
-
+!vanillarewards = 0
+; randomizer testing
+incsrc r-patch.asm
 
 ; init
 incsrc misc/init.asm
 
 ; world 1                                   Destinations:
-incsrc world1/intro_cutscene.asm           ; 00 Tycoon Meteor
 incsrc world1/tycoon_meteor_01_mount.asm
 incsrc world1/tycoon_meteor_02_mount.asm
 incsrc world1/tycoon_meteor_03_battle.asm
@@ -93,7 +93,7 @@ incsrc world1/tycoon_meteor_afterearth.asm
 incsrc world1/walse_meteor_afterearth.asm          
 incsrc world1/karnak_meteor_afterearth.asm
 incsrc world1/ruins_meteor_afterearth.asm           ; 17 Bahamut Peninsula 
-incsrc world1/world1_to_world2_warp.asm            ; 18 Big Bridge
+
 
 ; world 2
 incsrc world2/exdeathcastle1_gilgamesh.asm
@@ -211,7 +211,10 @@ incsrc reward_events/chicken_knife_brave_blade.asm
 ; open world
 incsrc open_world/canal_fix.asm
 incsrc open_world/open_world.asm
+incsrc open_world/intro_cutscene.asm
+incsrc open_world/world1_to_world2_warp.asm
 incsrc open_world/world2_to_world1_warp.asm
 incsrc open_world/world3_to_world2_warp.asm
+incsrc open_world/pyramid_disable.asm
 
 incsrc world2/mooglewaterway_encounters.asm

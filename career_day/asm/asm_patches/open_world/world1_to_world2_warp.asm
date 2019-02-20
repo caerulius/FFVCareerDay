@@ -14,8 +14,9 @@ db $C4, $03
 db $73
 ; map area
 db $E1, $01, $00, $4C, $6F, $00 ;Return from cutscene? E1 00 97 1A 00
-db $D2, $01, $4D, $6F, $6C ; hiryuu
+db $D2, $01, $4B, $6E, $6C ; hiryuu
 db $D2, $01, $4C, $73, $90 ; submarine
+db $D2, $01, $4D, $6F, $D8 ; airship ???
 
 db $14
 db $C3, $03
