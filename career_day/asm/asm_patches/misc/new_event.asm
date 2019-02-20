@@ -188,7 +188,6 @@ JML RandomizerJobSetting
 
 org $F01000
 RandomizerJobSetting:
-
 pha
 phx
 
@@ -219,6 +218,22 @@ STA $0501
 STA $0551
 STA $05A1
 STA $05F1
+
+; for the weapon code, if monk, need to set both hands correctly
+CMP #$01
+BEQ SetMonkWeapons
+BNE SetWeaponsNormal
+
+; Just need to set left hand
+SetMonkWeapons:
+LDA #$01
+STA $0512
+STA $0562
+STA $05B2
+STA $0602
+
+
+SetWeaponsNormal:
 
 ; set characters' default weapon to right hard
 LDA $E79F01

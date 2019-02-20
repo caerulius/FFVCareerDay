@@ -233,6 +233,8 @@ db $A2, $60                     ;Set Event Flag 060 (this is taken from Cara's c
 ; db $A2, $61                     ;Set Event Flag 061 (bal castle gates)
 db $CB, $6B, $02                ;Clear Flag 2/3/4/5/6B 02
 
+; RUGOR
+db $A2, $5B                     ;Turn on bit 08 at address 0x7e0a1f Rugor inn cutscene
 
 ; after hiryuu reentering
 db $A4, $1D                     ;Set Event Flag 11D
