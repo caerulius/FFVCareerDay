@@ -535,7 +535,7 @@ db $FF
 ; C2AC8B - JSR
 
     ; C2DA16 - loads into TEXT RAM, JSL
-        ; E03191 - Moves proper data to 7E2CF0
+    ; E03191 - Moves proper data to 7E2CF0
     ; C2DA36 - Identifies end point, stores $0000
     ; C2DA38 → C2DA4A - loop to ... check?... data, branches upon hitting text length from 7E2CE7
 

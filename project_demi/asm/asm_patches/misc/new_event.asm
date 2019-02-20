@@ -162,6 +162,13 @@ JMP $C7A4 ; branch the fk out and hope it works (it does)
 
 
 
+
+
+
+
+
+
+
 org $E79F00
 db $09, $38, $13
 
@@ -235,4 +242,3 @@ plx
 pla
 
 JMP $A630 ; hopefully this works 
-

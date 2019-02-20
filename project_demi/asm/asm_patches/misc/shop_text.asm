@@ -43,7 +43,7 @@ db $FF
 ;Def.   
 org $E79A18
 db $A1
-db $22
+db $23
 db $7E
 db $7F
 db $D2
@@ -153,7 +153,7 @@ db $FF
 ;DrgnSwd
 org $E79A68
 db $A1
-db $22
+db $23
 db $8B
 db $80
 db $87
@@ -351,7 +351,7 @@ db $FF
 ;Drink  
 org $E79AF8
 db $A1
-db $22
+db $23
 db $8B
 db $82
 db $87
@@ -401,7 +401,7 @@ db $86
 db $86
 db $92
 db $53
-db $F7
+db $54
 db $FF
 ;Hide   
 org $E79B20
@@ -434,7 +434,7 @@ db $86
 db $86
 db $92
 db $53
-db $F8
+db $55
 db $FF
 ;Sing   
 org $E79B38
@@ -461,7 +461,7 @@ db $FF
 ;Dance  
 org $E79B48
 db $A1
-db $22
+db $23
 db $7A
 db $87
 db $7C
@@ -490,7 +490,7 @@ db $7E
 db $8B
 db $8B
 db $FF
-;MgcSwrd1
+;MgcSwd1
 org $E79B80
 db $A1
 db $2C
@@ -498,11 +498,10 @@ db $80
 db $7C
 db $32
 db $90
-db $8B
 db $7D
-db $F7
+db $54
 db $FF
-;MgcSwrd2
+;MgcSwd2
 org $E79B88
 db $A1
 db $2C
@@ -510,11 +509,10 @@ db $80
 db $7C
 db $32
 db $90
-db $8B
 db $7D
-db $F8
+db $55
 db $FF
-;MgcSwrd3
+;MgcSwd3
 org $E79B90
 db $A1
 db $2C
@@ -522,11 +520,10 @@ db $80
 db $7C
 db $32
 db $90
-db $8B
 db $7D
-db $F9
+db $56
 db $FF
-;MgcSwrd4
+;MgcSwd4
 org $E79B98
 db $A1
 db $2C
@@ -534,11 +531,10 @@ db $80
 db $7C
 db $32
 db $90
-db $8B
 db $7D
-db $FA
+db $57
 db $FF
-;MgcSwrd5
+;MgcSwd5
 org $E79BA0
 db $A1
 db $2C
@@ -546,11 +542,10 @@ db $80
 db $7C
 db $32
 db $90
-db $8B
 db $7D
-db $FB
+db $58
 db $FF
-;MgcSwrd6
+;MgcSwd6
 org $E79BA8
 db $A1
 db $2C
@@ -558,9 +553,8 @@ db $80
 db $7C
 db $32
 db $90
-db $8B
 db $7D
-db $FC
+db $59
 db $FF
 ;White 1
 org $E79BC0
@@ -571,7 +565,7 @@ db $82
 db $8D
 db $7E
 db $FF
-db $F7
+db $54
 db $FF
 ;White 2
 org $E79BC8
@@ -582,7 +576,7 @@ db $82
 db $8D
 db $7E
 db $FF
-db $F8
+db $55
 db $FF
 ;White 3
 org $E79BD0
@@ -593,7 +587,7 @@ db $82
 db $8D
 db $7E
 db $FF
-db $F9
+db $56
 db $FF
 ;White 4
 org $E79BD8
@@ -604,7 +598,7 @@ db $82
 db $8D
 db $7E
 db $FF
-db $FA
+db $57
 db $FF
 ;White 5
 org $E79BE0
@@ -615,7 +609,7 @@ db $82
 db $8D
 db $7E
 db $FF
-db $FB
+db $58
 db $FF
 ;White 6
 org $E79BE8
@@ -626,7 +620,7 @@ db $82
 db $8D
 db $7E
 db $FF
-db $FC
+db $59
 db $FF
 ;Black 1
 org $E79C00
@@ -637,7 +631,7 @@ db $7A
 db $7C
 db $84
 db $FF
-db $F7
+db $54
 db $FF
 ;Black 2
 org $E79C08
@@ -648,7 +642,7 @@ db $7A
 db $7C
 db $84
 db $FF
-db $F8
+db $55
 db $FF
 ;Black 3
 org $E79C10
@@ -659,7 +653,7 @@ db $7A
 db $7C
 db $84
 db $FF
-db $F9
+db $56
 db $FF
 ;Black 4
 org $E79C18
@@ -670,7 +664,7 @@ db $7A
 db $7C
 db $84
 db $FF
-db $FA
+db $57
 db $FF
 ;Black 5
 org $E79C20
@@ -681,7 +675,7 @@ db $7A
 db $7C
 db $84
 db $FF
-db $FB
+db $58
 db $FF
 ;Black 6
 org $E79C28
@@ -692,75 +686,75 @@ db $7A
 db $7C
 db $84
 db $FF
-db $FC
+db $59
 db $FF
 ;Dimen 1
 org $E79C40
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
 db $87
 db $FF
-db $F7
+db $54
 db $FF
 ;Dimen 2
 org $E79C48
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
 db $87
 db $FF
-db $F8
+db $55
 db $FF
 ;Dimen 3
 org $E79C50
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
 db $87
 db $FF
-db $F9
+db $56
 db $FF
 ;Dimen 4
 org $E79C58
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
 db $87
 db $FF
-db $FA
+db $57
 db $FF
 ;Dimen 5
 org $E79C60
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
 db $87
 db $FF
-db $FB
+db $58
 db $FF
 ;Dimen 6
 org $E79C68
 db $A1
-db $22
+db $23
 db $82
 db $86
 db $7E
 db $87
 db $FF
-db $FC
+db $59
 db $FF
-;Summon 1
+;Summon1
 org $E79C80
 db $A1
 db $32
@@ -769,10 +763,9 @@ db $86
 db $86
 db $88
 db $87
+db $54
 db $FF
-db $F7
-db $FF
-;Summon 2
+;Summon2
 org $E79C88
 db $A1
 db $32
@@ -781,10 +774,9 @@ db $86
 db $86
 db $88
 db $87
+db $55
 db $FF
-db $F8
-db $FF
-;Summon 3
+;Summon3
 org $E79C90
 db $A1
 db $32
@@ -793,10 +785,9 @@ db $86
 db $86
 db $88
 db $87
+db $56
 db $FF
-db $F9
-db $FF
-;Summon 4
+;Summon4
 org $E79C98
 db $A1
 db $32
@@ -805,10 +796,9 @@ db $86
 db $86
 db $88
 db $87
+db $57
 db $FF
-db $FA
-db $FF
-;Summon 5
+;Summon5
 org $E79CA0
 db $A1
 db $32
@@ -817,8 +807,7 @@ db $86
 db $86
 db $88
 db $87
-db $FF
-db $FB
+db $58
 db $FF
 ;Red 1
 org $E79CC0
@@ -827,7 +816,7 @@ db $31
 db $7E
 db $7D
 db $FF
-db $F7
+db $54
 db $FF
 ;Red 2
 org $E79CC8
@@ -836,7 +825,7 @@ db $31
 db $7E
 db $7D
 db $FF
-db $F8
+db $55
 db $FF
 ;Red 3
 org $E79CD0
@@ -845,7 +834,7 @@ db $31
 db $7E
 db $7D
 db $FF
-db $F9
+db $56
 db $FF
 ;X-Magic
 org $E79D00
@@ -875,14 +864,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $32
-db $81
-db $85
-db $7D
-db $96
-db $FF
+db $F1
 db $FF
 ;Equip <Armr> 
 org $E79D48
@@ -892,14 +874,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $20
-db $8B
-db $86
-db $8B
-db $96
-db $FF
+db $F3
 db $FF
 ;Equip <Ribn> 
 org $E79D50
@@ -909,14 +884,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $31
-db $82
-db $7B
-db $87
-db $96
-db $FF
+db $C1
 db $FF
 ;Equip <Swrd> 
 org $E79D58
@@ -926,14 +894,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $32
-db $90
-db $8B
-db $7D
-db $96
-db $FF
+db $E3
 db $FF
 ;Equip <Sper> 
 org $E79D60
@@ -943,14 +904,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $32
-db $89
-db $7E
-db $8B
-db $96
-db $FF
+db $E8
 db $FF
 ;Equip <Katn> 
 org $E79D68
@@ -960,35 +914,16 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $2A
-db $7A
-db $8D
-db $87
-db $96
-db $FF
+db $EA
 db $FF
 ;Equip <Axe><Hamr>
 org $E79D70
 db $A1
 db $24
 db $8A
-db $8E
-db $82
 db $89
-db $FF
-db $96
-db $20
-db $91
-db $7E
-db $96
-db $96
-db $27
-db $7A
-db $86
-db $8B
-db $96
+db $E9
+db $BF
 db $FF
 ;Equip <Bow> 
 org $E79D78
@@ -998,13 +933,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $21
-db $88
-db $90
-db $96
-db $FF
+db $ED
 db $FF
 ;Equip <Whip> 
 org $E79D80
@@ -1014,14 +943,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $36
-db $81
-db $82
-db $89
-db $96
-db $FF
+db $EF
 db $FF
 ;Equip <Harp> 
 org $E79D88
@@ -1031,14 +953,7 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $27
-db $7A
-db $8B
-db $89
-db $96
-db $FF
+db $EE
 db $FF
 ;Agility 
 org $E79D90
@@ -1059,7 +974,7 @@ db $27
 db $2F
 db $FF
 db $E2
-db $F7
+db $54
 db $53
 db $CD
 db $FF
@@ -1071,7 +986,7 @@ db $27
 db $2F
 db $FF
 db $E2
-db $F8
+db $55
 db $53
 db $CD
 db $FF
@@ -1083,7 +998,7 @@ db $27
 db $2F
 db $FF
 db $E2
-db $F9
+db $56
 db $53
 db $CD
 db $FF
@@ -1095,7 +1010,7 @@ db $2C
 db $2F
 db $FF
 db $E2
-db $F7
+db $54
 db $53
 db $CD
 db $FF
@@ -1107,7 +1022,7 @@ db $2C
 db $2F
 db $FF
 db $E2
-db $F9
+db $56
 db $53
 db $CD
 db $FF
@@ -1127,7 +1042,7 @@ db $FF
 ;Dbl Grip
 org $E79DC8
 db $A1
-db $22
+db $23
 db $7B
 db $85
 db $FF
@@ -1139,8 +1054,7 @@ db $FF
 ;2-Handed
 org $E79DD0
 db $A1
-db $F8
-db $C5
+db $55
 db $27
 db $7A
 db $87
@@ -1272,7 +1186,7 @@ db $FF
 ;DmgFloor
 org $E79E28
 db $A1
-db $22
+db $23
 db $86
 db $80
 db $25
@@ -1301,18 +1215,12 @@ db $8A
 db $8E
 db $82
 db $89
-db $FF
-db $96
-db $31
-db $88
-db $7D
-db $96
-db $FF
+db $EB
 db $FF
 ;Dash
 org $E79E40
 db $A1
-db $22
+db $23
 db $7A
 db $8C
 db $81
@@ -1361,7 +1269,7 @@ db $FF
 ;Dragoon 
 org $E79E60
 db $C8
-db $22
+db $23
 db $8B
 db $7A
 db $80
@@ -1556,7 +1464,7 @@ db $FF
 ;Dancer  
 org $E79EE0
 db $C8
-db $22
+db $23
 db $7A
 db $87
 db $7C
@@ -1594,5 +1502,5 @@ db $FF
 
 ; write original data for magic at new data area
 
-org $F80000
+org $550000
 db $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $00, $01, $12, $01, $08, $01, $09, $01, $1c, $01, $1c, $01, $1e, $01, $3e, $01, $46, $01, $41, $02, $1e, $02, $1e, $02, $1e, $02, $3c, $02, $3c, $02, $3c, $02, $64, $02, $64, $02, $64, $01, $0f, $01, $0f, $01, $0f, $01, $1d, $01, $1e, $01, $1e, $01, $3c, $01, $3c, $01, $3c, $02, $1e, $02, $1e, $02, $1e, $02, $3c, $02, $3c, $02, $3c, $02, $64, $02, $64, $02, $64, $01, $03, $01, $08, $01, $0a, $01, $20, $01, $20, $01, $1e, $01, $3e, $01, $3a, $01, $3c, $02, $1e, $02, $1e, $02, $1e, $02, $3c, $02, $3c, $02, $3c, $02, $64, $02, $64, $02, $64, $01, $1e, $01, $23, $01, $19, $01

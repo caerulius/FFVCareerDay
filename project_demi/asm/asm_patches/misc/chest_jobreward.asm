@@ -19,6 +19,9 @@ LDA !typeid
 CMP #$60
 BEQ IntermediateBranchToAbilityReward
 LDA !typeid
+CMP #$20
+BEQ IntermediateBranchToMagicReward
+LDA !typeid
 BPL BranchIfPlusChestIDBranch
 JML $C00E44
 
@@ -28,6 +31,11 @@ JML $c00e74
 
 BranchIfPlusChestIDBranch:
 JML $C00E47
+
+IntermediateBranchToMagicReward:
+JSL BranchToMagicReward
+JML $C00E67
+
 
 IntermediateBranchToJobReward:
 JSL BranchToJobReward
@@ -252,6 +260,14 @@ JML JobsAssigned
 
 
 
+
+
+BranchToMagicReward:
+lda !rewardid
+
+; FOR CAE
+
+RTL
 
 
 
