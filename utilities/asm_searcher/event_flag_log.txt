@@ -1,0 +1,654 @@
+ancientlibrary_magicsong.asm
+db $A4, $51                     ;Turn on bit 02 at address 0x7e0a3e
+
+balcastle_odin.asm
+db $A5, $00                     ;Turn off bit 01 at address 0x7e0a34
+db $A5, $01                     ;Turn off bit 02 at address 0x7e0a34
+
+crescent_herosong.asm
+db $A2, $CE                     ;Turn on bit 40 at address 0x7e0a2d
+
+crescent_lifesong.asm
+db $A2, $D0                     ;Turn on bit 01 at address 0x7e0a2e
+
+crescent_powersong.asm
+db $A2, $CF                     ;Turn on bit 80 at address 0x7e0a2d
+
+forktower_holyflare.asm
+db $A4, $FE                     ;Turn on bit 40 at address 0x7e0a53
+db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
+db $A4, $F2                     ;Turn on bit 04 at address 0x7e0a52
+
+istory_lovesong.asm
+db $A4, $11                     ;Turn on bit 02 at address 0x7e0a36
+
+kelb_cornajar.asm
+db $A2, $0C                     ;Turn on bit 10 at address 0x7e0a15
+
+kelb_requiem.asm
+db $A2, $D1                     ;Turn on bit 02 at address 0x7e0a2e
+
+lix_temptationsong.asm
+db $A2, $D3                     ;Turn on bit 08 at address 0x7e0a2e
+
+miragevillage_miragevest.asm
+db $A4, $95                     ;Turn on bit 20 at address 0x7e0a46
+
+piratescave_syldra.asm
+db $A4, $4F                     ;Turn on bit 80 at address 0x7e0a3d
+
+pirate_potions.asm
+db $A4, $4E                     ;Turn on bit 40 at address 0x7e0a3d
+
+rugor_ribbon.asm
+db $A4, $6B                     ;Turn on bit 08 at address 0x7e0a41
+
+surgate_speedsong.asm
+db $A2, $E6                     ;Turn on bit 40 at address 0x7e0a30
+
+tycoon_chancellor_reward.asm
+db $A2, $2C                     ;Turn on bit 10 at address 0x7e0a19
+
+walse_shiva.asm
+db $A2, $25                     ;Turn on bit 20 at address 0x7e0a18
+
+watercrystal_obtainshards.asm
+	db $A2, $9B                     ;Turn on bit 08 at address 0x7e0a27
+	db $A2, $9C                     ;Turn on bit 10 at address 0x7e0a27
+	db $A2, $9D                     ;Turn on bit 20 at address 0x7e0a27
+	db $A2, $9E                     ;Turn on bit 40 at address 0x7e0a27
+	db $A2, $9F                     ;Turn on bit 80 at address 0x7e0a27
+	db $A2, $9B                     ;Turn on bit 08 at address 0x7e0a27
+	db $A2, $9C                     ;Turn on bit 10 at address 0x7e0a27
+	db $A2, $9D                     ;Turn on bit 20 at address 0x7e0a27
+	db $A2, $9E                     ;Turn on bit 40 at address 0x7e0a27
+	db $A2, $9F                     ;Turn on bit 80 at address 0x7e0a27
+
+windshrine_potions.asm
+db $A4, $26                     ;Turn on bit 40 at address 0x7e0a38
+
+adamantium_get.asm
+db $A2, $49			;Set Event Flag 049
+db $A4, $C2			;Set Event Flag 1C2
+
+adamantoise.asm
+db $A2, $48							;Set Event Flag 048
+
+after_karnak_escape.asm
+db $A5, $FF						;Clear Event Flag 1FF
+db $A4, $FE						;Set Event Flag 1FE
+db $A5, $FE						;Clear Event Flag 1FE
+db $A5, $FF						;Clear Event Flag 1FF
+db $A4, $E4						;Set Event Flag 1E4
+db $A4, $19						;Set Event Flag 119
+db $A2, $32						;Set Event Flag 032
+db $A2, $33						;Set Event Flag 033
+
+after_tule_boat_cutscene.asm
+; db $A4, $4C			;Set Event Flag 14C
+
+airship_discovery.asm
+db $A2, $43					;Set Event Flag 043
+
+black_chocobo.asm
+db $A2, $A8				;Set Event Flag 0A8
+db $A2, $3A								;Set Event Flag 03A
+
+boko_resting.asm
+db $A4, $24				;Turn on bit 10 at address 0x7e0a38
+
+byblos.asm
+db $A4, $2A                     ;Turn on bit 04 at address 0x7e0a39
+
+canal_gate.asm
+db $A4, $FE			;Set Event Flag 1FE
+db $A2, $1E			;Set Event Flag 01E
+db $A5, $FE			;Clear Event Flag 1FE
+db $A4, $FE			;Set Event Flag 1FE
+db $A2, $1E			;Set Event Flag 01E
+db $A5, $FE			;Clear Event Flag 1FE
+
+carwen_lady.asm
+db $A2, $AF				;Set Event Flag 0AF
+
+cid_in_cell.asm
+db $A4, $01				;Set Event Flag 101
+db $A4, $06				;Set Event Flag 106
+db $A2, $2D				;Set Event Flag 02D
+db $A2, $2E					;Set Event Flag 02E
+
+cid_mid_after_city_flies.asm
+db $A2, $46						;Set Event Flag 046
+
+cid_mid_in_airship.asm
+db $A4, $E5						;Set Event Flag 1E5
+db $A4, $FE						;Set Event Flag 1FE
+db $A5, $FE						;Clear Event Flag 1FE
+db $A3, $B0						;Clear Event Flag 0B0
+db $A2, $B1						;Set Event Flag 0B1
+db $A3, $B2						;Clear Event Flag 0B2
+db $A4, $00						;Set Event Flag 100
+db $A4, $00						;Set Event Flag 100
+
+cid_on_flying_ship.asm
+db $A5, $FE						;Clear Event Flag 1FE
+db $A2, $44						;Set Event Flag 044
+db $A3, $B0						;Clear Event Flag 0B0
+db $A3, $B2						;Clear Event Flag 0B2
+db $A2, $B1						;Set Event Flag 0B1
+
+earth_crystal.asm
+db $A4, $FE                     ;Set Event Flag 1FE
+db $A4, $DE                     ;Set Event Flag 1DE
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $B0                     ;Set Event Flag 0B0
+db $A3, $B2                     ;Clear Event Flag 0B2
+db $A3, $B1                     ;Clear Event Flag 0B1
+db $A4, $E7                     ;Set Event Flag 1E7
+db $A5, $FA                     ;Clear Event Flag 1FA
+db $A3, $B8                     ;Clear Event Flag 0B8
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $4D                     ;Set Event Flag 04D
+
+faris_is_a_girl.asm
+db $A2, $20			;Set Event Flag 020
+
+faris_wet.asm
+db $A2, $1F			;Set Event Flag 01F
+
+fire_crystal.asm
+db $A4, $FE						;Set Event Flag 1FE
+db $A2, $30						;Set Event Flag 030
+db $A4, $DB						;Set Event Flag 1DB
+
+first_entering_crescent.asm
+db $A4, $FE						;Set Event Flag 1FE
+db $A5, $FE						;Clear Event Flag 1FE
+db $A2, $39						;Set Event Flag 039
+
+first_save_point.asm
+db $A4, $FD			;Set Event Flag 1FD
+db $A4, $21			;Set Event Flag 121
+
+galuf_opening_meteor.asm
+db $A2, $47							;Set Event Flag 047
+
+hiryuu_north_mountain.asm
+db $A2, $24						;Set Event Flag 024
+db $A5, $FE				;Clear Event Flag 1FE
+db $A2, $2B				;Set Event Flag 02B
+
+ifrit.asm
+db $A4, $28				;Set Event Flag 128
+db $A4, $29                     ;Turn on bit 02 at address 0x7e0a39
+
+intro_cutscene.asm
+db $A4, $E0                     ;Turn on bit 01 at address 0x7e0a50
+db $A4, $DC                     ;Set Event Flag 1DC
+db $A4, $FF                     ;Set Event Flag 1FF
+db $A4, $BE                     ;Set Event Flag 1BE
+;db $A2, $52                     ;Turn on bit 04 at address 0x7e0a1e
+
+karnak_arrest.asm
+db $A4, $FF                     ;Turn on bit 80 at address 0x7e0a53
+
+karnak_meteor_afterearth.asm
+db $A2, $26                     ;Set Event Flag 026
+db $A3, $BB                     ;Clear Event Flag 0BB
+db $A2, $50                     ;Set Event Flag 050
+
+karnak_queen_fight.asm
+db $A2, $2F			;Set Event Flag 02F
+
+karnak_werewolf.asm
+db $A4, $18			;Set Event Flag 118
+
+leaving_zokks_house_early.asm
+db $A4, $31			;Turn on bit 02 at address 0x7e0a3a
+
+lix.asm
+db $A5, $FE							;Turn off bit 40 at address 0x7e0a53
+db $A2, $A9							;Turn on bit 02 at address 0x7e0a29
+db $A2, $99							;Turn on bit 02 at address 0x7e0a27
+db $A5, $BE							;Turn off bit 40 at address 0x7e0a4b
+db $A2, $E2							;Turn on bit 04 at address 0x7e0a30
+
+lone_wolf_text.asm
+db $A2, $9A			;Turn on bit 04 at address 0x7e0a27
+db $A2, $06			;Turn on bit 40 at address 0x7e0a14
+
+magisa.asm
+db $A2, $23				;Set Event Flag 023
+
+mid_after_byblos.asm
+db $A2, $35						;Set Event Flag 035
+db $A2, $32						;Set Event Flag 032
+db $A2, $33						;Set Event Flag 033
+
+mid_cid_wakeup.asm
+db $A2, $38						;Set Event Flag 038
+
+mid_with_book.asm
+db $A2, $36						;Set Event Flag 036
+
+pass_end.asm
+db $A4, $C7							;Set Event Flag 1C7
+db $A4, $E1         				;Set Event Flag 1E1
+db $A2, $11							;Set Event Flag 011
+db $A4, $FF							;Set Event Flag 1FF
+db $A4, $FE							;Clear Event Flag 1FE
+
+pass_first_hole.asm
+db $A5, $FF			;Clear Event Flag 1FF
+db $A4, $FE			;Set Event Flag 1FE
+
+pirate_button.asm
+db $A2, $13			;Set Event Flag 013
+
+pirate_cove_outside.asm
+db $A5, $FE						;Clear Event Flag 1FE
+db $A4, $1A						;Set Event Flag 11A
+db $A4, $1B						;Set Event Flag 11B
+db $A5, $FF						;Clear Event Flag 1FF
+db $A5, $1B			;Turn off bit 08 at address 0x7e0a37
+db $A4, $FF			;Turn on bit 80 at address 0x7e0a53
+db $A4, $1B						;Turn on bit 08 at address 0x7e0a37
+db $A5, $FF						;Turn off bit 80 at address 0x7e0a53
+
+pirate_cove_outside_return.asm
+db $A4, $4D			;Turn on bit 20 at address 0x7e0a3d
+
+pirate_ship.asm
+db $A5, $FE			;Clear Event Flag 1FE
+db $A4, $C6			;Set Event Flag 1C6
+db $A2, $15			;Set Event Flag 015
+
+pirate_ship_out_window.asm
+db $A2, $14			;Set Event Flag 014
+
+ruined_city.asm
+db $A2, $3D					;Set Event Flag 03D
+db $A2, $AB					;Set Event Flag 0AB ; first king tycoon
+db $A2, $AE					;Set Event Flag 0AE	; second king tycoon
+db $A4, $00					;Set Event Flag 100 ; third king tycoon
+db $A5, $FE						;Clear Event Flag 1FE
+
+ruined_city_rising.asm
+db $A5, $FE						;Clear Event Flag 1FE
+db $A4, $E6						;Set Event Flag 1E6
+
+ruins_meteor_afterearth.asm
+db $A2, $28                     ;Set Event Flag 028
+db $A2, $54                     ;Set Event Flag 054
+db $A3, $BC                     ;Clear Event Flag 0BC
+db $A4, $EF                     ;Turn on bit 80 at address 0x7e0a51
+
+sandworm.asm
+db $A2, $3E						;Set Event Flag 03E
+db $A2, $3C                     ;Turn on bit 10 at address 0x7e0a1b
+
+siren.asm
+db $A2, $21				;Set Event Flag 021
+
+sleeping_pirates.asm
+db $A4, $1C			;Set Event Flag 11C
+
+sol_cannon.asm
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $B7                     ;Set Event Flag 0B7
+db $A2, $4B                     ;Set Event Flag 04B
+
+spring.asm
+db $A4, $33			;Set Event Flag 133
+
+steamship_repair.asm
+db $A2, $37						;Set Event Flag 037
+
+steamship_under_crescent.asm
+db $A2, $B0						;Set Event Flag 0B0
+db $A3, $B1						;Clear Event Flag 0B1
+db $A3, $B2						;Clear Event Flag 0B2
+
+teleporter_beneath_ruined_city.asm
+db $A4, $FE						;Set Event Flag 1FE
+db $A6, $1B						;Set Flag 1B
+db $A5, $FE						;Clear Event Flag 1FE
+
+telling_mid_cid_about_steamship.asm
+db $A2, $3B						;Set Event Flag 03B
+
+tule.asm
+db $A2, $1A				;Set Event Flag 01A
+db $A2, $1B			;Set Event Flag 01B
+db $A2, $1C			;Set Event Flag 01C
+db $A2, $1D			;Set Event Flag 01D
+db $A4, $C5			;Set Event Flag 1C5
+db $A4, $4C			;Set Event Flag 14C (this disables the boat after_tule_boat_cutscene entirely )
+
+tycoon_meteor_03_battle.asm
+db $A4, $FE                     ;Set Event Flag 1FE
+db $A4, $32                     ;Set Event Flag 132
+db $A5, $FF                     ;Clear Event Flag 1FF
+db $A4, $C7                     ;Set Event Flag 1C7
+
+tycoon_meteor_afterearth.asm
+db $A2, $4F                     ;Set Event Flag 04F
+
+tycoon_meteor_galuf_wakeup.asm
+db $A2, $10			;Set Event Flag 010
+db $A5, $C7			;Clear Event Flag 1C7
+db $A5, $FE			;Clear Event Flag 1FE
+
+tycoon_return.asm
+db $A5, $FE				;Clear Event Flag 1FE
+db $A2, $2B				;Set Event Flag 02B
+db $A2, $52                     ;Turn on bit 04 at address 0x7e0a1e
+
+upgrading_ship.asm
+db $A5, $FE							;Clear Event Flag 1FE
+db $A2, $4A							;Set Event Flag 04A
+db $A4, $FA							;Set Event Flag 1FA
+db $A5, $C2							;Clear Event Flag 1C2
+
+walse_king_post_tower.asm
+db $A2, $29			;Set Event Flag 029
+
+walse_meteor_afterearth.asm
+db $A3, $BA                     ;Clear Event Flag 0BA
+db $A2, $53                     ;Set Event Flag 053
+
+walse_meteor_falls.asm
+db $A5, $FE						;Clear Event Flag 1FE
+db $A4, $E2						;Set Event Flag 1E2
+
+walse_meteor_first_warp.asm
+db $A2, $A4                 ;Set Event Flag 0A4
+db $A2, $2A                 ;Set Event Flag 02A
+db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
+db $A4, $FC                     ;Turn on bit 10 at address 0x7e0a53
+db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
+db $A4, $FC                     ;Turn on bit 10 at address 0x7e0a53
+
+walse_tower_sinking.asm
+db $A4, $E3						;Set Event Flag 1E3
+
+water_crystal.asm
+db $A2, $27                     ;Turn on bit 80 at address 0x7e0a18
+db $A4, $DD                     ;Turn on bit 20 at address 0x7e0a4f
+
+whirlpool.asm
+db $A4, $22						;Set Event Flag 122
+
+wind_crystal.asm
+db $A2, $17			;Set Event Flag 017
+db $A5, $FE			;Clear Event Flag 1FE
+
+wind_shrine_chancellor.asm
+db $A4, $1F			;Set Event Flag 11F
+
+world1_to_world2_warp.asm
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $55                     ;Set Event Flag 055
+db $A4, $7F                     ;Set Event Flag 17F
+db $A5, $F8                     ;Turn off bit 01 at address 0x7e0a53 (removes world map 4 meteors waypoint)
+
+balcastle_leavegates.asm
+db $A4, $00                     ;Set Event Flag 100
+db $A5, $00                     ;Clear Event Flag 100
+db $A2, $61                     ;Set Event Flag 061
+
+bal_hiryuuobtain.asm
+db $A2, $68                     ;Set Event Flag 068
+db $A5, $C4                     ;Clear Event Flag 1C4
+db $A2, $6A 						; Set event flag for playing Surgate cutscene 
+
+bal_revisit.asm
+db $A4, $1D                     ;Set Event Flag 11D
+db $A2, $67                     ;Set Event Flag 067 (this is speaking with Cara cutscene)
+
+barriertower_inside.asm
+db $A4, $C0                     ;Set Event Flag 1C0
+db $A2, $6F                     ;Set Event Flag 06F
+db $A2, $A2                     ;Set Event Flag 0A2		next 3 are for flags related to zeza mid-tower cutscene. disable immediately
+
+barriertower_top.asm
+db $A4, $EA                     ;Set Event Flag 1EA
+db $A2, $7C                     ;Set Event Flag 07C
+db $A4, $EB                     ;Set Event Flag 1EB
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A3, $C1                     ;Clear Event Flag 0C1
+
+bigbridge_endofbridge.asm
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $5C                     ;Turn on bit 10 at address 0x7e0a1f (this is for first Kuzar event)
+
+bigbridge_gilgamesh2.asm
+db $A2, $45                     ;Set Event Flag 045
+
+exdeathcastle1_gilgamesh.asm
+db $A2, $58                     ;Set Event Flag 058
+db $A2, $59                     ;Set Event Flag 059
+
+exdeathcastle2_boss_w3.asm
+db $A5, $7F                     ;Clear Event Flag 17F
+db $A2, $79                     ;Set Event Flag 079
+db $A2, $52                     ;Turn on bit 04 at address 0x7e0a1e
+db $A4, $FF                     ;Set Event Flag 1FF
+db $A5, $9A                     ;Clear Event Flag 19A
+db $A4, $C8                     ;Set Event Flag 1C8
+db $A4, $FB						;Turn on bit 08 at address 0x7e0a53 ;Enables the world map right before we transition to world 3 in case you haven't picked it up
+
+exdeathcastle2_gilgamesh.asm
+db $A4, $4B                     ;Set Event Flag 14B
+
+exdeathcastle2_transform.asm
+db $A2, $76                     ;Set Event Flag 076
+db $A5, $FE                     ;Clear Event Flag 1FE
+
+guido_firsttalk.asm
+db $A2, $71                     ;Set Event Flag 071
+db $A4, $CF                     ;Set Event Flag 1CF
+
+guido_firstvisit.asm
+db $A4, $E8                     ;Set Event Flag 1E8
+db $A4, $E9                     ;Set Event Flag 1E9
+db $A2, $6B                     ;Set Event Flag 06B
+
+hiryuuvalley_end.asm
+db $A4, $C4                     ;Set Event Flag 1C4
+db $A2, $66                     ;Set Event Flag 066
+; db $A4, $C4                     ;Set Event Flag 1C4
+; db $A2, $66                     ;Set Event Flag 066
+
+kuzar_firstvisit.asm
+db $A2, $5C
+db $A2, $0D                     ;Turn on bit 20 at address 0x7e0a15
+
+moogleforest_firstmeet.asm
+db $A2, $5D                     ;Set Event Flag 05D
+
+mooglevillage_to_castlebal.asm
+db $A4, $2E                     ;Turn on bit 40 at address 0x7e0a39
+db $A2, $5F                     ;Set Event Flag 05F
+db $A2, $60                     ;Set Event Flag 060 (this is taken from Cara's cutscene with Hiryuu to immediately set flag)
+db $A2, $62                     ;Set Event Flag 062 (this cutscene)
+db $A2, $64                     ;Set Event Flag 062 (Kelgar cutscene)
+
+mooglewaterway_afterboss.asm
+db $A4, $3C                     ;Set Event Flag 13C
+db $A4, $2C                     ;Set Event Flag 12C
+db $A4, $2D                     ;Set Event Flag 12D
+
+mooglewaterway_beforeboss.asm
+db $A2, $5E                     ;Set Event Flag 05E
+
+muaforest_boss.asm
+db $A2, $75                     ;Set Event Flag 075
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $25                     ;Set Event Flag 125
+db $A4, $BF                     ;Set Event Flag 1BF
+db $A4, $45					; Trigger for Exdeath cutscene
+
+muaforest_enter.asm
+db $A2, $72                     ;Set Event Flag 072
+
+muaforest_fire.asm
+db $A4, $FE                     ;Set Event Flag 1FE
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $FF                     ;Set Event Flag 1FF
+db $A4, $EC                     ;Set Event Flag 1EC
+db $A4, $FE                     ;Set Event Flag 1FE
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A5, $FF                     ;Clear Event Flag 1FF
+db $A2, $74                     ;Set Event Flag 074     Event flags for showing branch to enter final area
+db $A5, $C8                     ;Clear Event Flag 1C8   Event flags for showing branch to enter final area
+
+zezafleet_battle.asm
+db $A2, $AA                     ;Set Event Flag 0AA
+db $A2, $69                     ;Set Event Flag 069
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $6D                     ;Set Event Flag 06D
+db $A2, $AA						; This is talking to Zeza in the sub first
+
+zezafleet_enter.asm
+db $A2, $6B                     ;Set Event Flag 06B
+
+zezafleet_sleep.asm
+db $A4, $FE                     ;Set Event Flag 1FE
+db $A2, $6C                     ;Set Event Flag 06C
+
+zeza_entertower.asm
+db $A2, $6E                     ;Set Event Flag 06E. This sets Zeza's bombing cutscene immediately
+
+antlion_cutscenes.asm
+db $A2, $7F                     ;Set Event Flag 07F
+
+boco_w3.asm
+db $A2, $7D                     ;Set Event Flag 07D
+db $A4, $24                     ;Set Event Flag 124
+
+cleft_apanda.asm
+db $A4, $71                     ;Set Event Flag 171
+db $A4, $74                     ;Set Event Flag 174
+
+cleft_apocalypse.asm
+db $A4, $73				;Turn on bit 08 at address 0x7e0a42
+
+cleft_calofisteri.asm
+db $A4, $79                     ;Set Event Flag 179
+
+cleft_enter.asm
+db $A4, $7A                     ;Set Event Flag 17A
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $9F                     ;Set Event Flag 19F
+db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
+db $A4, $9F                     ;Turn on bit 80 at address 0x7e0a47
+
+cleft_halicarnaso.asm
+db $A4, $97                     ;Set Event Flag 197
+db $A4, $99                     ;Set Event Flag 199 
+db $A4, $75                     ;Set Event Flag 175
+
+cleft_halicarnassus.asm
+db $A4, $75                     ;Set Event Flag 175
+
+cleft_necrophobe.asm
+db $A4, $78			;Turn on bit 01 at address 0x7e0a43
+
+cleft_twintania.asm
+db $A4, $77                     ;Set Event Flag 177
+
+forktower.asm
+db $A4, $5E                     ;Set Event Flag 15E
+db $A4, $60                     ;Set Event Flag 160
+
+greattrench_end.asm
+db $A2, $91                     ;Set Event Flag 091
+db $A2, $0E                     ;Set Event Flag 00E
+db $A4, $CB                     ;Set Event Flag 1CB
+
+greattrench_enter.asm
+db $A2, $A1                     ;Set Event Flag 0A1
+
+istoryfalls_end.asm
+db $A4, $7B                     ;Set Event Flag 17B
+db $A2, $92                     ;Set Event Flag 092
+
+istoryfalls_enter.asm
+db $A4, $6A                     ;Set Event Flag 16A
+db $A4, $00                     ;Set Event Flag 100
+db $A4, $00                     ;Set Event Flag 100
+
+kuzar.asm
+db $A2, $97                     ;Set Event Flag 097
+
+merugene.asm
+db $A4, $F6                     ;Set Event Flag 1F6
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $81                     ;Set Event Flag 081
+db $A4, $F6                     ;Set Event Flag 1F6
+
+northmountain_bahamut.asm
+db $A4, $FE                     ;Set Event Flag 1FE
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $D4                     ;Set Event Flag 0D4
+
+phoenixtower.asm
+db $A2, $96                     ;Set Event Flag 096
+db $A5, $FE                     ;Clear Event Flag 1FE
+
+pyramid_enter.asm
+db $A2, $82                     ;Set Event Flag 082
+
+pyramid_top.asm
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $F3                     ;Set Event Flag 1F3
+db $A2, $83                     ;Set Event Flag 083
+db $A4, $CD                     ;Set Event Flag 1CD
+
+secondtablet.asm
+db $A4, $FE                     ;Set Event Flag 1FE
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $8E                     ;Set Event Flag 08E
+db $A4, $53                     ;Set Event Flag 153
+db $A4, $CC                     ;Set Event Flag 1CC
+
+solitaryisland_enter.asm
+db $A4, $00                     ;Set Event Flag 100
+db $A4, $5F                     ;Set Event Flag 15F
+db $A4, $00                     ;Set Event Flag 100
+
+tycoon_w3_cutscenes.asm
+db $A2, $2C                     ;Set Event Flag 02C
+db $A2, $98                     ;Set Event Flag 098
+db $A4, $FE                     ;Set Event Flag 1FE
+db $A2, $7A                     ;Set Event Flag 07A
+db $A2, $7B                     ;Set Event Flag 07B
+db $A4, $F0                     ;Set Event Flag 1F0
+db $A4, $FC                     ;Set Event Flag 1FC
+
+w3_airshipget.asm
+db $A4, $F7                     ;Set Event Flag 1F7
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $7D                     ;Set Event Flag 17D
+db $A4, $7E                     ;Set Event Flag 17E
+
+w3_getsub.asm
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $8F                     ;Set Event Flag 08F
+db $A4, $F9                     ;Set Event Flag 1F9
+
+w3_guido.asm
+db $A4, $F5                     ;Set Event Flag 1F5
+db $A5, $C8                     ;Clear Event Flag 1C8
+db $A2, $80                     ;Set Event Flag 080
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $7F                     ;Set Event Flag 17F
+db $A5, $FF                     ;Clear Event Flag 1FF
+db $A4, $CE                     ;Set Event Flag 1CE
+db $A5, $C8                     ;Clear Event Flag 1C8
+db $A4, $50                     ;Set Event Flag 150
+db $A4, $7C                     ;Set Event Flag 17C
+db $A5, $FE                     ;Clear Event Flag 1FE
+db $A2, $BD                     ;Set Event Flag 0BD
+
