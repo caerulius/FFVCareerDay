@@ -162,8 +162,15 @@ JMP $C7A4 ; branch the fk out and hope it works (it does)
 
 
 
-; org $E79F00
-; db $09, $38, $13
+
+
+
+
+
+
+
+org $E79F00
+db $09, $38, $13
 
 ; RANDOMIZER JOB SETTING  : Code $EC
 ; On rando seeds, this will trigger from the values written to E79F00:
@@ -221,14 +228,13 @@ STA $0602
 
 
 SetWeaponsNormal:
+
 ; set characters' default weapon to right hard
 LDA $E79F01
 STA $0513
 STA $0563
 STA $05B3
 STA $0603
-
-
 
 ; set default magic
 
@@ -246,16 +252,9 @@ pla
 ora $0950,x
 sta $0950,x
 
-; set characters' default ability
-LDA $E79F03
-STA $0517
-STA $0567
-STA $05B7
-STA $0607
 
 
 plx
 pla
 
 JMP $A630 ; hopefully this works 
-

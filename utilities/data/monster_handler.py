@@ -6,78 +6,7 @@ import random
 
 RANDOM_LOOT_PERCENT = .5
 
-df_monster_table = pd.read_csv('monstertest.csv', dtype=str)
-#
-#status0 = ['darkness','zombie','poison','float','mini','toad','petrify','dead']
-#status1 = ['image','image2','mute','berserk','charm','paralyze','sleep','aging']
-#status2 = ['regen','invul','slow','haste','stop','shell','armor','wall']
-#status3 = ['hidden','near death','singing','hp leak','countdown','controlled','false image','erased']
-#elemental = ['fire','ice','lightning','poison','holy','earth','wind','water']
-#creature = ['undead','archaetoad','creature','avis','dragon','heavy','desert','human']
-#
-#
-#df = df_monster_table.copy()
-#df = df.fillna('')
-#
-#def apply_status(x):
-#    status = bin(int(x,base=16)).replace('0b','').zfill(8)
-#    return '|'.join(status)
-#    
-#inflictable = [ 'inflictable_dead',
-# 'inflictable_petrify',
-# 'inflictable_toad',
-# 'inflictable_mini',
-# 'inflictable_poison',
-# 'inflictable_zombie',
-# 'inflictable_darkness',
-# 'inflictable_aging',
-# 'inflictable_sleep',
-# 'inflictable_paralyze',
-# 'inflictable_charm',
-# 'inflictable_berserk',
-# 'inflictable_mute',
-# 'inflictable_stop',
-# 'inflictable_slow']
-#
-#df['status_output'] = ''
-#for i, r in df.iterrows():
-#    new_str = ''
-#    for col in list(df.columns):
-#        if col in inflictable:
-#            if df[col].iloc[i] != '':
-#                new_str = new_str + df[col].iloc[i] + ', '
-#    df['status_output'].iloc[i] = new_str[:-2]
-#    
-#df['weakness_output'] = ''
-#for i, r in df.iterrows():
-#    new_str = ''
-#    for col in list(df.columns):
-#        if 'weakness_text' in col:
-#            if df[col].iloc[i] != '':
-#                new_str = new_str + df[col].iloc[i] + ', '
-#    df['weakness_output'].iloc[i] = new_str[:-2]
-#    
-#    
-#df['monster_type_flag'] = ''
-#df['monster_type_flag2'] = ''
-#
-#for i, r in df.iterrows():
-#    new_str = ''
-#    new_str2 = ''
-#    heavy_flag = bin(int(df['monster_type'].iloc[i],base=16)).replace("0b","").zfill(8)[2]
-#    undead_flag = bin(int(df['monster_type'].iloc[i],base=16)).replace("0b","").zfill(8)[7]
-#    if heavy_flag == '0':
-#        new_str = new_str + 'NOT HEAVY '
-#    df['monster_type_flag'].iloc[i] = new_str
-#    if undead_flag == '1':
-#        new_str2 = new_str2 + 'undead '
-#    df['monster_type_flag2'].iloc[i] = new_str2
-#
-#
-#
-#df = df[['monster_name','num_hp','num_level','status_output','weakness_output','monster_type_flag','monster_type_flag2']]
-#df.to_csv('monstertest2.csv',index=None)
-
+df_monster_table = pd.read_csv('monster_data.csv', dtype=str)
 
 df_item = pd.read_csv('item_id.csv',index_col='item_id',dtype=str)
 df_item = df_item[df_item['value']!='0']
@@ -576,6 +505,34 @@ for i in all_monsters:
 for i in all_monsters:
     i.randomize_loot('full')
     print(i.loot_output)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #
 #

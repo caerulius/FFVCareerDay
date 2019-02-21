@@ -1,5 +1,5 @@
 ; conditionals
-!vanillarewards = 1
+!vanillarewards = 0
 
 
 ; init
