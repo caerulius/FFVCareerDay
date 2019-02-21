@@ -25,7 +25,7 @@ class Reward:
 
     @property
     def asar_output(self):
-        return f"org ${self.address} \ndb ${self.collectible.reward_type}, ${self.collectible.reward_id}"
+        return f"org ${self.address} \ndb ${self.collectible.reward_type}, ${self.collectible.patch_id}"
     
     @property
     def short_output(self):

@@ -30,6 +30,11 @@ class Collectible(ABC):
             self.valid = valid == "TRUE"
         self.place_weight = 1
 
+        @property
+        @abstractmethod
+        def patch_id(self):
+            pass
+        
 class Item(Collectible):
     reward_type = '40'
     def __init__(self,item_id):
@@ -39,6 +44,10 @@ class Item(Collectible):
         related_jobs = data['related_jobs'].strip('][').split(',')
         super().__init__(item_id, data['readable_name'], int(data['value']),
                          related_jobs, data['max_count'], data['valid'])
+
+    @property
+    def patch_id(self):
+        return self.reward_id
         
 class Magic(Collectible):
     reward_type = '20'
@@ -46,8 +55,14 @@ class Magic(Collectible):
         data = df_magic_id.loc[magic_id]
         self.type = data['type']
         related_jobs = data['related_jobs'].strip('][').split(',')
+        self.progression_id = data['progression_id']
         super().__init__(magic_id, data['readable_name'], int(data['value']),
                          related_jobs, data['max_count'], data['valid'])
+
+    @property
+    def patch_id(self):
+        return self.progression_id
+    
 
 class Crystal(Collectible):
     reward_type = '50'
@@ -71,6 +86,10 @@ class Crystal(Collectible):
         related_jobs = data['related_jobs'].strip('][').split(',')
         super().__init__(crystal_id, data['readable_name'], int(data['value']),
                          related_jobs, data['max_count'])
+
+    @property
+    def patch_id(self):
+        return self.reward_id
         
 class Ability(Collectible):
     reward_type = '60'
@@ -79,6 +98,10 @@ class Ability(Collectible):
         related_jobs = data['related_jobs'].strip('][').split(',')
         super().__init__(ability_id, data['readable_name'], int(data['value']),
                          related_jobs, data['max_count'], data['valid'])
+
+    @property
+    def patch_id(self):
+        return self.reward_id
 
 class CollectibleManager():
     def __init__(self, collectibles=None):

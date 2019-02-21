@@ -61,7 +61,7 @@ class Shop(object):
             if i is None:
                 output = output + ", $00"
             else:
-                output = output + ", $" + str(i.reward_id) 
+                output = output + ", $" + str(i.reward_id) #Todo: this will need to change when/if shops can be progressive
 
         return output
 

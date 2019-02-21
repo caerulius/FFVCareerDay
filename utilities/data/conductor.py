@@ -224,7 +224,7 @@ class Conductor():
         output = output + "\n;starting crystal"
         output = output + "\n;================\n"
         output = output + "\norg $" + STARTING_CRYSTAL_ADDRESS
-        output = output + "\ndb $" + self.starting_crystal.reward_id
+        output = output + "\ndb $" + self.starting_crystal.patch_id
         output = output + ", $" + self.starting_crystal.starting_weapon_id
         output = output + ", $" + self.starting_crystal.starting_spell_id
         output = output + ", $" + self.starting_crystal.starting_ability_id
