@@ -2,6 +2,7 @@
 !vanillarewards = 0
 ; randomizer testing
 incsrc r-patch.asm
+incsrc boss-patch.asm
 
 ; init
 incsrc misc/init.asm
@@ -178,6 +179,7 @@ incsrc misc/magic_ability_crystal_shop_prices.asm
 incsrc misc/shop_hook.asm
 incsrc misc/shop_text.asm
 
+incsrc balancing/exp_abp_modifier.asm
 
 incsrc recovery/all_inns.asm
 incsrc recovery/tent.asm

@@ -183,6 +183,7 @@ db $C3, $02
 db $14                          ;Player pose: face down, left hand forward
 db $CC, $23                  ;Custom destination flag 23
 db $A4, $45					; Trigger for Exdeath cutscene
+db $D2, $01, $2E, $86, $D8
 ; db $EB, $FF                     ;DISABLED FOR NOW - believed to reset Cara's state to Freelancer
 db $FF
 

@@ -2,9 +2,13 @@ hirom
 
 ; Surgate castle guards
 
-org $C8332C
-db $00, $00, $F9
-org $C8361A
+
+; Set Outside Surgate guard to new text box
+org $CE8912
+db $D9
+
+
+org $C83BDE
 db $00, $00, $F9
 
 ; disable event flag at surage so the left guard's dialogue doesnt change to `world 3 warp`
@@ -57,9 +61,12 @@ db $FF
 
 
 
-org $C83329
-db $80, $00, $F9
-org $C83326
+; Set Outside Surgate guard to new text box
+org $CE8919
+db $DA
+
+
+org $C83BE1
 db $80, $00, $F9
 ; World 3 Warp Dialogue
 org $F90080

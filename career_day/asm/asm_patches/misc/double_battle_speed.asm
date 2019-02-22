@@ -4,7 +4,7 @@ hirom
 org $C22075
 JML DoubleSpeedHook
 
-org $F00100
+; org $F00100  (REASSIGN ADDRESS)
 DoubleSpeedHook:
 
 

@@ -3,6 +3,7 @@ hirom
 !input = $7E0114
 !input2 = $7E0B03
 !configmenucheck = $7E0159 ; when this is #$06, player is in config menu
+!configmenucheck2 = $7E017B ; when this is #$f6, player is in config menu
 !menutype = $7E0143
 !itemmenuvalidater = $7E01E0
 !itemmenuloc = $7E0200
@@ -175,18 +176,20 @@ sep #$20
 lda !configmenucheck ; load config menu id
 CMP #$06 ; if anything else, branch 
 bne CheckDestinationWriter
-
+lda !configmenucheck2 ; load config menu id
+CMP #$f6 ; if anything else, branch 
+bne CheckDestinationWriter
 
 ; this writes to vram 
 
-LDA #$53  ; WRITE address  - location of "3" 
+LDA #$53  ; WRITE address  - location of "3" , but change it to FOUR
 STA $002116
 LDA #$11  ; WRITE address
 STA $002117
 LDA #$80
 STA $002115
 
-LDA #$96
+LDA #$57
 STA $002118
 
 

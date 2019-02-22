@@ -1,17 +1,9 @@
 hirom
 !base = $C00000
-!walkingspeedconfig = $0970 
+; !walkingspeedconfig = $0970 
 !worldmapflag = $0B53 ; if this is 1, not in world map
 !input = $0b03
 !airshipspeed = #$0020
-
-; change text in config menu
-org $E731DB
-db $63, $7A, $8C, $81, $96, $72, $89, $7D, $A3 ; "Dash Spd."
-
-; change config to only allow for 4 options
-org $C0F078
-db $02 ; change 'too far' metric
 
 ; make conditional true for any player to always execute dash when b is held
 org $c01261
@@ -52,17 +44,19 @@ BRA SpeedSettingDefault
 
 
 RunSpeedWorldMap:
-; Use speed config for dash
-lda !walkingspeedconfig
-and #$70
+; Use speed config for dash (DEPRECATED)
+; lda !walkingspeedconfig
+; and #$70
 
-; setting 2
-CMP #$10
-BEQ SpeedSettingDefault
-; setting 1
-CMP #$00
-BEQ SpeedSettingFast1
+; ; setting 2
+; CMP #$10
+; BEQ SpeedSettingDefault
+; ; setting 1
+; CMP #$00
+; BEQ SpeedSettingFast1
 
+; Now always load in #$08
+BRA SpeedSettingFast1
 
 
 ; towns/dungeons
@@ -79,16 +73,19 @@ BRA SpeedSettingDefault
 
 
 RunSpeed:
-; Use speed config for dash
-lda !walkingspeedconfig
-and #$70
+; Use speed config for dash (DEPRECATED)
+; lda !walkingspeedconfig
+; and #$70
 
-; setting 2
-CMP #$10
-BEQ SpeedSettingDefault
-; setting 1
-CMP #$00
-BEQ SpeedSettingFast1
+; ; setting 2
+; CMP #$10
+; BEQ SpeedSettingDefault
+; ; setting 1
+; CMP #$00
+; BEQ SpeedSettingFast1
+
+; Now just default to #$08. 
+BRA SpeedSettingFast1
 
 SpeedSettingDefault:
 lda #$04

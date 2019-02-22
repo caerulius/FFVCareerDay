@@ -170,10 +170,6 @@ JMP $C7A4 ; branch the fk out and hope it works (it does)
 
 
 
-
-org $E79F00
-db $09, $38, $13
-
 ; RANDOMIZER JOB SETTING  : Code $EC
 ; On rando seeds, this will trigger from the values written to E79F00:
 ; $00 = job id
@@ -227,20 +223,27 @@ BNE SetWeaponsNormal
 ; Just need to set left hand
 SetMonkWeapons:
 LDA #$01
-STA $0512
-STA $0562
-STA $05B2
-STA $0602
+STA $0514
+STA $0564
+STA $05B4
+STA $0604
 
 
 SetWeaponsNormal:
 
-; set characters' default weapon to right hard
+; set characters' default weapon to right hand
 LDA $E79F01
 STA $0513
 STA $0563
 STA $05B3
 STA $0603
+; set left hand to blank
+STZ $0514
+STZ $0564
+STZ $05B4
+STZ $0604
+; set shield to blank on faris
+STZ $0602
 
 ; set default magic
 

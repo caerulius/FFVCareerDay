@@ -7,6 +7,8 @@ hirom
 
 org $C84C80
 
+db $7A                          ;Naming Character
+
 ; all flags related to setting up open world are in this file
 incsrc ../open_world/starting_flags.asm
 

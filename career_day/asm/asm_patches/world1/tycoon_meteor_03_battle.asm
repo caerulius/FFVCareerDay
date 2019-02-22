@@ -33,7 +33,8 @@ db $E1, $0D, $00, $80, $00, $00 ;Return from cutscene? 0D 00 80 00 00
 db $0A                          ;Player Hide
 db $C3, $0C                     ;Fade in Speed 0C
 db $C8, $07, $00                ;Display Message/Text/Dialogue 07 00
-db $7A                          ;Naming Character
+; CAREERDAY
+; db $7A                          ;Naming Character
 db $E3, $7A, $00, $66, $15, $00 ;Inter-map cutscene? 7A 00 66 15 00
 db $09                          ;Player Show
 db $12                          ;Player pose: face right, standing

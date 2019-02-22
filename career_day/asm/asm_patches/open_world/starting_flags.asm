@@ -193,8 +193,8 @@ db $A3, $5D            ; set address 000A1F bit OFF 20
 ; Set flags for open village
 db $CB, $3E, $02                        ;Clear Flag 2/3/4/5/3E 02
 db $CB, $3F, $02                        ;Clear Flag 2/3/4/5/3F 02
-db $A4, $3C                     ;Set Event Flag 13C
-db $A4, $2C                     ;Set Event Flag 12C
+; db $A4, $3C                     ;Set Event Flag 13C (this is tyrasaur being defeated, and previously moogle village unlocked)
+db $A4, $2C                     ;Set Event Flag 12C (this is now village being unlocked)
 db $CB, $E6, $01                ;Clear Flag 2/3/4/5/E6 01
 db $CB, $E7, $01                ;Clear Flag 2/3/4/5/E7 01
 db $CB, $DF, $01                ;Clear Flag 2/3/4/5/DF 01
@@ -295,7 +295,7 @@ db $CB, $D8, $00            ; set address 000A6F bit OFF 01
 db $A2, $72                     ;Set Event Flag 072
 
 ; End of forest after battle:
-db $A2, $75                     ;Set Event Flag 075
+; db $A2, $75                     ;Set Event Flag 075
 db $A5, $FE                     ;Clear Event Flag 1FE
 db $A4, $25                     ;Set Event Flag 125
 db $CB, $0E, $00                ;Clear Flag 2/3/4/5/0E 00

@@ -1,4 +1,4 @@
-﻿offset,idx,rank,"event_code_($BA,$xx,$yy)",formationid_1,escape_%,abp,visible_enemy,enemy_1,enemy_2,enemy_3,enemy_4,enemy_5,enemy_6,enemy_7,enemy_8,formationid_13,formationid_14,formationid_15,formationid_16,enemy_1_name,enemy_2_name,enemy_3_name,enemy_4_name,enemy_5_name,enemy_6_name,enemy_7_name,enemy_8_name
+﻿offset,idx,rank,event_id,formationid_1,escape_%,abp,visible_enemy,enemy_1,enemy_2,enemy_3,enemy_4,enemy_5,enemy_6,enemy_7,enemy_8,formationid_13,formationid_14,formationid_15,formationid_16,enemy_1_name,enemy_2_name,enemy_3_name,enemy_4_name,enemy_5_name,enemy_6_name,enemy_7_name,enemy_8_name
 D03000,1,standard,4E,00,64,01,80,00,FF,FF,FF,FF,FF,FF,FF,00,00,00,00,Goblin, , , , , , , 
 D03010,2,standard,,00,64,01,C0,01,01,FF,FF,FF,FF,FF,FF,00,00,00,00,Killer Bee,Killer Bee, , , , , , 
 D03020,3,standard,,00,64,01,E0,00,00,00,FF,FF,FF,FF,FF,00,00,00,00,Goblin,Goblin,Goblin, , , , , 
@@ -442,7 +442,7 @@ D04B70,440,boss,01,00,80,05,80,00,01,FF,FF,FF,FF,FF,FF,10,00,08,20,WingRaptor,Wi
 D04B80,441,boss,02,00,80,05,80,02,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,Karlabos, , , , , , , 
 D04B90,442,boss,03,00,80,05,80,04,05,FF,FF,FF,FF,FF,FF,10,00,08,20,Siren,Siren, , , , , , 
 D04BA0,443,boss,04,00,80,06,40,06,07,FF,FF,FF,FF,FF,FF,10,00,08,20,Forza,Magisa, , , , , , 
-D04BB0,444,boss,06,00,80,05,80,08,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,Galura, , , , , , , 
+D04BB0,444,boss,86,00,80,05,80,08,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,Galura, , , , , , , 
 D04BC0,445,boss,07,00,80,06,80,09,0A,0B,FF,FF,FF,FF,FF,00,00,08,60,LiquiFlame,LiquiFlame,LiquiFlame, , , , , 
 D04BD0,446,boss,08,00,80,03,F0,52,53,53,53,51,FF,FF,FF,15,80,C0,20,Sergeant,Karnak,Karnak,Karnak,Iron Claw, , , 
 D04BE0,447,boss,09,02,80,07,80,20,FF,FF,FF,FF,FF,FF,FF,18,00,08,41,FlyingKillr, , , , , , , 
