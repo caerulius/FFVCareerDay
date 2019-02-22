@@ -4,6 +4,9 @@ hirom
 !unlockedjobs3 = $0842
 !rewardid = $12
 !typeid = $11
+!currentmagic = $1ED6
+!loopcounter = $1ED7
+!progmagicentry = $1ED8
 !progmagictable = $F80400
 !unlockedmagic = $0950
 org $c00e3a
@@ -35,7 +38,13 @@ BranchIfPlusChestIDBranch:
 JML $C00E47
 
 IntermediateBranchToMagicReward:
+phy
+phx
+php
 JSL BranchToMagicReward
+plp
+plx
+ply
 JML $C00E69
 
 IntermediateBranchToJobReward:
@@ -250,32 +259,28 @@ inc !4pabilitiescount
 JML JobsAssigned
 
 BranchToMagicReward:
+sep #$10
 lda !rewardid
 asl a
 asl a
-tax
-ldy #$0000 ;loop counter
-phy
-phx
+sta !progmagicentry
+
+lda #$00 ;loop counter
+sta !loopcounter
 
 ProgressionLoop:
-plx ;grab loop counter
-ply ;grab our loop counter to check
-tya
-
-phy ;store our loop counter
-phx
+lda !loopcounter
 
 ; if our index is 4, we already have everything in that progression, exit early
 cmp #$04 
 beq GetLastAndExit
 
 ; if the current progression value is $#FF, no more progression is defined, exit early
+ldx !progmagicentry
 lda !progmagictable, x ;load the current magic to check
+sta !currentmagic
 cmp #$FF
 beq GetLastAndExit
-
-pha ;store the current magic to reuse later
 
 ;divide by 8 to get the byte we want to reference and store in y
 lsr a
@@ -285,7 +290,7 @@ tay
 
 ;retrieve the current magic again and test it against #$07 to 
 ;know which bit we're referring to
-pla
+lda !currentmagic
 and #$07
 tax
 
@@ -298,41 +303,26 @@ and $C0C9B9,x
 bne ProgressionReloop
 
 ;otherwise, we don't have that spell, so load the value back into a and exit, also clean up our stack
-plx
-lda !progmagictable, x
-ply ;clean up stack
+lda !currentmagic
 jmp ExitProgression
 
 ProgressionReloop:
 ;grab our loop counter, increment it, restore it
-plx
-inx
-ply
-iny
-phy
-phx
+inc !progmagicentry
+inc !loopcounter
+;lda !loopcounter
+;inc
+;sta !loopcounter
 jmp ProgressionLoop
 
 GetLastAndExit: ;get last result, which should be valid, and exit with that in a
+ldx !progmagicentry
 dex
 lda !progmagictable, x
-plx
-ply ;clean up the stack
 jmp ExitProgression
 
 ExitProgression:
 RTL
-
-
-
-
-
-
-
-
-
-
-
 
 
 
