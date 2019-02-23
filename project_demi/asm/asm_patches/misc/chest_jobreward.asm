@@ -4,11 +4,7 @@ hirom
 !unlockedjobs3 = $0842
 !rewardid = $12
 !typeid = $11
-!currentmagic = $1ED6
 !loopcounter = $1ED7
-!progmagicentry = $1ED8
-!progmagictable = $F80400
-!unlockedmagic = $0950
 org $c00e3a
 JML ChestHook1
 
@@ -31,8 +27,14 @@ BPL BranchIfPlusChestIDBranch
 JML $C00E44
 
 IntermediateBranchToAbilityReward:
+phy
+phx
+php
 JSL BranchToAbilityReward
-JML $c00e74
+plp
+plx
+ply
+JML $C00E3E
 
 BranchIfPlusChestIDBranch:
 JML $C00E47
@@ -73,7 +75,6 @@ CMP #$07; Hunter
 BEQ RewardHunter
 JMP CheckSecondJobs
 
-
 RewardKnight:
 LDA #$80
 TSB !unlockedjobs1
@@ -106,8 +107,6 @@ RewardHunter:
 LDA #$01
 TSB !unlockedjobs1
 JMP JobsAssigned
-
-
 
 ;unlockedjobs2
 CheckSecondJobs:
@@ -213,8 +212,16 @@ LDA !rewardid
 STA $16a2
 RTL
 
-
+org $F02000
+;################
+;Reward Abilities
+;################
 BranchToAbilityReward:
+!progabilityentry = $1ED8
+!progabilitytable = $F80600
+!currentability = $1ED6
+!unlockedability = $08F7
+
 !1pabilities = $08F7
 !2pabilities = $090B
 !3pabilities = $091F
@@ -225,7 +232,68 @@ BranchToAbilityReward:
 !3pabilitiescount = $08F5
 !4pabilitiescount = $08F6
 
-LDA !rewardid
+rep #$20
+lda !rewardid
+asl a
+asl a
+asl a
+sta !progabilityentry
+lda #$0000 ;loop counter
+sep #$20
+
+sta !loopcounter
+
+AbilityProgressionLoop:
+lda !loopcounter
+
+; if our index is 8, we already have everything in that progression, exit early
+cmp #$08
+beq AbilityGetLastAndExit
+
+; if the current progression value is $#FF, no more progression is defined, exit early
+ldx !progabilityentry
+lda !progabilitytable, x ;load the current ability to check
+sta !currentability
+cmp #$FF
+beq AbilityGetLastAndExit
+
+;divide by 8 to get the byte we want to reference and store in y
+lsr a
+lsr a
+lsr a
+tay
+
+;retrieve the current ability again and test it against #$07 to 
+;know which bit we're referring to
+lda !currentability
+and #$07
+tax
+
+;load the byte storing the relevant ability info. And it vs
+;the correct bit.
+lda !unlockedability,y
+and $C0C9B9,x
+
+;if the result isn't 0, we have that ability already, so loop again
+bne AbilityProgressionReloop
+
+;otherwise, we don't have that ability, so load the value back into a and exit, also clean up our stack
+lda !currentability
+jmp AbilityExitProgression
+
+AbilityProgressionReloop:
+inc !progabilityentry
+inc !loopcounter
+jmp AbilityProgressionLoop
+
+AbilityGetLastAndExit: ;get last result, which should be valid, and exit with that in a
+ldx !progabilityentry
+dex
+lda !progabilitytable, x
+sta !currentability
+jmp AbilityExitProgression
+
+AbilityExitProgression:
 pha
 lsr a
 lsr a
@@ -256,9 +324,19 @@ inc !3pabilitiescount
 inc !4pabilitiescount
 
 ; end with generic finisher
-JML JobsAssigned
+lda !currentability
+RTL
 
+
+;###################
+;Reward Magic Spells
+;###################
 BranchToMagicReward:
+!progmagicentry = $1ED8
+!progmagictable = $F80400
+!currentmagic = $1ED6
+!unlockedmagic = $0950
+
 sep #$10
 lda !rewardid
 asl a
@@ -268,19 +346,19 @@ sta !progmagicentry
 lda #$00 ;loop counter
 sta !loopcounter
 
-ProgressionLoop:
+MagicProgressionLoop:
 lda !loopcounter
 
 ; if our index is 4, we already have everything in that progression, exit early
 cmp #$04 
-beq GetLastAndExit
+beq MagicGetLastAndExit
 
 ; if the current progression value is $#FF, no more progression is defined, exit early
 ldx !progmagicentry
 lda !progmagictable, x ;load the current magic to check
 sta !currentmagic
 cmp #$FF
-beq GetLastAndExit
+beq MagicGetLastAndExit
 
 ;divide by 8 to get the byte we want to reference and store in y
 lsr a
@@ -300,31 +378,25 @@ lda !unlockedmagic,y
 and $C0C9B9,x
 
 ;if the result isn't 0, we have that spell already, so loop again
-bne ProgressionReloop
+bne MagicProgressionReloop
 
 ;otherwise, we don't have that spell, so load the value back into a and exit, also clean up our stack
 lda !currentmagic
-jmp ExitProgression
+jmp MagicExitProgression
 
-ProgressionReloop:
-;grab our loop counter, increment it, restore it
+MagicProgressionReloop:
 inc !progmagicentry
 inc !loopcounter
-;lda !loopcounter
-;inc
-;sta !loopcounter
-jmp ProgressionLoop
+jmp MagicProgressionLoop
 
-GetLastAndExit: ;get last result, which should be valid, and exit with that in a
+MagicGetLastAndExit: ;get last result, which should be valid, and exit with that in a
 ldx !progmagicentry
 dex
 lda !progmagictable, x
-jmp ExitProgression
+jmp MagicExitProgression
 
-ExitProgression:
+MagicExitProgression:
 RTL
-
-
 
 ; hook for changing indexing based on job id or not 
 org $C08AC2
