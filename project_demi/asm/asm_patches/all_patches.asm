@@ -177,6 +177,8 @@ incsrc misc/key_items.asm
 incsrc misc/magic_ability_crystal_shop_prices.asm
 incsrc misc/shop_hook.asm
 incsrc misc/shop_text.asm
+incsrc misc/progressive_ability_table.asm
+incsrc misc/progressive_magic_table.asm
 
 
 incsrc recovery/all_inns.asm
