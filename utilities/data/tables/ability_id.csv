@@ -1,138 +1,138 @@
-ability_id,readable_name,valid,value,related_jobs,max_count
-00,Other,FALSE,0,[],0
-01,Item,FALSE,0,[],0
-02,Row,FALSE,0,[],0
-03,Def.,FALSE,0,[],0
-04,Attack,FALSE,0,[],0
-05,Guard,FALSE,0,[],0
-06,Kick,TRUE,1,[“Monk”],1
-07,BuildUp,TRUE,2,[“Monk”],1
-08,Mantra,TRUE,2,[“Monk”],1
-09,Escape,TRUE,0,[“Thief”],1
-0A,Steal,TRUE,1,[“Thief”],1
-0B,Capture,TRUE,2,[“Thief”],1
-0C,Jump,TRUE,2,[“Dragoon”],1
-0D,DrgnSwd,TRUE,2,[“Dragoon”],1
-0E,Smoke,TRUE,2,[“Ninja”],1
-0F,Image,TRUE,2,[“Ninja”],1
-10,Throw,TRUE,2,[“Ninja”],1
-11,SwdSlap,TRUE,2,[“Samurai”],1
-12,GilToss,TRUE,2,[“Samurai”],1
-13,Slash,TRUE,2,[“Samurai”],1
-14,Animals,TRUE,2,[“Hunter”],1
-15,Aim,TRUE,2,[“Hunter”],1
-16,X-Fight,TRUE,2,[“Hunter”],1
-17,Conjure,TRUE,2,[“Summoner”],1
-18,Observe,TRUE,2,[“BlueMage”],1
-19,Analyze,TRUE,2,[“BlueMage”],1
-1A,Tame,TRUE,2,[“Mediator”],1
-1B,Control,TRUE,2,[“Mediator”],1
-1C,Catch,TRUE,2,[“Mediator”],1
-1D,Release,TRUE,2,[“Mediator”],1
-1E,Combine,TRUE,2,[“Chemist”],1
-1F,Drink,TRUE,2,[“Chemist”],1
-20,Pray,TRUE,2,[“Chemist”],1
-21,Revive,TRUE,2,[“Chemist”],1
-22,Terrain,TRUE,2,[“Geomancer”],1
-23,*Dummy01,FALSE,0,[],0
-24,Hide,TRUE,1,[“Bard”],1
-25,Show,FALSE,0,[“Bard”],0
-26,*Dummy02,FALSE,0,[],0
-27,Sing,TRUE,2,[“Bard”],1
-28,Flirt,TRUE,2,[“Dancer”],1
-29,Dance,TRUE,2,[“Dancer”],1
-2A,Mimic,TRUE,2,[“Mimic”],1
-2B,Blank18,FALSE,0,[],0
-2C,Blank19,FALSE,0,[],0
-2D,Blank20,FALSE,0,[],0
-2E,Blank21,FALSE,0,[],0
-2F,Blank22,FALSE,0,[],0
-30,MgcSwrd Lv.2,TRUE,1,[“MysticKnight”],1
-31,MgcSwrd Lv.3,TRUE,1,[“MysticKnight”],1
-32,MgcSwrd Lv.4,TRUE,2,[“MysticKnight”],1
-33,MgcSwrd Lv.5,TRUE,2,[“MysticKnight”],1
-34,MgcSwrd Lv.6,TRUE,3,[“MysticKnight”],1
-35,MgcSwrd Lv.7,TRUE,3,[“MysticKnight”],1
-36,Blank23,FALSE,0,[],0
-37,Blank24,FALSE,0,[],0
-38,White Lv.1,TRUE,1,[“WhiteMage”],1
-39,White Lv.2,TRUE,1,[“WhiteMage”],1
-3A,White Lv.3,TRUE,1,[“WhiteMage”],1
-3B,White Lv.4,TRUE,2,[“WhiteMage”],1
-3C,White Lv.5,TRUE,2,[“WhiteMage”],1
-3D,White Lv.6,TRUE,3,[“WhiteMage”],1
-3E,Blank25,FALSE,0,[],0
-3F,Blank26,FALSE,0,[],0
-40,Black Lv.1,TRUE,1,[“BlackMage”],1
-41,Black Lv.2,TRUE,1,[“BlackMage”],1
-42,Black Lv.3,TRUE,1,[“BlackMage”],1
-43,Black Lv.4,TRUE,2,[“BlackMage”],1
-44,Black Lv.5,TRUE,2,[“BlackMage”],1
-45,Black Lv.6,TRUE,3,[“BlackMage”],1
-46,Blank1,FALSE,0,[],0
-47,Blank2,FALSE,0,[],0
-48,Dimen Lv.1,TRUE,1,[“TimeMage”],1
-49,Dimen Lv.2,TRUE,1,[“TimeMage”],1
-4A,Dimen Lv.3,TRUE,1,[“TimeMage”],1
-4B,Dimen Lv.4,TRUE,2,[“TimeMage”],1
-4C,Dimen Lv.5,TRUE,2,[“TimeMage”],1
-4D,Dimen Lv.6,TRUE,3,[“TimeMage”],1
-4E,Blank3,FALSE,0,[],0
-4F,Blank4,FALSE,0,[],0
-50,Summon Lv.1,TRUE,1,[“Summoner”],1
-51,Summon Lv.2,TRUE,1,[“Summoner”],1
-52,Summon Lv.3,TRUE,1,[“Summoner”],1
-53,Summon Lv.4,TRUE,2,[“Summoner”],1
-54,Summon Lv.5,TRUE,3,[“Summoner”],1
-55,Blank5,FALSE,0,[],0
-56,Blank6,FALSE,0,[],0
-57,Blank7,FALSE,0,[],0
-58,Red Lv.1,TRUE,1,[“RedMage”],1
-59,Red Lv.2,TRUE,2,[“RedMage”],1
-5A,Red Lv.3,TRUE,3,[“RedMage”],1
-5B,Blank8,FALSE,0,[],0
-5C,Blank9,FALSE,0,[],0
-5D,Blank10,FALSE,0,[],0
-5E,Blank11,FALSE,0,[],0
-5F,Blank27,FALSE,0,[],0
-60,X-Magic,TRUE,3,[“RedMage”],1
-61,Blue,TRUE,2,[“BlueMage”],1
-62,Blank12,FALSE,0,[],0
-63,Blank13,FALSE,0,[],0
-64,Blank14,FALSE,0,[],0
-65,Blank15,FALSE,0,[],0
-66,Blank16,FALSE,0,[],0
-67,Blank17,FALSE,0,[],0
-68,Equip Shield,TRUE,2,[“Knight”],1
-69,Equip Armors,TRUE,2,[“Knight”],1
-6A,Equip Ribbon,TRUE,2,[“Dancer”],1
-6B,Equip Swords,TRUE,2,[“Knight”],1
-6C,Equip Spears,TRUE,2,[“Dragoon”],1
-6D,Equip Katana,TRUE,2,[“Samurai”],1
-6E,Equip Axes,TRUE,2,[“Berserker”],1
-6F,Equip Bows,TRUE,2,[“Hunter”],1
-70,Equip Whips,TRUE,2,[“Mediator”],1
-71,Equip Harps,TRUE,2,[“Bard”],1
-72,Agility,TRUE,2,[“Thief”],1
-73,HP +10%,TRUE,2,[“Monk”],1
-74,HP +20%,TRUE,2,[“Monk”],1
-75,HP +30%,TRUE,2,[“Monk”],1
-76,MP +10%,TRUE,2,[“WhiteMage”],1
-77,MP +30%,TRUE,2,[“BlackMage”],1
-78,Brawl,TRUE,2,[“Monk”],1
-79,Dbl Grip,TRUE,2,[“Knight”],1
-7A,2-Handed,TRUE,2,[“Ninja”],1
-7B,Medicine,TRUE,2,[“Chemist”],1
-7C,Cover,TRUE,2,[“Knight”],1
-7D,Counter,TRUE,2,[“Monk”],1
-7E,Evade,TRUE,2,[“MysticKnight”],1
-7F,Learning,FALSE,0,[“BlueMage”],0
-80,Barrier,TRUE,2,[“MysticKnight”],1
-81,Berserk,TRUE,2,[“Berserker”],1
-82,Caution,TRUE,2,[“Thief”],1
-83,Preemptive,TRUE,2,[“Ninja”],1
-84,Passages,FALSE,0,[“Knight”],0
-85,DmgFloor,TRUE,2,[“Geomancer”],1
-86,Pitfalls,FALSE,0,[“Geomancer”],0
-87,Equip Rods,TRUE,2,[“TimeMage”],1
-88,Dash,FALSE,0,[“Thief”],0
+ability_id,readable_name,valid,value,related_jobs,max_count,progression_id
+00,Other,FALSE,0,[],0,FF
+01,Item,FALSE,0,[],0,FF
+02,Row,FALSE,0,[],0,FF
+03,Def.,FALSE,0,[],0,FF
+04,Attack,FALSE,0,[],0,FF
+05,Guard,FALSE,0,[],0,FF
+06,Kick,TRUE,1,[“Monk”],1,00
+07,BuildUp,TRUE,2,[“Monk”],1,01
+08,Mantra,TRUE,2,[“Monk”],1,02
+09,Escape,TRUE,0,[“Thief”],1,03
+0A,Steal,TRUE,1,[“Thief”],1,04
+0B,Capture,TRUE,2,[“Thief”],1,05
+0C,Jump,TRUE,2,[“Dragoon”],1,06
+0D,DrgnSwd,TRUE,2,[“Dragoon”],1,07
+0E,Smoke,TRUE,2,[“Ninja”],1,08
+0F,Image,TRUE,2,[“Ninja”],1,09
+10,Throw,TRUE,2,[“Ninja”],1,0A
+11,SwdSlap,TRUE,2,[“Samurai”],1,0B
+12,GilToss,TRUE,2,[“Samurai”],1,0C
+13,Slash,TRUE,2,[“Samurai”],1,0D
+14,Animals,TRUE,2,[“Hunter”],1,0E
+15,Aim,TRUE,2,[“Hunter”],1,0E
+16,X-Fight,TRUE,2,[“Hunter”],1,0E
+17,Conjure,TRUE,2,[“Summoner”],1,0F
+18,Observe,TRUE,2,[“BlueMage”],1,10
+19,Analyze,TRUE,2,[“BlueMage”],1,11
+1A,Tame,TRUE,2,[“Mediator”],1,12
+1B,Control,TRUE,2,[“Mediator”],1,13
+1C,Catch,TRUE,2,[“Mediator”],1,14
+1D,Release,TRUE,2,[“Mediator”],1,15
+1E,Combine,TRUE,2,[“Chemist”],1,16
+1F,Drink,TRUE,2,[“Chemist”],1,17
+20,Pray,TRUE,2,[“Chemist”],1,18
+21,Revive,TRUE,2,[“Chemist”],1,19
+22,Terrain,TRUE,2,[“Geomancer”],1,1A
+23,*Dummy01,FALSE,0,[],0,FF
+24,Hide,TRUE,1,[“Bard”],1,1B
+25,Show,FALSE,0,[“Bard”],0,FF
+26,*Dummy02,FALSE,0,[],0,FF
+27,Sing,TRUE,2,[“Bard”],1,1C
+28,Flirt,TRUE,2,[“Dancer”],1,1D
+29,Dance,TRUE,2,[“Dancer”],1,1E
+2A,Mimic,TRUE,2,[“Mimic”],1,1C
+2B,Blank18,FALSE,0,[],0,FF
+2C,Blank19,FALSE,0,[],0,FF
+2D,Blank20,FALSE,0,[],0,FF
+2E,Blank21,FALSE,0,[],0,FF
+2F,Blank22,FALSE,0,[],0,FF
+30,MgcSwrd Lv.2,TRUE,1,[“MysticKnight”],1,20
+31,MgcSwrd Lv.3,TRUE,1,[“MysticKnight”],1,20
+32,MgcSwrd Lv.4,TRUE,2,[“MysticKnight”],1,20
+33,MgcSwrd Lv.5,TRUE,2,[“MysticKnight”],1,20
+34,MgcSwrd Lv.6,TRUE,3,[“MysticKnight”],1,20
+35,MgcSwrd Lv.7,TRUE,3,[“MysticKnight”],1,20
+36,Blank23,FALSE,0,[],0,FF
+37,Blank24,FALSE,0,[],0,FF
+38,White Lv.1,TRUE,1,[“WhiteMage”],1,21
+39,White Lv.2,TRUE,1,[“WhiteMage”],1,21
+3A,White Lv.3,TRUE,1,[“WhiteMage”],1,21
+3B,White Lv.4,TRUE,2,[“WhiteMage”],1,21
+3C,White Lv.5,TRUE,2,[“WhiteMage”],1,21
+3D,White Lv.6,TRUE,3,[“WhiteMage”],1,21
+3E,Blank25,FALSE,0,[],0,FF
+3F,Blank26,FALSE,0,[],0,FF
+40,Black Lv.1,TRUE,1,[“BlackMage”],1,22
+41,Black Lv.2,TRUE,1,[“BlackMage”],1,22
+42,Black Lv.3,TRUE,1,[“BlackMage”],1,22
+43,Black Lv.4,TRUE,2,[“BlackMage”],1,22
+44,Black Lv.5,TRUE,2,[“BlackMage”],1,22
+45,Black Lv.6,TRUE,3,[“BlackMage”],1,22
+46,Blank1,FALSE,0,[],0,FF
+47,Blank2,FALSE,0,[],0,FF
+48,Dimen Lv.1,TRUE,1,[“TimeMage”],1,23
+49,Dimen Lv.2,TRUE,1,[“TimeMage”],1,23
+4A,Dimen Lv.3,TRUE,1,[“TimeMage”],1,23
+4B,Dimen Lv.4,TRUE,2,[“TimeMage”],1,23
+4C,Dimen Lv.5,TRUE,2,[“TimeMage”],1,23
+4D,Dimen Lv.6,TRUE,3,[“TimeMage”],1,23
+4E,Blank3,FALSE,0,[],0,FF
+4F,Blank4,FALSE,0,[],0,FF
+50,Summon Lv.1,TRUE,1,[“Summoner”],1,24
+51,Summon Lv.2,TRUE,1,[“Summoner”],1,24
+52,Summon Lv.3,TRUE,1,[“Summoner”],1,24
+53,Summon Lv.4,TRUE,2,[“Summoner”],1,24
+54,Summon Lv.5,TRUE,3,[“Summoner”],1,24
+55,Blank5,FALSE,0,[],0,FF
+56,Blank6,FALSE,0,[],0,FF
+57,Blank7,FALSE,0,[],0,FF
+58,Red Lv.1,TRUE,1,[“RedMage”],1,25
+59,Red Lv.2,TRUE,2,[“RedMage”],1,25
+5A,Red Lv.3,TRUE,3,[“RedMage”],1,25
+5B,Blank8,FALSE,0,[],0,FF
+5C,Blank9,FALSE,0,[],0,FF
+5D,Blank10,FALSE,0,[],0,FF
+5E,Blank11,FALSE,0,[],0,FF
+5F,Blank27,FALSE,0,[],0,FF
+60,X-Magic,TRUE,3,[“RedMage”],1,25
+61,Blue,TRUE,2,[“BlueMage”],1,26
+62,Blank12,FALSE,0,[],0,FF
+63,Blank13,FALSE,0,[],0,FF
+64,Blank14,FALSE,0,[],0,FF
+65,Blank15,FALSE,0,[],0,FF
+66,Blank16,FALSE,0,[],0,FF
+67,Blank17,FALSE,0,[],0,FF
+68,Equip Shield,TRUE,2,[“Knight”],1,27
+69,Equip Armors,TRUE,2,[“Knight”],1,28
+6A,Equip Ribbon,TRUE,2,[“Dancer”],1,29
+6B,Equip Swords,TRUE,2,[“Knight”],1,2A
+6C,Equip Spears,TRUE,2,[“Dragoon”],1,2B
+6D,Equip Katana,TRUE,2,[“Samurai”],1,2C
+6E,Equip Axes,TRUE,2,[“Berserker”],1,2D
+6F,Equip Bows,TRUE,2,[“Hunter”],1,2E
+70,Equip Whips,TRUE,2,[“Mediator”],1,2F
+71,Equip Harps,TRUE,2,[“Bard”],1,30
+72,Agility,TRUE,2,[“Thief”],1,31
+73,HP +10%,TRUE,2,[“Monk”],1,32
+74,HP +20%,TRUE,2,[“Monk”],1,32
+75,HP +30%,TRUE,2,[“Monk”],1,32
+76,MP +10%,TRUE,2,[“WhiteMage”],1,33
+77,MP +30%,TRUE,2,[“BlackMage”],1,33
+78,Brawl,TRUE,2,[“Monk”],1,34
+79,Dbl Grip,TRUE,2,[“Knight”],1,35
+7A,2-Handed,TRUE,2,[“Ninja”],1,36
+7B,Medicine,TRUE,2,[“Chemist”],1,37
+7C,Cover,TRUE,2,[“Knight”],1,38
+7D,Counter,TRUE,2,[“Monk”],1,39
+7E,Evade,TRUE,2,[“MysticKnight”],1,3A
+7F,Learning,FALSE,0,[“BlueMage”],0,3B
+80,Barrier,TRUE,2,[“MysticKnight”],1,3C
+81,Berserk,TRUE,2,[“Berserker”],1,3D
+82,Caution,TRUE,2,[“Thief”],1,3E
+83,Preemptive,TRUE,2,[“Ninja”],1,3F
+84,Passages,FALSE,0,[“Knight”],0,40
+85,DmgFloor,TRUE,2,[“Geomancer”],1,41
+86,Pitfalls,FALSE,0,[“Geomancer”],0,42
+87,Equip Rods,TRUE,2,[“TimeMage”],1,43
+88,Dash,FALSE,0,[“Thief”],0,44

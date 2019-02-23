@@ -7,7 +7,6 @@ hirom
 ;(I'm not going to comment the lines here, in case they change. Assume this file is up to date with the csv)
 
 org $F80400
-ProgressiveMagicTable:
 db $00, $06, $0C, $FF
 db $01, $07, $0D, $FF
 db $02, $08, $0E, $FF

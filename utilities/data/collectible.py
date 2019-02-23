@@ -96,12 +96,13 @@ class Ability(Collectible):
     def __init__(self,ability_id):
         data = df_ability_id.loc[ability_id]
         related_jobs = data['related_jobs'].strip('][').split(',')
+        self.progression_id = data['progression_id']
         super().__init__(ability_id, data['readable_name'], int(data['value']),
                          related_jobs, data['max_count'], data['valid'])
 
     @property
     def patch_id(self):
-        return self.reward_id
+        return self.progression_id
 
 class CollectibleManager():
     def __init__(self, collectibles=None):
