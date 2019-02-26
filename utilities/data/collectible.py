@@ -139,11 +139,13 @@ class CollectibleManager():
             working_list = [x for x in self.get_all_of_type(of_type) if x.valid]
         else:
             working_list = [x for x in self.collectibles if x.valid]
+            
         if monitor_counts is True:
-            working_list = [x for x in working_list if
-               (x not in self.placement_history.keys() or
-                x.max_count is None or
-                x.max_count < self.placement_history[x])]
+            working_list = [y for y in [x for x in working_list if
+                                       (x not in self.placement_history.keys() or
+                                        x.max_count is None or
+                                        x.max_count < self.placement_history[x])]
+                            if y.valid]
 
         if respect_weight is False:
             choice = random_engine.choice(working_list)
