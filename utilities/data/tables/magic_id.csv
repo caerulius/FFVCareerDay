@@ -1,22 +1,22 @@
 magic_id,readable_name,type,value,max_count,valid,related_jobs,progression_id
-00,Fire,Sword,2,1,FALSE,[“MysticKnight”],00
-01,Ice,Sword,2,1,FALSE,[“MysticKnight”],01
-02,Bolt,Sword,2,1,FALSE,[“MysticKnight”],02
-03,Venom,Sword,2,1,FALSE,[“MysticKnight”],03
-04,Mute,Sword,2,1,FALSE,[“MysticKnight”],04
-05,Sleep,Sword,2,1,FALSE,[“MysticKnight”],05
-06,Fire2,Sword,2,1,FALSE,[“MysticKnight”],00
-07,Ice2,Sword,2,1,FALSE,[“MysticKnight”],01
-08,Bolt2,Sword,2,1,FALSE,[“MysticKnight”],02
-09,Drain,Sword,3,1,FALSE,[“MysticKnight”],03
-0A,Break,Sword,3,1,FALSE,[“MysticKnight”],03
-0B,Bio,Sword,3,1,FALSE,[“MysticKnight”],05
-0C,Fire3,Sword,3,1,FALSE,[“MysticKnight”],00
-0D,Ice3,Sword,3,1,FALSE,[“MysticKnight”],01
-0E,Bolt3,Sword,3,1,FALSE,[“MysticKnight”],02
-0F,Holy,Sword,3,1,FALSE,[“MysticKnight”],04
-10,Flare,Sword,3,1,FALSE,[“MysticKnight”],05
-11,Psych,Sword,3,1,FALSE,[“MysticKnight”],04
+00,Fire,Sword,2,1,TRUE,[“MysticKnight”],00
+01,Ice,Sword,2,1,TRUE,[“MysticKnight”],01
+02,Bolt,Sword,2,1,TRUE,[“MysticKnight”],02
+03,Venom,Sword,2,1,TRUE,[“MysticKnight”],03
+04,Mute,Sword,2,1,TRUE,[“MysticKnight”],04
+05,Sleep,Sword,2,1,TRUE,[“MysticKnight”],05
+06,Fire2,Sword,2,1,TRUE,[“MysticKnight”],00
+07,Ice2,Sword,2,1,TRUE,[“MysticKnight”],01
+08,Bolt2,Sword,2,1,TRUE,[“MysticKnight”],02
+09,Drain,Sword,3,1,TRUE,[“MysticKnight”],03
+0A,Break,Sword,3,1,TRUE,[“MysticKnight”],03
+0B,Bio,Sword,3,1,TRUE,[“MysticKnight”],05
+0C,Fire3,Sword,3,1,TRUE,[“MysticKnight”],00
+0D,Ice3,Sword,3,1,TRUE,[“MysticKnight”],01
+0E,Bolt3,Sword,3,1,TRUE,[“MysticKnight”],02
+0F,Holy,Sword,3,1,TRUE,[“MysticKnight”],04
+10,Flare,Sword,3,1,TRUE,[“MysticKnight”],05
+11,Psych,Sword,3,1,TRUE,[“MysticKnight”],04
 12,Cure,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",06
 13,Scan,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",0A
 14,Antdt,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",09
