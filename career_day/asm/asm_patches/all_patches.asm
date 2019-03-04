@@ -7,6 +7,15 @@ incsrc boss-patch.asm
 ; init
 incsrc misc/init.asm
 
+; text tables
+incsrc text_tables/ability_shop_table.asm
+incsrc text_tables/ability_chest_table.asm
+incsrc text_tables/job_shop_table.asm
+incsrc text_tables/job_chest_table.asm
+incsrc text_tables/magic_chest_table.asm
+
+
+
 ; world 1                                   Destinations:
 incsrc world1/tycoon_meteor_01_mount.asm
 incsrc world1/tycoon_meteor_02_mount.asm
@@ -177,7 +186,7 @@ incsrc misc/chest_magicreward.asm
 incsrc misc/key_items.asm
 incsrc misc/magic_ability_crystal_shop_prices.asm
 incsrc misc/shop_hook.asm
-incsrc misc/shop_text.asm
+incsrc misc/original_magic_prices.asm
 
 incsrc balancing/exp_abp_modifier.asm
 
