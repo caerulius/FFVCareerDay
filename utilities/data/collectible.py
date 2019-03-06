@@ -113,7 +113,7 @@ class CollectibleManager():
 
     def get_by_id_and_type(self, reward_id, reward_type):
         for i in self.collectibles:
-            if i.reward_type == reward_type and i.reward_id == reward_id and i.valid:
+            if i.reward_id == reward_id and i.reward_type == reward_type and i.valid:
                 return i
         return None
 

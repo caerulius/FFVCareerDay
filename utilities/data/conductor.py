@@ -11,7 +11,7 @@ from shop_price import *
 from area import *
 
 STARTING_CRYSTAL_ADDRESS = 'E79F00'
-DEFAULT_POWER_CHANGE = 2.0
+DEFAULT_POWER_CHANGE = 1.5
 
 class Conductor():
     def __init__(self, random_engine):
@@ -117,6 +117,13 @@ class Conductor():
             
 
     def randomize_shops(self):
+        required_items = {}
+        required_items["E6"] = False #Revivify
+        required_items["F1"] = False #Cabin
+        required_items["E1"] = False #HiPotion
+        required_items["E4"] = False #Fenix Down
+        required_items["E2"] = False #Ether
+
         item_chance = .6
         magic_chance = .25
         crystal_chance = .15
@@ -127,6 +134,7 @@ class Conductor():
             #don't waste time on invalid shops
             if value.valid is False:
                 continue
+
             #for the discount shops, put a single item in there
             if "discount" in value.readable_name:
                 value.num_items = 1
@@ -134,10 +142,11 @@ class Conductor():
                 value.contents = [self.CM.get_random_collectible(random, respect_weight=True,
                                                                    monitor_counts=True,
                                                                    of_type=Item)] + [None] * 7
-                #print(value.short_output)
-                #input()
                 continue
             
+            #manage the probability of the shops
+            #each time a shop of one kind is placed
+            #each of the other kinds of shops gets more likely
             if item_chance <= 0:
                 item_chance = item_chance + .05
                 magic_chance = magic_chance - .025
@@ -158,29 +167,36 @@ class Conductor():
             #print("new kind: " + kind)
             #print("starting quantity: " + str(value.num_items))
 
-            item_mod = random.choices([  2,   1,  1,  0,  0,  0,   0,  0, -1,  -1,   -2],
-                                     [.025, .05, .1, .2, .2, .25, .2, .2, .1, .05, .025])[0]
+            item_mod = random.choices([  2,  1,  0, -1,  -2],
+                                      [.05, .1, .7, .1, .05])[0]
             value.num_items = value.num_items + item_mod
             if value.num_items > 8:
                 value.num_items = 8
             if value.num_items < 1:
                 value.num_items = 1
 
-            #print("new quantity: " + str(value.num_items))
-
             contents = []
             
             if kind == "item":
+                if value.num_items < 4:
+                    value.num_items = 4
+
                 item_chance = item_chance - .1
                 magic_chance = magic_chance + .05
                 crystal_chance = crystal_chance + .05
                 value.shop_type = "03" #shop type: item
                 for i in range(0, value.num_items):
-                    contents.append(self.CM.get_random_collectible(random, respect_weight=True,
+                    item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
                                                                    monitor_counts=True,
-                                                                   of_type=Item))
+                                                                   of_type=Item)
+                    if item_to_place.reward_id in required_items.keys():
+                        required_items[item_to_place.reward_id] = True
+                    contents.append(item_to_place)
                     
             elif kind == "magic":
+                if value.num_items > 5:
+                    value.num_items = 5
+
                 item_chance = item_chance + .05
                 magic_chance = magic_chance - .1
                 crystal_chance = crystal_chance + .05
@@ -199,6 +215,9 @@ class Conductor():
                                                                        of_type=Item))
                 
             else:
+                if value.num_items > 4:
+                    value.num_items = 4
+
                 item_chance = item_chance + .05
                 magic_chance = magic_chance + .05
                 crystal_chance = crystal_chance - .1
@@ -221,6 +240,33 @@ class Conductor():
                 
             value.contents = contents
 
+        #manage the must place items here
+        #extra checking done to make sure we don't replace
+        #a must place item with a different one
+        for index, value in required_items.items():
+            used_spots = []
+            chosen_shop = None
+            chosen_slot = None
+            if value is False:
+                #print("guaranteeing " + index)
+                item_to_place = self.CM.get_by_id_and_type(index, "40")
+                #print(item_to_place.reward_name)
+                while True:
+                    item_shops = [x for x in self.SM.shops if x.shop_type == "03"]
+                    #print("number of item shops: " + str(len(item_shops)))
+                    chosen_shop = random.choice(range(0, len(item_shops)))
+                    #print("chosen shop index: " + str(chosen_shop))
+                    #print("chosen shop num items: " + str(self.SM.shops[chosen_shop].num_items))
+                    chosen_slot = random.choice(range(0, self.SM.shops[chosen_shop].num_items - 1))
+                    #print("chosen slot index: " + str(chosen_slot))
+                    if (chosen_shop, chosen_slot) not in used_spots:
+                        break
+
+                used_spots.append((chosen_shop, chosen_slot))
+
+                self.SM.shops[chosen_shop].contents[chosen_slot] = item_to_place
+
+
     def starting_crystal_patch(self):
         output = ";================"
         output = output + "\n;starting crystal"
@@ -235,9 +281,9 @@ class Conductor():
 
     def starting_crystal_spoiler(self):
         output = "-----STARTING JOB, WEAPON, MAGIC-----"
-        output = output + "\nStarting job: " + self.starting_crystal.reward_name
-        output = output + "\nStarting weapon: " + self.starting_crystal.starting_weapon
-        output = output + "\nStarting spell: " + self.starting_crystal.starting_spell
+        output = output + "\nStarting job:     " + self.starting_crystal.reward_name
+        output = output + "\nStarting weapon:  " + self.starting_crystal.starting_weapon
+        output = output + "\nStarting spell:   " + self.starting_crystal.starting_spell
         output = output + "\nStarting ability: " + self.starting_crystal.starting_ability
         output = output + "\n-----***************************-----\n"
         return output
@@ -259,5 +305,6 @@ class Conductor():
         patch = patch + self.starting_crystal_patch()
         patch = patch + self.RM.get_patch()
         patch = patch + self.SM.get_patch()
+        patch = patch + self.SPM.get_patch()
 
         return(spoiler, patch)

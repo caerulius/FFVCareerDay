@@ -50,10 +50,19 @@ class ShopPriceManager:
     def __init__(self, collectible_manager, data_manager):
         self.shopprices = [ShopPrice(x, collectible_manager, data_manager) for x in range(1, NUM_SHOP_PRICES)]
 
-    def print_patch(self):
+    def get_patch(self):
+        output = ';==========='
+        output = output + '\n;shop prices'
+        output = output + '\n;==========='
         for i in self.shopprices:
-            print(i.asar_output)
+            output = output + i.asar_output + '\n'
+        
+        return output
 
-    def print_spoiler(self):
+    def get_spoiler(self):
+        output = '-----SHOP PRICES-----\n'
         for i in self.shopprices:
-            print(i.short_output)
+            output = output + i.short_output + '\n'
+        output = output + '-----***********-----'
+
+        return output
