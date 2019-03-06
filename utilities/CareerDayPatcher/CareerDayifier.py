@@ -7,6 +7,8 @@ import sys
 import copy
 import random
 import subprocess
+import math
+import time
 
 writedirectory = os.getcwd()
 
@@ -46,10 +48,7 @@ if rand:
 else:
     seed = str(random.randint(1, 1000000))
 
-foldername = seed + "-ff5careerday"
-os.mkdir(foldername)
-
-OUTPUT_PATH = os.path.join(writedirectory, foldername)
+foldername =  seed + "-ff5careerday-" + str(math.floor(time.time()))
 
 
 print("=================================")
@@ -57,6 +56,11 @@ print("Intializing Career Day Patcher...")
 print("=================================\n")
 
 path_to_rom = easygui.fileopenbox("Select an FF5 rom")
+
+os.mkdir(foldername)
+
+OUTPUT_PATH = os.path.join(writedirectory, foldername)
+
 local_path = os.path.join(OUTPUT_PATH, "ffv-careerday.sfc")
 
 if path_to_rom == "" or path_to_rom == None:
