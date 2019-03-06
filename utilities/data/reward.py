@@ -5,13 +5,10 @@ import operator
 
 NUM_REWARDS = 314
 
-df_reward_table = pd.read_csv('tables/rewards.csv', dtype=str)
-df_reward_table['idx'] = df_reward_table['idx'].astype(int)
-
 class Reward:
-    def __init__(self, index, collectible_manager):
+    def __init__(self, index, collectible_manager, data_manager):
         self.idx = index
-        self.generate_from_df(df_reward_table)
+        self.generate_from_df(data_manager.files['rewards'])
         '''
         self.address (address of two byte value, id definition)
         self.type (crystal, esper, magic, etc)
@@ -43,8 +40,8 @@ class Reward:
         self.collectible = collectible
 
 class RewardManager:
-    def __init__(self, collectible_manager):
-        self.rewards = [Reward(x, collectible_manager) for x in range(1, NUM_REWARDS)]
+    def __init__(self, collectible_manager, data_manager):
+        self.rewards = [Reward(x, collectible_manager, data_manager) for x in range(1, NUM_REWARDS)]
 
     def get_random_reward(self, random_engine, area=None):
         if area is None:

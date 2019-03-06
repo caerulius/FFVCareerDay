@@ -3,6 +3,7 @@ import pandas as pd
 import random
 import operator
 
+from data_manager import *
 from collectible import *
 from reward import *
 from shop import *
@@ -14,11 +15,12 @@ DEFAULT_POWER_CHANGE = 2.0
 
 class Conductor():
     def __init__(self, random_engine):
-        self.CM = CollectibleManager()        #Set up collectibles. Includes Items, magic, crystals, and abilities
-        self.RM = RewardManager(self.CM)      #Set up rewards. Includes chests and events
-        self.SM = ShopManager(self.CM)        #Set up shops.
-        self.SPM = ShopPriceManager(self.CM)  #Set up shop prices
-        self.AM = AreaManager()               #Set up areas. Tule, The Void, etc
+        self.DM = DataManager()                        #Data manager loads all the csv's into memory and sets them up for processing
+        self.CM = CollectibleManager(self.DM)          #Set up collectibles (Includes Items, magic, crystals, and abilities)
+        self.RM = RewardManager(self.CM, self.DM)      #Set up rewards (Includes chests and events)
+        self.SM = ShopManager(self.CM, self.DM)        #Set up shops
+        self.SPM = ShopPriceManager(self.CM, self.DM)  #Set up shop prices
+        self.AM = AreaManager(self.DM)                 #Set up areas (Tule, The Void, etc)
         self.RE = random_engine
         
         self.difficulty = random.randint(1,10)
