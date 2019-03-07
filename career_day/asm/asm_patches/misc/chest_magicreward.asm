@@ -34,3 +34,10 @@ tax
 lda $06
 sep #$20
 JML $C08A96
+
+org $C08A98
+db $BF, $00, $78, $E7 ; $E77800
+
+org $E77800
+padbyte $FF
+pad $E78700

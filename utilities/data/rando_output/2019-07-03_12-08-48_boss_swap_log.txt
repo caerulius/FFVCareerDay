@@ -1,0 +1,331 @@
+Byblos (Rank 4) > Tyrasaurus (Rank 5)
+HP of first enemy in formations: 3600 > 5000
+Byblos HP: 5000
+Base EXP: 7590 > Adjusted EXP: 6100
+Rank delta: 1   Stat multiplier: 1.25
+-------------
+WingRaptor (Rank 1) > Byblos (Rank 4)
+HP of first enemy in formations: 250 > 3600
+WingRaptor HP: 3600
+WingRaptor HP: 3600
+Base EXP: 3930 > Adjusted EXP: 2200
+Rank delta: 3   Stat multiplier: 1.75
+-------------
+Karlabos (Rank 1) > Gargoyle (Rank 7)
+HP of first enemy in formations: 650 > 5000
+Karlabos HP: 10000
+Base EXP: 20880 > Adjusted EXP: 8400
+Rank delta: 6   Stat multiplier: 2.5
+-------------
+Siren (Rank 1) > Omniscient (Rank 8)
+HP of first enemy in formations: 900 > 16999
+Siren HP: 16999
+Siren HP: 16999
+Base EXP: 31308 > Adjusted EXP: 11400
+Rank delta: 7   Stat multiplier: 2.75
+-------------
+Forza (Rank 1) > Siren (Rank 1)
+HP of first enemy in formations: 850 > 900
+Forza HP: 450
+Magisa HP: 450
+Base EXP: 300 > Adjusted EXP: 300
+Rank delta: 0   Stat multiplier: 1.0
+-------------
+Galura (Rank 2) > Gilgamesh (Rank 6)
+HP of first enemy in formations: 1200 > 8888
+Galura HP: 17776
+Base EXP: 13104 > Adjusted EXP: 6600
+Rank delta: 4   Stat multiplier: 2.0
+-------------
+LiquiFlame (Rank 2) > Gilgamesh (Rank 5)
+HP of first enemy in formations: 3000 > 6500
+LiquiFlame HP: 6500
+LiquiFlame HP: 6500
+LiquiFlame HP: 6500
+Base EXP: 7590 > Adjusted EXP: 4300
+Rank delta: 3   Stat multiplier: 1.75
+-------------
+Sergeant (Rank 2) > Gogo (Rank 5)
+HP of first enemy in formations: 1000 > 47714
+Sergeant HP: 47714
+Karnak HP: 14314
+Karnak HP: 14314
+Karnak HP: 14314
+Iron Claw HP: 47714
+Base EXP: 7590 > Adjusted EXP: 4300
+Rank delta: 3   Stat multiplier: 1.75
+-------------
+Hole (Rank 3) > Carbunkle (Rank 7)
+HP of first enemy in formations: 3000 > 15000
+Hole HP: 15000
+Hole HP: 15000
+Hole HP: 15000
+Sandworm HP: 15000
+Sandworm HP: 15000
+Sandworm HP: 15000
+Hole HP: 15000
+Base EXP: 20880 > Adjusted EXP: 10400
+Rank delta: 4   Stat multiplier: 2.0
+-------------
+AdamanTiMi (Rank 3) > Bahamut (Rank 9)
+HP of first enemy in formations: 2000 > 40000
+AdamanTiMi HP: 40000
+Base EXP: 44796 > Adjusted EXP: 17900
+Rank delta: 6   Stat multiplier: 2.5
+-------------
+Sol Cannon (Rank 4) > Shiva (Rank 3)
+HP of first enemy in formations: 22500 > 1500
+Sol Cannon HP: 1500
+Launcher HP: 750
+Launcher HP: 750
+Base EXP: 1734 > Adjusted EXP: 2200
+Rank delta: -1   Stat multiplier: 0.8
+-------------
+ArchaeAvis (Rank 4) > Leviathan (Rank 8)
+HP of first enemy in formations: 1600 > 40000
+ArchaeAvis HP: 40000
+ArchaeAvis HP: 40000
+ArchaeAvis HP: 40000
+ArchaeAvis HP: 40000
+ArchaeAvis HP: 40000
+Base EXP: 31308 > Adjusted EXP: 15700
+Rank delta: 4   Stat multiplier: 2.0
+-------------
+Chim.Brain (Rank 5) > LiquiFlame (Rank 2)
+HP of first enemy in formations: 3300 > 3000
+Chim.Brain HP: 3000
+Base EXP: 606 > Adjusted EXP: 1100
+Rank delta: -3   Stat multiplier: 0.57
+-------------
+Titan (Rank 5) > Crayclaw (Rank 4)
+HP of first enemy in formations: 2500 > 2000
+Titan HP: 2000
+Base EXP: 3930 > Adjusted EXP: 4900
+Rank delta: -1   Stat multiplier: 0.8
+-------------
+Puroboros (Rank 5) > Gilgamesh (Rank 5)
+HP of first enemy in formations: 1500 > 11500
+Puroboros HP: 1917
+Puroboros HP: 1917
+Puroboros HP: 1917
+Puroboros HP: 1917
+Puroboros HP: 1917
+Puroboros HP: 1917
+Base EXP: 7590 > Adjusted EXP: 7600
+Rank delta: 0   Stat multiplier: 1.0
+-------------
+Gilgamesh (Rank 5) > Ifrit (Rank 4)
+HP of first enemy in formations: 11500 > 3000
+Gilgamesh HP: 3000
+Base EXP: 3930 > Adjusted EXP: 4900
+Rank delta: -1   Stat multiplier: 0.8
+-------------
+Gilgamesh (Rank 5) > Stalker (Rank 8)
+HP of first enemy in formations: 6500 > 20000
+Gilgamesh HP: 20000
+Base EXP: 31308 > Adjusted EXP: 17900
+Rank delta: 3   Stat multiplier: 1.75
+-------------
+Tyrasaurus (Rank 5) > Sergeant (Rank 2)
+HP of first enemy in formations: 5000 > 1000
+Tyrasaurus HP: 1000
+Base EXP: 606 > Adjusted EXP: 1100
+Rank delta: -3   Stat multiplier: 0.57
+-------------
+Abductor (Rank 6) > Puroboros (Rank 5)
+HP of first enemy in formations: 2500 > 1500
+Abductor HP: 1500
+Base EXP: 7590 > Adjusted EXP: 9500
+Rank delta: -1   Stat multiplier: 0.8
+-------------
+HiryuuPlant (Rank 6) > Necrofobia (Rank 10)
+HP of first enemy in formations: 12000 > 44044
+HiryuuPlant HP: 44044
+HiryuuFlowr HP: 3277
+HiryuuFlowr HP: 3277
+HiryuuFlowr HP: 3277
+HiryuuFlowr HP: 3277
+HiryuuFlowr HP: 3277
+Base EXP: 61734 > Adjusted EXP: 30900
+Rank delta: 4   Stat multiplier: 2.0
+-------------
+Gilgamesh (Rank 6) > Triton (Rank 9)
+HP of first enemy in formations: 8888 > 13333
+Gilgamesh HP: 20000
+Enkidou HP: 20000
+Base EXP: 44796 > Adjusted EXP: 25600
+Rank delta: 3   Stat multiplier: 1.75
+-------------
+Atmos (Rank 7) > Abductor (Rank 6)
+HP of first enemy in formations: 19997 > 2500
+Atmos HP: 2500
+Base EXP: 13104 > Adjusted EXP: 16400
+Rank delta: -1   Stat multiplier: 0.8
+-------------
+Guardian (Rank 8) > Forza (Rank 1)
+HP of first enemy in formations: 7777 > 850
+Guardian HP: 212
+Guardian HP: 212
+Guardian HP: 212
+Guardian HP: 212
+Base EXP: 300 > Adjusted EXP: 800
+Rank delta: -7   Stat multiplier: 0.36
+-------------
+Carbunkle (Rank 7) > Apocalypse (Rank 8)
+HP of first enemy in formations: 15000 > 27900
+Carbunkle HP: 27900
+Carbunkle HP: 27900
+Base EXP: 31308 > Adjusted EXP: 25000
+Rank delta: 1   Stat multiplier: 1.25
+-------------
+Gilgamesh (Rank 7) > Minotauros (Rank 8)
+HP of first enemy in formations: 55000 > 19850
+Gilgamesh HP: 19850
+Gilgamesh HP: 19850
+Base EXP: 31308 > Adjusted EXP: 25000
+Rank delta: 1   Stat multiplier: 1.25
+-------------
+Antlion (Rank 5) > ArchaeAvis (Rank 4)
+HP of first enemy in formations: 8100 > 1600
+Antlion HP: 1600
+Base EXP: 3930 > Adjusted EXP: 4900
+Rank delta: -1   Stat multiplier: 0.8
+-------------
+Halicarnaso (Rank 9) > Twin Tania (Rank 10)
+HP of first enemy in formations: 33333 > 50000
+Halicarnaso HP: 50000
+Base EXP: 61734 > Adjusted EXP: 49400
+Rank delta: 1   Stat multiplier: 1.25
+-------------
+Merugene (Rank 8) > Galura (Rank 2)
+HP of first enemy in formations: 20000 > 1200
+Merugene HP: 1200
+Merugene HP: 1200
+Merugene HP: 1200
+Merugene HP: 1200
+Base EXP: 606 > Adjusted EXP: 1500
+Rank delta: -6   Stat multiplier: 0.4
+-------------
+Odin (Rank 9) > Titan (Rank 5)
+HP of first enemy in formations: 17000 > 2500
+Odin HP: 2500
+Base EXP: 7590 > Adjusted EXP: 15200
+Rank delta: -4   Stat multiplier: 0.5
+-------------
+Gargoyle (Rank 7) > Antlion (Rank 5)
+HP of first enemy in formations: 5000 > 8100
+Gargoyle HP: 4050
+Gargoyle HP: 4050
+Base EXP: 7590 > Adjusted EXP: 11300
+Rank delta: -2   Stat multiplier: 0.67
+-------------
+Triton (Rank 9) > Odin (Rank 9)
+HP of first enemy in formations: 13333 > 17000
+Triton HP: 5667
+Neregeid HP: 5667
+Phobos HP: 5667
+Base EXP: 44796 > Adjusted EXP: 44800
+Rank delta: 0   Stat multiplier: 1.0
+-------------
+Omniscient (Rank 8) > Merugene (Rank 8)
+HP of first enemy in formations: 16999 > 20000
+Omniscient HP: 20000
+Base EXP: 31308 > Adjusted EXP: 31300
+Rank delta: 0   Stat multiplier: 1.0
+-------------
+Minotauros (Rank 8) > Atmos (Rank 7)
+HP of first enemy in formations: 19850 > 19997
+Minotauros HP: 19997
+Base EXP: 20880 > Adjusted EXP: 26100
+Rank delta: -1   Stat multiplier: 0.8
+-------------
+Leviathan (Rank 8) > AdamanTiMi (Rank 3)
+HP of first enemy in formations: 40000 > 2000
+Leviathan HP: 2000
+Base EXP: 1734 > Adjusted EXP: 3900
+Rank delta: -5   Stat multiplier: 0.44
+-------------
+Stalker (Rank 8) > Hole (Rank 3)
+HP of first enemy in formations: 20000 > 3000
+Stalker HP: 3000
+Stalker HP: 3000
+Stalker HP: 3000
+Stalker HP: 3000
+Base EXP: 1734 > Adjusted EXP: 3900
+Rank delta: -5   Stat multiplier: 0.44
+-------------
+Gogo (Rank 5) > Guardian (Rank 8)
+HP of first enemy in formations: 47714 > 7777
+Gogo HP: 31108
+Base EXP: 31308 > Adjusted EXP: 17900
+Rank delta: 3   Stat multiplier: 1.75
+-------------
+Bahamut (Rank 9) > WingRaptor (Rank 1)
+HP of first enemy in formations: 40000 > 250
+Bahamut HP: 250
+Base EXP: 300 > Adjusted EXP: 900
+Rank delta: -8   Stat multiplier: 0.33
+-------------
+Ifrit (Rank 4) > Gilgamesh (Rank 7)
+HP of first enemy in formations: 3000 > 55000
+Ifrit HP: 55000
+Base EXP: 20880 > Adjusted EXP: 11900
+Rank delta: 3   Stat multiplier: 1.75
+-------------
+Shiva (Rank 3) > Catastroph (Rank 9)
+HP of first enemy in formations: 1500 > 19997
+Shiva HP: 19997
+Commander HP: 7999
+Commander HP: 7999
+Commander HP: 7999
+Base EXP: 44796 > Adjusted EXP: 17900
+Rank delta: 6   Stat multiplier: 2.5
+-------------
+Calofisteri (Rank 8) > Apanda (Rank 9)
+HP of first enemy in formations: 18000 > 22200
+Calofisteri HP: 22200
+Base EXP: 44796 > Adjusted EXP: 35800
+Rank delta: 1   Stat multiplier: 1.25
+-------------
+Apocalypse (Rank 8) > Sol Cannon (Rank 4)
+HP of first enemy in formations: 27900 > 22500
+Apocalypse HP: 22500
+Base EXP: 3930 > Adjusted EXP: 7900
+Rank delta: -4   Stat multiplier: 0.5
+-------------
+Catastroph (Rank 9) > Karlabos (Rank 1)
+HP of first enemy in formations: 19997 > 650
+Catastroph HP: 650
+Base EXP: 300 > Adjusted EXP: 900
+Rank delta: -8   Stat multiplier: 0.33
+-------------
+Necrofobia (Rank 10) > Calofisteri (Rank 8)
+HP of first enemy in formations: 44044 > 18000
+Necrofobia HP: 18000
+Barrier HP: 3600
+Barrier HP: 3600
+Barrier HP: 3600
+Barrier HP: 3600
+Gilgamesh HP: 55000
+Base EXP: 31308 > Adjusted EXP: 46700
+Rank delta: -2   Stat multiplier: 0.67
+-------------
+Twin Tania (Rank 10) > Chim.Brain (Rank 5)
+HP of first enemy in formations: 50000 > 3300
+Twin Tania HP: 3300
+Twin Tania HP: 3300
+Base EXP: 7590 > Adjusted EXP: 17200
+Rank delta: -5   Stat multiplier: 0.44
+-------------
+Apanda (Rank 9) > HiryuuPlant (Rank 6)
+HP of first enemy in formations: 22200 > 12000
+Apanda HP: 12000
+Base EXP: 13104 > Adjusted EXP: 23000
+Rank delta: -3   Stat multiplier: 0.57
+-------------
+Crayclaw (Rank 4) > Halicarnaso (Rank 9)
+HP of first enemy in formations: 2000 > 33333
+Crayclaw HP: 33333
+Base EXP: 44796 > Adjusted EXP: 19900
+Rank delta: 5   Stat multiplier: 2.25
+-------------

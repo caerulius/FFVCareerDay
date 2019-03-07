@@ -61,3 +61,21 @@ class ShopPriceManager:
     def print_spoiler(self):
         for i in self.shopprices:
             print(i.short_output)
+
+    def get_patch(self):
+        output = ";====="
+        output = output + "\n;shop prices"
+        output = output + "\n;=====\n"
+        for i in [x for x in self.shopprices if "<" not in x.content_name]:
+            output = output + i.asar_output + "\n"
+        output = output + "\n"
+
+        return output
+
+    def get_spoiler(self):
+        output = "-----SHOP PRICES-----\n"
+        for i in [x for x in self.shopprices if "<" not in x.content_name]:
+            output = output + i.short_output + "\n"
+        output = output + "-----*****-----\n"
+
+        return output

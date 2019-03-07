@@ -3,16 +3,10 @@
 ; randomizer testing
 incsrc r-patch.asm
 incsrc boss-patch.asm
+; incsrc balancing/boss_balancing.asm
 
 ; init
 incsrc misc/init.asm
-
-; text tables
-incsrc text_tables/ability_shop_table.asm
-incsrc text_tables/ability_chest_table.asm
-incsrc text_tables/job_shop_table.asm
-incsrc text_tables/job_chest_table.asm
-incsrc text_tables/magic_chest_table.asm
 
 
 
@@ -35,6 +29,7 @@ incsrc world1/boko_resting.asm
 incsrc world1/leaving_zokks_house_early.asm
 
 incsrc world1/wind_shrine_chancellor.asm
+incsrc world1/wing_raptor.asm           
 incsrc world1/wind_crystal.asm
 incsrc world1/leaving_wind_shrine.asm                ; 03 Tule
 
@@ -229,3 +224,11 @@ incsrc open_world/world3_to_world2_warp.asm
 incsrc open_world/pyramid_disable.asm
 
 incsrc world2/mooglewaterway_encounters.asm
+
+
+; text tables
+incsrc text_tables/ability_shop_table.asm
+incsrc text_tables/ability_chest_table.asm
+incsrc text_tables/job_shop_table.asm
+incsrc text_tables/job_chest_table.asm
+incsrc text_tables/magic_chest_table.asm
