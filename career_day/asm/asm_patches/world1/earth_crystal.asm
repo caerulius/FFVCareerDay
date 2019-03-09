@@ -97,7 +97,7 @@ db $C2, $02                     ;Map 02
 db $E1, $00, $00, $40, $A2, $D8 ;Return from cutscene? 00 00 40 A2 D8
 db $CD, $7F, $05                ;Run event index 057F
 db $CD, $42, $07                ;Run event index 0742
-db $B7, $82                     ;Add/Remove character 82
+; db $B7, $82                     ;Add/Remove character 82
 db $DB                          ;Restore Player status
 db $09                          ;Player Show
 db $C3, $10                     ;Fade in Speed 10

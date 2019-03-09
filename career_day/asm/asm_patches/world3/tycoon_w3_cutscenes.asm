@@ -19,9 +19,9 @@ db $CA, $17, $01                ;Set Flag 2/3/4/5/17 01
 db $CA, $18, $01                ;Set Flag 2/3/4/5/18 01
 db $CB, $0E, $01                ;Clear Flag 2/3/4/5/0E 01
 db $CA, $0E, $01                ;Set Flag 2/3/4/5/0E 01
-db $B7, $89                     ;Add/Remove character 89
-db $B7, $8B                     ;Add/Remove character 8B
-db $B7, $8C                     ;Add/Remove character 8C
+; db $B7, $89                     ;Add/Remove character 89
+; db $B7, $8B                     ;Add/Remove character 8B
+; db $B7, $8C                     ;Add/Remove character 8C
 db $CB, $0C, $00                ;Clear Flag 2/3/4/5/0C 00
 db $CB, $0D, $00                ;Clear Flag 2/3/4/5/0D 00
 db $CB, $CF, $02                ;Clear Flag 2/3/4/5/CF 02
@@ -69,7 +69,7 @@ db $02                          ;Player Move Right
 db $92, $0A                     ;Sprite 192 do event: Hide
 db $DB                          ;Restore Player status
 db $CB, $0E, $01                ;Clear Flag 2/3/4/5/0E 01
-db $B7, $0C                     ;Add/Remove character 0C
+; db $B7, $0C                     ;Add/Remove character 0C
 db $A2, $7A                     ;Set Event Flag 07A
 db $CA, $0D, $01                ;Set Flag 2/3/4/5/0D 01
 

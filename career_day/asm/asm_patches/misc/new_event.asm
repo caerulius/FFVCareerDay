@@ -215,6 +215,24 @@ STA $0551
 STA $05A1
 STA $05F1
 
+; set characters to have correct starting ability
+; A is still job ID from E79F00
+; I'm dumb and this was already loaded into area E79F03 per the randomizer
+; TAX
+; LDA $F80800, x
+; STA $0517
+; STA $0567
+; STA $05B7
+; STA $0607
+
+; Do it with E79F03
+LDA $E79F03
+STA $0517
+STA $0567
+STA $05B7
+STA $0607
+
+
 ; for the weapon code, if monk, need to set both hands correctly
 CMP #$01
 BEQ SetMonkWeapons

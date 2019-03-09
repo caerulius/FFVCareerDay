@@ -18,8 +18,8 @@ db $FF                          ;End Event
 pad $C9B05F
 
 
-; disable npcs for machinehead
+; disable npcs for machinehead/mummy
 
 org $CE93A7
 
-pad $CE9403
+pad $CE941E

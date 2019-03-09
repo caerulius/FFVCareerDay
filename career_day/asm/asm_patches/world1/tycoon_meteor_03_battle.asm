@@ -55,7 +55,7 @@ db $A4, $32                     ;Set Event Flag 132
 db $A5, $FF                     ;Clear Event Flag 1FF
 db $86, $09                     ;Sprite 086 do event: Show
 db $CA, $32, $00                ;Set Flag 2/3/4/5/32 00
-db $B7, $09                     ;Add/Remove character 09
+;db $B7, $09                     ;Add/Remove character 09
 db $A4, $C7                     ;Set Event Flag 1C7
 db $FF                          ;End Event
 

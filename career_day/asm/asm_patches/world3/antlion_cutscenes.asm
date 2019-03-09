@@ -151,7 +151,7 @@ db $73                          ;Long pause
 db $A2, $7F                     ;Set Event Flag 07F
 db $CB, $18, $01                ;Clear Flag 2/3/4/5/18 01
 db $CA, $0D, $00                ;Set Flag 2/3/4/5/0D 00
-db $B7, $0B                     ;Add/Remove character 0B
+;db $B7, $0B                     ;Add/Remove character 0B
 db $FF                          ;End Event
 
 padbyte $00

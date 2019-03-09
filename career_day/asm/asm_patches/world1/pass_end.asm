@@ -20,8 +20,8 @@ db $01								;Player Move Up
 db $D0, $80, $80					;(Music) 80 80
 db $C4, $02							;Fade out Speed 03
 db $75              				;Wait a long time
-db $B7, $02							;Add/Remove character 02
-db $B7, $09							;Add/Remove character 09
+;db $B7, $02							;Add/Remove character 02
+;db $B7, $09							;Add/Remove character 09
 db $A4, $C7							;Set Event Flag 1C7
 db $A4, $E1         				;Set Event Flag 1E1
 db $A2, $11							;Set Event Flag 011

@@ -30,7 +30,7 @@ db $84, $0A			;Sprite 084 do event: Hide
 db $A2, $10			;Set Event Flag 010
 db $CB, $32, $00		;Clear Flag 2/3/4/5/32 00
 db $CD, $42, $07		;Run event index 0742
-db $B7, $89			;Add/Remove character 89
+; db $B7, $89			;Add/Remove character 89
 db $A5, $C7			;Clear Event Flag 1C7
 db $CD, $7F, $05		;Run event index 057F
 db $A5, $FE			;Clear Event Flag 1FE

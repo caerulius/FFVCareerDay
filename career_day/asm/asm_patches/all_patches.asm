@@ -226,6 +226,9 @@ incsrc open_world/pyramid_disable.asm
 incsrc world2/mooglewaterway_encounters.asm
 
 
+; misc tables
+incsrc text_tables/starting_job_ability.asm
+
 ; text tables
 incsrc text_tables/ability_shop_table.asm
 incsrc text_tables/ability_chest_table.asm

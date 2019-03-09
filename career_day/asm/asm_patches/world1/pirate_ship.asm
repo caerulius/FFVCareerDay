@@ -14,7 +14,7 @@ db $01				;Player Move Up
 db $71				;Short pause
 db $C3, $08			;Fade in Speed 08
 db $75				;Extremely long pause
-db $B7, $0B			;Add/Remove character 0B
+;db $B7, $0B			;Add/Remove character 0B
 db $A4, $C6			;Set Event Flag 1C6
 db $CB, $34, $00		;Clear Flag 2/3/4/5/34 00
 db $CB, $36, $00		;Clear Flag 2/3/4/5/36 00

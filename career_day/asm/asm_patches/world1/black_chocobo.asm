@@ -35,9 +35,9 @@ else
 	db $CD, $96, $03					;Run event index 0396
 endif
 
-db $B7, $02								;Add/Remove character 02
-db $B7, $09								;Add/Remove character 09
-db $B7, $0B								;Add/Remove character 0B
+;db $B7, $02								;Add/Remove character 02
+;db $B7, $09								;Add/Remove character 09
+;db $B7, $0B								;Add/Remove character 0B
 db $CA, $FD, $01						;Set Flag 2/3/4/5/FD 01
 db $A2, $3A								;Set Event Flag 03A
 db $CC, $10                  			;Custom destination flag 10

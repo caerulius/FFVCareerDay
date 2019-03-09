@@ -16,6 +16,14 @@ db $15
 org $CE992B
 db $04
 
+
+; SYLDRA
+; Change Syldra's event to be tied to $A2, $11  ($7E0A16 bit 02), which is 
+; Early game Pirate cave access. Could be a quasi-key item later 
+org $D8EC45
+db $11
+
+
 ; MUA FOREST
 ; Change checked flag from event code $A2, $71 to $A2, $72 ($000A22 bit 04 instead of 02)
 ; The reason for this is that $A22 bit 02 is connected to both guido and mua forest
@@ -41,3 +49,21 @@ db $2C                     ;Refer to event code [$A4, $2C]
 
 org $D8F632
 db $10
+
+
+; FORK TOWER
+; Galuf in party causes problems. Temporarily setting access after Mua forest boss → getting Cara
+; Bit 80 at address 0x7e0a4b
+
+org $D8F85A
+db $BF
+
+
+; ANTLION
+; Moved antlion's area tile up 1 into the river.
+; This makes it so the player can only access as Boco, which avoids the regular situation forcing the player
+; to be on Boco by walking on the world map (instead of accessing with Boco like vanilla)
+org $CE2869 ; this changes tile
+db $57
+org $C8B218 ; this changes leaving cutscene to place Boco one tile right of this 
+db $7A

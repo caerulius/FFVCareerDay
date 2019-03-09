@@ -113,9 +113,9 @@ db $80, $01                     ;Sprite 080 do event Move Up
 db $81, $0A                     ;Sprite 081 do event Hide
 db $89, $0A                     ;Sprite 089 do event Hide
 db $80, $0A                     ;Sprite 080 do event Hide
-db $B7, $00                     ;Add/Remove character 00
-db $B7, $09                     ;Add/Remove character 09
-db $B7, $0B                     ;Add/Remove character 0B
+;db $B7, $00                     ;Add/Remove character 00
+;db $B7, $09                     ;Add/Remove character 09
+;db $B7, $0B                     ;Add/Remove character 0B
 db $DB                          ;Restore Player status
 db $CB, $15, $03                ;Clear Flag 2/3/4/5/15 03
 db $CB, $16, $03                ;Clear Flag 2/3/4/5/16 03

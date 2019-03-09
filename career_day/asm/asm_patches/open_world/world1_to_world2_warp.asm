@@ -18,6 +18,9 @@ db $D2, $01, $4B, $6E, $6C ; hiryuu
 db $D2, $01, $4C, $73, $90 ; submarine
 db $D2, $01, $4D, $6F, $D8 ; airship ???
 
+; Lonka ruin de-access
+db $A5, $FA            ; set address 000A53 bit OFF 04
+
 db $14
 db $C3, $03
 db $74
