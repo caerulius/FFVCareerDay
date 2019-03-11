@@ -95,14 +95,27 @@ class Ability(Collectible):
     def patch_id(self):
         return self.progression_id
 
+class Gil(Collectible):
+    reward_type = ""
+    def __init__(self, gil_id, data_row):
+        self.reward_type = data_row['power_byte']
+        super().__init__(data_row['number_byte'], str(data_row['readable_amount']) + " gil",
+                         int(data_row['value']), [], data_row['max_count'], valid = True)
+
+    @property
+    def patch_id(self):
+        return self.reward_id
+
 class CollectibleManager():
     def __init__(self, data_manager):
         items = [Item(x, data_manager.files['items'].loc[x]) for x in data_manager.files['items'].index.values]
         magics = [Magic(x, data_manager.files['magics'].loc[x]) for x in data_manager.files['magics'].index.values]
         crystals = [Crystal(x, data_manager.files['crystals'].loc[x]) for x in data_manager.files['crystals'].index.values]
         abilities = [Ability(x, data_manager.files['abilities'].loc[x]) for x in data_manager.files['abilities'].index.values]
-        self.collectibles = items + magics + crystals + abilities
+        gil = [Gil(x, data_manager.files['gil'].loc[x]) for x in data_manager.files['gil'].index.values]
+        self.collectibles = items + magics + crystals + abilities + gil
         self.placement_history = {}
+        self.placed_gil_rewards = []
 
     def get_by_name(self, name):
         best_match = None
@@ -124,9 +137,14 @@ class CollectibleManager():
 
     def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None):
         if of_type is not None:
-            working_list = [x for x in self.get_all_of_type(of_type) if x.valid]
+            working_list = [x for x in self.get_all_of_type(of_type) if x.valid] #this will be a shop
         else:
-            working_list = [x for x in self.collectibles if x.valid]
+            if len(self.placed_gil_rewards) < len([x for x in self.get_all_of_type(Gil)]): #first, place all our gil rewards
+                choice = random.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards])
+                self.placed_gil_rewards.append(choice)
+                return choice
+
+            working_list = [x for x in self.collectibles if x.valid] #this will be a non shop
             
         if monitor_counts is True:
             working_list = [y for y in [x for x in working_list if
@@ -173,3 +191,4 @@ class CollectibleManager():
             
     def reset_placement_history(self):
         self.placement_history = {}
+

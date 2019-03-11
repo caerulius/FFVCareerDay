@@ -163,10 +163,6 @@ class Conductor():
             kind = random.choices(["item", "magic", "crystal"],
                                   [item_chance, magic_chance, crystal_chance])[0]
 
-            #print("shop: " + value.readable_name)
-            #print("new kind: " + kind)
-            #print("starting quantity: " + str(value.num_items))
-
             item_mod = random.choices([  2,  1,  0, -1,  -2],
                                       [.05, .1, .7, .1, .05])[0]
             value.num_items = value.num_items + item_mod
@@ -186,9 +182,13 @@ class Conductor():
                 crystal_chance = crystal_chance + .05
                 value.shop_type = "03" #shop type: item
                 for i in range(0, value.num_items):
-                    item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
-                                                                   monitor_counts=True,
-                                                                   of_type=Item)
+                    while True:
+                        item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
+                                                                       monitor_counts=True,
+                                                                       of_type=Item)
+                        if item_to_place not in contents:
+                            break
+
                     if item_to_place.reward_id in required_items.keys():
                         required_items[item_to_place.reward_id] = True
                     contents.append(item_to_place)
@@ -203,9 +203,15 @@ class Conductor():
                 value.shop_type = "00" #shop type: magic
                 try:
                     for i in range(0, value.num_items):
-                        contents.append(self.CM.get_random_collectible(random, respect_weight=True,
-                                                                       monitor_counts=True,
-                                                                       of_type=Magic))
+                        while True:
+                            item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
+                                                                           monitor_counts=True,
+                                                                           of_type=Magic)
+                            if item_to_place not in contents:
+                                break
+
+                        contents.append(item_to_place)
+                        
                 except Exception as e:
                     contents = []
                     value.shop_type = "03"
@@ -224,9 +230,14 @@ class Conductor():
                 value.shop_type = "07" #shop type: crystal/ability
                 try:
                     for i in range(0, value.num_items):
-                        contents.append(self.CM.get_random_collectible(random, respect_weight=True,
-                                                                       monitor_counts=True,
-                                                                       of_type=(Crystal, Ability)))
+                        while True:
+                            item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
+                                                                           monitor_counts=True,
+                                                                           of_type=(Crystal, Ability))
+                            if item_to_place not in contents:
+                                break
+
+                        contents.append(item_to_place)
                 except Exception as e:
                     contents = []
                     value.shop_type = "03"
@@ -293,7 +304,9 @@ class Conductor():
             random_engine = self.RE
         
         self.AM.change_power_level(DEFAULT_POWER_CHANGE)
+        print("Randomizing rewards...")
         self.randomize_rewards_by_areas()
+        print("Randomizing shops...")
         self.randomize_shops()
 
         spoiler = ""

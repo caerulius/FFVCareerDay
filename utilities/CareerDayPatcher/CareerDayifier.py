@@ -187,7 +187,6 @@ if unheader:
     print("Header removed")
 
 if rand:
-    print("just checkin")
     main_path = MAIN_RANDO_PATH
 else:
     main_path = MAIN_PATH
