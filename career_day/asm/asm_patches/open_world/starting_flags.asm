@@ -1,12 +1,17 @@
 ; this is a continuation of the intro cutscene code. This will mass update flags and set other coordinates. 
 ; this is EVENT code that is set in the middle of the intro cutscene. 
 
+
+    
+    
 ; all 3 world 1 chars
 
 db $B7, $02							;Add/Remove character 02
 db $B7, $09							;Add/Remove character 09
 db $B7, $03							;Add/Remove character 09
 
+; add WarpShard
+db $AA, $EE                     ;Add Item Potion
 
 ; world map
 db $A4, $FB            ; set address 000A53 bit ON 08
@@ -24,15 +29,12 @@ db $A4, $FB            ; set address 000A53 bit ON 08
 db $A4, $32                     ;Set Event Flag 132
 db $A5, $FF                     ;Clear Event Flag 1FF
 db $CA, $32, $00                ;Set Flag 2/3/4/5/32 00
-db $A4, $C7                     ;Set Event Flag 1C7
 db $A2, $10			;Set Event Flag 010
 db $CB, $32, $00		;Clear Flag 2/3/4/5/32 00
-db $A5, $C7			;Clear Event Flag 1C7
 db $A5, $FE			;Clear Event Flag 1FE
 
 
 ; set flags for pirates cave spawning on world map, and pass being completed
-db $A4, $C7							;Set Event Flag 1C7
 db $A4, $E1         				;Set Event Flag 1E1
 db $A2, $11							;Set Event Flag 011
 db $A4, $FF							;Set Event Flag 1FF
@@ -48,7 +50,6 @@ db $A4, $1B            ; set address 000A37 bit ON 08
 db $A4, $1A            ; set address 000A37 bit ON 04
 db $A4, $23            ; set address 000A38 bit ON 08
 db $A4, $33            ; set address 000A3A bit ON 08
-db $A4, $C6            ; set address 000A4C bit ON 40
 db $A5, $FF            ; set address 000A53 bit OFF 80
 db $A5, $FE            ; set address 000A53 bit OFF 40
 db $CB, $37, $00            ; set address 000A5A bit OFF 80
@@ -74,8 +75,10 @@ db $A4, $4C            ; set address 000A3D bit ON 10
 
 ; Access gate
 ; 000A18 set bits 10 and 20 (10 sets a cutscene triggered, both together unlock torna gate)
-db $A2, $1C            ; set address 000A17 bit ON 10
-db $A2, $1D            ; set address 000A17 bit ON 20
+if !allareasaccessible == 0
+    db $A2, $1C            ; set address 000A17 bit ON 10
+    db $A2, $1D            ; set address 000A17 bit ON 20
+endif
 
 
 
@@ -85,17 +88,32 @@ db $A2, $1D            ; set address 000A17 bit ON 20
 
 ; immediate set cutscene triggered 
 db $A4, $E2            ; set address 000A50 bit ON 04
-db $CA, $9F, $00            ; set address 000A67 bit ON 80
-db $CB, $9E, $00            ; set address 000A67 bit OFF 40
-db $CB, $9D, $00            ; set address 000A67 bit OFF 20
-db $CA, $A0, $00            ; set address 000A68 bit ON 01
+
+if !allareasaccessible == 0
+    ; Guard removed except main blocking guard
+    db $CA, $9D, $00            ; set address 000A67 bit ON 20
+    db $CB, $A0, $00            ; set address 000A68 bit OFF 01
+    db $CB, $9B, $00            ; set address 000A67 bit OFF 20
+    db $CA, $9E, $00            ; set address 000A67 bit ON 40
+endif
 
 
 
 ; KARNAK START:
 
-; db $A2, $A4                 ;Set Event Flag 0A4
-; db $A2, $2A                 ;Set Event Flag 02A
+; Set all events from Cid Cell
+db $A2, $2D				;Set Event Flag 02D
+db $CB, $69, $01		;Clear Flag 2/3/4/5/69 01
+db $CA, $6A, $01		;Set Flag 2/3/4/5/6A 01
+db $CB, $53, $01		;Clear Flag 2/3/4/5/53 01
+db $CB, $72, $01		;Clear Flag 2/3/4/5/72 01
+db $CA, $73, $01		;Set Flag 2/3/4/5/73 01
+db $CA, $74, $01		;Set Flag 2/3/4/5/74 01
+db $CA, $75, $01		;Set Flag 2/3/4/5/75 01
+db $CA, $76, $01		;Set Flag 2/3/4/5/76 01
+db $CB, $56, $01		;Clear Flag 2/3/4/5/56 01
+db $CA, $52, $01			;Set Flag 2/3/4/5/52 01
+db $A2, $2E					;Set Event Flag 02E
 
 
 ; ANCIENT LIBRARY
@@ -263,7 +281,6 @@ db $CA, $2A, $00                ;Turn on bit 04 at address  0x7e0a59
 
 ; HIRYUU VALLEY
 db $CB, $D3, $02                ;Clear Flag 2/3/4/5/D3 02
-db $A4, $C4                     ;Set Event Flag 1C4
 
 
 ; GUIDO ISLAND
@@ -287,7 +304,6 @@ db $CB, $D8, $00            ; set address 000A6F bit OFF 01
 ; GUIDO CAVE
 ; award branch, trigger discussion flag
 ; db $A2, $71                     ;Set Event Flag 071
-; db $A4, $CF                     ;Set Event Flag 1CF (awards actual key item in Key area )
 
 ; MUA FOREST
 ; Mua's event was changed to refer to this. Refer to open_world.asm for explanation
@@ -301,7 +317,6 @@ db $A4, $25                     ;Set Event Flag 125
 db $CB, $0E, $00                ;Clear Flag 2/3/4/5/0E 00
 db $CA, $0F, $00                ;Set Flag 2/3/4/5/0F 00
 db $CB, $1A, $03                ;Clear Flag 2/3/4/5/1A 03
-db $A4, $BF                     ;Set Event Flag 1BF
 db $CB, $44, $02                ;Clear Flag 2/3/4/5/44 02
 db $CB, $45, $02                ;Clear Flag 2/3/4/5/45 02
 db $CB, $46, $02                ;Clear Flag 2/3/4/5/46 02
@@ -368,11 +383,8 @@ db $A4, $7E            ; set address 000A43 bit ON 40
 db $A4, $F5                     ;Turn on bit 20 at address 0x7e0a52
 db $CB, $30, $03                ;Turn off bit 01 at address  0x7e0aba
 db $CB, $17, $01                ;Turn off bit 80 at address  0x7e0a76
-db $A5, $C8                     ;Turn off bit 01 at address 0x7e0a4d
 db $A2, $80                     ;Turn on bit 01 at address 0x7e0a24
 db $A4, $7F                     ;Turn on bit 80 at address 0x7e0a43
-db $A4, $CE                     ;Turn on bit 40 at address 0x7e0a4d
-db $A5, $C8                     ;Turn off bit 01 at address 0x7e0a4d
 db $CA, $98, $03                ;Turn on bit 01 at address  0x7e0ac7
 db $A4, $50                     ;Turn on bit 01 at address 0x7e0a3e
 
@@ -401,7 +413,6 @@ db $A2, $5C                     ;Turn on bit 10 at address 0x7e0a1f (this is for
 db $A4, $F3                     ;Turn on bit 08 at address 0x7e0a52
 db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
 ; db $A2, $83                     ;Turn on bit 08 at address 0x7e0a24 (THIS IS TABLET 1 FOR KUZAR, NOT KEY ITEM, ACTUAL TABLET)
-db $A4, $CD                     ;Turn on bit 20 at address 0x7e0a4d
 
 ; SECOND TABLET → FORK TOWER
 db $A4, $5B            ; set address 000A3F bit ON 08
@@ -414,11 +425,16 @@ db $A4, $5B            ; set address 000A3F bit ON 08
 db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
 db $D2, $00, $91, $74, $D8
 
-;db $E1, $02, $00, $93, $52, $00 ;Return from cutscene? 00 00 9C 96 00
+!testingmapid = $A7, $00
+!testingxy = $09, $24
+db $E1, !testingmapid, !testingxy, $00 ;Return from cutscene? 00 00 9C 96 00
 ;db $D2, $02, $93, $51, $D8     ; airship
 
 
 
+; TESTING!!!!!!!
+; custom text box for key item
+	db $DE, $60				; set up reward
 
 
 

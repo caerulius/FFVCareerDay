@@ -49,7 +49,6 @@ db $80, $0A                     ;Sprite 080 do event: Hide
 db $82, $0A                     ;Sprite 082 do event: Hide
 db $81, $0A                     ;Sprite 081 do event: Hide
 db $DB                          ;Restore Player status
-db $A4, $C0                     ;Set Event Flag 1C0
 db $CB, $D9, $00                ;Clear Flag 2/3/4/5/D9 00
 db $A2, $6F                     ;Set Event Flag 06F
 db $A2, $A2                     ;Set Event Flag 0A2		next 3 are for flags related to zeza mid-tower cutscene. disable immediately

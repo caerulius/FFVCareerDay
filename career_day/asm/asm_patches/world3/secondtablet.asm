@@ -84,7 +84,6 @@ db $A5, $FE                     ;Clear Event Flag 1FE
 db $A2, $8E                     ;Set Event Flag 08E
 db $A4, $53                     ;Set Event Flag 153
 db $CB, $43, $02                ;Clear Flag 2/3/4/5/43 02
-db $A4, $CC                     ;Set Event Flag 1CC
 db $CB, $5A, $02                ;Clear Flag 2/3/4/5/5A 02
 db $FF                          ;End Event
 

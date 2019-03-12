@@ -1,5 +1,6 @@
 ; conditionals
 !vanillarewards = 0
+!allareasaccessible = 0
 ; randomizer testing
 incsrc r-patch.asm
 incsrc boss-patch.asm
@@ -178,10 +179,10 @@ incsrc misc/walk_speed.asm
 incsrc misc/destination.asm
 incsrc misc/chest_jobreward.asm
 incsrc misc/chest_magicreward.asm
-incsrc misc/key_items.asm
 incsrc misc/magic_ability_crystal_shop_prices.asm
 incsrc misc/shop_hook.asm
 incsrc misc/original_magic_prices.asm
+incsrc misc/custom_items.asm
 
 incsrc balancing/exp_abp_modifier.asm
 
@@ -216,12 +217,15 @@ incsrc reward_events/chicken_knife_brave_blade.asm
 
 ; open world
 incsrc open_world/canal_fix.asm
+incsrc open_world/key_items.asm
 incsrc open_world/open_world.asm
 incsrc open_world/intro_cutscene.asm
 incsrc open_world/world1_to_world2_warp.asm
 incsrc open_world/world2_to_world1_warp.asm
 incsrc open_world/world3_to_world2_warp.asm
 incsrc open_world/pyramid_disable.asm
+incsrc open_world/custom_lock_cutscenes.asm
+incsrc open_world/warp_area.asm
 
 incsrc world2/mooglewaterway_encounters.asm
 
@@ -235,3 +239,8 @@ incsrc text_tables/ability_chest_table.asm
 incsrc text_tables/job_shop_table.asm
 incsrc text_tables/job_chest_table.asm
 incsrc text_tables/magic_chest_table.asm
+incsrc text_tables/key_item_table.asm
+incsrc text_tables/key_item_reward_table.asm
+
+; testing
+incsrc misc/scratchpad.asm

@@ -3,9 +3,9 @@ hirom
 ; Surgate castle guards
 
 
-; Set Outside Surgate guard to new text box
-org $CE8912
-db $D9
+; ; Set Outside Surgate guard to new text box
+; org $CE8912
+; db $D9
 
 
 org $C83BDE
@@ -37,6 +37,8 @@ db $40, $00, $F9
 
 ; world 1 warp
 org $F90040
+db $C5, $80                     ;<unknown>
+db $B5, $02                     ;Play Sound Effect Void, Image
 db $C4, $03
 db $73
 db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
@@ -61,9 +63,9 @@ db $FF
 
 
 
-; Set Outside Surgate guard to new text box
-org $CE8919
-db $DA
+; ; Set Outside Surgate guard to new text box
+; org $CE8919
+; db $DA
 
 
 org $C83BE1
@@ -89,6 +91,8 @@ db $80, $01, $F9
 
 ; world 3 warp
 org $F90180
+db $C5, $80                     ;<unknown>
+db $B5, $02                     ;Play Sound Effect Void, Image
 db $C4, $03
 db $73
 db $E1, $02, $00, $93, $52, $00 ;Return from cutscene? 00 00 9C 96 00
@@ -110,42 +114,10 @@ db $FF
 
 ; Warp message world 1
 org $E19214
-db $96
-db $76
-db $7A
-db $8B
-db $89
-db $96
-db $8D
-db $88
-db $96
-db $76
-db $88
-db $8B
-db $85
-db $7D
-db $96
-db $54
-db $C9
+db $76, $7A, $8B, $89, $96, $8D, $88, $96, $76, $88, $8B, $85, $7D, $96, $54, $A2
 db $FF, $00
 
 ; Warp message world 3
 org $E148B6
-db $96
-db $76
-db $7A
-db $8B
-db $89
-db $96
-db $8D
-db $88
-db $96
-db $76
-db $88
-db $8B
-db $85
-db $7D
-db $96
-db $56
-db $C9
+db $76, $7A, $8B, $89, $96, $8D, $88, $96, $76, $88, $8B, $85, $7D, $96, $56, $A2
 db $FF, $00

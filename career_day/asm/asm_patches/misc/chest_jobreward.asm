@@ -2,6 +2,7 @@ hirom
 !unlockedjobs1 = $0840
 !unlockedjobs2 = $0841
 !unlockedjobs3 = $0842
+!eventflags = $0A4A
 !rewardid = $12
 !typeid = $11
 org $c00e3a
@@ -269,20 +270,72 @@ BranchToKeyItemReward:
 ; no reason to come up with a complex indexing table here
 
 ; we're going to be using a custom bit setter 
-; so we'll push A and X
+; so we'll push A and X and Y
 pha 
 phx
+phy
 LDA !rewardid
-CMP #$00
+
+; CANAL KEY
+CMP #$12
 BEQ KeyItemTornaCanalLocator
-BNE EndKeyItemReward
+BNE KeyItemContinue1
 
 KeyItemTornaCanalLocator:
 JSL KeyItemTornaCanal
+JMP KeyItemAddText
+
+
+; WALSE KEY
+KeyItemContinue1:
+CMP #$00
+BEQ KeyItemWalseKeyLocator
+BNE KeyItemContinue2
+
+KeyItemWalseKeyLocator:
+JSL KeyItemWalseKey
+JMP KeyItemAddText
+
+; STEAMSHIP KEY
+KeyItemContinue2:
+CMP #$01
+BEQ KeyItemSteamshipKeyLocator
+BNE KeyItemContinue3
+
+KeyItemSteamshipKeyLocator:
+JSL KeyItemSteamshipKey
+JMP KeyItemAddText
+
+; IFRITS FIRE
+KeyItemContinue3:
+CMP #$02
+BEQ KeyItemIfritsFireLocator
+BNE KeyItemContinue4
+
+KeyItemIfritsFireLocator:
+JSL KeyItemIfritsFire
+JMP KeyItemAddText
+
+
+KeyItemContinue4:
+KeyItemAddText:
+; < SET UP KEY ITEM SETTER HERE > 
+LDA !rewardid
+pha
+lsr a
+lsr a
+lsr a
+tay
+pla
+and #$07
+tax
+lda !eventflags, y
+ora $C0C9B9,X
+sta !eventflags, y
 
 
 EndKeyItemReward:
-
+ply
 plx
 pla
 

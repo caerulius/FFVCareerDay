@@ -16,7 +16,6 @@ db $A2, $48							;Set Event Flag 048
 ; This is setting automatically upgrading the ship
 db $A2, $4A							;Set Event Flag 04A
 db $A4, $FA							;Set Event Flag 1FA
-db $A5, $C2							;Clear Event Flag 1C2
 
 
 db $CC, $14                 		;Custom destination flag 14

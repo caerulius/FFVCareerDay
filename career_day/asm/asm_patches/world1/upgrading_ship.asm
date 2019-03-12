@@ -17,7 +17,6 @@ db $CD, $A0, $00					;Run event index 00A0
 db $A5, $FE							;Clear Event Flag 1FE
 db $A2, $4A							;Set Event Flag 04A
 db $A4, $FA							;Set Event Flag 1FA
-db $A5, $C2							;Clear Event Flag 1C2
 
 db $CC, $12                 		;Custom destination flag 12
 db $FF								;End event

@@ -69,7 +69,6 @@ db $CB, $49, $00                ;Clear Flag 2/3/4/5/49 00
 db $CB, $30, $00                ;Clear Flag 2/3/4/5/30 00
 db $A5, $9A                     ;Clear Event Flag 19A
 db $CA, $73, $02                ;Set Flag 2/3/4/5/73 02
-db $A4, $C8                     ;Set Event Flag 1C8
 
 
 

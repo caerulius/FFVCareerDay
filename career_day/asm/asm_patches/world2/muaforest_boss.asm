@@ -166,7 +166,6 @@ db $A4, $25                     ;Set Event Flag 125
 db $CB, $0E, $00                ;Clear Flag 2/3/4/5/0E 00
 db $CA, $0F, $00                ;Set Flag 2/3/4/5/0F 00
 db $CB, $1A, $03                ;Clear Flag 2/3/4/5/1A 03
-db $A4, $BF                     ;Set Event Flag 1BF
 db $CB, $44, $02                ;Clear Flag 2/3/4/5/44 02
 db $CB, $45, $02                ;Clear Flag 2/3/4/5/45 02
 db $CB, $46, $02                ;Clear Flag 2/3/4/5/46 02

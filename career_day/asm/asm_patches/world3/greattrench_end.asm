@@ -46,7 +46,6 @@ db $E4, $B4                     ;Unknown
 db $24                          ;Player pose: face down, right hand raised in
 db $A2, $91                     ;Set Event Flag 091
 db $A2, $0E                     ;Set Event Flag 00E
-db $A4, $CB                     ;Set Event Flag 1CB
 db $CB, $20, $00                ;Clear Flag 2/3/4/5/20 00
 db $CB, $5C, $02                ;Clear Flag 2/3/4/5/5C 02
 db $FF                          ;End Event

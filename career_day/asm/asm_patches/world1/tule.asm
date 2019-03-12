@@ -50,24 +50,23 @@ db $71				;Very short pause
 	db $DF					; call text handler
 
 db $03				;Player Move Down
-db $A2, $1C			;Set Event Flag 01C
-db $A2, $1D			;Set Event Flag 01D
-db $CB, $60, $00	;Clear Flag 2/3/4/5/60 00
-db $CB, $61, $00	;Clear Flag 2/3/4/5/61 00
-db $CB, $62, $00	;Clear Flag 2/3/4/5/62 00
-db $CB, $63, $00	;Clear Flag 2/3/4/5/63 00
-db $CB, $64, $00	;Clear Flag 2/3/4/5/64 00
-db $CA, $3B, $00	;Set Flag 2/3/4/5/3B 00
-db $CA, $3C, $00	;Set Flag 2/3/4/5/3C 00
-db $CA, $3D, $00	;Set Flag 2/3/4/5/3D 00
-db $CA, $3E, $00	;Set Flag 2/3/4/5/3E 00
-db $CA, $3F, $00	;Set Flag 2/3/4/5/3F 00
-db $CB, $6B, $00	;Clear Flag 2/3/4/5/6B 00
-db $CB, $57, $00	;Clear Flag 2/3/4/5/57 00
-db $CA, $0D, $00	;Set Flag 2/3/4/5/0D 00
-db $CB, $7E, $00	;Clear Flag 2/3/4/5/7E 00
-db $CA, $77, $00	;Set Flag 2/3/4/5/77 00
-db $A4, $C5			;Set Event Flag 1C5
+; db $A2, $1C                     ;Turn on bit 10 at address 0x7e0a17
+; db $A2, $1D                     ;Turn on bit 20 at address 0x7e0a17
+db $CB, $60, $00                ;Turn off bit 01 at address  0x7e0a60
+db $CB, $61, $00                ;Turn off bit 02 at address  0x7e0a60
+db $CB, $62, $00                ;Turn off bit 04 at address  0x7e0a60
+db $CB, $63, $00                ;Turn off bit 08 at address  0x7e0a60
+db $CB, $64, $00                ;Turn off bit 10 at address  0x7e0a60
+db $CA, $3B, $00                ;Turn on bit 08 at address  0x7e0a5b
+db $CA, $3C, $00                ;Turn on bit 10 at address  0x7e0a5b
+db $CA, $3D, $00                ;Turn on bit 20 at address  0x7e0a5b
+db $CA, $3E, $00                ;Turn on bit 40 at address  0x7e0a5b
+db $CA, $3F, $00                ;Turn on bit 80 at address  0x7e0a5b
+db $CB, $6B, $00                ;Turn off bit 08 at address  0x7e0a61
+db $CB, $57, $00                ;Turn off bit 80 at address  0x7e0a5e
+db $CA, $0D, $00                ;Turn on bit 20 at address  0x7e0a55
+db $CB, $7E, $00                ;Turn off bit 40 at address  0x7e0a63
+db $CA, $77, $00                ;Turn on bit 80 at address  0x7e0a62
 db $CC, $04         ;Custom destination flag 04
 db $CD, $7F, $05	;Run event index 057F ; Party Heal
 db $A4, $4C			;Set Event Flag 14C (this disables the boat after_tule_boat_cutscene entirely )

@@ -30,7 +30,6 @@ db $CD, $DB, $03					;Run event index 03DB
 db $CD, $DC, $03					;Run event index 03DC
 db $CD, $DD, $03					;Run event index 03DD
 db $A2, $99							;Turn on bit 02 at address 0x7e0a27
-db $A5, $BE							;Turn off bit 40 at address 0x7e0a4b
 
 db $FF								;End event
 

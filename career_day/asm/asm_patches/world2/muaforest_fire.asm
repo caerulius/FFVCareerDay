@@ -223,7 +223,6 @@ db $D1, $00, $0E, $01           ;(Timer?) 00 0E 01
 db $A5, $FF                     ;Clear Event Flag 1FF
 
 db $A2, $74                     ;Set Event Flag 074     Event flags for showing branch to enter final area
-db $A5, $C8                     ;Clear Event Flag 1C8   Event flags for showing branch to enter final area
 
 padbyte $00
 pad $C8DD61

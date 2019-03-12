@@ -18,7 +18,6 @@ db $C4, $01
 db $A4, $F5                     ;Set Event Flag 1F5
 db $CB, $30, $03                ;Clear Flag 2/3/4/5/30 03
 db $CB, $17, $01                ;Clear Flag 2/3/4/5/17 01
-db $A5, $C8                     ;Clear Event Flag 1C8
 db $A2, $80                     ;Set Event Flag 080
 db $C4, $02                     ;Fade out Speed 03
 db $75
@@ -243,8 +242,6 @@ db $B4, $16                     ;Play Background Music The Four Warriors of Dawn
 db $A5, $FE                     ;Clear Event Flag 1FE
 db $A4, $7F                     ;Set Event Flag 17F
 db $A5, $FF                     ;Clear Event Flag 1FF
-db $A4, $CE                     ;Set Event Flag 1CE
-db $A5, $C8                     ;Clear Event Flag 1C8
 db $CA, $98, $03                ;Set Flag 2/3/4/5/98 03
 db $D0, $80, $60                ;(Music) 80 60
 db $C4, $02                     ;Fade out Speed 03
