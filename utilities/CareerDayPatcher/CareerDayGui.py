@@ -1,6 +1,10 @@
 from tkinter import *
 from tkinter import filedialog
+import tkinter.font as font
 import random
+import os
+
+from CareerDayifier import *
 
 class Window(Frame):
 	def __init__(self, master=None):
@@ -15,25 +19,28 @@ class Window(Frame):
 		self.seed = StringVar()
 		self.seed.set("Enter a seed")
 		self.pristineSeed = True
+		self.randomizerButtonFont = font.Font(size=14, weight='bold')
+		self.quitButtonFont = font.Font(size=13, weight='bold')
+		self.success = None
 
-		self.statusLabel = Label(self.master, text="Select your rom", width=20, height=2, name="statuslabel", anchor="w", font=("courier new", 11), justify=LEFT)
-		self.statusLabel.grid(row=0, column=0, padx=30, pady=10, sticky=W+E+N+S, columnspan=3, rowspan=2)
+		self.statusLabel = Label(self.master, text="Select your rom", width=20, height=3, name="statuslabel", anchor="w", font=("courier new", 11), justify=LEFT)
+		self.statusLabel.grid(row=0, column=0, padx=30, pady=10, sticky=W+E+N+S, columnspan=3, rowspan=3)
 
 		l1 = Label(self.master, width=25, height=1, text="Path to your FF5 Rom")
-		l1.grid(row=2, column=0, padx=30, sticky=W+E+N+S)
+		l1.grid(row=3, column=0, padx=30, sticky=W+E+N+S)
 		l2 = Label(self.master, width=25, height=1, text="Seed")
-		l2.grid(row=2, column=1, sticky=W+E+N+S)
+		l2.grid(row=3, column=1, sticky=W+E+N+S)
 
 		e1 = Entry(self.master, textvariable=self.rompath, name="rompath", width=30)
-		e1.grid(row=3, column=0, padx=30, pady=10, sticky=W+E+N+S)
+		e1.grid(row=4, column=0, padx=30, pady=10, sticky=W+E+N+S)
 
 		e2 = Entry(self.master, textvariable=self.seed, name="seed", width=30)
-		e2.grid(row=3, column=1, pady=10, sticky=W+E+N+S)
+		e2.grid(row=4, column=1, pady=10, sticky=W+E+N+S)
 
 		l3 = Label(self.master, width=25, height=1, text="XP Scaling Settings")
-		l3.grid(row=4, column=0, padx=30, sticky=W+E+N+S)
+		l3.grid(row=5, column=0, padx=30, sticky=W+E+N+S)
 		l4 = Label(self.master, width=25, height=1, text="Other Settings")
-		l4.grid(row=4, column=1, sticky=W+E+N+S)
+		l4.grid(row=5, column=1, sticky=W+E+N+S)
 
 		xpScalingFrame = Frame(self.master, borderwidth=3, relief=GROOVE, name="scaling")
 
@@ -45,22 +52,22 @@ class Window(Frame):
 		r2.grid(row=1, column=0, sticky=W+E+N+S)
 		r3.grid(row=2, column=0, sticky=W+E+N+S)
 
-		xpScalingFrame.grid(row=5, column=0, padx=30, sticky=W+E+N+S)
+		xpScalingFrame.grid(row=6, column=0, padx=30, sticky=W+E+N+S)
 
 		extraOptionsFrame = Frame(self.master, borderwidth=3, relief=GROOVE, name="extra")
 
 		c1 = Checkbutton(extraOptionsFrame, text="Boss exp/abp scaling", variable=self.bossxp, anchor="w", name="bossscaling")
 		c1.grid(row=0, column=0, sticky=W+E+N+S)
 
-		extraOptionsFrame.grid(row=5, column=1, sticky=W+E+N+S)
+		extraOptionsFrame.grid(row=6, column=1, sticky=W+E+N+S)
 
-		self.randomizeButton = Button(self.master, text="Randomize", name="randomize", state=DISABLED)
-		self.randomizeButton.grid(row=7, column=0, padx=30, pady=10, sticky=W+E+N+S)
+		self.randomizeButton = Button(self.master, text="Randomize", name="randomize", state=DISABLED, height=2, font=self.randomizerButtonFont)
+		self.randomizeButton.grid(row=8, column=0, padx=30, pady=10, sticky=W+E+N+S, rowspan=2)
 
-		b1 = Button(self.master, text="Quit", name="quit")
-		b1.grid(row=7, column=1, padx=30, pady=10, sticky=W+E+N+S)
+		b1 = Button(self.master, text="Quit", name="quit", font=self.quitButtonFont)
+		b1.grid(row=8, column=1, padx=30, pady=10, sticky=W+E+N+S)
 
-		self.master.bind("<Button-1>", self.onClick)
+		self.master.bind("<ButtonRelease-1>", self.onClick)
 		self.master.bind("<Enter>", self.onEnter)
 		self.master.bind("<Leave>", self.onLeave)
 		self.master.bind("<FocusOut>", self.onUnfocus)
@@ -71,7 +78,7 @@ class Window(Frame):
 			if self.rompath.get() == "":
 				self.rompath.set("<path to rom>")
 			elif self.rompath.get() != "<path to rom>" and self.rompath.get() != "":
-				self.randomizeButton['state'] = 'normal'
+				self.randomizeButton['state'] = NORMAL
 				self.updateLabel("")
 
 		if str(event.widget) == ".seed" and self.pristineSeed == True:
@@ -79,11 +86,12 @@ class Window(Frame):
 			self.pristineSeed = False
 
 		if str(event.widget) == ".randomize" and event.widget['state'] != DISABLED:
-			print("Randomizing...")
-			print("Rompath: " + str(self.rompath.get()))
-			print("XP: " + str(self.xp.get()) + "x")
-			print("Boss XP Scaling: " + str(self.bossxp.get()))
+			self.randomizeButton['state'] = DISABLED
+			self.randomizeButton['relief'] = SUNKEN
+			self.randomizeButton['text'] = "Complete"
 
+			self.performRandomization()
+			
 		if str(event.widget) == ".quit":
 			sys.exit()
 
@@ -124,16 +132,40 @@ class Window(Frame):
 		if text != "":
 			self.statusLabel['text'] = text
 		else:
-			if str(self.rompath.get()) == "<path to rom>" or str(self.rompath.get()) == "":
+			if self.success == True:
+				self.statusLabel['text'] = "Rom patched sucessfully!\nPatched rom placed in new folder:\n" + self.filepath
+			elif str(self.rompath.get()) == "<path to rom>" or str(self.rompath.get()) == "":
 				self.statusLabel['text'] = "Select your rom"
 			else:
 				self.statusLabel['text'] = "Choose your options and click \nrandomize when ready"
 
+	def performRandomization(self):
+		options = {}
+		options['xp'] = self.xp
+		options['bossxp'] = self.bossxp
+ 
+		if self.seed.get() == "" or self.seed.get() == "Enter a seed":
+			self.seed.set(random.randint(1000000, 9999999))
+
+		self.success, self.filepath = create_career_day_seed(self.rompath.get(), self.seed.get(), options)
+		self.updateLabel("")
+
+
 root = Tk()
 
-root.geometry("500x300")
+if getattr(sys, 'frozen', False):
+    app_path = sys._MEIPASS
+else:
+    app_path = os.path.dirname(os.path.abspath(__file__))
+
+WRITEDIRECTORY = os.getcwd()
+os.chdir(app_path)
+
+root.geometry("500x325")
 root.title("Career Day")
-root.iconbitmap(r"C:\\Users\\cae\\projects\\FFVCareerDay\\careerday-web\\favicon.ico")
+root.iconbitmap("favicon.ico")
+
+os.chdir(WRITEDIRECTORY)
 
 app = Window(root)
 root.mainloop()
