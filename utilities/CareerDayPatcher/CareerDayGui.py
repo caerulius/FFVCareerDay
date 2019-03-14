@@ -21,7 +21,7 @@ class Window(Frame):
 		self.pristineSeed = True
 		self.randomizerButtonFont = font.Font(size=14, weight='bold')
 		self.quitButtonFont = font.Font(size=13, weight='bold')
-		self.success = None
+		self.success = False
 
 		self.statusLabel = Label(self.master, text="Select your rom", width=20, height=3, name="statuslabel", anchor="w", font=("courier new", 11), justify=LEFT)
 		self.statusLabel.grid(row=0, column=0, padx=30, pady=10, sticky=W+E+N+S, columnspan=3, rowspan=3)
@@ -86,10 +86,6 @@ class Window(Frame):
 			self.pristineSeed = False
 
 		if str(event.widget) == ".randomize" and event.widget['state'] != DISABLED:
-			self.randomizeButton['state'] = DISABLED
-			self.randomizeButton['relief'] = SUNKEN
-			self.randomizeButton['text'] = "Complete"
-
 			self.performRandomization()
 			
 		if str(event.widget) == ".quit":
@@ -134,6 +130,8 @@ class Window(Frame):
 		else:
 			if self.success == True:
 				self.statusLabel['text'] = "Rom patched sucessfully!\nPatched rom placed in new folder:\n" + self.filepath
+			elif self.success == False:
+				self.statusLabel['text'] = "Error patching rom"
 			elif str(self.rompath.get()) == "<path to rom>" or str(self.rompath.get()) == "":
 				self.statusLabel['text'] = "Select your rom"
 			else:
