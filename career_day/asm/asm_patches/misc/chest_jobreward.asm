@@ -8,7 +8,7 @@ hirom
 org $c00e3a
 JML ChestHook1
 
-org $F00200
+org $F03000
 ChestHook1:
 STZ $BB0
 lda $D13213,x
@@ -278,10 +278,7 @@ LDA !rewardid
 
 ; CANAL KEY
 CMP #$12
-BEQ KeyItemTornaCanalLocator
 BNE KeyItemContinue1
-
-KeyItemTornaCanalLocator:
 JSL KeyItemTornaCanal
 JMP KeyItemAddText
 
@@ -289,35 +286,162 @@ JMP KeyItemAddText
 ; WALSE KEY
 KeyItemContinue1:
 CMP #$00
-BEQ KeyItemWalseKeyLocator
 BNE KeyItemContinue2
-
-KeyItemWalseKeyLocator:
 JSL KeyItemWalseKey
 JMP KeyItemAddText
 
 ; STEAMSHIP KEY
 KeyItemContinue2:
 CMP #$01
-BEQ KeyItemSteamshipKeyLocator
 BNE KeyItemContinue3
-
-KeyItemSteamshipKeyLocator:
 JSL KeyItemSteamshipKey
 JMP KeyItemAddText
 
 ; IFRITS FIRE
 KeyItemContinue3:
 CMP #$02
-BEQ KeyItemIfritsFireLocator
 BNE KeyItemContinue4
-
-KeyItemIfritsFireLocator:
 JSL KeyItemIfritsFire
 JMP KeyItemAddText
 
 
+; SandWormBait
 KeyItemContinue4:
+CMP #$03
+BNE KeyItemContinue5
+JSL KeyItemSandWormBait
+JMP KeyItemAddText
+
+; Adamantite
+KeyItemContinue5:
+CMP #$15
+BNE KeyItemContinue6
+JSL KeyItemAdamantite
+JMP KeyItemAddText
+
+; Big Bridge Key
+KeyItemContinue6:
+CMP #$04
+BNE KeyItemContinue7
+JSL KeyItemBigBridge
+JMP KeyItemAddText
+
+KeyItemContinue7:
+
+; Moogle Suit
+CMP #$16
+BNE KeyItemContinue8
+JSL KeyItemMoogleSuit
+JMP KeyItemAddText
+
+KeyItemContinue8:
+
+; Submarine Key
+CMP #$06
+BNE KeyItemContinue9
+JSL KeyItemSubmarineKey
+JMP KeyItemAddText
+
+KeyItemContinue9:
+
+; Hiryuu Call
+CMP #$05
+BNE KeyItemContinue10
+JSL KeyItemHiryuuCall
+JMP KeyItemAddText
+
+KeyItemContinue10:
+
+; Elder Branch
+CMP #$18
+BNE KeyItemContinue11
+JSL KeyItemElderBranch
+JMP KeyItemAddText
+
+KeyItemContinue11:
+
+; Elder Branch
+CMP #$08
+BNE KeyItemContinue12
+JSL KeyItemBracelet
+JMP KeyItemAddText
+
+KeyItemContinue12:
+
+; Anti Barrier
+CMP #$07
+BNE KeyItemContinue13
+JSL KeyItemAntiBarrier
+JMP KeyItemAddText
+
+KeyItemContinue13:
+
+; Pyramid Page
+CMP #$0B
+BNE KeyItemContinue14
+JSL KeyItemPyramidPage
+JMP KeyItemAddText
+
+KeyItemContinue14:
+
+; Shrine Page
+CMP #$0C
+BNE KeyItemContinue15
+JSL KeyItemShrinePage
+JMP KeyItemAddText
+
+KeyItemContinue15:
+
+; Trench Page
+CMP #$0D
+BNE KeyItemContinue16
+JSL KeyItemTrenchPage
+JMP KeyItemAddText
+
+KeyItemContinue16:
+
+; Falls Page
+CMP #$0E
+BNE KeyItemContinue17
+JSL KeyItemFallsPage
+JMP KeyItemAddText
+
+KeyItemContinue17:
+
+
+
+; Pyramid 1st Tablet
+CMP #$1A
+BNE KeyItemContinue18
+JSL KeyItem1stTablet
+JMP KeyItemAddText
+
+KeyItemContinue18:
+
+; Shrine 2nd Tablet
+CMP #$1B
+BNE KeyItemContinue19
+JSL KeyItem2ndTablet
+JMP KeyItemAddText
+
+KeyItemContinue19:
+
+; Trench 3rd Tablet
+CMP #$1C
+BNE KeyItemContinue20
+JSL KeyItem3rdTablet
+JMP KeyItemAddText
+
+KeyItemContinue20:
+
+; Falls 4th Tablet
+CMP #$1D
+BNE KeyItemContinue21
+JSL KeyItem4thTablet
+JMP KeyItemAddText
+
+KeyItemContinue21:
+
 KeyItemAddText:
 ; < SET UP KEY ITEM SETTER HERE > 
 LDA !rewardid

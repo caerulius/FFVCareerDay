@@ -51,6 +51,20 @@ org $D8F632
 db $10
 
 
+; ZEZA FLEET
+; After Gilgamesh, change one of the flags for Hiryuu spawning to normal to be based off of:
+; db $A2, $AA                     ;Turn on bit 04 at address 0x7e0a29
+; instead of 
+; db $A2, $6D                     ;Turn on bit 20 at address 0x7e0a21
+; Which is tied to Zeza allowing access to Barrier Tower
+org $D8F254
+db $AA
+
+; BARRIER TOWER
+; Similar to above, change barrier tower fight cutscene to deactivate from a different flag than the underwater barrier access warp tile
+org $D8F37D
+db $FD, $7C
+
 ; FORK TOWER
 ; Galuf in party causes problems. Temporarily setting access after Mua forest boss → getting Cara
 ; Bit 80 at address 0x7e0a4b
@@ -67,3 +81,16 @@ org $CE2869 ; this changes tile
 db $57
 org $C8B218 ; this changes leaving cutscene to place Boco one tile right of this 
 db $7A
+
+
+
+; GARGOYLES
+; Change each conditional event to have individual flags associated with their respective key items
+; Only works for pyramid, the others had to be custom 
+; Pyramid
+org $D8F3E7
+db $BC
+
+; Solitary Shrine
+; org $D8FC64
+; db $FC, $BB

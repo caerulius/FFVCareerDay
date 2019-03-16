@@ -26,8 +26,8 @@ db $B5, $02                     ;Play Sound Effect Void, Image
 db $C4, $03
 db $73
 db $E1, $01, $00, $4C, $6F, $00 ;Return from cutscene? E1 00 97 1A 00
-db $D2, $01, $4B, $6E, $6C ; hiryuu
-db $D2, $01, $4C, $73, $90 ; submarine
+db $ED, $01, $4B, $6E, $6C ; hiryuu CONDITIONAL
+db $ED, $01, $4C, $73, $90 ; submarine CONDITIONAL
 db $D2, $01, $4D, $6F, $D8 ; airship ???
 
 ; WORLD CONDITIONALS
@@ -36,6 +36,7 @@ db $A3, $79            ; set address 000A23 bit OFF 02
 ; Submarine deactivated
 db $A5, $F9            ; set address 000A53 bit OFF 02
 
+db $EE
 db $14
 db $C3, $03
 db $73

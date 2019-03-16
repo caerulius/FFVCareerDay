@@ -135,7 +135,7 @@ db $CA, $75, $03            ; set address 000AC2 bit ON 20
 
 ; SANDWORM
 ; Allows immediate access to Sandworm fight
-db $A2, $3B            ; set address 000A1B bit ON 08
+; db $A2, $3B            ; set address 000A1B bit ON 08
 
 
 
@@ -150,7 +150,7 @@ db $A2, $3B            ; set address 000A1B bit ON 08
 ; Bitwise 04 on address A53 (the event problematic address) controls world map access to ronka area 
 ; Doesnt break if you leave it on in world 3
 ; If you warp between worlds, theoretically you could set it so its only active in world 1. 
-db $A4, $FA            ; set address 000A53 bit ON 04
+; db $A4, $FA            ; set address 000A53 bit ON 04
 
 ; Set side cannons to defeated
 db $A2, $B7            ; set address 000A2A bit ON 80
@@ -180,14 +180,15 @@ db $A4, $EF            ; set address 000A51 bit ON 80
 ; EXDEATH CASTLE
 ; Unlock doors
 ; Sets Gilga 1 to complete
-db $CB, $15, $03                ;Clear Flag 2/3/4/5/15 03
-db $CB, $16, $03                ;Clear Flag 2/3/4/5/16 03
-db $CB, $17, $03                ;Clear Flag 2/3/4/5/17 03
-db $CB, $1B, $03                ;Clear Flag 2/3/4/5/1B 03
-db $CA, $0E, $00                ;Set Flag 2/3/4/5/0E 00
-db $A2, $58                     ;Set Event Flag 058
-db $A2, $59                     ;Set Event Flag 059
+db $A2, $5E            ; set address 000A1F bit ON 40  - sets barrier active
 
+db $CB, $15, $03                ;Turn off bit 20 at address  0x7e0ab6
+db $CB, $16, $03                ;Turn off bit 40 at address  0x7e0ab6
+db $CB, $17, $03                ;Turn off bit 80 at address  0x7e0ab6
+db $CB, $1B, $03                ;Turn off bit 08 at address  0x7e0ab7
+db $CA, $0E, $00                ;Turn on bit 40 at address  0x7e0a55
+; db $A2, $58                     ;Turn on bit 01 at address 0x7e0a1f
+; db $A2, $59                     ;Turn on bit 02 at address 0x7e0a1f
 
 ; BIG BRIDGE
 ; Set all events except Gilga fight
@@ -212,7 +213,7 @@ db $A3, $5D            ; set address 000A1F bit OFF 20
 db $CB, $3E, $02                        ;Clear Flag 2/3/4/5/3E 02
 db $CB, $3F, $02                        ;Clear Flag 2/3/4/5/3F 02
 ; db $A4, $3C                     ;Set Event Flag 13C (this is tyrasaur being defeated, and previously moogle village unlocked)
-db $A4, $2C                     ;Set Event Flag 12C (this is now village being unlocked)
+db $A4, $2C                     ;Turn on bit 10 at address 0x7e0a39 (this is now village being unlocked)
 db $CB, $E6, $01                ;Clear Flag 2/3/4/5/E6 01
 db $CB, $E7, $01                ;Clear Flag 2/3/4/5/E7 01
 db $CB, $DF, $01                ;Clear Flag 2/3/4/5/DF 01
@@ -308,7 +309,7 @@ db $CB, $D8, $00            ; set address 000A6F bit OFF 01
 ; MUA FOREST
 ; Mua's event was changed to refer to this. Refer to open_world.asm for explanation
 
-db $A2, $72                     ;Set Event Flag 072
+; db $A2, $72                     ;Set Event Flag 072
 
 ; End of forest after battle:
 ; db $A2, $75                     ;Set Event Flag 075
@@ -399,7 +400,7 @@ db $A2, $BD                     ;Turn on bit 20 at address 0x7e0a2b
 
 ; PYRAMID
 ; allows getting the tablet...?
-db $CA, $08, $00            ; set address 000A55 bit ON 01
+; db $CA, $08, $00            ; set address 000A55 bit ON 01
 db $A5, $F7                     ;Turn off bit 80 at address 0x7e0a52
 
 
@@ -421,21 +422,34 @@ db $A4, $5B            ; set address 000A3F bit ON 08
 ; player position
 ; set airship
 ; spawns right under player, tweak $9C,$96 to change X/Y coord. $D8 controls type of vehicle
-; OG CORRECT WARPS
-db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
-db $D2, $00, $91, $74, $D8
 
-!testingmapid = $A7, $00
-!testingxy = $09, $24
+!testingmapid = $02, $00
+!testingxy = $93, $52
+
+; ONLY USE WITH WORLD 3
+db $A2, $79            ; set address 000A23 bit ON 02
+
 db $E1, !testingmapid, !testingxy, $00 ;Return from cutscene? 00 00 9C 96 00
-;db $D2, $02, $93, $51, $D8     ; airship
+db $D2, $02,!testingxy, $D8
 
+; OG CORRECT WARPS
+;db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
+; db $D2, $00, $91, $74, $D8
 
 
 ; TESTING!!!!!!!
 ; custom text box for key item
 	db $DE, $60				; set up reward
+	db $DE, $61				; set up reward
+	db $DE, $62				; set up reward
+	db $DE, $63				; set up reward
+	db $DE, $64				; set up reward
+	
+db $EE
 
+; testing for rift tablet conditionals
+db $A5, $70            ; set address 000A42 bit OFF 01
+db $A5, $71            ; set address 000A42 bit OFF 02
 
 
 db $14

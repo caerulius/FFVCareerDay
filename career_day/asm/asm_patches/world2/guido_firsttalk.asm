@@ -38,7 +38,7 @@ db $0F                          ;<Unknown>
 db $71                          ;Short pause
 db $86, $0A                     ;Sprite 086 do event: Hide
 db $DB                          ;Restore Player status
-db $A2, $71                     ;Set Event Flag 071
+; db $A2, $71                     ;Set Event Flag 071
 db $CC, $22                  ;Custom destination flag 22
 db $FF                          ;End Event
 

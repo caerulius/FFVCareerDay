@@ -48,13 +48,16 @@ db $14
 ; WORLD CONDITIONALS
 ; Submarine deactivated
 db $A5, $F9            ; set address 000A53 bit OFF 02
-; Lonka ruin access
-db $A4, $FA            ; set address 000A53 bit ON 04
+; Lonka ruin access. Conditional access $EE
+; db $A4, $FA            ; set address 000A53 bit ON 04
 ; Set world 3 off status
 db $A3, $79            ; set address 000A23 bit OFF 02
 
+db $EE				; Conditional flag handling event
+
 db $C3, $03
 db $73
+
 db $FF
 
 
@@ -98,13 +101,15 @@ db $73
 db $E1, $02, $00, $93, $52, $00 ;Return from cutscene? 00 00 9C 96 00
 db $D2, $02, $93, $51, $D8     ; airship
 ; WORLD CONDITIONALS
-; Submarine activated
-db $A4, $F9            ; set address 000A53 bit ON 02
-; Lonka ruin restrict access
+; Submarine conditional $EE
+; db $A4, $F9            ; set address 000A53 bit ON 02
+; ; Lonka ruin restrict access
 db $A5, $FA            ; set address 000A53 bit OFF 04
 ; Set world 3 on status
 db $A2, $79            ; set address 000A23 bit ON 02
 
+
+db $EE
 
 db $14
 db $C3, $03

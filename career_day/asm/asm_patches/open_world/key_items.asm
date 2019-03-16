@@ -1,36 +1,38 @@
 hirom
 !rewarditemset = $001E20
+
+
+; this is for text clearing, it's constant and shouldnt be touched
+org $E73568
+pad $E736A0
+
+
 ; starts at index $60, at address $C0FB70
 ; torna canal key from zokk
 org $C0FB70
 db $30, $12
 
 
-!startwithkeyitem = $02
-
 ; TEST IN WATERWAY
 org $D133E2
-db $30, !startwithkeyitem
+db $30, !startwithkeyitem1
 
 ; TESTING FOR EVENT SLOT $60. SAME AS ABOVE OVERWRITING TORNA CANAL!!
 org $C0FB70
-db $30, !startwithkeyitem
+db $30, $06
+org $C0FB72
+db $30, !startwithkeyitem1
+org $C0FB74
+db $30, !startwithkeyitem2
+org $C0FB76
+db $30, !startwithkeyitem3
+org $C0FB78
+db $30, !startwithkeyitem4
+
+
 
 
 ; FIXES TO CHANGES POINTERS TO KEY ITEMS:
-
-
-
-
-
-
-
-
-
-
-
-
-
 ; all of these below are specific bit setters based on the key item
 ; refer to chest_jobreward.asm for the code that calls these in
 ; at `BranchToKeyItemReward`
@@ -88,6 +90,130 @@ LDA #$80
 LDX #$0086
 JSL UnsetKeyItemBits
 
+RTL
+
+KeyItemSandWormBait:
+
+LDA #$08
+LDX #$001B
+JSL SetKeyItemBits
+
+
+RTL
+
+KeyItemAdamantite:
+
+LDA #$04
+LDX #$0053
+JSL SetKeyItemBits
+
+
+RTL
+
+
+KeyItemBigBridge:
+; blank for now, flag is enough
+
+RTL
+
+KeyItemMoogleSuit:
+
+LDA #$10
+LDX #$0039
+JSL SetKeyItemBits
+
+RTL
+
+
+KeyItemSubmarineKey:
+
+; write submarine coordinates if in world 2
+LDA $000AF5
+CMP #$01
+BNE KeyItemSubmarineKeyFinish
+lda #$30
+sta $0AE9
+lda #$00
+sta $0AEA
+lda #$4C
+sta $0AEB
+lda #$73
+sta $0AEC
+KeyItemSubmarineKeyFinish:
+RTL
+
+KeyItemHiryuuCall:
+
+; write hiryuu coordinates if in world 2
+LDA $000AF5
+CMP #$01
+BNE KeyItemHiryuuCallFinish
+lda #$2C
+sta $0AE5
+lda #$00
+sta $0AE6
+lda #$4A
+sta $0AE7
+lda #$6E
+sta $0AE8
+KeyItemHiryuuCallFinish:
+
+RTL
+
+KeyItemElderBranch:
+
+LDA #$02
+LDX #$0022
+JSL SetKeyItemBits
+
+RTL
+
+KeyItemBracelet:
+LDA #$20
+LDX #$003C
+JSL SetKeyItemBits
+
+LDA #$20
+LDX #$0022
+JSL SetKeyItemBits
+
+RTL
+
+KeyItemAntiBarrier:
+
+LDA #$40
+TRB $0A1F
+
+RTL
+
+KeyItemPyramidPage:
+RTL
+KeyItemShrinePage:
+RTL
+KeyItemTrenchPage:
+RTL
+KeyItemFallsPage:
+RTL
+
+KeyItem1stTablet:
+LDA #$08
+LDX #$0024
+JSL SetKeyItemBits
+RTL
+KeyItem2ndTablet:
+LDA #$40
+LDX #$0025
+JSL SetKeyItemBits
+RTL
+KeyItem3rdTablet:
+LDA #$02
+LDX #$0026
+JSL SetKeyItemBits
+RTL
+KeyItem4thTablet:
+LDA #$08
+LDX #$0026
+JSL SetKeyItemBits
 RTL
 
 

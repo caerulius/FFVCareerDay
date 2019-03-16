@@ -23,34 +23,33 @@ db $BD, $20, $FF          ;Start Event Battle 20
 db $C4, $02                     ;Fade out
 db $75
 db $75
-db $A4, $EA                     ;Set Event Flag 1EA
-db $A2, $7C                     ;Set Event Flag 07C
-db $A4, $EB                     ;Set Event Flag 1EB
+; db $A4, $EA                     ;Turn on bit 04 at address 0x7e0a51. This sets the tile on the world map to inactive 
+db $A2, $7C                     ;Turn on bit 10 at address 0x7e0a23
+db $A4, $EB                     ;Turn on bit 08 at address 0x7e0a51
 db $D2, $01, $AD, $9F, $6C      ;(Map) 01 AD 9F 6C
-db $CA, $DB, $02                ;Set Flag 2/3/4/5/DB 02
-db $CA, $DC, $02                ;Set Flag 2/3/4/5/DC 02
-db $CA, $DD, $02                ;Set Flag 2/3/4/5/DD 02
-db $CA, $DE, $02                ;Set Flag 2/3/4/5/DE 02
-db $CA, $DF, $02                ;Set Flag 2/3/4/5/DF 02
-db $CB, $E3, $02                ;Clear Flag 2/3/4/5/E3 02
-db $CB, $E4, $02                ;Clear Flag 2/3/4/5/E4 02
-db $CB, $E5, $02                ;Clear Flag 2/3/4/5/E5 02
-db $CB, $11, $03                ;Clear Flag 2/3/4/5/11 03
-db $CB, $0E, $00                ;Clear Flag 2/3/4/5/0E 00
+db $CA, $DB, $02                ;Turn on bit 08 at address  0x7e0aaf
+db $CA, $DC, $02                ;Turn on bit 10 at address  0x7e0aaf
+db $CA, $DD, $02                ;Turn on bit 20 at address  0x7e0aaf
+db $CA, $DE, $02                ;Turn on bit 40 at address  0x7e0aaf
+db $CA, $DF, $02                ;Turn on bit 80 at address  0x7e0aaf
+db $CB, $E3, $02                ;Turn off bit 08 at address  0x7e0ab0
+db $CB, $E4, $02                ;Turn off bit 10 at address  0x7e0ab0
+db $CB, $E5, $02                ;Turn off bit 20 at address  0x7e0ab0
+db $CB, $11, $03                ;Turn off bit 02 at address  0x7e0ab6
+db $CB, $0E, $00                ;Turn off bit 40 at address  0x7e0a55
 
 ; below skips sub cutscene with Galuf waiting. No timer is ever set, Galuf never removed from party
 
-db $A5, $FE                     ;Clear Event Flag 1FE
+db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
 db $E1, $03, $20, $A9, $A5, $91 ;Return from cutscene? 03 20 A9 A5 91
 db $DB                          ;Restore Player status
-db $C3, $02                     ;Fade in Speed 0A
-db $73
-db $CA, $0E, $00                ;Set Flag 2/3/4/5/0E 00
-db $A3, $C1                     ;Clear Event Flag 0C1
-db $CC, $21                  ;Custom destination flag 21
-
+db $C3, $02                     ;Fade in Speed 02
+db $73                          ;Long pause
+db $CA, $0E, $00                ;Turn on bit 40 at address  0x7e0a55
+db $A3, $C1                     ;Turn off bit 02 at address 0x7e0a2c
+db $CC                          ;Noop
+db $21                          ;Player pose: face down, left hand raised in
 db $FF                          ;End Event
-
 
 padbyte $00
 pad $C8D9AA

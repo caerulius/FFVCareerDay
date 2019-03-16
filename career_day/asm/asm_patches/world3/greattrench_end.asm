@@ -44,10 +44,10 @@ else
 endif
 db $E4, $B4                     ;Unknown
 db $24                          ;Player pose: face down, right hand raised in
-db $A2, $91                     ;Set Event Flag 091
-db $A2, $0E                     ;Set Event Flag 00E
-db $CB, $20, $00                ;Clear Flag 2/3/4/5/20 00
-db $CB, $5C, $02                ;Clear Flag 2/3/4/5/5C 02
+db $A2, $91                     ;Turn on bit 02 at address 0x7e0a26
+db $A2, $0E                     ;Turn on bit 40 at address 0x7e0a15
+db $CB, $20, $00                ;Turn off bit 01 at address  0x7e0a58
+db $CB, $5C, $02                ;Turn off bit 10 at address  0x7e0a9f
 db $FF                          ;End Event
 
 padbyte $00

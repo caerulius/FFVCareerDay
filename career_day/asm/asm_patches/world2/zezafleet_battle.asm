@@ -84,18 +84,18 @@ db $01
 db $01
 db $01
 db $01
-db $A2, $6D                     ;Set Event Flag 06D
-db $A2, $AA						; This is talking to Zeza in the sub first
-db $CA, $01, $03                ;Set Flag 2/3/4/5/01 03
-db $CB, $07, $03                ;Clear Flag 2/3/4/5/07 03
-db $CB, $06, $03                ;Clear Flag 2/3/4/5/06 03
-db $CB, $00, $03                ;Clear Flag 2/3/4/5/00 03
-db $CA, $08, $03                ;Set Flag 2/3/4/5/08 03
-db $CB, $F5, $02                ;Clear Flag 2/3/4/5/F5 02
-db $CB, $F6, $02                ;Clear Flag 2/3/4/5/F6 02
-db $CB, $F7, $02                ;Clear Flag 2/3/4/5/F7 02
-db $CB, $F8, $02                ;Clear Flag 2/3/4/5/F8 02
-db $CB, $F9, $02                ;Clear Flag 2/3/4/5/F9 02
+; db $A2, $6D                     ;Turn on bit 20 at address 0x7e0a21
+db $A2, $AA                     ;Turn on bit 04 at address 0x7e0a29
+db $CA, $01, $03                ;Turn on bit 02 at address  0x7e0ab4
+db $CB, $07, $03                ;Turn off bit 80 at address  0x7e0ab4
+db $CB, $06, $03                ;Turn off bit 40 at address  0x7e0ab4
+db $CB, $00, $03                ;Turn off bit 01 at address  0x7e0ab4
+; db $CA, $08, $03                ;Turn on bit 01 at address  0x7e0ab5
+db $CB, $F5, $02                ;Turn off bit 20 at address  0x7e0ab2
+db $CB, $F6, $02                ;Turn off bit 40 at address  0x7e0ab2
+db $CB, $F7, $02                ;Turn off bit 80 at address  0x7e0ab2
+db $CB, $F8, $02                ;Turn off bit 01 at address  0x7e0ab3
+db $CB, $F9, $02                ;Turn off bit 02 at address  0x7e0ab3
 db $CC, $1F                  ;Custom destination flag 1F
 db $FF                          ;End Event
 

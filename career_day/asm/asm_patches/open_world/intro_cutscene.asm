@@ -27,6 +27,7 @@ db $CB, $58, $00	            ;Clear Flag 2/3/4/5/58 00 ;removes faris sleeping i
 db $A4, $DC                     ;Set Event Flag 1DC
 ; db $A4, $FF                     ;Set Event Flag 1FF *this ordinarily disables enka*
 db $EC                          ;Set starting randomizer job
+db $EE                          ;Conditional event flag checks for world 1 (mostly Ronka access)
 
 
 

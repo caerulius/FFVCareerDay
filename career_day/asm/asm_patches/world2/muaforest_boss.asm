@@ -122,7 +122,7 @@ db $90, $0A                     ;Sprite 190 do event: Hide
 db $BD, $21, $FF                ;Start Event Battle 21
 db $75
 db $C4, $02
-db $A2, $75                     ;Set Event Flag 075
+; db $A2, $75                     ;Turn on bit 20 at address 0x7e0a22
 db $E3, $67, $01, $93, $12, $00 ;Inter-map cutscene? 67 01 93 12 00
 db $CD, $40, $04                ;Run event index 0440
 db $88, $09                     ;Sprite 088 do event: Show
@@ -162,21 +162,21 @@ db $A5, $FE                     ;Clear Event Flag 1FE
 db $E1, $01, $20, $38, $79, $6C ;Return from cutscene? 01 20 38 79 6C
 db $B7, $0C                     ;Add/Remove character 0C
 db $76                          ;<Unknown>
-db $A4, $25                     ;Set Event Flag 125
-db $CB, $0E, $00                ;Clear Flag 2/3/4/5/0E 00
-db $CA, $0F, $00                ;Set Flag 2/3/4/5/0F 00
-db $CB, $1A, $03                ;Clear Flag 2/3/4/5/1A 03
-db $CB, $44, $02                ;Clear Flag 2/3/4/5/44 02
-db $CB, $45, $02                ;Clear Flag 2/3/4/5/45 02
-db $CB, $46, $02                ;Clear Flag 2/3/4/5/46 02
-db $CB, $47, $02                ;Clear Flag 2/3/4/5/47 02
-db $CB, $48, $02                ;Clear Flag 2/3/4/5/48 02
-db $CB, $7B, $02                ;Clear Flag 2/3/4/5/7B 02
-db $CA, $49, $02                ;Set Flag 2/3/4/5/49 02
-db $CA, $4A, $02                ;Set Flag 2/3/4/5/4A 02
-db $CA, $4B, $02                ;Set Flag 2/3/4/5/4B 02
-db $CA, $4C, $02                ;Set Flag 2/3/4/5/4C 02
-db $CA, $4D, $02                ;Set Flag 2/3/4/5/4D 02
+; db $A4, $25                     ;Turn on bit 20 at address 0x7e0a38
+db $CB, $0E, $00                ;Turn off bit 40 at address  0x7e0a55
+db $CA, $0F, $00                ;Turn on bit 80 at address  0x7e0a55
+db $CB, $1A, $03                ;Turn off bit 04 at address  0x7e0ab7
+db $CB, $44, $02                ;Turn off bit 10 at address  0x7e0a9c
+db $CB, $45, $02                ;Turn off bit 20 at address  0x7e0a9c
+db $CB, $46, $02                ;Turn off bit 40 at address  0x7e0a9c
+db $CB, $47, $02                ;Turn off bit 80 at address  0x7e0a9c
+db $CB, $48, $02                ;Turn off bit 01 at address  0x7e0a9d
+db $CB, $7B, $02                ;Turn off bit 08 at address  0x7e0aa3
+db $CA, $49, $02                ;Turn on bit 02 at address  0x7e0a9d
+db $CA, $4A, $02                ;Turn on bit 04 at address  0x7e0a9d
+db $CA, $4B, $02                ;Turn on bit 08 at address  0x7e0a9d
+db $CA, $4C, $02                ;Turn on bit 10 at address  0x7e0a9d
+db $CA, $4D, $02                ;Turn on bit 20 at address  0x7e0a9d
 db $09                          ;Player Show
 db $C3, $02
 db $14                          ;Player pose: face down, left hand forward

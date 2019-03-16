@@ -33,9 +33,9 @@ db $09                          ;Player Show
 db $72                          ;Medium pause
 db $03                          ;Player Move Down
 db $A5, $FE                     ;Clear Event Flag 1FE
-db $A4, $F3                     ;Set Event Flag 1F3
-db $CB, $08, $00                ;Clear Flag 2/3/4/5/08 00
-db $A2, $83                     ;Set Event Flag 083
+db $A4, $F3                     ;Turn on bit 08 at address 0x7e0a52
+db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
+db $A2, $83                     ;Turn on bit 08 at address 0x7e0a24
 db $CC, $27                  ;Custom destination flag 27
 db $FF                          ;End Event
 

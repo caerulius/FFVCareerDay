@@ -61,6 +61,7 @@ def run_decrypt():
     
     
 def run_encrypt(passed_dict):
+    return_text = ''
     for x in passed_dict.keys():
         counter = 0
         text_list = []
@@ -80,5 +81,20 @@ def run_encrypt(passed_dict):
             text_asar = text_asar + " $" + i + ","
         text_asar = text_asar[:-1]
         print("; "+x)
+        return_text = return_text + "; "+x +"\n"
         print('org $'+passed_dict[x])
+        return_text = return_text + 'org $'+passed_dict[x] +"\n"
         print(text_asar)
+        return_text = return_text + text_asar + "\n"
+    return return_text
+        
+        
+def generate_keyitems():
+    print("Writing file to career_day/asm/asm_patches/text_tables/key_item_tables.asm...")
+    write_text = ''
+    write_text = write_text + '; Key Items (in menu) text\n'
+    write_text = write_text + run_encrypt(key_item_table)
+    write_text = write_text + '; Key Items (for rewards/chests) text\n'
+    write_text = write_text + run_encrypt(key_item_reward_table)
+    with open('../../career_day/asm/asm_patches/text_tables/key_item_tables.asm','w') as file:
+        file.write(write_text)

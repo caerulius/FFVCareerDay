@@ -4,6 +4,12 @@
 ; randomizer testing
 incsrc r-patch.asm
 incsrc boss-patch.asm
+
+; testing
+incsrc open_world/scratchpad.asm
+incsrc open_world/test_constants.asm
+
+
 ; incsrc balancing/boss_balancing.asm
 
 ; init
@@ -239,8 +245,5 @@ incsrc text_tables/ability_chest_table.asm
 incsrc text_tables/job_shop_table.asm
 incsrc text_tables/job_chest_table.asm
 incsrc text_tables/magic_chest_table.asm
-incsrc text_tables/key_item_table.asm
-incsrc text_tables/key_item_reward_table.asm
+incsrc text_tables/key_item_tables.asm
 
-; testing
-incsrc misc/scratchpad.asm

@@ -19,7 +19,7 @@ db $CE, $03, $01                ;Play next 01 bytes 03 times
 db $01                          ;Player Move Up
 db $72
 db $E3, $EC, $00, $8B, $34, $00 ;Inter-map cutscene? EC 00 8B 34 00
-db $A2, $76                     ;Set Event Flag 076
+; db $A2, $76                     ;Set Event Flag 076
 db $CD, $E4, $00                ;Run event index 00E4
 db $10
 db $C5                          ;<unknown>
