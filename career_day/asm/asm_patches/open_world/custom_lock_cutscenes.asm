@@ -74,8 +74,8 @@ db $FF
 org $C8D2D7
 db $C8, $BD, $04                ;Display Message/Text/Dialogue BB 04
 db $03
-db $A5, $70            ; set address 000A42 bit OFF 01
-db $A5, $71            ; set address 000A42 bit OFF 02
+db $A5, $68            ; set address 000A42 bit OFF 01
+db $A5, $69            ; set address 000A42 bit OFF 02
 db $FF
 ; Tablet required
 org $E2587A
@@ -85,8 +85,8 @@ db $6D, $88, $8D, $96, $7E, $87, $88, $8E, $80, $81, $96, $73, $7A, $7B, $85, $7
 org $C8D3CC
 db $C8, $BC, $04                ;Display Message/Text/Dialogue BB 04
 db $01
-db $A5, $70            ; set address 000A42 bit OFF 01
-db $A5, $71            ; set address 000A42 bit OFF 02
+db $A5, $68            ; set address 000A42 bit OFF 01
+db $A5, $69            ; set address 000A42 bit OFF 02
 db $FF
 
 ; Tablet accepted

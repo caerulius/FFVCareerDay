@@ -35,13 +35,8 @@ db $71                          ;Short pause
 db $14                          ;Player pose: face down, left hand forward
 db $20                          ;Player pose: face down, left hand raised out
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
-if !vanillarewards == 1
-	db $C8, $56, $07                ;Display Message/Text/Dialogue 56 07
-	db $AC, $45                     ;Add Magic Meteo
-else
-	db $DE, $21				; set up reward
-	db $DF					; call text handler
-endif
+db $DE, $7C ; custom reward
+db $DF
 db $E4, $B4                     ;Unknown
 db $24                          ;Player pose: face down, right hand raised in
 db $A2, $91                     ;Turn on bit 02 at address 0x7e0a26

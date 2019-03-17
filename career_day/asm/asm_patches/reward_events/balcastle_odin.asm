@@ -8,13 +8,8 @@ db $7C                          ;<Unknown>
 db $80, $0A                     ;Sprite 080 do event: Hide
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 
-if !vanillarewards == 1
-	db $C8, $F0, $02                ;Display Message/Text/Dialogue F0 02 		; <---reward--->
-	db $AC, $53                     ;Add Magic Odin 		; <---reward--->
-else
-	db $DE, $14				; set up reward
-	db $DF					; call text handler
-endif
+db $DE, $7B ; custom reward
+db $DF
 
 db $E4, $B4                     ;Unknown
 db $06                          ;Player Bounce in Place

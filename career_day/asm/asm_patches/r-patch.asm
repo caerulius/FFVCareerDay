@@ -4,755 +4,755 @@ hirom
 ;================
 
 org $E79F00
-db $11, $50, $FF, $23
+db $0D, $02, $93, $4d
 ;=================
 ;Chests and Events
 ;=================
 org $C0FAB2 
-db $40, $C9
+db $60, $11
 org $C0FAB4 
-db $40, $81
+db $60, $40
 org $C0FAB6 
-db $60, $59
+db $40, $2C
 org $C0FAB8 
-db $20, $33
+db $60, $87
 org $C0FABA 
-db $60, $7D
+db $60, $6D
 org $C0FABC 
-db $60, $3C
+db $60, $7A
 org $C0FABE 
-db $20, $2F
+db $50, $12
 org $C0FAC0 
-db $40, $B4
+db $20, $3C
 org $C0FAC2 
-db $40, $E7
+db $40, $5F
 org $C0FAC4 
-db $60, $28
+db $40, $53
 org $C0FAC6 
-db $20, $26
+db $20, $30
 org $C0FAC8 
-db $40, $0F
+db $40, $43
 org $C0FACA 
-db $60, $74
+db $60, $5A
 org $C0FACC 
-db $40, $18
+db $40, $A2
 org $C0FACE 
-db $40, $93
+db $40, $62
 org $C0FAD0 
-db $50, $01
+db $40, $B3
 org $C0FAD2 
-db $40, $CA
+db $40, $0F
 org $C0FAD4 
-db $40, $13
+db $40, $88
 org $C0FAD6 
 db $60, $7B
 org $C0FAD8 
-db $60, $7A
+db $60, $0E
 org $C0FADA 
-db $20, $92
+db $40, $5E
 org $C0FADC 
-db $40, $A2
+db $20, $43
 org $C0FADE 
-db $20, $9D
-org $C0FAE0 
-db $20, $35
-org $C0FAE2 
-db $60, $40
-org $C0FAE4 
-db $40, $B9
-org $C0FAE6 
-db $20, $9C
-org $C0FAE8 
-db $40, $09
-org $C0FAEA 
-db $40, $05
-org $C0FAEC 
-db $20, $91
-org $C0FAEE 
-db $40, $AA
-org $C0FAF0 
-db $40, $F5
-org $C0FAF2 
-db $20, $95
-org $C0FAF4 
-db $20, $86
-org $C0FAF6 
-db $60, $44
-org $C0FAF8 
-db $40, $9E
-org $C0FAFA 
-db $40, $3E
-org $C0FAFC 
-db $60, $61
-org $C0FAFE 
-db $40, $A4
-org $C0FB00 
-db $60, $1F
-org $C0FB02 
-db $40, $60
-org $C0FB04 
-db $40, $90
-org $C0FB06 
-db $20, $2C
-org $C0FB08 
-db $50, $15
-org $C0FB0A 
-db $40, $BB
-org $C0FB0C 
-db $40, $C3
-org $C0FB0E 
 db $40, $41
+org $C0FAE0 
+db $60, $7D
+org $C0FAE2 
+db $50, $03
+org $C0FAE4 
+db $60, $45
+org $C0FAE6 
+db $20, $4A
+org $C0FAE8 
+db $40, $EB
+org $C0FAEA 
+db $60, $73
+org $C0FAEC 
+db $40, $A4
+org $C0FAEE 
+db $50, $07
+org $C0FAF0 
+db $20, $36
+org $C0FAF2 
+db $60, $32
+org $C0FAF4 
+db $60, $0F
+org $C0FAF6 
+db $60, $10
+org $C0FAF8 
+db $40, $14
+org $C0FAFA 
+db $40, $4F
+org $C0FAFC 
+db $40, $B8
+org $C0FAFE 
+db $20, $12
+org $C0FB00 
+db $40, $1D
+org $C0FB02 
+db $20, $1F
+org $C0FB04 
+db $40, $B3
+org $C0FB06 
+db $20, $52
+org $C0FB08 
+db $40, $46
+org $C0FB0A 
+db $60, $68
+org $C0FB0C 
+db $40, $50
+org $C0FB0E 
+db $60, $6B
 org $C0FB10 
-db $40, $13
+db $20, $26
 org $C0FB12 
-db $40, $6C
+db $20, $5A
 org $C0FB14 
-db $40, $85
+db $50, $04
 org $C0FB16 
-db $20, $34
+db $40, $29
 org $C0FB18 
-db $50, $14
+db $40, $52
 org $C0FB1A 
-db $60, $41
+db $20, $1A
 org $C0FB1C 
-db $40, $34
+db $20, $33
 org $C0FB1E 
-db $40, $B7
+db $40, $1A
 org $C0FB20 
-db $20, $2A
+db $20, $4E
 org $C0FB22 
-db $40, $32
+db $40, $64
 org $C0FB24 
-db $40, $10
+db $60, $80
 org $C0FB26 
-db $40, $0B
+db $20, $48
 org $C0FB28 
 db $40, $61
 org $C0FB2A 
 db $40, $63
 org $D13212 
-db $40, $D0
+db $60, $44
 org $D13216 
-db $40, $4D
+db $50, $11
 org $D1321A 
-db $40, $58
-org $D1321E 
-db $40, $33
-org $D13222 
-db $60, $39
-org $D13226 
-db $60, $4D
-org $D1322A 
-db $40, $BA
-org $D1322E 
-db $60, $77
-org $D13232 
-db $20, $1B
-org $D13236 
-db $20, $21
-org $D1323A 
-db $60, $1C
-org $D1323E 
-db $20, $55
-org $D13242 
-db $20, $25
-org $D13246 
-db $40, $1B
-org $D1324A 
-db $40, $1A
-org $D1324E 
-db $60, $06
-org $D13252 
-db $40, $8D
-org $D13256 
-db $40, $0A
-org $D1325A 
-db $40, $04
-org $D1325E 
-db $40, $B0
-org $D13262 
-db $20, $32
-org $D13266 
-db $40, $BB
-org $D1326A 
-db $20, $8B
-org $D1326E 
-db $40, $4D
-org $D13272 
-db $60, $32
-org $D13276 
-db $40, $3B
-org $D1327A 
-db $40, $05
-org $D1327E 
-db $40, $26
-org $D13282 
-db $20, $99
-org $D13286 
-db $20, $9F
-org $D1328A 
-db $40, $5D
-org $D1328E 
-db $60, $3A
-org $D13292 
-db $40, $3A
-org $D13296 
-db $50, $0E
-org $D1329A 
-db $40, $9C
-org $D1329E 
-db $60, $33
-org $D132A2 
-db $40, $25
-org $D132A6 
-db $60, $7E
-org $D132AA 
-db $60, $30
-org $D132AE 
-db $40, $10
-org $D132B2 
-db $40, $96
-org $D132B6 
-db $40, $FB
-org $D132BA 
-db $40, $C0
-org $D132BE 
-db $40, $02
-org $D132C2 
-db $40, $F8
-org $D132C6 
-db $20, $31
-org $D132CA 
-db $20, $9B
-org $D132CE 
-db $40, $6B
-org $D132D2 
-db $20, $89
-org $D132D6 
-db $40, $99
-org $D132DA 
-db $40, $C7
-org $D132DE 
-db $40, $C0
-org $D132E2 
-db $40, $EA
-org $D132E6 
 db $20, $15
-org $D132EA 
-db $20, $87
-org $D132EE 
-db $40, $07
-org $D132F2 
-db $20, $4E
-org $D132F6 
-db $40, $6B
-org $D132FA 
-db $40, $FD
-org $D132FE 
-db $20, $82
-org $D13302 
-db $50, $0A
-org $D13306 
-db $40, $88
-org $D1330A 
-db $40, $8A
-org $D1330E 
-db $40, $0E
-org $D13312 
-db $60, $3B
-org $D13316 
-db $50, $04
-org $D1331A 
-db $40, $88
-org $D1331E 
-db $40, $C8
-org $D13322 
-db $40, $AB
-org $D13326 
-db $20, $4C
-org $D1332A 
-db $50, $0F
-org $D1332E 
-db $20, $45
-org $D13332 
-db $60, $78
-org $D13336 
-db $40, $18
-org $D1333A 
-db $60, $76
-org $D1333E 
-db $40, $C2
-org $D13342 
-db $40, $22
-org $D13346 
-db $20, $27
-org $D1334A 
-db $20, $5D
-org $D1334E 
-db $40, $F2
-org $D13352 
-db $60, $24
-org $D13356 
-db $40, $84
-org $D1335A 
-db $60, $29
-org $D1335E 
-db $60, $27
-org $D13362 
-db $20, $90
-org $D13366 
-db $20, $1F
-org $D1336A 
-db $40, $32
-org $D1336E 
-db $20, $9E
-org $D13372 
-db $40, $99
-org $D13376 
-db $20, $85
-org $D1337A 
-db $40, $C4
-org $D1337E 
-db $40, $30
-org $D13382 
-db $40, $15
-org $D13386 
-db $60, $43
-org $D1338A 
-db $60, $80
-org $D1338E 
-db $60, $20
-org $D13392 
-db $50, $0D
-org $D13396 
-db $40, $AB
-org $D1339A 
-db $40, $36
-org $D1339E 
-db $40, $4A
-org $D133A2 
-db $40, $21
-org $D133A6 
-db $40, $69
-org $D133AA 
-db $20, $2E
-org $D133AE 
-db $20, $19
-org $D133B2 
-db $40, $FA
-org $D133B6 
-db $40, $35
-org $D133BA 
-db $40, $B0
-org $D133BE 
-db $40, $34
-org $D133C2 
-db $40, $1A
-org $D133C6 
-db $60, $38
-org $D133CA 
-db $60, $73
-org $D133CE 
-db $40, $92
-org $D133D2 
-db $40, $37
-org $D133D6 
-db $20, $93
-org $D133DA 
-db $50, $09
-org $D133DE 
-db $20, $8F
-org $D133E2 
-db $40, $CE
-org $D133E6 
-db $40, $CF
-org $D133EA 
-db $40, $6B
-org $D133EE 
-db $20, $20
-org $D133F2 
-db $20, $28
-org $D133F6 
-db $40, $B1
-org $D133FA 
-db $40, $92
-org $D133FE 
-db $40, $51
-org $D13402 
-db $20, $83
-org $D13406 
-db $60, $6B
-org $D1340A 
-db $20, $8A
-org $D1340E 
-db $20, $8C
-org $D13412 
-db $20, $88
-org $D13416 
-db $40, $68
-org $D1341A 
-db $40, $F5
-org $D1341E 
-db $40, $59
-org $D13422 
-db $20, $2B
-org $D13426 
-db $60, $31
-org $D1342A 
-db $20, $98
-org $D1342E 
-db $20, $18
-org $D13432 
-db $40, $09
-org $D13436 
-db $40, $9E
-org $D1343A 
-db $60, $1E
-org $D1343E 
-db $40, $F4
-org $D13442 
-db $40, $11
-org $D13446 
-db $60, $19
-org $D1344A 
-db $40, $BF
-org $D1344E 
-db $20, $1C
-org $D13452 
-db $60, $6E
-org $D13456 
-db $20, $29
-org $D1345A 
-db $40, $4C
-org $D1345E 
-db $40, $56
-org $D13462 
-db $40, $F4
-org $D13466 
-db $40, $06
-org $D1346A 
-db $40, $BA
-org $D1346E 
+org $D1321E 
 db $60, $08
-org $D13472 
-db $40, $B9
-org $D13476 
-db $40, $93
-org $D1347A 
-db $20, $96
-org $D1347E 
-db $20, $44
-org $D13482 
-db $40, $4D
-org $D13486 
-db $40, $A5
-org $D1348A 
-db $40, $E3
-org $D1348E 
-db $20, $9A
-org $D13492 
-db $60, $07
-org $D13496 
-db $50, $06
-org $D1349A 
-db $40, $B5
-org $D1349E 
-db $40, $CE
-org $D134A2 
-db $60, $1D
-org $D134A6 
-db $40, $3B
-org $D134AA 
-db $60, $16
-org $D134AE 
-db $60, $42
-org $D134B2 
-db $40, $0F
-org $D134B6 
-db $40, $F5
-org $D134BA 
-db $20, $8D
-org $D134BE 
-db $40, $23
-org $D134C2 
-db $40, $4B
-org $D134C6 
-db $40, $F2
-org $D134CA 
-db $50, $08
-org $D134CE 
-db $40, $31
-org $D134D2 
-db $40, $FD
-org $D134D6 
-db $40, $8C
-org $D134DA 
-db $40, $09
-org $D134DE 
-db $20, $58
-org $D134E2 
-db $20, $8E
-org $D134E6 
-db $20, $37
-org $D134EA 
-db $40, $92
-org $D134EE 
-db $40, $69
-org $D134F2 
-db $20, $2D
-org $D134F6 
-db $20, $22
-org $D134FA 
-db $50, $10
-org $D134FE 
-db $40, $F6
-org $D13502 
-db $60, $21
-org $D13506 
-db $60, $81
-org $D1350A 
-db $40, $06
-org $D1350E 
-db $40, $33
-org $D13512 
-db $40, $18
-org $D13516 
-db $20, $1D
-org $D1351A 
-db $40, $AD
-org $D1351E 
-db $40, $AD
-org $D13522 
-db $60, $1A
-org $D13526 
-db $60, $4B
-org $D1352A 
-db $40, $AE
-org $D1352E 
-db $40, $FD
-org $D13532 
-db $40, $1F
-org $D13536 
+org $D13222 
 db $20, $17
-org $D1353A 
-db $40, $02
-org $D1353E 
-db $40, $0E
-org $D13542 
+org $D13226 
 db $60, $2A
-org $D13546 
-db $20, $59
-org $D1354A 
-db $40, $3A
-org $D1354E 
-db $40, $AE
-org $D13552 
-db $20, $24
-org $D13556 
-db $40, $4F
-org $D1355A 
-db $40, $E0
-org $D1355E 
-db $40, $C1
-org $D13562 
-db $40, $A8
-org $D13566 
-db $20, $1E
-org $D1356A 
-db $60, $60
-org $D1356E 
-db $40, $A5
-org $D13572 
-db $40, $92
-org $D13576 
-db $20, $14
-org $D1357A 
-db $60, $18
-org $D1357E 
-db $40, $AE
-org $D13582 
-db $40, $1C
-org $D13586 
-db $40, $A2
-org $D1358A 
-db $20, $97
-org $D1358E 
-db $40, $50
-org $D13592 
-db $20, $84
-org $D13596 
-db $40, $40
-org $D1359A 
-db $40, $6D
-org $D1359E 
-db $40, $62
-org $D135A2 
-db $40, $CA
-org $D135A6 
-db $60, $34
-org $D135AA 
-db $60, $45
-org $D135AE 
-db $40, $A0
-org $D135B2 
-db $60, $6A
-org $D135B6 
-db $40, $84
-org $D135BA 
-db $40, $6B
-org $D135BE 
-db $40, $8E
-org $D135C2 
-db $40, $CA
-org $D135C6 
-db $40, $84
-org $D135CA 
-db $60, $75
-org $D135CE 
-db $20, $13
-org $D135D2 
-db $40, $8A
-org $D135D6 
-db $60, $68
-org $D135DA 
-db $40, $B0
-org $D135DE 
-db $50, $13
-org $D135E2 
-db $40, $0E
-org $D135E6 
+org $D1322A 
+db $60, $4D
+org $D1322E 
+db $20, $8F
+org $D13232 
+db $20, $20
+org $D13236 
+db $20, $46
+org $D1323A 
+db $60, $59
+org $D1323E 
+db $40, $C4
+org $D13242 
+db $50, $01
+org $D13246 
 db $60, $1B
-org $D135EA 
+org $D1324A 
+db $60, $21
+org $D1324E 
+db $60, $0D
+org $D13252 
+db $60, $79
+org $D13256 
+db $40, $08
+org $D1325A 
+db $60, $43
+org $D1325E 
+db $20, $25
+org $D13262 
+db $20, $3E
+org $D13266 
+db $40, $FB
+org $D1326A 
+db $60, $1E
+org $D1326E 
+db $40, $68
+org $D13272 
+db $20, $2C
+org $D13276 
+db $60, $0C
+org $D1327A 
+db $20, $4F
+org $D1327E 
+db $60, $6E
+org $D13282 
 db $40, $2A
-org $D135EE 
-db $40, $4D
-org $D135F2 
-db $60, $5A
-org $D135F6 
-db $60, $70
-org $D135FA 
-db $40, $84
-org $D135FE 
+org $D13286 
+db $40, $15
+org $D1328A 
+db $20, $37
+org $D1328E 
+db $20, $59
+org $D13292 
 db $40, $AF
+org $D13296 
+db $50, $00
+org $D1329A 
+db $60, $7C
+org $D1329E 
+db $60, $09
+org $D132A2 
+db $40, $66
+org $D132A6 
+db $20, $5D
+org $D132AA 
+db $20, $41
+org $D132AE 
+db $60, $48
+org $D132B2 
+db $20, $4D
+org $D132B6 
+db $40, $C6
+org $D132BA 
+db $60, $1F
+org $D132BE 
+db $40, $5F
+org $D132C2 
+db $40, $9D
+org $D132C6 
+db $60, $4B
+org $D132CA 
+db $60, $41
+org $D132CE 
+db $40, $10
+org $D132D2 
+db $40, $A8
+org $D132D6 
+db $40, $5F
+org $D132DA 
+db $60, $6A
+org $D132DE 
+db $40, $CA
+org $D132E2 
+db $20, $22
+org $D132E6 
+db $40, $B9
+org $D132EA 
+db $50, $0C
+org $D132EE 
+db $40, $9C
+org $D132F2 
+db $60, $6F
+org $D132F6 
+db $60, $72
+org $D132FA 
+db $40, $96
+org $D132FE 
+db $40, $CE
+org $D13302 
+db $60, $06
+org $D13306 
+db $40, $40
+org $D1330A 
+db $40, $E5
+org $D1330E 
+db $40, $5C
+org $D13312 
+db $20, $2E
+org $D13316 
+db $60, $33
+org $D1331A 
+db $40, $42
+org $D1331E 
+db $40, $D0
+org $D13322 
+db $40, $12
+org $D13326 
+db $60, $6C
+org $D1332A 
+db $40, $0C
+org $D1332E 
+db $60, $70
+org $D13332 
+db $20, $56
+org $D13336 
+db $20, $49
+org $D1333A 
+db $40, $14
+org $D1333E 
+db $20, $32
+org $D13342 
+db $50, $09
+org $D13346 
+db $60, $12
+org $D1334A 
+db $40, $EB
+org $D1334E 
+db $60, $27
+org $D13352 
+db $60, $38
+org $D13356 
+db $60, $1C
+org $D1335A 
+db $60, $58
+org $D1335E 
+db $40, $FB
+org $D13362 
+db $20, $2F
+org $D13366 
+db $40, $F5
+org $D1336A 
+db $20, $4B
+org $D1336E 
+db $20, $18
+org $D13372 
+db $50, $05
+org $D13376 
+db $50, $15
+org $D1337A 
+db $50, $0F
+org $D1337E 
+db $60, $13
+org $D13382 
+db $40, $5E
+org $D13386 
+db $40, $F6
+org $D1338A 
+db $40, $4E
+org $D1338E 
+db $40, $91
+org $D13392 
+db $40, $65
+org $D13396 
+db $40, $5F
+org $D1339A 
+db $40, $20
+org $D1339E 
+db $20, $14
+org $D133A2 
+db $60, $0A
+org $D133A6 
+db $60, $30
+org $D133AA 
+db $40, $CC
+org $D133AE 
+db $20, $23
+org $D133B2 
+db $60, $24
+org $D133B6 
+db $20, $53
+org $D133BA 
+db $40, $AB
+org $D133BE 
+db $20, $3F
+org $D133C2 
+db $40, $B9
+org $D133C6 
+db $40, $50
+org $D133CA 
+db $40, $94
+org $D133CE 
+db $40, $97
+org $D133D2 
+db $20, $31
+org $D133D6 
+db $20, $28
+org $D133DA 
+db $40, $3C
+org $D133DE 
+db $50, $10
+org $D133E2 
+db $60, $0B
+org $D133E6 
+db $20, $35
+org $D133EA 
+db $40, $02
+org $D133EE 
+db $20, $29
+org $D133F2 
+db $20, $21
+org $D133F6 
+db $60, $15
+org $D133FA 
+db $40, $2A
+org $D133FE 
+db $40, $04
+org $D13402 
+db $40, $98
+org $D13406 
+db $20, $5B
+org $D1340A 
+db $60, $1A
+org $D1340E 
+db $20, $4C
+org $D13412 
+db $40, $FC
+org $D13416 
+db $40, $F2
+org $D1341A 
+db $60, $50
+org $D1341E 
+db $60, $20
+org $D13422 
+db $60, $49
+org $D13426 
+db $60, $4A
+org $D1342A 
+db $20, $13
+org $D1342E 
+db $60, $28
+org $D13432 
+db $20, $44
+org $D13436 
+db $40, $5A
+org $D1343A 
+db $60, $42
+org $D1343E 
+db $20, $1E
+org $D13442 
+db $40, $C3
+org $D13446 
+db $20, $27
+org $D1344A 
+db $20, $38
+org $D1344E 
+db $40, $33
+org $D13452 
+db $50, $08
+org $D13456 
+db $20, $1B
+org $D1345A 
+db $60, $07
+org $D1345E 
+db $40, $A6
+org $D13462 
+db $40, $81
+org $D13466 
+db $40, $E3
+org $D1346A 
+db $40, $9D
+org $D1346E 
+db $20, $45
+org $D13472 
+db $60, $34
+org $D13476 
+db $60, $7E
+org $D1347A 
+db $40, $3C
+org $D1347E 
+db $20, $58
+org $D13482 
+db $40, $83
+org $D13486 
+db $40, $88
+org $D1348A 
+db $40, $65
+org $D1348E 
+db $40, $51
+org $D13492 
+db $40, $4E
+org $D13496 
+db $40, $A5
+org $D1349A 
+db $60, $76
+org $D1349E 
+db $20, $9E
+org $D134A2 
+db $40, $AA
+org $D134A6 
+db $20, $34
+org $D134AA 
+db $40, $5D
+org $D134AE 
+db $60, $85
+org $D134B2 
+db $40, $AA
+org $D134B6 
+db $60, $53
+org $D134BA 
+db $40, $47
+org $D134BE 
+db $20, $84
+org $D134C2 
+db $40, $96
+org $D134C6 
+db $60, $71
+org $D134CA 
+db $40, $A6
+org $D134CE 
+db $40, $C8
+org $D134D2 
+db $20, $19
+org $D134D6 
+db $60, $51
+org $D134DA 
+db $50, $14
+org $D134DE 
+db $40, $86
+org $D134E2 
+db $60, $75
+org $D134E6 
+db $40, $F9
+org $D134EA 
+db $40, $1C
+org $D134EE 
+db $60, $16
+org $D134F2 
+db $20, $50
+org $D134F6 
+db $20, $39
+org $D134FA 
+db $20, $1D
+org $D134FE 
+db $40, $12
+org $D13502 
+db $40, $2E
+org $D13506 
+db $40, $A1
+org $D1350A 
+db $40, $42
+org $D1350E 
+db $20, $24
+org $D13512 
+db $40, $95
+org $D13516 
+db $40, $82
+org $D1351A 
+db $50, $0E
+org $D1351E 
+db $40, $B0
+org $D13522 
+db $60, $69
+org $D13526 
+db $20, $2B
+org $D1352A 
+db $40, $06
+org $D1352E 
+db $40, $83
+org $D13532 
+db $50, $0B
+org $D13536 
+db $20, $3D
+org $D1353A 
+db $40, $93
+org $D1353E 
+db $40, $32
+org $D13542 
+db $60, $3A
+org $D13546 
+db $20, $47
+org $D1354A 
+db $60, $78
+org $D1354E 
+db $40, $14
+org $D13552 
+db $40, $2C
+org $D13556 
+db $60, $35
+org $D1355A 
+db $60, $39
+org $D1355E 
+db $20, $51
+org $D13562 
+db $60, $1D
+org $D13566 
+db $40, $EB
+org $D1356A 
+db $40, $CE
+org $D1356E 
+db $20, $42
+org $D13572 
+db $40, $83
+org $D13576 
+db $20, $54
+org $D1357A 
+db $40, $0F
+org $D1357E 
+db $40, $0B
+org $D13582 
+db $40, $44
+org $D13586 
+db $40, $5A
+org $D1358A 
+db $40, $96
+org $D1358E 
+db $50, $13
+org $D13592 
+db $40, $99
+org $D13596 
+db $40, $F3
+org $D1359A 
+db $20, $2D
+org $D1359E 
+db $40, $22
+org $D135A2 
+db $40, $9E
+org $D135A6 
+db $60, $52
+org $D135AA 
+db $40, $4D
+org $D135AE 
+db $40, $60
+org $D135B2 
+db $20, $5E
+org $D135B6 
+db $60, $3B
+org $D135BA 
+db $60, $3D
+org $D135BE 
+db $40, $34
+org $D135C2 
+db $40, $16
+org $D135C6 
+db $40, $45
+org $D135CA 
+db $60, $22
+org $D135CE 
+db $60, $18
+org $D135D2 
+db $20, $2A
+org $D135D6 
+db $40, $C7
+org $D135DA 
+db $60, $77
+org $D135DE 
+db $60, $54
+org $D135E2 
+db $60, $3C
+org $D135E6 
+db $40, $CF
+org $D135EA 
+db $50, $0A
+org $D135EE 
+db $50, $02
+org $D135F2 
+db $60, $82
+org $D135F6 
+db $40, $11
+org $D135FA 
+db $60, $31
+org $D135FE 
+db $40, $AB
 ;=====
 ;shops
 ;=====
 org $D12D40
-db $03, $F4, $9B, $00, $00, $00, $00, $00, $00
+db $03, $4A, $94, $08, $00, $00, $00, $00, $00
 org $D12D49
-db $03, $81, $32, $5A, $00, $00, $00, $00, $00
+db $07, $17, $29, $60, $00, $00, $00, $00, $00
 org $D12D52
-db $00, $5C, $1A, $00, $00, $00, $00, $00, $00
+db $03, $FA, $AD, $00, $00, $00, $00, $00, $00
 org $D12D5B
-db $03, $22, $5B, $47, $3B, $13, $EB, $00, $00
+db $07, $4C, $83, $14, $0D, $61, $74, $00, $00
 org $D12D64
-db $03, $6B, $23, $9D, $8C, $9B, $00, $00, $00
+db $00, $40, $92, $57, $5C, $00, $00, $00, $00
 org $D12D6D
-db $07, $3D, $35, $7C, $6D, $07, $00, $00, $00
+db $03, $E7, $3E, $A6, $0A, $AD, $00, $00, $00
 org $D12D76
-db $03, $AD, $10, $3C, $09, $E5, $A0, $F7, $8B
+db $03, $9C, $A3, $1D, $62, $40, $94, $50, $B7
 org $D12D7F
-db $03, $99, $9F, $8F, $04, $E4, $BD, $95, $9B
+db $03, $43, $E2, $67, $02, $83, $40, $4E, $FC
 org $D12D88
-db $00, $52, $3C, $16, $43, $00, $00, $00, $00
+db $00, $1C, $8B, $55, $00, $00, $00, $00, $00
 org $D12D91
-db $07, $6F, $0C, $15, $22, $58, $00, $00, $00
+db $03, $55, $2C, $4D, $2B, $02, $00, $00, $00
 org $D12D9A
-db $07, $71, $4C, $4A, $02, $17, $11, $14, $00
+db $03, $8E, $29, $13, $89, $FD, $81, $B0, $00
 org $D12DA3
-db $03, $AC, $33, $FE, $18, $98, $00, $00, $00
+db $00, $16, $3A, $94, $9B, $97, $3B, $00, $00
 org $D12DAC
-db $00, $30, $94, $12, $00, $00, $00, $00, $00
+db $03, $A5, $98, $10, $00, $00, $00, $00, $00
 org $D12DB5
-db $00, $56, $3D, $53, $23, $38, $47, $5B, $3A
+db $03, $34, $2C, $FC, $08, $C2, $1B, $E3, $00
 org $D12DBE
-db $00, $49, $46, $39, $48, $4D, $36, $57, $3E
+db $03, $F0, $AD, $0D, $1F, $E0, $35, $91, $8F
 org $D12DC7
-db $00, $54, $41, $4F, $40, $3F, $42, $4A, $00
+db $00, $8D, $91, $83, $89, $86, $90, $8A, $85
 org $D12DD0
-db $03, $94, $26, $A0, $2C, $22, $AA, $0C, $A3
+db $03, $32, $36, $04, $61, $ED, $2F, $1B, $82
 org $D12DD9
-db $07, $09, $52, $72, $51, $0D, $54, $00, $00
+db $03, $EB, $07, $29, $A3, $F9, $29, $00, $00
 org $D12DE2
-db $03, $EB, $43, $A7, $5A, $00, $00, $00, $00
+db $00, $9D, $9A, $99, $98, $00, $00, $00, $00
 org $D12DEB
-db $03, $A6, $B5, $00, $00, $00, $00, $00, $00
+db $00, $96, $87, $00, $00, $00, $00, $00, $00
 org $D12DFD
-db $07, $83, $10, $05, $00, $00, $00, $00, $00
+db $03, $51, $A3, $9B, $00, $00, $00, $00, $00
 org $D12E18
-db $03, $B8, $81, $84, $9E, $28, $EA, $00, $00
+db $00, $9F, $88, $8E, $82, $93, $8C, $00, $00
 org $D12E21
-db $03, $82, $B0, $5D, $00, $00, $00, $00, $00
+db $03, $83, $5F, $5F, $00, $00, $00, $00, $00
 org $D12E2A
-db $03, $46, $3A, $83, $5E, $88, $2F, $F5, $B7
+db $03, $5D, $11, $44, $0F, $B1, $12, $2A, $10
 org $D12E33
-db $03, $45, $84, $44, $4D, $34, $36, $00, $00
+db $03, $0F, $FC, $1A, $F6, $9B, $00, $00, $00
 org $D12E3C
-db $07, $50, $6C, $00, $00, $00, $00, $00, $00
+db $03, $BC, $44, $00, $00, $00, $00, $00, $00
 org $D12E45
-db $03, $9D, $00, $00, $00, $00, $00, $00, $00
+db $03, $FA, $00, $00, $00, $00, $00, $00, $00
 org $D12E4E
-db $03, $3A, $5D, $04, $AA, $1B, $B9, $9E, $82
+db $03, $FB, $2C, $44, $9D, $A0, $05, $CE, $85
 org $D12E57
-db $07, $48, $12, $0C, $87, $0F, $0B, $00, $00
+db $03, $EB, $A4, $32, $4C, $F6, $37, $B7, $00
 org $D12E60
-db $07, $69, $79, $82, $0A, $85, $13, $11, $53
+db $03, $88, $B7, $29, $EB, $03, $6E, $87, $35
 org $D12E69
-db $03, $23, $23, $21, $BB, $97, $B6, $87, $91
+db $03, $FA, $A0, $4B, $E3, $10, $10, $A7, $E8
 org $D12E72
-db $03, $4C, $A2, $21, $F5, $CA, $4E, $9E, $B2
+db $03, $13, $E2, $1A, $91, $1D, $31, $EA, $48
 org $D12E7B
-db $03, $3D, $BB, $59, $5E, $B0, $82, $48, $00
+db $03, $A7, $C9, $C1, $BF, $2B, $59, $1A, $00
 org $D12E84
-db $03, $83, $93, $AD, $00, $00, $00, $00, $00
+db $03, $EB, $B7, $57, $00, $00, $00, $00, $00
 org $D12E8D
-db $03, $57, $9B, $AA, $00, $00, $00, $00, $00
+db $03, $5D, $69, $51, $03, $00, $00, $00, $00
 org $D12E96
-db $03, $F5, $AC, $3A, $00, $00, $00, $00, $00
+db $03, $4D, $C3, $8A, $00, $00, $00, $00, $00
 org $D12E9F
-db $03, $A1, $26, $00, $00, $00, $00, $00, $00
+db $03, $BB, $F5, $19, $00, $00, $00, $00, $00
 org $D12EA8
-db $03, $9B, $16, $5D, $99, $00, $00, $00, $00
+db $03, $25, $83, $69, $F7, $00, $00, $00, $00
 org $D12EB1
-db $03, $3D, $3C, $3B, $06, $FC, $A8, $A0, $38
+db $03, $3B, $9F, $32, $AA, $9B, $07, $6D, $6E
 org $D12EBA
-db $03, $59, $AC, $A1, $00, $00, $00, $00, $00
+db $03, $40, $56, $00, $00, $00, $00, $00, $00
 org $D12EC3
-db $03, $AA, $A9, $8D, $81, $61, $33, $A2, $C3
+db $03, $6C, $1A, $BB, $AA, $5E, $38, $31, $FB
 org $D12ECC
-db $03, $36, $9C, $A0, $94, $9F, $A6, $5E, $00
+db $03, $CC, $10, $A0, $67, $32, $92, $00, $00
 org $D12ED5
-db $03, $8B, $25, $11, $6B, $BB, $07, $00, $00
+db $03, $39, $38, $FA, $B7, $00, $00, $00, $00
 org $D12EDE
-db $03, $10, $F4, $1E, $CE, $BD, $21, $00, $00
+db $03, $0D, $2C, $E0, $CA, $EC, $A8, $00, $00
 org $D12EF9
-db $03, $B8, $9C, $13, $94, $9F, $31, $3A, $A2
+db $03, $B3, $3A, $36, $CB, $55, $64, $9D, $29
 org $D12F02
-db $03, $9C, $B1, $23, $A2, $11, $00, $00, $00
+db $03, $03, $59, $99, $8B, $A2, $09, $00, $00
 org $D12F0B
-db $03, $9B, $83, $02, $FD, $52, $00, $00, $00
+db $03, $17, $97, $4C, $43, $00, $00, $00, $00
 org $D12F14
-db $03, $8E, $5E, $CB, $63, $3B, $EE, $12, $4B
+db $03, $88, $59, $2D, $EF, $E7, $0D, $AD, $A4
 org $D12F26
-db $03, $A2, $07, $34, $37, $96, $2E, $00, $00
+db $03, $87, $56, $59, $8F, $EA, $8A, $41, $00
 org $D12F2F
-db $03, $27, $88, $0F, $B7, $12, $5F, $AB, $00
+db $03, $63, $F3, $57, $3C, $4B, $6B, $84, $00
 org $D12F38
-db $03, $A0, $C2, $4B, $4D, $BE, $6A, $8F, $64
+db $03, $0A, $07, $AD, $6B, $35, $5E, $2A, $00
 org $D12F41
-db $03, $B3, $6B, $9B, $34, $4B, $B0, $00, $00
+db $03, $57, $1C, $1A, $5D, $F9, $2C, $00, $00
 org $D12F4A
-db $03, $AD, $95, $F4, $AD, $B6, $00, $00, $00
+db $03, $C5, $19, $A7, $B0, $A6, $55, $00, $00
 org $D12F53
-db $03, $8C, $23, $25, $95, $A8, $07, $B1, $A3
+db $03, $5B, $30, $55, $83, $29, $44, $37, $57
 org $D12F5C
-db $03, $EF, $83, $69, $38, $A3, $5B, $3D, $CE
+db $03, $44, $82, $51, $C4, $F9, $1B, $A6, $55
 org $D12F65
-db $03, $8D, $0F, $AA, $38, $93, $39, $31, $F2
+db $03, $8A, $17, $9C, $FC, $CA, $B7, $BA, $B4
 org $D12F6E
-db $03, $E0, $00, $00, $00, $00, $00, $00, $00
+db $03, $5B, $00, $00, $00, $00, $00, $00, $00
 org $D12F77
-db $03, $51, $00, $00, $00, $00, $00, $00, $00
+db $03, $92, $00, $00, $00, $00, $00, $00, $00
 
 ;=====
 ;shop prices
@@ -1169,6 +1169,8 @@ org $D12BD8
 db $01, $0f
 org $D12BDA
 db $01, $05
+org $D12BDC
+db $01, $00
 org $D12BDE
 db $04, $01
 org $D12BE0

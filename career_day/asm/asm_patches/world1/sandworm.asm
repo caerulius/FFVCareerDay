@@ -1,4 +1,4 @@
-hirom
+ hirom
 !base = $C00000
 
 ; sandworm fight
@@ -38,6 +38,8 @@ db $A2, $3E						;Set Event Flag 03E
 db $B5, $8F						;Play Sound Effect Sandworm
 db $CD, $9B, $03				;Run event index 039B
 db $BD, $0A, $FF				;Start Event Battle 0A
+db $DE, $68 ; custom reward
+db $DF
 db $A2, $3C                     ;Turn on bit 10 at address 0x7e0a1b
 db $FF							;End Event
 

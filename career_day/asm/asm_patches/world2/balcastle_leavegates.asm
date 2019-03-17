@@ -180,11 +180,18 @@ db $84, $0A                     ;Sprite 084 do event: Hide
 db $85, $0A                     ;Sprite 085 do event: Hide
 db $87, $0A                     ;Sprite 087 do event: Hide
 db $BD, $1D, $FF                ;Start Event Battle 1D
+db $DE, $72 ; custom reward
+db $DF
 db $A2, $61                     ;Set Event Flag 061
-db $CB, $6B, $02                ;Clear Flag 2/3/4/5/6B 02
+; db $CB, $6B, $02                ;Clear Flag 2/3/4/5/6B 02
 db $FF
 
 
 
 padbyte $00
 pad $C953D7
+
+
+; disable door locking 
+org $D8EBEF
+db $fe, $66, $fb, $1d, $ff, $36, $04, $fb, $00, $ff, $50, $03

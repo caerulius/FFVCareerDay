@@ -19,6 +19,8 @@ db $83, $04                     ;Sprite 083 do event Move Left
 db $CE, $03, $02                ;Play next 02 bytes 03 times
 db $83, $03                     ;Sprite 083 do event Move Down
 db $BD, $94, $FF                ;Start Event Battle 94
+db $DE, $6F ; custom reward
+db $DF
 db $83, $0A                     ;Sprite 083 do event Hide
 ; db $0A                          ;Player Hide
 db $CB, $18, $03                ;Clear Flag 2/3/4/5/18 03

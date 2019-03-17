@@ -22,12 +22,8 @@ org $C0FB70
 db $30, $06
 org $C0FB72
 db $30, !startwithkeyitem1
-org $C0FB74
-db $30, !startwithkeyitem2
-org $C0FB76
-db $30, !startwithkeyitem3
-org $C0FB78
-db $30, !startwithkeyitem4
+
+
 
 
 

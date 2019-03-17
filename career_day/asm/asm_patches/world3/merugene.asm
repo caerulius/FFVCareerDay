@@ -34,6 +34,8 @@ db $73
 ; db $A5, $FE                     ;Clear Event Flag 1FE
 db $87, $0A
 db $BD, $2B, $FF                ;Start Event Battle 2B
+db $DE, $7A ; custom reward
+db $DF
 db $71
 db $03
 ; db $D2, $02, $57, $69, $D5      ;(Map) 02 57 69 D5

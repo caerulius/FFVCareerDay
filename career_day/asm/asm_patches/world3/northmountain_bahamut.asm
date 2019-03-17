@@ -38,6 +38,8 @@ db $86, $20                     ;Sprite 086 do event: face down, left hand raise
 db $84, $20                     ;Sprite 084 do event: face down, left hand raised out
 db $10                          ;Player pose: face up, left hand forward
 db $BD, $34, $FF                ;Start Event Battle 34
+db $DE, $82 ; custom reward
+db $DF
 db $B1, $03                     ;Set Player Sprite 03
 db $B4, $11                     ;Play Background Music (Nothing)
 db $B9, $EC                     ;Toggle Subtracitve Tint by EC

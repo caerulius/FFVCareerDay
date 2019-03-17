@@ -14,6 +14,8 @@ db $82, $05                      ;Sprite 082 do event Bounce
 db $82, $00                      ;Sprite 082 do event Hold
 db $82, $0A                      ;Sprite 082 do event Hide
 db $BD, $1C, $06                        ;Start Event Battle 1C
+db $DE, $71 ; custom reward
+db $DF
 db $B4, $07                     ;Play Background Music Critter Tripper Fritter!
 db $01                                 ;Player Move Up
 db $16                          ;Player pose: face left, standing

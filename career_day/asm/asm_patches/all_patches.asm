@@ -1,16 +1,15 @@
 ; conditionals
 !vanillarewards = 0
 !allareasaccessible = 0
+!allkeysunlocked = 0
 ; randomizer testing
 incsrc r-patch.asm
 incsrc boss-patch.asm
+incsrc key_items-patch.asm
 
 ; testing
 incsrc open_world/scratchpad.asm
 incsrc open_world/test_constants.asm
-
-
-; incsrc balancing/boss_balancing.asm
 
 ; init
 incsrc misc/init.asm
@@ -71,6 +70,7 @@ incsrc world1/cid_on_steamship.asm
 incsrc world1/steamship_accelerator.asm
 incsrc world1/fire_crystal.asm
 incsrc world1/after_karnak_escape.asm
+incsrc world1/karnak_escape_boss.asm ; (keep this order for boss after escape here)
 
 incsrc world1/ifrit.asm
 incsrc world1/byblos.asm                                   
@@ -91,7 +91,7 @@ incsrc world1/steamship_under_crescent.asm
 incsrc world1/airship_discovery.asm
 incsrc world1/cid_on_flying_ship.asm          					  ; 11 Desert
 incsrc world1/ruined_city_rising.asm							  ; 14 Crescent Island
-incsrc world1/cid_mid_after_city_flies.asm                       ; 13 Tycoon Meteor
+incsrc world1/cid_mid_after_city_flies.asm    	                   ; 13 Tycoon Meteor
 incsrc world1/galuf_opening_meteor.asm
 incsrc world1/adamantium_get.asm                               
 incsrc world1/adamantoise.asm                                    ; 14 Crescent Island
@@ -219,6 +219,7 @@ incsrc reward_events/exdeathcastle_carbuncle.asm
 incsrc reward_events/walse_shiva.asm
 incsrc reward_events/watercrystal_obtainshards.asm
 incsrc reward_events/chicken_knife_brave_blade.asm
+incsrc reward_events/walsetower_gogo.asm
 
 
 ; open world

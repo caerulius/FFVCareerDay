@@ -31,6 +31,8 @@ db $BD, $09, $FF                ;Start Event Battle 09
 db $B1, $02                     ;Set Player Sprite 02
 db $DB                          ;Restore Player status
 db $71                          ;Short pause
+db $DE, $60
+db $DF
 db $A4, $2A                     ;Turn on bit 04 at address 0x7e0a39
 db $FF                          ;End Event
 

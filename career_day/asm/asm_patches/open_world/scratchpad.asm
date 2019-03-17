@@ -77,26 +77,64 @@ org $D8FFF0
 db $FB, $B9, $FF, $F4, $00, $FB, $76, $FF, $94, $06, $FF, $00, $00
 
 
-; PYRAMID RIFT TABLET CHECKING
+; RIFT TABLET CHECKING
 org $D90000
-db $FB, $71, $FF, $FF, $00, $FB, $70, $FF, $05, $01, $FF, $07, $01
+db $F7, $02, $FF, $00, $00, $FB, $69, $FF, $FF, $00, $FB, $68, $FF, $05, $01, $FF, $07, $01
+
+
+; X Y CUSTOM COORDINATES
+
+org $CE3660
+; submarine in world 2 for new access area
+
+db $70, $65, $13, $00
+db $39, $41, $2e, $00
+db $A9, $A4, $5A, $00
+
+; ; Lonka Rift
+org $CE3670
+db $0C, $2E, $7d, $02
+; ; Falls Rift
+org $CE3674
+db $2C, $38, $7d, $02
+; ; Castle Rift
+org $CE3678
+db $16, $2C, $7d, $02
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ; XY Coordinate hook
 org $C00654
 JML XYCoordinateHook
 
-org $F01280
+org $F01900
 XYCoordinateHook:
 
 
 ; Submarine world 2
 lda !mapid
 CMP #$0003
-BNE XYCoordinateHookContinueNormalCase
+BNE XYCoordinateHookContinueCase2
 lda !xycoordcheck
 CMP #$A4A9
-BNE XYCoordinateHookContinueNormalCase
+BNE XYCoordinateHookContinueCase2
 
 ; IF these match, we're in submarine in world 2, so set up coordinates specifically
 LDA #$6012
@@ -112,9 +150,91 @@ LDX #$002C
 JSL SetKeyItemBits
 rep #$20
 plx
+JMP XYCoordinateHookContinueNormalCase
+XYCoordinateHookContinueCase2:
+
+
+
+; LONKA RIFT 
+lda !mapid
+CMP #$01DF
+BNE XYCoordinateHookContinueCase3
+lda !xycoordcheck
+CMP #$2E0C
+BNE XYCoordinateHookContinueCase3
+
+; IF these match, set up coordinates specifically
+LDA #$1270
+STA $26
+TAX
+LDA #$1274
+STA $23
+
+JMP XYCoordinateHookContinueNormalCase
+
+XYCoordinateHookContinueCase3:
+; FALLS RIFT 
+lda !mapid
+CMP #$01EC
+BNE XYCoordinateHookContinueCase4
+lda !xycoordcheck
+CMP #$382C
+BNE XYCoordinateHookContinueCase4
+
+; IF these match, set up coordinates specifically
+LDA #$1274
+STA $26
+TAX
+LDA #$1278
+STA $23
+
+JMP XYCoordinateHookContinueNormalCase
+
+XYCoordinateHookContinueCase4:
+; CASTLE RIFT 
+lda !mapid
+CMP #$01F0
+BNE XYCoordinateHookContinueCase5
+lda !xycoordcheck
+CMP #$2C16
+BNE XYCoordinateHookContinueCase5
+
+; IF these match, set up coordinates specifically
+LDA #$1278
+STA $26
+TAX
+LDA #$127C
+STA $23
+JMP XYCoordinateHookContinueNormalCase
+XYCoordinateHookContinueCase5:
+
+
+
+
+
 
 
 XYCoordinateHookContinueNormalCase:
+cpx $23
+beq XYCoordinateHookBaseCase1
+LDA $ce2400,x
+lda $0ad8
+cmp $ce2400,x
+beq XYCoordinateHookBaseCase2
+txa
+clc
+adc #$0004
+tax
+jml XYCoordinateHookReplicated  ; after checked once for xy coords, now replicate original code entirely
+
+XYCoordinateHookBaseCase1:
+JML $C00681
+XYCoordinateHookBaseCase2:
+JML $C0066a
+
+
+XYCoordinateHookReplicated:
+; replicate original code. 
 cpx $23
 beq XYCoordinateHookBaseCase1
 lda $0ad8
@@ -124,24 +244,8 @@ txa
 clc
 adc #$0004
 tax
-jml $C00654
+jml $F01900  ; this will loop until another case is hit
 
-XYCoordinateHookBaseCase1:
-JML $C00681
-XYCoordinateHookBaseCase2:
-JML $C0066a
-
-
-org $CE3660
-; submarine in world 2 for new access area
-
-db $70, $65, $13, $00
-db $39, $41, $2e, $00
-db $A9, $A4, $5A, $00
-
-; ; Lonka Rift
-; org $CE3670
-; db $0b, $0e, $7d, $02
 
 
 
@@ -321,7 +425,7 @@ BNE KeyItemLockingNextCheck7
 
 LDA #$1F80
 STA $23
-LDA #$1F8F
+LDA #$1F94
 STA $26
 JMP KeyItemLockingImmediateFinish
 KeyItemLockingNextCheck7:
@@ -342,7 +446,7 @@ BNE KeyItemLockingNextCheck8
 
 LDA #$1F80
 STA $23
-LDA #$1F8F
+LDA #$1F94
 STA $26
 JMP KeyItemLockingImmediateFinish
 KeyItemLockingNextCheck8:
@@ -362,7 +466,7 @@ BNE KeyItemLockingNextCheck9
 
 LDA #$1F80
 STA $23
-LDA #$1F8F
+LDA #$1F94
 STA $26
 JMP KeyItemLockingImmediateFinish
 KeyItemLockingNextCheck9:
@@ -383,7 +487,7 @@ BNE KeyItemLockingNextCheck10
 
 LDA #$1F80
 STA $23
-LDA #$1F8F
+LDA #$1F94
 STA $26
 JMP KeyItemLockingImmediateFinish
 KeyItemLockingNextCheck10:

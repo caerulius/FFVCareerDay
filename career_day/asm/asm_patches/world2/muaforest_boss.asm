@@ -120,6 +120,8 @@ db $8E, $0A                     ;Sprite 08E do event: Hide
 db $8F, $0A                     ;Sprite 08F do event: Hide
 db $90, $0A                     ;Sprite 190 do event: Hide
 db $BD, $21, $FF                ;Start Event Battle 21
+db $DE, $76 ; custom reward
+db $DF
 db $75
 db $C4, $02
 ; db $A2, $75                     ;Turn on bit 20 at address 0x7e0a22

@@ -8,6 +8,8 @@ db $83, $55
 db $30
 db $73
 db $BD, $35, $FF				;Start Event Battle 35
+db $DE, $85 ; custom reward
+db $DF
 db $A5, $FE						;Clear Event Flag 1FE
 db $CD, $15, $00				;Run event index 0015
 db $A2, $44						;Set Event Flag 044

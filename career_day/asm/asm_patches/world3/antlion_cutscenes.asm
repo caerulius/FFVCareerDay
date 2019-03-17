@@ -143,6 +143,8 @@ db $82, $0A                     ;Sprite 082 do event: Hide
 db $83, $0A                     ;Sprite 083 do event: Hide
 db $70                          ;Very short pause
 db $BD, $25, $FF                ;Start Event Battle 25
+db $DE, $79 ; custom reward
+db $DF
 db $E3, $02, $00, $79, $59, $24 ;Inter-map cutscene? 02 00 79 59 24
 db $09                          ;Player Show
 db $14                          ;Player pose: face down, left hand forward

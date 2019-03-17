@@ -36,6 +36,8 @@ org $C9BBF8
 
 
 db $BD, $31, $FF                ;Start Event Battle 31
+db $DE, $7F ; custom reward
+db $DF
 db $CE, $0A, $1C                ;Play next 1C bytes 0A times
 db $83, $09                     ;Sprite 083 do event: Show
 db $84, $09                     ;Sprite 084 do event: Show

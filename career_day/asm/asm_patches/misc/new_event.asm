@@ -445,6 +445,7 @@ JML RiftTabletConditional
 org $F01800
 RiftTabletConditional:
 STZ !unusedram1
+STZ !unusedram2
 
 
 ; Get count of how many tablets 
@@ -498,11 +499,11 @@ CheckNextRiftMap2:
 ; Falls area, 3rd check
 CMP #$EC
 BNE CheckNextRiftMap3
-JMP RiftTabletContinue2
 LDA #$03
+JMP RiftTabletContinue2
 CheckNextRiftMap3:
 ; Castle area, 4th check
-CMP #$EE
+CMP #$F0
 BNE RiftTabletContinue2
 LDA #$04
 
@@ -518,20 +519,20 @@ BCC RiftTabletFailureCase
 
 ; Success case - A42 to 01
 LDA #$01
-LDX #$0042
+LDX #$0041
 JSL SetKeyItemBits
 ; This marks the event as complete for conditional branchhing
 LDA #$02
-LDX #$0042
+LDX #$0041
 JSL SetKeyItemBits
 JML $C0A628 ; end event function
 
 RiftTabletFailureCase:
 LDA #$01
-TRB $0A42
+TRB $0A41
 ; Failure case - A42 set to 02 only
 LDA #$02
-LDX #$0042
+LDX #$0041
 JSL SetKeyItemBits
 JML $C0A628 ; end event function
 

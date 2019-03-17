@@ -34,13 +34,8 @@ db $C5, $80                     ;<unknown>
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 db $39                          ;Player pose: face down, both arms raised
 db $C5, $80                     ;<unknown>
-if !vanillarewards == 1
-	db $C8, $39, $07                ;Display Message/Text/Dialogue 39 07  ; OBTAINED WHITE MAGIC HOLY
-else
-	db $DE, $1F				; set up reward
-	db $DF					; call text handler
-endif
-
+db $DE, $7D ; custom reward
+db $DF
 
 db $E4, $E3                     ;Unknown
 db $93, $01                     ;Sprite 193 do event: Move Up
@@ -67,16 +62,8 @@ db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 db $39                          ;Player pose: face down, both arms raised
 db $C5, $20                     ;<unknown>
 db $71                          ;Short pause
-if !vanillarewards == 1
-	db $C8, $38, $07                ;Display Message/Text/Dialogue 38 07 ; OBTAINED BLACK MAGIC FLARE
-	db $AC, $0F                     ;Add Magic Holy
-	db $AC, $22                     ;Add Magic Holy
-	db $AC, $10                     ;Add Magic Flare
-	db $AC, $33                     ;Add Magic Flare
-else
-	db $DE, $20				; set up reward
-	db $DF					; call text handler
-endif
+db $DE, $7E ; custom reward
+db $DF
 db $E4, $14                     ;Unknown
 db $B9, $63                     ;Toggle Subtracitve Tint by 63
 db $B3, $10                     ;Pause for 100 cycles

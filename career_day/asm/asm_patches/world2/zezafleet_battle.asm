@@ -72,6 +72,8 @@ db $92, $0A                     ;Sprite 192 do event: Hide
 db $93, $0A                     ;Sprite 193 do event: Hide
 db $86, $0A                     ;Sprite 086 do event: Hide
 db $BD, $1F, $FF                ;Start Event Battle 1F
+db $DE, $74 ; custom reward
+db $DF
 db $A5, $FE                     ;Clear Event Flag 1FE
 db $94, $0A                     ;Sprite 194 do event: Hide
 db $87, $0A                     ;Sprite 087 do event: Hide

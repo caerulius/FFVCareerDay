@@ -15,10 +15,9 @@ db $03                          ;Player Move Down
 db $70                          ;Very short pause
 db $86, $0A                     ;Sprite 086 do event: Hide
 db $BD, $1E, $FF                ;Start Event Battle 1E
-
+db $DE, $73 ; custom reward
+db $DF
 db $24                          ;Sprite 080 do event: face down, right hand raised in
-db $B4, $29                     ;Play Background Music Fanfare 1 (short)
-db $C8, $E3, $04                ;Display Message/Text/Dialogue E3 04
 db $82, $0A                     ;Sprite 082 do event: Hide
 db $80, $0A                     ;Sprite 080 do event: Hide
 db $81, $0A                     ;Sprite 081 do event: Hide

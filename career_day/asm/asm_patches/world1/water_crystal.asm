@@ -37,6 +37,9 @@ db $84, $0A                     ;Sprite 084 do event: Hide
 
 db $BD, $06, $FF                ;Start Event Battle 06
 
+db $DE, $65 ; custom reward
+db $DF
+
 
 db $B4, $0F                     ;Play Background Music Deception
 db $80, $01                     ;Sprite 080 do event: Move Up

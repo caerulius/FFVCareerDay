@@ -16,6 +16,11 @@ db $15
 org $CE992B
 db $04
 
+; ANCIENT LIBRARY
+; Change flag for checking cid mid event
+org $D8EF42
+db $EE
+
 
 ; SYLDRA
 ; Change Syldra's event to be tied to $A2, $11  ($7E0A16 bit 02), which is 

@@ -10,6 +10,8 @@ db $72								;Short pause
 db $C5, $80							;<unknown>
 db $BE, $00							;Rumble effect of 00 magnitude
 db $BD, $0B, $FF					;Start Event Battle 0B
+db $DE, $69 ; custom reward
+db $DF
 db $A2, $48							;Set Event Flag 048
 
 ; CAREERDAY

@@ -20,6 +20,8 @@ db $8B, $0A                     ;Sprite 08B do event: Hide
 db $8E, $0A                     ;Sprite 08E do event: Hide
 db $CD, $09, $01                ;Run event index 0109
 db $BD, $20, $FF          ;Start Event Battle 20
+db $DE, $75 ; custom reward
+db $DF
 db $C4, $02                     ;Fade out
 db $75
 db $75

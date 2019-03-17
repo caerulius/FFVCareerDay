@@ -12,13 +12,8 @@ db $BD, $39, $FF		;Start Event Battle 39
 db $83, $03				;Sprite 083 do event: Move Down
 db $83, $0A				;Sprite 083 do event: Hide
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
-if !vanillarewards == 1
-	db $C8, $A7, $02		;Display Message/Text/Dialogue A7 02
-	db $AC, $4D				;Add Magic Ifrit
-else
-	db $DE, $36				; set up reward
-	db $DF					; call text handler
-endif
+db $DE, $83 ; custom reward
+db $DF
 db $E4, $C9                     ;Unknown
 db $08                          ;<Unknown>
 db $0F                          ;<Unknown>

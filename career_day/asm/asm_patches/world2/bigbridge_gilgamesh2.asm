@@ -26,6 +26,8 @@ db $83, $03                     ;Sprite 083 do event: Move Down
 db $84, $03                     ;Sprite 084 do event: Move Down
 db $CD, $F6, $03                ;Run event index 03F6
 db $BD, $16, $FF                ;Start Event Battle 16
+db $DE, $70 ; custom reward
+db $DF
 db $FF                          ;End Event
 
 padbyte $00

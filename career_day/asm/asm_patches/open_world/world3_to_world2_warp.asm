@@ -1,8 +1,8 @@
 hirom
 
 
-org $C83323
-db $B0, $00, $F9
+; org $C83323
+; db $B0, $00, $F9
 
 ; World 2 Warp Dialogue
 org $F900B0
