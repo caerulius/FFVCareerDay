@@ -1,24 +1,7 @@
 # -*- coding: utf-8 -*-
-import pandas as pd 
 from reward import *
-import random
 
 NUM_SHOPS = 64
-
-shop_id_dict = {
-        '00' : 'Magic',
-        '01' : 'Weapon',
-        '02' : 'Armor',
-        '03' : 'Item',
-        '04' : 'Relic',
-        '05' : 'Guild',
-        '06' : 'Medicine',
-        '07' : 'Ability/Crystal',
-        '81' : 'Karnak',
-        '82' : 'Karnak',
-        '83' : 'Karnak',
-        '84' : 'Karnak',
-        }
 
 class Shop(object):
     def __init__(self, index, collectible_manager, data_manager):
