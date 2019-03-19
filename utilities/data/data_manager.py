@@ -15,12 +15,7 @@ class DataManager():
         self.files['shops']['idx'] = self.files['shops']['idx'].astype(int)
         self.files['shopprices'] = pd.read_csv('tables/shop_prices.csv', dtype=str)
         self.files['shopprices']['idx'] = self.files['shopprices']['idx'].astype(int)
-
-        #self.files['formations'] = pd.read_csv('tables/formation_id.csv')
-        #self.files['formations']['formation_names'] = self.files['formations']['enemy_1_name'] + " " + self.files['formations']['enemy_2_name'] + " " + \
-        #                                              self.files['formations']['enemy_3_name'] + " " + self.files['formations']['enemy_4_name'] + " " + \
-        #                                              self.files['formations']['enemy_5_name'] + " " + self.files['formations']['enemy_6_name'] + " " + \
-        #                                              self.files['formations']['enemy_7_name'] + " " + self.files['formations']['enemy_8_name']
-
-       	#self.files['formations']['formation_names'] = self.files['formations']['formation_names'].str.strip()
-       	#self.files['monsters'] = pd.read_csv('monster_data.csv', dtype=str)
+        self.files['enemies'] = pd.read_csv('tables/enemy_data.csv', dtype=str)
+        self.files['enemies_bosses'] = self.files['enemies'][self.files['enemies']['enemy_rank']=='boss']
+        self.files['enemies_nonbosses'] = self.files['enemies'][self.files['enemies']['enemy_rank']=='enemy']
+        self.files['formations'] = pd.read_csv('tables/formation_id.csv', dtype=str)
