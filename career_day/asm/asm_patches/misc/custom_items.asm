@@ -8,7 +8,7 @@ org $C2BCB1
 JML AllowItemWarping
 
 
-org $F01200
+org !ADDRESS_customitem1
 CustomItem:
 
 ; Load in A
@@ -52,7 +52,7 @@ JML $C2BB09
 org $C0011F
 JML UseableItemActionTable
 
-org $F01300
+org !ADDRESS_customitem2
 UseableItemActionTable:
 LDA $0139
 ; This is for any custom action table from above. You can use any code you'd like as long as its not F0, F1 or 3E
@@ -102,9 +102,6 @@ db $EE
 org $C0EEF4
 db $00
 
-; WarpShard text
-org $D11BDE
-db $76, $7A, $8B, $89, $72, $81, $7A, $8B, $7D
 ; WarpShard cannot sell
 org $D12BDC
 db $81, $00

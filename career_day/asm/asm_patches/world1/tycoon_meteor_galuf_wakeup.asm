@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; this short circuits the galuf wakeup cutscene.
 ; lenna simply wakes up galuf and he and she leave the screen

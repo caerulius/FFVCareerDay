@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Sleep at Zeza cabin. Preserved, only text box removed
 ; Zeza talk flag triggered instantly

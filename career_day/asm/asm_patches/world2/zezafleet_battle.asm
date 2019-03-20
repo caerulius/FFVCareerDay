@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 org $C8D157
 db $CD, $FD, $02                ;Run event index 02FD

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Mid and Cid waking up after fixing the ship
 org $C8884A

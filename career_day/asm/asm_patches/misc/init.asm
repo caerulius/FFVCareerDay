@@ -2,8 +2,8 @@ hirom
 
 
 ; this code standardizes the romfile to be 4MB 
-org $FF0000
+org !ADDRESS_STARTROM
 padbyte $00
-pad $FFFFFF
-org $FFFFFF
+pad !ADDRESS_ENDROM
+org !ADDRESS_ENDROM
 db $00

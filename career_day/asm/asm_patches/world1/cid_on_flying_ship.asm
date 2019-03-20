@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; talking to cid on flying airship and crayclaw fight
 org $C8BA3C

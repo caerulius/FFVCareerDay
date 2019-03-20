@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 
 ; Removes cutscene upon discovering boko resting in the pirate's cove

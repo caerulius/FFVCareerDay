@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Speed up guy next to lone wolf
 org $C930CC

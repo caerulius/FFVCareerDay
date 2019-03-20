@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; First talk with Zeza in tower 
 

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Saving Hiryuu on the North Mountain
 org $C86D34

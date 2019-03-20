@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; changes the first hole cutscene in the pass to simply
 ; make the hole appear and then butz jumps back on boko

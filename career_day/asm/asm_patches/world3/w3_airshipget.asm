@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C9F41E → $C9F6DA
 ; Airship get after Merugene, changes world state

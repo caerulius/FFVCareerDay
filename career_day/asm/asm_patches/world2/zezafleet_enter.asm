@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 
 ; This entire event was scrapped and relocated for Rift tablet handling

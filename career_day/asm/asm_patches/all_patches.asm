@@ -1,7 +1,13 @@
+; init
+incsrc misc/defines.asm
+incsrc misc/init.asm
+
 ; conditionals
 !vanillarewards = 0
 !allareasaccessible = 0
-!allkeysunlocked = 0
+!testing = 1
+!allkeysunlocked = 1
+
 ; randomizer testing
 incsrc r-patch.asm
 incsrc boss-patch.asm
@@ -11,8 +17,12 @@ incsrc key_items-patch.asm
 incsrc open_world/scratchpad.asm
 incsrc open_world/test_constants.asm
 
-; init
-incsrc misc/init.asm
+
+
+
+
+
+
 
 
 
@@ -190,6 +200,8 @@ incsrc misc/shop_hook.asm
 incsrc misc/original_magic_prices.asm
 incsrc misc/custom_items.asm
 
+incsrc misc/relocate_conditional_events.asm
+
 incsrc balancing/exp_abp_modifier.asm
 
 incsrc recovery/all_inns.asm
@@ -222,9 +234,10 @@ incsrc reward_events/chicken_knife_brave_blade.asm
 incsrc reward_events/walsetower_gogo.asm
 
 
-; open world
+; ; open world
 incsrc open_world/canal_fix.asm
 incsrc open_world/key_items.asm
+incsrc open_world/key_item_locks.asm
 incsrc open_world/open_world.asm
 incsrc open_world/intro_cutscene.asm
 incsrc open_world/world1_to_world2_warp.asm
@@ -236,10 +249,6 @@ incsrc open_world/warp_area.asm
 
 incsrc world2/mooglewaterway_encounters.asm
 
-
-; misc tables
-incsrc text_tables/starting_job_ability.asm
-
 ; text tables
 incsrc text_tables/ability_shop_table.asm
 incsrc text_tables/ability_chest_table.asm
@@ -247,4 +256,4 @@ incsrc text_tables/job_shop_table.asm
 incsrc text_tables/job_chest_table.asm
 incsrc text_tables/magic_chest_table.asm
 incsrc text_tables/key_item_tables.asm
-
+incsrc text_tables/misc_text.asm

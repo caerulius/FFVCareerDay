@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Just fade out and come back with the door open and Cid gone
 org $C875CA

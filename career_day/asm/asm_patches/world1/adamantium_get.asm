@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; collecting adamantium
 org $C8553B

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; C8BE7D → $C8BE80 is the trigger cutscene when you try to leave with Cara (with all the right flags), then the main cutscene plays
 

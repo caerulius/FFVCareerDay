@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; party trying to steal faris' ship
 org $C96869

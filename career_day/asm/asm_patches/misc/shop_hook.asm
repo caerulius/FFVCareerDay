@@ -12,7 +12,7 @@ org $C2F12B
 JML ShopHook
 
 
-org $F00680
+org !ADDRESS_shophook
 ShopHook:
 TXY
 PHA
@@ -81,7 +81,7 @@ JML $C2E449 ; original code resume, hopefully preserving stack
 org $C2F05B
 JML CheckShopRewardInInventory
 
-org $F00700
+org !ADDRESS_shopcheckreward
 CheckShopRewardInInventory:
 SEP #$20
 PHA 
@@ -200,9 +200,9 @@ BNE RewardAbilityCheckFail
 
 ; This code awards the player's crystal/ability inventory
 org $C2F012
-JML $F00800
+JML !ADDRESS_shopawardreward
 
-org $F00800
+org !ADDRESS_shopawardreward
 PHA
 LDA $7E2802
 CMP #$C0
@@ -237,10 +237,6 @@ PLA
 STA $7E2802
 
 ; first check who needs to increase their ability count
-!1pabilitiescount = $08F3
-!2pabilitiescount = $08F4
-!3pabilitiescount = $08F5
-!4pabilitiescount = $08F6
 
 ; Char1
 LDA $0008F7,x
@@ -346,7 +342,7 @@ org $C2EFF0
 JML CheckMagicSwordAward
 
 
-org $F00900
+org !ADDRESS_shopmagicsword
 CheckMagicSwordAward:
 PHA
 LDA $7E2802

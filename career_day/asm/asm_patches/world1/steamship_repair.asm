@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Mid and Cid getting the steamship running and all of Galuf's memories
 org $C97A5A

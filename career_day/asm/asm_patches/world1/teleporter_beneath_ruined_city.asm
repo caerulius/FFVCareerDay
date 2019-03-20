@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; teleporter and explosion beneath ruined city
 org $C8916E

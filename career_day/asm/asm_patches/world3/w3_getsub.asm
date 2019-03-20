@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C9C9B2 → $C9CBEF
 ; Cutscene from finding Mid in the wheel → overworld map 

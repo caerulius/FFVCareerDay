@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Disable extra text after freeing lone wolf
 org $C9312F

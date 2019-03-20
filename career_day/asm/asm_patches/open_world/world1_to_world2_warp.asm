@@ -4,7 +4,7 @@
 
 
 hirom
-!base = $C00000
+
 
 org $C8A6D3
 

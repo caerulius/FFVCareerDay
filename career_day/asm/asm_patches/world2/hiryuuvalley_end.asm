@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C8CD0B → $C8CE7E
 ; Dialogue before & after Hiryuu Plant boss fight

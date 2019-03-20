@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; first we move the event coordinates for the intro to tule off into the forest
 ; this is unfortunately required, because there's no way to interact with 

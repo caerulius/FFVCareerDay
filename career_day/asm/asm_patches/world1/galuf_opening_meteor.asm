@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; galuf opening the tycoon meteor
 org $C84BF5

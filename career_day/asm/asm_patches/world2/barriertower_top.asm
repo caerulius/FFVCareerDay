@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Pre dialogue, Atomos, post
 

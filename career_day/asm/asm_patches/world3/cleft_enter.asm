@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Cutscene at first door in sand area
 ; This is going to be used as the main trigger for setting most cutscenes watched flags

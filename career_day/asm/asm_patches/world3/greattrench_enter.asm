@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Gargoyles at Great Trench
 

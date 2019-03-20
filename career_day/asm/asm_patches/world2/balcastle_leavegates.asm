@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Leave Castle Bal through gates
 ; $C8C7DF → $C8C80E is the first event called, which then branches (after saying yes to dialogue) to:
@@ -193,5 +193,6 @@ pad $C953D7
 
 
 ; disable door locking 
-org $D8EBEF
+; org $D8EBEF
+org $F04B6F
 db $fe, $66, $fb, $1d, $ff, $36, $04, $fb, $00, $ff, $50, $03

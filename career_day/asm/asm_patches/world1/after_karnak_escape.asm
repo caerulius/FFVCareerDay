@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Cutscene and job acquisition after Karnak
 org $C87F79

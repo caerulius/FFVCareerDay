@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; This cutscene is a real doozy, I'll do my best to explain it here.
 ; The first section of this patch removes the whole "pre-falling down"

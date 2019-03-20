@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; going near the ruined city and the city flying into the air
 org $C89B54

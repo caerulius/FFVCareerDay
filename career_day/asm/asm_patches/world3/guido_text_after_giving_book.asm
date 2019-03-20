@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 
 ; remove long speech guido gives if you talk to him after getting the book

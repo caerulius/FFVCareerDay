@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ;Remove part before black chocobo chase
 org $C88D00

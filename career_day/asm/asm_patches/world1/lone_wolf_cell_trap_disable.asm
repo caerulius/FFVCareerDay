@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Disable getting stuck in lone wolf's cell
 org $C931C0

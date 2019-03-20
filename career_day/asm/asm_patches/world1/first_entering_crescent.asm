@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; First time entering crescent and steamship sinking
 ; This just instantly cuts to the ship sinking and doesn't

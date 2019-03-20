@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 ; Talk with Guido
 
 org $C8DA2B

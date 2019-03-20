@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Apocalypse text box skip
 org $C9C217

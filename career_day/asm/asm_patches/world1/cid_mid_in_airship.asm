@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; discovering the airship to the point that you're flying, before crayclaw
 org $C89611

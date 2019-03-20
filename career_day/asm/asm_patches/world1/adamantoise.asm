@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; admantoise fight
 org $C85F9B

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 org $C93ABA
 db $07, $07, $07

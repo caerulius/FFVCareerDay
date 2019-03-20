@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Walse Meteor Event
 org $C86F6D

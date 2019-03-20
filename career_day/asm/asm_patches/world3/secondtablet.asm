@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C9A4AD → $C9A5B1
 ; Before fight, then after fight, show fork tower fast (gives player direction)

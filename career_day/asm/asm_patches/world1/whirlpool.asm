@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; whirlpool to ship graveyard, including karlabos
 org $C88271

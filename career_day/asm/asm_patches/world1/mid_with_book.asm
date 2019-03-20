@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Mid showing the book to Cid
 org $C8810E

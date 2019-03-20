@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C9B456 → $C9B48D
 ; Place tablet

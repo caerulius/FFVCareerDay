@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Currently disabled - these flags are set in tule.asm after Zokk gives the key
 ; Disables cutscene on boat after leaving Tule with Faris

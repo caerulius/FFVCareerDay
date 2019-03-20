@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; event where party witnesses the syldra pulled ship
 ; disable the event and set the flags.

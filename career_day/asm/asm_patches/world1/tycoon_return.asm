@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Guard outside of tycoon (simply disables messages)
 org $C91BC6

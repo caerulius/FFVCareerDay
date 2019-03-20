@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C8E33D → $C8EA0C
 ; Guide cutscene at his dwelling

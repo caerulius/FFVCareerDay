@@ -29,7 +29,7 @@ db $00, $10 ; x/y
 
 ; NPC 2
 org $CE9ADF
-db $DE, $02 ; action
+db $D8, $02 ; action
 org $CE9AE2
 db $03, $10 ; x/y
 
@@ -47,5 +47,30 @@ db $3F, $1B ; walk cycle properties
 ; db $7f, $03, $43, $10, $0b, $0d, $60
 
 ; FIX THIS !!!!!!!!!!!!!!!!!
-org $D8E769
+; org $D8E769
+org $F046E9
 db $FB, $19
+
+
+; leftmost book in surgate library. These are the events only, tied to what the warps do
+org $CE1DA9
+db $FF, $E9, $02 ; triggers always
+db $FF, $00, $00, $F0, $4A, $05 ;unsure, keeping consistent with original
+org $CE1DB6
+db $FF, $EA, $02 ; triggers always
+db $FF, $00, $00
+db $FF, $EA, $02, $F0, $4A, $05 ;unsure, keeping consistent with original
+org $CE1DC6
+db $FF, $EB, $02 ; triggers always
+db $FF, $00, $00
+db $FF, $EB, $02, $F0, $4A, $05 ;unsure, keeping consistent with original
+; librarian always gives access
+org $CE1DEE
+db $FF, $A4, $03 ; triggers always
+db $FF, $00, $00
+db $FF, $A4, $03
+
+
+; finally disable books entirely
+org $CE8A7E
+pad $CE8AA1

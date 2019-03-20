@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C84C80 → $C84FD0
 ; Intro cutscene skips

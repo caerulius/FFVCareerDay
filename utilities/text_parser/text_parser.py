@@ -21,15 +21,35 @@ job_chest_table = pd.read_csv('../data/tables/text_tables/job_chest_text.csv',he
 magic_chest_table = pd.read_csv('../data/tables/text_tables/magic_chest_text.csv',header=None,index_col=0).to_dict()[1]
 key_item_table = pd.read_csv('../data/tables/text_tables/key_item_text.csv',header=None,index_col=0).to_dict()[1]
 key_item_reward_table = pd.read_csv('../data/tables/text_tables/key_item_reward_text.csv',header=None,index_col=0).to_dict()[1]
+kuzar_rewards = pd.read_csv('../data/tables/text_tables/kuzar_rewards.csv',header=None,index_col=0).to_dict()[1]
 
 
 data = '''
 
 
-
-627a8b7a9bffffa3a3a3010101016b7e
-87877a9bffff627a8b7aa200
-
+0164ffffffffffffffffff64ffffffff
+ffffffff64917c7a85827b8e8b0001ff
+ffffffffffffffffffffffffff608c8c
+7a8c8c8287ff637a80807e8b0001ffff
+ffffffffffffffffffffffff727a8c8e
+847e998cff6a7a8d7a877a0001ffffff
+ffffffffffffffffffffffffffffff67
+888592ff6b7a877c7e0001ffffffffff
+ffffffffffffffffffffffffffff718e
+877eff60917e0001ffffffffffffffff
+ffffffffffffffffffff6c7a8c7a868e
+877e0001ffffffffffffffffffffffff
+ffffffffff7888827c8182998cff6188
+900001ffffffffffffffffffffffffff
+ffffffffffffff65828b7e7b8e8d7e00
+01ffffffffffffffffffffffffffffff
+ffffff727a807eff728d7a7f7f0001ff
+ffffffffffffffffffffffffffffffff
+7682937a8b7dff71887d0001ffffffff
+ffffffffffffffffffffffff60898885
+8588998cff677a8b890001ffffffffff
+ffffffffffffffffffffffffffff647a
+8b8d81ff617e85850001
 
 '''
 data = data.replace("\n","ZZ")
@@ -87,6 +107,36 @@ def run_encrypt(passed_dict):
         print(text_asar)
         return_text = return_text + text_asar + "\n"
     return return_text
+
+
+def run_kuzar_encrypt(passed_dict):
+    return_text = ''
+    for x in passed_dict.keys():
+        counter = 0
+        text_list = []
+        while counter < len(x):
+            char = x[counter]
+            if char == "<":
+                left = x.find("<")
+                right = x.find(">")+1
+                new_char = x[left:right]
+                text_list.append(text_dict2[new_char])
+                counter = right
+            else:    
+                text_list.append(text_dict2[char])
+                counter = counter + 1
+        text_asar = 'db $01, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF'
+        for i in text_list:
+            text_asar = text_asar + " $" + i + ","
+        text_asar = text_asar[:-1]
+        print("; "+x)
+        return_text = return_text + "; "+x +"\n"
+        print('org $'+passed_dict[x])
+        return_text = return_text + 'org $'+passed_dict[x] +"\n"
+        print(text_asar)
+        return_text = return_text + text_asar + "\n"
+    return return_text
+
         
         
 def generate_keyitems():

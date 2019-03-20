@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; giving adamantium to cid/mid to upgrade ship
 org $C89896

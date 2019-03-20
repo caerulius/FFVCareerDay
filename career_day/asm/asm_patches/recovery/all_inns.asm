@@ -1,10 +1,10 @@
 hirom
-!base = $C00000
+
 
 padbyte $00
 org $C94D1D
 
-db $B4, $34                     ;Play Background Music Good Night!
+db $B4, $34                     ;Play Background Music Good Night
 db $C4, $04                     ;Fade out Speed 04
 db $75
 db $73

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Necrophobe text box skip
 org $C9C5AC

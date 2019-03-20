@@ -1,10 +1,4 @@
 hirom
-!base = $C00000
-; !walkingspeedconfig = $0970 
-!worldmapflag = $0B53 ; if this is 1, not in world map
-!input = $0b03
-!airshipspeed = #$0020
-
 ; make conditional true for any player to always execute dash when b is held
 org $c01261
 lda #$FF
@@ -21,7 +15,7 @@ nop
 ; func for speed
 ; uses 'a' only, not x/y
 ; returns 'a' value with speed based on config
-org $F00180
+org !ADDRESS_walkspeedhook
 SpeedHookGeneric:
 
 
@@ -35,7 +29,7 @@ BNE HandleRegularSpeed ; anywhere else
 ; world map
 HandleWorldMapSpeed:
 
-lda !input 
+lda !walkinginput
 and #$80    ; check for b input, if so, run 
 BMI RunSpeedWorldMap
 
@@ -63,7 +57,7 @@ BRA SpeedSettingFast1
 
 HandleRegularSpeed:
 
-lda !input 
+lda !walkinginput
 and #$80    ; check for b input, if so, run 
 BMI RunSpeed
 
@@ -106,7 +100,7 @@ RTL
 org $c0123e
 JML TownDungeonHandler
 
-org $F001E0
+org !ADDRESS_walkspeedtownhook
 TownDungeonHandler:
 JSL SpeedHookGeneric
 sta $c0

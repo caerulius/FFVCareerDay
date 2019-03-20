@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; skip cutscene whre faris complains about getting wet
 org $C86489

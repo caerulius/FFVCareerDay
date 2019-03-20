@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; small intro cutscene in ruined city
 ; this also sets all the other flags so you can go right to the end

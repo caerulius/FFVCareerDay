@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Exdeath pre-dialogue → Warp to World 3
 

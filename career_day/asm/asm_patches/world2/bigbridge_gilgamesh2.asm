@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 org $C8B64F
 db $CD, $F5, $03                ;Run event index 03F5
@@ -26,8 +26,6 @@ db $83, $03                     ;Sprite 083 do event: Move Down
 db $84, $03                     ;Sprite 084 do event: Move Down
 db $CD, $F6, $03                ;Run event index 03F6
 db $BD, $16, $FF                ;Start Event Battle 16
-db $DE, $70 ; custom reward
-db $DF
 db $FF                          ;End Event
 
 padbyte $00
@@ -52,6 +50,8 @@ db $10                          ;Player pose: face up, left hand forward
 db $80, $03                     ;Sprite 080 do event Move Down
 db $80, $0A                     ;Sprite 080 do event Hide
 db $BD, $1B, $FF                ;Start Event Battle 1B
+db $DE, $70 ; custom reward
+db $DF
 db $A2, $45                     ;Set Event Flag 045
 db $00                          ;Player Hold
 db $FF                          ;End Event

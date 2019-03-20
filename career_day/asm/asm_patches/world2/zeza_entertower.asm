@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Zeza talk in sub to get into tower
 

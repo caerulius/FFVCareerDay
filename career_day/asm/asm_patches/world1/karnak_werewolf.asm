@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; skip the event where they drive off the werewolf
 org $C959E9

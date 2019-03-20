@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Always save
 ; Remove conditional for on save-point flag

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 
 ; Removes cutscene upon discovering pirate's cove

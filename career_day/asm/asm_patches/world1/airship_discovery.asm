@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; discovering the airship
 org $C89678

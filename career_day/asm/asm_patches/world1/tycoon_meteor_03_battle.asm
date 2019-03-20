@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ;  Boco dismount Tycoon 
 org $C85002

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 
 ; short text to boko after fighting the antlion

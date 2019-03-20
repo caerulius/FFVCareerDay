@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Speed up first walse meteor warp
 org $C8731B

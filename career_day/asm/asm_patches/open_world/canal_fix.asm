@@ -7,7 +7,7 @@ org $C0061E
 JML CanalAccessFix
 
 
-org $F10000
+org !ADDRESS_canalfix
 CanalAccessFix:
 LDA $0ADC
 BEQ CanalAccessFixBranchOut1

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Arrest to Cid blowing up the wall (this actually combines two events into one)
 org $C87514

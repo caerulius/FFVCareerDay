@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; First dialogue, remove text boxes
 ; There's a ton of events during the char switching, which was not changed

@@ -8,7 +8,7 @@ hirom
 org $C2F2BF
 JML ReindexShop
 
-org $F00980
+org !ADDRESS_shopindexing
 ReindexShop:
 
 LDA $7E2802

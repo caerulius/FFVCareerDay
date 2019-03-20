@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; discovering the steamship
 org $C895D8

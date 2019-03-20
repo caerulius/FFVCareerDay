@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; telling cid and mid about the flying city
 org $C897A3

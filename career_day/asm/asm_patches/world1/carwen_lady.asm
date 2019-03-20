@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Carwen lady conversation
 org $C86A13

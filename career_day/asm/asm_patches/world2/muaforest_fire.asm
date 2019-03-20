@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Overall, going to have to preserve cutscene and not warp to post-fire state because of the Flame/Aegis shield 
 ; Will speed up first fire cutscene

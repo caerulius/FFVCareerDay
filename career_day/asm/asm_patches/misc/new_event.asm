@@ -1,10 +1,5 @@
 hirom
-!destinationindex = $7E1E20
-!eventrewardindex = $C0FAB0
-!typeid = $11
-!rewardid = $12
-!unusedram1 = $1F10
-!unusedram2 = $1F11
+
 
 ; DESTINATION : Code $CC
 ; new event handler is going to be $CC with 1 operand argument
@@ -183,7 +178,7 @@ db $F0, $CE ; branch to $C0CE20
 org $C0CEF0
 JML RandomizerJobSetting
 
-org $F01000
+org !ADDRESS_NEWEVENT_jobsetting
 RandomizerJobSetting:
 pha
 phx
@@ -215,16 +210,6 @@ STA $0501
 STA $0551
 STA $05A1
 STA $05F1
-
-; set characters to have correct starting ability
-; A is still job ID from E79F00
-; I'm dumb and this was already loaded into area E79F03 per the randomizer
-; TAX
-; LDA $F80800, x
-; STA $0517
-; STA $0567
-; STA $05B7
-; STA $0607
 
 ; Do it with E79F03
 LDA $E79F03
@@ -300,7 +285,7 @@ db $F4, $CE ; branch to $C0CE20
 org $C0CEF4
 JML ConditionalVehicles
 
-org $F01100
+org !ADDRESS_NEWEVENT_conditionalvehicles
 ConditionalVehicles:
 
 ; check vehicle type
@@ -309,7 +294,7 @@ LDA [$D6], y
 ; SUBMARINE
 CMP #$6C ; submarine code
 BNE ConditionalVehiclesCheckHiryuu
-LDA $000A4A ; TESTING!!
+LDA $000A4A
 AND #$04 ; 000A4A, test bit 04
 CMP #$04
 BEQ ConditionalVehiclesPlaceVehicle
@@ -327,7 +312,7 @@ LDA [$D6], y
 ; HIRYUU
 CMP #$90 ; hiryuu code
 BNE ConditionalVehiclesFailure
-LDA $000A4A ; TESTING!!
+LDA $000A4A
 AND #$02 ; 000A4A, test bit 02
 CMP #$02
 BEQ ConditionalVehiclesPlaceVehicle
@@ -367,7 +352,7 @@ JML $C0A248
 
 
 
-; CONDITIONAL VEHICLE PLACEMENT : Code $EE
+; CONDITIONAL EVENT FLAGS ON WARP : Code $EE
 ; Based on whether certain event flags are set, change event flags. Primarily for vehicles
 ; And changing worlds. Also Ronka access 
 
@@ -378,8 +363,14 @@ db $F8, $CE ; branch to $C0CE20
 org $C0CEF8
 JML ConditionalEventFlags
 
-org $F01180
+org !ADDRESS_NEWEVENT_conditionaleventflags
 ConditionalEventFlags:
+
+; no matter what, treat these flags:
+
+; flag for leaving the Rift (important for Exit spell, otherwise Rift exit spell cutscene plays and places player in w3)
+LDA #$01
+TRB $0A14
 
 ; load world
 LDA $000AD6
@@ -442,7 +433,7 @@ db $FC, $CE ; branch to $C0CE20
 org $C0CEFC
 JML RiftTabletConditional
 
-org $F01800
+org !ADDRESS_NEWEVENT_conditionalrifttablet
 RiftTabletConditional:
 STZ !unusedram1
 STZ !unusedram2

@@ -84,7 +84,7 @@ db $DB                          ;Restore Player status
 db $14                          ;Player pose: face down, left hand forward
 db $A4, $4F                     ;Turn on bit 80 at address 0x7e0a3d
 db $71                          ;Short pause
-db $B4, $04                     ;Play Background Music Pirates Ahoy!
+db $B4, $04                     ;Play Background Music Pirates Ahoy
 db $FF                          ;End Event
 
 

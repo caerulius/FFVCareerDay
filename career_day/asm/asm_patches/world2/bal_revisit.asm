@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Cutscene outside Bal after obtaining Hiryuu Plant
 ; This sets flag for Cara in bed cutscene 

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; this is the event teaching the player how the buttons work.
 ; simply enable the flag that disables this event and move on

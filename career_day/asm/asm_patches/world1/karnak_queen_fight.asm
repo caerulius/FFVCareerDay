@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Instantly start the fight with Queen Karnak
 org $C9707A

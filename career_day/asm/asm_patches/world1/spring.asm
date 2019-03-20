@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; disable event where butz points out the healing spring
 org $C852E7

@@ -18,14 +18,16 @@ db $04
 
 ; ANCIENT LIBRARY
 ; Change flag for checking cid mid event
-org $D8EF42
+;org $D8EF42
+org $F04EC2
 db $EE
 
 
 ; SYLDRA
 ; Change Syldra's event to be tied to $A2, $11  ($7E0A16 bit 02), which is 
 ; Early game Pirate cave access. Could be a quasi-key item later 
-org $D8EC45
+; org $D8EC45
+org $F04BC5
 db $11
 
 
@@ -35,14 +37,16 @@ db $11
 ; BUt Bit 04 is specifically tied to the fast 'reentrance' of mua forest
 ; So we can isolate mua forest as its own area, and guido can remain $A22 bit 02
 ; This code specifically means when Mua forest is looking for the bit, it's now checking 04 instead of 02 at $A22
-org $D8F18E
+; org $D8F18E
+org $F0510E
 db $72
 
 ; MOOGLE VILLAGE
 ; Event code [$A4, $3C] or setting bit 10 on $000A3B corresponds to both Tyrasaur being defeated and Moogle Village being open
 ; This fix allows for Tyrasaur to remain on $000A3B bit 10, while Moogle Village is swapped to another bit usually set upon 
 ; Finishing the Tyrasaur sequence, immediately set on new game ([$A4, $2C], or $000A39 bit 10)
-org $D8EF5C
+;org $D8EF5C
+org $F04EDC
 db $2C                     ;Refer to event code [$A4, $2C]
 
 
@@ -52,7 +56,8 @@ db $2C                     ;Refer to event code [$A4, $2C]
 ; We set it to check a bit that we ALWAYS know will be set, which is event code $A2, $10 from starting_flags 
 ; this is address $000A16 bit $10
 
-org $D8F632
+;org $D8F632
+org $F055B2
 db $10
 
 
@@ -62,19 +67,22 @@ db $10
 ; instead of 
 ; db $A2, $6D                     ;Turn on bit 20 at address 0x7e0a21
 ; Which is tied to Zeza allowing access to Barrier Tower
-org $D8F254
+; org $D8F254
+org $F051D4
 db $AA
 
 ; BARRIER TOWER
 ; Similar to above, change barrier tower fight cutscene to deactivate from a different flag than the underwater barrier access warp tile
-org $D8F37D
+; org $D8F37D
+org $F052FD
 db $FD, $7C
 
 ; FORK TOWER
 ; Galuf in party causes problems. Temporarily setting access after Mua forest boss → getting Cara
 ; Bit 80 at address 0x7e0a4b
 
-org $D8F85A
+; org $D8F85A
+org $F057DA
 db $BF
 
 
@@ -93,7 +101,8 @@ db $7A
 ; Change each conditional event to have individual flags associated with their respective key items
 ; Only works for pyramid, the others had to be custom 
 ; Pyramid
-org $D8F3E7
+; org $D8F3E7
+org $F05367
 db $BC
 
 ; Solitary Shrine

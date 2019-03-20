@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ;  Boco mount Tycoon 
 org $C96E99

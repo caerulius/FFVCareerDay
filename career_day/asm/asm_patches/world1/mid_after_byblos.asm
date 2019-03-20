@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 
 ; Skip chat with mid after byblos

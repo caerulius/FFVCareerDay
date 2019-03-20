@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 
 ; Skip ifrit's text before the fight

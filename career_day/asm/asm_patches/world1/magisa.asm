@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; MAgisa on the North Mountain
 org $C86A58

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 
 ; Removes the cutscene for visiting and leaving Zokk's house before he's there

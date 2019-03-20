@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C99B2C → $C99C9C
 

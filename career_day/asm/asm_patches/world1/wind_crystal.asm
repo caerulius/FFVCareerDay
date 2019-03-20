@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Make the wind crystal job acquisition more efficient
 org $C8563B

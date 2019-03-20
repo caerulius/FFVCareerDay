@@ -1,5 +1,4 @@
 hirom
-!rewardconfig = $0970 
 
 ; change text in config menu
 org $E731DB
@@ -16,7 +15,7 @@ org $C23F8E
 
 JML EXPHook
 
-org $F000A0
+org !ADDRESS_expmod
 EXPHook:
 
 CPY #$0000
@@ -63,7 +62,7 @@ JML $C23F94
 org $C24D27
 JML ABPHook
 
-org $F00100
+org !ADDRESS_abpmod
 ABPHook:
 ; TYA
 CPY #$0002

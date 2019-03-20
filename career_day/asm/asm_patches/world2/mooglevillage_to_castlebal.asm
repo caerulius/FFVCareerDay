@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 padbyte $00
 
 ; Talking to Moogle first time in house

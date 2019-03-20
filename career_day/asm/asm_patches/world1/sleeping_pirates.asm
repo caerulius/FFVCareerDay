@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; even where the party sees the pirates and hides behind the rock
 org $C85406

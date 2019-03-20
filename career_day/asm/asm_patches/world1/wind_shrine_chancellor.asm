@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; remove the cutscene speaking to the chancellor in the wind shrine
 org $C855A0

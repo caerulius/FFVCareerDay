@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Enter Mua forest. Theoretically could set flag $72 instead elsewhere, but decided it was simple enough to remove text boxes on first run
 

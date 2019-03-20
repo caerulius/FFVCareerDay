@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C9AD5E → $C9AD8C
 ; This was another anomaly. It's not like others with a clear cut start/finish. In this case there were problems padding, so I left in $00's along the way 

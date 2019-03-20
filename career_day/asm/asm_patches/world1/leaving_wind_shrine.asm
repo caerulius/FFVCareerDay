@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; speed up the warp and skip Boko's tutorial prompt
 org $C85B90

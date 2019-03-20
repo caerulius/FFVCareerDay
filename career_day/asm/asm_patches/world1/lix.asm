@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; removing lix musicbox cutscene. This turns on the music
 ; and sets the bit that lets you get the song

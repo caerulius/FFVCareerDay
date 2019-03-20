@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; $C9A2D3 → $
 ; Solitary Island - cutscene at beginning after Gargoyles. 2 small cutscenes

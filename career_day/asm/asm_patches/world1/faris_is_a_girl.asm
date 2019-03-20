@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; skip cutscene where the boys discover faris is a girl
 org $C864C3

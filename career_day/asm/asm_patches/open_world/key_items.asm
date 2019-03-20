@@ -1,7 +1,4 @@
 hirom
-!rewarditemset = $001E20
-
-
 ; this is for text clearing, it's constant and shouldnt be touched
 org $E73568
 pad $E736A0
@@ -13,18 +10,6 @@ org $C0FB70
 db $30, $12
 
 
-; TEST IN WATERWAY
-org $D133E2
-db $30, !startwithkeyitem1
-
-; TESTING FOR EVENT SLOT $60. SAME AS ABOVE OVERWRITING TORNA CANAL!!
-org $C0FB70
-db $30, $06
-org $C0FB72
-db $30, !startwithkeyitem1
-
-
-
 
 
 
@@ -33,7 +18,7 @@ db $30, !startwithkeyitem1
 ; refer to chest_jobreward.asm for the code that calls these in
 ; at `BranchToKeyItemReward`
 
-org $F00A00
+org !ADDRESS_keyitems
 
 KeyItemTornaCanal:
 
@@ -222,6 +207,7 @@ STA $0A00, x
 
 RTL
 
+; Don't think this works correctly, use TRB method instead
 UnsetKeyItemBits:
 AND $0A00, x
 STA $0A00, x

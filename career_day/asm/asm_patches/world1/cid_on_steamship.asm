@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Cid on steamship
 org $C96FEB

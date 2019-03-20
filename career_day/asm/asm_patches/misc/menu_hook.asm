@@ -1,19 +1,4 @@
 hirom
-!base = $C00000
-!input = $7E0114
-!input2 = $7E0B03
-!configmenucheck = $7E0159 ; when this is #$06, player is in config menu
-!configmenucheck2 = $7E017B ; when this is #$f6, player is in config menu
-!menutype = $7E0143
-!itemmenuvalidater = $7E01E0
-!itemmenuloc = $7E0200
-!speedvalue = $7E0BC0
-!itemboxwriter = $7E7511
-!encounterswitch = $7E0973
-!lastframesave = $7EF87E
-!destinationindex = $7E1E20
-!destinationdata1 = $E79400
-!destinationdata2 = $E79420
 
 org $C0CAB2
 ; Step counter increaser area 
@@ -24,7 +9,7 @@ nop
 nop
 nop
 
-org $F00000
+org !ADDRESS_encounterhook
 EncounterHook:
 sep #$20
 
@@ -62,7 +47,7 @@ JML $C0CABA
 org $c0cbbe
 JML WorldMapHook
 
-org $F00050
+org !ADDRESS_worldmaphook
 WorldMapHook:
 
 sep #$20
@@ -161,7 +146,7 @@ JML $c0cbc5
 org $C2FBE9
 JML FrameHookMenu
 
-org $F00500
+org !ADDRESS_menuhook
 
 FrameHookMenu:
 PHA
@@ -175,10 +160,10 @@ PHY
 sep #$20
 lda !configmenucheck ; load config menu id
 CMP #$06 ; if anything else, branch 
-bne CheckDestinationWriter
+bne FinishFrameHookMenu ;old CheckDestinationWriter
 lda !configmenucheck2 ; load config menu id
 CMP #$f6 ; if anything else, branch 
-bne CheckDestinationWriter
+bne FinishFrameHookMenu ;old CheckDestinationWriter
 
 ; this writes to vram 
 
@@ -239,88 +224,88 @@ JML FinishFrameHookMenu
 ; if all conditions met, then write destination data and trigger via storing $01 in $7E7511
 
 ; still in 8 bit mode
-CheckDestinationWriter:
-lda !menutype
-CMP #$07
-BNE FinishFrameHookMenuHook
-lda !itemmenuloc 
-CMP #$A8
-BNE FinishFrameHookMenuHook
-lda !itemmenuvalidater
-CMP #$00
-BNE ClearItemText ; here, if leaving the "Rare" menu, set back to no text
-BEQ FillItemText
+; CheckDestinationWriter:
+; lda !menutype
+; CMP #$07
+; BNE FinishFrameHookMenuHook
+; lda !itemmenuloc 
+; CMP #$A8
+; BNE FinishFrameHookMenuHook
+; lda !itemmenuvalidater
+; CMP #$00
+; BNE ClearItemText ; here, if leaving the "Rare" menu, set back to no text
+; BEQ FillItemText
 
-FinishFrameHookMenuHook:
-JML FinishFrameHookMenu
-; if conditions met, then execute destination writer
-; !destinationdata2 - lookup table for index 
-; Load in value at $7EF87F and asl 5 times to get an index location
-; Example base F18300 (UPDATE: old code, changed to $E7 bank instead of $F1)
-; Value at $7EF87F is 02
-; $0002 asl x5 → $0020
-; then index will be $F18500
+; FinishFrameHookMenuHook:
+; JML FinishFrameHookMenu
+; ; if conditions met, then execute destination writer
+; ; !destinationdata2 - lookup table for index 
+; ; Load in value at $7EF87F and asl 5 times to get an index location
+; ; Example base F18300 (UPDATE: old code, changed to $E7 bank instead of $F1)
+; ; Value at $7EF87F is 02
+; ; $0002 asl x5 → $0020
+; ; then index will be $F18500
 
-; 28 characters per per line
-FillItemText:
-ldx #$0000 ; First loop for "Destination"
-ldy #$0000 ; First loop for "Destination"
-FillTextLoop1st:
-    lda !destinationdata1, x ; begins at index, increases x until 28 char limit
-    sta $51C4, y
-    inx
-    iny
-    iny
-    CPY #$0038 ; Max chars in hex
-    BNE FillTextLoop1st
+; ; 28 characters per per line
+; FillItemText:
+; ldx #$0000 ; First loop for "Destination"
+; ldy #$0000 ; First loop for "Destination"
+; FillTextLoop1st:
+    ; lda !destinationdata1, x ; begins at index, increases x until 28 char limit
+    ; sta $51C4, y
+    ; inx
+    ; iny
+    ; iny
+    ; CPY #$0038 ; Max chars in hex
+    ; BNE FillTextLoop1st
 
-rep #$20
-lda #$0000
-sep #$20
-lda !destinationindex
-rep #$20
-asl
-asl
-asl
-asl
-asl  ; now an index 
-TAX
-sep #$20
+; rep #$20
+; lda #$0000
+; sep #$20
+; lda !destinationindex
+; rep #$20
+; asl
+; asl
+; asl
+; asl
+; asl  ; now an index 
+; TAX
+; sep #$20
 
-ldy #$0000 ; 28 character limit to length of line 
-FillTextLoop:
-    lda !destinationdata2, x ; begins at index, increases x until 28 char limit
-    sta $5244, y
-    inx
-    iny
-    iny
-    CPY #$0038 ; Max chars in hex
-    BNE FillTextLoop
+; ldy #$0000 ; 28 character limit to length of line 
+; FillTextLoop:
+    ; lda !destinationdata2, x ; begins at index, increases x until 28 char limit
+    ; sta $5244, y
+    ; inx
+    ; iny
+    ; iny
+    ; CPY #$0038 ; Max chars in hex
+    ; BNE FillTextLoop
 
-lda #$01
-sta !itemboxwriter
-JML FinishFrameHookMenu
+; lda #$01
+; sta !itemboxwriter
+; JML FinishFrameHookMenu
 
-ClearItemText:
-LDA #$FF
-LDX #$0000
-ClearTextLoop1st:
-    sta $51C4, x
-    inx
-    inx
-    CPX #$0038 ; Max chars in hex
-    BNE ClearTextLoop1st
-LDX #$0000    
-ClearTextLoop:
-    sta $5244, x
-    inx
-    inx
-    CPX #$0038 ; Max chars in hex
-    BNE ClearTextLoop
+; ClearItemText:
+; LDA #$FF
+; LDX #$0000
+; ClearTextLoop1st:
+    ; sta $51C4, x
+    ; inx
+    ; inx
+    ; CPX #$0038 ; Max chars in hex
+    ; BNE ClearTextLoop1st
+; LDX #$0000    
+; ClearTextLoop:
+    ; sta $5244, x
+    ; inx
+    ; inx
+    ; CPX #$0038 ; Max chars in hex
+    ; BNE ClearTextLoop
 
-lda #$01
-sta !itemboxwriter
-JML FinishFrameHookMenu
+; lda #$01
+; sta !itemboxwriter
+; JML FinishFrameHookMenu
 
 
 

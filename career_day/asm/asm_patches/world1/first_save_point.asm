@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; disable the text box from the first save point
 org $C95F18

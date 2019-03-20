@@ -1,5 +1,5 @@
  hirom
-!base = $C00000
+
 
 ; sandworm fight
 org $C88E5A

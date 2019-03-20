@@ -1,14 +1,8 @@
 hirom
-!unlockedjobs1 = $0840
-!unlockedjobs2 = $0841
-!unlockedjobs3 = $0842
-!eventflags = $0A4A
-!rewardid = $12
-!typeid = $11
 org $c00e3a
 JML ChestHook1
 
-org $F03000
+org !ADDRESS_chesthook
 ChestHook1:
 STZ $BB0
 lda $D13213,x
@@ -212,15 +206,6 @@ RTL
 
 
 BranchToAbilityReward:
-!1pabilities = $08F7
-!2pabilities = $090B
-!3pabilities = $091F
-!4pabilities = $0933
-
-!1pabilitiescount = $08F3
-!2pabilitiescount = $08F4
-!3pabilitiescount = $08F5
-!4pabilitiescount = $08F6
 
 LDA !rewardid
 pha
@@ -473,25 +458,13 @@ JML JobsAssigned
 
 
 
-; Innate checking
-; org $F01100
-; CheckInnateAbility:
-; !1pinnate = $054E
-; !2pinnate = $059E
-; !3pinnate = $05EE
-; !4pinnate = $063E
-
-; LDA !rewardid
-
-
-
 
 
 ; hook for changing indexing based on job id or not 
 org $C08AC2
 JML JobIndexing
 
-org $F00400
+org !ADDRESS_jobindexing
 JobIndexing:
 ADC $0F
 PHA

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Siren encounter
 org $C866DE

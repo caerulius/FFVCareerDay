@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; Frankly this one's a mess but it does work and I left in the old code in case something needs to be added in later. 
 ; This handles from starting Guardians boss to going back to world map, skipping a lot in between

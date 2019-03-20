@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 ; After picking up final crystal
 org $C8729A

@@ -1,5 +1,5 @@
 hirom
-!base = $C00000
+
 
 org $c8b745
 
