@@ -4,8 +4,8 @@ import pandas as pd
 
 # NEED TO CHOOSE ONE OF THE TWO:
 
-table = 'text_table_shop.csv'
-#table = 'text_table_chest.csv'
+# table = 'text_table_shop.csv'
+table = 'text_table_chest.csv'
 
 
 
@@ -27,30 +27,12 @@ kuzar_rewards = pd.read_csv('../data/tables/text_tables/kuzar_rewards.csv',heade
 data = '''
 
 
-0164ffffffffffffffffff64ffffffff
-ffffffff64917c7a85827b8e8b0001ff
-ffffffffffffffffffffffffff608c8c
-7a8c8c8287ff637a80807e8b0001ffff
-ffffffffffffffffffffffff727a8c8e
-847e998cff6a7a8d7a877a0001ffffff
-ffffffffffffffffffffffffffffff67
-888592ff6b7a877c7e0001ffffffffff
-ffffffffffffffffffffffffffff718e
-877eff60917e0001ffffffffffffffff
-ffffffffffffffffffff6c7a8c7a868e
-877e0001ffffffffffffffffffffffff
-ffffffffff7888827c8182998cff6188
-900001ffffffffffffffffffffffffff
-ffffffffffffff65828b7e7b8e8d7e00
-01ffffffffffffffffffffffffffffff
-ffffff727a807eff728d7a7f7f0001ff
-ffffffffffffffffffffffffffffffff
-7682937a8b7dff71887d0001ffffffff
-ffffffffffffffffffffffff60898885
-8588998cff677a8b890001ffffffffff
-ffffffffffffffffffffffffffff647a
-8b8d81ff617e85850001
-
+657a8b828c9bffff678890ff7b88857d
+ff92888eff7a8b7ea1ffff698e8c8dff
+01ffff8088828780ff8d88ff8c877e7a
+84ff8287ff817e8b7eff7a877dff8c8d
+7e7a85ff01ffff8692ff8c8182899dff
+7e81a200
 '''
 data = data.replace("\n","ZZ")
 n = 2
@@ -146,5 +128,5 @@ def generate_keyitems():
     write_text = write_text + run_encrypt(key_item_table)
     write_text = write_text + '; Key Items (for rewards/chests) text\n'
     write_text = write_text + run_encrypt(key_item_reward_table)
-    with open('../../career_day/asm/asm_patches/text_tables/key_item_tables.asm','w') as file:
+    with open('../../projects/shared_asm/text_tables/key_item_tables.asm','w') as file:
         file.write(write_text)

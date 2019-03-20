@@ -47,5 +47,5 @@ for index, row in df_monster_table.iterrows():
         text += row.drop_rare + ","
         text += "Loot" + "\n"
 
-with open("unifiedenemydata.csv", "w+") as f:
+with open("unifiedmonsterdata.csv", "w+") as f:
     f.write(text)

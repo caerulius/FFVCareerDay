@@ -115,11 +115,11 @@ def randomize_bosses_and_generate_log_and_code():
     # This has to be done twice in order for the enemy classes to NOT be shared objects
     # Very important or else swapping HP becomes very muddy and original hp values on enemies are not preserved
                     
-    randomized_boss_list = []
+    self.randomized_boss_list = []
     for formation in df_boss_formations['event_id'].unique():
         randomized_boss_list.append(Formation(formation))
         
-    original_boss_list = []
+    self.original_boss_list = []
     for formation in df_boss_formations['event_id'].unique():
         original_boss_list.append(Formation(formation,original_flag=True))
         
@@ -146,7 +146,7 @@ def randomize_bosses_and_generate_log_and_code():
         # And overwriting the new random boss' 
         # For example, we're updating Byblos to be at Adamantium 
         # We grab Adamantium's two event_lookup (so, when you're in Adamantium's area, 
-            # whatever is being referred to in that event to call the battle)
+        # whatever is being referred to in that event to call the battle)
         # And update Byblos' event_lookups to reflect this
         # Then for asar output, we take the code for running Byblos battle and write to it where Adamantium's was 
         # So then when you walk into Adamantium area, you'll fight Byblos 
@@ -448,4 +448,5 @@ def full_randomize():
     randomize_bosses_and_generate_log_and_code()
     # Output enemy stats 
     generate_enemy_code_and_logs()
-    
+
+full_randomize()

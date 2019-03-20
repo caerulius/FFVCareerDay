@@ -1,8 +1,5 @@
 import pandas as pd
 
-df_price_table = pd.read_csv('tables/shop_prices.csv', dtype=str)
-df_price_table['idx'] = df_price_table['idx'].astype(int)
-
 resell_dict = {
     "HALF": "0",
     "5": "4",
@@ -11,9 +8,9 @@ resell_dict = {
 NUM_SHOP_PRICES = 768
 
 class ShopPrice:
-    def __init__(self, index, collectible_manager):
+    def __init__(self, index, collectible_manager, data_manager):
         self.idx = index
-        self.generate_from_df(df_price_table)
+        self.generate_from_df(data_manager.files['shopprices'])
         '''
         self.address
         self.shop_type (00 for magic, 03 for item, 07 for crystal/ability)
@@ -50,32 +47,22 @@ class ShopPrice:
 
 
 class ShopPriceManager:
-    def __init__(self, collectible_manager):
-        self.shopprices = [ShopPrice(x, collectible_manager) for x
-                           in range(1, NUM_SHOP_PRICES)] 
-
-    def print_patch(self):
-        for i in self.shopprices:
-            print(i.asar_output)
-
-    def print_spoiler(self):
-        for i in self.shopprices:
-            print(i.short_output)
+    def __init__(self, collectible_manager, data_manager):
+        self.shopprices = [ShopPrice(x, collectible_manager, data_manager) for x in range(1, NUM_SHOP_PRICES)]
 
     def get_patch(self):
-        output = ";====="
-        output = output + "\n;shop prices"
-        output = output + "\n;=====\n"
-        for i in [x for x in self.shopprices if "<" not in x.content_name]:
-            output = output + i.asar_output + "\n"
-        output = output + "\n"
-
+        output = ';==========='
+        output = output + '\n;shop prices'
+        output = output + '\n;==========='
+        for i in self.shopprices:
+            output = output + i.asar_output + '\n'
+        
         return output
 
     def get_spoiler(self):
-        output = "-----SHOP PRICES-----\n"
-        for i in [x for x in self.shopprices if "<" not in x.content_name]:
-            output = output + i.short_output + "\n"
-        output = output + "-----*****-----\n"
+        output = '-----SHOP PRICES-----\n'
+        for i in self.shopprices:
+            output = output + i.short_output + '\n'
+        output = output + '-----***********-----'
 
         return output
