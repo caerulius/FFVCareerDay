@@ -92,3 +92,8 @@ db $FF
 ; Tablet accepted
 org $E257BC
 db $73, $7A, $7B, $85, $7E, $8D, $96, $7A, $7C, $7C, $7E, $89, $8D, $7E, $7D, $A3, $96, $64, $87, $8D, $7E, $8B, $96, $8D, $81, $7E, $96, $71, $82, $7F, $8D, $A3, $A3, $A3, $00
+
+; Disable world map back entrance for Ship Graveyard. Instead, custom torna canal event allows you to re-enter
+; Code below is replicating Torna Canal again
+org $CE2808
+db $AA, $58, $C5, $00

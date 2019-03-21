@@ -203,7 +203,7 @@ incsrc reward_events/exdeathcastle_carbuncle.asm
 incsrc reward_events/walse_shiva.asm
 incsrc reward_events/watercrystal_obtainshards.asm
 incsrc reward_events/chicken_knife_brave_blade.asm
-
+incsrc reward_events/tycoon_hiddenarea.asm
 
 ; text tables
 incsrc ../../shared_asm/text_tables/destination_table.asm

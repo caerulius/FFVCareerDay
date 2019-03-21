@@ -26,13 +26,13 @@ kuzar_rewards = pd.read_csv('../data/tables/text_tables/kuzar_rewards.csv',heade
 
 data = '''
 
-
-657a8b828c9bffff678890ff7b88857d
-ff92888eff7a8b7ea1ffff698e8c8dff
-01ffff8088828780ff8d88ff8c877e7a
-84ff8287ff817e8b7eff7a877dff8c8d
-7e7a85ff01ffff8692ff8c8182899dff
-7e81a200
+6192ff8e8c828780ff7aff69887b9dff
+7e7a7c81ff887fff8d817eff7f888e8b
+ff01ffff907a8b8b82888b8cff7c7a87
+ff807a8287ff8c897e7c827a85ff8c84
+8285858cff887f01ffff8d817a8dff69
+887ba3ffff73817e8c7eff907eff7c7a
+8585ffaa607b8285828d827e8c99a300
 '''
 data = data.replace("\n","ZZ")
 n = 2

@@ -1,9 +1,6 @@
 if !testing == 1
 
     !startwithkeyitem1 = $07
-    !startwithkeyitem2 = $01
-    !startwithkeyitem3 = $01
-    !startwithkeyitem4 = $01
     
     
     ; TEST IN WATERWAY

@@ -4,7 +4,7 @@ incsrc core_code/init.asm
 
 ; conditionals
 !testing = 1 ; this enables debugging below 
-!allkeysunlocked = 1 ; this starts the player with all keys
+!allkeysunlocked = 0 ; this starts the player with all keys
 
 ; randomizer testing
 incsrc ../../test_asm/r-patch.asm
@@ -224,6 +224,7 @@ incsrc reward_events/walse_shiva.asm
 incsrc reward_events/watercrystal_obtainshards.asm
 incsrc reward_events/chicken_knife_brave_blade.asm
 incsrc reward_events/walsetower_gogo.asm
+incsrc reward_events/tycoon_hiddenarea.asm
 
 
 ; ; open world

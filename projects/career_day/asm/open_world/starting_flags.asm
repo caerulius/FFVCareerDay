@@ -415,65 +415,56 @@ db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
 db $A4, $5B            ; set address 000A3F bit ON 08
 
 
-; player position
-; set airship
-; spawns right under player, tweak $9C,$96 to change X/Y coord. $D8 controls type of vehicle
 
-!testingmapid = $02, $00
-!testingxy = $93, $52
+; tutorial section
 
-; ONLY USE WITH WORLD 3
-; db $A2, $79            ; set address 000A23 bit ON 02
 
-; db $E1, !testingmapid, !testingxy, $00 ;Return from cutscene? 00 00 9C 96 00
-; db $D2, $02,!testingxy, $D8
+incsrc tutorial_event.asm
 
-; OG CORRECT WARPS
-db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
-db $D2, $00, $91, $74, $D8
+
+
+
+
 
 
 
 
 ; TESTING!!!!!!!
 ; custom text box for key item
-
-if !allkeysunlocked == 1
-	db $DE, $60
-	db $DE, $61
-	db $DE, $62
-	db $DE, $63
-	db $DE, $64
-	db $DE, $65
-	db $DE, $66
-	db $DE, $67
-	db $DE, $68
-	db $DE, $69
-	db $DE, $6A
-	db $DE, $6B
-	db $DE, $6C
-	db $DE, $6D
-	db $DE, $6E
-	db $DE, $6F
-	db $DE, $70
-	db $DE, $71
-	db $DE, $72
-	db $DE, $73
-	db $DE, $74
-	db $DE, $75
-	db $DE, $76
-	db $DE, $77
-	db $DE, $78
-else
-	db $DE, $60				; set up reward
-	db $DE, $61				; set up reward
-	; db $DE, $62				; set up reward
-	; db $DE, $63				; set up reward
-	; db $DE, $64				; set up reward
+if !testing == 1
+	if !allkeysunlocked == 1
+		db $DE, $60
+		db $DE, $61
+		db $DE, $62
+		db $DE, $63
+		db $DE, $64
+		db $DE, $65
+		db $DE, $66
+		db $DE, $67
+		db $DE, $68
+		db $DE, $69
+		db $DE, $6A
+		db $DE, $6B
+		db $DE, $6C
+		db $DE, $6D
+		db $DE, $6E
+		db $DE, $6F
+		db $DE, $70
+		db $DE, $71
+		db $DE, $72
+		db $DE, $73
+		db $DE, $74
+		db $DE, $75
+		db $DE, $76
+		db $DE, $77
+		db $DE, $78
+	else
+		db $DE, $60				; set up reward
+		db $DE, $61				; set up reward
+		; db $DE, $62				; set up reward
+		; db $DE, $63				; set up reward
+		; db $DE, $64				; set up reward
+	endif
 endif
-
-
-db $EE
-
 
 db $14

@@ -41,6 +41,27 @@ db $EE                          ;Conditional event flag checks for world 1 (most
 
 db $CC, $00                  ;Custom destination flag 00
 db $C3, $02                     ;Fade in Speed 08
+
+
+; player position
+; set airship
+; spawns right under player, tweak $9C,$96 to change X/Y coord. $D8 controls type of vehicle
+
+!testingmapid = $02, $00
+!testingxy = $93, $52
+
+; ONLY USE WITH WORLD 3
+; db $A2, $79            ; set address 000A23 bit ON 02
+
+; db $E1, !testingmapid, !testingxy, $00 ;Return from cutscene? 00 00 9C 96 00
+; db $D2, $02,!testingxy, $D8
+
+; OG CORRECT WARPS
+db $E1, $00, $00, $B8, $85, $00 ;Return from cutscene? 00 00 9C 96 00
+db $D2, $00, $B9, $86, $D8
+
+
+
 db $75                          ;Long pause
 db $FF                          ;End Event
 
