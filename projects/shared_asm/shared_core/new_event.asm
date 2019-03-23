@@ -43,7 +43,7 @@ sep #$20
 
 lda !eventrewardindex+1, x ; load in reward id 
 sta !rewardid
-sta $16a3				; another reward id
+sta !nonmagicrewardindex				; another reward id
 lda !eventrewardindex, x ; load in type id 
 sta !typeid
 
@@ -63,7 +63,7 @@ JMP FinishRewardEvent ; in case no matches
 
 EventRewardItem: ; give item
 lda !rewardid
-sta $16a3				; another reward id
+sta !nonmagicrewardindex				; another reward id
 jsr $bfdd ; this subroutine handles awarding item based on cycling through inventory
 cpy #$0100 ; if 100 was reached (255 items), then award new item
 BEQ AwardNewItem
@@ -91,7 +91,7 @@ iny
 BRA AwardNewItem2
 
 BlankSlotFound:
-lda $16a3
+lda !nonmagicrewardindex
 sta $0640,y
 lda #$01
 sta $0740,y
@@ -172,6 +172,52 @@ MagicTextBox:
 lda #$04
 sta $DF 
 JMP $C7A4 ; branch the fk out and hope it works (it does)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

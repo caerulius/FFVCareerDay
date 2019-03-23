@@ -213,7 +213,7 @@ FinishRewardAssignment:
 LDA #$02
 STA $AF
 LDA !rewardid
-STA $16a3
+STA !nonmagicrewardindex
 RTL
 
 
@@ -230,6 +230,7 @@ BranchToAbilityReward:
 stz !progabilityentry
 stz !progabilityentry2
 lda !rewardid
+sta !nonmagicrewardindex
 rep #$20
 asl a
 asl a
@@ -251,7 +252,7 @@ beq AbilityGetLastAndExit
 ldx !progabilityentry
 ; tax
 lda !progabilitytable, x ;load the current ability to check
-sta $16a3
+sta !magicrewardindex
 sta !currentability
 cmp #$FF
 beq AbilityGetLastAndExit
@@ -327,7 +328,7 @@ inc !4pabilitiescount
 LDA #$02
 STA $AF
 lda !currentability
-sta $16a3
+sta !nonmagicrewardindex
 RTL
 
 
@@ -357,7 +358,7 @@ beq MagicGetLastAndExit
 ldx !progmagicentry
 ; tax
 lda !progmagictable, x ;load the current magic to check
-sta $16a3
+sta !magicrewardindex
 sta !currentmagic
 cmp #$FF
 beq MagicGetLastAndExit
@@ -400,7 +401,7 @@ dex
 LDA #$02
 STA $AF
 lda !progmagictable, x
-sta $16a3
+sta !magicrewardindex
 jmp MagicExitProgression
 
 MagicExitProgression:

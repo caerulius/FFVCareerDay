@@ -114,3 +114,9 @@ db $BC
 ; Solitary Shrine
 ; org $D8FC64
 ; db $FC, $BB
+
+
+; FINAL EXDEATH
+; Always trigger the cutscene for the final fight
+org $F05D3D
+db $FF, $85, $07

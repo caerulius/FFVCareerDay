@@ -415,6 +415,14 @@ db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
 db $A4, $5B            ; set address 000A3F bit ON 08
 
 
+; FINAL EXDEATH
+; ; first door cutscene flag
+; db $A4, $7A                     ;Set Event Flag 17A
+; final Exdeath cutscene 
+; db $A5, $FE                     ;Clear Event Flag 1FE
+db $A4, $9F                     ;Set Event Flag 19F
+db $CB, $97, $03                ;Clear Flag 2/3/4/5/97 03
+
 
 ; tutorial section
 

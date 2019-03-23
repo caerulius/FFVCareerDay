@@ -48,6 +48,8 @@
 !eventflags = $0A4A
 !rewardid = $12
 !typeid = $11
+!nonmagicrewardindex = $16A2
+!magicrewardindex = $16A3
 !rewardconfig = $0970
 !loopcounter = $1ED7
 !progmagicentry = $1ED8
