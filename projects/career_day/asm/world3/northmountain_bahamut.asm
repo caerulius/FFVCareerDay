@@ -38,6 +38,11 @@ db $86, $20                     ;Sprite 086 do event: face down, left hand raise
 db $84, $20                     ;Sprite 084 do event: face down, left hand raised out
 db $10                          ;Player pose: face up, left hand forward
 db $BD, $34, $FF                ;Start Event Battle 34
+db $DE, $16				; set up reward
+db $DF					; call text handler
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $82 ; custom reward
 db $DF
 db $B1, $03                     ;Set Player Sprite 03
@@ -56,12 +61,6 @@ db $DB                          ;Restore Player status
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 db $20                          ;Player pose: face down, left hand raised out
 
-db $C8, $66, $07                ;Display Message/Text/Dialogue 66 07  		; <---reward--->
-db $AC, $56                     ;Add Magic Bahmut  		; <---reward--->
-
-
-; db $DE, $0		; set up reward  		; <---reward--->
-; db $DF			; call text handler  	; <---reward--->
 
 
 db $E4, $B4                     ;Unknown

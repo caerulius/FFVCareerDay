@@ -8,6 +8,11 @@ db $7C                          ;<Unknown>
 db $80, $0A                     ;Sprite 080 do event: Hide
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 
+db $DE, $14				; set up reward
+db $DF					; call text handler
+db $C5, $80                     ;<unknown>
+db $B5, $02                     ;Play Sound Effect Void, Image
+db $71
 db $DE, $7B ; custom reward
 db $DF
 

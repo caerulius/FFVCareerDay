@@ -27,13 +27,23 @@ phx
 phy
 
 
+; lda $DF ; load in first argument, which will be the reward index.
+; asl ; asl it once, because we'll be indexing for every 2 bytes for reward type and id
+; tax
+
+rep #$20
+lda #$0000
+sep #$20
 lda $DF ; load in first argument, which will be the reward index.
+rep #$20
 asl ; asl it once, because we'll be indexing for every 2 bytes for reward type and id
 tax
+lda #$0000
+sep #$20
 
 lda !eventrewardindex+1, x ; load in reward id 
 sta !rewardid
-sta $16a2				; another reward id
+sta $16a3				; another reward id
 lda !eventrewardindex, x ; load in type id 
 sta !typeid
 
@@ -53,7 +63,7 @@ JMP FinishRewardEvent ; in case no matches
 
 EventRewardItem: ; give item
 lda !rewardid
-sta $16a2				; another reward id
+sta $16a3				; another reward id
 jsr $bfdd ; this subroutine handles awarding item based on cycling through inventory
 cpy #$0100 ; if 100 was reached (255 items), then award new item
 BEQ AwardNewItem
@@ -81,7 +91,7 @@ iny
 BRA AwardNewItem2
 
 BlankSlotFound:
-lda $16a2
+lda $16a3
 sta $0640,y
 lda #$01
 sta $0740,y
@@ -99,8 +109,7 @@ JMP FinishRewardEvent
 
 
 EventRewardMagic: ; give magic
-lda !rewardid
-sta $16a3				; another reward id
+JSL BranchToMagicReward
 jsr $C9A5
 JMP FinishRewardEvent
 

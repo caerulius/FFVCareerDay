@@ -19,6 +19,9 @@ db $73					;Medium wait
 db $8A, $0A				;Sprite 08A do event: Hide
 db $8B, $0A             ;Sprite 08B do event: Hide
 db $BD, $03, $06		;Start Event Battle 03
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $63 ; custom reward
 db $DF
 db $A2, $21				;Set Event Flag 021

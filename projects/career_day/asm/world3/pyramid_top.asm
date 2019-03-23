@@ -14,7 +14,8 @@ db $01                          ;Player Move Up
 db $73                          ;Long pause
 db $14                          ;Player pose: face down, left hand forward
 db $D0, $81, $40                ;(Music) 81 40
-db $C8, $84, $06                ;Display Message/Text/Dialogue 84 06
+db $DE, $41
+db $DF
 db $B4, $24                     ;Play Background Music The Book of Sealings
 db $B5, $84                     ;Play Sound Effect Exdeath destroyed 2
 db $C5                          ;<unknown>

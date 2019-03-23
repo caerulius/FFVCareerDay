@@ -13,6 +13,11 @@ db $71                          ;Short pause
 db $C5, $20                     ;<unknown>
 db $71                          ;Short pause
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
+db $DE, $12				; set up reward
+db $DF					; call text handler
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $77 ; custom reward
 db $DF
 db $E4, $C9                     ;Unknown

@@ -53,6 +53,9 @@ db $83, $09                     ;Sprite 083 do event: Show
 db $83, $20                     ;Sprite 083 do event: face down, left hand raised out
 db $85, $20                     ;Sprite 085 do event: face down, left hand raised out
 db $BD, $10, $FF                ;Start Event Battle 10
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $6C ; custom reward
 db $DF
 db $C4, $04

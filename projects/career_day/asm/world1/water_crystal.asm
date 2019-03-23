@@ -37,6 +37,9 @@ db $84, $0A                     ;Sprite 084 do event: Hide
 
 db $BD, $06, $FF                ;Start Event Battle 06
 
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $65 ; custom reward
 db $DF
 

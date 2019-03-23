@@ -19,6 +19,9 @@ db $83, $04                     ;Sprite 083 do event Move Left
 db $CE, $03, $02                ;Play next 02 bytes 03 times
 db $83, $03                     ;Sprite 083 do event Move Down
 db $BD, $94, $FF                ;Start Event Battle 94
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $6F ; custom reward
 db $DF
 db $83, $0A                     ;Sprite 083 do event Hide

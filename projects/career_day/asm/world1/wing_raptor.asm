@@ -28,6 +28,9 @@ db $CB, $4A, $00                ;Turn off bit 04 at address  0x7e0a5d
 db $A4, $20                     ;Turn on bit 01 at address 0x7e0a38
 db $CA, $4B, $00                ;Turn on bit 08 at address  0x7e0a5d
 db $CA, $4C, $00                ;Turn on bit 10 at address  0x7e0a5d
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $61 ; custom reward
 db $DF
 db $FF                          ;End Event

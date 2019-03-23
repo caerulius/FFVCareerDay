@@ -23,3 +23,15 @@ pad $C9B05F
 org $CE93A7
 
 pad $CE941E
+
+
+; disable timer events
+
+org $C8EC83
+db $01                          ;Player Move Up
+db $A4, $F1                     ;Turn on bit 02 at address 0x7e0a52
+db $FF                          ;End Event
+pad $C8EC8A
+org $C8EC8B
+db $A4, $F1                     ;Turn on bit 02 at address 0x7e0a52
+db $FF                          ;End Event

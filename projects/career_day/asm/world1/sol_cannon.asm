@@ -24,23 +24,11 @@ pad $C982C3
 
 ; post-cannon
 org $C89ABD
-db $DE, $6B ; custom reward
+db $C5, $80
+db $B5, $02
+db $71
+db $DE, $6A ; custom reward
 db $DF
 db $CB, $FD, $00                ;Clear Flag 2/3/4/5/FD 00
 db $A2, $4B                     ;Set Event Flag 04B
 db $FF                          ;End Event
-
-
-; ; relocate cannon code
-; org $C83518
-; db $C4, $9A, $C8
-
-; org $C89AC4
-; ; new event for cannon
-; db $80, $0A                     ;Sprite 080 do event: Hide
-; db $81, $0A                     ;Sprite 081 do event: Hide
-; db $82, $0A                     ;Sprite 082 do event: Hide
-; db $BD, $0E, $FF                ;Start Event Battle 0E
-; db $DE, $6A ; custom reward
-; db $DF
-; pad $C89ADB

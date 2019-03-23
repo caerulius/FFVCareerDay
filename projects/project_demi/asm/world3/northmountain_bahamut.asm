@@ -53,15 +53,13 @@ db $14                          ;Player pose: face down, left hand forward
 db $DB                          ;Restore Player status
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 db $20                          ;Player pose: face down, left hand raised out
-
-db $C8, $66, $07                ;Display Message/Text/Dialogue 66 07  		; <---reward--->
-db $AC, $56                     ;Add Magic Bahmut  		; <---reward--->
-
-
-; db $DE, $0		; set up reward  		; <---reward--->
-; db $DF			; call text handler  	; <---reward--->
-
-
+if !vanillarewards == 1
+    db $C8, $66, $07                ;Display Message/Text/Dialogue 66 07  		; <---reward--->
+    db $AC, $56                     ;Add Magic Bahmut  		; <---reward--->
+else
+	db $DE, $16				; set up reward
+	db $DF					; call text handler
+endif
 db $E4, $B4                     ;Unknown
 db $2C                          ;Player pose: face right, right hand raised
 db $A2, $D4                     ;Set Event Flag 0D4

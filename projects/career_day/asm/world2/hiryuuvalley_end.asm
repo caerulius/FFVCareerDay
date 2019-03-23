@@ -15,6 +15,9 @@ db $03                          ;Player Move Down
 db $70                          ;Very short pause
 db $86, $0A                     ;Sprite 086 do event: Hide
 db $BD, $1E, $FF                ;Start Event Battle 1E
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $73 ; custom reward
 db $DF
 db $24                          ;Sprite 080 do event: face down, right hand raised in

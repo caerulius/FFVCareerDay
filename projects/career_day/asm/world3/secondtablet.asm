@@ -20,6 +20,9 @@ db $86, $01                     ;Sprite 086 do event: Move Up
 db $86, $01                     ;Sprite 086 do event: Move Up
 db $86, $0A                     ;Sprite 086 do event: Hide
 db $BD, $2E, $FF                ;Start Event Battle 2E
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $80 ; custom reward
 db $DF
 db $10                          ;Player pose: face up, left hand forward

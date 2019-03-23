@@ -34,6 +34,11 @@ db $C5, $80                     ;<unknown>
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 db $39                          ;Player pose: face down, both arms raised
 db $C5, $80                     ;<unknown>
+db $DE, $1F				; set up reward
+db $DF					; call text handler
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $7D ; custom reward
 db $DF
 
@@ -62,6 +67,11 @@ db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 db $39                          ;Player pose: face down, both arms raised
 db $C5, $20                     ;<unknown>
 db $71                          ;Short pause
+db $DE, $20				; set up reward
+db $DF					; call text handler
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $7E ; custom reward
 db $DF
 db $E4, $14                     ;Unknown

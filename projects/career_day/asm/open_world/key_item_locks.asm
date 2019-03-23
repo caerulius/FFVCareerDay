@@ -571,8 +571,12 @@ org $C0057A
 db !RELOCATE_conditional_events_le_offset1
 org $C005A6
 db !RELOCATE_conditional_events_le_offset1
-
-
+org $C004ED
+db !RELOCATE_conditional_events_le_offset2
+org $C004F8
+db !RELOCATE_conditional_events_le_offset3
+org $C00514
+db !RELOCATE_conditional_events_le_offset3
 
 ; remove the crutch of old code and hope for the best
 

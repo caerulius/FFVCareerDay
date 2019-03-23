@@ -37,6 +37,9 @@ db $80, $07                     ;Sprite 080 do event: 07
 db $80, $08                     ;Sprite 080 do event: 08
 db $84, $0A                     ;Sprite 084 do event: Hide
 db $BD, $12, $FF                ;Start Event Battle 12
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $6D ; custom reward
 db $DF
 db $80, $04                     ;Sprite 080 do event: Move Left

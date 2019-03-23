@@ -120,6 +120,9 @@ db $8E, $0A                     ;Sprite 08E do event: Hide
 db $8F, $0A                     ;Sprite 08F do event: Hide
 db $90, $0A                     ;Sprite 190 do event: Hide
 db $BD, $21, $FF                ;Start Event Battle 21
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $76 ; custom reward
 db $DF
 db $75

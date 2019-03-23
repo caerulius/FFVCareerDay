@@ -23,12 +23,11 @@
 !ADDRESS_walkspeedhook = $F00180
 !ADDRESS_walkspeedtownhook = $F001E0
 !ADDRESS_originalshopprices = $F80000
-
+!ADDRESS_NEWEVENT_jobsetting = $F01000
 
 ; career day addresses NOT here
 ; !ADDRESS_customitem1 = $F01200
 ; !ADDRESS_customitem2 = $F01300
-; !ADDRESS_NEWEVENT_jobsetting = $F01000
 ; !ADDRESS_NEWEVENT_conditionalvehicles = $F01100
 ; !ADDRESS_NEWEVENT_conditionaleventflags = $F01180
 ; !ADDRESS_NEWEVENT_conditionalrifttablet = $F01800

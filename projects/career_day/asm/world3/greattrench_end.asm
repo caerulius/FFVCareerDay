@@ -35,6 +35,11 @@ db $71                          ;Short pause
 db $14                          ;Player pose: face down, left hand forward
 db $20                          ;Player pose: face down, left hand raised out
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
+db $DE, $21				; set up reward
+db $DF					; call text handler
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $7C ; custom reward
 db $DF
 db $E4, $B4                     ;Unknown

@@ -17,6 +17,9 @@ LDA !typeid
 CMP #$20
 BEQ IntermediateBranchToMagicReward
 LDA !typeid
+CMP #$30
+BEQ IntermediateBranchToKeyItemReward
+LDA !typeid
 BPL BranchIfPlusChestIDBranch
 JML $C00E44
 
@@ -28,10 +31,7 @@ JSL BranchToAbilityReward
 plp
 plx
 ply
-JML $C00E3E
-
-BranchIfPlusChestIDBranch:
-JML $C00E47
+JML $c00e74
 
 IntermediateBranchToMagicReward:
 phy
@@ -42,6 +42,13 @@ plp
 plx
 ply
 JML $C00E69
+
+IntermediateBranchToKeyItemReward:
+JSL BranchToKeyItemReward
+JML $c00e74
+
+BranchIfPlusChestIDBranch:
+JML $C00E47
 
 IntermediateBranchToJobReward:
 JSL BranchToJobReward
@@ -69,38 +76,41 @@ CMP #$07; Hunter
 BEQ RewardHunter
 JMP CheckSecondJobs
 
+
 RewardKnight:
 LDA #$80
 TSB !unlockedjobs1
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardMonk:
 LDA #$40
 TSB !unlockedjobs1
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardThief:
 LDA #$20
 TSB !unlockedjobs1
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardDragoon:
 LDA #$10
 TSB !unlockedjobs1
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardNinja:
 LDA #$08
 TSB !unlockedjobs1
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardSamurai:
 LDA #$04
 TSB !unlockedjobs1
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardBerserker:
 LDA #$02
 TSB !unlockedjobs1
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardHunter:
 LDA #$01
 TSB !unlockedjobs1
-JMP JobsAssigned
+JMP FinishRewardAssignment
+
+
 
 ;unlockedjobs2
 CheckSecondJobs:
@@ -126,35 +136,35 @@ JMP CheckThirdJobs
 RewardMysticKnight:
 LDA #$80
 TSB !unlockedjobs2
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardWhiteMage:
 LDA #$40
 TSB !unlockedjobs2
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardBlackMage:
 LDA #$20
 TSB !unlockedjobs2
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardTimeMage:
 LDA #$10
 TSB !unlockedjobs2
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardSummoner:
 LDA #$08
 TSB !unlockedjobs2
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardBlueMage:
 LDA #$04
 TSB !unlockedjobs2
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardRedMage:
 LDA #$02
 TSB !unlockedjobs2
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardMediator:
 LDA #$01
 TSB !unlockedjobs2
-JMP JobsAssigned
+JMP FinishRewardAssignment
 
 
 ;unlockedjobs3
@@ -172,48 +182,55 @@ BEQ RewardMimic
 CMP #$15; Freelancer
 BEQ RewardFreelancer
 ; for some reason if none are met, JMP to end
-JMP JobsAssigned
+JMP FinishRewardAssignment
 
 RewardChemist:
 LDA #$80
 TSB !unlockedjobs3
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardGeomancer:
 LDA #$40
 TSB !unlockedjobs3
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardBard:
 LDA #$20
 TSB !unlockedjobs3
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardDancer:
 LDA #$10
 TSB !unlockedjobs3
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardMimic:
 LDA #$08
 TSB !unlockedjobs3
-JMP JobsAssigned
+JMP FinishRewardAssignment
 RewardFreelancer:
 LDA #$04
 TSB !unlockedjobs3
-JMP JobsAssigned
+JMP FinishRewardAssignment
 
-JobsAssigned:
+FinishRewardAssignment:
 LDA #$02
 STA $AF
 LDA !rewardid
-STA $16a2
+STA $16a3
 RTL
+
+
+
+
+
 
 org !ADDRESS_progressiverewards
 ;################
 ;Reward Abilities
 ;################
 BranchToAbilityReward:
-
-rep #$20
+; starts in 8 bit A
+stz !progabilityentry
+stz !progabilityentry2
 lda !rewardid
+rep #$20
 asl a
 asl a
 asl a
@@ -232,7 +249,9 @@ beq AbilityGetLastAndExit
 
 ; if the current progression value is $#FF, no more progression is defined, exit early
 ldx !progabilityentry
+; tax
 lda !progabilitytable, x ;load the current ability to check
+sta $16a3
 sta !currentability
 cmp #$FF
 beq AbilityGetLastAndExit
@@ -268,6 +287,7 @@ jmp AbilityProgressionLoop
 
 AbilityGetLastAndExit: ;get last result, which should be valid, and exit with that in a
 ldx !progabilityentry
+; tax 
 dex
 lda !progabilitytable, x
 sta !currentability
@@ -304,7 +324,10 @@ inc !3pabilitiescount
 inc !4pabilitiescount
 
 ; end with generic finisher
+LDA #$02
+STA $AF
 lda !currentability
+sta $16a3
 RTL
 
 
@@ -312,8 +335,9 @@ RTL
 ;Reward Magic Spells
 ;###################
 BranchToMagicReward:
+stz !progmagicentry
+stz !progmagicentry2
 
-sep #$10
 lda !rewardid
 asl a
 asl a
@@ -331,7 +355,9 @@ beq MagicGetLastAndExit
 
 ; if the current progression value is $#FF, no more progression is defined, exit early
 ldx !progmagicentry
+; tax
 lda !progmagictable, x ;load the current magic to check
+sta $16a3
 sta !currentmagic
 cmp #$FF
 beq MagicGetLastAndExit
@@ -357,6 +383,8 @@ and $C0C9B9,x
 bne MagicProgressionReloop
 
 ;otherwise, we don't have that spell, so load the value back into a and exit, also clean up our stack
+LDA #$02
+STA $AF
 lda !currentmagic
 jmp MagicExitProgression
 
@@ -367,18 +395,241 @@ jmp MagicProgressionLoop
 
 MagicGetLastAndExit: ;get last result, which should be valid, and exit with that in a
 ldx !progmagicentry
+; tax
 dex
+LDA #$02
+STA $AF
 lda !progmagictable, x
+sta $16a3
 jmp MagicExitProgression
 
 MagicExitProgression:
 RTL
 
+
+
+
+
+
+
+; this code will set the proper bits per key item
+; refer to key_items.asm 
+BranchToKeyItemReward:
+
+; these are set up manually. this is for debugging & cleanliness
+; no reason to come up with a complex indexing table here
+
+; we're going to be using a custom bit setter 
+; so we'll push A and X and Y
+pha 
+phx
+phy
+LDA !rewardid
+
+; CANAL KEY
+CMP #$12
+BNE KeyItemContinue1
+JSL KeyItemTornaCanal
+JMP KeyItemAddText
+
+
+; WALSE KEY
+KeyItemContinue1:
+CMP #$00
+BNE KeyItemContinue2
+JSL KeyItemWalseKey
+JMP KeyItemAddText
+
+; STEAMSHIP KEY
+KeyItemContinue2:
+CMP #$01
+BNE KeyItemContinue3
+JSL KeyItemSteamshipKey
+JMP KeyItemAddText
+
+; IFRITS FIRE
+KeyItemContinue3:
+CMP #$02
+BNE KeyItemContinue4
+JSL KeyItemIfritsFire
+JMP KeyItemAddText
+
+
+; SandWormBait
+KeyItemContinue4:
+CMP #$03
+BNE KeyItemContinue5
+JSL KeyItemSandWormBait
+JMP KeyItemAddText
+
+; Adamantite
+KeyItemContinue5:
+CMP #$15
+BNE KeyItemContinue6
+JSL KeyItemAdamantite
+JMP KeyItemAddText
+
+; Big Bridge Key
+KeyItemContinue6:
+CMP #$04
+BNE KeyItemContinue7
+JSL KeyItemBigBridge
+JMP KeyItemAddText
+
+KeyItemContinue7:
+
+; Moogle Suit
+CMP #$16
+BNE KeyItemContinue8
+JSL KeyItemMoogleSuit
+JMP KeyItemAddText
+
+KeyItemContinue8:
+
+; Submarine Key
+CMP #$06
+BNE KeyItemContinue9
+JSL KeyItemSubmarineKey
+JMP KeyItemAddText
+
+KeyItemContinue9:
+
+; Hiryuu Call
+CMP #$05
+BNE KeyItemContinue10
+JSL KeyItemHiryuuCall
+JMP KeyItemAddText
+
+KeyItemContinue10:
+
+; Elder Branch
+CMP #$18
+BNE KeyItemContinue11
+JSL KeyItemElderBranch
+JMP KeyItemAddText
+
+KeyItemContinue11:
+
+; Elder Branch
+CMP #$08
+BNE KeyItemContinue12
+JSL KeyItemBracelet
+JMP KeyItemAddText
+
+KeyItemContinue12:
+
+; Anti Barrier
+CMP #$07
+BNE KeyItemContinue13
+JSL KeyItemAntiBarrier
+JMP KeyItemAddText
+
+KeyItemContinue13:
+
+; Pyramid Page
+CMP #$0B
+BNE KeyItemContinue14
+JSL KeyItemPyramidPage
+JMP KeyItemAddText
+
+KeyItemContinue14:
+
+; Shrine Page
+CMP #$0C
+BNE KeyItemContinue15
+JSL KeyItemShrinePage
+JMP KeyItemAddText
+
+KeyItemContinue15:
+
+; Trench Page
+CMP #$0D
+BNE KeyItemContinue16
+JSL KeyItemTrenchPage
+JMP KeyItemAddText
+
+KeyItemContinue16:
+
+; Falls Page
+CMP #$0E
+BNE KeyItemContinue17
+JSL KeyItemFallsPage
+JMP KeyItemAddText
+
+KeyItemContinue17:
+
+
+
+; Pyramid 1st Tablet
+CMP #$1A
+BNE KeyItemContinue18
+JSL KeyItem1stTablet
+JMP KeyItemAddText
+
+KeyItemContinue18:
+
+; Shrine 2nd Tablet
+CMP #$1B
+BNE KeyItemContinue19
+JSL KeyItem2ndTablet
+JMP KeyItemAddText
+
+KeyItemContinue19:
+
+; Trench 3rd Tablet
+CMP #$1C
+BNE KeyItemContinue20
+JSL KeyItem3rdTablet
+JMP KeyItemAddText
+
+KeyItemContinue20:
+
+; Falls 4th Tablet
+CMP #$1D
+BNE KeyItemContinue21
+JSL KeyItem4thTablet
+JMP KeyItemAddText
+
+KeyItemContinue21:
+
+KeyItemAddText:
+; < SET UP KEY ITEM SETTER HERE > 
+LDA !rewardid
+pha
+lsr a
+lsr a
+lsr a
+tay
+pla
+and #$07
+tax
+lda !eventflags, y
+ora $C0C9B9,X
+sta !eventflags, y
+
+
+EndKeyItemReward:
+ply
+plx
+pla
+
+; end with generic finisher
+JML FinishRewardAssignment
+
+
+
+
+
+
+
+
+
+
 ; hook for changing indexing based on job id or not 
 org $C08AC2
 JML JobIndexing
 
-org $F00400
+org !ADDRESS_jobindexing
 JobIndexing:
 ADC $0F
 PHA

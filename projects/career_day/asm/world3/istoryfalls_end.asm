@@ -36,6 +36,11 @@ org $C9BBF8
 
 
 db $BD, $31, $FF                ;Start Event Battle 31
+db $DE, $10				; set up reward
+db $DF					; call text handler
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $7F ; custom reward
 db $DF
 db $CE, $0A, $1C                ;Play next 1C bytes 0A times

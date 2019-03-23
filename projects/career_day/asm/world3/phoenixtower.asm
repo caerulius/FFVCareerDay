@@ -21,6 +21,11 @@ db $C3, $03
 db $74
 db $DE, $15				; set up reward
 db $DF					; call text handler
+db $C5, $80
+db $B5, $02
+db $71
+db $DE, $15				; set up reward
+db $DF					; call text handler
 db $2E                          ;Player pose: face down, head lowered
 db $D0, $80, $80                ;(Music) 80 80
 db $14                          ;Player pose: face down, left hand forward

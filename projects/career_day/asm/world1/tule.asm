@@ -45,10 +45,6 @@ db $70				;Very short pause
 db $39				;Player pose: face down, both arms raised
 db $71				;Very short pause
 
-; custom text box for key item
-	db $DE, $60				; set up reward
-	db $DF					; call text handler
-
 db $03				;Player Move Down
 ; db $A2, $1C                     ;Turn on bit 10 at address 0x7e0a17
 ; db $A2, $1D                     ;Turn on bit 20 at address 0x7e0a17

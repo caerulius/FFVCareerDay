@@ -25,6 +25,9 @@ db $03							;Player Move Down
 db $03							;Player Move Down
 db $02							;Player Move Right
 db $BD, $02, $FF				;Start Event Battle 02
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $62 ; custom reward
 db $DF
 db $D2, $00, $54, $4F, $B5		;(Map) 00 54 4F B5

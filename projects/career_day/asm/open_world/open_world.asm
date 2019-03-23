@@ -44,10 +44,10 @@ db $72
 ; MOOGLE VILLAGE
 ; Event code [$A4, $3C] or setting bit 10 on $000A3B corresponds to both Tyrasaur being defeated and Moogle Village being open
 ; This fix allows for Tyrasaur to remain on $000A3B bit 10, while Moogle Village is swapped to another bit usually set upon 
-; Finishing the Tyrasaur sequence, immediately set on new game ([$A4, $2C], or $000A39 bit 10)
+; Finishing the Tyrasaur sequence, immediately set on new game ([$A4, $C1], or $000A4C bit 02)
 ;org $D8EF5C
 org $F04EDC
-db $2C                     ;Refer to event code [$A4, $2C]
+db $C1                     ;Refer to event code [$A4, $C1]
 
 
 ; MOOGLE WATERWAY
@@ -95,6 +95,12 @@ db $57
 org $C8B218 ; this changes leaving cutscene to place Boco one tile right of this 
 db $7A
 
+
+; PYRAMID W3
+; Disable conditional event for pyramid cutscene. Reused for world warps 
+; This disables X Y coords and replicates the previous xy checker to overwrite
+org $CE288C
+db $AD, $E9, $F0, $01
 
 
 ; GARGOYLES

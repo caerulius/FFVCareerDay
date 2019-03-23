@@ -50,6 +50,9 @@ db $10                          ;Player pose: face up, left hand forward
 db $80, $03                     ;Sprite 080 do event Move Down
 db $80, $0A                     ;Sprite 080 do event Hide
 db $BD, $1B, $FF                ;Start Event Battle 1B
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $70 ; custom reward
 db $DF
 db $A2, $45                     ;Set Event Flag 045

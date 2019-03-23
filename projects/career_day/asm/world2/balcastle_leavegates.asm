@@ -180,6 +180,9 @@ db $84, $0A                     ;Sprite 084 do event: Hide
 db $85, $0A                     ;Sprite 085 do event: Hide
 db $87, $0A                     ;Sprite 087 do event: Hide
 db $BD, $1D, $FF                ;Start Event Battle 1D
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $72 ; custom reward
 db $DF
 db $A2, $61                     ;Set Event Flag 061

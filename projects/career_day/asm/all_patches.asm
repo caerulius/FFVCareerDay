@@ -1,14 +1,18 @@
 ; init
-incsrc core_code/defines.asm
+incsrc ../../shared_asm/shared_core/defines.asm
 incsrc core_code/init.asm
 
-; conditionals
-!testing = 1 ; this enables debugging below 
-!allkeysunlocked = 0 ; this starts the player with all keys
+; priority writes
+incsrc core_code/relocate_conditional_events.asm
+
+; conditionals. asar command line defines now
+;!testing = 1 ; this enables debugging below 
+; !allkeysunlocked = 1 ; this starts the player with all keys
 
 ; randomizer testing
-incsrc ../../test_asm/r-patch.asm
-incsrc ../../test_asm/key_items-patch.asm
+; use .sh scripts for this instead
+; incsrc ../../test_asm/r-patch.asm
+; incsrc ../../test_asm/key_items-patch.asm
 
 ; other core_code testing
 incsrc open_world/scratchpad.asm
@@ -185,11 +189,10 @@ incsrc world3/cleft_necrophobe.asm
 ; other patches
 
 incsrc core_code/menu_hook.asm
-incsrc core_code/new_event.asm
-incsrc core_code/chest_jobreward.asm
 incsrc core_code/custom_items.asm
-incsrc core_code/relocate_conditional_events.asm
 
+incsrc ../../shared_asm/shared_core/reward_manager.asm
+incsrc ../../shared_asm/shared_core/new_event.asm
 incsrc ../../shared_asm/shared_core/encounter_toggle.asm
 incsrc ../../shared_asm/shared_core/utility.asm
 incsrc ../../shared_asm/shared_core/walk_speed.asm

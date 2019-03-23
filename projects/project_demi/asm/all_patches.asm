@@ -1,10 +1,11 @@
 hirom
 ; init
-incsrc core_code/defines.asm
+incsrc ../../shared_asm/shared_core/defines.asm
 incsrc core_code/init.asm
 
 ; conditionals
-!testing = 1
+; !vanillarewards defined in command line 
+!testing = 0
 
 ; world 1                                   Destinations:
 incsrc world1/intro_cutscene.asm           ; 00 Tycoon Meteor
@@ -167,9 +168,10 @@ incsrc world3/cleft_necrophobe.asm
 ; other patches
 
 incsrc core_code/menu_hook.asm
-incsrc core_code/new_event.asm
-incsrc core_code/chest_jobreward.asm
+incsrc core_code/key_item_dummy.asm
 
+incsrc ../../shared_asm/shared_core/reward_manager.asm
+incsrc ../../shared_asm/shared_core/new_event.asm
 incsrc ../../shared_asm/shared_core/encounter_toggle.asm
 incsrc ../../shared_asm/shared_core/utility.asm
 incsrc ../../shared_asm/shared_core/walk_speed.asm
@@ -204,6 +206,7 @@ incsrc reward_events/walse_shiva.asm
 incsrc reward_events/watercrystal_obtainshards.asm
 incsrc reward_events/chicken_knife_brave_blade.asm
 incsrc reward_events/tycoon_hiddenarea.asm
+incsrc reward_events/walsetower_gogo.asm
 
 ; text tables
 incsrc ../../shared_asm/text_tables/destination_table.asm

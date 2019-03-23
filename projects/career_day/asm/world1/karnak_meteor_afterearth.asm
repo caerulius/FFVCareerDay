@@ -35,6 +35,14 @@ db $87, $0A                     ;Sprite 087 do event: Hide
 db $BD, $11, $FF                ;Start Event Battle 11
 db $72                          ;Medium pause
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
+db $DE, $11						; set up reward
+db $DF							; call text handler
+db $C5, $80
+db $B5, $02
+db $71
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $6E ; custom reward
 db $DF
 db $73

@@ -43,14 +43,9 @@ db $06, $10 ; x/y
 org $CE9B07
 db $3F, $1B ; walk cycle properties
 
-; org $CE9B02
-; db $7f, $03, $43, $10, $0b, $0d, $60
-
-; FIX THIS !!!!!!!!!!!!!!!!!
-; org $D8E769
+; changes trigger from pyramid cutscene 
 org $F046E9
 db $FB, $19
-
 
 ; leftmost book in surgate library. These are the events only, tied to what the warps do
 org $CE1DA9

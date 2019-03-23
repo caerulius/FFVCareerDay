@@ -1,6 +1,6 @@
 if !testing == 1
 
-    !startwithkeyitem1 = $07
+    !startwithkeyitem1 = $16
     
     
     ; TEST IN WATERWAY

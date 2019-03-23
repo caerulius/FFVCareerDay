@@ -13,6 +13,14 @@ db $73
 db $84, $0A				;Sprite 084 do event: Hide
 db $BD, $04, $FF		;Start Event Battle 04
 db $DB					;Restore Player status
+db $DE, $25				; set up reward
+db $DF					; call text handler
+db $C5, $80
+db $B5, $02
+db $71
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $64 ; custom reward
 db $DF
 db $CB, $98, $00		;Clear Flag 2/3/4/5/98 00

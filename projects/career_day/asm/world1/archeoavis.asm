@@ -19,6 +19,9 @@ db $81, $03                     ;Sprite 081 do event: Move Down
 db $81, $03                     ;Sprite 081 do event: Move Down
 db $81, $0A                     ;Sprite 081 do event: Hide
 db $BD, $0F, $FF                ;Start Event Battle 0F
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $6B ; custom reward
 db $DF
 ;db $73                          ;Long pause

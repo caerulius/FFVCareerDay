@@ -3,7 +3,7 @@ import pandas as pd
 import random
 import operator
 
-NUM_REWARDS = 314
+NUM_REWARDS = 317
 
 class Reward:
     def __init__(self, index, collectible_manager, data_manager):

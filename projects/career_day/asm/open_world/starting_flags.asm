@@ -397,7 +397,7 @@ db $A2, $BD                     ;Turn on bit 20 at address 0x7e0a2b
 ; PYRAMID
 ; allows getting the tablet...?
 ; db $CA, $08, $00            ; set address 000A55 bit ON 01
-db $A5, $F7                     ;Turn off bit 80 at address 0x7e0a52
+db $A5, $F3                     ;Turn off bit 08 at address 0x7e0a52
 
 
 ; KUZAR CASTLE

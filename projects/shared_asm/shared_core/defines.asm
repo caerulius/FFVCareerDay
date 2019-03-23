@@ -31,10 +31,13 @@
 !ADDRESS_keyitems = $F00A00
 !ADDRESS_xycoordhook = $F01900
 !ADDRESS_keyitemlocks = $F01400
+!ADDRESS_newevent_randomstart = $F01A00
+!ADDRESS_PROJECT_DEMI_DUMMYSPACE = $F01C00
 
 !RELOCATE_conditional_events = $F04000
 !RELOCATE_conditional_events_le = $00, $40, $F0
 !RELOCATE_conditional_events_le_offset1 = $01, $40, $F0
+!RELOCATE_conditional_events_le_offset2 = $02, $40, $F0
 !RELOCATE_conditional_events_le_offset3 = $03, $40, $F0
 
 ; ram_values
@@ -48,7 +51,9 @@
 !rewardconfig = $0970
 !loopcounter = $1ED7
 !progmagicentry = $1ED8
+!progmagicentry2 = $1ED9
 !progabilityentry = $1ED8
+!progabilityentry2 = $1ED9
 !currentability = $1ED6
 !progmagictable = $F80400
 !progabilitytable = $F80600

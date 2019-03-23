@@ -11,6 +11,12 @@ db $85, $0A
 db $86, $09
 db $BD, $07, $FF	;Start Event Battle 07
 db $B4, $18			;Play Background Music The Fired Powered Ship
+db $C5, $80                     ;<unknown>
+db $B5, $02                     ;Play Sound Effect Void, Image
+db $71
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $66 ; custom reward
 db $DF
 db $CA, $81, $01	;Set Flag 2/3/4/5/81 01

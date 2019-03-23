@@ -213,7 +213,7 @@ JobsAssigned:
 LDA #$02
 STA $AF
 LDA !rewardid
-STA $16a2
+STA $16a3
 RTL
 
 
