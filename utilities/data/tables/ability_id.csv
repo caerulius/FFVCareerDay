@@ -28,7 +28,7 @@ ability_id,readable_name,valid,value,related_jobs,max_count,progression_id
 1A,Tame,TRUE,2,[“Mediator”],1,12
 1B,Control,TRUE,2,[“Mediator”],1,13
 1C,Catch,TRUE,2,[“Mediator”],1,14
-1D,Release,TRUE,2,[“Mediator”],1,15
+1D,Release,FALSE,2,[“Mediator”],1,15
 1E,Combine,TRUE,2,[“Chemist”],1,16
 1F,Drink,TRUE,2,[“Chemist”],1,17
 20,Pray,TRUE,2,[“Chemist”],1,18

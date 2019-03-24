@@ -5,11 +5,6 @@ import random
 from abc import ABC, abstractmethod
 import math
 
-df_item_id = pd.read_csv('tables/item_id.csv',index_col='item_id',dtype=str)
-df_magic_id = pd.read_csv('tables/magic_id.csv',index_col='magic_id',dtype=str)
-df_crystal_id = pd.read_csv('tables/crystal_id.csv',index_col='crystal_id',dtype=str)
-df_ability_id = pd.read_csv('tables/ability_id.csv',index_col='ability_id',dtype=str)
-
 class Collectible(ABC):
     def __init__(self, reward_id, reward_name, reward_value, related_jobs,
                  max_count, valid = None):
@@ -37,13 +32,12 @@ class Collectible(ABC):
         
 class Item(Collectible):
     reward_type = '40'
-    def __init__(self,item_id):
-        data = df_item_id.loc[item_id]
-        self.type = data['type']
-        self.subtype = data['subtype']
-        related_jobs = data['related_jobs'].strip('][').split(',')
-        super().__init__(item_id, data['readable_name'], int(data['value']),
-                         related_jobs, data['max_count'], data['valid'])
+    def __init__(self, item_id, data_row):
+        self.type = data_row['type']
+        self.subtype = data_row['subtype']
+        related_jobs = data_row['related_jobs'].strip('][').split(',')
+        super().__init__(item_id, data_row['readable_name'], int(data_row['value']),
+                         related_jobs, data_row['max_count'], data_row['valid'])
 
     @property
     def patch_id(self):
@@ -51,13 +45,12 @@ class Item(Collectible):
         
 class Magic(Collectible):
     reward_type = '20'
-    def __init__(self,magic_id):
-        data = df_magic_id.loc[magic_id]
-        self.type = data['type']
-        related_jobs = data['related_jobs'].strip('][').split(',')
-        self.progression_id = data['progression_id']
-        super().__init__(magic_id, data['readable_name'], int(data['value']),
-                         related_jobs, data['max_count'], data['valid'])
+    def __init__(self, magic_id, data_row):
+        self.type = data_row['type']
+        related_jobs = data_row['related_jobs'].strip('][').split(',')
+        self.progression_id = data_row['progression_id']
+        super().__init__(magic_id, data_row['readable_name'], int(data_row['value']),
+                         related_jobs, data_row['max_count'], data_row['valid'])
 
     @property
     def patch_id(self):
@@ -66,26 +59,25 @@ class Magic(Collectible):
 
 class Crystal(Collectible):
     reward_type = '50'
-    def __init__(self,crystal_id):
-        data = df_crystal_id.loc[crystal_id]
-        self.shop_id = data['shop_id']
-        self.starting_weapon = data['starting_weapon']
-        self.starting_weapon_id = data['starting_weapon_id']
-        self.starting_spell_list = data['starting_spell_list'].strip('][').split(',')
+    def __init__(self, crystal_id, data_row):
+        self.shop_id = data_row['shop_id']
+        self.starting_weapon = data_row['starting_weapon']
+        self.starting_weapon_id = data_row['starting_weapon_id']
+        self.starting_spell_list = data_row['starting_spell_list'].strip('][').split(',')
         self.starting_spell_list = [x.replace('"', '').replace(' ', '')
                                      .replace('“', '').replace('”', '')
                                     for x in self.starting_spell_list]
-        self.starting_spell_ids = data['starting_spell_ids'].strip('][').split(',')
+        self.starting_spell_ids = data_row['starting_spell_ids'].strip('][').split(',')
         self.starting_spell_ids = [x.replace('"', '').replace(' ', '')
                                      .replace('“', '').replace('”', '')
                                     for x in self.starting_spell_ids]
-        self.starting_ability = data['starting_ability']
-        self.starting_ability_id = data['starting_ability_id']
+        self.starting_ability = data_row['starting_ability']
+        self.starting_ability_id = data_row['starting_ability_id']
         self.starting_spell = ""
         self.starting_spell_id = ""
-        related_jobs = data['related_jobs'].strip('][').split(',')
-        super().__init__(crystal_id, data['readable_name'], int(data['value']),
-                         related_jobs, data['max_count'])
+        related_jobs = data_row['related_jobs'].strip('][').split(',')
+        super().__init__(crystal_id, data_row['readable_name'], int(data_row['value']),
+                         related_jobs, data_row['max_count'])
 
     @property
     def patch_id(self):
@@ -93,28 +85,37 @@ class Crystal(Collectible):
         
 class Ability(Collectible):
     reward_type = '60'
-    def __init__(self,ability_id):
-        data = df_ability_id.loc[ability_id]
-        related_jobs = data['related_jobs'].strip('][').split(',')
-        self.progression_id = data['progression_id']
-        super().__init__(ability_id, data['readable_name'], int(data['value']),
-                         related_jobs, data['max_count'], data['valid'])
+    def __init__(self, ability_id, data_row):
+        related_jobs = data_row['related_jobs'].strip('][').split(',')
+        self.progression_id = data_row['progression_id']
+        super().__init__(ability_id, data_row['readable_name'], int(data_row['value']),
+                         related_jobs, data_row['max_count'], data_row['valid'])
 
     @property
     def patch_id(self):
         return self.progression_id
 
+class Gil(Collectible):
+    reward_type = ""
+    def __init__(self, gil_id, data_row):
+        self.reward_type = data_row['power_byte']
+        super().__init__(data_row['number_byte'], str(data_row['readable_amount']) + " gil",
+                         int(data_row['value']), [], data_row['max_count'], valid = True)
+
+    @property
+    def patch_id(self):
+        return self.reward_id
+
 class CollectibleManager():
-    def __init__(self, collectibles=None):
-        if collectibles is None:
-            items = [Item(x) for x in df_item_id.index.values]
-            magics = [Magic(x) for x in df_magic_id.index.values]
-            crystals = [Crystal(x) for x in df_crystal_id.index.values]
-            abilities = [Ability(x) for x in df_ability_id.index.values]
-            self.collectibles = items + magics + crystals + abilities
-        else:
-            self.collectibles = collectibles
+    def __init__(self, data_manager):
+        items = [Item(x, data_manager.files['items'].loc[x]) for x in data_manager.files['items'].index.values]
+        magics = [Magic(x, data_manager.files['magics'].loc[x]) for x in data_manager.files['magics'].index.values]
+        crystals = [Crystal(x, data_manager.files['crystals'].loc[x]) for x in data_manager.files['crystals'].index.values]
+        abilities = [Ability(x, data_manager.files['abilities'].loc[x]) for x in data_manager.files['abilities'].index.values]
+        gil = [Gil(x, data_manager.files['gil'].loc[x]) for x in data_manager.files['gil'].index.values]
+        self.collectibles = items + magics + crystals + abilities + gil
         self.placement_history = {}
+        self.placed_gil_rewards = []
 
     def get_by_name(self, name):
         best_match = None
@@ -125,7 +126,7 @@ class CollectibleManager():
 
     def get_by_id_and_type(self, reward_id, reward_type):
         for i in self.collectibles:
-            if i.reward_type == reward_type and i.reward_id == reward_id and i.valid:
+            if i.reward_id == reward_id and i.reward_type == reward_type and i.valid:
                 return i
         return None
 
@@ -136,14 +137,21 @@ class CollectibleManager():
 
     def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None):
         if of_type is not None:
-            working_list = [x for x in self.get_all_of_type(of_type) if x.valid]
+            working_list = [x for x in self.get_all_of_type(of_type) if x.valid] #this will be a shop
         else:
-            working_list = [x for x in self.collectibles if x.valid]
+            if len(self.placed_gil_rewards) < len([x for x in self.get_all_of_type(Gil)]): #first, place all our gil rewards
+                choice = random.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards])
+                self.placed_gil_rewards.append(choice)
+                return choice
+
+            working_list = [x for x in self.collectibles if x.valid] #this will be a non shop
+            
         if monitor_counts is True:
-            working_list = [x for x in working_list if
-               (x not in self.placement_history.keys() or
-                x.max_count is None or
-                x.max_count < self.placement_history[x])]
+            working_list = [y for y in [x for x in working_list if
+                                       (x not in self.placement_history.keys() or
+                                        x.max_count is None or
+                                        x.max_count < self.placement_history[x])]
+                            if y.valid]
 
         if respect_weight is False:
             choice = random_engine.choice(working_list)
@@ -183,3 +191,4 @@ class CollectibleManager():
             
     def reset_placement_history(self):
         self.placement_history = {}
+

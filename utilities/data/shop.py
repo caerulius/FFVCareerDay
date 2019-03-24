@@ -1,32 +1,12 @@
 # -*- coding: utf-8 -*-
-import pandas as pd 
 from reward import *
-import random
 
 NUM_SHOPS = 64
 
-df_shop_table = pd.read_csv('tables/shop_id.csv',dtype=str)
-df_shop_table['idx'] = df_shop_table['idx'].astype(int)
-
-shop_id_dict = {
-        '00' : 'Magic',
-        '01' : 'Weapon',
-        '02' : 'Armor',
-        '03' : 'Item',
-        '04' : 'Relic',
-        '05' : 'Guild',
-        '06' : 'Medicine',
-        '07' : 'Ability/Crystal',
-        '81' : 'Karnak',
-        '82' : 'Karnak',
-        '83' : 'Karnak',
-        '84' : 'Karnak',
-        }
-
 class Shop(object):
-    def __init__(self, index, collectible_manager):
+    def __init__(self, index, collectible_manager, data_manager):
         self.idx = index
-        self.generate_from_df(df_shop_table)
+        self.generate_from_df(data_manager.files['shops'])
         '''
         self.address
         self.shop_type
@@ -95,11 +75,8 @@ class Shop(object):
         self.contents = contents
 
 class ShopManager(object):
-    def __init__(self, collectible_manager, shops=None):
-        if shops is None:
-            self.shops = [Shop(x, collectible_manager) for x in range(1, NUM_SHOPS+1)]
-        else:    
-            self.shops = shops
+    def __init__(self, collectible_manager, data_manager):
+        self.shops = [Shop(x, collectible_manager, data_manager) for x in range(1, NUM_SHOPS+1)]
 
     def get_patch(self):
         output = ";====="

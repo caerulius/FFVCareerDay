@@ -22,12 +22,9 @@ class Area():
         return output
         
 class AreaManager():
-    def __init__(self, areas=None, random=None):
-        if areas is None:
-            self.areas = []
-            self.initialize_areas("tables/areas.csv")
-        else:
-            self.areas = areas
+    def __init__(self, data_manager, random=None):
+        self.areas = []
+        self.initialize_areas(data_manager.files["areas"])
         
         if random is None:
             self.random = Random()
@@ -37,9 +34,8 @@ class AreaManager():
         self.easy_start = False
         self.total_random = False
 
-    def initialize_areas(self, csvpath):
-        df_areas = pd.read_csv(csvpath,index_col='area_id',dtype=str)
-        for index, row in df_areas.iterrows():
+    def initialize_areas(self, data_file):
+        for index, row in data_file.iterrows():
             self.areas.append(Area(row.area_name, row.capacity,
                                    row.order, row.num_checks))
 
@@ -64,8 +60,6 @@ class AreaManager():
             if reward.area == i.area_name:
                 i.current_volume = i.current_volume + reward.collectible.reward_value
                 i.num_placed_checks = i.num_placed_checks + 1
-                #print("area's new volume: " + str(i.current_volume) +
-                #      "/" + str(i.area_capacity))
                 return
 
     def change_power_level(self, factor):

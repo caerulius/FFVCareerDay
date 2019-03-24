@@ -1,4 +1,4 @@
-﻿event_id,event_id_dec,corresponding address at D07800 area,value at address,corresponding area at D03000,
+﻿event_id,event_id_dec,table_address,formation_value,formation_offset,formation_address,
 00,0,D07800,01b6,D04B60,1B60
 01,1,D07804,01b7,D04B70,1B70
 02,2,D07808,01b8,D04B80,1B80
