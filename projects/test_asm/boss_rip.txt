@@ -1,0 +1,202 @@
+;byblos D0A0CF
+
+;wingraptor D0B045
+
+; 00 00 00 00: Default:
+; FE:          {
+; FD DA 80 DA:   {Breath Wing, Fight, Breath Wing}
+; FD DA 80 DA:   {Breath Wing, Fight, Breath Wing}
+; FD F2 05 40:   {Unhide: 05 40}
+; EE:            Hide
+; FF:          }
+; FF:          }
+
+
+; 00 00 00 00: Default:
+; FE:          {
+; AA:            Nothing
+; AA:            Nothing
+; FD F7 07 F0:   {No Interupt for: 7}
+; FD F2 05 80:   {Unhide: 05 80}
+; EE:            Hide
+; DA:            Breath Wing
+; FF:          }
+
+; 07 00 04 00: React on:  Fight
+; 03 00 00 01: If V00=01:
+; FE:          {
+; 81:            Specialty
+; FE:          }
+
+; 07 00 04 00: React on:  Fight
+; FE:          {
+; FD F6 05 D0:   {Display: Attack when its wings are closed,}
+; FD F6 05 D1:   {Display: and it'll respond with its claws!!}
+; FD F4 00 01:   {Set V00=01}
+; 81:            Specialty
+; FF:          }
+
+
+
+;karlabos D0B2B7
+00 00 00 00: Default:
+FE:          {
+FD 80 81 81:   {Fight, Specialty, Specialty}
+FD 80 C4 81:   {Fight, Tailscrew, Specialty}
+FD 80 C4 81:   {Fight, Tailscrew, Specialty}
+FF:          }
+FF:          }
+
+
+; siren D0B2E0
+00 00 00 00: Default:
+FE:          {
+FD 15 37 3A:   {<Whit>Mute, <Dimn>Slow, <Dimn>Haste}
+FD 12 25 13:   {<Whit>Cure, <Blak>Ice, <Whit>Scan}
+FD 16 28 26:   {<Whit>Armor, <Blak>Sleep, <Blak>Bolt}
+FD F7 0A F0:   {No Interupt for: 10}
+FD F6 02 04:   {Display: Changes to an Undead!}
+FD F2 05 40:   {Unhide: 05 40}
+EE:            Hide
+FF:          }
+FF:          }
+00 00 00 00: Default:
+FE:          {
+FD 80 81 80:   {Fight, Specialty, Fight}
+FD 80 81 80:   {Fight, Specialty, Fight}
+FD 80 81 81:   {Fight, Specialty, Specialty}
+FD F2 05 80:   {Unhide: 05 80}
+EE:            Hide
+FF:          }
+FF:          }
+
+
+
+;magisa and forza D0B318
+
+00 00 00 00: Default:
+FE:          {
+FD 80 81 80:   {Fight, Specialty, Fight}
+FF:          }
+FF:          }
+
+
+03 00 00 00: If V00=00:
+02 0D 2C 01: If Self HP < 300:
+FE:          {
+FD F7 09 F0:   {No Interupt for: 9}
+FD F6 01 0A:   {Display: Magisa:  Honey, a job for you!}
+FD F2 80 C0:   {Unhide: 80 C0}
+EE:            Hide
+FD F7 0A F0:   {No Interupt for: 10}
+FD F3 10 F0:   {Set Target: Single Enemies; Not Self}
+38:            <Dimn>Regen
+FD F4 00 01:   {Set V00=01}
+FE:          }
+
+00 00 00 00: Default:
+FE:          {
+FD 24 25 26:   {<Blak>Fire, <Blak>Ice, <Blak>Bolt}
+FD 8F 81 2D:   {Aero, Specialty, <Blak>Drain}
+FF:          }
+FF:          }
+
+
+
+; galura D0b356
+
+
+01 0D 00 20: If Status of Self is Toad :
+FE:          {
+FD F3 0D F0:   {Set Target: Self}
+29:            <Blak>Toad
+FE:          }
+
+00 00 00 00: Default:
+FE:          {
+80:            Fight
+FF:          }
+
+02 0D 20 03: If Self HP < 800:
+0E 00 00 00: React HP Damage:
+FE:          {
+FD F7 06 F0:   {No Interupt for: 6}
+80:            Fight
+FD 81 80 AA:   {Specialty, Fight, Nothing}
+FF:          }
+
+
+;liquidflame
+00 00 00 00: Default:
+FE:          {
+FD 80 81 DB:   {Fight, Specialty, Flame}
+FF:          }
+
+0E 00 00 00: React HP Damage:
+FE:          {
+FD F7 07 F0:   {No Interupt for: 7}
+DB:            Flame
+FD F2 45 60:   {Unhide: 45 60}
+EE:            Hide
+FF:          }
+
+
+00 00 00 00: Default:
+FE:          {
+FD 80 80 81:   {Fight, Fight, Specialty}
+FF:          }
+
+0E 00 00 00: React HP Damage:
+FE:          {
+FD F7 07 F0:   {No Interupt for: 7}
+2A:            <Blak>Fire2
+FD F2 45 A0:   {Unhide: 45 A0}
+EE:            Hide
+FF:          }
+
+
+00 00 00 00: Default:
+FE:          {
+FD F3 0D F0:   {Set Target: Self}
+2A:            <Blak>Fire2
+FF:          }
+
+0E 00 00 00: React HP Damage:
+FE:          {
+FD F7 07 F0:   {No Interupt for: 7}
+E6:            Magnet
+FD F2 45 C0:   {Unhide: 45 C0}
+EE:            Hide
+FF:          }
+
+
+
+
+
+;sergeant D0BFF0
+
+04 00 00 00: If Alone:
+FE:          {
+FD F6 01 0C:   {Display: "Th- this guy's....}
+FD F6 01 0D:   {Display: 'He's not just a Sergeant!}
+FD F6 01 0E:   {Display: 'Show your true colors!}
+FD F6 01 0F:   {Display: 'Duhahahahaha}
+FD F6 01 10:   {Display: 'Me?  I am the great}
+FD F6 01 11:   {Display: 'Bounty hunter...}
+FD F6 01 12:   {Display: 'Iron Claw!!}
+FD F6 01 13:   {Display: 'Change form!!}
+FD F2 01 08:   {Unhide: 01 08}
+EE:            Hide
+FD F5 F0 22:   {??? F0 22}
+FE:          }
+
+00 00 00 00: Default:
+FE:          {
+FD F7 0A F0:   {No Interupt for: 10}
+FD F6 01 0B:   {Display: Sergeant:  Attack them!}
+FD F3 0E F0:   {Set Target: All Enemies, Not Self}
+AC:            No-Dmg Magic
+FF:          }
+FF:          }
+
+

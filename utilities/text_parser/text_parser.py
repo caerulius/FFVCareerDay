@@ -114,7 +114,7 @@ def run_kuzar_encrypt(passed_dict):
         print('org $'+passed_dict[x])
         return_text = return_text + 'org $'+passed_dict[x] +"\n"
         print(text_asar)
-        return_text = return_text + text_asar + "\n"
+        return_text = return_text + text_asar + ", db$00\n"
     return return_text
 
         
