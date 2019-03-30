@@ -160,21 +160,7 @@ class Enemy(object):
                 val = 255
             newval = "{0:>2}".format(hex(val).replace("0x","")).replace(" ","0")
             setattr(self,attr,newval)
-            
-    def update_all(self):
-        self.update_val('exp',self.num_exp)
-        self.update_val('gil',self.num_gil)
-        self.update_val('hp',self.num_hp)
-        self.update_val('mp',self.num_mp)
-        self.update_val('gauge_time',self.num_gauge_time)
-        self.update_val('phys_power',self.num_phys_power)
-        self.update_val('phys_mult',self.num_phys_mult)
-        self.update_val('evade',self.num_evade)
-        self.update_val('phys_def',self.num_phys_def)
-        self.update_val('mag_power',self.num_mag_power)
-        self.update_val('mag_def',self.num_mag_def)
-        self.update_val('mag_evade',self.num_mag_evade)
-        self.update_val('level',self.num_level)      
+     
 
 
     def retrieve_log(self,length='short'):

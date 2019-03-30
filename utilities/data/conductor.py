@@ -2,6 +2,7 @@
 import pandas as pd
 import random
 import operator
+import math
 
 from data_manager import *
 from collectible import *
@@ -12,6 +13,18 @@ from area import *
 from enemy import *
 from formation import *
 
+
+
+#### 
+# NEW DATA
+#
+#
+#
+df_boss_scaling= pd.read_csv('tables/boss_scaling.csv')
+#
+#
+#
+####
 STARTING_CRYSTAL_ADDRESS = 'E79F00'
 DEFAULT_POWER_CHANGE = 1.5
 STAT_MULTIPLIER = .25
@@ -356,6 +369,19 @@ class Conductor():
             rank_delta = int(new_rank) - int(prev_rank)
             random_boss.rank_delta = rank_delta
             
+            # Find tier
+            new_tier = math.trunc((int(new_rank)-1)/3) + 1
+            random_boss.tier = new_tier
+
+            rank_adj_flag = int(new_rank) % ((new_tier * 3)-1)
+            if rank_adj_flag == 1:
+                stat_rank_mult = 1.2
+            elif rank_adj_flag == 0:
+                stat_rank_mult = 1.
+            else:
+                stat_rank_mult = 0.8
+            #print(str(rank_adj_flag)+"   "+str((int(new_rank)))+"  "+str((new_tier * 3)-1))
+            #print(str(stat_rank_mult))
 
             # Document random_boss' previous HP
             prev_hp = random_boss.enemy_classes[0].num_hp
@@ -368,7 +394,7 @@ class Conductor():
             random_boss.enemy_classes[0].num_hp = new_hp
             random_boss.enemy_classes[0].update_val('hp', new_hp)
         
-          
+
             # Then after the first HP is assigned and the new boss formation takes place in the right locations,
             # Enforce some standardization for specific boss fights. This is hardcoded for good reason as many fights
             #     specifically need individual treatment
@@ -399,17 +425,7 @@ class Conductor():
             # Something like HiryuuFlower will have a completely different method
             
             
-            # First use 25% multiplier over 100% of the original (the +1 at the end)
-            rank_mult = (abs(rank_delta) * STAT_MULTIPLIER) + 1 
-            
-            # If it's negative, then we're applying a penalty, and need to inverse 
-            if rank_delta < 0:
-                rank_mult = round(1 / rank_mult,2)
-            
-            # Assign to Formation class and all enemies
-            random_boss.rank_mult = rank_mult
-            for enemy in random_boss.enemy_classes:
-                enemy.rank_mult = rank_mult
+
         
             # STEP 1)
             # Use the event_id to identify what type of encounter it is, with specifics per encounter
@@ -536,6 +552,9 @@ class Conductor():
             # To reduce its stats
             # However, you want to still reward the player MORE because it is still a hard boss
             # So invert the multiplier
+    
+            # First use 25% multiplier over 100% of the original (the +1 at the end)
+            rank_mult = (abs(rank_delta) * STAT_MULTIPLIER) + 1 
             
             new_exp = base_exp * 1/rank_mult
             # Round for nice number, merely for presentation
@@ -590,10 +609,26 @@ class Conductor():
             else:    
                 random_boss.enemy_classes[0].num_exp = new_exp
         
-            # After all changes, apply rank multiplier to all enemies in the formation
+
+
+
+            # STATS
+            # Update stats based on boss_scaling.csv for every enemy
+#            import pdb
+#            pdb.set_trace()
             
-            for enemy in random_boss.enemy_classes:
-                enemy.apply_rank_mult()
+            try:
+                for enemy in random_boss.enemy_classes:
+                    df_temp = df_boss_scaling[(df_boss_scaling['idx']==int(enemy.idx)) & (df_boss_scaling['tier']==new_tier)]
+                    for col in ['num_gauge_time','num_phys_power','num_phys_mult','num_evade','num_phys_def','num_mag_power','num_mag_def','num_mag_evade','num_mp']:
+                        setattr(enemy,col,df_temp[col])
+                    # both updates stats from this for loop and applies mult based on tier
+                    enemy.rank_mult = stat_rank_mult
+                    enemy.apply_rank_mult() 
+            except:
+                print("Tier stat placement failed on formation "+str(random_boss.enemy_list))
+
+
             
             # Final presentation & updating
             
@@ -645,25 +680,25 @@ class Conductor():
             random_engine = self.RE
         
         self.AM.change_power_level(DEFAULT_POWER_CHANGE)
-        print("Randomizing rewards...")
-        self.randomize_rewards_by_areas()
-        print("Randomizing shops...")
-        self.randomize_shops()
+        # print("Randomizing rewards...")
+        # self.randomize_rewards_by_areas()
+        # print("Randomizing shops...")
+        # self.randomize_shops()
         print("Randomizing bosses...")
         self.randomize_bosses()
 
         spoiler = ""
-        spoiler = spoiler + self.starting_crystal_spoiler()
-        spoiler = spoiler + self.RM.get_spoiler()
-        spoiler = spoiler + self.SM.get_spoiler()
+#        spoiler = spoiler + self.starting_crystal_spoiler()
+#        spoiler = spoiler + self.RM.get_spoiler()
+#        spoiler = spoiler + self.SM.get_spoiler()
         spoiler = spoiler + self.EM.get_spoiler()
         spoiler = spoiler + self.FM.get_spoiler()
 
         patch = ""
-        patch = patch + self.starting_crystal_patch()
-        patch = patch + self.RM.get_patch()
-        patch = patch + self.SM.get_patch()
-        patch = patch + self.SPM.get_patch()
+#        patch = patch + self.starting_crystal_patch()
+#        patch = patch + self.RM.get_patch()
+#        patch = patch + self.SM.get_patch()
+#        patch = patch + self.SPM.get_patch()
         patch = patch + self.EM.get_patch()
         patch = patch + self.FM.get_patch()
 

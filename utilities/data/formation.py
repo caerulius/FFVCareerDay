@@ -46,7 +46,10 @@ class Formation(object):
 
     @property
     def short_output(self):
-        return ""  
+        try:
+            return "Tier: "+str(self.tier)+" Rank: "+str(self.boss_rank) + " Boss: "+str(self.enemy_list)
+        except:
+            return ""
 
     def generate_from_df(self, df):
         s = df[df['idx']==str(self.idx)].iloc[0]
