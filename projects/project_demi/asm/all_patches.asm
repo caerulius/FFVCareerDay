@@ -223,8 +223,3 @@ incsrc ../../shared_asm/data_tables/progressive_ability_table.asm
 incsrc ../../shared_asm/data_tables/progressive_magic_table.asm
 incsrc ../../shared_asm/data_tables/magic_ability_crystal_shop_prices.asm
 incsrc ../../shared_asm/data_tables/original_magic_prices.asm
-
-;  testing
-if !testing == 1
-	incsrc r-patch.asm
-endif
