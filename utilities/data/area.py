@@ -52,8 +52,7 @@ class AreaManager():
             return self.get_emptiest_area()
         
     def any_areas_not_full(self):
-        return any(x.current_volume < x.area_capacity or
-                   x.num_placed_checks < x.num_checks for x in self.areas)
+        return any(x.num_placed_checks < x.num_checks for x in self.areas)
 
     def update_volume(self, reward):
         for i in self.areas:

@@ -3,7 +3,7 @@ import pandas as pd
 import random
 import operator
 
-NUM_REWARDS = 317
+NUM_REWARDS = 318
 
 class Reward:
     def __init__(self, index, collectible_manager, data_manager):
@@ -46,6 +46,12 @@ class RewardManager:
     def get_random_reward(self, random_engine, area=None):
         if area is None:
             return random_engine.choice(self.rewards)
+
+    def get_reward_by_address(self, address):
+        for i in self.rewards:
+            if i.address == address:
+                return i
+        return None
 
     def get_patch(self):
         output = ";================="

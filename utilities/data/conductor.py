@@ -11,6 +11,7 @@ from shop_price import *
 from area import *
 from enemy import *
 from formation import *
+from text_parser import *
 
 STARTING_CRYSTAL_ADDRESS = 'E79F00'
 DEFAULT_POWER_CHANGE = 1.5
@@ -106,7 +107,10 @@ class Conductor():
             next_reward = self.RE.choice(possibles)
             #print("we chose: " + next_reward.description)
             to_place = self.CM.get_random_collectible(self.RE, respect_weight=True,
-                                                      monitor_counts=True)
+                                                      monitor_counts=True, gil_allowed=next_reward.reward_style == "chest")
+            if type(to_place) == Gil:
+                if next_reward.reward_style != "chest":
+                    print("Gil would have broken here")
             #print("the item to put there: " + to_place.reward_name)
             next_reward.set_collectible(to_place)
             next_reward.randomized = True
@@ -268,6 +272,12 @@ class Conductor():
                 
             value.contents = contents
 
+        for shop in [x for x in self.SM.shops if x.valid]:
+            if shop.num_items == 0:
+                print(shop.readable_name)
+                print(shop.shop_type)
+                print(shop.valid)
+
         #manage the must place items here
         #extra checking done to make sure we don't replace
         #a must place item with a different one
@@ -280,19 +290,19 @@ class Conductor():
                 item_to_place = self.CM.get_by_id_and_type(index, "40")
                 #print(item_to_place.reward_name)
                 while True:
-                    item_shops = [x for x in self.SM.shops if x.shop_type == "03"]
+                    item_shops = [x for x in self.SM.shops if x.shop_type == "03" and x.valid and x.num_items > 0]
                     #print("number of item shops: " + str(len(item_shops)))
                     chosen_shop = random.choice(range(0, len(item_shops)))
                     #print("chosen shop index: " + str(chosen_shop))
                     #print("chosen shop num items: " + str(self.SM.shops[chosen_shop].num_items))
-                    chosen_slot = random.choice(range(0, self.SM.shops[chosen_shop].num_items - 1))
+                    chosen_slot = random.choice(range(0, item_shops[chosen_shop].num_items))
                     #print("chosen slot index: " + str(chosen_slot))
                     if (chosen_shop, chosen_slot) not in used_spots:
                         break
 
                 used_spots.append((chosen_shop, chosen_slot))
 
-                self.SM.shops[chosen_shop].contents[chosen_slot] = item_to_place
+                [x for x in self.SM.shops if x.shop_type == "03" and x.valid and x.num_items > 0][chosen_shop].contents[chosen_slot] = item_to_place
 
     def randomize_bosses(self):
         # This has to be done twice in order for the enemy classes to NOT be shared objects
@@ -640,6 +650,21 @@ class Conductor():
         output = output + "\n-----***************************-----\n"
         return output
 
+    def kuzar_text_patch(self):
+        kuzar_reward_addresses = ['C0FB02','C0FB04','C0FB06','C0FB08','C0FB0A','C0FB0C','C0FB0E','C0FB10','C0FB12','C0FB14','C0FB16','C0FB18']
+        kuzar_text_addresses =   ['E23F98','E240A6','E23F7A','E2404C','E240C4','E23FD4','E24010','E24088','E23FF2','E2406A','E23FB6','E2402E']
+        
+        output = ";=====================\n"
+        output = output + ";Kuzar Reward Text Fix\n"
+        output = output + ";=====================\n"
+
+        for i in range(0, len(kuzar_reward_addresses)):
+            #print("working on address: " + kuzar_reward_addresses[i])
+            c = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
+            #print("collectible there is: " + c.reward_name)
+            output = output + run_kuzar_encrypt({c.reward_name: kuzar_text_addresses[i]})
+        return output
+
     def randomize(self, random_engine=None):
         if random_engine is None:
             random_engine = self.RE
@@ -647,6 +672,14 @@ class Conductor():
         self.AM.change_power_level(DEFAULT_POWER_CHANGE)
         print("Randomizing rewards...")
         self.randomize_rewards_by_areas()
+        for i in self.RM.rewards:
+            if i.collectible is None:
+                print("fixing a reward")
+                print(i.original_reward)
+                print(i.area)
+                print(i.description)
+                i.collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True, gil_allowed=False)
+                print(i.collectible.reward_name)
         print("Randomizing shops...")
         self.randomize_shops()
         print("Randomizing bosses...")
@@ -666,5 +699,6 @@ class Conductor():
         patch = patch + self.SPM.get_patch()
         patch = patch + self.EM.get_patch()
         patch = patch + self.FM.get_patch()
+        patch = patch + self.kuzar_text_patch()
 
         return(spoiler, patch)

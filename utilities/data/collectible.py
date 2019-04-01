@@ -135,16 +135,16 @@ class CollectibleManager():
             return [x for x in self.collectibles if type(x) in t]
         return [x for x in self.collectibles if type(x) is t]
 
-    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None):
+    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False):
         if of_type is not None:
             working_list = [x for x in self.get_all_of_type(of_type) if x.valid] #this will be a shop
         else:
-            if len(self.placed_gil_rewards) < len([x for x in self.get_all_of_type(Gil)]): #first, place all our gil rewards
+            if gil_allowed and len(self.placed_gil_rewards) < len([x for x in self.get_all_of_type(Gil)]): #first, place all our gil rewards
                 choice = random.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards])
                 self.placed_gil_rewards.append(choice)
                 return choice
 
-            working_list = [x for x in self.collectibles if x.valid] #this will be a non shop
+        working_list = [x for x in self.collectibles if x.valid] #this will be a non shop
             
         if monitor_counts is True:
             working_list = [y for y in [x for x in working_list if
@@ -160,6 +160,9 @@ class CollectibleManager():
 
         if monitor_counts is True:
             self.add_to_placement_history(choice)
+
+        if choice is None:
+            print(working_list)
 
         return choice
 
