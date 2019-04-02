@@ -16,17 +16,25 @@ class Reward:
         self.area (Wind Shrine, Karnak, etc)
         self.description (Wind Crystal, Beginner's House Chest, etc)
         self.reward_style (event, chest)
+        self.force_type (Item, Gil, etc.)
         '''
         self.collectible = collectible_manager.get_by_name(self.original_reward)
+        self.mib_type = None #keep a byte for the monster in a box type, override the type in the asar_output if exists
         self.randomized = False
 
     @property
     def asar_output(self):
-        return f"org ${self.address} \ndb ${self.collectible.reward_type}, ${self.collectible.patch_id}"
+        if self.mib_type is None:
+            return f"org ${self.address} \ndb ${self.collectible.reward_type}, ${self.collectible.patch_id}"
+        else:
+            return f"org ${self.address} \ndb ${self.mib_type}, ${self.collectible.patch_id}"
     
     @property
     def short_output(self):
-        return f"{self.description} {self.original_reward} -> {self.collectible.reward_name}"
+        if self.mib_type is None:
+            return f"{self.description} {self.original_reward} -> {self.collectible.reward_name}"
+        else:
+            return f"{self.description} {self.original_reward} -> {self.collectible.reward_name} (monster in a box)"
 
     def generate_from_df(self, df):
         s = df[df['idx']==self.idx].iloc[0]
@@ -36,7 +44,7 @@ class Reward:
             for index in s.index:
                 setattr(self,index,s.loc[index])
 
-    def set_collectible(self, collectible):
+    def set_collectible(self, collectible, type_override=None):
         self.collectible = collectible
 
 class RewardManager:

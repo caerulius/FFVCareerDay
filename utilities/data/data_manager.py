@@ -19,3 +19,5 @@ class DataManager():
         self.files['enemies_bosses'] = self.files['enemies'][self.files['enemies']['enemy_rank']=='boss']
         self.files['enemies_nonbosses'] = self.files['enemies'][self.files['enemies']['enemy_rank']=='enemy']
         self.files['formations'] = pd.read_csv('tables/formation_id.csv', dtype=str)
+        self.files['monsters_in_boxes'] = pd.read_csv('tables/monster_in_a_box.csv',dtype=str)
+        self.files['monsters_in_boxes']['monster_box_id'] = self.files['monsters_in_boxes']['monster_box_id'].astype(int)

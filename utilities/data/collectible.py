@@ -136,8 +136,14 @@ class CollectibleManager():
         return [x for x in self.collectibles if type(x) is t]
 
     def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False):
+        if type(of_type) is str: # this is a literal string definition of a type, so let's cast it first
+            if of_type in type_dict.keys():
+                of_type = type_dict[of_type]
+            else:
+                raise(KeyError) #not sure what to do with a passed in type we don't know about
+
         if of_type is not None:
-            working_list = [x for x in self.get_all_of_type(of_type) if x.valid] #this will be a shop
+            working_list = [x for x in self.get_all_of_type(of_type) if x.valid] #this will be a shop or a forced type item
         else:
             if gil_allowed and len(self.placed_gil_rewards) < len([x for x in self.get_all_of_type(Gil)]): #first, place all our gil rewards
                 choice = random.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards])
@@ -195,3 +201,9 @@ class CollectibleManager():
     def reset_placement_history(self):
         self.placement_history = {}
 
+type_dict = {}
+type_dict['Item'] = Item
+type_dict['Magic'] = Magic
+type_dict['Crystal'] = Crystal
+type_dict['Ability'] = Ability
+type_dict['Gil'] = Gil

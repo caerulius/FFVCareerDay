@@ -12,6 +12,7 @@ from area import *
 from enemy import *
 from formation import *
 from text_parser import *
+from monster_in_a_box import *
 
 STARTING_CRYSTAL_ADDRESS = 'E79F00'
 DEFAULT_POWER_CHANGE = 1.5
@@ -31,15 +32,17 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 
 class Conductor():
     def __init__(self, random_engine):
-        self.DM = DataManager()                        #Data manager loads all the csv's into memory and sets them up for processing
-        self.CM = CollectibleManager(self.DM)          #Set up collectibles (Includes Items, magic, crystals, and abilities)
-        self.RM = RewardManager(self.CM, self.DM)      #Set up rewards (Includes chests and events)
-        self.SM = ShopManager(self.CM, self.DM)        #Set up shops
-        self.SPM = ShopPriceManager(self.CM, self.DM)  #Set up shop prices
-        self.AM = AreaManager(self.DM)                 #Set up areas (Tule, The Void, etc)
-        self.EM = EnemyManager(self.DM)                #Set up enemies and bosses
-        self.FM = FormationManager(self.DM, self.EM)   #Set up battle formations
         self.RE = random_engine
+
+        self.DM = DataManager()                                 #Data manager loads all the csv's into memory and sets them up for processing
+        self.CM = CollectibleManager(self.DM)                   #Set up collectibles (Includes Items, magic, crystals, and abilities)
+        self.RM = RewardManager(self.CM, self.DM)               #Set up rewards (Includes chests and events)
+        self.SM = ShopManager(self.CM, self.DM)                 #Set up shops
+        self.SPM = ShopPriceManager(self.CM, self.DM)           #Set up shop prices
+        self.AM = AreaManager(self.DM, self.RE)                 #Set up areas (Tule, The Void, etc)
+        self.EM = EnemyManager(self.DM)                         #Set up enemies and bosses
+        self.FM = FormationManager(self.DM, self.EM)            #Set up battle formations
+        self.MIBM = MonsterInABoxManager(self.DM, self.RE)      #Set up monsters in boxes
         
         self.difficulty = random.randint(1,10)
         crystals = self.get_crystals()
@@ -105,9 +108,24 @@ class Conductor():
             #print("# of reward spot choices: " + str(len(possibles)))
 
             next_reward = self.RE.choice(possibles)
-            #print("we chose: " + next_reward.description)
-            to_place = self.CM.get_random_collectible(self.RE, respect_weight=True,
-                                                      monitor_counts=True, gil_allowed=next_reward.reward_style == "chest")
+
+            print("checking mib status now")
+            mib = self.MIBM.get_mib_for_area(area)
+            print(mib)
+            print("next reward style: " + next_reward.reward_style)
+
+            if mib is not None and next_reward.reward_style == "chest": #only mibs in chests
+                print("doing the mib stuff")
+                to_place = self.CM.get_random_collectible(self.RE, respect_weight=True, of_type=Item, monitor_counts=True) #only items in mibs
+                next_reward.mib_type = mib.monster_chest_data
+                mib.processed = True
+                print(mib.processed)
+                print(next_reward.mib_type)
+                print("\n\n\n")
+            else:
+                #print("we chose: " + next_reward.description)
+                to_place = self.CM.get_random_collectible(self.RE, respect_weight=True, of_type=next_reward.force_type,
+                                                          monitor_counts=True, gil_allowed=next_reward.reward_style == "chest")
             if type(to_place) == Gil:
                 if next_reward.reward_style != "chest":
                     print("Gil would have broken here")
@@ -674,12 +692,12 @@ class Conductor():
         self.randomize_rewards_by_areas()
         for i in self.RM.rewards:
             if i.collectible is None:
-                print("fixing a reward")
-                print(i.original_reward)
-                print(i.area)
-                print(i.description)
+                #print("fixing a reward")
+                #print(i.original_reward)
+                #print(i.area)
+                #print(i.description)
                 i.collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True, gil_allowed=False)
-                print(i.collectible.reward_name)
+                #print(i.collectible.reward_name)
         print("Randomizing shops...")
         self.randomize_shops()
         print("Randomizing bosses...")
@@ -690,7 +708,7 @@ class Conductor():
         spoiler = spoiler + self.RM.get_spoiler()
         spoiler = spoiler + self.SM.get_spoiler()
         spoiler = spoiler + self.EM.get_spoiler()
-        spoiler = spoiler + self.FM.get_spoiler()
+        #spoiler = spoiler + self.FM.get_spoiler()
 
         patch = ""
         patch = patch + self.starting_crystal_patch()
