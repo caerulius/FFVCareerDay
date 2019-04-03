@@ -1,0 +1,20 @@
+magisa 300/650
+galura 800/1200
+solcannon 10000/22500
+gilga (11E) 10000/11500 (NOT percent)
+gilga (123) 2500/6500
+gilga (Enkid) 6000/8888
+barriers 3000/7777
+carbunkle 10000/15000
+exdeath1 16000/32768
+exdeath1 7000/32768
+omniscient 4000/16999
+gogo 33000/47714
+bahamut 10000/40000
+bahamut 15000/40000
+bahamut 20000/40000
+bahamut 25000/40000
+bahamut 30000/40000
+bahamut 35000/40000
+bahamut 10000/40000
+gilga (15D) 42000/55000

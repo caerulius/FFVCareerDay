@@ -11,14 +11,14 @@ LOC_SANDWORM2 = 'D04BF0'
 LOC_MELUSINE2 = 'D04E00'
 LOC_TWINTANIA2 = 'D04F60'
 
-TESTING_HP = {1:250, 2:3000, 3:15000, 4:55000}
+TESTING_HP = {1:250, 2:3000, 3:15000, 4:1000}
 
 
 
 
-FORMATION_OFFSET = 'D04BA0'         # what formation you want to replicate
-FORMATION_TIER = 2                  # tier #
-ENEMY_IDX = [262,263]              # enemies to rewrite stats for. idx
+FORMATION_OFFSET = 'D04C60'         # what formation you want to replicate
+FORMATION_TIER = 1                 # tier #
+ENEMY_IDX = [283]              # enemies to rewrite stats for. idx
 
 
 
@@ -31,6 +31,12 @@ df_formation = df_formation[df_formation['randomized_boss']=='y']
 df_formation_data = df_formation[['offset','formationid_1','escape_%','abp','visible_enemy','enemy_1','enemy_2','enemy_3','enemy_4','enemy_5','enemy_6','enemy_7','enemy_8','formationid_13','formationid_14','formationid_15','formationid_16']]
 
 df_boss_scaling = pd.read_csv('../data/tables/boss_scaling.csv',dtype={'idx_hex':'str'})
+df_boss_scaling = df_boss_scaling[['idx', 'enemy_name', 'enemy_rank', 'tier', 'num_gauge_time',
+       'num_phys_power', 'num_phys_mult', 'num_evade', 'num_phys_def',
+       'num_mag_power', 'num_mag_def', 'num_mag_evade', 'num_mp',
+       'ai_starting_address', 'ai_write_loc', 'ai_skills']]
+
+enemy_skills = pd.read_csv('../data/tables/enemy_skills.csv',index_col='name').to_dict()['hex']
 
 df_enemy_table = pd.read_csv('tables/enemy_data.csv', dtype=str)
 df_boss_data = df_enemy_table[df_enemy_table['enemy_rank']=='boss']
@@ -90,6 +96,27 @@ def prepare_testing():
         if HP_TESTING:
             setattr(ENEMY_LIST[iterate_index],'num_hp',TESTING_HP[FORMATION_TIER])
         
+        # AI Assignment
+        offset_loc = df['ai_starting_address'].iloc[0]
+        list_of_skills = df['ai_skills'].iloc[0].strip("][").replace("'","").split(',')
+        list_of_writes = df['ai_write_loc'].iloc[0].strip("][").replace("'","").split(',')
+        if not offset_loc != offset_loc and list_of_skills != ['']: #ignore if NaN
+            list_of_addresses = []
+            for i in list_of_writes:
+                print(offset_loc)
+                list_of_addresses.append(hex(int(offset_loc,base=16)+int(i)).replace("0x",""))
+            
+#            import pdb
+#            pdb.set_trace()
+            skill_dict = dict(zip(list_of_addresses,list_of_skills))
+            
+            text_string = text_string + '; Rewrite enemy skills for enemy '+df['enemy_name'].iloc[0]+'\n'
+            
+            for address, skill in skill_dict.items():
+                text_string = text_string + '; new skill '+skill+"\n"
+                text_string = text_string + 'org $'+address+"\n"
+                text_string = text_string + 'db $'+enemy_skills[skill]+"\n"
+        
         ENEMY_LIST[iterate_index].update_all()
         text_string = text_string + (ENEMY_LIST[iterate_index].retrieve_asar())+"\n"
     
@@ -97,6 +124,8 @@ def prepare_testing():
     # data prep
     df_chosen = df_formation_data[df_formation_data['offset']==FORMATION_OFFSET]
     df_chosen = df_chosen[['escape_%','abp','visible_enemy','enemy_1','enemy_2','enemy_3','enemy_4','enemy_5','enemy_6','enemy_7','enemy_8','formationid_13','formationid_14','formationid_15','formationid_16']]
+    
+
     
     # output for formation data to be written 
     formation_asar = 'db '

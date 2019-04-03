@@ -334,6 +334,12 @@ class Conductor():
         # Take original list's event_formation_reference and write to randomized event_lookup_loc1 and event_lookup_loc2
         #         (This will assign the randomized formation to the original's location, so Karlabos at Sol Cannon)
         
+        
+        
+        # Create patch file for custom AI and clear out any previous 
+        with open('../../projects/test_asm/boss_hp_ai.asm','w') as file:
+            file.write('')
+    
 
         for random_boss in [x for x in self.FM.formations if x.randomized_boss == 'y']:
             # First pick a random original boss
@@ -393,6 +399,7 @@ class Conductor():
             # Update random boss hp on FIRST enemy only right now
             random_boss.enemy_classes[0].num_hp = new_hp
             random_boss.enemy_classes[0].update_val('hp', new_hp)
+            
         
 
             # Then after the first HP is assigned and the new boss formation takes place in the right locations,
@@ -536,6 +543,122 @@ class Conductor():
             
             else:
                 random_boss.enemy_classes[0].num_hp = new_hp
+
+
+            
+            # CLAUSE FOR CONDITIONAL HP AI
+            # Some bosses will change their AI patterns based on HP
+            # Example, Galura <800HP will start going berserk
+            # This needs to dynamically change per boss by manually set percentages 
+            
+            # For now, this process creates a new patch file every time 
+            def inttohex_asar(x):
+                y = hex(x).replace("0x","").zfill(4)
+                return "db $"+y[2:4] + ", $" + y[0:2]
+                
+            def write_hpai(trigger_dict):
+                '''
+                This function takes a dictionary of:
+                    1) trigger_hp (part of AI when an enemy changes pattern)
+                    and its corresponding
+                    2) address to write to 
+                This will iterate through both trigger_hp/address for however many pairs exist per enemy
+                '''
+                text_str = "; ************** AI clause for formation: "+random_boss.enemy_list+" **************\n"
+                for trigger_hp, address in trigger_dict.items():
+                    text_str = text_str + "; Original HP: "+str(random_boss.enemy_classes[0].num_hp)+"\n"
+                    text_str = text_str + "; New trigger HP: "+str(trigger_hp)+"\n" 
+                    text_str = text_str + 'org $'+address+'\n'
+                    text_str = text_str + inttohex_asar(trigger_hp)+"\n"
+                    
+                with open('../../projects/test_asm/boss_hp_ai.asm','a') as file:
+                    file.write(text_str)
+                    
+                    
+            ignore_hp_triggers = False
+            # MAGISA
+            if random_boss.event_id in ['04']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.46)]
+                addresses = ['D0B329']
+
+            # GALURA
+            elif random_boss.event_id in ['06']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.66)]
+                addresses = ['D0B36A']
+                
+            # SOL CANNON
+            elif random_boss.event_id in ['0E']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.44)]
+                addresses = ['D0B4EF']
+                
+            # GILGA 1
+            elif random_boss.event_id in ['14']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.87)]
+                addresses = ['D0B5F5']
+                
+            # GILGA 2
+            elif random_boss.event_id in ['1B']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.38)]
+                addresses = ['D0B674']
+                
+            # GILGA ENKIDOU
+            elif random_boss.event_id in ['1F']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.67)]
+                addresses = ['D0B761']
+                
+            # GUARDIANS
+            elif random_boss.event_id in ['21']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.38),
+                              round(random_boss.enemy_classes[0].num_hp * 0.38),
+                              round(random_boss.enemy_classes[0].num_hp * 0.38),
+                              round(random_boss.enemy_classes[0].num_hp * 0.38)]
+                addresses = ['D0B8DE', 'D0B874','D0B886','D0B898']
+                
+            # CARBUNKLE
+            elif random_boss.event_id in ['22']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.66),
+                              round(random_boss.enemy_classes[0].num_hp * 0.33)]
+                addresses = ['D0B8AE','D0B8D1']
+
+            # EXDEATH 1
+            elif random_boss.event_id in ['24']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.48),
+                              round(random_boss.enemy_classes[0].num_hp * 0.21)]
+                addresses = ['D0B9A5','D0B9CF']
+                
+                
+            # OMNISCIENT
+            elif random_boss.event_id in ['2F']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.24)]
+                addresses = ['D0BC6E']
+                
+            # GOGO
+            elif random_boss.event_id in ['33']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.69)]
+                addresses = ['D0BE14']
+                
+            # BAHAMUT
+            elif random_boss.event_id in ['34']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.25),
+                              round(random_boss.enemy_classes[0].num_hp * 0.38),
+                              round(random_boss.enemy_classes[0].num_hp * 0.50),
+                              round(random_boss.enemy_classes[0].num_hp * 0.63),
+                              round(random_boss.enemy_classes[0].num_hp * 0.75),
+                              round(random_boss.enemy_classes[0].num_hp * 0.87),
+                              round(random_boss.enemy_classes[0].num_hp * 0.25)]
+                addresses = ['D0BE5E','D0BE68','D0BE76','D0BE84','D0BE92','D0BEA0','D0BEB7']
+               
+            # GILGA FINAL (?)
+            elif random_boss.event_id in ['23']:
+                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.76)]
+                addresses = ['D0C3A3']
+            else:
+                ignore_hp_triggers = True
+            
+            if not ignore_hp_triggers:
+                trigger_dict = dict(zip(trigger_hp,addresses))
+                write_hpai(trigger_dict)                
+
         
         
             # EXP

@@ -1,34 +1,45 @@
 hirom
-; Enemy: Forza
+; Rewrite enemy skills for enemy Titan
+; new skill Fight
+org $d0b59d
+db $80
+; new skill Fight
+org $d0b59e
+db $80
+; new skill Specialty
+org $d0b59f
+db $81
+; new skill Fight
+org $d0b5a1
+db $80
+; new skill EarthShaker
+org $d0b5a2
+db $CF
+; new skill Specialty
+org $d0b5a3
+db $81
+; Enemy: Titan
 ; Stats: 
-org $D020C0
-db $28, $32, $09, $00, $08, $00, $05, $05, $b8, $0b, $64, $00, $50, $02, $00, $00, $00, $00, $F0, $00, $00, $00, $00, $00, $A0, $18, $00, $00, $00, $00, $06, $08
+org $D02360
+db $19, $05, $14, $0a, $0a, $00, $00, $00, $fa, $00, $d0, $07, $94, $09, $00, $00, $00, $00, $F7, $DF, $00, $20, $00, $00, $A0, $18, $00, $00, $00, $00, $1B, $01
 ; Loot: 
-org $D05018
-db $00, $00, $00, $F3
-
-; Enemy: Magisa
-; Stats: 
-org $D020E0
-db $23, $32, $05, $05, $00, $28, $0a, $05, $b8, $0b, $c8, $00, $50, $02, $00, $00, $00, $00, $F0, $FB, $00, $00, $00, $00, $80, $18, $00, $00, $00, $00, $07, $08
-; Loot: 
-org $D0501C
-db $00, $00, $00, $4B
+org $D0506C
+db $26, $E0, $00, $E1
 
 ;rewrite locations to test location
 org $D07804
-db $01BA
+db $01C6
 org $D07806
-db $01BA
+db $01C6
 org $D07828
-db $01BA
+db $01C6
 org $D0782A
-db $01BA
+db $01C6
 org $D078AC
-db $01BA
+db $01C6
 org $D078AE
-db $01BA
+db $01C6
 org $D07928
-db $01BA
+db $01C6
 org $D0792A
-db $01BA
+db $01C6
