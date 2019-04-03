@@ -1,4 +1,4 @@
-monster_box_id,monster_name,area,monster_chest_id,monster_chest_data,reward_id,reward_data
+monster_box_id,readable_name,area,monster_chest_id,monster_chest_data,reward_id,reward_data
 0,,Tule,D1322A,A4,D1322B,C0
 1,,Karnak,D132F6,E2,D132F7,1D
 2,,Karnak,D132FA,A0,D132FB,FE
