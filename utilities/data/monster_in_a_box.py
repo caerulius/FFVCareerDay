@@ -34,10 +34,15 @@ class MonsterInABoxManager:
             self.random = random
 
     def get_mib_for_area(self, area):
-        print("getting mib for area: " + area.area_name)
+        #print("getting mib for area: " + area.area_name)
         working_list = [x for x in self.monsters_in_boxes if x.area == area.area_name and x.processed == False]
-        print("mib list length: " + str(len(working_list)))
+        #print("mib list length: " + str(len(working_list)))
         if len(working_list) > 0:
             return random.choice(working_list)
         else:
             return None
+
+    def get_mib_by_address(self, address):
+        for i in self.monsters_in_boxes:
+            if i.monster_chest_id == address:
+                return i

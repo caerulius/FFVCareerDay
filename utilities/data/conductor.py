@@ -28,6 +28,7 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 8:5218*adjust_mult,
 9:7466*adjust_mult,
 10:10289*adjust_mult}
+SHINRYUU_VANILLA = True
 
 
 class Conductor():
@@ -96,6 +97,17 @@ class Conductor():
             self.AM.update_volume(value)
 
     def randomize_rewards_by_areas(self):
+        if SHINRYUU_VANILLA:
+            shinryuu_address = 'D135FA'
+            shinryuu_chest = self.RM.get_reward_by_address(shinryuu_address)
+            mib = self.MIBM.get_mib_by_address(shinryuu_address)
+
+            shinryuu_chest.set_collectible(self.CM.get_random_collectible(self.RE, respect_weight=True, of_type=Item, monitor_counts=True))
+            shinryuu_chest.mib_type = mib.monster_chest_data
+            shinryuu_chest.randomized = True
+            mib.processed = True
+            self.AM.update_volume(shinryuu_chest)
+
         while self.AM.any_areas_not_full():
             #print()
             #print("not full yet")
@@ -109,19 +121,19 @@ class Conductor():
 
             next_reward = self.RE.choice(possibles)
 
-            print("checking mib status now")
+            #print("checking mib status now")
             mib = self.MIBM.get_mib_for_area(area)
-            print(mib)
-            print("next reward style: " + next_reward.reward_style)
+            #print(mib)
+            #print("next reward style: " + next_reward.reward_style)
 
             if mib is not None and next_reward.reward_style == "chest": #only mibs in chests
-                print("doing the mib stuff")
+                #print("doing the mib stuff")
                 to_place = self.CM.get_random_collectible(self.RE, respect_weight=True, of_type=Item, monitor_counts=True) #only items in mibs
                 next_reward.mib_type = mib.monster_chest_data
                 mib.processed = True
-                print(mib.processed)
-                print(next_reward.mib_type)
-                print("\n\n\n")
+                #print(mib.processed)
+                #print(next_reward.mib_type)
+                #print("\n\n\n")
             else:
                 #print("we chose: " + next_reward.description)
                 to_place = self.CM.get_random_collectible(self.RE, respect_weight=True, of_type=next_reward.force_type,

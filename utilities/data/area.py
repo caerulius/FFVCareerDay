@@ -64,3 +64,8 @@ class AreaManager():
     def change_power_level(self, factor):
         for i in self.areas:
             i.area_capacity = math.floor(i.area_capacity * factor)
+
+    def get_area_by_name(self, name):
+        for i in self.areas:
+            if i.area_name == name:
+                return i
