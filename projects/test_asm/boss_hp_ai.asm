@@ -1,84 +1,80 @@
-; ************** AI clause for formation: Forza, Magisa **************
+; AI clause for formation: Forza, Magisa
 ; Original HP: 6000
 ; New trigger HP: 2760
 org $D0B329
 db $c8, $0a
-; ************** AI clause for formation: Galura **************
-; Original HP: 33333
-; New trigger HP: 22000
+; AI clause for formation: Galura
+; Original HP: 22500
+; New trigger HP: 14850
 org $D0B36A
-db $f0, $55
-; ************** AI clause for formation: Sol Cannon, Launcher, Launcher **************
-; Original HP: 16999
-; New trigger HP: 7480
+db $02, $3a
+; AI clause for formation: Sol Cannon, Launcher, Launcher
+; Original HP: 20000
+; New trigger HP: 8800
 org $D0B4EF
-db $38, $1d
-; ************** AI clause for formation: Gilgamesh **************
-; Original HP: 5000
-; New trigger HP: 4350
+db $60, $22
+; AI clause for formation: Gilgamesh
+; Original HP: 10000
+; New trigger HP: 8700
 org $D0B5F5
-db $fe, $10
-; ************** AI clause for formation: Gilgamesh **************
-; Original HP: 3000
-; New trigger HP: 1140
-org $D0B674
-db $74, $04
-; ************** AI clause for formation: Gilgamesh, Enkidou **************
-; Original HP: 5750
-; New trigger HP: 3853
-org $D0B761
-db $0d, $0f
-; ************** AI clause for formation: Guardian, Guardian, Guardian, Guardian **************
+db $fc, $21
+; AI clause for formation: Gilgamesh
 ; Original HP: 2500
 ; New trigger HP: 950
-org $D0B898
+org $D0B674
 db $b6, $03
-; ************** AI clause for formation: Carbunkle, Carbunkle **************
-; Original HP: 27900
-; New trigger HP: 18414
+; AI clause for formation: Gilgamesh, Enkidou
+; Original HP: 9000
+; New trigger HP: 6030
+org $D0B761
+db $8e, $17
+; AI clause for formation: Guardian, Guardian, Guardian, Guardian
+; Original HP: 5000
+; New trigger HP: 1900
+org $D0B8DE
+db $6c, $07
+org $D0B874
+db $6c, $07
+org $D0B886
+db $6c, $07
+org $D0B898
+db $6c, $07
+; AI clause for formation: Carbunkle, Carbunkle
+; Original HP: 19997
+; New trigger HP: 13198
 org $D0B8AE
-db $ee, $47
-; Original HP: 27900
-; New trigger HP: 9207
+db $8e, $33
 org $D0B8D1
-db $f7, $23
-; ************** AI clause for formation: Gilgamesh, Gilgamesh **************
-; Original HP: 3300
-; New trigger HP: 2508
-org $D0C3A3
-db $cc, $09
-; ************** AI clause for formation: Omniscient **************
-; Original HP: 1600
-; New trigger HP: 384
-org $D0BC6E
-db $80, $01
-; ************** AI clause for formation: Gogo **************
+db $c7, $19
+; AI clause for formation: Gilgamesh, Gilgamesh
 ; Original HP: 2000
-; New trigger HP: 1380
+; New trigger HP: 1520
+org $D0C3A3
+db $f0, $05
+; AI clause for formation: Omniscient
+; Original HP: 3600
+; New trigger HP: 864
+org $D0BC6E
+db $60, $03
+; AI clause for formation: Gogo
+; Original HP: 900
+; New trigger HP: 621
 org $D0BE14
-db $64, $05
-; ************** AI clause for formation: Bahamut **************
-; Original HP: 1200
-; New trigger HP: 300
-org $D0BEB7
-db $2c, $01
-; Original HP: 1200
-; New trigger HP: 456
+db $6d, $02
+; AI clause for formation: Bahamut
+; Original HP: 850
+; New trigger HP: 212
+org $D0BE5E
+db $d4, $00
 org $D0BE68
-db $c8, $01
-; Original HP: 1200
-; New trigger HP: 600
+db $43, $01
 org $D0BE76
-db $58, $02
-; Original HP: 1200
-; New trigger HP: 756
+db $a9, $01
 org $D0BE84
-db $f4, $02
-; Original HP: 1200
-; New trigger HP: 900
+db $18, $02
 org $D0BE92
-db $84, $03
-; Original HP: 1200
-; New trigger HP: 1044
+db $7e, $02
 org $D0BEA0
-db $14, $04
+db $e4, $02
+org $D0BEB7
+db $d4, $00

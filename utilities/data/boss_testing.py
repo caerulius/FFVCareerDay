@@ -11,15 +11,15 @@ LOC_SANDWORM2 = 'D04BF0'
 LOC_MELUSINE2 = 'D04E00'
 LOC_TWINTANIA2 = 'D04F60'
 
-TESTING_HP = {1:250, 2:3000, 3:15000, 4:1000}
+TESTING_HP = {1:250, 2:3000, 3:15000, 4:55000}
 
 
 
 
-FORMATION_OFFSET = 'D04C60'         # what formation you want to replicate
-FORMATION_TIER = 1                 # tier #
-ENEMY_IDX = [283]              # enemies to rewrite stats for. idx
-
+FORMATION_OFFSET = 'D04E40'         # what formation you want to replicate
+FORMATION_TIER = 3                 # tier #
+ENEMY_IDX = [325]              # enemies to rewrite stats for. idx
+ 
 
 
 
@@ -153,7 +153,7 @@ def prepare_testing():
 #        text_string = text_string + ('org $'+loc)+"\n"
 #        text_string = text_string + (formation_asar)+"\n"
         
-    print(text_string)
+    #print(text_string)
     with open('../../projects/test_asm/boss_testing_stats.asm','w') as f:
         f.write(text_string)
         
