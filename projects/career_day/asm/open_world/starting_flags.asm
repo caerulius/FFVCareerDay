@@ -71,7 +71,7 @@ db $A4, $3D            ; set address 000A3B bit ON 20 (navigate to wind shrine c
 
 ; Defaults always on:
 ; Tule boat cutscene
-db $A4, $4C            ; set address 000A3D bit ON 10
+; db $A4, $4C            ; set address 000A3D bit ON 10
 
 ; Access gate
 ; 000A18 set bits 10 and 20 (10 sets a cutscene triggered, both together unlock torna gate)
