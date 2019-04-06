@@ -1,0 +1,2 @@
+cp ROM/ffv.sfc ROM/ffv_hacks_patch.sfc
+"FFV Hacking\CT_Hacking\asar_local\asar.exe" --define vanillarewards=1 --fix-checksum=off "FFV Hacking\CT_Hacking\FFVCareerDay\projects\project_demi\asm\all_patches.asm" "ROM\ffv_hacks_patch.sfc"
