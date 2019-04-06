@@ -16,9 +16,9 @@ TESTING_HP = {1:250, 2:3000, 3:15000, 4:55000}
 
 
 
-FORMATION_OFFSET = 'D04E40'         # what formation you want to replicate
-FORMATION_TIER = 3                 # tier #
-ENEMY_IDX = [325]              # enemies to rewrite stats for. idx
+FORMATION_OFFSET = 'D04B20'         # what formation you want to replicate
+FORMATION_TIER = 4                 # tier #
+ENEMY_IDX = [32]              # enemies to rewrite stats for. idx
  
 
 
@@ -94,8 +94,8 @@ def prepare_testing():
             
         # HP TESTING
         if HP_TESTING:
-            setattr(ENEMY_LIST[iterate_index],'num_hp',TESTING_HP[FORMATION_TIER])
-        
+            #setattr(ENEMY_LIST[iterate_index],'num_hp',TESTING_HP[FORMATION_TIER])
+            setattr(ENEMY_LIST[iterate_index],'num_hp',55000)
         # AI Assignment
         offset_loc = df['ai_starting_address'].iloc[0]
         list_of_skills = df['ai_skills'].iloc[0].strip("][").replace("'","").split(',')

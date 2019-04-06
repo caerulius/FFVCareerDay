@@ -21,6 +21,7 @@ from formation import *
 #
 #
 df_boss_scaling= pd.read_csv('tables/boss_scaling.csv')
+enemy_skills = pd.read_csv('../data/tables/enemy_skills.csv',index_col='name').to_dict()['hex']
 #
 #
 #
@@ -38,7 +39,9 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 7:3480*adjust_mult,
 8:5218*adjust_mult,
 9:7466*adjust_mult,
-10:10289*adjust_mult}
+10:10289*adjust_mult,
+11:13087*adjust_mult,
+12:15044*adjust_mult}
 
 
 class Conductor():
@@ -338,7 +341,7 @@ class Conductor():
         
         # Create patch file for custom AI and clear out any previous 
         with open('../../projects/test_asm/boss_hp_ai.asm','w') as file:
-            file.write('')
+            file.write('hirom\n')
     
 
         for random_boss in [x for x in self.FM.formations if x.randomized_boss == 'y']:
@@ -381,11 +384,11 @@ class Conductor():
 
             rank_adj_flag = int(new_rank) % ((new_tier * 3)-1)
             if rank_adj_flag == 1:
-                stat_rank_mult = 1.2
-            elif rank_adj_flag == 0:
-                stat_rank_mult = 1.
-            else:
                 stat_rank_mult = 0.8
+            elif rank_adj_flag == 0:
+                stat_rank_mult = 1.0
+            else:
+                stat_rank_mult = 1.2
             #print(str(rank_adj_flag)+"   "+str((int(new_rank)))+"  "+str((new_tier * 3)-1))
             #print(str(stat_rank_mult))
 
@@ -452,6 +455,11 @@ class Conductor():
             if original_formation_id in ['21']:
                 new_hp = new_hp * 4
                 
+            # CLAUSE FOR ENEMIES WITH 5x BOSS AS SEPARATE ENEMIES
+            # ARCHEOAVIS
+            if original_formation_id in ['0F']:
+                new_hp = new_hp * 5
+                
             # CLAUSE FOR NECROPHOBIA:
             if original_formation_id in ['4B']:
                 # This takes Necrofobia's HP and applies a 1.5x bonus. Barriers have 8k, Necrofobia has 40k. Results in 60k, normalized in STEP 2 later
@@ -472,8 +480,8 @@ class Conductor():
             # Based on the NEWLY RANDOMIZED FORMATION QUALITY, update all formation enemies 
             
             # CLAUSE FOR FORMATIONS WITH SHARED HP, ONLY ONE ENEMY ACTIVE ON THE FIELD
-            # WINGRAPTOR, SIREN, LIQUIFLAME, ARCHEOAVIS, MELUSINE, CARBUNKLE, GILGAMESH, TWINTANIA, STALKER, SANDWORM
-            if random_boss.event_id in ['01','03','07','0F','2B','22','23','4A','2E','0A']:
+            # WINGRAPTOR, SIREN, LIQUIFLAME, MELUSINE, CARBUNKLE, GILGAMESH, TWINTANIA, STALKER, SANDWORM
+            if random_boss.event_id in ['01','03','07','2B','22','23','4A','2E','0A']:
                 for enemy in random_boss.enemy_classes:
                     enemy.num_hp = new_hp
             
@@ -482,6 +490,7 @@ class Conductor():
             elif random_boss.event_id in ['2D','1F','04']:
                 for enemy in random_boss.enemy_classes:
                     enemy.num_hp = round(new_hp / 2)
+                    
                     
             # CLAUSE FOR FORMATIONS WITH 3x SAME/SIMILAR BOSS:
             # TRITON/PHOBOS/NEREGEID
@@ -502,6 +511,12 @@ class Conductor():
                 for enemy in random_boss.enemy_classes:
                     enemy.num_hp = round(new_hp / 4)
         
+            # CLAUSE FOR FORMATIONS WITH 5x SAME/SIMILAR BOSS:
+            # ARCHEOAVIS
+            elif random_boss.event_id in ['0F']:
+                for enemy in random_boss.enemy_classes:
+                    enemy.num_hp = round(new_hp / 5)
+                    
             # CLAUSE FOR SERGEANT/KARNAKS
             elif random_boss.event_id in ['08']:
                 # Apply HP to IronClaw
@@ -544,128 +559,6 @@ class Conductor():
             else:
                 random_boss.enemy_classes[0].num_hp = new_hp
 
-
-            
-            # CLAUSE FOR CONDITIONAL HP AI
-            # Some bosses will change their AI patterns based on HP
-            # Example, Galura <800HP will start going berserk
-            # This needs to dynamically change per boss by manually set percentages 
-            
-            # For now, this process creates a new patch file every time 
-            def inttohex_asar(x):
-                y = hex(x).replace("0x","").zfill(4)
-                return "db $"+y[2:4] + ", $" + y[0:2]
-                
-            def write_hpai(trigger_dict):
-                '''
-                This function takes a dictionary of:
-                    1) trigger_hp (part of AI when an enemy changes pattern)
-                    and its corresponding
-                    2) address to write to 
-                This will iterate through both trigger_hp/address for however many pairs exist per enemy
-                '''
-                text_str = "; ************** AI clause for formation: "+random_boss.enemy_list+" **************\n"
-                for trigger_hp, address in trigger_dict.items():
-                    text_str = text_str + "; Original HP: "+str(random_boss.enemy_classes[0].num_hp)+"\n"
-                    text_str = text_str + "; New trigger HP: "+str(trigger_hp)+"\n" 
-                    text_str = text_str + 'org $'+address+'\n'
-                    text_str = text_str + inttohex_asar(trigger_hp)+"\n"
-                    
-                with open('../../projects/test_asm/boss_hp_ai.asm','a') as file:
-                    file.write(text_str)
-                    
-                    
-            ignore_hp_triggers = False
-            # MAGISA
-            if random_boss.event_id in ['04']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.46)]
-                addresses = ['D0B329']
-
-            # GALURA
-            elif random_boss.event_id in ['06']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.66)]
-                addresses = ['D0B36A']
-                
-            # SOL CANNON
-            elif random_boss.event_id in ['0E']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.44)]
-                addresses = ['D0B4EF']
-                
-            # GILGA 1
-            elif random_boss.event_id in ['14']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.87)]
-                addresses = ['D0B5F5']
-                
-            # GILGA 2
-            elif random_boss.event_id in ['1B']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.38)]
-                addresses = ['D0B674']
-                
-            # GILGA ENKIDOU
-            elif random_boss.event_id in ['1F']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.67)]
-                addresses = ['D0B761']
-                
-            # GUARDIANS
-            elif random_boss.event_id in ['21']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.38),
-                              round(random_boss.enemy_classes[0].num_hp * 0.38),
-                              round(random_boss.enemy_classes[0].num_hp * 0.38),
-                              round(random_boss.enemy_classes[0].num_hp * 0.38)]
-                addresses = ['D0B8DE', 'D0B874','D0B886','D0B898']
-                
-            # CARBUNKLE
-            elif random_boss.event_id in ['22']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.66),
-                              round(random_boss.enemy_classes[0].num_hp * 0.33)]
-                addresses = ['D0B8AE','D0B8D1']
-
-            # EXDEATH 1
-            elif random_boss.event_id in ['24']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.48),
-                              round(random_boss.enemy_classes[0].num_hp * 0.21)]
-                addresses = ['D0B9A5','D0B9CF']
-                
-                
-            # OMNISCIENT
-            elif random_boss.event_id in ['2F']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.24)]
-                addresses = ['D0BC6E']
-                
-            # GOGO
-            elif random_boss.event_id in ['33']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.69)]
-                addresses = ['D0BE14']
-                
-            # BAHAMUT
-            elif random_boss.event_id in ['34']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.25),
-                              round(random_boss.enemy_classes[0].num_hp * 0.38),
-                              round(random_boss.enemy_classes[0].num_hp * 0.50),
-                              round(random_boss.enemy_classes[0].num_hp * 0.63),
-                              round(random_boss.enemy_classes[0].num_hp * 0.75),
-                              round(random_boss.enemy_classes[0].num_hp * 0.87),
-                              round(random_boss.enemy_classes[0].num_hp * 0.25)]
-                addresses = ['D0BE5E','D0BE68','D0BE76','D0BE84','D0BE92','D0BEA0','D0BEB7']
-               
-            # GILGA FINAL (?)
-            elif random_boss.event_id in ['23']:
-                trigger_hp = [round(random_boss.enemy_classes[0].num_hp * 0.76)]
-                addresses = ['D0C3A3']
-            else:
-                ignore_hp_triggers = True
-            
-            if not ignore_hp_triggers:
-                trigger_dict = dict(zip(trigger_hp,addresses))
-                write_hpai(trigger_dict)                
-
-        
-        
-            # EXP
-            # Now assign exp based on two things
-            # 1) Set exp based on rank of original location
-            # 2) Adjust exp with a bonus/detriment based on the rank multiplier
-            
             # Get base exp
             base_exp = RANK_EXP_REWARD[int(new_rank)]
             
@@ -735,21 +628,92 @@ class Conductor():
 
 
 
-            # STATS
-            # Update stats based on boss_scaling.csv for every enemy
-#            import pdb
-#            pdb.set_trace()
+            # STATS / AI
+            # Stats - Update stats based on boss_scaling.csv for every enemy
+            # AI - create new patch file for AI changes 
+
             
-            try:
-                for enemy in random_boss.enemy_classes:
-                    df_temp = df_boss_scaling[(df_boss_scaling['idx']==int(enemy.idx)) & (df_boss_scaling['tier']==new_tier)]
-                    for col in ['num_gauge_time','num_phys_power','num_phys_mult','num_evade','num_phys_def','num_mag_power','num_mag_def','num_mag_evade','num_mp']:
-                        setattr(enemy,col,df_temp[col])
-                    # both updates stats from this for loop and applies mult based on tier
-                    enemy.rank_mult = stat_rank_mult
-                    enemy.apply_rank_mult() 
-            except:
-                print("Tier stat placement failed on formation "+str(random_boss.enemy_list))
+            def inttohex_asar(x):
+                y = hex(int(x)).replace("0x","").zfill(4)
+                return "db $"+y[2:4] + ", $" + y[0:2]
+                
+            def write_hpai(trigger_dict):
+                '''
+                This function takes a dictionary of:
+                    1) trigger_hp (part of AI when an enemy changes pattern)
+                    and its corresponding
+                    2) address to write to 
+                This will iterate through both trigger_hp/address for however many pairs exist per enemy
+                '''
+                text_str = ''
+                for address, trigger_hp in trigger_dict.items():
+                    text_str = text_str + "; Original HP: "+str(random_boss.enemy_classes[0].num_hp)+"\n"
+                    text_str = text_str + "; New trigger HP: "+str(trigger_hp)+"\n" 
+                    text_str = text_str + 'org $'+address+'\n'
+                    text_str = text_str + inttohex_asar(trigger_hp)+"\n"
+                
+                return text_str
+
+            og_text = "; --------------------------\n; Original boss {} rank {} -> Randomized boss {} rank {}\n; HP: {} -> {}\n".format(random_boss.enemy_list, str(prev_rank),original_boss.enemy_list,str(new_rank),str(prev_hp),str(new_hp))
+            text_str = og_text
+            write_flag = False
+            for enemy in random_boss.enemy_classes:
+                text_str = text_str + '; ENEMY: '+enemy.enemy_name+'\n'
+                df_temp = df_boss_scaling[(df_boss_scaling['idx']==int(enemy.idx)) & (df_boss_scaling['tier']==new_tier)]
+                
+                # STATS
+                for col in ['num_gauge_time','num_phys_power','num_phys_mult','num_evade','num_phys_def','num_mag_power','num_mag_def','num_mag_evade','num_mp']:
+                    setattr(enemy,col,df_temp[col])
+                # both updates stats from this for loop and applies mult based on tier
+                
+                
+                # AI - check for & write moveset
+                offset_loc = df_temp['ai_starting_address'].iloc[0]
+                list_of_skills = df_temp['ai_skills'].iloc[0].strip("][").split(',')
+                list_of_writes = df_temp['ai_write_loc'].iloc[0].strip("][").split(',')
+                
+                    # Check skill list if adjustments needed
+                if not offset_loc != offset_loc and list_of_skills != ['']: #ignore if NaN
+                    write_flag = True
+                    list_of_addresses = []
+                    for i in list_of_writes:
+                        list_of_addresses.append(hex(int(offset_loc,base=16)+int(i)).replace("0x",""))
+
+                    skill_dict = dict(zip(list_of_addresses,list_of_skills))
+                    
+                    text_str = text_str + '; Skills: '+str(list_of_skills)+'\n'
+                    
+                    for address, skill in skill_dict.items():
+                        text_str = text_str + '; New skill: '+skill+"\n"
+                        text_str = text_str + 'org $'+address+"\n"
+                        text_str = text_str + 'db $'+enemy_skills[skill]+"\n"
+                    
+                    
+                # AI - check for & write HP triggers
+                list_of_hp_writes = df_temp['ai_hp_write_loc'].iloc[0].strip("][").split(',')
+                list_of_hp_mult = df_temp['ai_hp_mult'].iloc[0].strip("][").split(',')
+                
+                if not offset_loc != offset_loc and list_of_hp_writes != ['']: #ignore if NaN
+                    write_flag = True
+                    list_of_hp_addresses = []
+                    for i in list_of_hp_writes:
+                        list_of_hp_addresses.append(hex(int(offset_loc,base=16)+int(i)).replace("0x",""))
+
+                    list_of_hp_vals = []
+                    for mult in list_of_hp_mult:
+                        list_of_hp_vals.append(round(int(enemy.num_hp) * float(mult)))
+                        
+
+                    trigger_dict = dict(zip(list_of_hp_addresses,list_of_hp_vals))
+
+                    text_str = text_str + write_hpai(trigger_dict)
+                enemy.rank_mult = stat_rank_mult
+                enemy.apply_rank_mult() 
+            if not write_flag:
+                text_str = og_text
+            with open('../../projects/test_asm/boss_hp_ai.asm','a') as file:
+                file.write(text_str)                    
+
 
 
             
