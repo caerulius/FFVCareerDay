@@ -106,6 +106,14 @@ class Gil(Collectible):
     def patch_id(self):
         return self.reward_id
 
+class KeyItem(Collectible):
+    reward_type = '30'
+    def __init__(self, keyitem_id, data_row):
+        super().__init__(keyitem_id, data_row['readable_name'], 0,
+                         [], 1, data_row['valid'])
+        self.writeable_name = data_row['writeable_name']
+        self.text_location = data_row['text_location']
+
 class CollectibleManager():
     def __init__(self, data_manager):
         items = [Item(x, data_manager.files['items'].loc[x]) for x in data_manager.files['items'].index.values]
@@ -113,11 +121,14 @@ class CollectibleManager():
         crystals = [Crystal(x, data_manager.files['crystals'].loc[x]) for x in data_manager.files['crystals'].index.values]
         abilities = [Ability(x, data_manager.files['abilities'].loc[x]) for x in data_manager.files['abilities'].index.values]
         gil = [Gil(x, data_manager.files['gil'].loc[x]) for x in data_manager.files['gil'].index.values]
-        self.collectibles = items + magics + crystals + abilities + gil
+        key_items = [KeyItem(x, data_manager.files['key_items'].loc[x]) for x in data_manager.files['key_items'].index.values]
+        self.collectibles = items + magics + crystals + abilities + gil + key_items
         self.placement_history = {}
         self.placed_gil_rewards = []
 
     def get_by_name(self, name):
+        if name == "New":
+            return None
         best_match = None
         for i in self.collectibles:
             if name == i.reward_name:
@@ -145,12 +156,12 @@ class CollectibleManager():
         if of_type is not None:
             working_list = [x for x in self.get_all_of_type(of_type) if x.valid] #this will be a shop or a forced type item
         else:
-            if gil_allowed and len(self.placed_gil_rewards) < len([x for x in self.get_all_of_type(Gil)]): #first, place all our gil rewards
-                choice = random.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards])
-                self.placed_gil_rewards.append(choice)
-                return choice
+            working_list = [x for x in self.collectibles if x.valid and type(x) != KeyItem] #this will be a non shop
 
-        working_list = [x for x in self.collectibles if x.valid] #this will be a non shop
+        if gil_allowed and len(self.placed_gil_rewards) < len([x for x in self.get_all_of_type(Gil)]): #first, place all our gil rewards
+            choice = random.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards])
+            self.placed_gil_rewards.append(choice)
+            return choice
             
         if monitor_counts is True:
             working_list = [y for y in [x for x in working_list if
@@ -181,11 +192,11 @@ class CollectibleManager():
     def get_of_value_or_lower(self, random_engine, value):
         val_list = [x for x in self.collectibles if x.reward_value == value
                     and self.placement_history[x] < x.max_count
-                    and x.valid]
+                    and x.valid and type(x) != KeyItem]
         if len(val_list) == 0:
             val_list = [x for x in self.collectibles if x.reward_value < value
                         and self.placement_history[x] < x.max_count
-                        and x.valid]
+                        and x.valid and type(x) != KeyItem]
         if len(val_list) == 0:
             return None #some you can place forever, so this should never happen
 
@@ -207,3 +218,4 @@ type_dict['Magic'] = Magic
 type_dict['Crystal'] = Crystal
 type_dict['Ability'] = Ability
 type_dict['Gil'] = Gil
+type_dict['KeyItem'] = KeyItem

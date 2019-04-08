@@ -9,6 +9,7 @@ class DataManager():
         self.files['crystals'] = pd.read_csv('tables/crystal_id.csv',index_col='crystal_id',dtype=str)
         self.files['abilities'] = pd.read_csv('tables/ability_id.csv',index_col='ability_id',dtype=str)
         self.files['gil'] = pd.read_csv('tables/gil_rewards.csv',index_col="gil_id",dtype=str)
+        self.files['key_items'] = pd.read_csv('tables/key_items.csv',index_col='keyitem_id',dtype=str)
         self.files['rewards'] = pd.read_csv('tables/rewards.csv', dtype=str)
         self.files['rewards']['idx'] = self.files['rewards']['idx'].astype(int)
         self.files['shops'] = pd.read_csv('tables/shop_id.csv',dtype=str)

@@ -29,6 +29,7 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 9:7466*adjust_mult,
 10:10289*adjust_mult}
 SHINRYUU_VANILLA = True
+NUM_KEY_ITEMS = 20
 
 
 class Conductor():
@@ -96,7 +97,23 @@ class Conductor():
             value.randomized = True
             self.AM.update_volume(value)
 
+    def randomize_key_items(self):
+        for _ in range(0, NUM_KEY_ITEMS):
+            next_key_item = self.CM.get_random_collectible(self.RE, monitor_counts=True, of_type=KeyItem)
+            next_key_reward = self.RE.choice([x for x in self.RM.get_rewards_by_style('key') if x.randomized == False])
+
+            next_key_reward.set_collectible(next_key_item)
+            next_key_reward.randomized = True
+
+        for key_item_reward in [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False]:
+            key_item_collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True)
+            key_item_reward.set_collectible(key_item_collectible)
+            key_item_reward.randomized = True
+
     def randomize_rewards_by_areas(self):
+        #this is just manually doing the shinryuu chest first.
+        #we set all the info as if it had been randomized normally
+        #and it's skipped during the main process
         if SHINRYUU_VANILLA:
             shinryuu_address = 'D135FA'
             shinryuu_chest = self.RM.get_reward_by_address(shinryuu_address)
@@ -700,6 +717,8 @@ class Conductor():
             random_engine = self.RE
         
         self.AM.change_power_level(DEFAULT_POWER_CHANGE)
+        print("Randomizing key items...")
+        self.randomize_key_items()
         print("Randomizing rewards...")
         self.randomize_rewards_by_areas()
         for i in self.RM.rewards:

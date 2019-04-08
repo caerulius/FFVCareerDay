@@ -3,8 +3,6 @@ import pandas as pd
 import random
 import operator
 
-NUM_REWARDS = 318
-
 class Reward:
     def __init__(self, index, collectible_manager, data_manager):
         self.idx = index
@@ -15,7 +13,7 @@ class Reward:
         self.original_reward (Knight, Potion, Crbnkl, etc)
         self.area (Wind Shrine, Karnak, etc)
         self.description (Wind Crystal, Beginner's House Chest, etc)
-        self.reward_style (event, chest)
+        self.reward_style (event, chest, key)
         self.force_type (Item, Gil, etc.)
         '''
         self.collectible = collectible_manager.get_by_name(self.original_reward)
@@ -49,7 +47,7 @@ class Reward:
 
 class RewardManager:
     def __init__(self, collectible_manager, data_manager):
-        self.rewards = [Reward(x, collectible_manager, data_manager) for x in range(1, NUM_REWARDS)]
+        self.rewards = [Reward(x, collectible_manager, data_manager) for x in data_manager.files['rewards'].index.values]
 
     def get_random_reward(self, random_engine, area=None):
         if area is None:
@@ -60,6 +58,9 @@ class RewardManager:
             if i.address == address:
                 return i
         return None
+
+    def get_rewards_by_style(self, style):
+        return [x for x in self.rewards if x.reward_style == style]
 
     def get_patch(self):
         output = ";================="
