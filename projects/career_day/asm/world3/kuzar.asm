@@ -541,3 +541,15 @@ db $00, $00, $00
 db $E4, $B4                     ;Unknown
 db $24                          ;Player pose: face down, right hand raised in
 db $FF                          ;End Event
+
+
+
+; remove unsetting of key items in key item inventory
+org $C9B5A6
+db $00, $00
+org $C9B5AE
+db $00, $00
+org $C9B5B6
+db $00, $00
+org $C9B5BE
+db $00, $00

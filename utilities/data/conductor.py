@@ -2,6 +2,7 @@
 import pandas as pd
 import random
 import operator
+import math
 
 from data_manager import *
 from collectible import *
@@ -14,6 +15,19 @@ from formation import *
 from text_parser import *
 from monster_in_a_box import *
 
+
+
+#### 
+# NEW DATA
+#
+#
+#
+df_boss_scaling= pd.read_csv('tables/boss_scaling.csv')
+enemy_skills = pd.read_csv('../data/tables/enemy_skills.csv',index_col='name').to_dict()['hex']
+#
+#
+#
+####
 STARTING_CRYSTAL_ADDRESS = 'E79F00'
 DEFAULT_POWER_CHANGE = 1.5
 STAT_MULTIPLIER = .25
@@ -27,7 +41,10 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 7:3480*adjust_mult,
 8:5218*adjust_mult,
 9:7466*adjust_mult,
-10:10289*adjust_mult}
+10:10289*adjust_mult,
+11:13087*adjust_mult,
+12:15044*adjust_mult}
+
 SHINRYUU_VANILLA = True
 NUM_KEY_ITEMS = 20
 
@@ -378,6 +395,12 @@ class Conductor():
         # Take original list's event_formation_reference and write to randomized event_lookup_loc1 and event_lookup_loc2
         #         (This will assign the randomized formation to the original's location, so Karlabos at Sol Cannon)
         
+        
+        
+        # Create patch file for custom AI and clear out any previous 
+        with open('../../projects/test_asm/boss_hp_ai.asm','w') as file:
+            file.write('hirom\n')
+    
 
         for random_boss in [x for x in self.FM.formations if x.randomized_boss == 'y']:
             # First pick a random original boss
@@ -413,6 +436,19 @@ class Conductor():
             rank_delta = int(new_rank) - int(prev_rank)
             random_boss.rank_delta = rank_delta
             
+            # Find tier
+            new_tier = math.trunc((int(new_rank)-1)/3) + 1
+            random_boss.tier = new_tier
+
+            rank_adj_flag = int(new_rank) % ((new_tier * 3)-1)
+            if rank_adj_flag == 1:
+                stat_rank_mult = 0.8
+            elif rank_adj_flag == 0:
+                stat_rank_mult = 1.0
+            else:
+                stat_rank_mult = 1.2
+            #print(str(rank_adj_flag)+"   "+str((int(new_rank)))+"  "+str((new_tier * 3)-1))
+            #print(str(stat_rank_mult))
 
             # Document random_boss' previous HP
             prev_hp = random_boss.enemy_classes[0].num_hp
@@ -424,8 +460,9 @@ class Conductor():
             # Update random boss hp on FIRST enemy only right now
             random_boss.enemy_classes[0].num_hp = new_hp
             random_boss.enemy_classes[0].update_val('hp', new_hp)
+            
         
-          
+
             # Then after the first HP is assigned and the new boss formation takes place in the right locations,
             # Enforce some standardization for specific boss fights. This is hardcoded for good reason as many fights
             #     specifically need individual treatment
@@ -456,17 +493,7 @@ class Conductor():
             # Something like HiryuuFlower will have a completely different method
             
             
-            # First use 25% multiplier over 100% of the original (the +1 at the end)
-            rank_mult = (abs(rank_delta) * STAT_MULTIPLIER) + 1 
-            
-            # If it's negative, then we're applying a penalty, and need to inverse 
-            if rank_delta < 0:
-                rank_mult = round(1 / rank_mult,2)
-            
-            # Assign to Formation class and all enemies
-            random_boss.rank_mult = rank_mult
-            for enemy in random_boss.enemy_classes:
-                enemy.rank_mult = rank_mult
+
         
             # STEP 1)
             # Use the event_id to identify what type of encounter it is, with specifics per encounter
@@ -485,6 +512,11 @@ class Conductor():
             # TRITON/PHOBOS/NEREGEID
             if original_formation_id in ['21']:
                 new_hp = new_hp * 4
+                
+            # CLAUSE FOR ENEMIES WITH 5x BOSS AS SEPARATE ENEMIES
+            # ARCHEOAVIS
+            if original_formation_id in ['0F']:
+                new_hp = new_hp * 5
                 
             # CLAUSE FOR NECROPHOBIA:
             if original_formation_id in ['4B']:
@@ -506,8 +538,8 @@ class Conductor():
             # Based on the NEWLY RANDOMIZED FORMATION QUALITY, update all formation enemies 
             
             # CLAUSE FOR FORMATIONS WITH SHARED HP, ONLY ONE ENEMY ACTIVE ON THE FIELD
-            # WINGRAPTOR, SIREN, LIQUIFLAME, ARCHEOAVIS, MELUSINE, CARBUNKLE, GILGAMESH, TWINTANIA, STALKER, SANDWORM
-            if random_boss.event_id in ['01','03','07','0F','2B','22','23','4A','2E','0A']:
+            # WINGRAPTOR, SIREN, LIQUIFLAME, MELUSINE, CARBUNKLE, GILGAMESH, TWINTANIA, STALKER, SANDWORM
+            if random_boss.event_id in ['01','03','07','2B','22','23','4A','2E','0A']:
                 for enemy in random_boss.enemy_classes:
                     enemy.num_hp = new_hp
             
@@ -516,6 +548,7 @@ class Conductor():
             elif random_boss.event_id in ['2D','1F','04']:
                 for enemy in random_boss.enemy_classes:
                     enemy.num_hp = round(new_hp / 2)
+                    
                     
             # CLAUSE FOR FORMATIONS WITH 3x SAME/SIMILAR BOSS:
             # TRITON/PHOBOS/NEREGEID
@@ -536,6 +569,12 @@ class Conductor():
                 for enemy in random_boss.enemy_classes:
                     enemy.num_hp = round(new_hp / 4)
         
+            # CLAUSE FOR FORMATIONS WITH 5x SAME/SIMILAR BOSS:
+            # ARCHEOAVIS
+            elif random_boss.event_id in ['0F']:
+                for enemy in random_boss.enemy_classes:
+                    enemy.num_hp = round(new_hp / 5)
+                    
             # CLAUSE FOR SERGEANT/KARNAKS
             elif random_boss.event_id in ['08']:
                 # Apply HP to IronClaw
@@ -577,13 +616,7 @@ class Conductor():
             
             else:
                 random_boss.enemy_classes[0].num_hp = new_hp
-        
-        
-            # EXP
-            # Now assign exp based on two things
-            # 1) Set exp based on rank of original location
-            # 2) Adjust exp with a bonus/detriment based on the rank multiplier
-            
+
             # Get base exp
             base_exp = RANK_EXP_REWARD[int(new_rank)]
             
@@ -593,6 +626,9 @@ class Conductor():
             # To reduce its stats
             # However, you want to still reward the player MORE because it is still a hard boss
             # So invert the multiplier
+    
+            # First use 25% multiplier over 100% of the original (the +1 at the end)
+            rank_mult = (abs(rank_delta) * STAT_MULTIPLIER) + 1 
             
             new_exp = base_exp * 1/rank_mult
             # Round for nice number, merely for presentation
@@ -647,10 +683,97 @@ class Conductor():
             else:    
                 random_boss.enemy_classes[0].num_exp = new_exp
         
-            # After all changes, apply rank multiplier to all enemies in the formation
+
+
+
+            # STATS / AI
+            # Stats - Update stats based on boss_scaling.csv for every enemy
+            # AI - create new patch file for AI changes 
+
             
+            def inttohex_asar(x):
+                y = hex(int(x)).replace("0x","").zfill(4)
+                return "db $"+y[2:4] + ", $" + y[0:2]
+                
+            def write_hpai(trigger_dict):
+                '''
+                This function takes a dictionary of:
+                    1) trigger_hp (part of AI when an enemy changes pattern)
+                    and its corresponding
+                    2) address to write to 
+                This will iterate through both trigger_hp/address for however many pairs exist per enemy
+                '''
+                text_str = ''
+                for address, trigger_hp in trigger_dict.items():
+                    text_str = text_str + "; Original HP: "+str(random_boss.enemy_classes[0].num_hp)+"\n"
+                    text_str = text_str + "; New trigger HP: "+str(trigger_hp)+"\n" 
+                    text_str = text_str + 'org $'+address+'\n'
+                    text_str = text_str + inttohex_asar(trigger_hp)+"\n"
+                
+                return text_str
+
+            og_text = "; --------------------------\n; Original boss {} rank {} -> Randomized boss {} rank {}\n; HP: {} -> {}\n".format(random_boss.enemy_list, str(prev_rank),original_boss.enemy_list,str(new_rank),str(prev_hp),str(new_hp))
+            text_str = og_text
+            write_flag = False
             for enemy in random_boss.enemy_classes:
-                enemy.apply_rank_mult()
+                text_str = text_str + '; ENEMY: '+enemy.enemy_name+'\n'
+                df_temp = df_boss_scaling[(df_boss_scaling['idx']==int(enemy.idx)) & (df_boss_scaling['tier']==new_tier)]
+                
+                # STATS
+                for col in ['num_gauge_time','num_phys_power','num_phys_mult','num_evade','num_phys_def','num_mag_power','num_mag_def','num_mag_evade','num_mp']:
+                    setattr(enemy,col,df_temp[col])
+                # both updates stats from this for loop and applies mult based on tier
+                
+                
+                # AI - check for & write moveset
+                offset_loc = df_temp['ai_starting_address'].iloc[0]
+                list_of_skills = df_temp['ai_skills'].iloc[0].strip("][").split(',')
+                list_of_writes = df_temp['ai_write_loc'].iloc[0].strip("][").split(',')
+                
+                    # Check skill list if adjustments needed
+                if not offset_loc != offset_loc and list_of_skills != ['']: #ignore if NaN
+                    write_flag = True
+                    list_of_addresses = []
+                    for i in list_of_writes:
+                        list_of_addresses.append(hex(int(offset_loc,base=16)+int(i)).replace("0x",""))
+
+                    skill_dict = dict(zip(list_of_addresses,list_of_skills))
+                    
+                    text_str = text_str + '; Skills: '+str(list_of_skills)+'\n'
+                    
+                    for address, skill in skill_dict.items():
+                        text_str = text_str + '; New skill: '+skill+"\n"
+                        text_str = text_str + 'org $'+address+"\n"
+                        text_str = text_str + 'db $'+enemy_skills[skill]+"\n"
+                    
+                    
+                # AI - check for & write HP triggers
+                list_of_hp_writes = df_temp['ai_hp_write_loc'].iloc[0].strip("][").split(',')
+                list_of_hp_mult = df_temp['ai_hp_mult'].iloc[0].strip("][").split(',')
+                
+                if not offset_loc != offset_loc and list_of_hp_writes != ['']: #ignore if NaN
+                    write_flag = True
+                    list_of_hp_addresses = []
+                    for i in list_of_hp_writes:
+                        list_of_hp_addresses.append(hex(int(offset_loc,base=16)+int(i)).replace("0x",""))
+
+                    list_of_hp_vals = []
+                    for mult in list_of_hp_mult:
+                        list_of_hp_vals.append(round(int(enemy.num_hp) * float(mult)))
+                        
+
+                    trigger_dict = dict(zip(list_of_hp_addresses,list_of_hp_vals))
+
+                    text_str = text_str + write_hpai(trigger_dict)
+                enemy.rank_mult = stat_rank_mult
+                enemy.apply_rank_mult() 
+            if not write_flag:
+                text_str = og_text
+            with open('../../projects/test_asm/boss_hp_ai.asm','a') as file:
+                file.write(text_str)                    
+
+
+
             
             # Final presentation & updating
             
@@ -739,7 +862,7 @@ class Conductor():
         spoiler = spoiler + self.RM.get_spoiler()
         spoiler = spoiler + self.SM.get_spoiler()
         spoiler = spoiler + self.EM.get_spoiler()
-        #spoiler = spoiler + self.FM.get_spoiler()
+        spoiler = spoiler + self.FM.get_spoiler()
 
         patch = ""
         patch = patch + self.starting_crystal_patch()

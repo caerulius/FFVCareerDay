@@ -10,6 +10,14 @@ hirom
 org $CE685A
 db $15
 
+; ZOKK
+; First Zokk cutscene flag off
+org $F04B4E
+db $FB, $FB
+org $F0574B
+db $FB, $FB
+org $F05752
+db $FB, $FB
 
 ; RIFT
 ; Stop Omega from moving

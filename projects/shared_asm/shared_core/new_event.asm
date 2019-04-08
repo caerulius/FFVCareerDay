@@ -496,31 +496,31 @@ STZ !unusedram2
 
 ; Get count of how many tablets 
 ; 1st tablet
-LDA $0A24
-AND #$08
-CMP #$08
+LDA $0A4D
+AND #$20
+CMP #$20
 BNE CheckNextTablet2
 INC !unusedram1
 
 CheckNextTablet2:
 ; 2nd tablet
-LDA $0A25
-AND #$40
-CMP #$40
+LDA $0A4D
+AND #$10
+CMP #$10
 BNE CheckNextTablet3
 INC !unusedram1
 
 CheckNextTablet3:
 ; 3rd tablet
-LDA $0A26
-AND #$02
-CMP #$02
+LDA $0A4D
+AND #$04
+CMP #$04
 BNE CheckNextTablet4
 INC !unusedram1
 
 CheckNextTablet4:
 ; 4th tablet
-LDA $0A26
+LDA $0A4D
 AND #$08
 CMP #$08
 BNE RiftTabletContinue1

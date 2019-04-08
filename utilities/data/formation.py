@@ -46,7 +46,10 @@ class Formation(object):
 
     @property
     def short_output(self):
-        return ""  
+        try:
+            return "Tier: "+str(self.tier)+" Rank: "+str(self.boss_rank) + " Boss: "+str(self.enemy_list)
+        except:
+            return ""
 
     def generate_from_df(self, df):
         s = df[df['idx']==str(self.idx)].iloc[0]
@@ -59,6 +62,7 @@ class Formation(object):
     def assign_enemies(self,enemy_manager, data_manager, original_flag):
         enemy_list = []
         for enemy in ['enemy_1','enemy_2','enemy_3','enemy_4','enemy_5','enemy_6','enemy_7','enemy_8']:
+            # print(self.enemy_list,original_flag)
             # Find enemy ID
             enemy_id = getattr(self,enemy)
 
@@ -96,13 +100,15 @@ class Formation(object):
             else:
                 # If it's not original, iterate through the list of all enemies 
                 if self.rank == 'standard':
-                    for enemy in [x for x in enemy_manager.enemies if x.enemy_rank == 'enemy']:  # Search through first set of enemies before bosses
-                        if enemy.idx_hex == enemy_id:
-                            new_enemy = enemy
+                    for enemy_loop in [x for x in enemy_manager.enemies if x.enemy_rank == 'enemy']:  # Search through first set of enemies before bosses
+#                        if self.enemy_list == 'Ifrit':
+#                            breakpoint()                        
+                        if enemy_loop.idx_hex == enemy_id:
+                            new_enemy = enemy_loop
                 else:
-                    for enemy in [x for x in enemy_manager.enemies if x.enemy_rank == 'boss']:  # Search through last set of enemies, bosses only
-                        if enemy.idx_hex == enemy_id:
-                            new_enemy = enemy
+                    for enemy_loop in [x for x in enemy_manager.enemies if x.enemy_rank == 'boss']:  # Search through last set of enemies, bosses only
+                        if enemy_loop.idx_hex == enemy_id:
+                            new_enemy = enemy_loop
             enemy_list.append(new_enemy)
             
         # Assign list of enemy class objects to self for all enemies
