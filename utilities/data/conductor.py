@@ -133,7 +133,7 @@ class Conductor():
                 possible_key_items = [x for x in self.CM.get_all_of_type_respect_counts(KeyItem) if x not in forbidden_items]
 
                 if len(possible_key_items) == 0:
-                    print("failed to place a key item here")
+                    #print("failed to place a key item here")
                     continue
                 else:
                     next_key_item = self.RE.choice(possible_key_items)
@@ -173,7 +173,7 @@ class Conductor():
                 break
             #print("next area to place in: " + area.area_name)
             possibles = [x for x in self.RM.rewards if x.area == area.area_name
-                         and x.randomized == False]
+                         and x.randomized == False and x.reward_style != 'key']
             #print("# of reward spot choices: " + str(len(possibles)))
 
             next_reward = self.RE.choice(possibles)
@@ -208,7 +208,7 @@ class Conductor():
             #print("Checking area: " + i.area_name)
             if i.num_placed_checks < i.num_checks:
                 #print("That area wasn't done")
-                for j in [x for x in self.RM.rewards if x.area == i.area_name]:
+                for j in [x for x in self.RM.rewards if x.area == i.area_name and x.reward_style != 'key']:
                     #1 spot remaining is the same as greater than or equal to
                     #thus the - 1
                     if i.current_volume >= i.area_capacity - 1:
@@ -874,11 +874,16 @@ class Conductor():
         self.randomize_rewards_by_areas()
         for i in self.RM.rewards: #this is a fix for an unsolved bug where some rewards don't get collectibles. it's rare, but it happens
             if i.collectible is None:
-                i.collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True, gil_allowed=False)
+                if i.reward_style != 'key':
+                   i.collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True, gil_allowed=False)
         print("Randomizing shops...")
         self.randomize_shops()
         print("Randomizing bosses...")
         self.randomize_bosses()
+
+        for i in self.RM.rewards:
+            if i.collectible is None:
+                print(i.description)
 
         spoiler = ""
         spoiler = spoiler + self.starting_crystal_spoiler()

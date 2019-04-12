@@ -37,6 +37,8 @@ class Reward:
     
     @property
     def short_output(self):
+        if self.collectible is None:
+            return ""
         if self.mib_type is None:
             return f"{self.description} {self.original_reward} -> {self.collectible.reward_name}"
         else:

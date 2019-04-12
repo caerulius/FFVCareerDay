@@ -181,6 +181,7 @@ def create_career_day_seed(rompath, seed, options):
         if getattr(sys, 'frozen', False):
             os.chdir(sys._MEIPASS)
 
+        random.seed(seed)
         C = Conductor(random)
         spoilerandpatch = C.randomize()
 
