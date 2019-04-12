@@ -144,7 +144,7 @@ class Conductor():
                     num_placed_key_items = num_placed_key_items + 1
 
         for key_item_reward in [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False]:
-            key_item_collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True)
+            key_item_collectible = self.CM.get_of_value_or_lower(self.RE, value=4)
             key_item_reward.set_collectible(key_item_collectible)
             key_item_reward.randomized = True
 
@@ -246,7 +246,7 @@ class Conductor():
             #for the discount shops, put a single item in there
             if "discount" in value.readable_name:
                 value.num_items = 1
-                value.shop_type = "03"
+                value.shop_type = "01"
                 value.contents = [self.CM.get_random_collectible(random, respect_weight=True,
                                                                    monitor_counts=True,
                                                                    of_type=Item)] + [None] * 7
@@ -288,7 +288,7 @@ class Conductor():
                 item_chance = item_chance - .1
                 magic_chance = magic_chance + .05
                 crystal_chance = crystal_chance + .05
-                value.shop_type = "03" #shop type: item
+                value.shop_type = "01" #shop type: item
                 for i in range(0, value.num_items):
                     while True:
                         item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
@@ -322,7 +322,7 @@ class Conductor():
                         
                 except Exception as e:
                     contents = []
-                    value.shop_type = "03"
+                    value.shop_type = "01"
                     for i in range(0, value.num_items):
                         contents.append(self.CM.get_random_collectible(random, respect_weight=True,
                                                                        monitor_counts=True,
@@ -348,7 +348,7 @@ class Conductor():
                         contents.append(item_to_place)
                 except Exception as e:
                     contents = []
-                    value.shop_type = "03"
+                    value.shop_type = "01"
                     for i in range(0, value.num_items):
                         contents.append(self.CM.get_random_collectible(random, respect_weight=True,
                                                                        monitor_counts=True,
@@ -377,7 +377,7 @@ class Conductor():
                 item_to_place = self.CM.get_by_id_and_type(index, "40")
                 #print(item_to_place.reward_name)
                 while True:
-                    item_shops = [x for x in self.SM.shops if x.shop_type == "03" and x.valid and x.num_items > 0]
+                    item_shops = [x for x in self.SM.shops if x.shop_type == "01" and x.valid and x.num_items > 0]
                     #print("number of item shops: " + str(len(item_shops)))
                     chosen_shop = random.choice(range(0, len(item_shops)))
                     #print("chosen shop index: " + str(chosen_shop))
@@ -389,7 +389,7 @@ class Conductor():
 
                 used_spots.append((chosen_shop, chosen_slot))
 
-                [x for x in self.SM.shops if x.shop_type == "03" and x.valid and x.num_items > 0][chosen_shop].contents[chosen_slot] = item_to_place
+                [x for x in self.SM.shops if x.shop_type == "01" and x.valid and x.num_items > 0][chosen_shop].contents[chosen_slot] = item_to_place
 
     def randomize_bosses(self):
         # This has to be done twice in order for the enemy classes to NOT be shared objects
@@ -860,40 +860,40 @@ class Conductor():
         if random_engine is None:
             random_engine = self.RE
         
-        #self.AM.change_power_level(DEFAULT_POWER_CHANGE)
+        self.AM.change_power_level(DEFAULT_POWER_CHANGE)
         print("Randomizing key items...")
         num_placed_key_items = self.randomize_key_items()
-        print(num_placed_key_items)
+        #print(num_placed_key_items)
         while num_placed_key_items < NUM_KEY_ITEMS:
-            print("didn't place them all, retrying")
+            #print("didn't place them all, retrying")
             self.CM.reset_all_of_type(KeyItem)
             self.RM.reset_rewards_by_style("key")
             num_placed_key_items = self.randomize_key_items()
 
         print("Randomizing rewards...")
-        #self.randomize_rewards_by_areas()
+        self.randomize_rewards_by_areas()
         for i in self.RM.rewards: #this is a fix for an unsolved bug where some rewards don't get collectibles. it's rare, but it happens
             if i.collectible is None:
                 i.collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True, gil_allowed=False)
         print("Randomizing shops...")
-        #self.randomize_shops()
+        self.randomize_shops()
         print("Randomizing bosses...")
-        #self.randomize_bosses()
+        self.randomize_bosses()
 
         spoiler = ""
-        #spoiler = spoiler + self.starting_crystal_spoiler()
+        spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.RM.get_spoiler()
-        #spoiler = spoiler + self.SM.get_spoiler()
-        #spoiler = spoiler + self.EM.get_spoiler()
-        #spoiler = spoiler + self.FM.get_spoiler()
+        spoiler = spoiler + self.SM.get_spoiler()
+        spoiler = spoiler + self.EM.get_spoiler()
+        spoiler = spoiler + self.FM.get_spoiler()
 
         patch = ""
-        #patch = patch + self.starting_crystal_patch()
+        patch = patch + self.starting_crystal_patch()
         patch = patch + self.RM.get_patch()
-        #patch = patch + self.SM.get_patch()
-        #patch = patch + self.SPM.get_patch()
-        #patch = patch + self.EM.get_patch()
-        #patch = patch + self.FM.get_patch()
-        #patch = patch + self.kuzar_text_patch()
+        patch = patch + self.SM.get_patch()
+        patch = patch + self.SPM.get_patch()
+        patch = patch + self.EM.get_patch()
+        patch = patch + self.FM.get_patch()
+        patch = patch + self.kuzar_text_patch()
 
         return(spoiler, patch)

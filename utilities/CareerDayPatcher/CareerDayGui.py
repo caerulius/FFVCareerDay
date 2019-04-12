@@ -37,6 +37,7 @@ class Window(Frame):
 		e2 = Entry(self.master, textvariable=self.seed, name="seed", width=30)
 		e2.grid(row=4, column=1, pady=10, sticky=W+E+N+S)
 
+		'''
 		l3 = Label(self.master, width=25, height=1, text="XP Scaling Settings")
 		l3.grid(row=5, column=0, padx=30, sticky=W+E+N+S)
 		l4 = Label(self.master, width=25, height=1, text="Other Settings")
@@ -60,6 +61,8 @@ class Window(Frame):
 		c1.grid(row=0, column=0, sticky=W+E+N+S)
 
 		extraOptionsFrame.grid(row=6, column=1, sticky=W+E+N+S)
+
+		'''
 
 		self.randomizeButton = Button(self.master, text="Randomize", name="randomize", state=DISABLED, height=2, font=self.randomizerButtonFont)
 		self.randomizeButton.grid(row=8, column=0, padx=30, pady=10, sticky=W+E+N+S, rowspan=2)
@@ -159,7 +162,7 @@ else:
 WRITEDIRECTORY = os.getcwd()
 os.chdir(app_path)
 
-root.geometry("500x325")
+root.geometry("500x250")
 root.title("Career Day")
 root.iconbitmap("favicon.ico")
 

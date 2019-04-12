@@ -227,7 +227,8 @@ class CollectibleManager():
 
     def get_of_value_or_lower(self, random_engine, value):
         val_list = [x for x in self.collectibles if x.reward_value == value
-                    and self.placement_history[x] < x.max_count
+                    and (x not in self.placement_history or
+                         self.placement_history[x] < x.max_count)
                     and x.valid and type(x) != KeyItem]
         if len(val_list) == 0:
             val_list = [x for x in self.collectibles if x.reward_value < value
