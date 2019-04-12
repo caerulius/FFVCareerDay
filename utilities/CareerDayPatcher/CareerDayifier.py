@@ -53,10 +53,11 @@ if getattr(sys, 'frozen', False):
 else:
     app_path = os.path.dirname(os.path.abspath(__file__))
 
-RPGE_PATH = os.path.join(app_path, "patches/rpge.ips")
-MAIN_PATH = os.path.join(app_path, "patches/ffv_projectdemi_vanilla.ips")
-MAIN_RANDO_PATH = os.path.join(app_path, "patches/ffv_careerday.ips")
-ASAR_PATH = os.path.join(app_path, "asar.exe")
+RPGE_PATH = os.path.join(app_path, r"patches/rpge.ips")
+MAIN_PATH = os.path.join(app_path, r"patches/ffv_projectdemi_vanilla.ips")
+MAIN_RANDO_PATH = os.path.join(app_path, r"patches/ffv_careerday.ips")
+ASAR_PATH = os.path.join(app_path, r"asar.exe")
+ASAR_PATH = '"' + ASAR_PATH + '"'
 
 WRITEDIRECTORY = os.getcwd()
 os.chdir(app_path)
@@ -197,12 +198,12 @@ def create_career_day_seed(rompath, seed, options):
             f.write("hirom\n")
             f.write(spoilerandpatch[1])
 
-        command = ASAR_PATH + " --no-title-check " + patchfile + " " + local_path
+        command = ASAR_PATH + " --no-title-check \"" + patchfile + "\" \"" + local_path + "\""
         output = subprocess.run(command)
 
         if output.returncode == 0:
             print("Complete!")
-            os.rename(local_path, os.path.join(OUTPUT_PATH, seed +"-ff5careerday.sfc"))
+            os.rename(local_path, os.path.join(OUTPUT_PATH, seed + r"-ff5careerday.sfc"))
             return True, foldername
         else:
             input()
