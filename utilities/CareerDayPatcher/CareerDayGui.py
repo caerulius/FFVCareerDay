@@ -44,9 +44,9 @@ class Window(Frame):
 
 		xpScalingFrame = Frame(self.master, borderwidth=3, relief=GROOVE, name="scaling")
 
-		r1 = Radiobutton(xpScalingFrame, text="2x exp/abp", value="2", variable=self.xp, anchor="w", name="2x")
-		r2 = Radiobutton(xpScalingFrame, text="4x exp/abp", value="4", variable=self.xp, anchor="w", name="4x")
-		r3 = Radiobutton(xpScalingFrame, text="no bonus exp/abp", value="1", variable=self.xp, anchor="w", name="1x")
+		r1 = Radiobutton(xpScalingFrame, text="2x exp/abp", value="2", variable=self.xp, anchor="w", name="2x", state=DISABLED)
+		r2 = Radiobutton(xpScalingFrame, text="4x exp/abp", value="4", variable=self.xp, anchor="w", name="4x" , state=DISABLED)
+		r3 = Radiobutton(xpScalingFrame, text="no bonus exp/abp", value="1", variable=self.xp, anchor="w", name="1x" , state=DISABLED)
 
 		r1.grid(row=0, column=0, sticky=W+E+N+S)
 		r2.grid(row=1, column=0, sticky=W+E+N+S)
@@ -56,7 +56,7 @@ class Window(Frame):
 
 		extraOptionsFrame = Frame(self.master, borderwidth=3, relief=GROOVE, name="extra")
 
-		c1 = Checkbutton(extraOptionsFrame, text="Boss exp/abp scaling", variable=self.bossxp, anchor="w", name="bossscaling")
+		c1 = Checkbutton(extraOptionsFrame, text="Boss exp/abp scaling", variable=self.bossxp, anchor="w", name="bossscaling", state=DISABLED)
 		c1.grid(row=0, column=0, sticky=W+E+N+S)
 
 		extraOptionsFrame.grid(row=6, column=1, sticky=W+E+N+S)

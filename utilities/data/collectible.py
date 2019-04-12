@@ -113,6 +113,15 @@ class KeyItem(Collectible):
                          [], 1, data_row['valid'])
         self.writeable_name = data_row['writeable_name']
         self.text_location = data_row['text_location']
+        self.required_by_placement = []
+
+    #key_items is an array, even if it's only one item
+    def add_required_items(self, key_items):
+        self.required_by_placement.extend(key_items)
+
+    @property
+    def patch_id(self):
+        return self.reward_id
 
 class CollectibleManager():
     def __init__(self, data_manager):
@@ -123,6 +132,7 @@ class CollectibleManager():
         gil = [Gil(x, data_manager.files['gil'].loc[x]) for x in data_manager.files['gil'].index.values]
         key_items = [KeyItem(x, data_manager.files['key_items'].loc[x]) for x in data_manager.files['key_items'].index.values]
         self.collectibles = items + magics + crystals + abilities + gil + key_items
+        self.collectibles = [x for x in self.collectibles if x.valid]
         self.placement_history = {}
         self.placed_gil_rewards = []
 
@@ -146,7 +156,24 @@ class CollectibleManager():
             return [x for x in self.collectibles if type(x) in t]
         return [x for x in self.collectibles if type(x) is t]
 
-    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False):
+    def reset_all_of_type(self, t):
+        for i in self.collectibles:
+            if type(i) == t:
+                self.remove_from_placement_history(i)
+                if t == KeyItem:
+                    i.required_by_placement = []
+
+    def get_all_of_type_respect_counts(self, t):
+        if type(t) is list or type(t) is tuple:
+            return [x for x in self.collectibles if type(x) in t and (x not in self.placement_history.keys() or
+                                                                      x.max_count is None or
+                                                                      x.max_count < self.placement_history[x])]
+
+        return [x for x in self.collectibles if type(x) is t and (x not in self.placement_history.keys() or
+                                                                  x.max_count is None or
+                                                                  x.max_count < self.placement_history[x])]
+
+    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False):   
         if type(of_type) is str: # this is a literal string definition of a type, so let's cast it first
             if of_type in type_dict.keys():
                 of_type = type_dict[of_type]
@@ -169,6 +196,15 @@ class CollectibleManager():
                                         x.max_count is None or
                                         x.max_count < self.placement_history[x])]
                             if y.valid]
+
+        #ending up with empty lists and failures too often, need a fallback incase
+        #we don't end up with any values. We'll get a list of any of the appropriate type,
+        #but no single placement items
+        if len(working_list) == 0:
+            if of_type is not None:
+                working_list = [x for x in self.get_all_of_type(of_type) if x.max_count != 1 and x.valid]
+            else:
+                working_list = [x for x in self.collectibles if x.max_count != 1 and x.valid]
 
         if respect_weight is False:
             choice = random_engine.choice(working_list)
@@ -208,6 +244,10 @@ class CollectibleManager():
             self.placement_history[collectible] = self.placement_history[collectible] + 1
         else:
             self.placement_history[collectible] = 1
+
+    def remove_from_placement_history(self, collectible):
+        if collectible in self.placement_history.keys():
+            del(self.placement_history[collectible])
             
     def reset_placement_history(self):
         self.placement_history = {}

@@ -16,18 +16,6 @@ from text_parser import *
 from monster_in_a_box import *
 
 
-
-#### 
-# NEW DATA
-#
-#
-#
-df_boss_scaling= pd.read_csv('tables/boss_scaling.csv')
-enemy_skills = pd.read_csv('../data/tables/enemy_skills.csv',index_col='name').to_dict()['hex']
-#
-#
-#
-####
 STARTING_CRYSTAL_ADDRESS = 'E79F00'
 DEFAULT_POWER_CHANGE = 1.5
 STAT_MULTIPLIER = .25
@@ -46,7 +34,7 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 12:15044*adjust_mult}
 
 SHINRYUU_VANILLA = True
-NUM_KEY_ITEMS = 20
+NUM_KEY_ITEMS = 21
 
 
 class Conductor():
@@ -115,17 +103,52 @@ class Conductor():
             self.AM.update_volume(value)
 
     def randomize_key_items(self):
+        num_placed_key_items = 0
+
         for _ in range(0, NUM_KEY_ITEMS):
-            next_key_item = self.CM.get_random_collectible(self.RE, monitor_counts=True, of_type=KeyItem)
             next_key_reward = self.RE.choice([x for x in self.RM.get_rewards_by_style('key') if x.randomized == False])
 
-            next_key_reward.set_collectible(next_key_item)
-            next_key_reward.randomized = True
+            if next_key_reward.required_key_items == None:
+                next_key_item = self.CM.get_random_collectible(self.RE, monitor_counts=True, of_type=KeyItem)
+                next_key_reward.set_collectible(next_key_item)
+                next_key_reward.randomized = True
+                num_placed_key_items = num_placed_key_items + 1
+            else:
+                forbidden_items = []
+                nodes_to_visit = []
+
+                nodes_to_visit.extend(next_key_reward.required_key_items) #this gives us a copy of the list so we don't overwrite anything
+
+                #this will construct us a list of items we're not allowed to place here
+                while len(nodes_to_visit) > 0:
+                    curr_node = nodes_to_visit.pop()
+                    curr_key_item = self.CM.get_by_name(curr_node)
+                    forbidden_items.append(curr_key_item)
+                    if len(curr_key_item.required_by_placement) != 0:
+                        for i in curr_key_item.required_by_placement:
+                            if i not in forbidden_items and i not in nodes_to_visit:
+                                nodes_to_visit.append(i)
+
+
+                possible_key_items = [x for x in self.CM.get_all_of_type_respect_counts(KeyItem) if x not in forbidden_items]
+
+                if len(possible_key_items) == 0:
+                    print("failed to place a key item here")
+                    continue
+                else:
+                    next_key_item = self.RE.choice(possible_key_items)
+                    next_key_reward.set_collectible(next_key_item)
+                    next_key_item.required_by_placement.extend(next_key_reward.required_key_items)
+                    self.CM.add_to_placement_history(next_key_item) #add this manually, usually get_random_collectible handles it
+                    next_key_reward.randomized = True
+                    num_placed_key_items = num_placed_key_items + 1
 
         for key_item_reward in [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False]:
             key_item_collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True)
             key_item_reward.set_collectible(key_item_collectible)
             key_item_reward.randomized = True
+
+        return num_placed_key_items
 
     def randomize_rewards_by_areas(self):
         #this is just manually doing the shinryuu chest first.
@@ -398,8 +421,8 @@ class Conductor():
         
         
         # Create patch file for custom AI and clear out any previous 
-        with open('../../projects/test_asm/boss_hp_ai.asm','w') as file:
-            file.write('hirom\n')
+        #with open('../../projects/test_asm/boss_hp_ai.asm','w') as file:
+        #    file.write('hirom\n')
     
 
         for random_boss in [x for x in self.FM.formations if x.randomized_boss == 'y']:
@@ -717,7 +740,7 @@ class Conductor():
             write_flag = False
             for enemy in random_boss.enemy_classes:
                 text_str = text_str + '; ENEMY: '+enemy.enemy_name+'\n'
-                df_temp = df_boss_scaling[(df_boss_scaling['idx']==int(enemy.idx)) & (df_boss_scaling['tier']==new_tier)]
+                df_temp = self.DM.files['boss_scaling'][(self.DM.files['boss_scaling']['idx']==int(enemy.idx)) & (self.DM.files['boss_scaling']['tier']==new_tier)]
                 
                 # STATS
                 for col in ['num_gauge_time','num_phys_power','num_phys_mult','num_evade','num_phys_def','num_mag_power','num_mag_def','num_mag_evade','num_mp']:
@@ -744,7 +767,7 @@ class Conductor():
                     for address, skill in skill_dict.items():
                         text_str = text_str + '; New skill: '+skill+"\n"
                         text_str = text_str + 'org $'+address+"\n"
-                        text_str = text_str + 'db $'+enemy_skills[skill]+"\n"
+                        text_str = text_str + 'db $' + self.DM.files['enemy_skills'][skill]+"\n"
                     
                     
                 # AI - check for & write HP triggers
@@ -767,14 +790,12 @@ class Conductor():
                     text_str = text_str + write_hpai(trigger_dict)
                 enemy.rank_mult = stat_rank_mult
                 enemy.apply_rank_mult() 
-            if not write_flag:
-                text_str = og_text
-            with open('../../projects/test_asm/boss_hp_ai.asm','a') as file:
-                file.write(text_str)                    
+                enemy.ai_patch_text = text_str
+            #if not write_flag:
+            #    text_str = og_text
+            #with open('../../projects/test_asm/boss_hp_ai.asm','a') as file:
+            #    file.write(text_str)                    
 
-
-
-            
             # Final presentation & updating
             
             enemy_change = random_boss.enemy_classes[0].enemy_name + " (Rank "+prev_rank+") > " + original_boss.enemy_classes[0].enemy_name+" (Rank "+new_rank+")"
@@ -803,7 +824,7 @@ class Conductor():
         output = ";================"
         output = output + "\n;starting crystal"
         output = output + "\n;================\n"
-        output = output + "\norg $" + STARTING_CRYSTAL_ADDRESS
+        output = output + "org $" + STARTING_CRYSTAL_ADDRESS
         output = output + "\ndb $" + self.starting_crystal.patch_id
         output = output + ", $" + self.starting_crystal.starting_weapon_id
         output = output + ", $" + self.starting_crystal.starting_spell_id
@@ -813,7 +834,7 @@ class Conductor():
 
     def starting_crystal_spoiler(self):
         output = "-----STARTING JOB, WEAPON, MAGIC-----"
-        output = output + "\nStarting job:     " + self.starting_crystal.reward_name
+        output = output + "\nStarting job:     " + self.starting_crystal.reward_name    
         output = output + "\nStarting weapon:  " + self.starting_crystal.starting_weapon
         output = output + "\nStarting spell:   " + self.starting_crystal.starting_spell
         output = output + "\nStarting ability: " + self.starting_crystal.starting_ability
@@ -839,38 +860,40 @@ class Conductor():
         if random_engine is None:
             random_engine = self.RE
         
-        self.AM.change_power_level(DEFAULT_POWER_CHANGE)
+        #self.AM.change_power_level(DEFAULT_POWER_CHANGE)
         print("Randomizing key items...")
-        self.randomize_key_items()
+        num_placed_key_items = self.randomize_key_items()
+        print(num_placed_key_items)
+        while num_placed_key_items < NUM_KEY_ITEMS:
+            print("didn't place them all, retrying")
+            self.CM.reset_all_of_type(KeyItem)
+            self.RM.reset_rewards_by_style("key")
+            num_placed_key_items = self.randomize_key_items()
+
         print("Randomizing rewards...")
-        self.randomize_rewards_by_areas()
-        for i in self.RM.rewards:
+        #self.randomize_rewards_by_areas()
+        for i in self.RM.rewards: #this is a fix for an unsolved bug where some rewards don't get collectibles. it's rare, but it happens
             if i.collectible is None:
-                #print("fixing a reward")
-                #print(i.original_reward)
-                #print(i.area)
-                #print(i.description)
                 i.collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True, gil_allowed=False)
-                #print(i.collectible.reward_name)
         print("Randomizing shops...")
-        self.randomize_shops()
+        #self.randomize_shops()
         print("Randomizing bosses...")
-        self.randomize_bosses()
+        #self.randomize_bosses()
 
         spoiler = ""
-        spoiler = spoiler + self.starting_crystal_spoiler()
+        #spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.RM.get_spoiler()
-        spoiler = spoiler + self.SM.get_spoiler()
-        spoiler = spoiler + self.EM.get_spoiler()
-        spoiler = spoiler + self.FM.get_spoiler()
+        #spoiler = spoiler + self.SM.get_spoiler()
+        #spoiler = spoiler + self.EM.get_spoiler()
+        #spoiler = spoiler + self.FM.get_spoiler()
 
         patch = ""
-        patch = patch + self.starting_crystal_patch()
+        #patch = patch + self.starting_crystal_patch()
         patch = patch + self.RM.get_patch()
-        patch = patch + self.SM.get_patch()
-        patch = patch + self.SPM.get_patch()
-        patch = patch + self.EM.get_patch()
-        patch = patch + self.FM.get_patch()
-        patch = patch + self.kuzar_text_patch()
+        #patch = patch + self.SM.get_patch()
+        #patch = patch + self.SPM.get_patch()
+        #patch = patch + self.EM.get_patch()
+        #patch = patch + self.FM.get_patch()
+        #patch = patch + self.kuzar_text_patch()
 
         return(spoiler, patch)

@@ -15,7 +15,15 @@ class Reward:
         self.description (Wind Crystal, Beginner's House Chest, etc)
         self.reward_style (event, chest, key)
         self.force_type (Item, Gil, etc.)
+        self.required_key_items (Sandworm Bait, Adamantite, etc.)
         '''
+        if type(self.force_type) == float:
+            self.force_type = None
+        if type(self.required_key_items) == float:
+            self.required_key_items = None
+        else:
+            self.required_key_items = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
+                                        self.required_key_items.strip('][').split(',')]
         self.collectible = collectible_manager.get_by_name(self.original_reward)
         self.mib_type = None #keep a byte for the monster in a box type, override the type in the asar_output if exists
         self.randomized = False
@@ -62,8 +70,13 @@ class RewardManager:
     def get_rewards_by_style(self, style):
         return [x for x in self.rewards if x.reward_style == style]
 
+    def reset_rewards_by_style(self, style):
+        for i in self.get_rewards_by_style(style):
+            i.randomized = False
+            i.collectible = None
+
     def get_patch(self):
-        output = ";================="
+        output = "\n;================="
         output = output + "\n;Chests and Events"
         output = output + "\n;=================\n"
         for i in self.rewards:

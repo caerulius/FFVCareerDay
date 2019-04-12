@@ -54,11 +54,8 @@ else:
     app_path = os.path.dirname(os.path.abspath(__file__))
 
 RPGE_PATH = os.path.join(app_path, "patches/rpge.ips")
-MAIN_PATH = os.path.join(app_path, "patches/ffv_project_demi_main.ips")
-MAIN_RANDO_PATH = os.path.join(app_path, "patches/ffv_project_demi_main_rando.ips")
-X2_EXP_PATH = os.path.join(app_path, "patches/ffv_project_demi_expabp2.ips")
-X4_EXP_PATH = os.path.join(app_path, "patches/ffv_project_demi_expabp4.ips")
-BOSS_EXP_PATH = os.path.join(app_path, "patches/ffv_project_demi_boss.ips")
+MAIN_PATH = os.path.join(app_path, "patches/ffv_projectdemi_vanilla.ips")
+MAIN_RANDO_PATH = os.path.join(app_path, "patches/ffv_careerday.ips")
 ASAR_PATH = os.path.join(app_path, "asar.exe")
 
 WRITEDIRECTORY = os.getcwd()
@@ -173,6 +170,9 @@ def create_career_day_seed(rompath, seed, options):
         print("Unknown exception...")
         failure(e)
 
+    print("Career Day Prepatching Complete!\n")
+
+    '''
     if options['xp'] == '2x':
         try:
             print("Applying 2x Exp/ABP mod")
@@ -216,12 +216,11 @@ def create_career_day_seed(rompath, seed, options):
             print("Error applying Boss Curve Exp mod")
             print("Unknown exception...")
             failure(e)
-
-    print("Project Demi Patching Complete!\n")
+    '''
 
     if rand:
         print("==========================")
-        print("Randomizer patching start!")
+        print("Career Day patching start!")
         print("==========================\n")
 
         if getattr(sys, 'frozen', False):

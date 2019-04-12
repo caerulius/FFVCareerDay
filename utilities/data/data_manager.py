@@ -22,3 +22,5 @@ class DataManager():
         self.files['formations'] = pd.read_csv('tables/formation_id.csv', dtype=str)
         self.files['monsters_in_boxes'] = pd.read_csv('tables/monster_in_a_box.csv',dtype=str)
         self.files['monsters_in_boxes']['monster_box_id'] = self.files['monsters_in_boxes']['monster_box_id'].astype(int)
+        self.files['boss_scaling'] = pd.read_csv('tables/boss_scaling.csv')
+        self.files['enemy_skills'] = pd.read_csv('tables/enemy_skills.csv',index_col='name').to_dict()['hex']
