@@ -18,6 +18,14 @@ db $FF                          ;End Event
 padbyte $00
 pad $C984C2
 
+
+org $C98513
+db $CA, $35, $01                ;Turn on bit 20 at address  0x7e0a7a
+db $CA, $37, $01                ;Turn on bit 80 at address  0x7e0a7a
+db $CD, $12, $01                ;Run event index 0112
+db $FF                          ;End Event
+org $C9852C
+
 org $C9866A
 
 
@@ -82,7 +90,6 @@ db $07, $07, $07
 
 org $C8DD65
 
-db $C3, $10                     ;Fade in Speed 10
 db $2F                          ;Player pose: face up, head lowered
 db $71                          ;Short pause
 db $10                          ;Player pose: face up, left hand forward

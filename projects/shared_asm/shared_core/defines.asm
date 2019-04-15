@@ -8,7 +8,8 @@
 !ADDRESS_chesthook = $F03000
 !ADDRESS_jobindexing = $F00400
 !ADDRESS_magicreward = $F00480
-!ADDRESS_customitem1 = $F01200
+; !ADDRESS_shoatsound = $F01200
+!ADDRESS_customitem1 = $F01600
 !ADDRESS_customitem2 = $F01300
 !ADDRESS_STARTROM = $FF0000
 !ADDRESS_ENDROM = $FFFFFF

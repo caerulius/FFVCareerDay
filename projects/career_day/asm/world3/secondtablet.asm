@@ -34,7 +34,7 @@ db $B2, $03                     ;Pause for 03 cycles
 db $14                          ;Player pose: face down, left hand forward
 db $39                          ;Player pose: face down, both arms raised
 db $B4, $29                     ;Play Background Music Fanfare 1 (short)
-db $C8, $50, $07                ;Display Message/Text/Dialogue 50 07
+; db $C8, $50, $07                ;Display Message/Text/Dialogue 50 07
 db $E4, $C4                     ;Unknown
 db $06                          ;Player Bounce in Place
 db $73                          ;Long pause

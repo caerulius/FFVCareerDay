@@ -19,8 +19,8 @@ db $A2, $48							;Set Event Flag 048
 
 ; CAREERDAY
 ; This is setting automatically upgrading the ship
-db $A2, $4A							;Set Event Flag 04A
-db $A4, $FA							;Set Event Flag 1FA
+db $A2, $4A                     ;Turn on bit 04 at address 0x7e0a1d
+; db $A4, $FA                     ;Turn on bit 04 at address 0x7e0a53
 
 
 db $CC, $14                 		;Custom destination flag 14

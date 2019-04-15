@@ -49,6 +49,9 @@ db $11
 org $F0510E
 db $72
 
+; always trigger cutscene for opening path to boss
+org $F04D66
+db $FC, $FB
 ; MOOGLE VILLAGE
 ; Event code [$A4, $3C] or setting bit 10 on $000A3B corresponds to both Tyrasaur being defeated and Moogle Village being open
 ; This fix allows for Tyrasaur to remain on $000A3B bit 10, while Moogle Village is swapped to another bit usually set upon 
@@ -68,6 +71,9 @@ db $C1                     ;Refer to event code [$A4, $C1]
 org $F055B2
 db $10
 
+; BAL CASTLE
+org $f04d3d
+db $ff, $00, $00
 
 ; ZEZA FLEET
 ; After Gilgamesh, change one of the flags for Hiryuu spawning to normal to be based off of:
@@ -90,8 +96,8 @@ db $FD, $7C
 ; Bit 80 at address 0x7e0a4b
 
 ; org $D8F85A
-org $F057DA
-db $BF
+org $F057D9
+db $FB, $45
 
 
 ; ANTLION
@@ -128,3 +134,77 @@ db $BC
 ; Always trigger the cutscene for the final fight
 org $F05D3D
 db $FF, $85, $07
+
+
+; spring nullify
+org $F04BA4
+db $33
+
+; AFTER TULE BOAT CUTSCENE
+; world map trigger
+org $F04F59
+db $FB, $FB
+
+; KUZAR 
+; disable cutscene after placing first tablet
+org $F051AD
+db $FB, $FB
+
+; BLACK CHOCOBO
+; set to always have recatch cutscene play
+org $F04757
+db $39, $FD
+
+; GIL CAVE
+; set to always trigger door opening
+org $F05A8C
+db $FB
+
+; GUIDO CAVE
+; Guido never appears 
+org $F0509A
+db $FB, $FB
+org $F050A1
+db $FB, $FB
+
+; BLACK CHOCO W3
+; make it so black choco always respawns at mirage
+org $C99EBB
+db $00, $00, $00
+
+; NORTH MOUNTAIN
+; conditional event for never interacting with hiryuu at top
+org $F04835
+db $FD, $79, $FF, $00, $00
+
+; nuke npcs
+org $ce670E
+pad $CE673F
+
+
+; EXDEATH WORLD 2 CASTLE
+org $F05699
+db $FC, $BF, $FF, $E1, $00, $00, $00, $00, $00
+org $F056A2
+db $FF, $00, $00, $00, $00, $00, $FF, $00, $00
+
+
+
+; submarine weirdness
+; trench
+org $C98862
+
+; walse tower
+org $c8fa38
+
+; istory
+org $c9886b
+
+; guido
+org $c8ce80
+
+; north area in w2
+org $c92120
+
+;barrier tower
+org $c93f4a

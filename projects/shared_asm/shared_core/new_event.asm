@@ -275,17 +275,23 @@ STA $0607
 
 
 ; for the weapon code, if monk, need to set both hands correctly
+LDA $E79F00
 CMP #$01
 BEQ SetMonkWeapons
 BNE SetWeaponsNormal
 
-; Just need to set left hand
+; Set both to 01
 SetMonkWeapons:
 LDA #$01
 STA $0514
 STA $0564
 STA $05B4
 STA $0604
+STA $0513
+STA $0563
+STA $05B3
+STA $0603
+JMP FinishSetWeapons
 
 
 SetWeaponsNormal:
@@ -306,6 +312,7 @@ STZ $0602
 
 ; set default magic
 
+FinishSetWeapons:
 LDA $E79F02
 AND #$07
 tax
@@ -424,6 +431,10 @@ ConditionalEventFlags:
 ; no matter what, treat these flags:
 
 ; flag for leaving the Rift (important for Exit spell, otherwise Rift exit spell cutscene plays and places player in w3)
+; LDA #$00
+; STA $0AFB
+
+
 LDA #$01
 TRB $0A14
 

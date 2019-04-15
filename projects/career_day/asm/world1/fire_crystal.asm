@@ -53,7 +53,7 @@ db $CA, $6E, $01				;Set Flag 2/3/4/5/6E 01
 db $CA, $6F, $01				;Set Flag 2/3/4/5/6F 01
 db $CA, $70, $01				;Set Flag 2/3/4/5/70 01
 db $CA, $71, $01				;Set Flag 2/3/4/5/71 01
-db $A2, $30						;Set Event Flag 030
+; db $A2, $30						;Set Event Flag 030 	move this to karnak escape boss
 db $CB, $52, $01				;Clear Flag 2/3/4/5/52 01
 db $CA, $54, $01				;Set Flag 2/3/4/5/54 01
 db $CB, $73, $01				;Clear Flag 2/3/4/5/73 01

@@ -30,7 +30,7 @@ db $01                          ;Player Move Up
 db $01                          ;Player Move Up
 db $26                          ;Player pose: face up, right hand raised out
 db $82, $0A                     ;Sprite 082 do event: Hide
-db $C8, $54, $07                ;Display Message/Text/Dialogue 54 07
+; db $C8, $54, $07                ;Display Message/Text/Dialogue 54 07
 db $71                          ;Short pause
 db $14                          ;Player pose: face down, left hand forward
 db $20                          ;Player pose: face down, left hand raised out

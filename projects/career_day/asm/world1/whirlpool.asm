@@ -30,7 +30,7 @@ db $B5, $02
 db $71
 db $DE, $62 ; custom reward
 db $DF
-db $D2, $00, $54, $4F, $B5		;(Map) 00 54 4F B5
+; db $D2, $00, $54, $4F, $B5		;(Map) 00 54 4F B5
 db $A4, $22						;Set Event Flag 122
 db $BE, $00						;Rumble effect of 00 magnitude
 db $C4, $0C						;Fade out Speed 0C

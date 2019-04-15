@@ -14,4 +14,9 @@ db $B5, $02
 db $71
 db $DE, $67 ; custom reward
 db $DF
+db $A2, $30
 db $FF                          ;End Event
+
+
+org $F04BF3
+db $FD, $31, $FE, $2F

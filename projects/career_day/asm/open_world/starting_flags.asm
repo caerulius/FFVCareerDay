@@ -75,8 +75,8 @@ db $A4, $3D            ; set address 000A3B bit ON 20 (navigate to wind shrine c
 
 ; Access gate
 ; 000A18 set bits 10 and 20 (10 sets a cutscene triggered, both together unlock torna gate)
-db $A2, $1C            ; set address 000A17 bit ON 10
-db $A2, $1D            ; set address 000A17 bit ON 20
+; db $A2, $1C            ; set address 000A17 bit ON 10
+; db $A2, $1D            ; set address 000A17 bit ON 20
 
 
 

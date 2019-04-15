@@ -16,7 +16,7 @@ incsrc ../open_world/starting_flags.asm
 db $A4, $E0                     ;Turn on bit 01 at address 0x7e0a50
 
 
-db $B1, $05                     ;Set Player Sprite 07 (Faris ;])
+; db $B1, $05                     ;Set Player Sprite 07 (Faris ;])
 db $09                          ;Player Show
 ; db $02                          ;Player Move Right
 db $C6, $12                     ;Add job Bard

@@ -125,7 +125,7 @@ BEQ RewardTimeMage
 CMP #$0C; Summoner
 BEQ RewardSummoner
 CMP #$0D; Blue Mage
-BEQ RewardRedMage
+BEQ RewardBlueMage
 CMP #$0E; Red Mage
 BEQ RewardRedMage
 CMP #$0F; Mediator
