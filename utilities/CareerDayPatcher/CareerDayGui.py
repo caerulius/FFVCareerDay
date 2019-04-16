@@ -22,6 +22,7 @@ class Window(Frame):
 		self.randomizerButtonFont = font.Font(size=14, weight='bold')
 		self.quitButtonFont = font.Font(size=13, weight='bold')
 		self.success = None
+		self.prevSeed = None
 
 		self.statusLabel = Label(self.master, text="Select your rom", width=20, height=3, name="statuslabel", anchor="w", font=("courier new", 11), justify=LEFT)
 		self.statusLabel.grid(row=0, column=0, padx=30, pady=10, sticky=W+E+N+S, columnspan=3, rowspan=3)
@@ -146,9 +147,10 @@ class Window(Frame):
 		options['bossxp'] = self.bossxp
  
 		if self.seed.get() == "" or self.seed.get() == "Enter a seed":
-			self.seed.set(random.randint(1000000, 9999999))
+			self.success, self.filepath = create_career_day_seed(self.rompath.get(), str(random.randint(1000000, 9999999)), options)
+		else:
+			self.success, self.filepath = create_career_day_seed(self.rompath.get(), self.seed.get(), options)
 
-		self.success, self.filepath = create_career_day_seed(self.rompath.get(), self.seed.get(), options)
 		self.updateLabel("")
 
 

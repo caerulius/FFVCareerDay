@@ -41,7 +41,10 @@ class Shop(object):
             if i is None:
                 output = output + ", $00"
             else:
-                output = output + ", $" + str(i.reward_id) #Todo: this will need to change when/if shops can be progressive
+                if str(type(i)) == "<class 'collectible.Crystal'>":
+                    output = output + ", $" + str(i.shop_id)
+                else:
+                    output = output + ", $" + str(i.reward_id) #Todo: this will need to change when/if shops can be progressive
 
         return output
 
