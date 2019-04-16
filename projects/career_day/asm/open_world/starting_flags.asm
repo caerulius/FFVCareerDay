@@ -123,7 +123,7 @@ db $CB, $EE, $01            ; set address 000A91 bit OFF 40
 db $CB, $EC, $01            ; set address 000A91 bit OFF 10
 db $CA, $EA, $01            ; set address 000A91 bit ON 04
 db $CA, $E9, $01            ; set address 000A91 bit ON 02
-db $CA, $FD, $01            ; set address 000A93 bit ON 20
+; db $CA, $FD, $01            ; set address 000A93 bit ON 20
 db $CA, $77, $03            ; set address 000AC2 bit ON 80
 db $CA, $76, $03            ; set address 000AC2 bit ON 40
 db $CA, $75, $03            ; set address 000AC2 bit ON 20

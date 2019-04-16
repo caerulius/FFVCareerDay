@@ -15,8 +15,8 @@ incsrc core_code/relocate_conditional_events.asm
 ; incsrc ../../test_asm/key_items-patch.asm
 
 ; other core_code testing
-incsrc open_world/scratchpad.asm
-incsrc open_world/test_constants.asm
+; incsrc open_world/scratchpad.asm
+; incsrc open_world/test_constants.asm
 
 
 

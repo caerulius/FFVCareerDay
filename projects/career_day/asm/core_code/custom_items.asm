@@ -331,9 +331,9 @@ JML $C2BCB9
 org $C0EEF2
 db $EE
 
-; Remove item $12 for now to end loop code...?
-org $C0EEF4
-db $00
+; ; Remove item $12 for now to end loop code...?
+; org $C0EEF4
+; db $00
 
 ; WarpShard cannot sell
 org $D12BDC

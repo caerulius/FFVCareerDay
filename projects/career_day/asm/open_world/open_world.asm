@@ -153,7 +153,15 @@ db $FB, $FB
 ; BLACK CHOCOBO
 ; set to always have recatch cutscene play
 org $F04757
-db $39, $FD
+db $85, $00
+
+; set backup text to NOT crash the game
+; org $CE7879
+; db $F6, $00
+; org $CE7880
+; db $F6, $00
+
+
 
 ; GIL CAVE
 ; set to always trigger door opening
