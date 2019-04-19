@@ -5,382 +5,382 @@ Starting spell:   None
 Starting ability: Tame
 -----***************************-----
 -----CHESTS AND EVENTS-----
-Wind Crystal Knight -> Silk robe
-Wind Crystal BlueMage -> Giyaman
-Wind Crystal BlackMage -> Bronze Armor
-Wind Crystal WhiteMage -> Cursed Shield
-Wind Crystal Monk -> Whip
-Wind Crystal Thief -> Bronze Helm
-Fire Crystal Mediator -> Ramuh
-Fire Crystal Geomancer -> Animals
-Fire Crystal Ninja -> Dream Harp
-Black Choco Crystals Bard -> Mantra
-Black Choco Crystals Hunter -> Dimen Lv.2
-Earth Crystal Samurai -> Mirage Vest
-Earth Crystal Dragoon -> Ramuh
-Earth Crystal Chemist -> Charm
-Earth Crystal Dancer -> Lumina Robe
-Leviathan Esper Levia -> AquaRake
-Titan Titan -> Genji Gloves
-Carbuncle Crbnkl -> Silver Armlet
-Syldra Syldra -> Staff
-Odin Odin -> Dimen Lv.4
-Phoenix Phenix -> Silk robe
-Bahamut Bahmut -> Cursed Shield
-Life (or Strength) Song from Crescent Town bard Vitality -> Judgement Staff
-Temptation Song at Lix Charm -> BuildUp
-Love Song at Istory Love -> Love
-Requiem Song at Kelb Requiem -> Sing
-Speed Song at Surgate Speed -> Shoat
-Magic Song at Ancient Library Magic -> Reset
-Power Song from Crescent Town Power -> Diamond Helm
-Hero Song from Crescent Town Hero -> ????
-Fork Tower, two Magics Holy -> BlueMage
-Fork Tower, two Magics Flare -> Staff of Light
-Meteo Meteo -> IceBrand
-5 potions in Wind Shrine, bottom left guy Potion -> Giyaman
+Wind Crystal Knight -> Giyaman
+Wind Crystal BlueMage -> Mythril Staff
+Wind Crystal BlackMage -> Broadsword
+Wind Crystal WhiteMage -> Javelin
+Wind Crystal Monk -> Rod
+Wind Crystal Thief -> Javelin
+Fire Crystal Mediator -> DarkSuit
+Fire Crystal Geomancer -> Phoenix Down
+Fire Crystal Ninja -> Silver Armlet
+Black Choco Crystals Bard -> L3 Flare
+Black Choco Crystals Hunter -> TurtleShell
+Earth Crystal Samurai -> Iron Helm
+Earth Crystal Dragoon -> Smoke
+Earth Crystal Chemist -> Gold Hairpin
+Earth Crystal Dancer -> Pray
+Leviathan Esper Levia -> Chicken Knife
+Titan Titan -> Condemn
+Carbuncle Crbnkl -> BeastKiller
+Syldra Syldra -> Potion
+Odin Odin -> Meteo
+Phoenix Phenix -> Rod
+Bahamut Bahmut -> Fire Rod
+Life (or Strength) Song from Crescent Town bard Vitality -> Red Shoes
+Temptation Song at Lix Charm -> Blue
+Love Song at Istory Love -> Venom
+Requiem Song at Kelb Requiem -> Maiden's Kiss
+Speed Song at Surgate Speed -> Equip Spears
+Magic Song at Ancient Library Magic -> Kunai
+Power Song from Crescent Town Power -> Comet
+Hero Song from Crescent Town Hero -> Image
+Fork Tower, two Magics Holy -> TinySong
+Fork Tower, two Magics Flare -> Dimen Lv.6
+Meteo Meteo -> Tricorn Hat
+5 potions in Wind Shrine, bottom left guy Potion -> Whip
 8 potions, Pirate after Torna Canal Key acquired Potion -> Potion
-Chancellor at Tycoon Healing Staff -> WhiteWind
-Magisa & Forza Mythril Helm -> GilToss
-CornaJar at Kelb CornaJar -> Thief's Glove
-Ribbon from girl in Rugor Ribbon -> Hero
-Mirage Vest from Chocobo Tour/Mirage Village Mirage Vest -> Remora
-12 Kuzar Events Assassin -> Stealth Suit
-12 Kuzar Events Apollo's Harp -> Escape
-12 Kuzar Events Excalibur -> Haste
-12 Kuzar Events Flame Whip -> Old
-12 Kuzar Events Earth Bell -> Dance
-12 Kuzar Events Holy Lance -> Slumber Sword
-12 Kuzar Events Masamune -> Equip Armors
-12 Kuzar Events Wizard Rod -> Knight
-12 Kuzar Events Rune Axe -> Mythril Armor
-12 Kuzar Events Sage's Staff -> X-Fight
-12 Kuzar Events Sasuke -> Chicken Knife
-12 Kuzar Events Yoichi Bow -> Dimen Lv.5
-Shiva Shiva -> Air Blade
-Ifrit Ifrit -> Analyze
-Water Crystal Samurai -> 2-Handed
-Water Crystal Berserker -> Power
-Water Crystal MysticKnight -> MysticKnight
-Water Crystal TimeMage -> Red Lv.3
-Water Crystal Summoner -> Blue
-Brave Blade Brave Blade -> Lamia's Harp
-Chicken Knife Chicken Knife -> Genji Helm
-Tycoon Castle Cabin Cabin -> Tiger Mask
-Tycoon Castle Cabin Cabin -> Cover
-Walse Tower Chest GoGo -> Iron Armor
-Pyramid Top Pyramid Tablet -> Dagger
-Toad Event Toad -> Golden Armor
+Chancellor at Tycoon Healing Staff -> Flail
+Magisa & Forza Mythril Helm -> Samurai
+CornaJar at Kelb CornaJar -> Angel Gwn
+Ribbon from girl in Rugor Ribbon -> FrogSong
+Mirage Vest from Chocobo Tour/Mirage Village Mirage Vest -> Levia
+12 Kuzar Events Assassin -> Escape
+12 Kuzar Events Apollo's Harp -> Exit
+12 Kuzar Events Excalibur -> Jump
+12 Kuzar Events Flame Whip -> Observe
+12 Kuzar Events Earth Bell -> Javelin
+12 Kuzar Events Holy Lance -> ????
+12 Kuzar Events Masamune -> Summoner
+12 Kuzar Events Wizard Rod -> Aero
+12 Kuzar Events Rune Axe -> Analyze
+12 Kuzar Events Sage's Staff -> Mirage Vest
+12 Kuzar Events Sasuke -> Elven Bow
+12 Kuzar Events Yoichi Bow -> Medicine
+Shiva Shiva -> Lumina Robe
+Ifrit Ifrit -> Ice Rod
+Water Crystal Samurai -> Kunai
+Water Crystal Berserker -> Berserker
+Water Crystal MysticKnight -> Golden Helm
+Water Crystal TimeMage -> Break
+Water Crystal Summoner -> Spear
+Brave Blade Brave Blade -> CopperPlt
+Chicken Knife Chicken Knife -> Protect Drink
+Tycoon Castle Cabin Cabin -> Gauntlets
+Tycoon Castle Cabin Cabin -> Exploder
+Walse Tower Chest GoGo -> Golden Helm
+Pyramid Top Pyramid Tablet -> Iron Armor
+Toad Event Toad -> Hast2
 Aegis Shield Chest Aegis Shield -> Aegis Shield
-Wind Shrine Chest Broadsword -> Knife
-Beginner's House Chest Ether -> Silver Bow
-Beginner's House Chest 100 -> Mythril Glove
-Beginner's House Chest Potion -> Golem (monster in a box)
-Beginner's House Chest Phoenix Down -> Summon Lv.1
-Beginner's House Chest Tent -> Tricorn Hat
-Beginner's House Chest Leather Shoes -> Bronze Shield
-Pirate's Cave Chest Leather Cap -> Cotton Robe
-Pirate's Cave Chest Tent -> Cabin
-Pirate's Cave Chest Ether -> Broadsword
-Pirate's Cave Chest 300 -> Leather Shield
-Wind Shrine Chest Tent -> Giyaman
-Wind Shrine Chest Leather Cap -> Tricorn Hat
-Wind Shrine Chest Staff -> Broadsword
-Tule Barrel 150 -> Thunder Whip
-Tule Box Leather Shoes -> Aero 3
-Tule Barrel Potion -> Morning Star
-Tule Box Tent -> Flail
-Tule Bush Phoenix Down -> Guardian
-Ship Graveyard Chest Flail -> Ice3
-Ship Graveyard Chest Phoenix Down -> Equip Bows
-Ship Graveyard Chest Tent -> Void
-Ship Graveyard Box 990 -> CopperPlt
-Ship Graveyard Chest Potion -> Air Lance
-Ship Graveyard Chest Antidote -> Exit
-Ship Graveyard Chest Antidote -> Gaia Gear
-Ship Graveyard Chest Phoenix Down -> Summon Lv.5
-Carwen Barrel Antidote -> TinySong
-Carwen Box Ice Rod -> Equip Harps
-Carwen Pot 1000 -> Guardian
-North Mountain Chest Soft -> Speed
-North Mountain Chest Phoenix Down -> Gale Bow
-Walse Town Pot Glasses -> Ifrit
-Tycoon Castle Pot Hi-Potion -> Thunder Rod
-Tycoon Castle Pot Ether -> Ramuh
-Tycoon Castle Barrel Elixir -> Staff
-Tycoon Castle Barrel Phoenix Down -> Avis Killer
-Tycoon Castle Barrel Cabin -> Equip Whips
-Tycoon Castle Pot Ether -> Equip Spears
-Tycoon Castle Pot Elixir -> Thief
-Tycoon Castle Pot Phoenix Down -> Syldra
-Tycoon Castle Pot Maiden's Kiss -> Maiden's Kiss
-Tycoon Castle Chest Shuriken -> RisingSun
-Tycoon Castle Chest Giyaman -> Giyaman
-Tycoon Castle Chest Katana -> Catch
-Walse Castle Chest Elf Cape -> Equip Rods
-Walse Castle Pot 1000 -> Training Suit
-Walse Castle Pot Drag -> Mythril Glove
-Walse Castle Pot 1000 -> TimeMage
-Walse Castle Box 490 -> Size
-Walse Castle Barrel Tent -> Revive
-Walse Castle Barrel Phoenix Down -> Red Shoes
-Walse Tower Chest Silk robe -> Brawl
-Walse Tower Chest Maiden's Kiss -> Guardian
-Walse Tower Chest Silver Armlet -> DarkMatter
-Walse Tower Chest Ether -> Kick
-Tycoon Meteor Chest Phoenix Down -> Drain Sword
-Karnak Castle Chest Gungnir -> RuneEdge (monster in a box)
-Karnak Castle Chest Thunder Scroll -> DarkSuit (monster in a box)
-Karnak Castle Chest 2000 -> Staff of Light (monster in a box)
-Karnak Castle Chest Elixir -> Tiger Mask (monster in a box)
-Karnak Castle Chest Elixir -> RisingSun (monster in a box)
-Karnak Castle Chest Elixir -> Fire Bow (monster in a box)
-Karnak Castle Chest 2000 -> Leather Cap (monster in a box)
-Karnak Castle Chest Elixir -> Ancient Sword (monster in a box)
-Karnak Castle Chest Elixir -> Silver Harp
-Karnak Castle Chest Ribbon -> Tiger Mask
-Karnak Castle Chest Shuriken -> Cursed Shield
-Karnak Castle Chest 2000 -> Thief Knife (monster in a box)
-Karnak Castle Chest Elixir -> Artemis Bow (monster in a box)
-Karnak Castle Chest Elf Cape -> Golden Armor (monster in a box)
-Karnak Castle Chest Guardian -> Rainbow Dress (monster in a box)
-Karnak Town Barrel Fire Rod -> Cursed Shield
-Steamship Chest Cabin -> Ice Bow
-Steamship Chest Phoenix Down -> Black Lv.5
-Steamship Chest Elixir -> Bolt3
-Steamship Chest GrnBeret -> Vampire
-Steamship Chest Thief's Glove -> Flirt
-Steamship Chest Elixir -> Shiva
-Ancient Library Chest Ether -> Blowfish
-Ancient Library Chest Phoenix Down -> ManEater
-Ancient Library Chest Stealth Suit -> Power Staff
-Jacole Cave Chest Shuriken -> Lamia's Tiara
-Jacole Cave Chest Tent -> Regen
-Ruined City Chest Shuriken -> Dancing Dagger
-Ruined City Chest Shuriken -> Ice
-Ruined City Chest Size -> DiamndPlt
-Flying Lonka Ruins Chest Golden Armor -> Lillith Rod
-Flying Lonka Ruins Chest Elixir -> Drink
-Flying Lonka Ruins Chest Phoenix Down -> Aegis Shield
-Flying Lonka Ruins Chest Golden Shield -> IceBrand
-Steamship Chest Mythril Glove -> Bard
-Steamship Chest Elixir -> Dragoon
-Steamship Chest Full Moon -> MoonFlut
-Flying Lonka Ruins Chest Hi-Potion -> Emission
-Flying Lonka Ruins Chest 5000 -> DrkShock
-Flying Lonka Ruins Chest Shuriken -> Phoenix Down
-Flying Lonka Ruins Chest Ancient Sword -> Wizard Rod
-Flying Lonka Ruins Chest Full Moon -> Hunter
-Flying Lonka Ruins Chest Power Wrist -> Phenix
-Flying Lonka Ruins Chest Ether -> L3 Flare
-Flying Lonka Ruins Chest Cabin -> Xzone
-Exdeath's Castle Chest Ether -> Meteo
-Exdeath's Castle Chest Diamond Shield -> Vitality
-Exdeath's Castle Chest Ice Shield -> Summon Lv.4
-Exdeath's Castle Chest Ether -> DethClaw
-Exdeath's Castle Chest Elixir -> White Robe
-Exdeath's Castle Chest Gale Bow -> Demi
-Exdeath's Castle Chest IceBrand -> Fire Rod
-Exdeath's Castle Chest Kotetsu -> Dbl Grip
-Exdeath's Castle Chest 9900 -> Golem
-Exdeath's Castle Chest Elixir -> Dimen Lv.3
-Exdeath's Castle Chest 8000 -> Summoner
-Exdeath's Castle Chest DblLance -> Eyedrop
-Exdeath's Castle Chest Partisan -> Magic
-Exdeath's Castle Chest Pinwheel -> Fire Rod
-Moogle Cave Chest 4400 -> Tent
-Moogle Cave Chest Phoenix Down -> Potion
-Moogle Village Chest Cabin -> Knife
-Moogle Village Chest Dancing Dagger -> Chain Whip
-Moogle Village Chest 1 -> Mythril Staff
-Moogle Village Chest 10000 -> Broadsword
-Moogle Village Chest Phoenix Down -> Mythril Staff
-Moogle Village Chest Ether -> Bronze Shield
-Moogle Village Chest Elf Cape -> Javelin
-Bal Castle Chest Angel Gwn -> Enhancer
-Bal Castle Chest Hero Drink -> Bahmut
-Bal Castle Chest Exit -> HP +30%
-Hiryuu Valley Skull Bone Mail -> Javelin
-Hiryuu Valley Chest 5000 -> Tent
-Hiryuu Valley Chest Cabin -> Mythril Knife
-Hiryuu Valley Chest 7000 -> Dagger
-Hiryuu Valley Chest Coronet -> Tent
-Hiryuu Valley Chest Air Blade -> Mythril Knife
-Hiryuu Valley Chest Phoenix Down -> Mythril Knife
-Surgate Castle Chest 5000 -> Observe
-Surgate Castle Chest Float -> Summon Lv.3
-Barrier Tower Chest Drain Sword -> Crystal Helm
-Barrier Tower Chest 9000 -> Red Lv.1
-Barrier Tower Chest 18000 -> DiamndPlt (monster in a box)
-Barrier Tower Chest Gold Hairpin -> Shoat (monster in a box)
-Mua Town Barrel Guardian -> Levia
-Mua Forest Chest 2500 -> Stop
-Mua Forest Chest Ether -> Slumber Sword
-Mua Forest Chest 4900 -> AntiMagic Bow
-Mua Forest Chest Phoenix Down -> Monk
-Mua Forest Chest 9500 -> DiamndPlt
-Mua Forest Chest Soot -> Hast2
-Mua Forest Chest Flametongue -> MgcSwrd Lv.4
-Mua Forest Chest Cabin -> Equip Ribbon
-Mua Forest Chest Giant Drink -> Flame Shield
-Mua Forest Chest Elixir -> Elixir
-Mua Forest Chest Morning Star -> Requiem
-Solitary Island Chest Ether -> Sage's Staff
-Solitary Island Chest DragonFang -> Qrter
-Pyramid Chest Elixir -> Roulette
-Pyramid Chest Elixir -> Mythril Shield (monster in a box)
-Pyramid Chest Black Robe -> Golden Helm
-Pyramid Chest Thornlet -> Fire Rod
-Pyramid Chest DarkMatter -> Diamond Armlet (monster in a box)
-Pyramid Chest Crystal Armor -> Black Robe
-Pyramid Chest Cursed Ring -> DoomCut (monster in a box)
-Pyramid Chest Ice Shield -> RegalCut (monster in a box)
-Pyramid Chest Flame Shield -> Elf Cape
-Pyramid Chest DarkMatter -> Gale Bow
-Pyramid Chest White Robe -> Mythril Staff (monster in a box)
-Pyramid Chest DarkSuit -> Silver Harp (monster in a box)
-Pyramid Chest DarkMatter -> Thief's Glove
-Pyramid Chest DarkMatter -> Power Drink (monster in a box)
-Pyramid Chest DarkMatter -> Staff of Light
-Pyramid Chest 9000 -> Silver Harp (monster in a box)
-Pyramid Chest 8000 -> Gale Bow
-Pyramid Chest Earth Hammer -> Thor Hammer
-Pyramid Chest 10000 -> ManEater (monster in a box)
-Pyramid Chest Cabin -> Epee Sword (monster in a box)
-Pyramid Chest Elixir -> Silver Harp (monster in a box)
-Pyramid Chest 12000 -> Mirage Vest (monster in a box)
-Pyramid Chest DarkMatter -> GrnBeret
-Pyramid Chest Elixir -> Elixir
-Pyramid Chest DarkMatter -> Leather Shield (monster in a box)
-Pyramid Chest Guard Ring -> Bronze Armor
-Pyramid Chest Ribbon -> AntiMagic Bow (monster in a box)
-Pyramid Chest Gold Hairpin -> Ribbon
-Solitary Island Chest 12000 -> Brave Blade
-Solitary Island Chest Hi-Potion -> Ice2
-Solitary Island Chest Protect Drink -> Bronze Shield
-Solitary Island Chest BeastKiller -> DarkSuit (monster in a box)
-Solitary Island Chest RisingSun -> Orialcon
-Solitary Island Chest Ether -> MgcSwrd Lv.5
-Solitary Island Chest Guard Ring -> Epee Sword
-Solitary Island Chest Crystal Helm -> Iron Armor
-Solitary Island Chest 9000 -> Enhancer (monster in a box)
-Solitary Island Chest Elixir -> Mythril Armor
-Solitary Island Chest DarkMatter -> Cure
-Solitary Island Chest Circlet -> Titan
-Fork Tower L. Chest Ether -> Coral Sword
-Fork Tower L. Chest Wonder Wand -> MindBlst
-Fork Tower R. Chest Hi-Potion -> Giant's Gloves
-Fork Tower R. Chest Defender Sword -> Avis Killer
-Great Trench Chest Water Scroll -> Aim
-Great Trench Chest Flame Ring -> Ice
-Great Trench Chest DragonFang -> Slow2
-Great Trench Chest Ether -> Mage Masher
-Great Trench Chest Phoenix Down -> GuardOff
-Great Trench Chest Kaiser Knuckles -> DblLance
-Istory Falls Chest Ether -> Excailbur
-Istory Falls Chest TurtleShell -> Ice Shield
-Istory Falls Chest Air Lance -> Thief's Glove
-Istory Falls Chest Giant Drink -> Dancer
-Istory Falls Chest RuneEdge -> Capture
-Istory Falls Chest Guard Ring -> DrgnSwd
-Istory Falls Chest Wall Ring -> Ragnarok
-Istory Falls Chest Phoenix Down -> Crystal Armor
-Istory Falls Chest Enhancer -> Drain Sword
-Istory Falls Chest 12000 -> Assassin
-Istory Falls Chest Artemis Bow -> Fire Rod
-Istory Falls Chest Pinwheel -> Hide
-Istory Falls Chest Aegis Shield -> Fusion
-Istory Falls Chest Giant's Axe -> Caution
-Phoenix Tower Pot 5000 -> Plumed Hat
-Phoenix Tower Pot Phoenix Down -> Whip
-Phoenix Tower Pot 10000 -> Bandana
-Phoenix Tower Pot Phoenix Down -> Potion (monster in a box)
-Phoenix Tower Pot Phoenix Down -> Potion
-Phoenix Tower Pot 15000 -> Broadsword (monster in a box)
-Phoenix Tower Pot 20000 -> Tricorn Hat (monster in a box)
-Phoenix Tower Pot Phoenix Down -> Giyaman (monster in a box)
-Phoenix Tower Pot Avis Killer -> Plumed Hat
-Phoenix Tower Pot 25000 -> Knife (monster in a box)
-Mirage Village Barrel Thief Knife -> Missile
-Rift (Ruins) Chest Ether -> Cursed Shield
-Rift (Ruins) Chest Cabin -> Time Slip
-Rift (Ruins) Chest Elixir -> Sylph
-Rift (Ruins) Chest DarkMatter -> Golem
-Rift (Ruins) Chest Elixir -> Silver Harp
-Rift (Ruins) Chest Drain Sword -> Love
-Rift (Forest) Chest DragonFang -> Counter
-Rift (Forest) Chest Ribbon -> Ether
+Wind Shrine Chest Broadsword -> Cotton Robe
+Beginner's House Chest Ether -> Pinwheel
+Beginner's House Chest 100 -> Power Drink
+Beginner's House Chest Potion -> Heal
+Beginner's House Chest Phoenix Down -> WhiteWind
+Beginner's House Chest Tent -> CopperPlt
+Beginner's House Chest Leather Shoes -> Training Suit
+Pirate's Cave Chest Leather Cap -> Bronze Armor
+Pirate's Cave Chest Tent -> Giyaman
+Pirate's Cave Chest Ether -> Bronze Shield
+Pirate's Cave Chest 300 -> Javelin
+Wind Shrine Chest Tent -> Potion
+Wind Shrine Chest Leather Cap -> RegalCut
+Wind Shrine Chest Staff -> Tent
+Tule Barrel 150 -> Water Scroll
+Tule Box Leather Shoes -> Judgement Staff
+Tule Barrel Potion -> Iron Helm (monster in a box)
+Tule Box Tent -> Time Slip
+Tule Bush Phoenix Down -> Antdt
+Ship Graveyard Chest Flail -> Dance
+Ship Graveyard Chest Phoenix Down -> X-Magic
+Ship Graveyard Chest Tent -> Flame Scroll
+Ship Graveyard Box 990 -> Bone Mail
+Ship Graveyard Chest Potion -> Potion
+Ship Graveyard Chest Antidote -> Crystal Armor
+Ship Graveyard Chest Antidote -> Summon Lv.1
+Ship Graveyard Chest Phoenix Down -> Artemis Bow
+Carwen Barrel Antidote -> Cotton Robe
+Carwen Box Ice Rod -> HiPotion
+Carwen Pot 1000 -> Giyaman
+North Mountain Chest Soft -> MgthyGrd
+North Mountain Chest Phoenix Down -> Flirt
+Walse Town Pot Glasses -> Remora
+Tycoon Castle Pot Hi-Potion -> Evade
+Tycoon Castle Pot Ether -> Enhancer
+Tycoon Castle Barrel Elixir -> Mythril Armor
+Tycoon Castle Barrel Phoenix Down -> Flametongue
+Tycoon Castle Barrel Cabin -> DarkMatter
+Tycoon Castle Pot Ether -> BlueMage
+Tycoon Castle Pot Elixir -> Elixir
+Tycoon Castle Pot Phoenix Down -> Silver Bow
+Tycoon Castle Pot Maiden's Kiss -> Aero 2
+Tycoon Castle Chest Shuriken -> Void
+Tycoon Castle Chest Giyaman -> Wonder Wand
+Tycoon Castle Chest Katana -> Katana
+Walse Castle Chest Elf Cape -> Giant's Gloves
+Walse Castle Pot 1000 -> Silver Plate
+Walse Castle Pot Drag -> Freelancer
+Walse Castle Pot 1000 -> Black Lv.4
+Walse Castle Box 490 -> Dancer
+Walse Castle Barrel Tent -> Golden Shield
+Walse Castle Barrel Phoenix Down -> Mythril Sword
+Walse Tower Chest Silk robe -> Ice
+Walse Tower Chest Maiden's Kiss -> Black Lv.1
+Walse Tower Chest Silver Armlet -> Mythril Staff
+Walse Tower Chest Ether -> L4 Qrter
+Tycoon Meteor Chest Phoenix Down -> RisingSun
+Karnak Castle Chest Gungnir -> Gale Bow (monster in a box)
+Karnak Castle Chest Thunder Scroll -> Stealth Suit (monster in a box)
+Karnak Castle Chest 2000 -> Sing
+Karnak Castle Chest Elixir -> Lamia's Tiara (monster in a box)
+Karnak Castle Chest Elixir -> Coral Sword (monster in a box)
+Karnak Castle Chest Elixir -> ManEater
+Karnak Castle Chest 2000 -> Water Scroll (monster in a box)
+Karnak Castle Chest Elixir -> Bronze Shield
+Karnak Castle Chest Elixir -> DoomCut (monster in a box)
+Karnak Castle Chest Ribbon -> Guard Ring (monster in a box)
+Karnak Castle Chest Shuriken -> Power Wrist (monster in a box)
+Karnak Castle Chest 2000 -> Air Blade (monster in a box)
+Karnak Castle Chest Elixir -> Wizard Rod (monster in a box)
+Karnak Castle Chest Elf Cape -> Silver Plate (monster in a box)
+Karnak Castle Chest Guardian -> CopperPlt (monster in a box)
+Karnak Town Barrel Fire Rod -> Murasume
+Steamship Chest Cabin -> Training Suit
+Steamship Chest Phoenix Down -> Sasuke
+Steamship Chest Elixir -> Rod
+Steamship Chest GrnBeret -> Gaia Gear
+Steamship Chest Thief's Glove -> Giant Drink
+Steamship Chest Elixir -> Sage's Staff
+Ancient Library Chest Ether -> Scan
+Ancient Library Chest Phoenix Down -> Shoat
+Ancient Library Chest Stealth Suit -> MgcSwrd Lv.5
+Jacole Cave Chest Shuriken -> Equip Whips
+Jacole Cave Chest Tent -> Agility
+Ruined City Chest Shuriken -> L5 Doom
+Ruined City Chest Shuriken -> Genji Gloves
+Ruined City Chest Size -> Power Drink
+Flying Lonka Ruins Chest Golden Armor -> Mirage Vest
+Flying Lonka Ruins Chest Elixir -> Partisan
+Flying Lonka Ruins Chest Phoenix Down -> Staff
+Flying Lonka Ruins Chest Golden Shield -> Thief
+Steamship Chest Mythril Glove -> Pinwheel
+Steamship Chest Elixir -> Ninja
+Steamship Chest Full Moon -> Lamia's Harp
+Flying Lonka Ruins Chest Hi-Potion -> Combine
+Flying Lonka Ruins Chest 5000 -> Hero
+Flying Lonka Ruins Chest Shuriken -> Circlet
+Flying Lonka Ruins Chest Ancient Sword -> Giant's Gloves
+Flying Lonka Ruins Chest Full Moon -> Thunder Bow
+Flying Lonka Ruins Chest Power Wrist -> Preemptive
+Flying Lonka Ruins Chest Ether -> Diamond Armlet
+Flying Lonka Ruins Chest Cabin -> Vampire
+Exdeath's Castle Chest Ether -> Black Lv.3
+Exdeath's Castle Chest Diamond Shield -> Berserk
+Exdeath's Castle Chest Ice Shield -> Flash
+Exdeath's Castle Chest Ether -> Blowfish
+Exdeath's Castle Chest Elixir -> Crystal Armor
+Exdeath's Castle Chest Gale Bow -> Slumber Sword
+Exdeath's Castle Chest IceBrand -> Red Lv.3
+Exdeath's Castle Chest Kotetsu -> Dragoon
+Exdeath's Castle Chest 9900 -> Flame Scroll
+Exdeath's Castle Chest Elixir -> Epee Sword
+Exdeath's Castle Chest 8000 -> Equip Swords
+Exdeath's Castle Chest DblLance -> Silver Plate
+Exdeath's Castle Chest Partisan -> Epee Sword
+Exdeath's Castle Chest Pinwheel -> Gaia Gear
+Moogle Cave Chest 4400 -> Bronze Shield
+Moogle Cave Chest Phoenix Down -> Plumed Hat
+Moogle Village Chest Cabin -> Leather Cap
+Moogle Village Chest Dancing Dagger -> Javelin
+Moogle Village Chest 1 -> Potion
+Moogle Village Chest 10000 -> Giyaman
+Moogle Village Chest Phoenix Down -> Tent
+Moogle Village Chest Ether -> Broadsword
+Moogle Village Chest Elf Cape -> Silk robe
+Bal Castle Chest Angel Gwn -> Kick
+Bal Castle Chest Hero Drink -> Tricorn Hat
+Bal Castle Chest Exit -> Crbnkl
+Hiryuu Valley Skull Bone Mail -> Whip
+Hiryuu Valley Chest 5000 -> Bahmut
+Hiryuu Valley Chest Cabin -> GuardOff
+Hiryuu Valley Chest 7000 -> Thunder Rod
+Hiryuu Valley Chest Coronet -> Shoat
+Hiryuu Valley Chest Air Blade -> DethClaw
+Hiryuu Valley Chest Phoenix Down -> Ice3
+Surgate Castle Chest 5000 -> Summon Lv.3
+Surgate Castle Chest Float -> Slash
+Barrier Tower Chest Drain Sword -> Chain Whip
+Barrier Tower Chest 9000 -> Cabin (monster in a box)
+Barrier Tower Chest 18000 -> Broadsword (monster in a box)
+Barrier Tower Chest Gold Hairpin -> HiPotion
+Mua Town Barrel Guardian -> Guardian
+Mua Forest Chest 2500 -> Crystal Helm
+Mua Forest Chest Ether -> Venom Rod
+Mua Forest Chest 4900 -> Capture
+Mua Forest Chest Phoenix Down -> Golden Shield
+Mua Forest Chest 9500 -> DarkMatter
+Mua Forest Chest Soot -> Thunder Rod
+Mua Forest Chest Flametongue -> Knife
+Mua Forest Chest Cabin -> Pinwheel
+Mua Forest Chest Giant Drink -> Stealth Suit
+Mua Forest Chest Elixir -> Glasses
+Mua Forest Chest Morning Star -> Giant's Gloves
+Solitary Island Chest Ether -> Javelin
+Solitary Island Chest DragonFang -> Charm
+Pyramid Chest Elixir -> Rod (monster in a box)
+Pyramid Chest Elixir -> HiPotion
+Pyramid Chest Black Robe -> Staff
+Pyramid Chest Thornlet -> Enhancer (monster in a box)
+Pyramid Chest DarkMatter -> Defender Sword (monster in a box)
+Pyramid Chest Crystal Armor -> Silk robe
+Pyramid Chest Cursed Ring -> Slumber Sword
+Pyramid Chest Ice Shield -> Mythril Knife
+Pyramid Chest Flame Shield -> Partisan (monster in a box)
+Pyramid Chest DarkMatter -> Knife (monster in a box)
+Pyramid Chest White Robe -> Mirage Vest
+Pyramid Chest DarkSuit -> Dagger (monster in a box)
+Pyramid Chest DarkMatter -> Wizard Rod (monster in a box)
+Pyramid Chest DarkMatter -> DarkHood (monster in a box)
+Pyramid Chest DarkMatter -> Cursed Ring
+Pyramid Chest 9000 -> Cotton Robe (monster in a box)
+Pyramid Chest 8000 -> Cursed Shield (monster in a box)
+Pyramid Chest Earth Hammer -> Silver Armlet
+Pyramid Chest 10000 -> Rainbow Dress
+Pyramid Chest Cabin -> WhiteMage
+Pyramid Chest Elixir -> DragonFang (monster in a box)
+Pyramid Chest 12000 -> Stealth Suit
+Pyramid Chest DarkMatter -> Golden Armor
+Pyramid Chest Elixir -> Cursed Shield (monster in a box)
+Pyramid Chest DarkMatter -> Gauntlets (monster in a box)
+Pyramid Chest Guard Ring -> Guard Ring
+Pyramid Chest Ribbon -> Broadsword
+Pyramid Chest Gold Hairpin -> Chain Whip (monster in a box)
+Solitary Island Chest 12000 -> Gaia Gear
+Solitary Island Chest Hi-Potion -> Conjure
+Solitary Island Chest Protect Drink -> Healing Staff
+Solitary Island Chest BeastKiller -> Giant's Gloves
+Solitary Island Chest RisingSun -> Genji Shield
+Solitary Island Chest Ether -> Wind Spear
+Solitary Island Chest Guard Ring -> Thunder Bow (monster in a box)
+Solitary Island Chest Crystal Helm -> Crystal Helm
+Solitary Island Chest 9000 -> Emission
+Solitary Island Chest Elixir -> Flame Ring
+Solitary Island Chest DarkMatter -> Mythril Spear (monster in a box)
+Solitary Island Chest Circlet -> TurtleShell
+Fork Tower L. Chest Ether -> TurtleShell
+Fork Tower L. Chest Wonder Wand -> Summon Lv.2
+Fork Tower R. Chest Hi-Potion -> Orialcon
+Fork Tower R. Chest Defender Sword -> Thief Knife
+Great Trench Chest Water Scroll -> Titan
+Great Trench Chest Flame Ring -> Fusion
+Great Trench Chest DragonFang -> Dimen Lv.5
+Great Trench Chest Ether -> L2 Old
+Great Trench Chest Phoenix Down -> Crystal Shield
+Great Trench Chest Kaiser Knuckles -> Hammer
+Istory Falls Chest Ether -> Equip Ribbon
+Istory Falls Chest TurtleShell -> Ancient Sword
+Istory Falls Chest Air Lance -> Cure3
+Istory Falls Chest Giant Drink -> Crystal Helm
+Istory Falls Chest RuneEdge -> Tricorn Hat
+Istory Falls Chest Guard Ring -> Steal
+Istory Falls Chest Wall Ring -> Giant's Gloves
+Istory Falls Chest Phoenix Down -> Phoenix Down
+Istory Falls Chest Enhancer -> Drink
+Istory Falls Chest 12000 -> Chemist
+Istory Falls Chest Artemis Bow -> DarkSuit
+Istory Falls Chest Pinwheel -> White Lv.6
+Istory Falls Chest Aegis Shield -> Ramuh
+Istory Falls Chest Giant's Axe -> AquaRake
+Phoenix Tower Pot 5000 -> Leather Shield
+Phoenix Tower Pot Phoenix Down -> Rod
+Phoenix Tower Pot 10000 -> Odin
+Phoenix Tower Pot Phoenix Down -> Hero Drink (monster in a box)
+Phoenix Tower Pot Phoenix Down -> LuckMallet (monster in a box)
+Phoenix Tower Pot 15000 -> Iron Armor (monster in a box)
+Phoenix Tower Pot 20000 -> Chocob
+Phoenix Tower Pot Phoenix Down -> Tiger Mask (monster in a box)
+Phoenix Tower Pot Avis Killer -> Flail
+Phoenix Tower Pot 25000 -> Morning Star (monster in a box)
+Mirage Village Barrel Thief Knife -> Power Drink
+Rift (Ruins) Chest Ether -> Summon Lv.5
+Rift (Ruins) Chest Cabin -> Stealth Suit
+Rift (Ruins) Chest Elixir -> Magic
+Rift (Ruins) Chest DarkMatter -> MoonFlut
+Rift (Ruins) Chest Elixir -> Ifrit
+Rift (Ruins) Chest Drain Sword -> Dagger
+Rift (Forest) Chest DragonFang -> Holy Lance
+Rift (Forest) Chest Ribbon -> Mimic
 Rift (Forest) Chest Enhancer -> Mimic
-Rift (Forest) Chest Lillith Rod -> Slumber Sword
-Rift (Cave) Chest Angel Ring -> L2 Old
-Rift (Cave) Chest Coral Ring -> DiamndPlt
-Rift (Castle) Chest Thor Hammer -> Bio
-Rift (Castle) Chest Running Shoes -> Giyaman
-Rift (Castle) Chest Red Shoes -> Sage's Staff
-Rift (Castle) Chest Rainbow Dress -> Full Moon
-Rift (Castle) Chest ManEater -> Flametongue
-The Void Chest Pinwheel -> Coral Sword
-The Void Chest Pinwheel -> Crbnkl
-The Void Chest Elixir -> FrogSong
-The Void Chest Ragnarok -> Shoat (monster in a box)
-The Void Chest Pinwheel -> Flash
-Byblos New -> Shrine Page
-WingRaptor New -> Anti Barrier
-Karlabos New -> Ifrit’s Fire
-Siren New -> Sasuke
-Magisa & Forza New -> Assassin
-Galura New -> Gold Hairpin
-LiquiFlame New -> Avis Killer
-Sergeant & DeathClaw New -> Crystal Shield
-Sandworm New -> Hiryuu Call
-AdamanTiMi New -> Coral Ring
-Sol Cannon New -> Magic Lamp
-ArchaeAvis New -> Big Bridge Key
-Chim.Brain New -> Moogle Suit
-Titan New -> Tinkerbell
-Puroboros New -> Sandworm Bait
-Gilgamesh 1 New -> Sasuke
-Gilgamesh 2 New -> Pyramid Page
-Tyrasaurus New -> 1st Tablet
-Abductor New -> DarkSuit
-HiryuuPlant New -> Tempest
-Gilgamesh 3 & Enkidou New -> Walse Tower Key
-Atmos New -> AntiMagic Bow
-Guardians New -> Artemis Bow
-Carbunkle New -> Canal Key
-Gilgamesh 4 New -> AntiMagic Bow
-Antlion New -> Trench Page
-Merugene New -> Adamantite
-Odin New -> Bracelet
-Triton, Neregeid & Phobos New -> 2nd Tablet
-Omniscient New -> DiamndPlt
-Minotauros New -> 3rd Tablet
-Leviathan New -> Coral Ring
-Stalker New -> Falls Page
-GoGo New -> Steamship Key
+Rift (Forest) Chest Lillith Rod -> Healing Staff
+Rift (Cave) Chest Angel Ring -> MindBlst
+Rift (Cave) Chest Coral Ring -> Missile
+Rift (Castle) Chest Thor Hammer -> Crystal Shield
+Rift (Castle) Chest Running Shoes -> Monk
+Rift (Castle) Chest Red Shoes -> Mantra
+Rift (Castle) Chest Rainbow Dress -> Staff
+Rift (Castle) Chest ManEater -> Dbl Grip
+The Void Chest Pinwheel -> DrgnSwd
+The Void Chest Pinwheel -> Aero 3
+The Void Chest Elixir -> Mythril Armor
+The Void Chest Ragnarok -> Diamond Helm (monster in a box)
+The Void Chest Pinwheel -> DrkShock
+Byblos New -> Tempest
+WingRaptor New -> Sandworm Bait
+Karlabos New -> Genji Shield
+Siren New -> Wizard Rod
+Magisa & Forza New -> Shrine Page
+Galura New -> Dragon's Whisker
+LiquiFlame New -> 4th Tablet
+Sergeant & DeathClaw New -> Elder Branch
+Sandworm New -> Dragon's Whisker
+AdamanTiMi New -> Falls Page
+Sol Cannon New -> Defender Sword
+ArchaeAvis New -> 2nd Tablet
+Chim.Brain New -> Hiryuu Call
+Titan New -> Pyramid Page
+Puroboros New -> Tinkerbell
+Gilgamesh 1 New -> 1st Tablet
+Gilgamesh 2 New -> Submarine Key
+Tyrasaurus New -> Bracelet
+Abductor New -> Steamship Key
+HiryuuPlant New -> Adamantite
+Gilgamesh 3 & Enkidou New -> Rune Axe
+Atmos New -> 3rd Tablet
+Guardians New -> Big Bridge Key
+Carbunkle New -> Ifrit’s Fire
+Gilgamesh 4 New -> Walse Tower Key
+Antlion New -> Genji Helm
+Merugene New -> Genji Helm
+Odin New -> Canal Key
+Triton, Neregeid & Phobos New -> Moogle Suit
+Omniscient New -> Trench Page
+Minotauros New -> Diamond Shield
+Leviathan New -> Crystal Helm
+Stalker New -> Artemis Bow
+GoGo New -> Tempest
 Bahamut New -> DiamndPlt
-Ifrit New -> Elder Branch
-Shiva New -> 4th Tablet
-Crayclaw New -> Submarine Key
+Ifrit New -> Anti Barrier
+Shiva New -> Flame Ring
+Crayclaw New -> Genji Shield
 -----****************-----
 -----SHOPS-----
 Shop: Tule Weapon
-Shop Type: 00
-Shop Item 1: Broadsword -> Holy
-Shop Item 2: Rod -> GblinPnch
-Shop Item 3: Staff -> Cure2
-Shop Item 4: None -> Wall
-Shop Item 5: None -> Armor
+Shop Type: 01
+Shop Item 1: Broadsword -> Ether
+Shop Item 2: Rod -> Diamond Shield
+Shop Item 3: Staff -> Excailbur
+Shop Item 4: None -> Circlet
+Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Tule Armor
-Shop Type: 07
-Shop Item 1: Leather Shield -> Control
-Shop Item 2: Leather Cap -> Equip Shield
-Shop Item 3: Leather Armor -> Equip Katana
-Shop Item 4: None -> None
+Shop Type: 01
+Shop Item 1: Leather Shield -> Gold Hairpin
+Shop Item 2: Leather Cap -> Spear
+Shop Item 3: Leather Armor -> Power Drink
+Shop Item 4: None -> DarkSuit
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
@@ -388,10 +388,10 @@ Shop Item 8: None -> None
 
 Shop: Tule Inn
 Shop Type: 01
-Shop Item 1: Potion -> Flail
-Shop Item 2: Tent -> Circlet
-Shop Item 3: None -> Kodachi
-Shop Item 4: None -> Healing Staff
+Shop Item 1: Potion -> Mythril Helm
+Shop Item 2: Tent -> Crystal Helm
+Shop Item 3: None -> Katana
+Shop Item 4: None -> Tricorn Hat
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
@@ -399,109 +399,109 @@ Shop Item 8: None -> None
 
 Shop: Tule Magic
 Shop Type: 01
-Shop Item 1: Fire -> Silver Plate
-Shop Item 2: Ice -> Circlet
-Shop Item 3: Bolt -> Gungnir
-Shop Item 4: Cure -> Staff of Light
-Shop Item 5: Scan -> RuneEdge
-Shop Item 6: Antdt -> Genji Shield
+Shop Item 1: Fire -> RisingSun
+Shop Item 2: Ice -> Diamond Armlet
+Shop Item 3: Bolt -> Dancing Dagger
+Shop Item 4: Cure -> Leather Shield
+Shop Item 5: Scan -> Gungnir
+Shop Item 6: Antdt -> Rod
 Shop Item 7: Fire -> None
 Shop Item 8: Fire -> None
 
 Shop: Carwen Weapon
 Shop Type: 07
-Shop Item 1: Dagger -> White Lv.6
-Shop Item 2: RegalCut -> White Lv.1
-Shop Item 3: Rod -> Equip Axes
-Shop Item 4: Staff -> Slash
+Shop Item 1: Dagger -> Hunter
+Shop Item 2: RegalCut -> Caution
+Shop Item 3: Rod -> Equip Katana
+Shop Item 4: Staff -> Throw
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Carwen Armor
-Shop Type: 00
-Shop Item 1: Bronze Shield -> Drain
-Shop Item 2: Bronze Helm -> Doom
-Shop Item 3: Bronze Armor -> Fire3
-Shop Item 4: CopperPlt -> None
-Shop Item 5: Cotton Robe -> None
+Shop Type: 01
+Shop Item 1: Bronze Shield -> Tiger Mask
+Shop Item 2: Bronze Helm -> Orialcon
+Shop Item 3: Bronze Armor -> Speed Drink
+Shop Item 4: CopperPlt -> Lumina Robe
+Shop Item 5: Cotton Robe -> Kaiser Knuckles
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Carwen Inn
-Shop Type: 01
-Shop Item 1: Potion -> Golden Helm
-Shop Item 2: Antidote -> Ice Shield
-Shop Item 3: Eyedrop -> CopperPlt
-Shop Item 4: Maiden's Kiss -> Golden Shield
-Shop Item 5: LuckMallet -> Golden Armor
-Shop Item 6: Soft -> Air Blade
-Shop Item 7: Phoenix Down -> Rod
-Shop Item 8: Tent -> Silver Bow
+Shop Type: 07
+Shop Item 1: Potion -> Red Lv.1
+Shop Item 2: Antidote -> Bard
+Shop Item 3: Eyedrop -> X-Fight
+Shop Item 4: Maiden's Kiss -> White Lv.3
+Shop Item 5: LuckMallet -> None
+Shop Item 6: Soft -> None
+Shop Item 7: Phoenix Down -> None
+Shop Item 8: Tent -> None
 
 Shop: Carwen Magic
-Shop Type: 01
-Shop Item 1: Fire -> Guard Ring
-Shop Item 2: Ice -> Potion
-Shop Item 3: Bolt -> RegalCut
-Shop Item 4: Sleep -> RuneEdge
-Shop Item 5: Cure -> Venom Rod
-Shop Item 6: Antdt -> Silver Harp
-Shop Item 7: Mute -> Slumber Sword
-Shop Item 8: Armor -> Tricorn Hat
+Shop Type: 07
+Shop Item 1: Fire -> BlackMage
+Shop Item 2: Ice -> Animals
+Shop Item 3: Bolt -> Black Lv.6
+Shop Item 4: Sleep -> TimeMage
+Shop Item 5: Cure -> None
+Shop Item 6: Antdt -> None
+Shop Item 7: Mute -> None
+Shop Item 8: Armor -> None
 
 Shop: Worus Weapon
-Shop Type: 07
-Shop Item 1: Battle Axe -> Smoke
-Shop Item 2: RegalCut -> None
-Shop Item 3: Dagger -> None
-Shop Item 4: None -> None
+Shop Type: 01
+Shop Item 1: Battle Axe -> Spear
+Shop Item 2: RegalCut -> Venom Rod
+Shop Item 3: Dagger -> Flail
+Shop Item 4: None -> DrgnCrest
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Worus Armor
-Shop Type: 07
-Shop Item 1: Iron Shield -> Red Lv.2
-Shop Item 2: Iron Helm -> White Lv.4
-Shop Item 3: Iron Armor -> Conjure
-Shop Item 4: Training Suit -> Black Lv.4
-Shop Item 5: Cotton Robe -> None
+Shop Type: 00
+Shop Item 1: Iron Shield -> Sylph
+Shop Item 2: Iron Helm -> Stop
+Shop Item 3: Iron Armor -> Shiva
+Shop Item 4: Training Suit -> Reset
+Shop Item 5: Cotton Robe -> Phenix
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Worus Magic
-Shop Type: 00
-Shop Item 1: Slow -> Bolt2
-Shop Item 2: Regen -> Float
-Shop Item 3: Void -> Chocob
-Shop Item 4: Haste -> Comet
-Shop Item 5: Chocob -> Bolt
-Shop Item 6: Sylph -> None
-Shop Item 7: Remora -> None
+Shop Type: 01
+Shop Item 1: Slow -> DiamndPlt
+Shop Item 2: Regen -> Silver Armlet
+Shop Item 3: Void -> ManEater
+Shop Item 4: Haste -> Elf Cape
+Shop Item 5: Chocob -> Golden Shield
+Shop Item 6: Sylph -> Darkness Bow
+Shop Item 7: Remora -> Battle Axe
 Shop Item 8: Fire -> None
 
 Shop: Karnak Weapon 1
-Shop Type: 01
-Shop Item 1: Mythril Knife -> AntiMagic Bow
-Shop Item 2: Mythril Sword -> Air Lance
-Shop Item 3: Mythril Hammer -> Wizard Rod
-Shop Item 4: Fire Rod -> Bronze Shield
-Shop Item 5: Ice Rod -> DarkSuit
-Shop Item 6: Thunder Rod -> Cabin
-Shop Item 7: Flail -> Silver Plate
+Shop Type: 07
+Shop Item 1: Mythril Knife -> Terrain
+Shop Item 2: Mythril Sword -> Geomancer
+Shop Item 3: Mythril Hammer -> Mediator
+Shop Item 4: Fire Rod -> Summon Lv.4
+Shop Item 5: Ice Rod -> None
+Shop Item 6: Thunder Rod -> None
+Shop Item 7: Flail -> None
 Shop Item 8: None -> None
 
 Shop: Karnak Weapon 2
 Shop Type: 00
-Shop Item 1: Mythril Spear -> Break
-Shop Item 2: Kunai -> Hammer
-Shop Item 3: Whip -> Venom
-Shop Item 4: Giyaman -> Life
+Shop Item 1: Mythril Spear -> Ice3
+Shop Item 2: Kunai -> Golem
+Shop Item 3: Whip -> Fire2
+Shop Item 4: Giyaman -> None
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
@@ -509,10 +509,10 @@ Shop Item 8: None -> None
 
 Shop: Karnak Armor
 Shop Type: 07
-Shop Item 1: Mythril Shield -> White Lv.5
-Shop Item 2: Mythril Helm -> MP +10%
+Shop Item 1: Mythril Shield -> MgcSwrd Lv.3
+Shop Item 2: Mythril Helm -> HP +20%
 Shop Item 3: Plumed Hat -> MgcSwrd Lv.2
-Shop Item 4: Mythril Armor -> X-Magic
+Shop Item 4: Mythril Armor -> Equip Armors
 Shop Item 5: Silver Plate -> None
 Shop Item 6: Silk robe -> None
 Shop Item 7: Mythril Glove -> None
@@ -520,65 +520,65 @@ Shop Item 8: Silver Armlet -> None
 
 Shop: Common World 1 Inn
 Shop Type: 00
-Shop Item 1: Potion -> Heal
-Shop Item 2: Antidote -> Charm
-Shop Item 3: Eyedrop -> Drain
-Shop Item 4: Maiden's Kiss -> Antdt
-Shop Item 5: LuckMallet -> Fire3
+Shop Item 1: Potion -> GblinPnch
+Shop Item 2: Antidote -> Doom
+Shop Item 3: Eyedrop -> Syldra
+Shop Item 4: Maiden's Kiss -> Bolt3
+Shop Item 5: LuckMallet -> Drain
 Shop Item 6: Soft -> None
 Shop Item 7: Phoenix Down -> None
 Shop Item 8: Tent -> None
 
 Shop: Karnak Magic 1
 Shop Type: 00
-Shop Item 1: Fire2 -> Sleep
-Shop Item 2: Ice2 -> Holy
-Shop Item 3: Bolt2 -> Psych
-Shop Item 4: Venom -> Bolt2
-Shop Item 5: Sleep -> Scan
+Shop Item 1: Fire2 -> Bolt
+Shop Item 2: Ice2 -> Ice2
+Shop Item 3: Bolt2 -> Fire
+Shop Item 4: Venom -> Sleep
+Shop Item 5: Sleep -> Image
 Shop Item 6: Fire -> None
 Shop Item 7: Ice -> None
 Shop Item 8: Bolt -> None
 
 Shop: Karnak Magic 2
-Shop Type: 01
-Shop Item 1: Cure2 -> Thunder Scroll
-Shop Item 2: Life -> Gold Hairpin
-Shop Item 3: Charm -> Dream Harp
-Shop Item 4: Mute -> Air Lance
-Shop Item 5: Armor -> Giant's Gloves
-Shop Item 6: Cure -> Silver Armlet
-Shop Item 7: Scan -> HiPotion
+Shop Type: 07
+Shop Item 1: Cure2 -> BuildUp
+Shop Item 2: Life -> Red Lv.2
+Shop Item 3: Charm -> MP +30%
+Shop Item 4: Mute -> Tame
+Shop Item 5: Armor -> None
+Shop Item 6: Cure -> None
+Shop Item 7: Scan -> None
 Shop Item 8: Antdt -> None
 
 Shop: Karnak Magic 3
 Shop Type: 01
-Shop Item 1: Demi -> Cursed Shield
-Shop Item 2: Stop -> Mage Masher
-Shop Item 3: Haste -> Ogre Killer
-Shop Item 4: Void -> Speed Drink
-Shop Item 5: Slow -> Dream Harp
-Shop Item 6: Regen -> Strength
-Shop Item 7: Fire -> None
+Shop Item 1: Demi -> Flame Shield
+Shop Item 2: Stop -> Crystal Armor
+Shop Item 3: Haste -> HiPotion
+Shop Item 4: Void -> Knife
+Shop Item 5: Slow -> Angel Gwn
+Shop Item 6: Regen -> Leather Shield
+Shop Item 7: Fire -> Battle Axe
 Shop Item 8: Fire -> None
 
 Shop: Crescent Weapon
-Shop Type: 07
-Shop Item 1: Fire Bow -> Freelancer
-Shop Item 2: Ice Bow -> SwdSlap
-Shop Item 3: Thunder Bow -> HP +20%
-Shop Item 4: Silver Harp -> Medicine
+Shop Type: 00
+Shop Item 1: Fire Bow -> Float
+Shop Item 2: Ice Bow -> Bio
+Shop Item 3: Thunder Bow -> Psych
+Shop Item 4: Silver Harp -> Holy
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Crescent Armor
-Shop Type: 01
-Shop Item 1: Plumed Hat -> Bandana
-Shop Item 2: Bard's Surplice -> Bronze Helm
-Shop Item 3: None -> Wizard Rod
-Shop Item 4: None -> Golden Armor
+Shop Type: 00
+Shop Item 1: Plumed Hat -> Life
+Shop Item 2: Bard's Surplice -> Fire
+Shop Item 3: None -> Toad
+Shop Item 4: None -> None
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
@@ -586,63 +586,63 @@ Shop Item 8: None -> None
 
 Shop: Istory Relic
 Shop Type: 01
-Shop Item 1: Flame Ring -> Chain Whip
-Shop Item 2: Coral Ring -> Leather Shoes
-Shop Item 3: Angel Ring -> Elf Cape
-Shop Item 4: None -> Leather Shield
+Shop Item 1: Flame Ring -> Gaia Gear
+Shop Item 2: Coral Ring -> Diamond Armlet
+Shop Item 3: Angel Ring -> Mythril Sword
+Shop Item 4: None -> Ice Rod
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Jacole Weapon
-Shop Type: 01
-Shop Item 1: Ogre Killer -> Golden Armor
-Shop Item 2: Coral Sword -> Coronet
-Shop Item 3: Mage Masher -> Gale Bow
-Shop Item 4: Trident -> Ice Shield
-Shop Item 5: Katana -> Fire Bow
-Shop Item 6: Silver Bow -> Kunai
+Shop Type: 07
+Shop Item 1: Ogre Killer -> Dimen Lv.1
+Shop Item 2: Coral Sword -> Dimen Lv.2
+Shop Item 3: Mage Masher -> MgcSwrd Lv.6
+Shop Item 4: Trident -> White Lv.1
+Shop Item 5: Katana -> None
+Shop Item 6: Silver Bow -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Jacole Armor
 Shop Type: 07
-Shop Item 1: GrnBeret -> Barrier
-Shop Item 2: Stealth Suit -> RedMage
-Shop Item 3: Bard's Surplice -> White Lv.3
-Shop Item 4: None -> White Lv.2
+Shop Item 1: GrnBeret -> Aim
+Shop Item 2: Stealth Suit -> Dimen Lv.4
+Shop Item 3: Bard's Surplice -> None
+Shop Item 4: None -> None
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Common World 2 Inn 1
-Shop Type: 00
-Shop Item 1: Ether -> Fire
-Shop Item 2: Revivify -> Ice3
-Shop Item 3: Cabin -> Life2
-Shop Item 4: Giant Drink -> Flare
-Shop Item 5: Power Drink -> Image
-Shop Item 6: Speed Drink -> None
+Shop Type: 01
+Shop Item 1: Ether -> Broadsword
+Shop Item 2: Revivify -> Orialcon
+Shop Item 3: Cabin -> Knife
+Shop Item 4: Giant Drink -> Diamond Helm
+Shop Item 5: Power Drink -> Drain Sword
+Shop Item 6: Speed Drink -> Thornlet
 Shop Item 7: Protect Drink -> None
 Shop Item 8: Hero Drink -> None
 
 Shop: Lix Guild
-Shop Type: 00
-Shop Item 1: Kunai -> Psych
-Shop Item 2: Shuriken -> Bio
-Shop Item 3: Flame Scroll -> Shell
-Shop Item 4: Water Scroll -> Ice2
-Shop Item 5: Thunder Scroll -> Toad
+Shop Type: 01
+Shop Item 1: Kunai -> Golden Armor
+Shop Item 2: Shuriken -> Circlet
+Shop Item 3: Flame Scroll -> Magus
+Shop Item 4: Water Scroll -> Protect Drink
+Shop Item 5: Thunder Scroll -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Lix Armor
-Shop Type: 00
-Shop Item 1: GrnBeret -> Bolt
-Shop Item 2: Stealth Suit -> Sleep
+Shop Type: 07
+Shop Item 1: GrnBeret -> MP +10%
+Shop Item 2: Stealth Suit -> SwdSlap
 Shop Item 3: None -> None
 Shop Item 4: None -> None
 Shop Item 5: None -> None
@@ -652,7 +652,7 @@ Shop Item 8: None -> None
 
 Shop: Lix Magic
 Shop Type: 00
-Shop Item 1: Heal -> Dispel
+Shop Item 1: Heal -> Vitality
 Shop Item 2: Fire -> None
 Shop Item 3: Fire -> None
 Shop Item 4: Fire -> None
@@ -663,108 +663,108 @@ Shop Item 8: Fire -> None
 
 Shop: Rugor Weapon
 Shop Type: 00
-Shop Item 1: Orialcon -> Break
-Shop Item 2: War Hammer -> Cure3
-Shop Item 3: Katana -> Mute
-Shop Item 4: Slumber Sword -> Venom
-Shop Item 5: Wind Spear -> Bersk
+Shop Item 1: Orialcon -> Speed
+Shop Item 2: War Hammer -> Size
+Shop Item 3: Katana -> Fire3
+Shop Item 4: Slumber Sword -> Flare
+Shop Item 5: Wind Spear -> Drain
 Shop Item 6: Darkness Bow -> None
 Shop Item 7: Dream Harp -> None
 Shop Item 8: Chain Whip -> None
 
 Shop: Rugor Armor
-Shop Type: 07
-Shop Item 1: Golden Shield -> Berserk
-Shop Item 2: Golden Helm -> Berserker
-Shop Item 3: GrnBeret -> Image
-Shop Item 4: Tricorn Hat -> Ninja
-Shop Item 5: Golden Armor -> None
-Shop Item 6: Stealth Suit -> None
-Shop Item 7: Gaia Gear -> None
+Shop Type: 01
+Shop Item 1: Golden Shield -> DarkHood
+Shop Item 2: Golden Helm -> Air Blade
+Shop Item 3: GrnBeret -> Javelin
+Shop Item 4: Tricorn Hat -> DarkMatter
+Shop Item 5: Golden Armor -> Kunai
+Shop Item 6: Stealth Suit -> Strength
+Shop Item 7: Gaia Gear -> Mythril Shield
 Shop Item 8: None -> None
 
 Shop: Common World 2 Inn 2
-Shop Type: 07
-Shop Item 1: HiPotion -> MgcSwrd Lv.3
-Shop Item 2: Potion -> Black Lv.2
-Shop Item 3: Phoenix Down -> Black Lv.3
-Shop Item 4: Soft -> Throw
-Shop Item 5: Maiden's Kiss -> None
-Shop Item 6: LuckMallet -> None
-Shop Item 7: Eyedrop -> None
-Shop Item 8: Antidote -> None
+Shop Type: 01
+Shop Item 1: HiPotion -> Wizard Rod
+Shop Item 2: Potion -> RegalCut
+Shop Item 3: Phoenix Down -> Spear
+Shop Item 4: Soft -> Guardian
+Shop Item 5: Maiden's Kiss -> Iron Armor
+Shop Item 6: LuckMallet -> Revivify
+Shop Item 7: Eyedrop -> Tiger Mask
+Shop Item 8: Antidote -> Gaia Gear
 
 Shop: Bal/Kelb Weapon
-Shop Type: 01
-Shop Item 1: Orialcon -> Mythril Knife
-Shop Item 2: War Hammer -> Black Robe
-Shop Item 3: Katana -> Staff of Light
-Shop Item 4: Slumber Sword -> LuckMallet
-Shop Item 5: Wind Spear -> Mirage Vest
-Shop Item 6: Darkness Bow -> Morning Star
-Shop Item 7: Dream Harp -> Full Moon
-Shop Item 8: Chain Whip -> Rod
+Shop Type: 07
+Shop Item 1: Orialcon -> Counter
+Shop Item 2: War Hammer -> Equip Harps
+Shop Item 3: Katana -> Barrier
+Shop Item 4: Slumber Sword -> Black Lv.2
+Shop Item 5: Wind Spear -> None
+Shop Item 6: Darkness Bow -> None
+Shop Item 7: Dream Harp -> None
+Shop Item 8: Chain Whip -> None
 
 Shop: Bal/Kelb Armor
-Shop Type: 01
-Shop Item 1: Golden Shield -> Elven Bow
-Shop Item 2: Golden Helm -> Diamond Helm
-Shop Item 3: GrnBeret -> Magic Lamp
-Shop Item 4: Tricorn Hat -> GrnBeret
-Shop Item 5: Golden Armor -> Ancient Sword
-Shop Item 6: Stealth Suit -> Silver Bow
-Shop Item 7: Gaia Gear -> Staff
-Shop Item 8: Gauntlets -> Dream Harp
+Shop Type: 07
+Shop Item 1: Golden Shield -> GilToss
+Shop Item 2: Golden Helm -> White Lv.5
+Shop Item 3: GrnBeret -> Dimen Lv.3
+Shop Item 4: Tricorn Hat -> Berserker
+Shop Item 5: Golden Armor -> None
+Shop Item 6: Stealth Suit -> None
+Shop Item 7: Gaia Gear -> None
+Shop Item 8: Gauntlets -> None
 
 Shop: Kelb Weapon
-Shop Type: 07
-Shop Item 1: Kodachi -> MgcSwrd Lv.6
-Shop Item 2: Killer Bow -> Mediator
-Shop Item 3: Venom Rod -> Black Lv.6
-Shop Item 4: Shuriken -> WhiteMage
-Shop Item 5: Flame Scroll -> None
-Shop Item 6: Water Scroll -> None
-Shop Item 7: Thunder Scroll -> None
+Shop Type: 01
+Shop Item 1: Kodachi -> Thunder Bow
+Shop Item 2: Killer Bow -> Black Robe
+Shop Item 3: Venom Rod -> Mythril Armor
+Shop Item 4: Shuriken -> Wizard Rod
+Shop Item 5: Flame Scroll -> Genji Helm
+Shop Item 6: Water Scroll -> Tiger Mask
+Shop Item 7: Thunder Scroll -> Dragoon Lance
 Shop Item 8: None -> None
 
 Shop: Kelb Armor
 Shop Type: 00
-Shop Item 1: Bandana -> Flare
-Shop Item 2: Strength -> Fire
-Shop Item 3: Power Wrist -> Bolt3
-Shop Item 4: None -> None
-Shop Item 5: None -> None
+Shop Item 1: Bandana -> Bolt2
+Shop Item 2: Strength -> Ice
+Shop Item 3: Power Wrist -> Slow2
+Shop Item 4: None -> Ice2
+Shop Item 5: None -> Venom
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Common World 2 Magic 1
-Shop Type: 01
-Shop Item 1: Image -> DiamndPlt
-Shop Item 2: Shell -> Silver Harp
-Shop Item 3: Heal -> Slumber Sword
-Shop Item 4: Fire -> Thornlet
+Shop Type: 00
+Shop Item 1: Image -> Bolt2
+Shop Item 2: Shell -> Quick
+Shop Item 3: Heal -> Life2
+Shop Item 4: Fire -> None
 Shop Item 5: Fire -> None
 Shop Item 6: Fire -> None
 Shop Item 7: Fire -> None
 Shop Item 8: Fire -> None
 
 Shop: Common World 2 Magic 2
-Shop Type: 07
-Shop Item 1: Drain -> Chemist
-Shop Item 2: Break -> MysticKnight
-Shop Item 3: Bio -> Combine
-Shop Item 4: Fire -> Black Lv.1
+Shop Type: 01
+Shop Item 1: Drain -> Speed Drink
+Shop Item 2: Break -> Venom Rod
+Shop Item 3: Bio -> Bandana
+Shop Item 4: Fire -> Slumber Sword
 Shop Item 5: Fire -> None
 Shop Item 6: Fire -> None
 Shop Item 7: Fire -> None
 Shop Item 8: Fire -> None
 
 Shop: Common World 2 Magic 3
-Shop Type: 01
-Shop Item 1: Comet -> Thunder Rod
-Shop Item 2: Slow2 -> Avis Killer
-Shop Item 3: Reset -> Giant's Gloves
+Shop Type: 00
+Shop Item 1: Comet -> Requiem
+Shop Item 2: Slow2 -> Flare
+Shop Item 3: Reset -> Shell
 Shop Item 4: Fire -> None
 Shop Item 5: Fire -> None
 Shop Item 6: Fire -> None
@@ -773,216 +773,216 @@ Shop Item 8: Fire -> None
 
 Shop: Surgate Weapon
 Shop Type: 07
-Shop Item 1: Epee Sword -> Preemptive
-Shop Item 2: Gungnir -> Terrain
-Shop Item 3: Bizen -> None
-Shop Item 4: Venom Axe -> None
+Shop Item 1: Epee Sword -> HP +30%
+Shop Item 2: Gungnir -> Knight
+Shop Item 3: Bizen -> Hide
+Shop Item 4: Venom Axe -> Equip Rods
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Surgate Armor
-Shop Type: 07
-Shop Item 1: Golden Shield -> Geomancer
-Shop Item 2: Golden Helm -> MgcSwrd Lv.7
-Shop Item 3: Bandana -> Evade
-Shop Item 4: Tricorn Hat -> MP +30%
-Shop Item 5: Golden Armor -> None
+Shop Type: 00
+Shop Item 1: Golden Shield -> Regen
+Shop Item 2: Golden Helm -> Sleep
+Shop Item 3: Bandana -> Slow
+Shop Item 4: Tricorn Hat -> Bersk
+Shop Item 5: Golden Armor -> Charm
 Shop Item 6: Strength -> None
 Shop Item 7: Gaia Gear -> None
 Shop Item 8: Gauntlets -> None
 
 Shop: Mua Weapon
 Shop Type: 01
-Shop Item 1: Air Lance -> Bard's Surplice
-Shop Item 2: Elven Bow -> Kotetsu
-Shop Item 3: None -> Wizard Rod
-Shop Item 4: None -> Silver Harp
+Shop Item 1: Air Lance -> Golem
+Shop Item 2: Elven Bow -> Defender Sword
+Shop Item 3: None -> Spear
+Shop Item 4: None -> Speed Drink
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Mua Armor
-Shop Type: 01
-Shop Item 1: Diamond Shield -> Iron Shield
-Shop Item 2: Diamond Helm -> Bandana
-Shop Item 3: Tiger Mask -> Mythril Helm
-Shop Item 4: Magus -> Golden Armor
-Shop Item 5: Diamond Armor -> Ice Bow
+Shop Type: 07
+Shop Item 1: Diamond Shield -> Black Lv.5
+Shop Item 2: Diamond Helm -> White Lv.4
+Shop Item 3: Tiger Mask -> White Lv.2
+Shop Item 4: Magus -> DmgFloor
+Shop Item 5: Diamond Armor -> None
 Shop Item 6: DiamndPlt -> None
 Shop Item 7: Lumina Robe -> None
 Shop Item 8: Diamond Armlet -> None
 
 Shop: Mua Magic 1
 Shop Type: 01
-Shop Item 1: Cure3 -> Crystal Shield
-Shop Item 2: Wall -> Diamond Armlet
-Shop Item 3: Bersk -> Dream Harp
-Shop Item 4: Image -> CopperPlt
-Shop Item 5: Shell -> Defender Sword
-Shop Item 6: Heal -> None
+Shop Item 1: Cure3 -> Partisan
+Shop Item 2: Wall -> Lumina Robe
+Shop Item 3: Bersk -> DarkSuit
+Shop Item 4: Image -> Stealth Suit
+Shop Item 5: Shell -> Earth Bell
+Shop Item 6: Heal -> Magus
 Shop Item 7: Fire -> None
 Shop Item 8: Fire -> None
 
 Shop: Mua Magic 2
-Shop Type: 01
-Shop Item 1: Fire3 -> AntiMagic Bow
-Shop Item 2: Ice3 -> Mythril Helm
-Shop Item 3: Bolt3 -> Avis Killer
-Shop Item 4: Drain -> Iron Shield
-Shop Item 5: Break -> Partisan
-Shop Item 6: Bio -> Thornlet
+Shop Type: 07
+Shop Item 1: Fire3 -> Catch
+Shop Item 2: Ice3 -> MysticKnight
+Shop Item 3: Bolt3 -> HP +10%
+Shop Item 4: Drain -> Brawl
+Shop Item 5: Break -> None
+Shop Item 6: Bio -> None
 Shop Item 7: Fire -> None
 Shop Item 8: Fire -> None
 
 Shop: Mua Magic 3
 Shop Type: 01
-Shop Item 1: Qrter -> Enhancer
-Shop Item 2: Hast2 -> Golden Armor
-Shop Item 3: Old -> Gauntlets
-Shop Item 4: Comet -> Shoat
-Shop Item 5: Slow2 -> Lamia's Harp
-Shop Item 6: Reset -> Forged
-Shop Item 7: Fire -> None
+Shop Item 1: Qrter -> DragonFang
+Shop Item 2: Hast2 -> Mythril Staff
+Shop Item 3: Old -> Staff
+Shop Item 4: Comet -> Iron Helm
+Shop Item 5: Slow2 -> Crystal Armor
+Shop Item 6: Reset -> War Hammer
+Shop Item 7: Fire -> Leather Shield
 Shop Item 8: Fire -> None
 
 Shop: Lix Inn
-Shop Type: 01
-Shop Item 1: Ether -> Iron Helm
-Shop Item 2: Potion -> Flame Shield
-Shop Item 3: Antidote -> RegalCut
-Shop Item 4: Eyedrop -> Phoenix Down
-Shop Item 5: LuckMallet -> Lamia's Tiara
-Shop Item 6: Maiden's Kiss -> Staff
-Shop Item 7: Soft -> Ribbon
-Shop Item 8: Tent -> Drain Sword
+Shop Type: 00
+Shop Item 1: Ether -> Haste
+Shop Item 2: Potion -> Fire2
+Shop Item 3: Antidote -> Qrter
+Shop Item 4: Eyedrop -> Holy
+Shop Item 5: LuckMallet -> Break
+Shop Item 6: Maiden's Kiss -> None
+Shop Item 7: Soft -> None
+Shop Item 8: Tent -> None
 
 Shop: Dwarf Magic
-Shop Type: 01
-Shop Item 1: Life2 -> Gaia Gear
-Shop Item 2: Dispel -> DarkSuit
-Shop Item 3: Doom -> Angel Gwn
-Shop Item 4: Psych -> Elf Cape
-Shop Item 5: Quick -> AntiMagic Bow
-Shop Item 6: Xzone -> Mage Masher
-Shop Item 7: Fire -> Lamia's Tiara
+Shop Type: 00
+Shop Item 1: Life2 -> Demi
+Shop Item 2: Dispel -> Dispel
+Shop Item 3: Doom -> Fire3
+Shop Item 4: Psych -> Wall
+Shop Item 5: Quick -> Mute
+Shop Item 6: Xzone -> None
+Shop Item 7: Fire -> None
 Shop Item 8: Fire -> None
 
 Shop: Dwarf Weapon
-Shop Type: 01
-Shop Item 1: Earth Hammer -> Revivify
-Shop Item 2: Morning Star -> Elven Bow
-Shop Item 3: AntiMagic Bow -> Epee Sword
-Shop Item 4: Forged -> None
+Shop Type: 07
+Shop Item 1: Earth Hammer -> Equip Shield
+Shop Item 2: Morning Star -> Cover
+Shop Item 3: AntiMagic Bow -> RedMage
+Shop Item 4: Forged -> Equip Bows
 Shop Item 5: None -> None
 Shop Item 6: None -> None
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Dwarf Armor
-Shop Type: 01
-Shop Item 1: Crystal Shield -> DarkSuit
-Shop Item 2: Crystal Helm -> Ice Bow
-Shop Item 3: DarkHood -> RuneEdge
-Shop Item 4: Circlet -> Thunder Rod
-Shop Item 5: Crystal Armor -> Lumina Robe
-Shop Item 6: DarkSuit -> Flail
-Shop Item 7: Black Robe -> Kunai
-Shop Item 8: White Robe -> DblLance
+Shop Type: 00
+Shop Item 1: Crystal Shield -> Love
+Shop Item 2: Crystal Helm -> Power
+Shop Item 3: DarkHood -> Xzone
+Shop Item 4: Circlet -> Bolt3
+Shop Item 5: Crystal Armor -> Cure
+Shop Item 6: DarkSuit -> None
+Shop Item 7: Black Robe -> None
+Shop Item 8: White Robe -> None
 
 Shop: Mirage Weapon
 Shop Type: 01
-Shop Item 1: Flametongue -> Flametongue
-Shop Item 2: IceBrand -> Shoat
-Shop Item 3: Earth Hammer -> Power Staff
-Shop Item 4: Morning Star -> Sasuke
-Shop Item 5: AntiMagic Bow -> Avis Killer
+Shop Item 1: Flametongue -> DiamndPlt
+Shop Item 2: IceBrand -> RegalCut
+Shop Item 3: Earth Hammer -> Circlet
+Shop Item 4: Morning Star -> Black Robe
+Shop Item 5: AntiMagic Bow -> Flail
 Shop Item 6: Forged -> None
 Shop Item 7: Partisan -> None
 Shop Item 8: None -> None
 
 Shop: Mirage Guild
 Shop Type: 01
-Shop Item 1: Pinwheel -> IceBrand
-Shop Item 2: Shuriken -> Crystal Armor
-Shop Item 3: DblLance -> Giant's Gloves
-Shop Item 4: Full Moon -> Silver Harp
-Shop Item 5: Flame Scroll -> Silk robe
-Shop Item 6: Water Scroll -> Earth Hammer
-Shop Item 7: Thunder Scroll -> Ether
+Shop Item 1: Pinwheel -> Gauntlets
+Shop Item 2: Shuriken -> Rune Chime
+Shop Item 3: DblLance -> Rune Axe
+Shop Item 4: Full Moon -> DoomCut
+Shop Item 5: Flame Scroll -> None
+Shop Item 6: Water Scroll -> None
+Shop Item 7: Thunder Scroll -> None
 Shop Item 8: None -> None
 
 Shop: Mirage Armor
-Shop Type: 07
-Shop Item 1: Crystal Shield -> Samurai
-Shop Item 2: Crystal Helm -> BlackMage
-Shop Item 3: DarkHood -> Pray
-Shop Item 4: Circlet -> Jump
-Shop Item 5: Crystal Armor -> None
+Shop Type: 01
+Shop Item 1: Crystal Shield -> Elixir
+Shop Item 2: Crystal Helm -> Strength
+Shop Item 3: DarkHood -> Wind Spear
+Shop Item 4: Circlet -> Kunai
+Shop Item 5: Crystal Armor -> Antidote
 Shop Item 6: DarkSuit -> None
 Shop Item 7: Black Robe -> None
 Shop Item 8: White Robe -> None
 
 Shop: Mirage Relic
 Shop Type: 01
-Shop Item 1: Running Shoes -> Rod
-Shop Item 2: Angel Ring -> Gaia Gear
-Shop Item 3: Flame Ring -> Morning Star
-Shop Item 4: Coral Ring -> Fire Rod
-Shop Item 5: Lamia's Tiara -> None
-Shop Item 6: Angel Gwn -> None
+Shop Item 1: Running Shoes -> Bronze Shield
+Shop Item 2: Angel Ring -> Eyedrop
+Shop Item 3: Flame Ring -> Mythril Helm
+Shop Item 4: Coral Ring -> Ice Rod
+Shop Item 5: Lamia's Tiara -> Flametongue
+Shop Item 6: Angel Gwn -> Fire Rod
 Shop Item 7: None -> None
 Shop Item 8: None -> None
 
 Shop: Mirage Magic 1
 Shop Type: 01
-Shop Item 1: Life2 -> Chain Whip
-Shop Item 2: Dispel -> Staff of Light
-Shop Item 3: Doom -> Healing Staff
-Shop Item 4: Psych -> Water Scroll
-Shop Item 5: Quick -> None
-Shop Item 6: Xzone -> None
+Shop Item 1: Life2 -> Cabin
+Shop Item 2: Dispel -> White Robe
+Shop Item 3: Doom -> Iron Helm
+Shop Item 4: Psych -> Rod
+Shop Item 5: Quick -> Air Blade
+Shop Item 6: Xzone -> Diamond Shield
 Shop Item 7: Fire -> None
 Shop Item 8: Fire -> None
 
 Shop: Mirage Magic 2
 Shop Type: 01
-Shop Item 1: Size -> Magus
-Shop Item 2: Toad -> Enhancer
-Shop Item 3: None -> Leather Shield
-Shop Item 4: Float -> Venom Rod
-Shop Item 5: Exit -> Golden Armor
+Shop Item 1: Size -> Flame Shield
+Shop Item 2: Toad -> Fire Bow
+Shop Item 3: None -> Gaia Gear
+Shop Item 4: Float -> Diamond Armor
+Shop Item 5: Exit -> Lillith Rod
 Shop Item 6: Chocob -> None
 Shop Item 7: Sylph -> None
 Shop Item 8: Remora -> None
 
 Shop: Mirage Inn 1
 Shop Type: 01
-Shop Item 1: Potion -> Guardian
-Shop Item 2: HiPotion -> Lamia's Harp
-Shop Item 3: Phoenix Down -> Cotton Robe
-Shop Item 4: Maiden's Kiss -> Dagger
-Shop Item 5: Antidote -> Diamond Armlet
-Shop Item 6: Eyedrop -> Defender Sword
-Shop Item 7: Soft -> Mythril Knife
-Shop Item 8: LuckMallet -> Silver Armlet
+Shop Item 1: Potion -> Whip
+Shop Item 2: HiPotion -> Giant's Gloves
+Shop Item 3: Phoenix Down -> RegalCut
+Shop Item 4: Maiden's Kiss -> Lamia's Tiara
+Shop Item 5: Antidote -> None
+Shop Item 6: Eyedrop -> None
+Shop Item 7: Soft -> None
+Shop Item 8: LuckMallet -> None
 
 Shop: Mirage Inn 2
 Shop Type: 01
-Shop Item 1: Elixir -> Murasume
-Shop Item 2: Ether -> Gauntlets
-Shop Item 3: Revivify -> Angel Gwn
-Shop Item 4: Giant Drink -> GrnBeret
-Shop Item 5: Power Drink -> Thornlet
-Shop Item 6: Speed Drink -> Black Robe
-Shop Item 7: Protect Drink -> Slumber Sword
-Shop Item 8: Hero Drink -> Cursed Shield
+Shop Item 1: Elixir -> Stealth Suit
+Shop Item 2: Ether -> Mythril Armor
+Shop Item 3: Revivify -> Silver Armlet
+Shop Item 4: Giant Drink -> Fire Rod
+Shop Item 5: Power Drink -> Strength
+Shop Item 6: Speed Drink -> None
+Shop Item 7: Protect Drink -> None
+Shop Item 8: Hero Drink -> None
 
 Shop: Karnak Weapon (discount)
 Shop Type: 01
-Shop Item 1: Mythril Knife -> Revivify
+Shop Item 1: Mythril Knife -> Staff of Light
 Shop Item 2: Mythril Sword -> None
 Shop Item 3: Mythril Hammer -> None
 Shop Item 4: Fire Rod -> None
@@ -993,7 +993,7 @@ Shop Item 8: None -> None
 
 Shop: Karnak Armor (discount)
 Shop Type: 01
-Shop Item 1: Mythril Shield -> Elf Cape
+Shop Item 1: Mythril Shield -> Protect Drink
 Shop Item 2: Mythril Helm -> None
 Shop Item 3: Mythril Armor -> None
 Shop Item 4: Silver Plate -> None
@@ -1551,18 +1551,18 @@ level:         14
 Enemy:         Byblos
 Steal:         DarkMatter / LuckMallet
 Drop:            / Protect Drink
-hp:            2500
+hp:            250
 mp:            1000
-exp:           8700
+exp:           200
 gil:           0
-gauge_time:    37
-phys_power:    24
-phys_mult:     7
-evade:         10
-phys_def:      4
-mag_power:     8
-mag_def:       16
-mag_evade:     10
+gauge_time:    34
+phys_power:    4
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     4
+mag_def:       8
+mag_evade:     0
 level:         19
 
 Enemy:         Aegil
@@ -1908,19 +1908,19 @@ level:         21
 Enemy:         Ifrit
 Steal:           / Phoenix Down
 Drop:            / Flame Scroll
-hp:            1000
+hp:            19997
 mp:            1000
-exp:           3100
+exp:           26200
 gil:           0
-gauge_time:    37
-phys_power:    35
-phys_mult:     6
-evade:         10
-phys_def:      12
-mag_power:     12
-mag_def:       12
+gauge_time:    43
+phys_power:    110
+phys_mult:     9
+evade:         25
+phys_def:      10
+mag_power:     30
+mag_def:       20
 mag_evade:     10
-level:         26
+level:         22
 
 Enemy:         Bomb
 Steal:           / Potion
@@ -5359,15 +5359,15 @@ level:         0
 Enemy:         WingRaptor
 Steal:           / Potion
 Drop:            / Phoenix Down
-hp:            55000
+hp:            18000
 mp:            25
-exp:           8400
+exp:           19000
 gil:           0
-gauge_time:    40
-phys_power:    78
-phys_mult:     9
-evade:         0
-phys_def:      0
+gauge_time:    45
+phys_power:    120
+phys_mult:     11
+evade:         10
+phys_def:      36
 mag_power:     1
 mag_def:       12
 mag_evade:     10
@@ -5376,15 +5376,15 @@ level:         1
 Enemy:         WingRaptor
 Steal:           / Potion
 Drop:            / Phoenix Down
-hp:            55000
+hp:            18000
 mp:            0
-exp:           8400
+exp:           19000
 gil:           0
-gauge_time:    40
-phys_power:    78
-phys_mult:     10
+gauge_time:    45
+phys_power:    120
+phys_mult:     20
 evade:         40
-phys_def:      24
+phys_def:      72
 mag_power:     1
 mag_def:       12
 mag_evade:     10
@@ -5393,41 +5393,41 @@ level:         2
 Enemy:         Karlabos
 Steal:           / Potion
 Drop:            / Tent
-hp:            3000
+hp:            47714
 mp:            100
-exp:           1200
+exp:           14900
 gil:           0
-gauge_time:    30
-phys_power:    8
-phys_mult:     4
+gauge_time:    45
+phys_power:    56
+phys_mult:     8
 evade:         0
-phys_def:      0
+phys_def:      6
 mag_power:     0
-mag_def:       8
+mag_def:       14
 mag_evade:     0
 level:         4
 
 Enemy:         Twin Tania
 Steal:           / Giant's Axe
 Drop:          Murasume /  
-hp:            22500
+hp:            1500
 mp:            10000
-exp:           2800
+exp:           1300
 gil:           0
 gauge_time:    81
-phys_power:    28
+phys_power:    34
 phys_mult:     14
 evade:         0
 phys_def:      0
-mag_power:     18
+mag_power:     22
 mag_def:       0
 mag_evade:     0
-level:         30
+level:         36
 
 Enemy:         Siren
 Steal:           /  
 Drop:            / Bronze Armor
-hp:            2000
+hp:            3000
 mp:            500
 exp:           2600
 gil:           0
@@ -5444,7 +5444,7 @@ level:         2
 Enemy:         Siren
 Steal:           /  
 Drop:            / Bronze Shield
-hp:            2000
+hp:            3000
 mp:            200
 exp:           2600
 gil:           0
@@ -5461,189 +5461,189 @@ level:         2
 Enemy:         Forza
 Steal:           /  
 Drop:            / Power Drink
-hp:            13950
+hp:            10000
 mp:            100
-exp:           12100
+exp:           8150
 gil:           0
 gauge_time:    45
-phys_power:    110
+phys_power:    64
 phys_mult:     9
 evade:         0
-phys_def:      15
+phys_def:      8
 mag_power:     0
-mag_def:       5
-mag_evade:     10
-level:         8
+mag_def:       4
+mag_evade:     5
+level:         6
 
 Enemy:         Magisa
 Steal:           /  
 Drop:            / Whip
-hp:            13950
-mp:            1000
-exp:           12100
+hp:            10000
+mp:            800
+exp:           8150
 gil:           0
-gauge_time:    40
-phys_power:    110
+gauge_time:    38
+phys_power:    64
 phys_mult:     5
-evade:         10
+evade:         5
 phys_def:      0
-mag_power:     50
-mag_def:       30
-mag_evade:     10
-level:         8
+mag_power:     56
+mag_def:       16
+mag_evade:     5
+level:         6
 
 Enemy:         Galura
 Steal:         HiPotion / Potion
 Drop:            / HiPotion
-hp:            8000
+hp:            15000
 mp:            100
-exp:           5100
+exp:           10400
 gil:           0
 gauge_time:    31
-phys_power:    50
+phys_power:    90
 phys_mult:     9
 evade:         0
-phys_def:      7
+phys_def:      8
 mag_power:     0
-mag_def:       4
+mag_def:       5
 mag_evade:     0
-level:         3
+level:         4
 
 Enemy:         LiquiFlame
 Steal:           /  
 Drop:            / Flame Scroll
-hp:            15000
-mp:            400
-exp:           11900
+hp:            2500
+mp:            200
+exp:           6100
 gil:           0
-gauge_time:    42
-phys_power:    53
+gauge_time:    37
+phys_power:    32
 phys_mult:     11
 evade:         20
 phys_def:      0
-mag_power:     12
-mag_def:       18
+mag_power:     10
+mag_def:       15
 mag_evade:     0
-level:         23
+level:         19
 
 Enemy:         LiquiFlame
 Steal:           /  
 Drop:            / Fire Rod
-hp:            15000
-mp:            270
-exp:           11900
+hp:            2500
+mp:            90
+exp:           6100
 gil:           0
-gauge_time:    42
-phys_power:    53
+gauge_time:    37
+phys_power:    32
 phys_mult:     8
 evade:         10
 phys_def:      0
-mag_power:     0
-mag_def:       36
+mag_power:     30
+mag_def:       30
 mag_evade:     0
-level:         23
+level:         19
 
 Enemy:         LiquiFlame
 Steal:           /  
 Drop:            / Fire Bow
-hp:            15000
-mp:            200
-exp:           11900
+hp:            2500
+mp:            100
+exp:           6100
 gil:           0
-gauge_time:    42
-phys_power:    53
+gauge_time:    37
+phys_power:    32
 phys_mult:     5
 evade:         30
 phys_def:      0
-mag_power:     24
-mag_def:       18
+mag_power:     20
+mag_def:       15
 mag_evade:     0
-level:         23
+level:         19
 
 Enemy:         Commander
 Steal:           / Mythril Sword
 Drop:          RegalCut /  
-hp:            2600
+hp:            4000
 mp:            200
 exp:           0
 gil:           0
 gauge_time:    25
-phys_power:    21
+phys_power:    50
 phys_mult:     6
 evade:         10
 phys_def:      0
-mag_power:     10
+mag_power:     12
 mag_def:       0
 mag_evade:     0
-level:         4
+level:         7
 
 Enemy:         Sandworm
 Steal:           /  
 Drop:            /  
-hp:            2500
+hp:            3600
 mp:            10125
-exp:           6100
+exp:           3900
 gil:           0
 gauge_time:    50
-phys_power:    30
+phys_power:    36
 phys_mult:     8
 evade:         0
 phys_def:      0
 mag_power:     1
-mag_def:       10
+mag_def:       12
 mag_evade:     10
-level:         18
+level:         31
 
 Enemy:         Hole
 Steal:           /  
 Drop:            /  
-hp:            2500
+hp:            3600
 mp:            10125
-exp:           6100
+exp:           3900
 gil:           0
 gauge_time:    1
-phys_power:    25
+phys_power:    30
 phys_mult:     10
 evade:         0
 phys_def:      0
 mag_power:     1
-mag_def:       10
+mag_def:       12
 mag_evade:     10
-level:         18
+level:         31
 
 Enemy:         Hole
 Steal:           /  
 Drop:            /  
-hp:            2500
+hp:            3600
 mp:            10125
-exp:           6100
+exp:           3900
 gil:           0
 gauge_time:    98
-phys_power:    7
+phys_power:    8
 phys_mult:     2
 evade:         0
 phys_def:      0
 mag_power:     1
-mag_def:       10
+mag_def:       12
 mag_evade:     10
-level:         18
+level:         22
 
 Enemy:         AdamanTiMi
 Steal:           / Protect Drink
 Drop:            / TurtleShell
-hp:            50000
+hp:            2000
 mp:            125
-exp:           30100
+exp:           3900
 gil:           0
 gauge_time:    30
-phys_power:    68
+phys_power:    37
 phys_mult:     18
 evade:         0
-phys_def:      20
+phys_def:      30
 mag_power:     0
-mag_def:       4
+mag_def:       6
 mag_evade:     50
-level:         16
+level:         24
 
 Enemy:         Flamegun
 Steal:         Ether / Potion
@@ -5699,132 +5699,132 @@ level:         77
 Enemy:         Sol Cannon
 Steal:         Elixir / Ether
 Drop:            / DarkMatter
-hp:            3300
+hp:            8888
 mp:            1000
-exp:           7600
-gil:           100
+exp:           10500
+gil:           80
 gauge_time:    55
-phys_power:    7
+phys_power:    6
 phys_mult:     2
 evade:         0
-phys_def:      5
+phys_def:      4
 mag_power:     1
-mag_def:       10
+mag_def:       8
 mag_evade:     10
-level:         36
+level:         29
 
 Enemy:         ArchaeAvis
 Steal:           /  
 Drop:            / Giant Drink
-hp:            130
+hp:            180
 mp:            2000
-exp:           200
+exp:           300
 gil:           0
 gauge_time:    30
-phys_power:    10
+phys_power:    12
 phys_mult:     7
 evade:         10
-phys_def:      5
+phys_def:      6
 mag_power:     1
 mag_def:       2
 mag_evade:     0
-level:         17
+level:         21
 
 Enemy:         ArchaeAvis
 Steal:           /  
 Drop:            / Power Drink
-hp:            130
+hp:            180
 mp:            2000
-exp:           200
+exp:           300
 gil:           0
 gauge_time:    30
-phys_power:    10
-phys_mult:     7
-evade:         10
-phys_def:      6
-mag_power:     1
-mag_def:       3
-mag_evade:     0
-level:         15
-
-Enemy:         ArchaeAvis
-Steal:           /  
-Drop:            / Speed Drink
-hp:            130
-mp:            2000
-exp:           200
-gil:           0
-gauge_time:    30
-phys_power:    10
-phys_mult:     7
-evade:         10
-phys_def:      6
-mag_power:     1
-mag_def:       6
-mag_evade:     0
-level:         18
-
-Enemy:         ArchaeAvis
-Steal:           /  
-Drop:            / Protect Drink
-hp:            130
-mp:            2000
-exp:           200
-gil:           0
-gauge_time:    30
-phys_power:    10
+phys_power:    12
 phys_mult:     7
 evade:         10
 phys_def:      7
 mag_power:     1
-mag_def:       10
+mag_def:       4
 mag_evade:     0
 level:         19
 
 Enemy:         ArchaeAvis
 Steal:           /  
-Drop:            / Hero Drink
-hp:            130
+Drop:            / Speed Drink
+hp:            180
 mp:            2000
-exp:           200
+exp:           300
 gil:           0
-gauge_time:    35
-phys_power:    10
-phys_mult:     9
-evade:         10
-phys_def:      6
-mag_power:     1
-mag_def:       12
-mag_evade:     0
-level:         16
-
-Enemy:         Chim.Brain
-Steal:         Wind Spear / DragonFang
-Drop:            / Phoenix Down
-hp:            39999
-mp:            1000
-exp:           22400
-gil:           0
-gauge_time:    35
-phys_power:    52
+gauge_time:    30
+phys_power:    12
 phys_mult:     7
 evade:         10
 phys_def:      8
 mag_power:     1
-mag_def:       16
+mag_def:       8
 mag_evade:     0
-level:         15
+level:         23
+
+Enemy:         ArchaeAvis
+Steal:           /  
+Drop:            / Protect Drink
+hp:            180
+mp:            2000
+exp:           300
+gil:           0
+gauge_time:    30
+phys_power:    12
+phys_mult:     7
+evade:         10
+phys_def:      9
+mag_power:     1
+mag_def:       12
+mag_evade:     0
+level:         24
+
+Enemy:         ArchaeAvis
+Steal:           /  
+Drop:            / Hero Drink
+hp:            180
+mp:            2000
+exp:           300
+gil:           0
+gauge_time:    35
+phys_power:    12
+phys_mult:     9
+evade:         10
+phys_def:      8
+mag_power:     1
+mag_def:       15
+mag_evade:     0
+level:         20
+
+Enemy:         Chim.Brain
+Steal:         Wind Spear / DragonFang
+Drop:            / Phoenix Down
+hp:            1500
+mp:            1000
+exp:           7600
+gil:           0
+gauge_time:    35
+phys_power:    40
+phys_mult:     7
+evade:         10
+phys_def:      10
+mag_power:     1
+mag_def:       20
+mag_evade:     0
+level:         19
 
 Enemy:         Titan
 Steal:         Earth Hammer / Potion
 Drop:            / HiPotion
-hp:            20000
+hp:            2000
 mp:            2000
-exp:           22400
+exp:           10500
 gil:           0
 gauge_time:    25
-phys_power:    68
-phys_mult:     10
+phys_power:    36
+phys_mult:     9
 evade:         10
 phys_def:      8
 mag_power:     0
@@ -5835,19 +5835,19 @@ level:         1
 Enemy:         Puroboros
 Steal:         Eyedrop /  
 Drop:          Potion /  
-hp:            600
+hp:            10922
 mp:            100
-exp:           517
+exp:           5467
 gil:           0
 gauge_time:    20
-phys_power:    54
+phys_power:    88
 phys_mult:     7
 evade:         0
 phys_def:      0
-mag_power:     12
+mag_power:     8
 mag_def:       0
 mag_evade:     0
-level:         64
+level:         6
 
 Enemy:         Abductor
 Steal:         Gaia Gear /  
@@ -5869,19 +5869,19 @@ level:         22
 Enemy:         Gilgamesh
 Steal:           /  
 Drop:            / Elixir
-hp:            31108
+hp:            6500
 mp:            2000
-exp:           13900
+exp:           7600
 gil:           0
 gauge_time:    25
-phys_power:    108
+phys_power:    40
 phys_mult:     6
 evade:         0
 phys_def:      0
 mag_power:     0
 mag_def:       0
 mag_evade:     0
-level:         31
+level:         26
 
 Enemy:         Fishman
 Steal:           /  
@@ -5954,307 +5954,307 @@ level:         27
 Enemy:         Gilgamesh
 Steal:         Trident / Hero Drink
 Drop:            / Tricorn Hat
-hp:            65535
+hp:            19850
 mp:            1000
-exp:           32800
+exp:           17900
 gil:           0
 gauge_time:    45
-phys_power:    112
+phys_power:    90
 phys_mult:     7
 evade:         10
-phys_def:      16
+phys_def:      17
 mag_power:     0
-mag_def:       8
+mag_def:       10
 mag_evade:     0
-level:         22
+level:         28
 
 Enemy:         Tyrasaurus
 Steal:         Golden Shield /  
 Drop:          Elixir /  
-hp:            17000
+hp:            27900
 mp:            1000
-exp:           22400
+exp:           31400
 gil:           0
 gauge_time:    50
-phys_power:    60
+phys_power:    120
 phys_mult:     8
 evade:         0
-phys_def:      20
+phys_def:      30
 mag_power:     0
-mag_def:       20
+mag_def:       30
 mag_evade:     0
-level:         23
+level:         29
 
 Enemy:         Shiva
 Steal:         Phoenix Down / HiPotion
 Drop:            / Ice Rod
-hp:            6500
+hp:            5000
 mp:            1000
-exp:           6100
+exp:           11900
 gil:           0
-gauge_time:    25
-phys_power:    25
+gauge_time:    30
+phys_power:    48
 phys_mult:     6
 evade:         0
 phys_def:      0
-mag_power:     0
-mag_def:       5
-mag_evade:     0
-level:         11
+mag_power:     12
+mag_def:       12
+mag_evade:     20
+level:         13
 
 Enemy:         Abductor
 Steal:         Power Wrist / HiPotion
 Drop:          Potion /  
-hp:            16999
+hp:            3000
 mp:            1000
-exp:           20900
+exp:           2600
 gil:           0
 gauge_time:    35
-phys_power:    70
-phys_mult:     7
+phys_power:    48
+phys_mult:     6
 evade:         0
-phys_def:      10
-mag_power:     50
-mag_def:       16
+phys_def:      6
+mag_power:     60
+mag_def:       10
 mag_evade:     0
-level:         29
+level:         35
 
 Enemy:         HiryuuPlant
 Steal:           /  
 Drop:            / Elixir
-hp:            40000
+hp:            20000
 mp:            1000
-exp:           25600
+exp:           20900
 gil:           0
 gauge_time:    45
-phys_power:    52
+phys_power:    65
 phys_mult:     8
 evade:         0
 phys_def:      0
-mag_power:     40
-mag_def:       40
+mag_power:     50
+mag_def:       50
 mag_evade:     0
-level:         26
+level:         33
 
 Enemy:         HiryuuFlowr
 Steal:           /  
 Drop:          Phoenix Down /  
-hp:            2000
+hp:            1000
 mp:            1000
 exp:           0
 gil:           0
 gauge_time:    22
-phys_power:    12
+phys_power:    15
 phys_mult:     20
 evade:         0
 phys_def:      0
-mag_power:     40
-mag_def:       40
+mag_power:     50
+mag_def:       50
 mag_evade:     30
-level:         25
+level:         31
 
 Enemy:         HiryuuFlowr
 Steal:           /  
 Drop:          Phoenix Down /  
-hp:            2000
+hp:            1000
 mp:            1000
 exp:           0
 gil:           0
 gauge_time:    17
-phys_power:    12
+phys_power:    15
 phys_mult:     20
 evade:         0
 phys_def:      0
-mag_power:     40
-mag_def:       40
+mag_power:     50
+mag_def:       50
 mag_evade:     30
-level:         25
+level:         31
 
 Enemy:         HiryuuFlowr
 Steal:           /  
 Drop:          Phoenix Down /  
-hp:            2000
+hp:            1000
 mp:            1000
 exp:           0
 gil:           0
 gauge_time:    27
-phys_power:    12
+phys_power:    15
 phys_mult:     20
 evade:         0
 phys_def:      0
-mag_power:     40
-mag_def:       40
+mag_power:     50
+mag_def:       50
 mag_evade:     30
-level:         26
+level:         33
 
 Enemy:         HiryuuFlowr
 Steal:           /  
 Drop:          Phoenix Down /  
-hp:            2000
+hp:            1000
 mp:            1000
 exp:           0
 gil:           0
 gauge_time:    22
-phys_power:    12
+phys_power:    15
 phys_mult:     20
 evade:         0
 phys_def:      0
-mag_power:     40
-mag_def:       40
+mag_power:     50
+mag_def:       50
 mag_evade:     30
-level:         25
+level:         31
 
 Enemy:         HiryuuFlowr
 Steal:           /  
 Drop:          Phoenix Down /  
-hp:            2000
+hp:            1000
 mp:            1000
 exp:           0
 gil:           0
 gauge_time:    18
-phys_power:    12
+phys_power:    15
 phys_mult:     20
 evade:         0
 phys_def:      0
-mag_power:     40
-mag_def:       40
+mag_power:     50
+mag_def:       50
 mag_evade:     30
-level:         28
+level:         35
 
 Enemy:         Gilgamesh
 Steal:           / Genji Gloves
 Drop:            / Golden Shield
-hp:            750
+hp:            6000
 mp:            888
-exp:           1300
+exp:           6550
 gil:           0
 gauge_time:    46
-phys_power:    60
+phys_power:    40
 phys_mult:     5
 evade:         10
-phys_def:      12
-mag_power:     48
-mag_def:       12
+phys_def:      8
+mag_power:     32
+mag_def:       8
 mag_evade:     10
-level:         37
+level:         25
 
 Enemy:         Enkidou
 Steal:           / GrnBeret
 Drop:            / Trident
-hp:            750
+hp:            6000
 mp:            1000
-exp:           1300
+exp:           6550
 gil:           0
 gauge_time:    46
-phys_power:    60
+phys_power:    40
 phys_mult:     5
 evade:         20
 phys_def:      0
-mag_power:     36
+mag_power:     24
 mag_def:       0
 mag_evade:     20
-level:         35
+level:         23
 
 Enemy:         Atmos
 Steal:         Flail / Ether
 Drop:            / DarkMatter
-hp:            19997
+hp:            22500
 mp:            10000
-exp:           13100
+exp:           6100
 gil:           0
 gauge_time:    40
-phys_power:    8
+phys_power:    10
 phys_mult:     10
 evade:         0
-phys_def:      11
-mag_power:     64
-mag_def:       16
+phys_def:      14
+mag_power:     80
+mag_def:       20
 mag_evade:     20
-level:         33
+level:         41
 
 Enemy:         Guardian
 Steal:         Elixir /  
 Drop:          Soot /  
-hp:            300
+hp:            825
 mp:            10000
-exp:           225
-gil:           0
-gauge_time:    30
-phys_power:    12
-phys_mult:     10
-evade:         0
-phys_def:      2
-mag_power:     0
-mag_def:       4
-mag_evade:     10
-level:         62
-
-Enemy:         Guardian
-Steal:         Elixir /  
-Drop:          Soot /  
-hp:            300
-mp:            10000
-exp:           225
-gil:           0
-gauge_time:    30
-phys_power:    12
-phys_mult:     10
-evade:         0
-phys_def:      2
-mag_power:     1
-mag_def:       4
-mag_evade:     10
-level:         62
-
-Enemy:         Guardian
-Steal:         Elixir /  
-Drop:          Soot /  
-hp:            300
-mp:            10000
-exp:           225
+exp:           1275
 gil:           0
 gauge_time:    35
-phys_power:    12
+phys_power:    40
 phys_mult:     10
 evade:         0
-phys_def:      2
-mag_power:     0
-mag_def:       4
-mag_evade:     10
-level:         62
+phys_def:      7
+mag_power:     15
+mag_def:       10
+mag_evade:     15
+level:         77
 
 Enemy:         Guardian
 Steal:         Elixir /  
 Drop:          Soot /  
-hp:            300
+hp:            825
 mp:            10000
-exp:           225
+exp:           1275
 gil:           0
-gauge_time:    40
-phys_power:    12
+gauge_time:    35
+phys_power:    40
 phys_mult:     10
 evade:         0
-phys_def:      2
-mag_power:     0
-mag_def:       4
-mag_evade:     10
-level:         62
+phys_def:      7
+mag_power:     1
+mag_def:       10
+mag_evade:     15
+level:         77
+
+Enemy:         Guardian
+Steal:         Elixir /  
+Drop:          Soot /  
+hp:            825
+mp:            10000
+exp:           1275
+gil:           0
+gauge_time:    40
+phys_power:    40
+phys_mult:     10
+evade:         0
+phys_def:      7
+mag_power:     5
+mag_def:       10
+mag_evade:     15
+level:         77
+
+Enemy:         Guardian
+Steal:         Elixir /  
+Drop:          Soot /  
+hp:            825
+mp:            10000
+exp:           1275
+gil:           0
+gauge_time:    45
+phys_power:    40
+phys_mult:     10
+evade:         0
+phys_def:      7
+mag_power:     10
+mag_def:       10
+mag_evade:     15
+level:         77
 
 Enemy:         Carbunkle
 Steal:         Giant Drink / Wall Ring
 Drop:          TurtleShell /  
-hp:            2000
+hp:            17000
 mp:            10000
-exp:           10500
+exp:           29900
 gil:           0
-gauge_time:    40
-phys_power:    24
+gauge_time:    45
+phys_power:    44
 phys_mult:     10
 evade:         70
-phys_def:      24
-mag_power:     24
-mag_def:       24
-mag_evade:     30
+phys_def:      40
+mag_power:     64
+mag_def:       40
+mag_evade:     50
 level:         35
 
 Enemy:         Merugene
@@ -6277,7 +6277,7 @@ level:         41
 Enemy:         Gilgamesh
 Steal:           / Genji Helm
 Drop:            / Excailbur
-hp:            8100
+hp:            2500
 mp:            9000
 exp:           10500
 gil:           0
@@ -6311,7 +6311,7 @@ level:         66
 Enemy:         Antlion
 Steal:           / HiPotion
 Drop:            / Cabin
-hp:            12000
+hp:            19997
 mp:            1000
 exp:           13100
 gil:           2400
@@ -6379,245 +6379,245 @@ level:         37
 Enemy:         Merugene
 Steal:           / Leather Armor
 Drop:          Maiden's Kiss /  
-hp:            19997
+hp:            55000
 mp:            500
-exp:           44900
+exp:           16700
 gil:           0
-gauge_time:    50
-phys_power:    60
+gauge_time:    45
+phys_power:    59
 phys_mult:     13
 evade:         10
-phys_def:      70
-mag_power:     20
+phys_def:      60
+mag_power:     6
 mag_def:       0
 mag_evade:     10
-level:         29
+level:         35
 
 Enemy:         Merugene
 Steal:           / Leather Cap
 Drop:          Maiden's Kiss /  
-hp:            19997
+hp:            55000
 mp:            500
-exp:           44900
+exp:           16700
 gil:           0
-gauge_time:    50
-phys_power:    60
+gauge_time:    45
+phys_power:    59
 phys_mult:     13
 evade:         10
-phys_def:      70
-mag_power:     20
+phys_def:      60
+mag_power:     6
 mag_def:       0
 mag_evade:     10
-level:         29
+level:         35
 
 Enemy:         Merugene
 Steal:           / Leather Shoes
 Drop:          Maiden's Kiss /  
-hp:            19997
+hp:            55000
 mp:            500
-exp:           44900
+exp:           16700
 gil:           0
-gauge_time:    50
-phys_power:    60
+gauge_time:    45
+phys_power:    59
 phys_mult:     13
 evade:         10
-phys_def:      70
-mag_power:     20
+phys_def:      60
+mag_power:     6
 mag_def:       0
 mag_evade:     10
-level:         29
+level:         35
 
 Enemy:         Merugene
 Steal:           / Leather Shield
 Drop:          Maiden's Kiss /  
-hp:            19997
+hp:            55000
 mp:            500
-exp:           44900
+exp:           16700
 gil:           0
-gauge_time:    50
-phys_power:    60
+gauge_time:    45
+phys_power:    59
 phys_mult:     13
 evade:         0
 phys_def:      0
 mag_power:     0
-mag_def:       70
-mag_evade:     70
-level:         33
+mag_def:       60
+mag_evade:     50
+level:         40
 
 Enemy:         Odin
 Steal:         Guard Ring /  
 Drop:          Flame Shield /  
-hp:            40000
+hp:            1200
 mp:            500
-exp:           44800
+exp:           700
 gil:           0
-gauge_time:    45
-phys_power:    48
+gauge_time:    35
+phys_power:    16
 phys_mult:     10
 evade:         10
-phys_def:      16
-mag_power:     24
-mag_def:       16
-mag_evade:     70
+phys_def:      4
+mag_power:     0
+mag_def:       4
+mag_evade:     30
 level:         2
 
 Enemy:         Gargoyle
 Steal:         Phoenix Down / Potion
 Drop:          HiPotion /  
-hp:            425
+hp:            325
 mp:            300
-exp:           150
+exp:           50
 gil:           0
 gauge_time:    34
-phys_power:    12
+phys_power:    10
 phys_mult:     9
 evade:         10
-phys_def:      6
-mag_power:     50
-mag_def:       6
+phys_def:      5
+mag_power:     40
+mag_def:       5
 mag_evade:     20
-level:         33
+level:         21
 
 Enemy:         Triton
 Steal:         Elixir / Soft
 Drop:          Protect Drink /  
-hp:            1000
+hp:            5666
 mp:            10000
-exp:           567
+exp:           8333
 gil:           0
-gauge_time:    30
-phys_power:    30
+gauge_time:    35
+phys_power:    38
 phys_mult:     11
 evade:         0
 phys_def:      0
-mag_power:     5
-mag_def:       12
-mag_evade:     40
-level:         44
+mag_power:     8
+mag_def:       17
+mag_evade:     50
+level:         37
 
 Enemy:         Neregeid
 Steal:         Elixir / Soft
 Drop:          Power Drink /  
-hp:            1000
+hp:            5666
 mp:            10000
-exp:           567
+exp:           8333
 gil:           0
-gauge_time:    30
-phys_power:    29
+gauge_time:    35
+phys_power:    37
 phys_mult:     11
 evade:         0
 phys_def:      0
-mag_power:     5
-mag_def:       12
-mag_evade:     40
-level:         24
+mag_power:     8
+mag_def:       17
+mag_evade:     50
+level:         20
 
 Enemy:         Phobos
 Steal:         Elixir / Soft
 Drop:          Giant Drink /  
-hp:            1000
+hp:            5666
 mp:            10000
-exp:           567
+exp:           8333
 gil:           0
-gauge_time:    30
-phys_power:    30
+gauge_time:    35
+phys_power:    38
 phys_mult:     11
 evade:         0
 phys_def:      0
-mag_power:     0
-mag_def:       12
-mag_evade:     40
-level:         47
+mag_power:     8
+mag_def:       17
+mag_evade:     50
+level:         39
 
 Enemy:         Omniscient
 Steal:         CornaJar / Potion
 Drop:            /  
-hp:            11500
+hp:            3000
 mp:            30000
-exp:           4300
+exp:           800
 gil:           0
-gauge_time:    40
-phys_power:    100
+gauge_time:    38
+phys_power:    80
 phys_mult:     20
 evade:         0
 phys_def:      0
-mag_power:     10
-mag_def:       8
+mag_power:     0
+mag_def:       6
 mag_evade:     0
-level:         53
+level:         42
 
 Enemy:         Minotauros
 Steal:         Pinwheel / Leather Shoes
 Drop:            /  
-hp:            33333
+hp:            22200
 mp:            100
-exp:           44900
+exp:           41200
 gil:           0
 gauge_time:    46
-phys_power:    120
+phys_power:    144
 phys_mult:     12
 evade:         0
 phys_def:      0
 mag_power:     0
 mag_def:       0
 mag_evade:     0
-level:         37
+level:         44
 
 Enemy:         Leviathan
 Steal:           / Elixir
 Drop:            / Wall Ring
-hp:            1500
+hp:            33333
 mp:            2000
-exp:           3800
+exp:           52300
 gil:           0
-gauge_time:    42
-phys_power:    25
-phys_mult:     12
-evade:         4
-phys_def:      8
+gauge_time:    49
+phys_power:    85
+phys_mult:     16
+evade:         12
+phys_def:      25
 mag_power:     1
-mag_def:       8
-mag_evade:     40
+mag_def:       15
+mag_evade:     70
 level:         37
 
 Enemy:         Stalker
 Steal:           / DarkMatter
 Drop:            /  
-hp:            10000
+hp:            850
 mp:            8192
-exp:           13900
+exp:           200
 gil:           0
 gauge_time:    40
-phys_power:    60
+phys_power:    5
 phys_mult:     10
 evade:         0
-phys_def:      6
-mag_power:     6
-mag_def:       12
-mag_evade:     5
-level:         14
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         7
 
 Enemy:         Gogo
 Steal:         Gold Hairpin / Leather Armor
 Drop:          Tiger Mask /  
-hp:            19850
+hp:            31108
 mp:            60000
-exp:           25000
+exp:           13900
 gil:           0
 gauge_time:    50
-phys_power:    120
+phys_power:    144
 phys_mult:     25
 evade:         30
-phys_def:      30
-mag_power:     35
-mag_def:       20
+phys_def:      36
+mag_power:     42
+mag_def:       24
 mag_evade:     99
-level:         77
+level:         92
 
 Enemy:         Bahamut
 Steal:         DragonFang / DragonFang
 Drop:          DragonFang /  
-hp:            47714
+hp:            40000
 mp:            10000
 exp:           44800
 gil:           0
@@ -6651,19 +6651,19 @@ level:         61
 Enemy:         Halicarnaso
 Steal:         Aegis Shield / Staff of Light
 Drop:          Elf Cape /  
-hp:            20000
+hp:            1000
 mp:            5000
-exp:           17900
+exp:           1400
 gil:           0
 gauge_time:    40
-phys_power:    55
+phys_power:    42
 phys_mult:     12
 evade:         0
-phys_def:      10
-mag_power:     100
-mag_def:       20
-mag_evade:     66
-level:         97
+phys_def:      6
+mag_power:     60
+mag_def:       12
+mag_evade:     45
+level:         116
 
 Enemy:         Exdeath
 Steal:           /  
@@ -6787,19 +6787,19 @@ level:         19
 Enemy:         Crayclaw
 Steal:           / Coral Sword
 Drop:            / Ice Bow
-hp:            22200
+hp:            50000
 mp:            500
-exp:           30900
+exp:           36100
 gil:           0
 gauge_time:    40
-phys_power:    119
+phys_power:    79
 phys_mult:     11
 evade:         0
-phys_def:      42
+phys_def:      28
 mag_power:     1
-mag_def:       42
+mag_def:       28
 mag_evade:     20
-level:         52
+level:         34
 
 Enemy:         NeoGoblin
 Steal:           /  
@@ -6821,126 +6821,126 @@ level:         0
 Enemy:         Calofisteri
 Steal:         Wall Ring / Plumed Hat
 Drop:          DiamndPlt /  
-hp:            250
+hp:            40000
 mp:            1000
-exp:           100
+exp:           35800
 gil:           0
-gauge_time:    30
-phys_power:    10
-phys_mult:     10
-evade:         0
-phys_def:      4
-mag_power:     5
-mag_def:       2
-mag_evade:     0
+gauge_time:    40
+phys_power:    44
+phys_mult:     12
+evade:         7
+phys_def:      20
+mag_power:     16
+mag_def:       12
+mag_evade:     7
 level:         54
 
 Enemy:         Apocalypse
 Steal:         Giant's Gloves / Elixir
 Drop:          DarkHood /  
-hp:            18000
+hp:            8000
 mp:            50000
-exp:           49400
+exp:           3000
 gil:           0
 gauge_time:    45
-phys_power:    78
+phys_power:    15
 phys_mult:     21
-evade:         10
-phys_def:      36
-mag_power:     30
-mag_def:       84
-mag_evade:     33
-level:         68
+evade:         3
+phys_def:      10
+mag_power:     15
+mag_def:       30
+mag_evade:     16
+level:         57
 
 Enemy:         Catastroph
 Steal:         Cabin / Elixir
 Drop:            / Soft
-hp:            17776
+hp:            39999
 mp:            19997
-exp:           5800
+exp:           29900
 gil:           0
-gauge_time:    35
-phys_power:    20
-phys_mult:     14
+gauge_time:    40
+phys_power:    35
+phys_mult:     16
 evade:         15
-phys_def:      12
-mag_power:     8
-mag_def:       6
-mag_evade:     16
+phys_def:      24
+mag_power:     12
+mag_def:       10
+mag_evade:     33
 level:         57
 
 Enemy:         Necrofobia
 Steal:         Thief's Glove / Elixir
 Drop:          Lumina Robe /  
-hp:            900
+hp:            11500
 mp:            10000
-exp:           200
+exp:           2800
 gil:           0
-gauge_time:    32
-phys_power:    5
+gauge_time:    37
+phys_power:    20
 phys_mult:     16
-evade:         0
-phys_def:      4
-mag_power:     0
-mag_def:       4
-mag_evade:     25
+evade:         10
+phys_def:      10
+mag_power:     30
+mag_def:       10
+mag_evade:     37
 level:         66
 
 Enemy:         Twin Tania
 Steal:         Flame Shield / Phoenix Down
 Drop:          Tinkerbell /  
-hp:            22500
+hp:            1500
 mp:            10000
-exp:           2800
+exp:           1300
 gil:           0
 gauge_time:    28
-phys_power:    28
+phys_power:    34
 phys_mult:     14
 evade:         0
-phys_def:      10
+phys_def:      12
 mag_power:     0
-mag_def:       4
+mag_def:       5
 mag_evade:     0
-level:         39
+level:         47
 
 Enemy:         Launcher
 Steal:           / Ether
 Drop:            / HiPotion
-hp:            1650
+hp:            8888
 mp:            1000
 exp:           0
 gil:           0
 gauge_time:    20
-phys_power:    7
+phys_power:    6
 phys_mult:     2
 evade:         0
 phys_def:      0
 mag_power:     1
-mag_def:       5
+mag_def:       4
 mag_evade:     5
-level:         50
+level:         40
 
 Enemy:         Launcher
 Steal:           / Ether
 Drop:            / HiPotion
-hp:            1650
+hp:            8888
 mp:            1000
 exp:           0
 gil:           0
 gauge_time:    20
-phys_power:    7
+phys_power:    6
 phys_mult:     2
 evade:         0
 phys_def:      0
 mag_power:     1
-mag_def:       5
+mag_def:       4
 mag_evade:     5
-level:         50
+level:         40
 
 Enemy:         Gilgamesh
 Steal:         Gauntlets / HiPotion
 Drop:            /  
-hp:            8100
+hp:            2500
 mp:            2000
 exp:           10500
 gil:           0
@@ -6957,16 +6957,16 @@ level:         42
 Enemy:         Carbunkle
 Steal:         Giant Drink / Wall Ring
 Drop:          TurtleShell /  
-hp:            2000
+hp:            17000
 mp:            1000
-exp:           10500
+exp:           29900
 gil:           0
 gauge_time:    25
-phys_power:    4
+phys_power:    6
 phys_mult:     2
-evade:         7
-phys_def:      6
-mag_power:     6
+evade:         10
+phys_def:      8
+mag_power:     8
 mag_def:       0
 mag_evade:     0
 level:         1
@@ -6991,19 +6991,19 @@ level:         0
 Enemy:         Apanda
 Steal:         Soot / Soot
 Drop:            / Soot
-hp:            3000
+hp:            8100
 mp:            1000
-exp:           1600
+exp:           6600
 gil:           0
 gauge_time:    37
-phys_power:    30
+phys_power:    20
 phys_mult:     18
 evade:         7
-phys_def:      10
+phys_def:      6
 mag_power:     0
-mag_def:       4
+mag_def:       2
 mag_evade:     10
-level:         71
+level:         47
 
 Enemy:         Alte Roite
 Steal:         Revivify / Potion
@@ -7161,16 +7161,16 @@ level:         97
 Enemy:         Barrier
 Steal:         Wall Ring / HiPotion
 Drop:            /  
-hp:            180
+hp:            2300
 mp:            300
 exp:           0
 gil:           0
-gauge_time:    20
-phys_power:    0
+gauge_time:    25
+phys_power:    30
 phys_mult:     10
 evade:         0
-phys_def:      0
-mag_power:     0
+phys_def:      5
+mag_power:     10
 mag_def:       0
 mag_evade:     0
 level:         44
@@ -7262,50 +7262,50 @@ level:         93
 
 -----*******-----
 -----FORMATIONS-----
-Tier: 2 Rank: 6 Boss: Byblos
-Tier: 3 Rank: 7 Boss: WingRaptor, WingRaptor
-Tier: 1 Rank: 3 Boss: Karlabos
+Tier: 1 Rank: 1 Boss: Byblos
+Tier: 4 Rank: 10 Boss: WingRaptor, WingRaptor
+Tier: 3 Rank: 9 Boss: Karlabos
 Tier: 2 Rank: 4 Boss: Siren, Siren
-Tier: 4 Rank: 11 Boss: Forza, Magisa
-Tier: 2 Rank: 5 Boss: Galura
-Tier: 3 Rank: 7 Boss: LiquiFlame, LiquiFlame, LiquiFlame
+Tier: 3 Rank: 9 Boss: Forza, Magisa
+Tier: 3 Rank: 7 Boss: Galura
+Tier: 2 Rank: 5 Boss: LiquiFlame, LiquiFlame, LiquiFlame
 Tier: 2 Rank: 5 Boss: Sergeant, Karnak, Karnak, Karnak, Iron Claw
-Tier: 2 Rank: 5 Boss: Hole, Hole, Hole, Sandworm, Sandworm, Sandworm
-Tier: 4 Rank: 12 Boss: AdamanTiMi
-Tier: 2 Rank: 5 Boss: Sol Cannon, Launcher, Launcher
-Tier: 1 Rank: 1 Boss: ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis
-Tier: 3 Rank: 9 Boss: Chim.Brain
-Tier: 3 Rank: 9 Boss: Titan
-Tier: 2 Rank: 4 Boss: Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros
-Tier: 3 Rank: 7 Boss: Gilgamesh
-Tier: 4 Rank: 12 Boss: Gilgamesh
-Tier: 3 Rank: 9 Boss: Tyrasaurus
-Tier: 3 Rank: 8 Boss: Abductor
-Tier: 3 Rank: 9 Boss: HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr
-Tier: 2 Rank: 4 Boss: Gilgamesh, Enkidou
-Tier: 2 Rank: 6 Boss: Atmos
-Tier: 1 Rank: 3 Boss: Guardian, Guardian, Guardian, Guardian
-Tier: 2 Rank: 6 Boss: Carbunkle, Carbunkle
+Tier: 2 Rank: 4 Boss: Hole, Hole, Hole, Sandworm, Sandworm, Sandworm
+Tier: 2 Rank: 4 Boss: AdamanTiMi
+Tier: 2 Rank: 6 Boss: Sol Cannon, Launcher, Launcher
+Tier: 1 Rank: 2 Boss: ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis
+Tier: 2 Rank: 5 Boss: Chim.Brain
+Tier: 2 Rank: 6 Boss: Titan
+Tier: 4 Rank: 12 Boss: Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros
+Tier: 2 Rank: 5 Boss: Gilgamesh
+Tier: 3 Rank: 8 Boss: Gilgamesh
+Tier: 4 Rank: 11 Boss: Tyrasaurus
+Tier: 2 Rank: 4 Boss: Abductor
+Tier: 3 Rank: 8 Boss: HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr
+Tier: 2 Rank: 6 Boss: Gilgamesh, Enkidou
+Tier: 2 Rank: 5 Boss: Atmos
+Tier: 2 Rank: 5 Boss: Guardian, Guardian, Guardian, Guardian
+Tier: 3 Rank: 9 Boss: Carbunkle, Carbunkle
 Tier: 2 Rank: 6 Boss: Gilgamesh, Gilgamesh
 Tier: 2 Rank: 6 Boss: Antlion
-Tier: 3 Rank: 8 Boss: Halicarnaso
-Tier: 4 Rank: 11 Boss: Merugene, Merugene, Merugene, Merugene
-Tier: 3 Rank: 9 Boss: Odin
-Tier: 1 Rank: 2 Boss: Gargoyle, Gargoyle
-Tier: 2 Rank: 4 Boss: Triton, Neregeid, Phobos
-Tier: 2 Rank: 5 Boss: Omniscient
-Tier: 4 Rank: 11 Boss: Minotauros
-Tier: 2 Rank: 5 Boss: Leviathan
-Tier: 3 Rank: 7 Boss: Stalker, Stalker, Stalker, Stalker
-Tier: 3 Rank: 8 Boss: Gogo
+Tier: 2 Rank: 4 Boss: Halicarnaso
+Tier: 3 Rank: 7 Boss: Merugene, Merugene, Merugene, Merugene
+Tier: 1 Rank: 3 Boss: Odin
+Tier: 1 Rank: 1 Boss: Gargoyle, Gargoyle
+Tier: 3 Rank: 8 Boss: Triton, Neregeid, Phobos
+Tier: 1 Rank: 3 Boss: Omniscient
+Tier: 4 Rank: 10 Boss: Minotauros
+Tier: 4 Rank: 11 Boss: Leviathan
+Tier: 1 Rank: 2 Boss: Stalker, Stalker, Stalker, Stalker
+Tier: 3 Rank: 7 Boss: Gogo
 Tier: 3 Rank: 9 Boss: Bahamut
-Tier: 2 Rank: 4 Boss: Ifrit
-Tier: 2 Rank: 5 Boss: Shiva, Commander, Commander, Commander
-Tier: 1 Rank: 1 Boss: Calofisteri
-Tier: 4 Rank: 10 Boss: Apocalypse
-Tier: 2 Rank: 6 Boss: Catastroph
-Tier: 1 Rank: 2 Boss: Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh
-Tier: 2 Rank: 5 Boss: Twin Tania, Twin Tania
-Tier: 2 Rank: 4 Boss: Apanda
-Tier: 4 Rank: 10 Boss: Crayclaw
+Tier: 4 Rank: 11 Boss: Ifrit
+Tier: 3 Rank: 7 Boss: Shiva, Commander, Commander, Commander
+Tier: 3 Rank: 9 Boss: Calofisteri
+Tier: 2 Rank: 5 Boss: Apocalypse
+Tier: 3 Rank: 9 Boss: Catastroph
+Tier: 2 Rank: 5 Boss: Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh
+Tier: 2 Rank: 4 Boss: Twin Tania, Twin Tania
+Tier: 2 Rank: 6 Boss: Apanda
+Tier: 4 Rank: 12 Boss: Crayclaw
 -----**********-----
