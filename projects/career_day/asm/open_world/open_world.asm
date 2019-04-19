@@ -162,6 +162,9 @@ db $FB, $FB
 org $F04752
 db $FD, $3A, $FF, $85, $00, $FF, $47, $03, $FF, $00, $00
 
+org $CE17E0
+db $fe, $3a, $fe, $3a, $ff, $7e, $00, $fe, $3a, $ff, $7e, $00, $f7, $00, $ff, $f6, $02
+
 
 ; set backup text to NOT crash the game
 ; org $CE7879
@@ -218,3 +221,11 @@ db $23
 ; remove lady
 org $CE65E1
 pad $CE65EF
+
+; SUBMARINE
+; warp to new locations, ignore submarine entirely
+org $C93F4B
+db $4B, $01, $11, $0d
+;map data warp
+org $CE4DDC
+db $01, $00, $AC, $A5

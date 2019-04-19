@@ -61,3 +61,25 @@ for i in list_of_conditional_codes:
     df2 = df2.sort_index()
 df2 = df2.sort_values(by='code')
 df2.to_csv('conditional_output.csv',index=None)
+
+
+with open('npc.txt') as file:
+    npc = file.readlines()
+npc = npc[0].replace(" ","")
+
+   
+list_of_npc_codes = []
+
+for i in range(0,256):
+    for x in ['FB','FC','FD','FE']:
+        new_code = str(x+hex(i).replace("0x","").zfill(2)).upper()
+        list_of_npc_codes.append(new_code)
+        
+df3 = pd.DataFrame(columns=['address','code','matches'])
+for i in list_of_conditional_codes:
+    number = conditionals.count(i)
+    df3.loc[-1] = ['',i,number]
+    df3.index = df3.index + 1
+    df3 = df3.sort_index()
+df3 = df3.sort_values(by='code')
+df3.to_csv('conditional_output.csv',index=None)
