@@ -22,6 +22,7 @@ class Window(Frame):
 		self.randomizerButtonFont = font.Font(size=14, weight='bold')
 		self.quitButtonFont = font.Font(size=13, weight='bold')
 		self.success = None
+		self.prevSeed = None
 
 		self.statusLabel = Label(self.master, text="Select your rom", width=20, height=3, name="statuslabel", anchor="w", font=("courier new", 11), justify=LEFT)
 		self.statusLabel.grid(row=0, column=0, padx=30, pady=10, sticky=W+E+N+S, columnspan=3, rowspan=3)
@@ -37,6 +38,7 @@ class Window(Frame):
 		e2 = Entry(self.master, textvariable=self.seed, name="seed", width=30)
 		e2.grid(row=4, column=1, pady=10, sticky=W+E+N+S)
 
+		'''
 		l3 = Label(self.master, width=25, height=1, text="XP Scaling Settings")
 		l3.grid(row=5, column=0, padx=30, sticky=W+E+N+S)
 		l4 = Label(self.master, width=25, height=1, text="Other Settings")
@@ -44,9 +46,9 @@ class Window(Frame):
 
 		xpScalingFrame = Frame(self.master, borderwidth=3, relief=GROOVE, name="scaling")
 
-		r1 = Radiobutton(xpScalingFrame, text="2x exp/abp", value="2", variable=self.xp, anchor="w", name="2x")
-		r2 = Radiobutton(xpScalingFrame, text="4x exp/abp", value="4", variable=self.xp, anchor="w", name="4x")
-		r3 = Radiobutton(xpScalingFrame, text="no bonus exp/abp", value="1", variable=self.xp, anchor="w", name="1x")
+		r1 = Radiobutton(xpScalingFrame, text="2x exp/abp", value="2", variable=self.xp, anchor="w", name="2x", state=DISABLED)
+		r2 = Radiobutton(xpScalingFrame, text="4x exp/abp", value="4", variable=self.xp, anchor="w", name="4x" , state=DISABLED)
+		r3 = Radiobutton(xpScalingFrame, text="no bonus exp/abp", value="1", variable=self.xp, anchor="w", name="1x" , state=DISABLED)
 
 		r1.grid(row=0, column=0, sticky=W+E+N+S)
 		r2.grid(row=1, column=0, sticky=W+E+N+S)
@@ -56,10 +58,12 @@ class Window(Frame):
 
 		extraOptionsFrame = Frame(self.master, borderwidth=3, relief=GROOVE, name="extra")
 
-		c1 = Checkbutton(extraOptionsFrame, text="Boss exp/abp scaling", variable=self.bossxp, anchor="w", name="bossscaling")
+		c1 = Checkbutton(extraOptionsFrame, text="Boss exp/abp scaling", variable=self.bossxp, anchor="w", name="bossscaling", state=DISABLED)
 		c1.grid(row=0, column=0, sticky=W+E+N+S)
 
 		extraOptionsFrame.grid(row=6, column=1, sticky=W+E+N+S)
+
+		'''
 
 		self.randomizeButton = Button(self.master, text="Randomize", name="randomize", state=DISABLED, height=2, font=self.randomizerButtonFont)
 		self.randomizeButton.grid(row=8, column=0, padx=30, pady=10, sticky=W+E+N+S, rowspan=2)
@@ -143,9 +147,10 @@ class Window(Frame):
 		options['bossxp'] = self.bossxp
  
 		if self.seed.get() == "" or self.seed.get() == "Enter a seed":
-			self.seed.set(random.randint(1000000, 9999999))
+			self.success, self.filepath = create_career_day_seed(self.rompath.get(), str(random.randint(1000000, 9999999)), options)
+		else:
+			self.success, self.filepath = create_career_day_seed(self.rompath.get(), self.seed.get(), options)
 
-		self.success, self.filepath = create_career_day_seed(self.rompath.get(), self.seed.get(), options)
 		self.updateLabel("")
 
 
@@ -159,8 +164,8 @@ else:
 WRITEDIRECTORY = os.getcwd()
 os.chdir(app_path)
 
-root.geometry("500x325")
-root.title("Career Day")
+root.geometry("500x250")
+root.title("Career Day v0.70")
 root.iconbitmap("favicon.ico")
 
 os.chdir(WRITEDIRECTORY)

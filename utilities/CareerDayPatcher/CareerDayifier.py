@@ -53,13 +53,11 @@ if getattr(sys, 'frozen', False):
 else:
     app_path = os.path.dirname(os.path.abspath(__file__))
 
-RPGE_PATH = os.path.join(app_path, "patches/rpge.ips")
-MAIN_PATH = os.path.join(app_path, "patches/ffv_project_demi_main.ips")
-MAIN_RANDO_PATH = os.path.join(app_path, "patches/ffv_project_demi_main_rando.ips")
-X2_EXP_PATH = os.path.join(app_path, "patches/ffv_project_demi_expabp2.ips")
-X4_EXP_PATH = os.path.join(app_path, "patches/ffv_project_demi_expabp4.ips")
-BOSS_EXP_PATH = os.path.join(app_path, "patches/ffv_project_demi_boss.ips")
-ASAR_PATH = os.path.join(app_path, "asar.exe")
+RPGE_PATH = os.path.join(app_path, r"patches/rpge.ips")
+MAIN_PATH = os.path.join(app_path, r"patches/ffv_projectdemi_vanilla.ips")
+MAIN_RANDO_PATH = os.path.join(app_path, r"patches/ffv_careerday.ips")
+ASAR_PATH = os.path.join(app_path, r"asar.exe")
+ASAR_PATH = '"' + ASAR_PATH + '"'
 
 WRITEDIRECTORY = os.getcwd()
 os.chdir(app_path)
@@ -82,6 +80,7 @@ def create_career_day_seed(rompath, seed, options):
     OUTPUT_PATH = os.path.join(WRITEDIRECTORY, foldername)
 
     local_path = os.path.join(OUTPUT_PATH, "ffv-careerday.sfc")
+    print(local_path)
 
     if rompath == "" or rompath == None:
         input("No rom selected, press enter to exit...")
@@ -173,60 +172,17 @@ def create_career_day_seed(rompath, seed, options):
         print("Unknown exception...")
         failure(e)
 
-    if options['xp'] == '2x':
-        try:
-            print("Applying 2x Exp/ABP mod")
-            ips.apply(X2_EXP_PATH, local_path)
-            print("Applied 2x Exp/ABP mod successfully")
-            print("Since you installed the 2x mod, skipping the 4x mod")
-            skip4x = True
-        except FileNotFoundError as e:
-            print("Error applying 2x Exp/ABP mod")
-            print("RPGe Patch Missing. Verify ffv_project_demi_expabp2.ips file exists in patches directory")
-            failure(e)
-        except Exception as e:
-            print("Error applying 2x Exp/ABP mod")
-            print("Unknown exception...")
-            failure(e)
-        
-    if options['xp'] == '4x':
-        try:
-            print("Applying 4x Exp/ABP mod")
-            ips.apply(X4_EXP_PATH, local_path)
-            print("Applied 4x Exp/ABP mod successfully")
-        except FileNotFoundError as e:
-            print("Error applying 4x Exp/ABP mod")
-            print("RPGe Patch Missing. Verify ffv_project_demi_expabp4.ips file exists in patches directory")
-            failure(e)
-        except Exception as e:
-            print("Error applying 4x Exp/ABP mod")
-            print("Unknown exception...")
-            failure(e)
-
-    if options['bossxp'] == True:
-        try:
-            print("Applying Boss Curve Exp mod")
-            ips.apply(BOSS_EXP_PATH, local_path)
-            print("Applied Boss Curve Exp mod successfully")
-        except FileNotFoundError as e:
-            print("Error applying Boss Curve Exp mod")
-            print("RPGe Patch Missing. Verify ffv_project_demi_boss.ips file exists in patches directory")
-            failure(e)
-        except Exception as e:
-            print("Error applying Boss Curve Exp mod")
-            print("Unknown exception...")
-            failure(e)
-
-    print("Project Demi Patching Complete!\n")
+    print("Career Day Prepatching Complete!\n")
 
     if rand:
         print("==========================")
-        print("Randomizer patching start!")
+        print("Career Day patching start!")
         print("==========================\n")
 
         if getattr(sys, 'frozen', False):
             os.chdir(sys._MEIPASS)
 
+        random.seed(seed)
         C = Conductor(random)
         spoilerandpatch = C.randomize()
 
@@ -242,12 +198,12 @@ def create_career_day_seed(rompath, seed, options):
             f.write("hirom\n")
             f.write(spoilerandpatch[1])
 
-        command = ASAR_PATH + " --no-title-check " + patchfile + " " + local_path
+        command = ASAR_PATH + " --no-title-check \"" + patchfile + "\" \"" + local_path + "\""
         output = subprocess.run(command)
 
         if output.returncode == 0:
             print("Complete!")
-            os.rename(local_path, os.path.join(OUTPUT_PATH, seed +"-ff5careerday.sfc"))
+            os.rename(local_path, os.path.join(OUTPUT_PATH, seed + r"-ff5careerday.sfc"))
             return True, foldername
         else:
             input()

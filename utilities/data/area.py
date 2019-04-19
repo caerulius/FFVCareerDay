@@ -52,8 +52,7 @@ class AreaManager():
             return self.get_emptiest_area()
         
     def any_areas_not_full(self):
-        return any(x.current_volume < x.area_capacity or
-                   x.num_placed_checks < x.num_checks for x in self.areas)
+        return any(x.num_placed_checks < x.num_checks for x in self.areas)
 
     def update_volume(self, reward):
         for i in self.areas:
@@ -65,3 +64,8 @@ class AreaManager():
     def change_power_level(self, factor):
         for i in self.areas:
             i.area_capacity = math.floor(i.area_capacity * factor)
+
+    def get_area_by_name(self, name):
+        for i in self.areas:
+            if i.area_name == name:
+                return i
