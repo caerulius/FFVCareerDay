@@ -28,7 +28,7 @@ JMP ProceedRegularItemFinish
 ; Custom item - attempting an event
 CustomItemEvent1:
 ; ALL CONDITIONALS FOR MAP BLOCKING HAPPENS HERE. 
-; IF ANY CONDITION FAILS, the item id "FA" is loaded, which is Shoat - all it means is that it will return a non-action upon trying to use the item (and a nice little sound effect). 
+; IF ANY CONDITION FAILS, the item id "F8" is loaded, which is OmegaMedl - all it means is that it will return a non-action upon trying to use the item (and a nice little sound effect). 
 ; 000AD5 000AD6 are map locations. the below references are in LE format
 
 rep #$20
@@ -121,14 +121,14 @@ BEQ ProceedRejectedItem2
 CMP #$DC00
 BEQ ProceedRejectedItem2
 ; Zeza fleet
-CMP #$4601
-BEQ ProceedRejectedItem2
+; CMP #$4601
+; BEQ ProceedRejectedItem2
 ; Zeza fleet below deck
 CMP #$4701
 BEQ ProceedRejectedItem2
-; Submarine
-CMP #$5701
-BEQ ProceedRejectedItem2
+; ; Submarine
+; CMP #$5701
+; BEQ ProceedRejectedItem2
 ; Death Valley
 CMP #$7201
 BEQ ProceedRejectedItem2
@@ -184,6 +184,12 @@ JMP ProceedRejectedItemFinish
 
 CustomItemEvent1Checking3:
 
+; Mua Forest transformation
+CMP #$6B01
+BEQ ProceedRejectedItem3
+; Mua Forest transformation
+CMP #$6601
+BEQ ProceedRejectedItem3
 ; Fork Tower
 CMP #$9701
 BEQ ProceedRejectedItem3
@@ -207,6 +213,12 @@ CMP #$9D01
 BEQ ProceedRejectedItem3
 ; Magic Lamp
 CMP #$1F01
+BEQ ProceedRejectedItem3
+; Ronka outside sol cannon
+CMP #$DD00
+BEQ ProceedRejectedItem3
+; Ronka outside sol cannon
+CMP #$D200
 BEQ ProceedRejectedItem3
 
 BNE CustomItemEvent1Pass
@@ -245,7 +257,7 @@ JML $C2BB09
 ProceedRejectedItemFinish:
 sep #$20
 ; Load in specifically omegamedl for failed item use
-LDA #$FA
+LDA #$F8
 ; Original code and branch
 STA $29E7
 PHX
@@ -331,9 +343,9 @@ JML $C2BCB9
 org $C0EEF2
 db $EE
 
-; ; Remove item $12 for now to end loop code...?
-; org $C0EEF4
-; db $00
+; Remove item $12 for now to end loop code...?
+;org $C0EEF4
+;db $00
 
 ; WarpShard cannot sell
 org $D12BDC

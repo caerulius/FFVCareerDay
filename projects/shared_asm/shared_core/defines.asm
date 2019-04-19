@@ -1,5 +1,3 @@
-;;; CAREER DAY DEFINES ;;;
-
 ; addresses 
 
 !ADDRESS_expmod = $F000A0
@@ -11,23 +9,27 @@
 ; !ADDRESS_shoatsound = $F01200
 !ADDRESS_customitem1 = $F01600
 !ADDRESS_customitem2 = $F01300
+!ADDRESS_battlehook = $F01380
 !ADDRESS_STARTROM = $FF0000
 !ADDRESS_ENDROM = $FFFFFF
 !ADDRESS_shopindexing = $F00980
 !ADDRESS_encounterhook = $F00000
 !ADDRESS_worldmaphook = $F00050
 !ADDRESS_menuhook = $F00500
-!ADDRESS_NEWEVENT_jobsetting = $F01000
+!ADDRESS_NEWEVENT_jobsetting = $F00B80
 !ADDRESS_NEWEVENT_conditionalvehicles = $F01100
 !ADDRESS_NEWEVENT_conditionaleventflags = $F01180
 !ADDRESS_NEWEVENT_conditionalrifttablet = $F01800
 !ADDRESS_originalmagicprices = $F80000
+!ADDRESS_startingcharstats = $F81000
+!ADDRESS_startingcharstatsindex = $F80F00
 !ADDRESS_shophook = $F00680
 !ADDRESS_shopcheckreward = $F00700
 !ADDRESS_shopawardreward = $F00800
 !ADDRESS_shopmagicsword = $F00900
 !ADDRESS_walkspeedhook = $F00180
 !ADDRESS_walkspeedtownhook = $F001E0
+!ADDRESS_airshipslowdown = $F00200
 !ADDRESS_canalfix = $F10000
 !ADDRESS_keyitems = $F00A00
 !ADDRESS_xycoordhook = $F01900

@@ -75,6 +75,10 @@ db $10
 org $f04d3d
 db $ff, $00, $00
 
+; disable hiryuu event
+org $c9f3f7
+db $FF
+
 ; ZEZA FLEET
 ; After Gilgamesh, change one of the flags for Hiryuu spawning to normal to be based off of:
 ; db $A2, $AA                     ;Turn on bit 04 at address 0x7e0a29
@@ -97,7 +101,7 @@ db $FD, $7C
 
 ; org $D8F85A
 org $F057D9
-db $FB, $45
+db $FD, $C6
 
 
 ; ANTLION
@@ -152,8 +156,12 @@ db $FB, $FB
 
 ; BLACK CHOCOBO
 ; set to always have recatch cutscene play
-org $F04757
-db $85, $00
+; org $F04757
+; db $85, $00
+
+org $F04752
+db $FD, $3A, $FF, $85, $00, $FF, $47, $03, $FF, $00, $00
+
 
 ; set backup text to NOT crash the game
 ; org $CE7879
@@ -196,23 +204,17 @@ db $FC, $BF, $FF, $E1, $00, $00, $00, $00, $00
 org $F056A2
 db $FF, $00, $00, $00, $00, $00, $FF, $00, $00
 
+; EARTH CRYSTAL
+; if you wanna fix later, disable this flag getting set at c89b13 (for FD, B8, not FE)
+org $F04AEC
+db $FE, $B8
 
+; FINAL EXDEATH WARP
+; edit event to move player down 1 tile
+org $C9C4CD
+db $23
 
-; submarine weirdness
-; trench
-org $C98862
-
-; walse tower
-org $c8fa38
-
-; istory
-org $c9886b
-
-; guido
-org $c8ce80
-
-; north area in w2
-org $c92120
-
-;barrier tower
-org $c93f4a
+; CARWEN
+; remove lady
+org $CE65E1
+pad $CE65EF

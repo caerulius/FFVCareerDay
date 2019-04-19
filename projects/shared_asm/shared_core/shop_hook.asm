@@ -4,6 +4,24 @@ hirom
 org $C0F1F3
 db $C0 
 
+; Always allow sell to appear
+; nop ASM command out a bit test / branch if minus
+org $c2f17b
+nop
+nop
+nop
+nop
+nop
+
+; allow magic to sell 
+org $c2aad6
+bra $aae8
+
+; allow all shops to increase inv count
+org $c2a618
+jmp $a61e
+
+
 org $C2F12B
 JML ShopHook
 

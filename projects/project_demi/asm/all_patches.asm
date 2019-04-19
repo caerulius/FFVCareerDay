@@ -2,6 +2,7 @@ hirom
 ; init
 incsrc ../../shared_asm/shared_core/defines.asm
 incsrc core_code/init.asm
+incsrc ../../shared_asm/data_tables/starting_stats.asm
 
 ; conditionals
 ; !vanillarewards defined in command line 
@@ -177,6 +178,7 @@ incsrc ../../shared_asm/shared_core/utility.asm
 incsrc ../../shared_asm/shared_core/walk_speed.asm
 incsrc ../../shared_asm/shared_core/chest_magicreward.asm
 incsrc ../../shared_asm/shared_core/shop_hook.asm
+incsrc ../../shared_asm/shared_core/battle_hook.asm
 incsrc ../../shared_asm/balancing/exp_abp_modifier.asm
 incsrc ../../shared_asm/recovery/all_inns.asm
 incsrc ../../shared_asm/recovery/tent.asm

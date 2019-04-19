@@ -1,3 +1,5 @@
+import math
+
 bitset = {}
 bitset['01'] = 0
 bitset['02'] = 1
@@ -82,8 +84,55 @@ def encrypt(address,bit,type_set):
             
             
             
-            
-            
+def conditional_flag(argument, value):
+    argument = argument.upper()
+    if argument == 'FB' or argument == 'FC':
+        if argument == 'FB':
+            type_set = 'unset'
+        if argument == 'FC':
+            type_set = 'set'
+        base = int('000A34',base=16)
+    else:
+        if argument == 'FD':
+            type_set = 'unset'
+        if argument == 'FE':
+            type_set = 'set'
+        base = int('000A14',base=16)
+    value_int = int(value,base=16) * 8
+    value_upper = math.trunc(value_int / 64)
+    bit = 7 - (int(value,base=16) % 8)
+    delta = (base + value_upper) 
+    delta = hex(delta).replace("0x","$")
+    print("Code: $"+argument+", $"+value)
+    print("Address: "+delta+" bit: "+str(bitsetnum[bit])+" type: "+type_set)
+    print("----")
+    
+def reverse_conditional_flag(address, bit, type_set):
+    address_int = int(address,base=16)
+    
+    if address_int >= 2612:
+        base_int = int('A34',base=16)
+        if type_set == 'set':
+            final_command = 'FC'
+        elif type_set == 'unset':
+            final_command = 'FB'
+    else:
+        base_int = int('A14',base=16)
+        if type_set == 'set':
+            final_command = 'FE'
+        elif type_set == 'unset':
+            final_command = 'FD'
+    
+    delta = ((address_int - base_int) * 8) + bitset[bit]
+    
+    new_address = hex(delta)
+    print("Code: $"+final_command+", $"+new_address.replace("0x","").upper())
+    print("Address: $"+address+" bit: "+bit+" type: "+type_set)
+    print("----")
+    
+        
+conditional_flag('FB','19')
+#reverse_conditional_flag('A2C','40','unset')
             
             
             
@@ -116,7 +165,7 @@ after_text = """
 ff757fb9f4feff73feff0f80afe7fc82
 814bece0ff197078ffff03d0feffa5ff
 ff0d7800fdfefffffffffff0ff03ff6f
-3fa6df03fcc38f7fffffff3f0f3e019f
+3fa6df23fcc38f7fffffff3f0f3e019f
 fdf4ffd7ffffffdffdc7ff0103fef0c7
 7ffe17000ff801000080bebf0f180000
 fffffe9ff0ff7ffdffff000000000000

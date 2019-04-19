@@ -182,6 +182,9 @@ db $CA, $4A, $02                ;Turn on bit 04 at address  0x7e0a9d
 db $CA, $4B, $02                ;Turn on bit 08 at address  0x7e0a9d
 db $CA, $4C, $02                ;Turn on bit 10 at address  0x7e0a9d
 db $CA, $4D, $02                ;Turn on bit 20 at address  0x7e0a9d
+; new flag for cara joining
+db $A2, $C6            ; set address 000A2C bit ON 40
+
 db $09                          ;Player Show
 db $C3, $02
 db $14                          ;Player pose: face down, left hand forward

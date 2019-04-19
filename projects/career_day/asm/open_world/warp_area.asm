@@ -24,7 +24,7 @@ db $CB, $3f, $05
 
 ; reset submarine bit each time
 db $A3, $C7            ; set address 000A2C bit OFF 80
-db $A3, $C6            ; set address 000A2C bit OFF 40
+; db $A3, $C6            ; set address 000A2C bit OFF 40 (used elsewhere)
 db $A3, $C5            ; set address 000A2C bit OFF 20
 db $A3, $C4            ; set address 000A2C bit OFF 10
 db $A3, $C3            ; set address 000A2C bit OFF 08

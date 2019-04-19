@@ -242,7 +242,6 @@ phx
 LDA #$00
 STA $000842
 
-
 ; set job value to learned jobs
 LDX #$0000
 LDA $E79F00
@@ -259,61 +258,30 @@ pla
 ora $0840,x
 sta $0840,x
 
-; set characters to default job
-LDA $E79F00
-STA $0501
-STA $0551
-STA $05A1
-STA $05F1
+; start data move for stats
+rep #$20
+lda #$0000
+sep #$20
+lda $E79F00
+rep #$20
+asl
+TAX
+LDA #$0500
+TAY
+LDA $F80F00, X
+XBA
+TAX
 
-; Do it with E79F03
-LDA $E79F03
-STA $0517
-STA $0567
-STA $05B7
-STA $0607
+LDA #$013F
+MVN $F800
 
+LDA #$0000
+sep #$20
 
-; for the weapon code, if monk, need to set both hands correctly
-LDA $E79F00
-CMP #$01
-BEQ SetMonkWeapons
-BNE SetWeaponsNormal
-
-; Set both to 01
-SetMonkWeapons:
-LDA #$01
-STA $0514
-STA $0564
-STA $05B4
-STA $0604
-STA $0513
-STA $0563
-STA $05B3
-STA $0603
-JMP FinishSetWeapons
-
-
-SetWeaponsNormal:
-
-; set characters' default weapon to right hand
-LDA $E79F01
-STA $0513
-STA $0563
-STA $05B3
-STA $0603
-; set left hand to blank
-STZ $0514
-STZ $0564
-STZ $05B4
-STZ $0604
-; set shield to blank on faris
-STZ $0602
-
-; set default magic
-
-FinishSetWeapons:
+; set starting magic
 LDA $E79F02
+CMP #$FF
+BEQ RandomizedJobSkipMagic
 AND #$07
 tax
 LDA $C0C9B9,X
@@ -327,12 +295,12 @@ pla
 ora $0950,x
 sta $0950,x
 
-
+RandomizedJobSkipMagic:
 
 plx
 pla
 
-JML $C0A630 ; hopefully this works 
+JML $C0A628 ; hopefully this works 
 
 
 

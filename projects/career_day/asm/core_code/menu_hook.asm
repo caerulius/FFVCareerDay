@@ -326,3 +326,60 @@ ADC $094a
 STA $094a
 
 JML $C2FBF3
+
+
+
+org $C0106E
+JML AirshipSlowDownHook
+
+org !ADDRESS_airshipslowdown
+AirshipSlowDownHook:
+pha
+lda !input2
+cmp #$80
+bpl AirshipSlowDownApplySlowDown
+bmi AirshipSlowDownApplyNormal
+
+AirshipSlowDownApplySlowDown:
+LDA $0ADC
+CMP #$06 ; 06 = airship 
+BEQ AirshipSlowDownApplySlowDownAirship
+BNE AirshipSlowDownApplySlowDownNotAirship
+AirshipSlowDownApplySlowDownAirship:
+LDA #$04
+STA !speedvalue
+JMP AirshipSlowDownFinish
+AirshipSlowDownApplySlowDownNotAirship:
+LDA #$02
+STA !speedvalue
+JMP AirshipSlowDownFinish
+
+
+AirshipSlowDownApplyNormal:
+LDA $0ADC
+CMP #$06 ; 06 = airship 
+BEQ AirshipSlowDownApplyNormalAirship
+BNE AirshipSlowDownApplyNormalNotAirship
+AirshipSlowDownApplyNormalAirship:
+; now quickly check if boat or not
+LDA $0AF1
+AND #$0F
+CMP #$05
+BEQ AirshipSlowDownApplyNormalNotAirship ; if $55, ignore
+LDA #$20
+STA !speedvalue
+JMP AirshipSlowDownFinish
+AirshipSlowDownApplyNormalNotAirship:
+LDA #$08
+STA !speedvalue
+JMP AirshipSlowDownFinish
+
+; original code and return
+AirshipSlowDownFinish:
+pla
+dec
+asl a
+asl a
+tay
+lda $0add,y
+JML $C01075
