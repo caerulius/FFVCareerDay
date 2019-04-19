@@ -431,7 +431,7 @@ class Conductor():
 
             #this is specifically an unworkable situation
             #this will just cycle gogo to the end and get a new boss
-            if random_boss.name_string == "Gogo" and original_boss.name_string == "Odin":
+            if random_boss.enemy_1 == "Gogo" and original_boss.enemy_1 == "Odin":
                 original_boss_list = [original_boss] + original_boss
                 original_boss = original_boss_list.pop()
 
