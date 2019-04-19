@@ -428,7 +428,13 @@ class Conductor():
         for random_boss in [x for x in self.FM.formations if x.randomized_boss == 'y']:
             # First pick a random original boss
             original_boss = original_boss_list.pop()
-        
+
+            #this is specifically an unworkable situation
+            #this will just cycle gogo to the end and get a new boss
+            if random_boss.name_string == "Gogo" and original_boss.name_string == "Odin":
+                original_boss_list = [original_boss] + original_boss
+                original_boss = original_boss_list.pop()
+
             # Assign random boss location to the original spots (overwriting it)
             # This is grabbing event_lookuploc1 / loc2 from the original
             # And overwriting the new random boss' 
@@ -437,8 +443,8 @@ class Conductor():
             # whatever is being referred to in that event to call the battle)
             # And update Byblos' event_lookups to reflect this
             # Then for asar output, we take the code for running Byblos battle and write to it where Adamantium's was 
-            # So then when you walk into Adamantium area, you'll fight Byblos 
-            
+            # So then when you walk into Adamantium area, you'll fight Byblos
+
             new_lookup1 = original_boss.event_lookup_loc1
             new_lookup2 = original_boss.event_lookup_loc2
             
@@ -449,8 +455,7 @@ class Conductor():
             # Find original locations' ID and assign to a new variable
             original_formation_id = original_boss.event_id
             random_boss.new_event_id = original_formation_id 
-            
-            
+
             # Document original rank
             prev_rank = random_boss.boss_rank
             # Find new rank & assign
