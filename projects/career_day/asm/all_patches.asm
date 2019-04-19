@@ -228,9 +228,11 @@ incsrc reward_events/watercrystal_obtainshards.asm
 incsrc reward_events/chicken_knife_brave_blade.asm
 incsrc reward_events/walsetower_gogo.asm
 incsrc reward_events/tycoon_hiddenarea.asm
+incsrc reward_events/istory_toad.asm
+incsrc reward_events/aegis_shield.asm
 
 
-; ; open world
+; open world
 incsrc open_world/canal_fix.asm
 incsrc open_world/key_items.asm
 incsrc open_world/key_item_locks.asm
