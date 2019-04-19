@@ -51,9 +51,9 @@ class ShopPriceManager:
         self.shopprices = [ShopPrice(x, collectible_manager, data_manager) for x in range(1, NUM_SHOP_PRICES)]
 
     def get_patch(self):
-        output = ';==========='
-        output = output + '\n;shop prices'
-        output = output + '\n;==========='
+        output = ';===========\n'
+        output = output + ';shop prices\n'
+        output = output + ';===========\n'
         for i in self.shopprices:
             output = output + i.asar_output + '\n'
         

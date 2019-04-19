@@ -105,6 +105,7 @@ class Enemy(object):
         self.original_num_hp = self.num_hp
         self.original_hp_hi = self.hp_hi
         self.original_hp_lo = self.hp_lo
+        self.ai_patch_text = None
 
     @property
     def asar_output(self):
@@ -115,11 +116,15 @@ class Enemy(object):
         
         stat_data = '; Stats: \norg $'+self.stats_address+"\ndb "
         for stat in STAT_HEX_MAP:
-            stat_data = stat_data + "$" +getattr(self,stat)+", "
+            hex_val = getattr(self, stat)
+            stat_data = stat_data + "$" + hex_val + ", "
         final_output = final_output + "\n" + stat_data[:-2] + "\n"
 
         final_output = final_output +  '; Loot: \norg $'+self.drops_address+"\ndb $"+self.steal_common+", $"+self.steal_rare+", $"+self.drop_common+", $"+self.drop_rare+"\n"
         
+        if self.ai_patch_text is not None:
+            final_output = final_output + self.ai_patch_text
+
         return final_output
 
     @property
@@ -152,6 +157,10 @@ class Enemy(object):
             for stat in ['gauge_time','phys_power','phys_mult','evade','phys_def','mag_power','mag_def','mag_evade','level']:
                 new_val = int(getattr(self,stat),base=16)
                 final_output  = final_output  + '{0: <15}'.format(stat +": ") +str(new_val)+"\n"
+
+        # AI
+        #TODO
+        
         return final_output
 
     def generate_from_df(self,data_manager,pass_type,use_boss_table):
@@ -174,9 +183,9 @@ class Enemy(object):
         if val > 65535:
             val = 65535
         val_bytes = val.to_bytes(2, 'little') or b'\0' #format our data as little endian bytes
-        val_lo = format(val_bytes[0], 'x') #pass through format with 'x' to get just
-        val_hi = format(val_bytes[1], 'x') #hex value (no '0x')
-        
+        val_lo = format(val_bytes[0], '02x') #pass through format with 'x' to get just
+        val_hi = format(val_bytes[1], '02x') #hex value (no '0x')
+
         if attr == 'exp':
             self.num_exp = val
             self.exp_lo = val_lo
@@ -198,7 +207,7 @@ class Enemy(object):
             if val >= 255:
                 val = 255
             val_byte = val.to_bytes(1, 'little') or b'\0'
-            setattr(self,attr,format(val_byte[0], 'x'))
+            setattr(self,attr,format(val_byte[0], '02x'))
 
     def apply_rank_mult(self):
         rank_mult = self.rank_mult

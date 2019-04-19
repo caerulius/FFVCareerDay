@@ -8,20 +8,17 @@ import pandas as pd
 table = 'text_table_chest.csv'
 
 
+text_dict = pd.read_csv('tables/'+table,header=None,index_col=0).to_dict()[1]
+text_dict2 = pd.read_csv('tables/'+table,header=None,index_col=1).to_dict()[0]
 
-
-
-text_dict = pd.read_csv('../data/tables/'+table,header=None,index_col=0).to_dict()[1]
-text_dict2 = pd.read_csv('../data/tables/'+table,header=None,index_col=1).to_dict()[0]
-
-ability_shop_table = pd.read_csv('../data/tables/text_tables/ability_shop_text.csv',header=None,index_col=0).to_dict()[1]
-ability_chest_table = pd.read_csv('../data/tables/text_tables/ability_chest_text.csv',header=None,index_col=0).to_dict()[1]
-job_shop_table = pd.read_csv('../data/tables/text_tables/job_shop_text.csv',header=None,index_col=0).to_dict()[1]
-job_chest_table = pd.read_csv('../data/tables/text_tables/job_chest_text.csv',header=None,index_col=0).to_dict()[1]
-magic_chest_table = pd.read_csv('../data/tables/text_tables/magic_chest_text.csv',header=None,index_col=0).to_dict()[1]
-key_item_table = pd.read_csv('../data/tables/text_tables/key_item_text.csv',header=None,index_col=0).to_dict()[1]
-key_item_reward_table = pd.read_csv('../data/tables/text_tables/key_item_reward_text.csv',header=None,index_col=0).to_dict()[1]
-kuzar_rewards = pd.read_csv('../data/tables/text_tables/kuzar_rewards.csv',header=None,index_col=0).to_dict()[1]
+#ability_shop_table = pd.read_csv('tables/text_tables/ability_shop_text.csv',header=None,index_col=0).to_dict()[1]
+#ability_chest_table = pd.read_csv('tables/text_tables/ability_chest_text.csv',header=None,index_col=0).to_dict()[1]
+#job_shop_table = pd.read_csv('tables/text_tables/job_shop_text.csv',header=None,index_col=0).to_dict()[1]
+#job_chest_table = pd.read_csv('tables/text_tables/job_chest_text.csv',header=None,index_col=0).to_dict()[1]
+#magic_chest_table = pd.read_csv('tables/text_tables/magic_chest_text.csv',header=None,index_col=0).to_dict()[1]
+key_item_table = pd.read_csv('tables/text_tables/key_item_text.csv',header=None,index_col=0).to_dict()[1]
+#key_item_reward_table = pd.read_csv('tables/text_tables/key_item_reward_text.csv',header=None,index_col=0).to_dict()[1]
+#kuzar_rewards = pd.read_csv('tables/text_tables/kuzar_rewards.csv',header=None,index_col=0).to_dict()[1]
 
 
 data = '''
@@ -54,7 +51,6 @@ def run_decrypt():
         final_str = final_str + str(byte)
         
     print(final_str)
-    
     
     
 def run_encrypt(passed_dict):
@@ -102,16 +98,18 @@ def run_kuzar_encrypt(passed_dict):
             else:    
                 text_list.append(text_dict2[char])
                 counter = counter + 1
-        text_asar = 'db $01, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF'
+        text_asar = 'db $01, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF,'
         for i in text_list:
             text_asar = text_asar + " $" + i + ","
         text_asar = text_asar[:-1]
-        print("; "+x)
+        #print("; "+x)
         return_text = return_text + "; "+x +"\n"
-        print('org $'+passed_dict[x])
+        #print('org $'+passed_dict[x])
         return_text = return_text + 'org $'+passed_dict[x] +"\n"
-        print(text_asar)
-        return_text = return_text + text_asar + ", db$00\n"
+
+        #print(text_asar)
+        return_text = return_text + text_asar + ", $00\n"
+
     return return_text
 
         
