@@ -392,6 +392,8 @@ class Conductor():
                 [x for x in self.SM.shops if x.shop_type == "01" and x.valid and x.num_items > 0][chosen_shop].contents[chosen_slot] = item_to_place
 
     def randomize_bosses(self):
+        list_of_randomized_enemies = []
+
         # This has to be done twice in order for the enemy classes to NOT be shared objects
         # Very important or else swapping HP becomes very muddy and original hp values on enemies are not preserved
                         
@@ -744,6 +746,7 @@ class Conductor():
             text_str = og_text
             write_flag = False
             for enemy in random_boss.enemy_classes:
+                list_of_randomized_enemies.append(enemy) #maintain a list of only the enemies we've actually randomized
                 text_str = text_str + '; ENEMY: '+enemy.enemy_name+'\n'
                 df_temp = self.DM.files['boss_scaling'][(self.DM.files['boss_scaling']['idx']==int(enemy.idx)) & (self.DM.files['boss_scaling']['tier']==new_tier)]
                 
@@ -825,6 +828,8 @@ class Conductor():
                     file.write(";---------\n")
             '''
 
+        self.EM.relevant_enemies = list_of_randomized_enemies
+
     def starting_crystal_patch(self):
         output = ";================"
         output = output + "\n;starting crystal"
@@ -902,7 +907,7 @@ class Conductor():
         patch = patch + self.RM.get_patch()
         patch = patch + self.SM.get_patch()
         patch = patch + self.SPM.get_patch()
-        patch = patch + self.EM.get_patch()
+        patch = patch + self.EM.get_patch(relevant=True)
         patch = patch + self.FM.get_patch()
         patch = patch + self.kuzar_text_patch()
 
