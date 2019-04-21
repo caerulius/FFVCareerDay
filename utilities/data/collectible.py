@@ -14,7 +14,7 @@ class Collectible(ABC):
         else:
             self.max_count = int(max_count)
         self.reward_id = reward_id
-        self.reward_name = reward_name
+        self.collectible_name = reward_name
         self.reward_value = reward_value
         self.related_jobs = [x.replace('"', '').replace(' ', '')
                               .replace('“', '').replace('”', '')
@@ -24,6 +24,11 @@ class Collectible(ABC):
         else:
             self.valid = valid == "TRUE"
         self.place_weight = 1
+
+        @property
+        @abstractmethod
+        def reward_name(self):
+            pass
 
         @property
         @abstractmethod
@@ -42,6 +47,11 @@ class Item(Collectible):
     @property
     def patch_id(self):
         return self.reward_id
+
+    @property
+    def reward_name(self):
+        return self.collectible_name
+    
         
 class Magic(Collectible):
     reward_type = '20'
@@ -55,6 +65,10 @@ class Magic(Collectible):
     @property
     def patch_id(self):
         return self.progression_id
+
+    @property
+    def reward_name(self):
+        return self.collectible_name + " " + self.type
     
 
 class Crystal(Collectible):
@@ -82,6 +96,10 @@ class Crystal(Collectible):
     @property
     def patch_id(self):
         return self.reward_id
+
+    @property
+    def reward_name(self):
+        return self.collectible_name + " " + "Job Crystal"
         
 class Ability(Collectible):
     reward_type = '60'
@@ -95,6 +113,10 @@ class Ability(Collectible):
     def patch_id(self):
         return self.progression_id
 
+    @property
+    def reward_name(self):
+        return self.collectible_name + " " + "Ability"
+
 class Gil(Collectible):
     reward_type = ""
     def __init__(self, gil_id, data_row):
@@ -105,6 +127,10 @@ class Gil(Collectible):
     @property
     def patch_id(self):
         return self.reward_id
+
+    @property
+    def reward_name(self):
+        return self.collectible_name
 
 class KeyItem(Collectible):
     reward_type = '30'
@@ -122,6 +148,10 @@ class KeyItem(Collectible):
     @property
     def patch_id(self):
         return self.reward_id
+
+    @property
+    def reward_name(self):
+        return self.collectible_name
 
 class CollectibleManager():
     def __init__(self, data_manager):
