@@ -4,6 +4,7 @@ import pandas as pd
 import random
 from abc import ABC, abstractmethod
 import math
+from progression_translation import *
 
 class Collectible(ABC):
     def __init__(self, reward_id, reward_name, reward_value, related_jobs,
@@ -66,10 +67,19 @@ class Magic(Collectible):
     def patch_id(self):
         return self.progression_id
 
+    '''
     @property
     def reward_name(self):
         return self.collectible_name + " " + self.type
+    '''
     
+    @property
+    def reward_name(self):
+        if self.progression_id in progression_magic:
+            return progression_magic[self.progression_id]
+        else:
+            return self.collectible_name
+
 
 class Crystal(Collectible):
     reward_type = '50'
@@ -113,9 +123,19 @@ class Ability(Collectible):
     def patch_id(self):
         return self.progression_id
 
+    '''
     @property
     def reward_name(self):
         return self.collectible_name + " " + "Ability"
+    '''
+
+    @property
+    def reward_name(self):
+        if self.progression_id in progression_abilities:
+            return progression_abilities[self.progression_id]
+        else:
+            return self.collectible_name
+
 
 class Gil(Collectible):
     reward_type = ""

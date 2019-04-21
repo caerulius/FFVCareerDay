@@ -1,0 +1,7311 @@
+-----STARTING JOB, WEAPON, MAGIC-----
+Starting job:     Hunter
+Starting weapon:  Knife
+Starting spell:   None
+Starting ability: Animals
+-----***************************-----
+-----CHESTS AND EVENTS-----
+Wind Crystal Knight -> Life
+Wind Crystal BlueMage -> Preemptive
+Wind Crystal BlackMage -> Antdt
+Wind Crystal WhiteMage -> Demi
+Wind Crystal Monk -> Bandana
+Wind Crystal Thief -> Missile
+Fire Crystal Mediator -> Terrain
+Fire Crystal Geomancer -> Old
+Fire Crystal Ninja -> Red Lv.2
+Black Choco Crystals Bard -> Speed Drink
+Black Choco Crystals Hunter -> Dimen Lv.5
+Earth Crystal Samurai -> Thor Hammer
+Earth Crystal Dragoon -> Qrter
+Earth Crystal Chemist -> LuckMallet
+Earth Crystal Dancer -> Revive
+Leviathan Esper Levia -> Red Lv.3
+Titan Titan -> Giant Drink
+Carbuncle Crbnkl -> Hammer
+Syldra Syldra -> Tent
+Odin Odin -> Bio
+Phoenix Phenix -> Leather Cap
+Bahamut Bahmut -> Bronze Shield
+Life (or Strength) Song from Crescent Town bard Vitality -> DarkMatter
+Temptation Song at Lix Charm -> DoomCut
+Love Song at Istory Love -> Kotetsu
+Requiem Song at Kelb Requiem -> Dimen Lv.2
+Speed Song at Surgate Speed -> Fire3
+Magic Song at Ancient Library Magic -> Leather Shield
+Power Song from Crescent Town Power -> Bronze Helm
+Hero Song from Crescent Town Hero -> Aero 3
+Fork Tower, two Magics Holy -> Aero
+Fork Tower, two Magics Flare -> Blue
+Meteo Meteo -> RisingSun
+5 potions in Wind Shrine, bottom left guy Potion -> Iron Armor
+8 potions, Pirate after Torna Canal Key acquired Potion -> RegalCut
+Chancellor at Tycoon Healing Staff -> WhiteWind
+Magisa & Forza Mythril Helm -> Bolt3
+CornaJar at Kelb CornaJar -> Psych
+Ribbon from girl in Rugor Ribbon -> Combine
+Mirage Vest from Chocobo Tour/Mirage Village Mirage Vest -> Coral Sword
+12 Kuzar Events Assassin -> Haste
+12 Kuzar Events Apollo's Harp -> Bolt
+12 Kuzar Events Excalibur -> DarkSuit
+12 Kuzar Events Flame Whip -> Thunder Whip
+12 Kuzar Events Earth Bell -> Time Slip
+12 Kuzar Events Holy Lance -> Black Lv.5
+12 Kuzar Events Masamune -> Training Suit
+12 Kuzar Events Wizard Rod -> TimeMage
+12 Kuzar Events Rune Axe -> Analyze
+12 Kuzar Events Sage's Staff -> Escape
+12 Kuzar Events Sasuke -> Training Suit
+12 Kuzar Events Yoichi Bow -> Drain
+Shiva Shiva -> Ice3
+Ifrit Ifrit -> Red Lv.1
+Water Crystal Samurai -> Black Lv.2
+Water Crystal Berserker -> FrogSong
+Water Crystal MysticKnight -> Power Staff
+Water Crystal TimeMage -> Observe
+Water Crystal Summoner -> Summoner
+Brave Blade Brave Blade -> Mute
+Chicken Knife Chicken Knife -> Chicken Knife
+Tycoon Castle Cabin Cabin -> Magus
+Tycoon Castle Cabin Cabin -> Exit
+Walse Tower Chest GoGo -> Samurai
+Pyramid Top Pyramid Tablet -> Tricorn Hat
+Toad Event Toad -> Staff
+Aegis Shield Chest Aegis Shield -> Aegis Shield
+Wind Shrine Chest Broadsword -> Steal
+Beginner's House Chest Ether -> Capture
+Beginner's House Chest 100 -> GblinPnch
+Beginner's House Chest Potion -> Fire2
+Beginner's House Chest Phoenix Down -> Psych
+Beginner's House Chest Tent -> Flare
+Beginner's House Chest Leather Shoes -> Rod
+Pirate's Cave Chest Leather Cap -> Cursed Shield
+Pirate's Cave Chest Tent -> Plumed Hat
+Pirate's Cave Chest Ether -> Leather Shield
+Pirate's Cave Chest 300 -> Leather Armor
+Wind Shrine Chest Tent -> MgcSwrd Lv.4
+Wind Shrine Chest Leather Cap -> Cabin
+Wind Shrine Chest Staff -> Epee Sword
+Tule Barrel 150 -> Wind Spear (monster in a box)
+Tule Box Leather Shoes -> Ice Bow
+Tule Barrel Potion -> Mage Masher
+Tule Box Tent -> Drain
+Tule Bush Phoenix Down -> Medicine
+Ship Graveyard Chest Flail -> Diamond Armlet
+Ship Graveyard Chest Phoenix Down -> Equip Rods
+Ship Graveyard Chest Tent -> Float
+Ship Graveyard Box 990 -> Kodachi
+Ship Graveyard Chest Potion -> MgcSwrd Lv.6
+Ship Graveyard Chest Antidote -> Sleep
+Ship Graveyard Chest Antidote -> Speed Drink
+Ship Graveyard Chest Phoenix Down -> MgthyGrd
+Carwen Barrel Antidote -> Silk robe
+Carwen Box Ice Rod -> Ice Bow
+Carwen Pot 1000 -> ????
+North Mountain Chest Soft -> Fire
+North Mountain Chest Phoenix Down -> GuardOff
+Walse Town Pot Glasses -> Rainbow Dress
+Tycoon Castle Pot Hi-Potion -> Giant's Gloves
+Tycoon Castle Pot Ether -> Bersk
+Tycoon Castle Barrel Elixir -> White Robe
+Tycoon Castle Barrel Phoenix Down -> Thief
+Tycoon Castle Barrel Cabin -> Cabin
+Tycoon Castle Pot Ether -> Black Lv.1
+Tycoon Castle Pot Elixir -> Hide
+Tycoon Castle Pot Phoenix Down -> Flail
+Tycoon Castle Pot Maiden's Kiss -> Charm
+Tycoon Castle Chest Shuriken -> Shuriken
+Tycoon Castle Chest Giyaman -> HP +20%
+Tycoon Castle Chest Katana -> Reset
+Walse Castle Chest Elf Cape -> Dimen Lv.4
+Walse Castle Pot 1000 -> Counter
+Walse Castle Pot Drag -> Bolt3
+Walse Castle Pot 1000 -> MysticKnight
+Walse Castle Box 490 -> Tricorn Hat
+Walse Castle Barrel Tent -> Bolt2
+Walse Castle Barrel Phoenix Down -> Crystal Shield
+Walse Tower Chest Silk robe -> Bolt2
+Walse Tower Chest Maiden's Kiss -> Judgement Staff
+Walse Tower Chest Silver Armlet -> IceBrand
+Walse Tower Chest Ether -> Staff
+Tycoon Meteor Chest Phoenix Down -> Bard's Surplice
+Karnak Castle Chest Gungnir -> Crystal Helm
+Karnak Castle Chest Thunder Scroll -> ManEater (monster in a box)
+Karnak Castle Chest 2000 -> Tricorn Hat (monster in a box)
+Karnak Castle Chest Elixir -> AntiMagic Bow (monster in a box)
+Karnak Castle Chest Elixir -> Bronze Helm (monster in a box)
+Karnak Castle Chest Elixir -> Knife (monster in a box)
+Karnak Castle Chest 2000 -> Bard's Surplice (monster in a box)
+Karnak Castle Chest Elixir -> Hero Drink (monster in a box)
+Karnak Castle Chest Elixir -> Ice Shield (monster in a box)
+Karnak Castle Chest Ribbon -> Thunder Scroll (monster in a box)
+Karnak Castle Chest Shuriken -> Fire Bow
+Karnak Castle Chest 2000 -> Iron Helm (monster in a box)
+Karnak Castle Chest Elixir -> Earth Bell (monster in a box)
+Karnak Castle Chest Elf Cape -> BeastKiller (monster in a box)
+Karnak Castle Chest Guardian -> Bronze Helm
+Karnak Town Barrel Fire Rod -> Ice
+Steamship Chest Cabin -> Flail
+Steamship Chest Phoenix Down -> Leather Shield
+Steamship Chest Elixir -> Bronze Shield
+Steamship Chest GrnBeret -> Monk
+Steamship Chest Thief's Glove -> Black Robe
+Steamship Chest Elixir -> DoomCut
+Ancient Library Chest Ether -> Quick
+Ancient Library Chest Phoenix Down -> Ancient Sword
+Ancient Library Chest Stealth Suit -> MP +30%
+Jacole Cave Chest Shuriken -> Drink
+Jacole Cave Chest Tent -> Flirt
+Ruined City Chest Shuriken -> Toad
+Ruined City Chest Shuriken -> Flail
+Ruined City Chest Size -> Vampire
+Flying Lonka Ruins Chest Golden Armor -> BlueMage
+Flying Lonka Ruins Chest Elixir -> Rune Chime
+Flying Lonka Ruins Chest Phoenix Down -> Cursed Shield
+Flying Lonka Ruins Chest Golden Shield -> GrnBeret
+Steamship Chest Mythril Glove -> Ice2
+Steamship Chest Elixir -> Ice Shield
+Steamship Chest Full Moon -> Angel Gwn
+Flying Lonka Ruins Chest Hi-Potion -> Mythril Sword
+Flying Lonka Ruins Chest 5000 -> Fire
+Flying Lonka Ruins Chest Shuriken -> Genji Gloves
+Flying Lonka Ruins Chest Ancient Sword -> Summon Lv.1
+Flying Lonka Ruins Chest Full Moon -> Iron Armor
+Flying Lonka Ruins Chest Power Wrist -> MoonFlut
+Flying Lonka Ruins Chest Ether -> Vitality
+Flying Lonka Ruins Chest Cabin -> Mantra
+Exdeath's Castle Chest Ether -> L4 Qrter
+Exdeath's Castle Chest Diamond Shield -> DblLance
+Exdeath's Castle Chest Ice Shield -> Protect Drink
+Exdeath's Castle Chest Ether -> Tinkerbell
+Exdeath's Castle Chest Elixir -> Meteo
+Exdeath's Castle Chest Gale Bow -> Flare
+Exdeath's Castle Chest IceBrand -> Dancer
+Exdeath's Castle Chest Kotetsu -> Black Lv.4
+Exdeath's Castle Chest 9900 -> Mage Masher
+Exdeath's Castle Chest Elixir -> Dbl Grip
+Exdeath's Castle Chest 8000 -> Broadsword
+Exdeath's Castle Chest DblLance -> Size
+Exdeath's Castle Chest Partisan -> Ice
+Exdeath's Castle Chest Pinwheel -> Stop
+Moogle Cave Chest 4400 -> Pray
+Moogle Cave Chest Phoenix Down -> CopperPlt
+Moogle Village Chest Cabin -> Fusion
+Moogle Village Chest Dancing Dagger -> Condemn
+Moogle Village Chest 1 -> Guardian
+Moogle Village Chest 10000 -> Flame Shield
+Moogle Village Chest Phoenix Down -> Dancing Dagger
+Moogle Village Chest Ether -> Silk robe
+Moogle Village Chest Elf Cape -> HP +10%
+Bal Castle Chest Angel Gwn -> Ramuh
+Bal Castle Chest Hero Drink -> Comet
+Bal Castle Chest Exit -> DblLance
+Hiryuu Valley Skull Bone Mail -> Rod
+Hiryuu Valley Chest 5000 -> Plumed Hat
+Hiryuu Valley Chest Cabin -> Silk robe
+Hiryuu Valley Chest 7000 -> Mythril Knife
+Hiryuu Valley Chest Coronet -> Bronze Shield
+Hiryuu Valley Chest Air Blade -> Knife
+Hiryuu Valley Chest Phoenix Down -> HiPotion
+Surgate Castle Chest 5000 -> L3 Flare
+Surgate Castle Chest Float -> Venom
+Barrier Tower Chest Drain Sword -> Speed Drink (monster in a box)
+Barrier Tower Chest 9000 -> Break
+Barrier Tower Chest 18000 -> Kick
+Barrier Tower Chest Gold Hairpin -> Lamia's Harp (monster in a box)
+Mua Town Barrel Guardian -> AquaRake
+Mua Forest Chest 2500 -> ManEater
+Mua Forest Chest Ether -> Avis Killer
+Mua Forest Chest 4900 -> Xzone
+Mua Forest Chest Phoenix Down -> Javelin
+Mua Forest Chest 9500 -> Bronze Shield
+Mua Forest Chest Soot -> Aero 2
+Mua Forest Chest Flametongue -> Summon Lv.2
+Mua Forest Chest Cabin -> Dance
+Mua Forest Chest Giant Drink -> Giant Drink
+Mua Forest Chest Elixir -> BlackMage
+Mua Forest Chest Morning Star -> DarkMatter
+Solitary Island Chest Ether -> Coronet
+Solitary Island Chest DragonFang -> Masamune (monster in a box)
+Pyramid Chest Elixir -> Coral Sword
+Pyramid Chest Elixir -> Bandana (monster in a box)
+Pyramid Chest Black Robe -> Giyaman (monster in a box)
+Pyramid Chest Thornlet -> Bio
+Pyramid Chest DarkMatter -> Diamond Armor (monster in a box)
+Pyramid Chest Crystal Armor -> Crystal Shield (monster in a box)
+Pyramid Chest Cursed Ring -> Sasuke (monster in a box)
+Pyramid Chest Ice Shield -> DarkSuit
+Pyramid Chest Flame Shield -> CopperPlt
+Pyramid Chest DarkMatter -> DiamndPlt
+Pyramid Chest White Robe -> Flame Shield (monster in a box)
+Pyramid Chest DarkSuit -> DarkSuit
+Pyramid Chest DarkMatter -> Giyaman (monster in a box)
+Pyramid Chest DarkMatter -> Full Moon
+Pyramid Chest DarkMatter -> RuneEdge
+Pyramid Chest 9000 -> Bizen (monster in a box)
+Pyramid Chest 8000 -> Equip Whips
+Pyramid Chest Earth Hammer -> Healing Staff
+Pyramid Chest 10000 -> Stealth Suit
+Pyramid Chest Cabin -> Protect Drink (monster in a box)
+Pyramid Chest Elixir -> Gold Hairpin (monster in a box)
+Pyramid Chest 12000 -> MindBlst
+Pyramid Chest DarkMatter -> Crystal Helm (monster in a box)
+Pyramid Chest Elixir -> Angel Ring (monster in a box)
+Pyramid Chest DarkMatter -> Thornlet (monster in a box)
+Pyramid Chest Guard Ring -> Strength (monster in a box)
+Pyramid Chest Ribbon -> Slow
+Pyramid Chest Gold Hairpin -> Hero Drink
+Solitary Island Chest 12000 -> Power Wrist (monster in a box)
+Solitary Island Chest Hi-Potion -> Agility
+Solitary Island Chest Protect Drink -> Power Wrist
+Solitary Island Chest BeastKiller -> Mythril Armor
+Solitary Island Chest RisingSun -> Black Robe
+Solitary Island Chest Ether -> Bronze Helm
+Solitary Island Chest Guard Ring -> Full Moon
+Solitary Island Chest Crystal Helm -> Cure
+Solitary Island Chest 9000 -> Conjure
+Solitary Island Chest Elixir -> Iron Helm
+Solitary Island Chest DarkMatter -> Black Lv.6
+Solitary Island Chest Circlet -> Power Drink
+Fork Tower L. Chest Ether -> Armor
+Fork Tower L. Chest Wonder Wand -> Chemist
+Fork Tower R. Chest Hi-Potion -> DmgFloor
+Fork Tower R. Chest Defender Sword -> Mute
+Great Trench Chest Water Scroll -> Black Lv.3
+Great Trench Chest Flame Ring -> Exploder
+Great Trench Chest DragonFang -> Mythril Shield
+Great Trench Chest Ether -> Sleep
+Great Trench Chest Phoenix Down -> Golden Armor
+Great Trench Chest Kaiser Knuckles -> Speed Drink
+Istory Falls Chest Ether -> Mage Masher
+Istory Falls Chest TurtleShell -> Mythril Helm
+Istory Falls Chest Air Lance -> Geomancer
+Istory Falls Chest Giant Drink -> Evade
+Istory Falls Chest RuneEdge -> MgcSwrd Lv.5
+Istory Falls Chest Guard Ring -> Fire3
+Istory Falls Chest Wall Ring -> Golden Armor
+Istory Falls Chest Phoenix Down -> Dimen Lv.6
+Istory Falls Chest Enhancer -> Doom
+Istory Falls Chest 12000 -> Golden Helm
+Istory Falls Chest Artemis Bow -> Artemis Bow
+Istory Falls Chest Pinwheel -> Equip Spears
+Istory Falls Chest Aegis Shield -> Blowfish
+Istory Falls Chest Giant's Axe -> White Lv.2
+Phoenix Tower Pot 5000 -> Giyaman
+Phoenix Tower Pot Phoenix Down -> Bronze Armor (monster in a box)
+Phoenix Tower Pot 10000 -> Bandana
+Phoenix Tower Pot Phoenix Down -> Bronze Helm
+Phoenix Tower Pot Phoenix Down -> RegalCut (monster in a box)
+Phoenix Tower Pot 15000 -> Giyaman
+Phoenix Tower Pot 20000 -> Giyaman (monster in a box)
+Phoenix Tower Pot Phoenix Down -> Potion (monster in a box)
+Phoenix Tower Pot Avis Killer -> Chain Whip (monster in a box)
+Phoenix Tower Pot 25000 -> Staff
+Mirage Village Barrel Thief Knife -> Slow2
+Rift (Ruins) Chest Ether -> Remora
+Rift (Ruins) Chest Cabin -> Fire2
+Rift (Ruins) Chest Elixir -> Void
+Rift (Ruins) Chest DarkMatter -> Magus
+Rift (Ruins) Chest Elixir -> Diamond Helm
+Rift (Ruins) Chest Drain Sword -> Orialcon
+Rift (Forest) Chest DragonFang -> Barrier
+Rift (Forest) Chest Ribbon -> Iron Shield
+Rift (Forest) Chest Enhancer -> X-Magic
+Rift (Forest) Chest Lillith Rod -> Genji Helm
+Rift (Cave) Chest Angel Ring -> RedMage
+Rift (Cave) Chest Coral Ring -> HiPotion
+Rift (Castle) Chest Thor Hammer -> Chain Whip
+Rift (Castle) Chest Running Shoes -> Ice Rod
+Rift (Castle) Chest Red Shoes -> TinySong
+Rift (Castle) Chest Rainbow Dress -> BuildUp
+Rift (Castle) Chest ManEater -> Thunder Whip
+The Void Chest Pinwheel -> DarkSuit
+The Void Chest Pinwheel -> Brawl
+The Void Chest Elixir -> Hast2
+The Void Chest Ragnarok -> GrnBeret (monster in a box)
+The Void Chest Pinwheel -> Break
+Byblos New -> Enhancer
+WingRaptor New -> Elder Branch
+Karlabos New -> Wizard Rod
+Siren New -> DarkSuit
+Magisa & Forza New -> Steamship Key
+Galura New -> DoomCut
+LiquiFlame New -> Pyramid Page
+Sergeant & DeathClaw New -> Falls Page
+Sandworm New -> Bracelet
+AdamanTiMi New -> 4th Tablet
+Sol Cannon New -> Shrine Page
+ArchaeAvis New -> Aegis Shield
+Chim.Brain New -> Avis Killer
+Titan New -> Tinkerbell
+Puroboros New -> Ifrit’s Fire
+Gilgamesh 1 New -> 1st Tablet
+Gilgamesh 2 New -> Moogle Suit
+Tyrasaurus New -> 2nd Tablet
+Abductor New -> Magic Lamp
+HiryuuPlant New -> Anti Barrier
+Gilgamesh 3 & Enkidou New -> Sandworm Bait
+Atmos New -> DiamndPlt
+Guardians New -> 3rd Tablet
+Carbunkle New -> Excalibur
+Gilgamesh 4 New -> Canal Key
+Antlion New -> Genji Shield
+Merugene New -> Genji Armor
+Odin New -> Trench Page
+Triton, Neregeid & Phobos New -> Mirage Vest
+Omniscient New -> Hiryuu Call
+Minotauros New -> Earth Hammer
+Leviathan New -> Judgement Staff
+Stalker New -> Big Bridge Key
+GoGo New -> Judgement Staff
+Bahamut New -> Adamantite
+Ifrit New -> Submarine Key
+Shiva New -> DarkSuit
+Crayclaw New -> Walse Tower Key
+-----****************-----
+-----SHOPS-----
+Shop: Tule Weapon
+Shop Type: 01
+Shop Item 1: Broadsword -> Wizard Rod
+Shop Item 2: Rod -> Strength
+Shop Item 3: Staff -> Earth Bell
+Shop Item 4: None -> Black Robe
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Tule Armor
+Shop Type: 00
+Shop Item 1: Leather Shield -> Magic
+Shop Item 2: Leather Cap -> DrkShock
+Shop Item 3: Leather Armor -> L2 Old
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Tule Inn
+Shop Type: 01
+Shop Item 1: Potion -> Wizard Rod
+Shop Item 2: Tent -> Hero Drink
+Shop Item 3: None -> Lumina Robe
+Shop Item 4: None -> Mirage Vest
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Tule Magic
+Shop Type: 01
+Shop Item 1: Fire -> Mythril Helm
+Shop Item 2: Ice -> Crystal Armor
+Shop Item 3: Bolt -> Coral Sword
+Shop Item 4: Cure -> Gold Hairpin
+Shop Item 5: Scan -> Excalibur
+Shop Item 6: Antdt -> Soft
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Carwen Weapon
+Shop Type: 07
+Shop Item 1: Dagger -> HP +30%
+Shop Item 2: RegalCut -> Dimen Lv.1
+Shop Item 3: Rod -> MgcSwrd Lv.3
+Shop Item 4: Staff -> Hunter
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Carwen Armor
+Shop Type: 01
+Shop Item 1: Bronze Shield -> Full Moon
+Shop Item 2: Bronze Helm -> Staff
+Shop Item 3: Bronze Armor -> Ice Rod
+Shop Item 4: CopperPlt -> Crystal Helm
+Shop Item 5: Cotton Robe -> Mythril Helm
+Shop Item 6: None -> Dagger
+Shop Item 7: None -> Soft
+Shop Item 8: None -> None
+
+Shop: Carwen Inn
+Shop Type: 07
+Shop Item 1: Potion -> Equip Bows
+Shop Item 2: Antidote -> Summon Lv.4
+Shop Item 3: Eyedrop -> MgcSwrd Lv.2
+Shop Item 4: Maiden's Kiss -> White Lv.5
+Shop Item 5: LuckMallet -> None
+Shop Item 6: Soft -> None
+Shop Item 7: Phoenix Down -> None
+Shop Item 8: Tent -> None
+
+Shop: Carwen Magic
+Shop Type: 00
+Shop Item 1: Fire -> Roulette
+Shop Item 2: Ice -> Venom
+Shop Item 3: Bolt -> Scan
+Shop Item 4: Sleep -> Cure2
+Shop Item 5: Cure -> Emission
+Shop Item 6: Antdt -> None
+Shop Item 7: Mute -> None
+Shop Item 8: Armor -> None
+
+Shop: Worus Weapon
+Shop Type: 00
+Shop Item 1: Battle Axe -> Cure3
+Shop Item 2: RegalCut -> Odin
+Shop Item 3: Dagger -> Chocob
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Worus Armor
+Shop Type: 00
+Shop Item 1: Iron Shield -> Titan
+Shop Item 2: Iron Helm -> Shoat
+Shop Item 3: Iron Armor -> Phenix
+Shop Item 4: Training Suit -> None
+Shop Item 5: Cotton Robe -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Worus Magic
+Shop Type: 01
+Shop Item 1: Slow -> Diamond Armor
+Shop Item 2: Regen -> Staff of Light
+Shop Item 3: Void -> Strength
+Shop Item 4: Haste -> Cotton Robe
+Shop Item 5: Chocob -> DiamndPlt
+Shop Item 6: Sylph -> Revivify
+Shop Item 7: Remora -> Elixir
+Shop Item 8: Fire -> None
+
+Shop: Karnak Weapon 1
+Shop Type: 01
+Shop Item 1: Mythril Knife -> Diamond Shield
+Shop Item 2: Mythril Sword -> Flail
+Shop Item 3: Mythril Hammer -> Staff of Light
+Shop Item 4: Fire Rod -> Forged
+Shop Item 5: Ice Rod -> Thornlet
+Shop Item 6: Thunder Rod -> AntiMagic Bow
+Shop Item 7: Flail -> None
+Shop Item 8: None -> None
+
+Shop: Karnak Weapon 2
+Shop Type: 07
+Shop Item 1: Mythril Spear -> Summoner
+Shop Item 2: Kunai -> Aim
+Shop Item 3: Whip -> Summon Lv.5
+Shop Item 4: Giyaman -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Karnak Armor
+Shop Type: 07
+Shop Item 1: Mythril Shield -> White Lv.1
+Shop Item 2: Mythril Helm -> Equip Ribbon
+Shop Item 3: Plumed Hat -> GilToss
+Shop Item 4: Mythril Armor -> Equip Katana
+Shop Item 5: Silver Plate -> None
+Shop Item 6: Silk robe -> None
+Shop Item 7: Mythril Glove -> None
+Shop Item 8: Silver Armlet -> None
+
+Shop: Common World 1 Inn
+Shop Type: 00
+Shop Item 1: Potion -> DethClaw
+Shop Item 2: Antidote -> Life2
+Shop Item 3: Eyedrop -> Image
+Shop Item 4: Maiden's Kiss -> Syldra
+Shop Item 5: LuckMallet -> Heal
+Shop Item 6: Soft -> None
+Shop Item 7: Phoenix Down -> None
+Shop Item 8: Tent -> None
+
+Shop: Karnak Magic 1
+Shop Type: 01
+Shop Item 1: Fire2 -> Ribbon
+Shop Item 2: Ice2 -> White Robe
+Shop Item 3: Bolt2 -> Protect Drink
+Shop Item 4: Venom -> Enhancer
+Shop Item 5: Sleep -> Brave Blade
+Shop Item 6: Fire -> Aegis Shield
+Shop Item 7: Ice -> DarkMatter
+Shop Item 8: Bolt -> Apollo's Harp
+
+Shop: Karnak Magic 2
+Shop Type: 01
+Shop Item 1: Cure2 -> Leather Cap
+Shop Item 2: Life -> Flame Shield
+Shop Item 3: Charm -> Cursed Shield
+Shop Item 4: Mute -> Magic Lamp
+Shop Item 5: Armor -> Glasses
+Shop Item 6: Cure -> Crystal Helm
+Shop Item 7: Scan -> None
+Shop Item 8: Antdt -> None
+
+Shop: Karnak Magic 3
+Shop Type: 01
+Shop Item 1: Demi -> Ancient Sword
+Shop Item 2: Stop -> RegalCut
+Shop Item 3: Haste -> DarkSuit
+Shop Item 4: Void -> Tempest
+Shop Item 5: Slow -> DiamndPlt
+Shop Item 6: Regen -> Diamond Armlet
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Crescent Weapon
+Shop Type: 00
+Shop Item 1: Fire Bow -> Bolt
+Shop Item 2: Ice Bow -> Bahmut
+Shop Item 3: Thunder Bow -> Holy
+Shop Item 4: Silver Harp -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Crescent Armor
+Shop Type: 00
+Shop Item 1: Plumed Hat -> Sylph
+Shop Item 2: Bard's Surplice -> Charm
+Shop Item 3: None -> None
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Istory Relic
+Shop Type: 01
+Shop Item 1: Flame Ring -> Morning Star
+Shop Item 2: Coral Ring -> Protect Drink
+Shop Item 3: Angel Ring -> Lamia's Tiara
+Shop Item 4: None -> Wizard Rod
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Jacole Weapon
+Shop Type: 00
+Shop Item 1: Ogre Killer -> Requiem
+Shop Item 2: Coral Sword -> Love
+Shop Item 3: Mage Masher -> Power
+Shop Item 4: Trident -> Golem
+Shop Item 5: Katana -> Hero
+Shop Item 6: Silver Bow -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Jacole Armor
+Shop Type: 00
+Shop Item 1: GrnBeret -> Ramuh
+Shop Item 2: Stealth Suit -> Wall
+Shop Item 3: Bard's Surplice -> Shell
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Common World 2 Inn 1
+Shop Type: 01
+Shop Item 1: Ether -> Leather Armor
+Shop Item 2: Revivify -> Venom Rod
+Shop Item 3: Cabin -> Stealth Suit
+Shop Item 4: Giant Drink -> Power Staff
+Shop Item 5: Power Drink -> Flame Scroll
+Shop Item 6: Speed Drink -> Power Drink
+Shop Item 7: Protect Drink -> Wind Spear
+Shop Item 8: Hero Drink -> Dagger
+
+Shop: Lix Guild
+Shop Type: 07
+Shop Item 1: Kunai -> Mimic
+Shop Item 2: Shuriken -> Berserk
+Shop Item 3: Flame Scroll -> 2-Handed
+Shop Item 4: Water Scroll -> Mimic
+Shop Item 5: Thunder Scroll -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Lix Armor
+Shop Type: 07
+Shop Item 1: GrnBeret -> Ninja
+Shop Item 2: Stealth Suit -> None
+Shop Item 3: None -> None
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Lix Magic
+Shop Type: 07
+Shop Item 1: Heal -> Slash
+Shop Item 2: Fire -> None
+Shop Item 3: Fire -> None
+Shop Item 4: Fire -> None
+Shop Item 5: Fire -> None
+Shop Item 6: Fire -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Rugor Weapon
+Shop Type: 07
+Shop Item 1: Orialcon -> SwdSlap
+Shop Item 2: War Hammer -> Bard
+Shop Item 3: Katana -> Smoke
+Shop Item 4: Slumber Sword -> White Lv.6
+Shop Item 5: Wind Spear -> None
+Shop Item 6: Darkness Bow -> None
+Shop Item 7: Dream Harp -> None
+Shop Item 8: Chain Whip -> None
+
+Shop: Rugor Armor
+Shop Type: 01
+Shop Item 1: Golden Shield -> Giant's Gloves
+Shop Item 2: Golden Helm -> Power Staff
+Shop Item 3: GrnBeret -> Lillith Rod
+Shop Item 4: Tricorn Hat -> Crystal Helm
+Shop Item 5: Golden Armor -> Ribbon
+Shop Item 6: Stealth Suit -> Silk robe
+Shop Item 7: Gaia Gear -> Staff
+Shop Item 8: None -> None
+
+Shop: Common World 2 Inn 2
+Shop Type: 00
+Shop Item 1: HiPotion -> Speed
+Shop Item 2: Potion -> Levia
+Shop Item 3: Phoenix Down -> Shiva
+Shop Item 4: Soft -> Dispel
+Shop Item 5: Maiden's Kiss -> Crbnkl
+Shop Item 6: LuckMallet -> None
+Shop Item 7: Eyedrop -> None
+Shop Item 8: Antidote -> None
+
+Shop: Bal/Kelb Weapon
+Shop Type: 07
+Shop Item 1: Orialcon -> Control
+Shop Item 2: War Hammer -> Equip Harps
+Shop Item 3: Katana -> Cover
+Shop Item 4: Slumber Sword -> Animals
+Shop Item 5: Wind Spear -> None
+Shop Item 6: Darkness Bow -> None
+Shop Item 7: Dream Harp -> None
+Shop Item 8: Chain Whip -> None
+
+Shop: Bal/Kelb Armor
+Shop Type: 07
+Shop Item 1: Golden Shield -> Equip Axes
+Shop Item 2: Golden Helm -> Equip Armors
+Shop Item 3: GrnBeret -> Equip Shield
+Shop Item 4: Tricorn Hat -> Throw
+Shop Item 5: Golden Armor -> None
+Shop Item 6: Stealth Suit -> None
+Shop Item 7: Gaia Gear -> None
+Shop Item 8: Gauntlets -> None
+
+Shop: Kelb Weapon
+Shop Type: 07
+Shop Item 1: Kodachi -> Freelancer
+Shop Item 2: Killer Bow -> Jump
+Shop Item 3: Venom Rod -> Berserker
+Shop Item 4: Shuriken -> Catch
+Shop Item 5: Flame Scroll -> None
+Shop Item 6: Water Scroll -> None
+Shop Item 7: Thunder Scroll -> None
+Shop Item 8: None -> None
+
+Shop: Kelb Armor
+Shop Type: 01
+Shop Item 1: Bandana -> Coral Sword
+Shop Item 2: Strength -> Angel Gwn
+Shop Item 3: Power Wrist -> Stealth Suit
+Shop Item 4: None -> Sage's Staff
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Common World 2 Magic 1
+Shop Type: 01
+Shop Item 1: Image -> Mythril Knife
+Shop Item 2: Shell -> Bone Mail
+Shop Item 3: Heal -> TurtleShell
+Shop Item 4: Fire -> None
+Shop Item 5: Fire -> None
+Shop Item 6: Fire -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Common World 2 Magic 2
+Shop Type: 01
+Shop Item 1: Drain -> Lumina Robe
+Shop Item 2: Break -> Hero Drink
+Shop Item 3: Bio -> RisingSun
+Shop Item 4: Fire -> None
+Shop Item 5: Fire -> None
+Shop Item 6: Fire -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Common World 2 Magic 3
+Shop Type: 01
+Shop Item 1: Comet -> Training Suit
+Shop Item 2: Slow2 -> Sage's Staff
+Shop Item 3: Reset -> Golden Shield
+Shop Item 4: Fire -> None
+Shop Item 5: Fire -> None
+Shop Item 6: Fire -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Surgate Weapon
+Shop Type: 01
+Shop Item 1: Epee Sword -> Ether
+Shop Item 2: Gungnir -> Staff
+Shop Item 3: Bizen -> Crystal Helm
+Shop Item 4: Venom Axe -> IceBrand
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Surgate Armor
+Shop Type: 07
+Shop Item 1: Golden Shield -> Equip Swords
+Shop Item 2: Golden Helm -> Knight
+Shop Item 3: Bandana -> Dragoon
+Shop Item 4: Tricorn Hat -> Summon Lv.3
+Shop Item 5: Golden Armor -> None
+Shop Item 6: Strength -> None
+Shop Item 7: Gaia Gear -> None
+Shop Item 8: Gauntlets -> None
+
+Shop: Mua Weapon
+Shop Type: 07
+Shop Item 1: Air Lance -> Sing
+Shop Item 2: Elven Bow -> None
+Shop Item 3: None -> None
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Mua Armor
+Shop Type: 01
+Shop Item 1: Diamond Shield -> Power Drink
+Shop Item 2: Diamond Helm -> Cabin
+Shop Item 3: Tiger Mask -> DarkSuit
+Shop Item 4: Magus -> Thief Knife
+Shop Item 5: Diamond Armor -> Ribbon
+Shop Item 6: DiamndPlt -> Iron Helm
+Shop Item 7: Lumina Robe -> Iron Shield
+Shop Item 8: Diamond Armlet -> Broadsword
+
+Shop: Mua Magic 1
+Shop Type: 01
+Shop Item 1: Cure3 -> HiPotion
+Shop Item 2: Wall -> Cotton Robe
+Shop Item 3: Bersk -> Healing Staff
+Shop Item 4: Image -> Chicken Knife
+Shop Item 5: Shell -> Morning Star
+Shop Item 6: Heal -> Cursed Shield
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Mua Magic 2
+Shop Type: 01
+Shop Item 1: Fire3 -> Lumina Robe
+Shop Item 2: Ice3 -> Tiger Mask
+Shop Item 3: Bolt3 -> Shuriken
+Shop Item 4: Drain -> Circlet
+Shop Item 5: Break -> Staff of Light
+Shop Item 6: Bio -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Mua Magic 3
+Shop Type: 01
+Shop Item 1: Qrter -> Fire Rod
+Shop Item 2: Hast2 -> Bandana
+Shop Item 3: Old -> Angel Gwn
+Shop Item 4: Comet -> Staff
+Shop Item 5: Slow2 -> RisingSun
+Shop Item 6: Reset -> Avis Killer
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Lix Inn
+Shop Type: 07
+Shop Item 1: Ether -> Image
+Shop Item 2: Potion -> Mediator
+Shop Item 3: Antidote -> WhiteMage
+Shop Item 4: Eyedrop -> MP +10%
+Shop Item 5: LuckMallet -> None
+Shop Item 6: Maiden's Kiss -> None
+Shop Item 7: Soft -> None
+Shop Item 8: Tent -> None
+
+Shop: Dwarf Magic
+Shop Type: 01
+Shop Item 1: Life2 -> Staff of Light
+Shop Item 2: Dispel -> Air Lance
+Shop Item 3: Doom -> War Hammer
+Shop Item 4: Psych -> Ice Rod
+Shop Item 5: Quick -> Whip
+Shop Item 6: Xzone -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Dwarf Weapon
+Shop Type: 01
+Shop Item 1: Earth Hammer -> Ancient Sword
+Shop Item 2: Morning Star -> Lamia's Harp
+Shop Item 3: AntiMagic Bow -> Epee Sword
+Shop Item 4: Forged -> DarkSuit
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Dwarf Armor
+Shop Type: 07
+Shop Item 1: Crystal Shield -> X-Fight
+Shop Item 2: Crystal Helm -> DrgnSwd
+Shop Item 3: DarkHood -> Tame
+Shop Item 4: Circlet -> White Lv.4
+Shop Item 5: Crystal Armor -> None
+Shop Item 6: DarkSuit -> None
+Shop Item 7: Black Robe -> None
+Shop Item 8: White Robe -> None
+
+Shop: Mirage Weapon
+Shop Type: 01
+Shop Item 1: Flametongue -> Protect Drink
+Shop Item 2: IceBrand -> Diamond Armlet
+Shop Item 3: Earth Hammer -> Antidote
+Shop Item 4: Morning Star -> Phoenix Down
+Shop Item 5: AntiMagic Bow -> Air Lance
+Shop Item 6: Forged -> None
+Shop Item 7: Partisan -> None
+Shop Item 8: None -> None
+
+Shop: Mirage Guild
+Shop Type: 01
+Shop Item 1: Pinwheel -> Mythril Helm
+Shop Item 2: Shuriken -> Mythril Shield
+Shop Item 3: DblLance -> Wonder Wand
+Shop Item 4: Full Moon -> Giant Drink
+Shop Item 5: Flame Scroll -> Silver Bow
+Shop Item 6: Water Scroll -> Cursed Shield
+Shop Item 7: Thunder Scroll -> DarkMatter
+Shop Item 8: None -> None
+
+Shop: Mirage Armor
+Shop Type: 01
+Shop Item 1: Crystal Shield -> RisingSun
+Shop Item 2: Crystal Helm -> Strength
+Shop Item 3: DarkHood -> Diamond Shield
+Shop Item 4: Circlet -> Ogre Killer
+Shop Item 5: Crystal Armor -> None
+Shop Item 6: DarkSuit -> None
+Shop Item 7: Black Robe -> None
+Shop Item 8: White Robe -> None
+
+Shop: Mirage Relic
+Shop Type: 01
+Shop Item 1: Running Shoes -> Silk robe
+Shop Item 2: Angel Ring -> Mythril Glove
+Shop Item 3: Flame Ring -> Elf Cape
+Shop Item 4: Coral Ring -> Gauntlets
+Shop Item 5: Lamia's Tiara -> Iron Shield
+Shop Item 6: Angel Gwn -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Mirage Magic 1
+Shop Type: 01
+Shop Item 1: Life2 -> Training Suit
+Shop Item 2: Dispel -> Speed Drink
+Shop Item 3: Doom -> Speed Drink
+Shop Item 4: Psych -> Sage's Staff
+Shop Item 5: Quick -> Crystal Armor
+Shop Item 6: Xzone -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Mirage Magic 2
+Shop Type: 01
+Shop Item 1: Size -> Knife
+Shop Item 2: Toad -> Strength
+Shop Item 3: None -> Drain Sword
+Shop Item 4: Float -> Fire Rod
+Shop Item 5: Exit -> Silk robe
+Shop Item 6: Chocob -> Dagger
+Shop Item 7: Sylph -> Excailbur
+Shop Item 8: Remora -> Healing Staff
+
+Shop: Mirage Inn 1
+Shop Type: 01
+Shop Item 1: Potion -> Mythril Staff
+Shop Item 2: HiPotion -> Coral Sword
+Shop Item 3: Phoenix Down -> Ice Rod
+Shop Item 4: Maiden's Kiss -> Silver Armlet
+Shop Item 5: Antidote -> None
+Shop Item 6: Eyedrop -> None
+Shop Item 7: Soft -> None
+Shop Item 8: LuckMallet -> None
+
+Shop: Mirage Inn 2
+Shop Type: 01
+Shop Item 1: Elixir -> Epee Sword
+Shop Item 2: Ether -> Thunder Rod
+Shop Item 3: Revivify -> Angel Ring
+Shop Item 4: Giant Drink -> Full Moon
+Shop Item 5: Power Drink -> Diamond Armor
+Shop Item 6: Speed Drink -> Guardian
+Shop Item 7: Protect Drink -> Bandana
+Shop Item 8: Hero Drink -> Iron Helm
+
+Shop: Karnak Weapon (discount)
+Shop Type: 01
+Shop Item 1: Mythril Knife -> Thunder Rod
+Shop Item 2: Mythril Sword -> None
+Shop Item 3: Mythril Hammer -> None
+Shop Item 4: Fire Rod -> None
+Shop Item 5: Ice Rod -> None
+Shop Item 6: Thunder Rod -> None
+Shop Item 7: Flail -> None
+Shop Item 8: None -> None
+
+Shop: Karnak Armor (discount)
+Shop Type: 01
+Shop Item 1: Mythril Shield -> Ice Shield
+Shop Item 2: Mythril Helm -> None
+Shop Item 3: Mythril Armor -> None
+Shop Item 4: Silver Plate -> None
+Shop Item 5: Silk robe -> None
+Shop Item 6: Mythril Glove -> None
+Shop Item 7: Silver Armlet -> None
+Shop Item 8: None -> None
+
+-----*****-----
+-----ENEMIES-----
+Enemy:         Goblin
+Steal:           / Potion
+Drop:          Leather Cap /  
+hp:            16
+mp:            3
+exp:           10
+gil:           20
+gauge_time:    10
+phys_power:    5
+phys_mult:     1
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         6
+
+Enemy:         Killer Bee
+Steal:         Potion /  
+Drop:            /  
+hp:            20
+mp:            0
+exp:           15
+gil:           20
+gauge_time:    10
+phys_power:    5
+phys_mult:     2
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         1
+
+Enemy:         Nut Eater
+Steal:         Potion / Potion
+Drop:          Potion /  
+hp:            20
+mp:            0
+exp:           10
+gil:           20
+gauge_time:    10
+phys_power:    5
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         1
+
+Enemy:         Stray Cat
+Steal:         Potion /  
+Drop:            /  
+hp:            20
+mp:            0
+exp:           15
+gil:           20
+gauge_time:    10
+phys_power:    5
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         2
+
+Enemy:         Steel Bat
+Steal:         Potion /  
+Drop:            /  
+hp:            20
+mp:            10000
+exp:           9
+gil:           20
+gauge_time:    5
+phys_power:    3
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         2
+
+Enemy:         Dearo
+Steal:         Potion /  
+Drop:            /  
+hp:            16
+mp:            0
+exp:           7
+gil:           20
+gauge_time:    7
+phys_power:    4
+phys_mult:     1
+evade:         0
+phys_def:      3
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         3
+
+Enemy:         Stroper
+Steal:         Potion / Potion
+Drop:            /  
+hp:            20
+mp:            0
+exp:           8
+gil:           20
+gauge_time:    7
+phys_power:    4
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         3
+
+Enemy:         Black Goblin
+Steal:         Potion / Potion
+Drop:          Leather Shoes /  
+hp:            20
+mp:            0
+exp:           20
+gil:           21
+gauge_time:    10
+phys_power:    5
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         7
+
+Enemy:         White Snake
+Steal:         Potion /  
+Drop:            /  
+hp:            25
+mp:            0
+exp:           20
+gil:           24
+gauge_time:    10
+phys_power:    5
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         4
+
+Enemy:         Mold Wind
+Steal:           /  
+Drop:          Elixir /  
+hp:            20
+mp:            5
+exp:           20
+gil:           27
+gauge_time:    10
+phys_power:    5
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         1
+
+Enemy:         ManiWizard
+Steal:         Potion / Potion
+Drop:          Rod /  
+hp:            20
+mp:            7
+exp:           20
+gil:           30
+gauge_time:    7
+phys_power:    5
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         5
+
+Enemy:         Magic Pot
+Steal:         HiPotion /  
+Drop:          Elixir /  
+hp:            65255
+mp:            50000
+exp:           10000
+gil:           10000
+gauge_time:    2
+phys_power:    70
+phys_mult:     25
+evade:         95
+phys_def:      255
+mag_power:     90
+mag_def:       255
+mag_evade:     99
+level:         91
+
+Enemy:         Sucker
+Steal:           /  
+Drop:          Potion /  
+hp:            50
+mp:            0
+exp:           21
+gil:           40
+gauge_time:    20
+phys_power:    7
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         6
+
+Enemy:         Octoraken
+Steal:           /  
+Drop:          Potion /  
+hp:            60
+mp:            0
+exp:           21
+gil:           45
+gauge_time:    20
+phys_power:    8
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         7
+
+Enemy:         Gatlings
+Steal:         Soft /  
+Drop:          Soft /  
+hp:            80
+mp:            0
+exp:           30
+gil:           42
+gauge_time:    20
+phys_power:    9
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         7
+
+Enemy:         Bighorn
+Steal:         Potion /  
+Drop:          Potion /  
+hp:            90
+mp:            0
+exp:           40
+gil:           50
+gauge_time:    20
+phys_power:    10
+phys_mult:     4
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         8
+
+Enemy:         Tatu
+Steal:         Potion /  
+Drop:          Tent /  
+hp:            100
+mp:            0
+exp:           50
+gil:           70
+gauge_time:    20
+phys_power:    11
+phys_mult:     3
+evade:         10
+phys_def:      3
+mag_power:     0
+mag_def:       10
+mag_evade:     10
+level:         8
+
+Enemy:         Bander S.
+Steal:           / Potion
+Drop:          Potion /  
+hp:            120
+mp:            0
+exp:           60
+gil:           100
+gauge_time:    15
+phys_power:    14
+phys_mult:     5
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         9
+
+Enemy:         Galura
+Steal:         Maiden's Kiss / Maiden's Kiss
+Drop:            /  
+hp:            500
+mp:            0
+exp:           0
+gil:           0
+gauge_time:    10
+phys_power:    12
+phys_mult:     4
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         9
+
+Enemy:         Skeleton
+Steal:           /  
+Drop:          Dagger /  
+hp:            70
+mp:            0
+exp:           38
+gil:           57
+gauge_time:    15
+phys_power:    8
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         10
+
+Enemy:         Carcurser
+Steal:         Potion / Potion
+Drop:          Elixir /  
+hp:            75
+mp:            50
+exp:           38
+gil:           60
+gauge_time:    15
+phys_power:    8
+phys_mult:     4
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         10
+
+Enemy:         UndeadRusk
+Steal:         Ether / Potion
+Drop:          Elixir /  
+hp:            130
+mp:            0
+exp:           46
+gil:           63
+gauge_time:    20
+phys_power:    10
+phys_mult:     3
+evade:         0
+phys_def:      1
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         11
+
+Enemy:         PsychoHead
+Steal:           /  
+Drop:          Flame Scroll /  
+hp:            90
+mp:            100
+exp:           46
+gil:           66
+gauge_time:    10
+phys_power:    9
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         11
+
+Enemy:         RockGarter
+Steal:           / Potion
+Drop:            /  
+hp:            120
+mp:            0
+exp:           46
+gil:           69
+gauge_time:    10
+phys_power:    13
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         11
+
+Enemy:         Gala Cat
+Steal:         Potion / Potion
+Drop:            /  
+hp:            100
+mp:            20
+exp:           55
+gil:           72
+gauge_time:    15
+phys_power:    12
+phys_mult:     4
+evade:         15
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         12
+
+Enemy:         Cockatrice
+Steal:           / Soft
+Drop:            /  
+hp:            100
+mp:            0
+exp:           55
+gil:           75
+gauge_time:    15
+phys_power:    15
+phys_mult:     3
+evade:         30
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         12
+
+Enemy:         Blocks
+Steal:         HiPotion / Glasses
+Drop:            /  
+hp:            50
+mp:            0
+exp:           55
+gil:           78
+gauge_time:    10
+phys_power:    13
+phys_mult:     4
+evade:         0
+phys_def:      8
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         12
+
+Enemy:         Elf Toad
+Steal:           /  
+Drop:          Potion /  
+hp:            160
+mp:            50
+exp:           65
+gil:           81
+gauge_time:    10
+phys_power:    15
+phys_mult:     4
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         13
+
+Enemy:         IceSoldier
+Steal:         Potion / Mythril Sword
+Drop:          RegalCut /  
+hp:            160
+mp:            20
+exp:           65
+gil:           84
+gauge_time:    15
+phys_power:    17
+phys_mult:     4
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         13
+
+Enemy:         RikaldMage
+Steal:           / Rod
+Drop:          Fire Rod /  
+hp:            100
+mp:            70
+exp:           75
+gil:           87
+gauge_time:    15
+phys_power:    17
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     1
+mag_def:       5
+mag_evade:     0
+level:         10
+
+Enemy:         Wyvern
+Steal:           / Mythril Knife
+Drop:            / Potion
+hp:            200
+mp:            0
+exp:           160
+gil:           90
+gauge_time:    18
+phys_power:    17
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         14
+
+Enemy:         Padosule
+Steal:           / Potion
+Drop:            /  
+hp:            280
+mp:            50
+exp:           100
+gil:           93
+gauge_time:    15
+phys_power:    19
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         14
+
+Enemy:         Byblos
+Steal:         DarkMatter / LuckMallet
+Drop:            / Protect Drink
+hp:            1200
+mp:            1000
+exp:           1400
+gil:           0
+gauge_time:    34
+phys_power:    4
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     4
+mag_def:       8
+mag_evade:     0
+level:         19
+
+Enemy:         Aegil
+Steal:           / Potion
+Drop:            /  
+hp:            180
+mp:            0
+exp:           120
+gil:           99
+gauge_time:    15
+phys_power:    19
+phys_mult:     4
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         14
+
+Enemy:         Zuu
+Steal:         Elixir /  
+Drop:          Elixir /  
+hp:            850
+mp:            0
+exp:           360
+gil:           150
+gauge_time:    15
+phys_power:    22
+phys_mult:     4
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         15
+
+Enemy:         Wild Nack
+Steal:           / Potion
+Drop:            /  
+hp:            95
+mp:            100
+exp:           70
+gil:           125
+gauge_time:    10
+phys_power:    20
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       10
+mag_evade:     40
+level:         15
+
+Enemy:         GrassTurtle
+Steal:         TurtleShell /  
+Drop:            / TurtleShell
+hp:            250
+mp:            0
+exp:           230
+gil:           100
+gauge_time:    10
+phys_power:    20
+phys_mult:     5
+evade:         0
+phys_def:      11
+mag_power:     0
+mag_def:       4
+mag_evade:     0
+level:         15
+
+Enemy:         Silent Bee
+Steal:           /  
+Drop:          Soft /  
+hp:            220
+mp:            50
+exp:           120
+gil:           111
+gauge_time:    15
+phys_power:    20
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         16
+
+Enemy:         Mithril Drgn
+Steal:         Mythril Armor / Potion
+Drop:          Mythril Glove /  
+hp:            600
+mp:            200
+exp:           270
+gil:           114
+gauge_time:    15
+phys_power:    28
+phys_mult:     8
+evade:         0
+phys_def:      15
+mag_power:     0
+mag_def:       20
+mag_evade:     0
+level:         16
+
+Enemy:         Ramuh
+Steal:         HiPotion / HiPotion
+Drop:            / Ramuh
+hp:            4000
+mp:            300
+exp:           0
+gil:           0
+gauge_time:    45
+phys_power:    27
+phys_mult:     8
+evade:         10
+phys_def:      20
+mag_power:     50
+mag_def:       5
+mag_evade:     10
+level:         21
+
+Enemy:         Crew Dust
+Steal:         Eyedrop / Potion
+Drop:            /  
+hp:            240
+mp:            100
+exp:           130
+gil:           120
+gauge_time:    15
+phys_power:    21
+phys_mult:     3
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         17
+
+Enemy:         PoItergeist
+Steal:           / HiPotion
+Drop:            /  
+hp:            240
+mp:            100
+exp:           135
+gil:           123
+gauge_time:    20
+phys_power:    21
+phys_mult:     5
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         17
+
+Enemy:         Motor Trap
+Steal:           / Ether
+Drop:            /  
+hp:            240
+mp:            100
+exp:           150
+gil:           126
+gauge_time:    20
+phys_power:    24
+phys_mult:     5
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         17
+
+Enemy:         Defeater
+Steal:           / Potion
+Drop:          Speed Drink /  
+hp:            260
+mp:            100
+exp:           150
+gil:           129
+gauge_time:    20
+phys_power:    22
+phys_mult:     4
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         18
+
+Enemy:         Garkimasra
+Steal:         Elixir / Protect Drink
+Drop:          Phoenix Down /  
+hp:            666
+mp:            5000
+exp:           0
+gil:           1
+gauge_time:    35
+phys_power:    50
+phys_mult:     10
+evade:         50
+phys_def:      50
+mag_power:     50
+mag_def:       50
+mag_evade:     50
+level:         20
+
+Enemy:         Sergeant
+Steal:         Potion / Potion
+Drop:          Silver Plate /  
+hp:            400
+mp:            100
+exp:           160
+gil:           132
+gauge_time:    20
+phys_power:    25
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         0
+
+Enemy:         Sorcerer
+Steal:         Gaia Gear / Mage Masher
+Drop:          Ether /  
+hp:            350
+mp:            500
+exp:           180
+gil:           138
+gauge_time:    20
+phys_power:    20
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         18
+
+Enemy:         Karnak
+Steal:           / Potion
+Drop:            /  
+hp:            140
+mp:            0
+exp:           140
+gil:           141
+gauge_time:    10
+phys_power:    20
+phys_mult:     4
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     20
+level:         19
+
+Enemy:         Gigas
+Steal:           / Elixir
+Drop:            / Giant Drink
+hp:            760
+mp:            35
+exp:           350
+gil:           144
+gauge_time:    20
+phys_power:    28
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     10
+level:         19
+
+Enemy:         Page 32
+Steal:         GrnBeret / Potion
+Drop:          Potion /  
+hp:            480
+mp:            500
+exp:           180
+gil:           147
+gauge_time:    30
+phys_power:    27
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         19
+
+Enemy:         Page 64
+Steal:         Glasses / Potion
+Drop:          Phoenix Down /  
+hp:            500
+mp:            500
+exp:           200
+gil:           150
+gauge_time:    35
+phys_power:    27
+phys_mult:     5
+evade:         0
+phys_def:      1
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         20
+
+Enemy:         Page 128
+Steal:           / Ether
+Drop:          Potion /  
+hp:            700
+mp:            500
+exp:           190
+gil:           153
+gauge_time:    35
+phys_power:    28
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         20
+
+Enemy:         Page 256
+Steal:         Stealth Suit / HiPotion
+Drop:          Mythril Shield /  
+hp:            900
+mp:            500
+exp:           210
+gil:           156
+gauge_time:    35
+phys_power:    29
+phys_mult:     6
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         21
+
+Enemy:         Ifrit
+Steal:           / Phoenix Down
+Drop:            / Flame Scroll
+hp:            40000
+mp:            1000
+exp:           17900
+gil:           0
+gauge_time:    40
+phys_power:    64
+phys_mult:     8
+evade:         20
+phys_def:      8
+mag_power:     0
+mag_def:       16
+mag_evade:     10
+level:         18
+
+Enemy:         Bomb
+Steal:           / Potion
+Drop:          Potion /  
+hp:            440
+mp:            50
+exp:           230
+gil:           162
+gauge_time:    15
+phys_power:    29
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         21
+
+Enemy:         TwinLizard
+Steal:           /  
+Drop:          Potion /  
+hp:            700
+mp:            0
+exp:           260
+gil:           165
+gauge_time:    15
+phys_power:    29
+phys_mult:     5
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         21
+
+Enemy:         BioSoldier
+Steal:         War Hammer / Battle Axe
+Drop:          Antidote /  
+hp:            540
+mp:            500
+exp:           320
+gil:           168
+gauge_time:    15
+phys_power:    30
+phys_mult:     6
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         18
+
+Enemy:         Crescent
+Steal:           / Silver Bow
+Drop:          DoomCut /  
+hp:            580
+mp:            0
+exp:           300
+gil:           171
+gauge_time:    20
+phys_power:    30
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         22
+
+Enemy:         BlackFlame
+Steal:         Speed Drink /  
+Drop:          Speed Drink /  
+hp:            220
+mp:            100
+exp:           290
+gil:           174
+gauge_time:    20
+phys_power:    28
+phys_mult:     6
+evade:         50
+phys_def:      0
+mag_power:     0
+mag_def:       25
+mag_evade:     0
+level:         22
+
+Enemy:         StoneGolem
+Steal:           / Soft
+Drop:          HiPotion /  
+hp:            1000
+mp:            0
+exp:           550
+gil:           177
+gauge_time:    20
+phys_power:    32
+phys_mult:     6
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       50
+mag_evade:     0
+level:         22
+
+Enemy:         MiniDragon
+Steal:         DragonFang /  
+Drop:            /  
+hp:            1000
+mp:            100
+exp:           900
+gil:           180
+gauge_time:    20
+phys_power:    30
+phys_mult:     6
+evade:         30
+phys_def:      30
+mag_power:     50
+mag_def:       20
+mag_evade:     0
+level:         22
+
+Enemy:         Prototype
+Steal:           / Ether
+Drop:            / DarkMatter
+hp:            5000
+mp:            1000
+exp:           2000
+gil:           0
+gauge_time:    20
+phys_power:    33
+phys_mult:     6
+evade:         0
+phys_def:      100
+mag_power:     10
+mag_def:       100
+mag_evade:     0
+level:         23
+
+Enemy:         D.Chimera
+Steal:         Trident /  
+Drop:          Phoenix Down /  
+hp:            1000
+mp:            150
+exp:           1000
+gil:           186
+gauge_time:    40
+phys_power:    50
+phys_mult:     10
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       20
+mag_evade:     0
+level:         23
+
+Enemy:         Sand Porky
+Steal:           / Potion
+Drop:          Potion /  
+hp:            420
+mp:            0
+exp:           260
+gil:           189
+gauge_time:    20
+phys_power:    33
+phys_mult:     5
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         23
+
+Enemy:         Sand Killer
+Steal:           /  
+Drop:          Antidote /  
+hp:            620
+mp:            0
+exp:           300
+gil:           192
+gauge_time:    20
+phys_power:    34
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         23
+
+Enemy:         Sand Bear
+Steal:         Javelin /  
+Drop:            / Antidote
+hp:            1000
+mp:            0
+exp:           360
+gil:           195
+gauge_time:    35
+phys_power:    36
+phys_mult:     8
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       10
+mag_evade:     10
+level:         24
+
+Enemy:         Ra Mage
+Steal:           / Bard's Surplice
+Drop:          Elixir /  
+hp:            760
+mp:            200
+exp:           370
+gil:           198
+gauge_time:    25
+phys_power:    25
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         19
+
+Enemy:         LonkaKnght
+Steal:         Power Drink / HiPotion
+Drop:          Mythril Shield /  
+hp:            860
+mp:            0
+exp:           380
+gil:           201
+gauge_time:    25
+phys_power:    36
+phys_mult:     6
+evade:         20
+phys_def:      20
+mag_power:     0
+mag_def:       10
+mag_evade:     10
+level:         24
+
+Enemy:         StonedMask
+Steal:           / Soft
+Drop:            /  
+hp:            450
+mp:            20
+exp:           320
+gil:           204
+gauge_time:    25
+phys_power:    34
+phys_mult:     4
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         24
+
+Enemy:         Whirl Demon
+Steal:         Elixir / Potion
+Drop:          Darkness Bow /  
+hp:            1000
+mp:            200
+exp:           470
+gil:           207
+gauge_time:    30
+phys_power:    35
+phys_mult:     5
+evade:         0
+phys_def:      2
+mag_power:     10
+mag_def:       0
+mag_evade:     0
+level:         24
+
+Enemy:         Lamia
+Steal:         Lamia's Tiara / Maiden's Kiss
+Drop:            /  
+hp:            900
+mp:            100
+exp:           490
+gil:           210
+gauge_time:    35
+phys_power:    35
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       3
+mag_evade:     0
+level:         24
+
+Enemy:         ArchaeToad
+Steal:         HiPotion /  
+Drop:            /  
+hp:            800
+mp:            100
+exp:           390
+gil:           213
+gauge_time:    25
+phys_power:    34
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         25
+
+Enemy:         Hyudora
+Steal:         HiPotion / Ether
+Drop:          DragonFang /  
+hp:            2000
+mp:            1000
+exp:           1800
+gil:           216
+gauge_time:    45
+phys_power:    38
+phys_mult:     6
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         25
+
+Enemy:         Hydra
+Steal:         Killer Bow /  
+Drop:            / Phoenix Down
+hp:            3000
+mp:            1000
+exp:           3108
+gil:           219
+gauge_time:    50
+phys_power:    42
+phys_mult:     8
+evade:         10
+phys_def:      20
+mag_power:     0
+mag_def:       5
+mag_evade:     10
+level:         26
+
+Enemy:         Water Buzz
+Steal:         Ether /  
+Drop:            /  
+hp:            600
+mp:            50
+exp:           330
+gil:           222
+gauge_time:    25
+phys_power:    37
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         26
+
+Enemy:         Torrent
+Steal:         Potion / HiPotion
+Drop:          Potion /  
+hp:            700
+mp:            50
+exp:           330
+gil:           225
+gauge_time:    25
+phys_power:    36
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         26
+
+Enemy:         Rock Brain
+Steal:         Elixir /  
+Drop:            /  
+hp:            600
+mp:            100
+exp:           330
+gil:           228
+gauge_time:    30
+phys_power:    37
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         26
+
+Enemy:         Tarantula
+Steal:           /  
+Drop:            / Potion
+hp:            200
+mp:            0
+exp:           88
+gil:           231
+gauge_time:    20
+phys_power:    35
+phys_mult:     4
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         27
+
+Enemy:         Jail Bear
+Steal:         Spear /  
+Drop:          HiPotion /  
+hp:            380
+mp:            0
+exp:           89
+gil:           334
+gauge_time:    20
+phys_power:    37
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         27
+
+Enemy:         Lunenta
+Steal:         Phoenix Down /  
+Drop:          Ether /  
+hp:            1000
+mp:            100
+exp:           353
+gil:           237
+gauge_time:    30
+phys_power:    36
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         27
+
+Enemy:         Dilure
+Steal:           / Potion
+Drop:          Potion /  
+hp:            1000
+mp:            500
+exp:           353
+gil:           240
+gauge_time:    25
+phys_power:    35
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         27
+
+Enemy:         Faerie Orc
+Steal:         Potion / Revivify
+Drop:          HiPotion /  
+hp:            1000
+mp:            1000
+exp:           385
+gil:           243
+gauge_time:    25
+phys_power:    36
+phys_mult:     7
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         28
+
+Enemy:         Devourer
+Steal:         HiPotion /  
+Drop:            /  
+hp:            1000
+mp:            100
+exp:           385
+gil:           246
+gauge_time:    25
+phys_power:    37
+phys_mult:     7
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         28
+
+Enemy:         Mandrake
+Steal:         Antidote / Eyedrop
+Drop:            /  
+hp:            1000
+mp:            100
+exp:           385
+gil:           249
+gauge_time:    25
+phys_power:    36
+phys_mult:     7
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         28
+
+Enemy:         Kuzar
+Steal:           /  
+Drop:          Elixir /  
+hp:            5000
+mp:            1000
+exp:           1000
+gil:           1000
+gauge_time:    35
+phys_power:    45
+phys_mult:     7
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         28
+
+Enemy:         Cactus
+Steal:         Soft / Potion
+Drop:            /  
+hp:            1000
+mp:            50
+exp:           419
+gil:           255
+gauge_time:    25
+phys_power:    37
+phys_mult:     7
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         29
+
+Enemy:         Sand Crawl
+Steal:         Tent /  
+Drop:            / Power Drink
+hp:            15000
+mp:            1000
+exp:           1000
+gil:           1000
+gauge_time:    35
+phys_power:    45
+phys_mult:     7
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     50
+level:         29
+
+Enemy:         ShieldDrgn
+Steal:         Golden Shield / Mythril Shield
+Drop:          Golden Shield /  
+hp:            19999
+mp:            20000
+exp:           10000
+gil:           1000
+gauge_time:    40
+phys_power:    40
+phys_mult:     25
+evade:         0
+phys_def:      40
+mag_power:     0
+mag_def:       25
+mag_evade:     50
+level:         29
+
+Enemy:         Blood Slime
+Steal:           / Revivify
+Drop:          Revivify /  
+hp:            600
+mp:            100
+exp:           365
+gil:           264
+gauge_time:    25
+phys_power:    36
+phys_mult:     6
+evade:         0
+phys_def:      39
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         29
+
+Enemy:         Acrophese
+Steal:           / Potion
+Drop:            /  
+hp:            900
+mp:            0
+exp:           410
+gil:           267
+gauge_time:    25
+phys_power:    36
+phys_mult:     7
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       20
+mag_evade:     0
+level:         30
+
+Enemy:         MooglEater
+Steal:         HiPotion /  
+Drop:            /  
+hp:            1000
+mp:            50
+exp:           665
+gil:           270
+gauge_time:    30
+phys_power:    39
+phys_mult:     6
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         23
+
+Enemy:         Lopros
+Steal:           / HiPotion
+Drop:          HiPotion /  
+hp:            2300
+mp:            200
+exp:           888
+gil:           273
+gauge_time:    39
+phys_power:    42
+phys_mult:     7
+evade:         0
+phys_def:      30
+mag_power:     0
+mag_def:       15
+mag_evade:     0
+level:         32
+
+Enemy:         Skull Eater
+Steal:           / Tent
+Drop:          Elixir /  
+hp:            1
+mp:            100
+exp:           300
+gil:           100
+gauge_time:    50
+phys_power:    50
+phys_mult:     30
+evade:         90
+phys_def:      90
+mag_power:     90
+mag_def:       90
+mag_evade:     90
+level:         32
+
+Enemy:         Aquathone
+Steal:           / Potion
+Drop:          Antidote /  
+hp:            800
+mp:            100
+exp:           490
+gil:           279
+gauge_time:    30
+phys_power:    39
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         31
+
+Enemy:         Weresnake
+Steal:           / Potion
+Drop:          HiPotion /  
+hp:            900
+mp:            20
+exp:           490
+gil:           282
+gauge_time:    30
+phys_power:    40
+phys_mult:     5
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         31
+
+Enemy:         Conago
+Steal:           / Potion
+Drop:          Eyedrop /  
+hp:            1000
+mp:            300
+exp:           512
+gil:           285
+gauge_time:    30
+phys_power:    38
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         31
+
+Enemy:         Ridicule
+Steal:           / Maiden's Kiss
+Drop:          Hero Drink /  
+hp:            1380
+mp:            200
+exp:           900
+gil:           288
+gauge_time:    35
+phys_power:    41
+phys_mult:     7
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         31
+
+Enemy:         Andagranda
+Steal:           /  
+Drop:          Protect Drink /  
+hp:            1450
+mp:            200
+exp:           520
+gil:           291
+gauge_time:    30
+phys_power:    42
+phys_mult:     8
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         24
+
+Enemy:         Drippy
+Steal:         Bard's Surplice / Mythril Hammer
+Drop:          Tent /  
+hp:            900
+mp:            100
+exp:           540
+gil:           294
+gauge_time:    35
+phys_power:    35
+phys_mult:     5
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         32
+
+Enemy:         Likaon
+Steal:         HiPotion /  
+Drop:          Revivify /  
+hp:            500
+mp:            0
+exp:           300
+gil:           200
+gauge_time:    30
+phys_power:    36
+phys_mult:     7
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         32
+
+Enemy:         BoneDragon
+Steal:           / Soft
+Drop:          Ether /  
+hp:            2590
+mp:            10000
+exp:           890
+gil:           300
+gauge_time:    28
+phys_power:    39
+phys_mult:     7
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     10
+level:         32
+
+Enemy:         Sting Eagle
+Steal:         Gale Bow /  
+Drop:          Antidote /  
+hp:            100
+mp:            0
+exp:           500
+gil:           303
+gauge_time:    35
+phys_power:    37
+phys_mult:     7
+evade:         50
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     50
+level:         32
+
+Enemy:         ZombieDrgn
+Steal:         DarkMatter /  
+Drop:            / DragonFang
+hp:            4590
+mp:            0
+exp:           1650
+gil:           500
+gauge_time:    29
+phys_power:    46
+phys_mult:     8
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     20
+level:         24
+
+Enemy:         Golem
+Steal:         Soft / Soft
+Drop:            /  
+hp:            2500
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    10
+phys_power:    40
+phys_mult:     8
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         3
+
+Enemy:         Neon
+Steal:           / Speed Drink
+Drop:          Speed Drink /  
+hp:            700
+mp:            100
+exp:           600
+gil:           312
+gauge_time:    25
+phys_power:    44
+phys_mult:     6
+evade:         20
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         33
+
+Enemy:         Magnetes
+Steal:           /  
+Drop:          HiPotion /  
+hp:            1200
+mp:            100
+exp:           610
+gil:           315
+gauge_time:    35
+phys_power:    43
+phys_mult:     5
+evade:         40
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         33
+
+Enemy:         Wall Knight
+Steal:         Venom Axe / War Hammer
+Drop:          Wall Ring /  
+hp:            1600
+mp:            200
+exp:           700
+gil:           318
+gauge_time:    30
+phys_power:    47
+phys_mult:     7
+evade:         0
+phys_def:      30
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         33
+
+Enemy:         Traveler
+Steal:         Dream Harp /  
+Drop:          Dream Harp /  
+hp:            1400
+mp:            100
+exp:           580
+gil:           321
+gauge_time:    35
+phys_power:    40
+phys_mult:     6
+evade:         20
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         33
+
+Enemy:         Tricker
+Steal:           / Potion
+Drop:          HiPotion /  
+hp:            1300
+mp:            100
+exp:           710
+gil:           324
+gauge_time:    30
+phys_power:    41
+phys_mult:     6
+evade:         10
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     10
+level:         34
+
+Enemy:         Gravido
+Steal:         HiPotion /  
+Drop:          Gaia Gear /  
+hp:            1800
+mp:            200
+exp:           720
+gil:           327
+gauge_time:    35
+phys_power:    38
+phys_mult:     7
+evade:         10
+phys_def:      20
+mag_power:     0
+mag_def:       10
+mag_evade:     0
+level:         34
+
+Enemy:         Ziggurat
+Steal:         Partisan /  
+Drop:          Giant Drink /  
+hp:            2420
+mp:            500
+exp:           1200
+gil:           330
+gauge_time:    31
+phys_power:    49
+phys_mult:     8
+evade:         10
+phys_def:      20
+mag_power:     0
+mag_def:       10
+mag_evade:     20
+level:         34
+
+Enemy:         Cure Beast
+Steal:         HiPotion /  
+Drop:          Elixir /  
+hp:            1000
+mp:            100
+exp:           620
+gil:           333
+gauge_time:    35
+phys_power:    42
+phys_mult:     6
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         34
+
+Enemy:         Land Turtle
+Steal:           / Potion
+Drop:            / TurtleShell
+hp:            1300
+mp:            0
+exp:           790
+gil:           336
+gauge_time:    25
+phys_power:    42
+phys_mult:     9
+evade:         0
+phys_def:      30
+mag_power:     0
+mag_def:       15
+mag_evade:     0
+level:         34
+
+Enemy:         Bold Mani
+Steal:         HiPotion /  
+Drop:          Revivify /  
+hp:            1300
+mp:            0
+exp:           660
+gil:           339
+gauge_time:    30
+phys_power:    43
+phys_mult:     6
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         35
+
+Enemy:         Shoat
+Steal:         Phoenix Down /  
+Drop:            / Shoat
+hp:            5000
+mp:            500
+exp:           0
+gil:           0
+gauge_time:    45
+phys_power:    55
+phys_mult:     10
+evade:         0
+phys_def:      20
+mag_power:     50
+mag_def:       10
+mag_evade:     0
+level:         38
+
+Enemy:         MiniMage
+Steal:         Tricorn Hat /  
+Drop:          Tricorn Hat /  
+hp:            1100
+mp:            10
+exp:           600
+gil:           345
+gauge_time:    30
+phys_power:    30
+phys_mult:     8
+evade:         0
+phys_def:      5
+mag_power:     1
+mag_def:       0
+mag_evade:     0
+level:         11
+
+Enemy:         GajraGajri
+Steal:           / Eyedrop
+Drop:          Ether /  
+hp:            75
+mp:            100
+exp:           750
+gil:           348
+gauge_time:    25
+phys_power:    45
+phys_mult:     7
+evade:         50
+phys_def:      20
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         34
+
+Enemy:         Mammon
+Steal:         HiPotion /  
+Drop:          HiPotion /  
+hp:            1700
+mp:            100
+exp:           700
+gil:           351
+gauge_time:    30
+phys_power:    46
+phys_mult:     9
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         35
+
+Enemy:         Imp
+Steal:           / Potion
+Drop:          Diamond Armlet /  
+hp:            2000
+mp:            200
+exp:           840
+gil:           354
+gauge_time:    30
+phys_power:    90
+phys_mult:     1
+evade:         30
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         36
+
+Enemy:         Wyrm
+Steal:           / Antidote
+Drop:          DragonFang /  
+hp:            2700
+mp:            100
+exp:           2200
+gil:           357
+gauge_time:    35
+phys_power:    55
+phys_mult:     9
+evade:         20
+phys_def:      20
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         36
+
+Enemy:         TwinLizard
+Steal:         HiPotion /  
+Drop:          Potion /  
+hp:            1500
+mp:            0
+exp:           720
+gil:           360
+gauge_time:    35
+phys_power:    54
+phys_mult:     7
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         33
+
+Enemy:         Blind Wolf
+Steal:         Eyedrop /  
+Drop:          Eyedrop /  
+hp:            900
+mp:            0
+exp:           500
+gil:           363
+gauge_time:    25
+phys_power:    54
+phys_mult:     8
+evade:         20
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     30
+level:         33
+
+Enemy:         Arage
+Steal:         HiPotion / Potion
+Drop:          Phoenix Down /  
+hp:            1050
+mp:            100
+exp:           750
+gil:           366
+gauge_time:    30
+phys_power:    49
+phys_mult:     6
+evade:         10
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         34
+
+Enemy:         Wall Mage
+Steal:         Wall Ring /  
+Drop:          Ether /  
+hp:            1300
+mp:            100
+exp:           900
+gil:           369
+gauge_time:    28
+phys_power:    52
+phys_mult:     4
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         36
+
+Enemy:         Magic Drgn
+Steal:         HiPotion / Potion
+Drop:          Elixir /  
+hp:            2900
+mp:            300
+exp:           1200
+gil:           372
+gauge_time:    27
+phys_power:    58
+phys_mult:     8
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         36
+
+Enemy:         DarkWizard
+Steal:         Judgement Staff / Venom Rod
+Drop:          Power Staff /  
+hp:            1999
+mp:            500
+exp:           950
+gil:           375
+gauge_time:    30
+phys_power:    50
+phys_mult:     1
+evade:         0
+phys_def:      10
+mag_power:     30
+mag_def:       5
+mag_evade:     0
+level:         36
+
+Enemy:         AdamaGolem
+Steal:         HiPotion / Potion
+Drop:          HiPotion /  
+hp:            3650
+mp:            0
+exp:           1100
+gil:           378
+gauge_time:    35
+phys_power:    62
+phys_mult:     9
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         37
+
+Enemy:         BandelKuar
+Steal:         Phoenix Down /  
+Drop:          Phoenix Down /  
+hp:            2600
+mp:            100
+exp:           1150
+gil:           381
+gauge_time:    35
+phys_power:    59
+phys_mult:     8
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         37
+
+Enemy:         Motordrive
+Steal:         BeastKiller / Potion
+Drop:          Hero Drink /  
+hp:            3300
+mp:            0
+exp:           1300
+gil:           384
+gauge_time:    32
+phys_power:    63
+phys_mult:     9
+evade:         20
+phys_def:      15
+mag_power:     0
+mag_def:       15
+mag_evade:     50
+level:         38
+
+Enemy:         BlueDragon
+Steal:         Cabin / DragonFang
+Drop:          DragonFang /  
+hp:            6900
+mp:            1000
+exp:           2500
+gil:           500
+gauge_time:    35
+phys_power:    64
+phys_mult:     9
+evade:         20
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     30
+level:         38
+
+Enemy:         Red Dragon
+Steal:         Flame Ring / HiPotion
+Drop:          Elixir /  
+hp:            7500
+mp:            1000
+exp:           3000
+gil:           500
+gauge_time:    34
+phys_power:    65
+phys_mult:     9
+evade:         0
+phys_def:      12
+mag_power:     50
+mag_def:       8
+mag_evade:     5
+level:         30
+
+Enemy:         Yellow Drgn
+Steal:         Ether / Thunder Rod
+Drop:          Coral Ring /  
+hp:            8500
+mp:            1000
+exp:           2600
+gil:           500
+gauge_time:    35
+phys_power:    65
+phys_mult:     9
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     10
+level:         38
+
+Enemy:         Sleepy
+Steal:         HiPotion / Healing Staff
+Drop:          Leather Cap /  
+hp:            1600
+mp:            100
+exp:           700
+gil:           396
+gauge_time:    30
+phys_power:    50
+phys_mult:     4
+evade:         10
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         36
+
+Enemy:         Treeman
+Steal:         Protect Drink / Power Drink
+Drop:          Speed Drink /  
+hp:            2200
+mp:            100
+exp:           825
+gil:           399
+gauge_time:    35
+phys_power:    52
+phys_mult:     7
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     10
+level:         37
+
+Enemy:         Hedgehog
+Steal:           / Soft
+Drop:          Soft /  
+hp:            1000
+mp:            0
+exp:           850
+gil:           402
+gauge_time:    28
+phys_power:    54
+phys_mult:     6
+evade:         0
+phys_def:      25
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         37
+
+Enemy:         Python
+Steal:           / Antidote
+Drop:          Eyedrop /  
+hp:            1800
+mp:            0
+exp:           680
+gil:           405
+gauge_time:    24
+phys_power:    49
+phys_mult:     6
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         39
+
+Enemy:         Shadow
+Steal:         HiPotion /  
+Drop:          Revivify /  
+hp:            1000
+mp:            0
+exp:           880
+gil:           408
+gauge_time:    26
+phys_power:    57
+phys_mult:     7
+evade:         30
+phys_def:      25
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         40
+
+Enemy:         Elm Gigas
+Steal:         Hero Drink /  
+Drop:          Giant Drink /  
+hp:            4170
+mp:            5000
+exp:           810
+gil:           411
+gauge_time:    37
+phys_power:    62
+phys_mult:     10
+evade:         20
+phys_def:      5
+mag_power:     30
+mag_def:       30
+mag_evade:     20
+level:         39
+
+Enemy:         Pao
+Steal:         HiPotion / Potion
+Drop:            / Tent
+hp:            500
+mp:            0
+exp:           0
+gil:           0
+gauge_time:    20
+phys_power:    40
+phys_mult:     9
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         27
+
+Enemy:         Radiator
+Steal:         Potion /  
+Drop:          Potion /  
+hp:            900
+mp:            1000
+exp:           800
+gil:           417
+gauge_time:    5
+phys_power:    47
+phys_mult:     8
+evade:         0
+phys_def:      30
+mag_power:     0
+mag_def:       20
+mag_evade:     0
+level:         40
+
+Enemy:         Metamorpha
+Steal:         HiPotion / Staff
+Drop:          Staff of Light /  
+hp:            7000
+mp:            10000
+exp:           20
+gil:           777
+gauge_time:    33
+phys_power:    40
+phys_mult:     10
+evade:         0
+phys_def:      10
+mag_power:     10
+mag_def:       5
+mag_evade:     0
+level:         43
+
+Enemy:         Unknown
+Steal:         BeastKiller /  
+Drop:            /  
+hp:            2500
+mp:            0
+exp:           1200
+gil:           525
+gauge_time:    22
+phys_power:    60
+phys_mult:     6
+evade:         0
+phys_def:      25
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         41
+
+Enemy:         Desertpede
+Steal:         Antidote / Potion
+Drop:          DarkMatter /  
+hp:            2150
+mp:            0
+exp:           900
+gil:           426
+gauge_time:    22
+phys_power:    59
+phys_mult:     6
+evade:         0
+phys_def:      10
+mag_power:     250
+mag_def:       5
+mag_evade:     10
+level:         40
+
+Enemy:         Barette
+Steal:           / Potion
+Drop:          HiPotion /  
+hp:            1000
+mp:            0
+exp:           1050
+gil:           429
+gauge_time:    21
+phys_power:    61
+phys_mult:     10
+evade:         0
+phys_def:      55
+mag_power:     0
+mag_def:       20
+mag_evade:     10
+level:         41
+
+Enemy:         Sekmet
+Steal:         Thief's Glove / HiPotion
+Drop:          Crystal Armor /  
+hp:            6000
+mp:            0
+exp:           3
+gil:           10
+gauge_time:    43
+phys_power:    70
+phys_mult:     11
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     20
+level:         41
+
+Enemy:         BlandLamia
+Steal:         Thornlet / Maiden's Kiss
+Drop:          Lamia's Tiara /  
+hp:            2100
+mp:            600
+exp:           700
+gil:           435
+gauge_time:    27
+phys_power:    54
+phys_mult:     6
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     10
+level:         40
+
+Enemy:         Pyra Layer
+Steal:           / Power Drink
+Drop:          Potion /  
+hp:            2200
+mp:            1000
+exp:           800
+gil:           438
+gauge_time:    26
+phys_power:    61
+phys_mult:     8
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     5
+level:         41
+
+Enemy:         Nile
+Steal:           /  
+Drop:          Protect Drink /  
+hp:            1200
+mp:            10
+exp:           480
+gil:           441
+gauge_time:    21
+phys_power:    51
+phys_mult:     8
+evade:         0
+phys_def:      35
+mag_power:     0
+mag_def:       6
+mag_evade:     0
+level:         38
+
+Enemy:         Archaesaur
+Steal:         Phoenix Down /  
+Drop:            / DragonFang
+hp:            9960
+mp:            1000
+exp:           1800
+gil:           444
+gauge_time:    33
+phys_power:    67
+phys_mult:     11
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         35
+
+Enemy:         ZephyrZone
+Steal:         Elixir / Potion
+Drop:          Elixir /  
+hp:            3780
+mp:            5000
+exp:           2000
+gil:           500
+gauge_time:    30
+phys_power:    55
+phys_mult:     10
+evade:         30
+phys_def:      25
+mag_power:     60
+mag_def:       30
+mag_evade:     30
+level:         53
+
+Enemy:         ExdethSoul
+Steal:           /  
+Drop:            / DarkMatter
+hp:            20000
+mp:            20000
+exp:           0
+gil:           0
+gauge_time:    40
+phys_power:    77
+phys_mult:     13
+evade:         50
+phys_def:      40
+mag_power:     0
+mag_def:       45
+mag_evade:     0
+level:         1
+
+Enemy:         Slug
+Steal:         HiPotion / Potion
+Drop:            /  
+hp:            1820
+mp:            100
+exp:           1100
+gil:           453
+gauge_time:    20
+phys_power:    62
+phys_mult:     7
+evade:         10
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         42
+
+Enemy:         GloomWidow
+Steal:         HiPotion / Potion
+Drop:            /  
+hp:            1820
+mp:            0
+exp:           1100
+gil:           456
+gauge_time:    20
+phys_power:    60
+phys_mult:     8
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         42
+
+Enemy:         Mukare
+Steal:         DoomCut / Silk robe
+Drop:          Lumina Robe /  
+hp:            2000
+mp:            200
+exp:           1200
+gil:           459
+gauge_time:    25
+phys_power:    65
+phys_mult:     8
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     10
+level:         42
+
+Enemy:         Ixecrator
+Steal:         Ether /  
+Drop:          Diamond Armlet /  
+hp:            2000
+mp:            10000
+exp:           1300
+gil:           462
+gauge_time:    35
+phys_power:    52
+phys_mult:     7
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     50
+level:         42
+
+Enemy:         Owazoral
+Steal:         Mirage Vest / HiPotion
+Drop:          Revivify /  
+hp:            1900
+mp:            100
+exp:           1250
+gil:           465
+gauge_time:    24
+phys_power:    60
+phys_mult:     10
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     20
+level:         43
+
+Enemy:         ShdwDancer
+Steal:         Dancing Dagger / Power Wrist
+Drop:          LuckMallet /  
+hp:            4480
+mp:            100
+exp:           1550
+gil:           468
+gauge_time:    30
+phys_power:    75
+phys_mult:     9
+evade:         20
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     30
+level:         43
+
+Enemy:         Cursed One
+Steal:         Revivify /  
+Drop:          Revivify /  
+hp:            1980
+mp:            0
+exp:           1200
+gil:           471
+gauge_time:    20
+phys_power:    65
+phys_mult:     9
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     5
+level:         44
+
+Enemy:         Slownin
+Steal:         Ice Shield / Katana
+Drop:          Kotetsu /  
+hp:            2400
+mp:            0
+exp:           1400
+gil:           474
+gauge_time:    35
+phys_power:    81
+phys_mult:     11
+evade:         30
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     40
+level:         43
+
+Enemy:         TinyMage
+Steal:         Ether /  
+Drop:          Potion /  
+hp:            1540
+mp:            500
+exp:           780
+gil:           477
+gauge_time:    20
+phys_power:    80
+phys_mult:     16
+evade:         15
+phys_def:      40
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         43
+
+Enemy:         Dim Master
+Steal:         Healing Staff / Potion
+Drop:          HiPotion /  
+hp:            2600
+mp:            1000
+exp:           900
+gil:           480
+gauge_time:    20
+phys_power:    82
+phys_mult:     16
+evade:         20
+phys_def:      45
+mag_power:     20
+mag_def:       0
+mag_evade:     30
+level:         43
+
+Enemy:         BoneDragon
+Steal:           /  
+Drop:            /  
+hp:            3000
+mp:            500
+exp:           0
+gil:           0
+gauge_time:    30
+phys_power:    45
+phys_mult:     10
+evade:         10
+phys_def:      40
+mag_power:     0
+mag_def:       20
+mag_evade:     10
+level:         37
+
+Enemy:         Flare
+Steal:         Thunder Whip / Elixir
+Drop:          Magus /  
+hp:            3000
+mp:            1000
+exp:           1100
+gil:           486
+gauge_time:    21
+phys_power:    89
+phys_mult:     15
+evade:         0
+phys_def:      35
+mag_power:     10
+mag_def:       0
+mag_evade:     10
+level:         44
+
+Enemy:         DuelKnight
+Steal:         Flame Shield / Power Drink
+Drop:          Power Drink /  
+hp:            2140
+mp:            0
+exp:           1100
+gil:           489
+gauge_time:    1
+phys_power:    78
+phys_mult:     11
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         44
+
+Enemy:         Ion
+Steal:           / Giant Drink
+Drop:          Giant Drink /  
+hp:            2140
+mp:            0
+exp:           1200
+gil:           492
+gauge_time:    20
+phys_power:    80
+phys_mult:     11
+evade:         0
+phys_def:      25
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         44
+
+Enemy:         Berserker
+Steal:         Elven Bow / Speed Drink
+Drop:          DoomCut /  
+hp:            2140
+mp:            0
+exp:           1000
+gil:           495
+gauge_time:    20
+phys_power:    77
+phys_mult:     11
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         44
+
+Enemy:         ZombieDrgn
+Steal:           /  
+Drop:            /  
+hp:            4000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    35
+phys_power:    47
+phys_mult:     10
+evade:         10
+phys_def:      20
+mag_power:     0
+mag_def:       20
+mag_evade:     10
+level:         37
+
+Enemy:         Druid
+Steal:         Angel Ring / Potion
+Drop:          Phoenix Down /  
+hp:            2200
+mp:            900
+exp:           1500
+gil:           501
+gauge_time:    30
+phys_power:    60
+phys_mult:     11
+evade:         0
+phys_def:      10
+mag_power:     30
+mag_def:       5
+mag_evade:     50
+level:         44
+
+Enemy:         Iron Dress
+Steal:           / Potion
+Drop:          Tent /  
+hp:            2200
+mp:            0
+exp:           1300
+gil:           504
+gauge_time:    30
+phys_power:    70
+phys_mult:     11
+evade:         10
+phys_def:      50
+mag_power:     0
+mag_def:       15
+mag_evade:     10
+level:         44
+
+Enemy:         Statue
+Steal:         DblLance / HiPotion
+Drop:          Soft /  
+hp:            3300
+mp:            20
+exp:           100
+gil:           507
+gauge_time:    26
+phys_power:    76
+phys_mult:     10
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       5
+mag_evade:     20
+level:         45
+
+Enemy:         Blizzard
+Steal:         HiPotion /  
+Drop:          HiPotion /  
+hp:            2300
+mp:            0
+exp:           1200
+gil:           510
+gauge_time:    20
+phys_power:    77
+phys_mult:     11
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       5
+mag_evade:     50
+level:         45
+
+Enemy:         Isteritos
+Steal:         Judgement Staff / Antidote
+Drop:          DragonFang /  
+hp:            2300
+mp:            0
+exp:           2000
+gil:           513
+gauge_time:    25
+phys_power:    85
+phys_mult:     10
+evade:         20
+phys_def:      30
+mag_power:     0
+mag_def:       30
+mag_evade:     90
+level:         45
+
+Enemy:         Spizner
+Steal:           / Potion
+Drop:          Potion /  
+hp:            2300
+mp:            0
+exp:           1250
+gil:           516
+gauge_time:    20
+phys_power:    71
+phys_mult:     11
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         39
+
+Enemy:         Unknown
+Steal:         HiPotion / Potion
+Drop:          Giant Drink /  
+hp:            3500
+mp:            500
+exp:           1080
+gil:           519
+gauge_time:    20
+phys_power:    61
+phys_mult:     9
+evade:         0
+phys_def:      40
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         47
+
+Enemy:         Unknown
+Steal:         HiPotion / Potion
+Drop:          Power Drink /  
+hp:            2500
+mp:            500
+exp:           1350
+gil:           522
+gauge_time:    20
+phys_power:    62
+phys_mult:     8
+evade:         0
+phys_def:      30
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         46
+
+Enemy:         Unknown
+Steal:         HiPotion / Potion
+Drop:          Speed Drink /  
+hp:            2500
+mp:            500
+exp:           1200
+gil:           525
+gauge_time:    20
+phys_power:    60
+phys_mult:     6
+evade:         0
+phys_def:      25
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         41
+
+Enemy:         Unknown
+Steal:         HiPotion / Potion
+Drop:          Protect Drink /  
+hp:            6500
+mp:            500
+exp:           2000
+gil:           528
+gauge_time:    20
+phys_power:    67
+phys_mult:     10
+evade:         0
+phys_def:      35
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         47
+
+Enemy:         MercuryBat
+Steal:           / Potion
+Drop:          HiPotion /  
+hp:            500
+mp:            500
+exp:           1020
+gil:           531
+gauge_time:    20
+phys_power:    65
+phys_mult:     10
+evade:         50
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         46
+
+Enemy:         Coral
+Steal:         Protect Drink / Potion
+Drop:            /  
+hp:            2150
+mp:            100
+exp:           1268
+gil:           534
+gauge_time:    25
+phys_power:    66
+phys_mult:     11
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         46
+
+Enemy:         Tonberi
+Steal:         Elixir / Plumed Hat
+Drop:          Mirage Vest /  
+hp:            39393
+mp:            100
+exp:           1268
+gil:           537
+gauge_time:    49
+phys_power:    119
+phys_mult:     14
+evade:         30
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     90
+level:         46
+
+Enemy:         Gel Water
+Steal:         HiPotion / Potion
+Drop:          Speed Drink /  
+hp:            3300
+mp:            100
+exp:           1268
+gil:           540
+gauge_time:    22
+phys_power:    67
+phys_mult:     10
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         46
+
+Enemy:         Fall Guard
+Steal:         Hero Drink / Bandana
+Drop:          Kaiser Knuckles /  
+hp:            4000
+mp:            100
+exp:           1335
+gil:           543
+gauge_time:    20
+phys_power:    60
+phys_mult:     11
+evade:         0
+phys_def:      30
+mag_power:     0
+mag_def:       0
+mag_evade:     50
+level:         47
+
+Enemy:         Alcumia
+Steal:         ManEater / Maiden's Kiss
+Drop:          Elixir /  
+hp:            4500
+mp:            3900
+exp:           1000
+gil:           546
+gauge_time:    35
+phys_power:    70
+phys_mult:     11
+evade:         50
+phys_def:      10
+mag_power:     90
+mag_def:       10
+mag_evade:     0
+level:         47
+
+Enemy:         Red Dragon
+Steal:         DragonFang / Flame Scroll
+Drop:          DarkMatter /  
+hp:            7500
+mp:            0
+exp:           2000
+gil:           549
+gauge_time:    35
+phys_power:    83
+phys_mult:     11
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         44
+
+Enemy:         Hydra
+Steal:         DragonFang / Thunder Scroll
+Drop:          DarkMatter /  
+hp:            6000
+mp:            0
+exp:           2000
+gil:           552
+gauge_time:    35
+phys_power:    85
+phys_mult:     11
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         46
+
+Enemy:         BoneDragon
+Steal:         DragonFang / Water Scroll
+Drop:          DarkMatter /  
+hp:            5800
+mp:            0
+exp:           2000
+gil:           555
+gauge_time:    35
+phys_power:    85
+phys_mult:     11
+evade:         0
+phys_def:      30
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         44
+
+Enemy:         Grenade
+Steal:         Flame Shield / HiPotion
+Drop:          HiPotion /  
+hp:            3000
+mp:            500
+exp:           1100
+gil:           558
+gauge_time:    25
+phys_power:    75
+phys_mult:     12
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         47
+
+Enemy:         SwrdDancer
+Steal:         Enhancer / Mythril Helm
+Drop:          IceBrand /  
+hp:            3000
+mp:            0
+exp:           2400
+gil:           561
+gauge_time:    25
+phys_power:    75
+phys_mult:     12
+evade:         0
+phys_def:      15
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         48
+
+Enemy:         Bardandels
+Steal:         Angel Ring / TurtleShell
+Drop:          Rune Chime /  
+hp:            3000
+mp:            100
+exp:           1380
+gil:           564
+gauge_time:    25
+phys_power:    75
+phys_mult:     12
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     10
+level:         48
+
+Enemy:         DoomDealer
+Steal:         Magus / Revivify
+Drop:          Phoenix Down /  
+hp:            3000
+mp:            100
+exp:           1400
+gil:           567
+gauge_time:    25
+phys_power:    75
+phys_mult:     12
+evade:         0
+phys_def:      10
+mag_power:     90
+mag_def:       0
+mag_evade:     30
+level:         63
+
+Enemy:         Anku Heggu
+Steal:         HiPotion / Potion
+Drop:          HiPotion /  
+hp:            2780
+mp:            100
+exp:           1250
+gil:           570
+gauge_time:    25
+phys_power:    75
+phys_mult:     12
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     25
+level:         48
+
+Enemy:         Ammona
+Steal:         Potion / HiPotion
+Drop:          Revivify /  
+hp:            2780
+mp:            0
+exp:           1170
+gil:           573
+gauge_time:    25
+phys_power:    71
+phys_mult:     12
+evade:         0
+phys_def:      10
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         48
+
+Enemy:         Land Crawl
+Steal:         Defender Sword / Ancient Sword
+Drop:          Elixir /  
+hp:            22000
+mp:            500
+exp:           3270
+gil:           576
+gauge_time:    25
+phys_power:    100
+phys_mult:     16
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       5
+mag_evade:     33
+level:         48
+
+Enemy:         Chamcubia
+Steal:         Ribbon / Wall Ring
+Drop:          Lamia's Harp /  
+hp:            3800
+mp:            300
+exp:           1500
+gil:           579
+gauge_time:    20
+phys_power:    77
+phys_mult:     12
+evade:         10
+phys_def:      30
+mag_power:     0
+mag_def:       10
+mag_evade:     0
+level:         49
+
+Enemy:         Bella Donna
+Steal:         Coral Ring / Rainbow Dress
+Drop:          Wall Ring /  
+hp:            3900
+mp:            300
+exp:           1500
+gil:           582
+gauge_time:    20
+phys_power:    76
+phys_mult:     12
+evade:         10
+phys_def:      30
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         49
+
+Enemy:         Cherie
+Steal:         Elf Cape / Red Shoes
+Drop:          Running Shoes /  
+hp:            4000
+mp:            300
+exp:           1500
+gil:           585
+gauge_time:    20
+phys_power:    78
+phys_mult:     12
+evade:         10
+phys_def:      30
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         49
+
+Enemy:         White Flame
+Steal:         Elixir / Eyedrop
+Drop:          Ether /  
+hp:            1600
+mp:            100
+exp:           1430
+gil:           588
+gauge_time:    25
+phys_power:    65
+phys_mult:     12
+evade:         33
+phys_def:      50
+mag_power:     0
+mag_def:       35
+mag_evade:     10
+level:         49
+
+Enemy:         MossFungus
+Steal:         Air Lance / HiPotion
+Drop:          Antidote /  
+hp:            5000
+mp:            200
+exp:           1520
+gil:           591
+gauge_time:    25
+phys_power:    75
+phys_mult:     12
+evade:         0
+phys_def:      15
+mag_power:     0
+mag_def:       0
+mag_evade:     66
+level:         48
+
+Enemy:         Orcat
+Steal:         Soft / DarkMatter
+Drop:          Phoenix Down /  
+hp:            2100
+mp:            0
+exp:           1350
+gil:           594
+gauge_time:    22
+phys_power:    75
+phys_mult:     12
+evade:         0
+phys_def:      33
+mag_power:     0
+mag_def:       16
+mag_evade:     10
+level:         49
+
+Enemy:         Iron Giant
+Steal:         Iron Armor / Iron Helm
+Drop:            / Giant Drink
+hp:            18000
+mp:            10000
+exp:           10000
+gil:           597
+gauge_time:    55
+phys_power:    100
+phys_mult:     13
+evade:         0
+phys_def:      50
+mag_power:     50
+mag_def:       0
+mag_evade:     90
+level:         61
+
+Enemy:         Death Claw
+Steal:         Thor Hammer / Hero Drink
+Drop:          Soft /  
+hp:            4000
+mp:            200
+exp:           1700
+gil:           600
+gauge_time:    25
+phys_power:    70
+phys_mult:     9
+evade:         0
+phys_def:      29
+mag_power:     50
+mag_def:       0
+mag_evade:     0
+level:         51
+
+Enemy:         K.Behemoth
+Steal:         Drain Sword / Phoenix Down
+Drop:          DblLance /  
+hp:            18000
+mp:            300
+exp:           0
+gil:           1000
+gauge_time:    25
+phys_power:    95
+phys_mult:     13
+evade:         0
+phys_def:      15
+mag_power:     0
+mag_def:       0
+mag_evade:     75
+level:         82
+
+Enemy:         Farfarerro
+Steal:         Lillith Rod / Speed Drink
+Drop:          Eyedrop /  
+hp:            2580
+mp:            485
+exp:           1390
+gil:           606
+gauge_time:    25
+phys_power:    90
+phys_mult:     2
+evade:         20
+phys_def:      15
+mag_power:     70
+mag_def:       0
+mag_evade:     20
+level:         48
+
+Enemy:         Necromancr
+Steal:         Bone Mail / Revivify
+Drop:          Revivify /  
+hp:            6900
+mp:            300
+exp:           0
+gil:           1000
+gauge_time:    27
+phys_power:    79
+phys_mult:     13
+evade:         0
+phys_def:      15
+mag_power:     0
+mag_def:       30
+mag_evade:     50
+level:         54
+
+Enemy:         Ninja
+Steal:         Forged / Shuriken
+Drop:          Pinwheel /  
+hp:            5000
+mp:            200
+exp:           1800
+gil:           612
+gauge_time:    26
+phys_power:    90
+phys_mult:     12
+evade:         70
+phys_def:      15
+mag_power:     0
+mag_def:       0
+mag_evade:     90
+level:         52
+
+Enemy:         Great Drgn
+Steal:         Power Drink / DragonFang
+Drop:          DragonFang /  
+hp:            10000
+mp:            1000
+exp:           1900
+gil:           615
+gauge_time:    20
+phys_power:    100
+phys_mult:     13
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       20
+mag_evade:     33
+level:         51
+
+Enemy:         AvisDragon
+Steal:         Artemis Bow / Trident
+Drop:            / DragonFang
+hp:            7000
+mp:            1000
+exp:           2020
+gil:           618
+gauge_time:    22
+phys_power:    100
+phys_mult:     11
+evade:         0
+phys_def:      15
+mag_power:     0
+mag_def:       15
+mag_evade:     33
+level:         49
+
+Enemy:         Gorchimera
+Steal:         Aegis Shield / HiPotion
+Drop:          Circlet /  
+hp:            10000
+mp:            1000
+exp:           0
+gil:           900
+gauge_time:    20
+phys_power:    100
+phys_mult:     13
+evade:         0
+phys_def:      15
+mag_power:     0
+mag_def:       0
+mag_evade:     40
+level:         51
+
+Enemy:         LevelCheck
+Steal:         Ether / Potion
+Drop:          Elixir /  
+hp:            5000
+mp:            500
+exp:           1520
+gil:           624
+gauge_time:    20
+phys_power:    90
+phys_mult:     10
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         54
+
+Enemy:         Mind Mage
+Steal:         Guardian / GrnBeret
+Drop:          White Robe /  
+hp:            4700
+mp:            500
+exp:           0
+gil:           800
+gauge_time:    20
+phys_power:    90
+phys_mult:     4
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       0
+mag_evade:     66
+level:         53
+
+Enemy:         Fury
+Steal:         Cursed Ring / Wall Ring
+Drop:          Black Robe /  
+hp:            5000
+mp:            1000
+exp:           2250
+gil:           630
+gauge_time:    20
+phys_power:    80
+phys_mult:     10
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       0
+mag_evade:     20
+level:         50
+
+Enemy:         Thing
+Steal:         Crystal Shield / Ether
+Drop:          Crystal Helm /  
+hp:            3
+mp:            500
+exp:           0
+gil:           2000
+gauge_time:    20
+phys_power:    100
+phys_mult:     7
+evade:         50
+phys_def:      50
+mag_power:     0
+mag_def:       0
+mag_evade:     33
+level:         52
+
+Enemy:         Mover
+Steal:         Water Scroll / Flame Scroll
+Drop:          Thunder Scroll /  
+hp:            10000
+mp:            500
+exp:           0
+gil:           50000
+gauge_time:    35
+phys_power:    128
+phys_mult:     3
+evade:         0
+phys_def:      40
+mag_power:     0
+mag_def:       0
+mag_evade:     10
+level:         52
+
+Enemy:         CrysDragon
+Steal:         Dragoon Lance / Elixir
+Drop:          Crystal Armor /  
+hp:            17500
+mp:            10000
+exp:           0
+gil:           10000
+gauge_time:    50
+phys_power:    128
+phys_mult:     13
+evade:         0
+phys_def:      40
+mag_power:     0
+mag_def:       20
+mag_evade:     50
+level:         62
+
+Enemy:         Achelone
+Steal:         Flametongue / TurtleShell
+Drop:          Elixir /  
+hp:            3200
+mp:            0
+exp:           1480
+gil:           642
+gauge_time:    20
+phys_power:    100
+phys_mult:     13
+evade:         70
+phys_def:      70
+mag_power:     0
+mag_def:       0
+mag_evade:     33
+level:         52
+
+Enemy:         Bodyguard
+Steal:         Tempest / Cabin
+Drop:          Strength /  
+hp:            3960
+mp:            0
+exp:           2000
+gil:           645
+gauge_time:    20
+phys_power:    109
+phys_mult:     13
+evade:         10
+phys_def:      5
+mag_power:     0
+mag_def:       0
+mag_evade:     50
+level:         52
+
+Enemy:         Gilgamesh
+Steal:           / Genji Shield
+Drop:          AntiMagic Bow /  
+hp:            37000
+mp:            0
+exp:           0
+gil:           15
+gauge_time:    47
+phys_power:    109
+phys_mult:     13
+evade:         5
+phys_def:      0
+mag_power:     0
+mag_def:       35
+mag_evade:     0
+level:         59
+
+Enemy:         Sahagin
+Steal:         Potion / Potion
+Drop:          Potion /  
+hp:            550
+mp:            10
+exp:           180
+gil:           100
+gauge_time:    26
+phys_power:    27
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         20
+
+Enemy:         Th.Anemone
+Steal:           /  
+Drop:          Potion / Thunder Scroll
+hp:            600
+mp:            100
+exp:           160
+gil:           100
+gauge_time:    25
+phys_power:    27
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     10
+mag_def:       5
+mag_evade:     0
+level:         21
+
+Enemy:         Sea Avis
+Steal:         Soft /  
+Drop:          Soft /  
+hp:            25
+mp:            100
+exp:           200
+gil:           100
+gauge_time:    50
+phys_power:    30
+phys_mult:     5
+evade:         90
+phys_def:      10
+mag_power:     10
+mag_def:       35
+mag_evade:     80
+level:         19
+
+Enemy:         Corvette
+Steal:         Trident /  
+Drop:          HiPotion /  
+hp:            2800
+mp:            0
+exp:           0
+gil:           1000
+gauge_time:    35
+phys_power:    40
+phys_mult:     9
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       25
+mag_evade:     0
+level:         29
+
+Enemy:         Armon
+Steal:         HiPotion / Antidote
+Drop:          HiPotion /  
+hp:            1500
+mp:            300
+exp:           0
+gil:           740
+gauge_time:    25
+phys_power:    90
+phys_mult:     1
+evade:         0
+phys_def:      35
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         25
+
+Enemy:         SeaScorpio
+Steal:           / Potion
+Drop:          Potion /  
+hp:            500
+mp:            0
+exp:           0
+gil:           680
+gauge_time:    35
+phys_power:    59
+phys_mult:     18
+evade:         80
+phys_def:      20
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         26
+
+Enemy:         Silvune
+Steal:         Glasses / Maiden's Kiss
+Drop:          Angel Ring /  
+hp:            19000
+mp:            10000
+exp:           0
+gil:           10000
+gauge_time:    59
+phys_power:    77
+phys_mult:     19
+evade:         40
+phys_def:      40
+mag_power:     10
+mag_def:       30
+mag_evade:     90
+level:         27
+
+Enemy:         Gel Fish
+Steal:           / Potion
+Drop:          HiPotion /  
+hp:            1000
+mp:            0
+exp:           0
+gil:           540
+gauge_time:    30
+phys_power:    0
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         28
+
+Enemy:         Giant Bird
+Steal:         Murasume / HiPotion
+Drop:          Giant Drink /  
+hp:            9000
+mp:            500
+exp:           0
+gil:           5000
+gauge_time:    55
+phys_power:    75
+phys_mult:     19
+evade:         5
+phys_def:      20
+mag_power:     0
+mag_def:       10
+mag_evade:     50
+level:         29
+
+Enemy:         Sea Devil
+Steal:         Defender Sword / HiPotion
+Drop:          TurtleShell /  
+hp:            5000
+mp:            1000
+exp:           0
+gil:           3000
+gauge_time:    20
+phys_power:    71
+phys_mult:     8
+evade:         0
+phys_def:      15
+mag_power:     0
+mag_def:       10
+mag_evade:     0
+level:         30
+
+Enemy:         Stingray
+Steal:         RuneEdge / DarkMatter
+Drop:          Dragon's Whisker /  
+hp:            30000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    70
+phys_power:    66
+phys_mult:     16
+evade:         40
+phys_def:      60
+mag_power:     70
+mag_def:       20
+mag_evade:     10
+level:         93
+
+Enemy:         ????
+Steal:           / Potion
+Drop:          Potion /  
+hp:            2000
+mp:            500
+exp:           5000
+gil:           1
+gauge_time:    50
+phys_power:    50
+phys_mult:     10
+evade:         30
+phys_def:      30
+mag_power:     0
+mag_def:       30
+mag_evade:     0
+level:         33
+
+Enemy:         Golem
+Steal:           / Soft
+Drop:            / Golem
+hp:            30000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    60
+phys_power:    50
+phys_mult:     10
+evade:         0
+phys_def:      50
+mag_power:     0
+mag_def:       50
+mag_evade:     0
+level:         71
+
+Enemy:         Chimera
+Steal:           /  
+Drop:            /  
+hp:            100
+mp:            0
+exp:           0
+gil:           0
+gauge_time:    20
+phys_power:    0
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         0
+
+Enemy:         Shiva
+Steal:           / Potion
+Drop:          Water Scroll /  
+hp:            7000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    0
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     50
+mag_def:       0
+mag_evade:     0
+level:         51
+
+Enemy:         Ifrit
+Steal:           / Potion
+Drop:          Flame Scroll /  
+hp:            7000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    0
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         1
+
+Enemy:         Ramuh
+Steal:           / Potion
+Drop:          Thunder Scroll /  
+hp:            7000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    0
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         1
+
+Enemy:         Gala Cat
+Steal:           / Potion
+Drop:          Ether /  
+hp:            7000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    55
+phys_mult:     8
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         47
+
+Enemy:         Wyvern
+Steal:           / Potion
+Drop:          HiPotion /  
+hp:            7000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    40
+phys_mult:     10
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         47
+
+Enemy:         Elf Toad
+Steal:           / Potion
+Drop:          Maiden's Kiss /  
+hp:            7000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    40
+phys_mult:     10
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         47
+
+Enemy:         Crew Dust
+Steal:           / Potion
+Drop:          Eyedrop /  
+hp:            7000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    40
+phys_mult:     10
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         47
+
+Enemy:         Whirl Demon
+Steal:           / Potion
+Drop:          Elixir /  
+hp:            7000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    40
+phys_mult:     10
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         47
+
+Enemy:         ZombieDrgn
+Steal:           / Potion
+Drop:          DragonFang /  
+hp:            7000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    50
+phys_mult:     10
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         47
+
+Enemy:         D.Chimera
+Steal:           / HiPotion
+Drop:          Protect Drink /  
+hp:            2700
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    40
+phys_power:    60
+phys_mult:     8
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         45
+
+Enemy:         AdamaGolem
+Steal:           / HiPotion
+Drop:          Soft /  
+hp:            2000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    35
+phys_power:    60
+phys_mult:     9
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         44
+
+Enemy:         Ziggurat
+Steal:         Diamond Armor / Power Drink
+Drop:            / Giant Drink
+hp:            3000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    35
+phys_power:    60
+phys_mult:     8
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         43
+
+Enemy:         LonkaKnght
+Steal:           / Hero Drink
+Drop:          Flame Scroll /  
+hp:            2000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    35
+phys_power:    70
+phys_mult:     10
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         42
+
+Enemy:         BioSoldier
+Steal:         Diamond Helm / Antidote
+Drop:          Venom Axe /  
+hp:            2000
+mp:            5000
+exp:           0
+gil:           0
+gauge_time:    50
+phys_power:    60
+phys_mult:     11
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         41
+
+Enemy:         Lunenta
+Steal:           / Eyedrop
+Drop:          Antidote /  
+hp:            1600
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    45
+phys_power:    60
+phys_mult:     9
+evade:         0
+phys_def:      50
+mag_power:     0
+mag_def:       50
+mag_evade:     0
+level:         40
+
+Enemy:         Tote Avis
+Steal:         Ether / Avis Killer
+Drop:          Avis Killer /  
+hp:            33090
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    50
+phys_power:    70
+phys_mult:     15
+evade:         20
+phys_def:      10
+mag_power:     10
+mag_def:       10
+mag_evade:     60
+level:         47
+
+Enemy:         Belfegor
+Steal:         RisingSun / Full Moon
+Drop:          Ice Shield /  
+hp:            6000
+mp:            500
+exp:           0
+gil:           950
+gauge_time:    40
+phys_power:    73
+phys_mult:     10
+evade:         15
+phys_def:      30
+mag_power:     50
+mag_def:       10
+mag_evade:     70
+level:         55
+
+Enemy:         Imp
+Steal:         HiPotion / Potion
+Drop:          HiPotion /  
+hp:            1000
+mp:            500
+exp:           0
+gil:           0
+gauge_time:    40
+phys_power:    65
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         52
+
+Enemy:         Owazoral
+Steal:         HiPotion / Potion
+Drop:          Ether /  
+hp:            1000
+mp:            500
+exp:           0
+gil:           0
+gauge_time:    40
+phys_power:    60
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         53
+
+Enemy:         Garkimasra
+Steal:         HiPotion / Potion
+Drop:          Elixir /  
+hp:            666
+mp:            5000
+exp:           0
+gil:           1
+gauge_time:    40
+phys_power:    60
+phys_mult:     10
+evade:         50
+phys_def:      65
+mag_power:     60
+mag_def:       60
+mag_evade:     50
+level:         54
+
+Enemy:         Gabbldegak
+Steal:         HiPotion / Potion
+Drop:          Phoenix Down /  
+hp:            1200
+mp:            100
+exp:           890
+gil:           1000
+gauge_time:    25
+phys_power:    39
+phys_mult:     10
+evade:         15
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         24
+
+Enemy:         Gil Turtle
+Steal:         HiPotion / Potion
+Drop:            /  
+hp:            32768
+mp:            8000
+exp:           0
+gil:           5000
+gauge_time:    66
+phys_power:    115
+phys_mult:     13
+evade:         40
+phys_def:      40
+mag_power:     90
+mag_def:       55
+mag_evade:     40
+level:         57
+
+Enemy:         Omega
+Steal:           /  
+Drop:            / OmegaMedl
+hp:            55530
+mp:            60700
+exp:           0
+gil:           50000
+gauge_time:    76
+phys_power:    115
+phys_mult:     25
+evade:         95
+phys_def:      190
+mag_power:     199
+mag_def:       150
+mag_evade:     90
+level:         119
+
+Enemy:         Big Boss
+Steal:           /  
+Drop:            /  
+hp:            3
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    28
+phys_power:    250
+phys_mult:     10
+evade:         99
+phys_def:      250
+mag_power:     250
+mag_def:       250
+mag_evade:     99
+level:         13
+
+Enemy:         <blank>
+Steal:           /  
+Drop:            /  
+hp:            100
+mp:            0
+exp:           0
+gil:           0
+gauge_time:    20
+phys_power:    0
+phys_mult:     0
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         0
+
+Enemy:         WingRaptor
+Steal:           / Potion
+Drop:            / Phoenix Down
+hp:            1500
+mp:            25
+exp:           3800
+gil:           0
+gauge_time:    32
+phys_power:    30
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     1
+mag_def:       10
+mag_evade:     10
+level:         1
+
+Enemy:         WingRaptor
+Steal:           / Potion
+Drop:            / Phoenix Down
+hp:            1500
+mp:            0
+exp:           3800
+gil:           0
+gauge_time:    32
+phys_power:    30
+phys_mult:     7
+evade:         40
+phys_def:      20
+mag_power:     1
+mag_def:       10
+mag_evade:     10
+level:         2
+
+Enemy:         Karlabos
+Steal:           / Potion
+Drop:            / Tent
+hp:            15000
+mp:            100
+exp:           8400
+gil:           0
+gauge_time:    45
+phys_power:    84
+phys_mult:     8
+evade:         0
+phys_def:      8
+mag_power:     0
+mag_def:       20
+mag_evade:     0
+level:         6
+
+Enemy:         Twin Tania
+Steal:           / Giant's Axe
+Drop:          Murasume /  
+hp:            19850
+mp:            10000
+exp:           15700
+gil:           0
+gauge_time:    81
+phys_power:    45
+phys_mult:     14
+evade:         0
+phys_def:      0
+mag_power:     36
+mag_def:       0
+mag_evade:     0
+level:         30
+
+Enemy:         Siren
+Steal:           /  
+Drop:            / Bronze Armor
+hp:            2000
+mp:            500
+exp:           6600
+gil:           0
+gauge_time:    40
+phys_power:    12
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     8
+mag_def:       24
+mag_evade:     0
+level:         2
+
+Enemy:         Siren
+Steal:           /  
+Drop:            / Bronze Shield
+hp:            2000
+mp:            200
+exp:           6600
+gil:           0
+gauge_time:    40
+phys_power:    40
+phys_mult:     10
+evade:         0
+phys_def:      16
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         2
+
+Enemy:         Forza
+Steal:           /  
+Drop:            / Power Drink
+hp:            450
+mp:            100
+exp:           300
+gil:           0
+gauge_time:    37
+phys_power:    14
+phys_mult:     9
+evade:         0
+phys_def:      3
+mag_power:     0
+mag_def:       5
+mag_evade:     0
+level:         8
+
+Enemy:         Magisa
+Steal:           /  
+Drop:            / Whip
+hp:            450
+mp:            200
+exp:           300
+gil:           0
+gauge_time:    30
+phys_power:    14
+phys_mult:     5
+evade:         0
+phys_def:      0
+mag_power:     1
+mag_def:       0
+mag_evade:     0
+level:         8
+
+Enemy:         Galura
+Steal:         HiPotion / Potion
+Drop:            / HiPotion
+hp:            20000
+mp:            100
+exp:           13900
+gil:           0
+gauge_time:    31
+phys_power:    75
+phys_mult:     9
+evade:         0
+phys_def:      7
+mag_power:     0
+mag_def:       4
+mag_evade:     0
+level:         3
+
+Enemy:         LiquiFlame
+Steal:           /  
+Drop:            / Flame Scroll
+hp:            2500
+mp:            200
+exp:           8700
+gil:           0
+gauge_time:    37
+phys_power:    26
+phys_mult:     11
+evade:         20
+phys_def:      0
+mag_power:     8
+mag_def:       12
+mag_evade:     0
+level:         15
+
+Enemy:         LiquiFlame
+Steal:           /  
+Drop:            / Fire Rod
+hp:            2500
+mp:            90
+exp:           8700
+gil:           0
+gauge_time:    37
+phys_power:    26
+phys_mult:     8
+evade:         10
+phys_def:      0
+mag_power:     24
+mag_def:       24
+mag_evade:     0
+level:         15
+
+Enemy:         LiquiFlame
+Steal:           /  
+Drop:            / Fire Bow
+hp:            2500
+mp:            100
+exp:           8700
+gil:           0
+gauge_time:    37
+phys_power:    26
+phys_mult:     5
+evade:         30
+phys_def:      0
+mag_power:     16
+mag_def:       12
+mag_evade:     0
+level:         15
+
+Enemy:         Commander
+Steal:           / Mythril Sword
+Drop:          RegalCut /  
+hp:            1200
+mp:            200
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    25
+phys_mult:     6
+evade:         10
+phys_def:      0
+mag_power:     12
+mag_def:       0
+mag_evade:     0
+level:         7
+
+Enemy:         Sandworm
+Steal:           /  
+Drop:            /  
+hp:            19997
+mp:            10125
+exp:           28600
+gil:           0
+gauge_time:    50
+phys_power:    100
+phys_mult:     10
+evade:         0
+phys_def:      0
+mag_power:     1
+mag_def:       10
+mag_evade:     10
+level:         18
+
+Enemy:         Hole
+Steal:           /  
+Drop:            /  
+hp:            19997
+mp:            10125
+exp:           28600
+gil:           0
+gauge_time:    1
+phys_power:    25
+phys_mult:     10
+evade:         0
+phys_def:      0
+mag_power:     1
+mag_def:       10
+mag_evade:     10
+level:         18
+
+Enemy:         Hole
+Steal:           /  
+Drop:            /  
+hp:            19997
+mp:            10125
+exp:           28600
+gil:           0
+gauge_time:    98
+phys_power:    7
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     1
+mag_def:       10
+mag_evade:     10
+level:         18
+
+Enemy:         AdamanTiMi
+Steal:           / Protect Drink
+Drop:            / TurtleShell
+hp:            65535
+mp:            125
+exp:           30100
+gil:           0
+gauge_time:    30
+phys_power:    68
+phys_mult:     18
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       4
+mag_evade:     50
+level:         16
+
+Enemy:         Flamegun
+Steal:         Ether / Potion
+Drop:            / Speed Drink
+hp:            2400
+mp:            125
+exp:           0
+gil:           0
+gauge_time:    35
+phys_power:    7
+phys_mult:     2
+evade:         0
+phys_def:      15
+mag_power:     1
+mag_def:       20
+mag_evade:     10
+level:         22
+
+Enemy:         Rocket
+Steal:         Ether / Potion
+Drop:            / Protect Drink
+hp:            2500
+mp:            200
+exp:           0
+gil:           0
+gauge_time:    33
+phys_power:    7
+phys_mult:     2
+evade:         0
+phys_def:      20
+mag_power:     1
+mag_def:       15
+mag_evade:     10
+level:         23
+
+Enemy:         Exdeath
+Steal:         Wonder Wand / Phoenix Down
+Drop:            /  
+hp:            49001
+mp:            30000
+exp:           0
+gil:           0
+gauge_time:    44
+phys_power:    111
+phys_mult:     17
+evade:         10
+phys_def:      35
+mag_power:     25
+mag_def:       25
+mag_evade:     15
+level:         77
+
+Enemy:         Sol Cannon
+Steal:         Elixir / Ether
+Drop:            / DarkMatter
+hp:            5000
+mp:            1000
+exp:           7600
+gil:           100
+gauge_time:    55
+phys_power:    7
+phys_mult:     2
+evade:         0
+phys_def:      5
+mag_power:     1
+mag_def:       10
+mag_evade:     10
+level:         36
+
+Enemy:         ArchaeAvis
+Steal:           /  
+Drop:            / Giant Drink
+hp:            2300
+mp:            2000
+exp:           7600
+gil:           0
+gauge_time:    30
+phys_power:    39
+phys_mult:     7
+evade:         10
+phys_def:      12
+mag_power:     1
+mag_def:       6
+mag_evade:     0
+level:         21
+
+Enemy:         ArchaeAvis
+Steal:           /  
+Drop:            / Power Drink
+hp:            2300
+mp:            2000
+exp:           7600
+gil:           0
+gauge_time:    30
+phys_power:    39
+phys_mult:     7
+evade:         10
+phys_def:      13
+mag_power:     1
+mag_def:       12
+mag_evade:     0
+level:         19
+
+Enemy:         ArchaeAvis
+Steal:           /  
+Drop:            / Speed Drink
+hp:            2300
+mp:            2000
+exp:           7600
+gil:           0
+gauge_time:    30
+phys_power:    39
+phys_mult:     7
+evade:         10
+phys_def:      14
+mag_power:     1
+mag_def:       18
+mag_evade:     0
+level:         23
+
+Enemy:         ArchaeAvis
+Steal:           /  
+Drop:            / Protect Drink
+hp:            2300
+mp:            2000
+exp:           7600
+gil:           0
+gauge_time:    30
+phys_power:    39
+phys_mult:     7
+evade:         10
+phys_def:      16
+mag_power:     1
+mag_def:       24
+mag_evade:     0
+level:         24
+
+Enemy:         ArchaeAvis
+Steal:           /  
+Drop:            / Hero Drink
+hp:            2300
+mp:            2000
+exp:           7600
+gil:           0
+gauge_time:    35
+phys_power:    42
+phys_mult:     9
+evade:         10
+phys_def:      10
+mag_power:     1
+mag_def:       30
+mag_evade:     0
+level:         20
+
+Enemy:         Chim.Brain
+Steal:         Wind Spear / DragonFang
+Drop:            / Phoenix Down
+hp:            33333
+mp:            1000
+exp:           31400
+gil:           0
+gauge_time:    40
+phys_power:    110
+phys_mult:     7
+evade:         10
+phys_def:      10
+mag_power:     30
+mag_def:       20
+mag_evade:     0
+level:         19
+
+Enemy:         Titan
+Steal:         Earth Hammer / Potion
+Drop:            / HiPotion
+hp:            19997
+mp:            2000
+exp:           10500
+gil:           0
+gauge_time:    25
+phys_power:    36
+phys_mult:     9
+evade:         10
+phys_def:      8
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         1
+
+Enemy:         Puroboros
+Steal:         Eyedrop /  
+Drop:          Potion /  
+hp:            3700
+mp:            100
+exp:           4567
+gil:           0
+gauge_time:    20
+phys_power:    132
+phys_mult:     7
+evade:         0
+phys_def:      0
+mag_power:     12
+mag_def:       0
+mag_evade:     0
+level:         64
+
+Enemy:         Abductor
+Steal:         Gaia Gear /  
+Drop:            / Ether
+hp:            1500
+mp:            2000
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    40
+phys_mult:     7
+evade:         0
+phys_def:      0
+mag_power:     10
+mag_def:       0
+mag_evade:     0
+level:         22
+
+Enemy:         Gilgamesh
+Steal:           /  
+Drop:            / Elixir
+hp:            27900
+mp:            2000
+exp:           31400
+gil:           0
+gauge_time:    25
+phys_power:    140
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         26
+
+Enemy:         Fishman
+Steal:           /  
+Drop:          Potion /  
+hp:            400
+mp:            0
+exp:           300
+gil:           200
+gauge_time:    25
+phys_power:    40
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         25
+
+Enemy:         FlyingKillr
+Steal:           /  
+Drop:          Antidote /  
+hp:            300
+mp:            0
+exp:           300
+gil:           200
+gauge_time:    28
+phys_power:    40
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         26
+
+Enemy:         Lil Chariot
+Steal:           /  
+Drop:          HiPotion /  
+hp:            480
+mp:            100
+exp:           300
+gil:           200
+gauge_time:    25
+phys_power:    40
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         8
+
+Enemy:         NeoGalura
+Steal:           /  
+Drop:          Water Scroll /  
+hp:            980
+mp:            1000
+exp:           300
+gil:           500
+gauge_time:    25
+phys_power:    40
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         27
+
+Enemy:         Gilgamesh
+Steal:         Trident / Hero Drink
+Drop:            / Tricorn Hat
+hp:            1500
+mp:            1000
+exp:           3100
+gil:           0
+gauge_time:    45
+phys_power:    48
+phys_mult:     7
+evade:         10
+phys_def:      17
+mag_power:     0
+mag_def:       12
+mag_evade:     0
+level:         34
+
+Enemy:         Tyrasaurus
+Steal:         Golden Shield /  
+Drop:          Elixir /  
+hp:            40000
+mp:            1000
+exp:           22400
+gil:           0
+gauge_time:    50
+phys_power:    60
+phys_mult:     8
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       20
+mag_evade:     0
+level:         23
+
+Enemy:         Shiva
+Steal:         Phoenix Down / HiPotion
+Drop:            / Ice Rod
+hp:            3000
+mp:            1000
+exp:           3900
+gil:           0
+gauge_time:    25
+phys_power:    30
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       6
+mag_evade:     0
+level:         13
+
+Enemy:         Abductor
+Steal:         Power Wrist / HiPotion
+Drop:          Potion /  
+hp:            250
+mp:            1000
+exp:           100
+gil:           0
+gauge_time:    35
+phys_power:    10
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         23
+
+Enemy:         HiryuuPlant
+Steal:           /  
+Drop:            / Elixir
+hp:            850
+mp:            1000
+exp:           300
+gil:           0
+gauge_time:    39
+phys_power:    20
+phys_mult:     6
+evade:         0
+phys_def:      0
+mag_power:     50
+mag_def:       40
+mag_evade:     0
+level:         33
+
+Enemy:         HiryuuFlowr
+Steal:           /  
+Drop:          Phoenix Down /  
+hp:            42
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    22
+phys_power:    3
+phys_mult:     20
+evade:         0
+phys_def:      0
+mag_power:     30
+mag_def:       30
+mag_evade:     30
+level:         31
+
+Enemy:         HiryuuFlowr
+Steal:           /  
+Drop:          Phoenix Down /  
+hp:            42
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    17
+phys_power:    3
+phys_mult:     20
+evade:         0
+phys_def:      0
+mag_power:     30
+mag_def:       30
+mag_evade:     30
+level:         31
+
+Enemy:         HiryuuFlowr
+Steal:           /  
+Drop:          Phoenix Down /  
+hp:            42
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    27
+phys_power:    3
+phys_mult:     20
+evade:         0
+phys_def:      0
+mag_power:     30
+mag_def:       30
+mag_evade:     30
+level:         33
+
+Enemy:         HiryuuFlowr
+Steal:           /  
+Drop:          Phoenix Down /  
+hp:            42
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    22
+phys_power:    3
+phys_mult:     20
+evade:         0
+phys_def:      0
+mag_power:     30
+mag_def:       30
+mag_evade:     30
+level:         31
+
+Enemy:         HiryuuFlowr
+Steal:           /  
+Drop:          Phoenix Down /  
+hp:            42
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    18
+phys_power:    3
+phys_mult:     20
+evade:         0
+phys_def:      0
+mag_power:     30
+mag_def:       30
+mag_evade:     30
+level:         35
+
+Enemy:         Gilgamesh
+Steal:           / Genji Gloves
+Drop:            / Golden Shield
+hp:            1500
+mp:            888
+exp:           1300
+gil:           0
+gauge_time:    46
+phys_power:    60
+phys_mult:     5
+evade:         10
+phys_def:      12
+mag_power:     48
+mag_def:       12
+mag_evade:     10
+level:         37
+
+Enemy:         Enkidou
+Steal:           / GrnBeret
+Drop:            / Trident
+hp:            1500
+mp:            1000
+exp:           1300
+gil:           0
+gauge_time:    46
+phys_power:    60
+phys_mult:     5
+evade:         20
+phys_def:      0
+mag_power:     36
+mag_def:       0
+mag_evade:     20
+level:         35
+
+Enemy:         Atmos
+Steal:         Flail / Ether
+Drop:            / DarkMatter
+hp:            17776
+mp:            10000
+exp:           13100
+gil:           0
+gauge_time:    40
+phys_power:    8
+phys_mult:     10
+evade:         0
+phys_def:      11
+mag_power:     64
+mag_def:       16
+mag_evade:     20
+level:         33
+
+Enemy:         Guardian
+Steal:         Elixir /  
+Drop:          Soot /  
+hp:            11928
+mp:            10000
+exp:           7475
+gil:           0
+gauge_time:    40
+phys_power:    48
+phys_mult:     10
+evade:         0
+phys_def:      8
+mag_power:     12
+mag_def:       16
+mag_evade:     20
+level:         62
+
+Enemy:         Guardian
+Steal:         Elixir /  
+Drop:          Soot /  
+hp:            11928
+mp:            10000
+exp:           7475
+gil:           0
+gauge_time:    40
+phys_power:    48
+phys_mult:     10
+evade:         0
+phys_def:      8
+mag_power:     1
+mag_def:       16
+mag_evade:     20
+level:         62
+
+Enemy:         Guardian
+Steal:         Elixir /  
+Drop:          Soot /  
+hp:            11928
+mp:            10000
+exp:           7475
+gil:           0
+gauge_time:    45
+phys_power:    48
+phys_mult:     10
+evade:         0
+phys_def:      8
+mag_power:     12
+mag_def:       16
+mag_evade:     20
+level:         62
+
+Enemy:         Guardian
+Steal:         Elixir /  
+Drop:          Soot /  
+hp:            11928
+mp:            10000
+exp:           7475
+gil:           0
+gauge_time:    50
+phys_power:    48
+phys_mult:     10
+evade:         0
+phys_def:      8
+mag_power:     8
+mag_def:       16
+mag_evade:     20
+level:         62
+
+Enemy:         Carbunkle
+Steal:         Giant Drink / Wall Ring
+Drop:          TurtleShell /  
+hp:            17000
+mp:            10000
+exp:           29900
+gil:           0
+gauge_time:    45
+phys_power:    44
+phys_mult:     10
+evade:         70
+phys_def:      40
+mag_power:     64
+mag_def:       40
+mag_evade:     50
+level:         35
+
+Enemy:         Merugene
+Steal:         Giant Drink / Wall Ring
+Drop:          TurtleShell /  
+hp:            15000
+mp:            10000
+exp:           0
+gil:           0
+gauge_time:    50
+phys_power:    75
+phys_mult:     15
+evade:         20
+phys_def:      50
+mag_power:     50
+mag_def:       50
+mag_evade:     15
+level:         41
+
+Enemy:         Gilgamesh
+Steal:           / Genji Helm
+Drop:            / Excailbur
+hp:            10000
+mp:            9000
+exp:           20900
+gil:           0
+gauge_time:    75
+phys_power:    60
+phys_mult:     1
+evade:         0
+phys_def:      24
+mag_power:     0
+mag_def:       12
+mag_evade:     0
+level:         80
+
+Enemy:         Exdeath
+Steal:         Judgement Staff / Elixir
+Drop:            /  
+hp:            32768
+mp:            32768
+exp:           18340
+gil:           0
+gauge_time:    50
+phys_power:    58
+phys_mult:     20
+evade:         10
+phys_def:      25
+mag_power:     0
+mag_def:       25
+mag_evade:     85
+level:         66
+
+Enemy:         Antlion
+Steal:           / HiPotion
+Drop:            / Cabin
+hp:            50000
+mp:            1000
+exp:           36100
+gil:           2400
+gauge_time:    50
+phys_power:    88
+phys_mult:     13
+evade:         13
+phys_def:      20
+mag_power:     0
+mag_def:       12
+mag_evade:     13
+level:         27
+
+Enemy:         Mummy
+Steal:         HiPotion / Potion
+Drop:          Revivify /  
+hp:            2900
+mp:            50
+exp:           0
+gil:           500
+gauge_time:    50
+phys_power:    48
+phys_mult:     13
+evade:         10
+phys_def:      25
+mag_power:     0
+mag_def:       20
+mag_evade:     10
+level:         27
+
+Enemy:         Aspis
+Steal:         HiPotion / Antidote
+Drop:          Antidote /  
+hp:            1280
+mp:            50
+exp:           800
+gil:           0
+gauge_time:    42
+phys_power:    57
+phys_mult:     11
+evade:         10
+phys_def:      20
+mag_power:     0
+mag_def:       20
+mag_evade:     10
+level:         35
+
+Enemy:         MachinHead
+Steal:         Gauntlets / Ether
+Drop:          Speed Drink /  
+hp:            7210
+mp:            5000
+exp:           0
+gil:           0
+gauge_time:    37
+phys_power:    59
+phys_mult:     13
+evade:         10
+phys_def:      28
+mag_power:     0
+mag_def:       18
+mag_evade:     36
+level:         37
+
+Enemy:         Merugene
+Steal:           / Leather Armor
+Drop:          Maiden's Kiss /  
+hp:            3600
+mp:            500
+exp:           2000
+gil:           0
+gauge_time:    40
+phys_power:    30
+phys_mult:     13
+evade:         10
+phys_def:      36
+mag_power:     36
+mag_def:       0
+mag_evade:     10
+level:         35
+
+Enemy:         Merugene
+Steal:           / Leather Cap
+Drop:          Maiden's Kiss /  
+hp:            3600
+mp:            500
+exp:           2000
+gil:           0
+gauge_time:    40
+phys_power:    30
+phys_mult:     13
+evade:         10
+phys_def:      36
+mag_power:     36
+mag_def:       0
+mag_evade:     10
+level:         35
+
+Enemy:         Merugene
+Steal:           / Leather Shoes
+Drop:          Maiden's Kiss /  
+hp:            3600
+mp:            500
+exp:           2000
+gil:           0
+gauge_time:    40
+phys_power:    30
+phys_mult:     13
+evade:         10
+phys_def:      36
+mag_power:     36
+mag_def:       0
+mag_evade:     10
+level:         35
+
+Enemy:         Merugene
+Steal:           / Leather Shield
+Drop:          Maiden's Kiss /  
+hp:            3600
+mp:            500
+exp:           2000
+gil:           0
+gauge_time:    40
+phys_power:    30
+phys_mult:     13
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       36
+mag_evade:     30
+level:         40
+
+Enemy:         Odin
+Steal:         Guard Ring /  
+Drop:          Flame Shield /  
+hp:            55000
+mp:            500
+exp:           13900
+gil:           0
+gauge_time:    45
+phys_power:    72
+phys_mult:     10
+evade:         10
+phys_def:      24
+mag_power:     36
+mag_def:       24
+mag_evade:     70
+level:         2
+
+Enemy:         Gargoyle
+Steal:         Phoenix Down / Potion
+Drop:          HiPotion /  
+hp:            8500
+mp:            300
+exp:           12500
+gil:           0
+gauge_time:    34
+phys_power:    58
+phys_mult:     9
+evade:         10
+phys_def:      12
+mag_power:     50
+mag_def:       12
+mag_evade:     35
+level:         33
+
+Enemy:         Triton
+Steal:         Elixir / Soft
+Drop:          Protect Drink /  
+hp:            2167
+mp:            10000
+exp:           1267
+gil:           0
+gauge_time:    30
+phys_power:    25
+phys_mult:     11
+evade:         0
+phys_def:      0
+mag_power:     4
+mag_def:       10
+mag_evade:     40
+level:         37
+
+Enemy:         Neregeid
+Steal:         Elixir / Soft
+Drop:          Power Drink /  
+hp:            2167
+mp:            10000
+exp:           1267
+gil:           0
+gauge_time:    30
+phys_power:    24
+phys_mult:     11
+evade:         0
+phys_def:      0
+mag_power:     4
+mag_def:       10
+mag_evade:     40
+level:         20
+
+Enemy:         Phobos
+Steal:         Elixir / Soft
+Drop:          Giant Drink /  
+hp:            2167
+mp:            10000
+exp:           1267
+gil:           0
+gauge_time:    30
+phys_power:    25
+phys_mult:     11
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       10
+mag_evade:     40
+level:         39
+
+Enemy:         Omniscient
+Steal:         CornaJar / Potion
+Drop:            /  
+hp:            20000
+mp:            30000
+exp:           35800
+gil:           0
+gauge_time:    42
+phys_power:    80
+phys_mult:     20
+evade:         0
+phys_def:      0
+mag_power:     16
+mag_def:       6
+mag_evade:     0
+level:         42
+
+Enemy:         Minotauros
+Steal:         Pinwheel / Leather Shoes
+Drop:            /  
+hp:            18000
+mp:            100
+exp:           41200
+gil:           0
+gauge_time:    46
+phys_power:    144
+phys_mult:     12
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         44
+
+Enemy:         Leviathan
+Steal:           / Elixir
+Drop:            / Wall Ring
+hp:            2500
+mp:            2000
+exp:           3800
+gil:           0
+gauge_time:    42
+phys_power:    25
+phys_mult:     12
+evade:         4
+phys_def:      8
+mag_power:     1
+mag_def:       8
+mag_evade:     40
+level:         37
+
+Enemy:         Stalker
+Steal:           / DarkMatter
+Drop:            /  
+hp:            39999
+mp:            8192
+exp:           44800
+gil:           0
+gauge_time:    40
+phys_power:    40
+phys_mult:     10
+evade:         0
+phys_def:      4
+mag_power:     4
+mag_def:       8
+mag_evade:     5
+level:         3
+
+Enemy:         Gogo
+Steal:         Gold Hairpin / Leather Armor
+Drop:          Tiger Mask /  
+hp:            12000
+mp:            60000
+exp:           7500
+gil:           0
+gauge_time:    50
+phys_power:    96
+phys_mult:     25
+evade:         30
+phys_def:      24
+mag_power:     28
+mag_def:       16
+mag_evade:     99
+level:         62
+
+Enemy:         Bahamut
+Steal:         DragonFang / DragonFang
+Drop:          DragonFang /  
+hp:            1000
+mp:            10000
+exp:           1700
+gil:           0
+gauge_time:    40
+phys_power:    36
+phys_mult:     16
+evade:         3
+phys_def:      6
+mag_power:     12
+mag_def:       12
+mag_evade:     23
+level:         119
+
+Enemy:         Jura Avis
+Steal:         Dragoon Lance / TurtleShell
+Drop:            / DragonFang
+hp:            15000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    40
+phys_power:    65
+phys_mult:     10
+evade:         20
+phys_def:      35
+mag_power:     45
+mag_def:       30
+mag_evade:     10
+level:         61
+
+Enemy:         Halicarnaso
+Steal:         Aegis Shield / Staff of Light
+Drop:          Elf Cape /  
+hp:            8000
+mp:            5000
+exp:           3000
+gil:           0
+gauge_time:    40
+phys_power:    35
+phys_mult:     12
+evade:         0
+phys_def:      5
+mag_power:     50
+mag_def:       10
+mag_evade:     45
+level:         97
+
+Enemy:         Exdeath
+Steal:           /  
+Drop:            /  
+hp:            50000
+mp:            65000
+exp:           0
+gil:           0
+gauge_time:    35
+phys_power:    60
+phys_mult:     20
+evade:         0
+phys_def:      0
+mag_power:     30
+mag_def:       1
+mag_evade:     0
+level:         63
+
+Enemy:         NeoExdeath
+Steal:           /  
+Drop:            /  
+hp:            55500
+mp:            55500
+exp:           0
+gil:           0
+gauge_time:    1
+phys_power:    1
+phys_mult:     1
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     10
+level:         97
+
+Enemy:         NeoExdeath
+Steal:           /  
+Drop:            /  
+hp:            55500
+mp:            55500
+exp:           0
+gil:           0
+gauge_time:    1
+phys_power:    1
+phys_mult:     1
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     10
+level:         97
+
+Enemy:         Goblin
+Steal:           /  
+Drop:            /  
+hp:            1
+mp:            2
+exp:           3
+gil:           10
+gauge_time:    10
+phys_power:    5
+phys_mult:     1
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         2
+
+Enemy:         Iron Claw
+Steal:           / Hero Drink
+Drop:          Glasses /  
+hp:            31108
+mp:            150
+exp:           0
+gil:           120
+gauge_time:    40
+phys_power:    96
+phys_mult:     10
+evade:         0
+phys_def:      24
+mag_power:     1
+mag_def:       12
+mag_evade:     10
+level:         47
+
+Enemy:         Sergeant
+Steal:           / Potion
+Drop:          Eyedrop /  
+hp:            7777
+mp:            25
+exp:           11900
+gil:           120
+gauge_time:    20
+phys_power:    8
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     6
+mag_def:       12
+mag_evade:     10
+level:         0
+
+Enemy:         Karnak
+Steal:           / Potion
+Drop:          Potion /  
+hp:            9332
+mp:            25
+exp:           0
+gil:           244
+gauge_time:    10
+phys_power:    22
+phys_mult:     4
+evade:         0
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     20
+level:         34
+
+Enemy:         Crayclaw
+Steal:           / Coral Sword
+Drop:            / Ice Bow
+hp:            2000
+mp:            500
+exp:           2600
+gil:           0
+gauge_time:    40
+phys_power:    44
+phys_mult:     6
+evade:         0
+phys_def:      17
+mag_power:     1
+mag_def:       17
+mag_evade:     10
+level:         52
+
+Enemy:         NeoGoblin
+Steal:           /  
+Drop:            /  
+hp:            100
+mp:            25
+exp:           40
+gil:           100
+gauge_time:    40
+phys_power:    15
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     1
+mag_def:       10
+mag_evade:     10
+level:         0
+
+Enemy:         Calofisteri
+Steal:         Wall Ring / Plumed Hat
+Drop:          DiamndPlt /  
+hp:            650
+mp:            1000
+exp:           100
+gil:           0
+gauge_time:    30
+phys_power:    10
+phys_mult:     10
+evade:         0
+phys_def:      4
+mag_power:     5
+mag_def:       2
+mag_evade:     0
+level:         54
+
+Enemy:         Apocalypse
+Steal:         Giant's Gloves / Elixir
+Drop:          DarkHood /  
+hp:            8100
+mp:            50000
+exp:           5800
+gil:           0
+gauge_time:    45
+phys_power:    12
+phys_mult:     21
+evade:         3
+phys_def:      8
+mag_power:     12
+mag_def:       24
+mag_evade:     16
+level:         46
+
+Enemy:         Catastroph
+Steal:         Cabin / Elixir
+Drop:            / Soft
+hp:            3000
+mp:            19997
+exp:           600
+gil:           0
+gauge_time:    30
+phys_power:    4
+phys_mult:     12
+evade:         15
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         57
+
+Enemy:         Necrofobia
+Steal:         Thief's Glove / Elixir
+Drop:          Lumina Robe /  
+hp:            22500
+mp:            10000
+exp:           2800
+gil:           0
+gauge_time:    37
+phys_power:    20
+phys_mult:     16
+evade:         10
+phys_def:      10
+mag_power:     30
+mag_def:       10
+mag_evade:     37
+level:         66
+
+Enemy:         Twin Tania
+Steal:         Flame Shield / Phoenix Down
+Drop:          Tinkerbell /  
+hp:            19850
+mp:            10000
+exp:           15700
+gil:           0
+gauge_time:    32
+phys_power:    45
+phys_mult:     14
+evade:         0
+phys_def:      20
+mag_power:     0
+mag_def:       8
+mag_evade:     10
+level:         39
+
+Enemy:         Launcher
+Steal:           / Ether
+Drop:            / HiPotion
+hp:            2500
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    20
+phys_power:    7
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     1
+mag_def:       5
+mag_evade:     5
+level:         50
+
+Enemy:         Launcher
+Steal:           / Ether
+Drop:            / HiPotion
+hp:            2500
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    20
+phys_power:    7
+phys_mult:     2
+evade:         0
+phys_def:      0
+mag_power:     1
+mag_def:       5
+mag_evade:     5
+level:         50
+
+Enemy:         Gilgamesh
+Steal:         Gauntlets / HiPotion
+Drop:            /  
+hp:            10000
+mp:            2000
+exp:           20900
+gil:           0
+gauge_time:    65
+phys_power:    78
+phys_mult:     12
+evade:         0
+phys_def:      10
+mag_power:     1
+mag_def:       18
+mag_evade:     30
+level:         64
+
+Enemy:         Carbunkle
+Steal:         Giant Drink / Wall Ring
+Drop:          TurtleShell /  
+hp:            17000
+mp:            1000
+exp:           29900
+gil:           0
+gauge_time:    25
+phys_power:    6
+phys_mult:     2
+evade:         10
+phys_def:      8
+mag_power:     8
+mag_def:       0
+mag_evade:     0
+level:         1
+
+Enemy:         GrandMummy
+Steal:         Revivify / HiPotion
+Drop:            / HiPotion
+hp:            6000
+mp:            300
+exp:           0
+gil:           0
+gauge_time:    34
+phys_power:    55
+phys_mult:     16
+evade:         10
+phys_def:      30
+mag_power:     5
+mag_def:       10
+mag_evade:     10
+level:         0
+
+Enemy:         Apanda
+Steal:         Soot / Soot
+Drop:            / Soot
+hp:            3300
+mp:            1000
+exp:           3400
+gil:           0
+gauge_time:    37
+phys_power:    25
+phys_mult:     18
+evade:         7
+phys_def:      8
+mag_power:     0
+mag_def:       3
+mag_evade:     10
+level:         59
+
+Enemy:         Alte Roite
+Steal:         Revivify / Potion
+Drop:          Healing Staff /  
+hp:            6000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    45
+phys_power:    45
+phys_mult:     20
+evade:         70
+phys_def:      45
+mag_power:     5
+mag_def:       60
+mag_evade:     60
+level:         58
+
+Enemy:         Invisible
+Steal:         DarkHood / Stealth Suit
+Drop:            /  
+hp:            7000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    47
+phys_power:    90
+phys_mult:     11
+evade:         25
+phys_def:      10
+mag_power:     0
+mag_def:       10
+mag_evade:     60
+level:         52
+
+Enemy:         Abductor
+Steal:         Shuriken / HiPotion
+Drop:          Gale Bow /  
+hp:            5000
+mp:            100
+exp:           500
+gil:           0
+gauge_time:    50
+phys_power:    80
+phys_mult:     10
+evade:         0
+phys_def:      5
+mag_power:     0
+mag_def:       5
+mag_evade:     10
+level:         5
+
+Enemy:         BandelKuar
+Steal:           / Soft
+Drop:          Elixir /  
+hp:            8000
+mp:            1000
+exp:           2500
+gil:           0
+gauge_time:    30
+phys_power:    80
+phys_mult:     11
+evade:         10
+phys_def:      0
+mag_power:     0
+mag_def:       0
+mag_evade:     10
+level:         63
+
+Enemy:         LiquiFlame
+Steal:           / LuckMallet
+Drop:          Flame Scroll /  
+hp:            9000
+mp:            1000
+exp:           2500
+gil:           0
+gauge_time:    30
+phys_power:    81
+phys_mult:     11
+evade:         0
+phys_def:      10
+mag_power:     20
+mag_def:       0
+mag_evade:     0
+level:         63
+
+Enemy:         Kuzar
+Steal:           / HiPotion
+Drop:          Phoenix Down /  
+hp:            10000
+mp:            1000
+exp:           2500
+gil:           0
+gauge_time:    30
+phys_power:    75
+phys_mult:     15
+evade:         0
+phys_def:      30
+mag_power:     0
+mag_def:       0
+mag_evade:     33
+level:         63
+
+Enemy:         Sol Cannon
+Steal:         Guard Ring / Ether
+Drop:          HiPotion /  
+hp:            10000
+mp:            60000
+exp:           5060
+gil:           0
+gauge_time:    30
+phys_power:    1
+phys_mult:     1
+evade:         0
+phys_def:      40
+mag_power:     25
+mag_def:       0
+mag_evade:     0
+level:         61
+
+Enemy:         Pantera
+Steal:         Elixir / Phoenix Down
+Drop:            /  
+hp:            18000
+mp:            1000
+exp:           0
+gil:           0
+gauge_time:    30
+phys_power:    61
+phys_mult:     16
+evade:         10
+phys_def:      5
+mag_power:     0
+mag_def:       15
+mag_evade:     0
+level:         42
+
+Enemy:         Shinryuu
+Steal:         Dragon's Whisker / DragonFang
+Drop:            / DrgnCrest
+hp:            55500
+mp:            51000
+exp:           0
+gil:           0
+gauge_time:    87
+phys_power:    175
+phys_mult:     38
+evade:         20
+phys_def:      60
+mag_power:     128
+mag_def:       60
+mag_evade:     95
+level:         97
+
+Enemy:         Barrier
+Steal:         Wall Ring / HiPotion
+Drop:            /  
+hp:            4500
+mp:            300
+exp:           0
+gil:           0
+gauge_time:    25
+phys_power:    30
+phys_mult:     10
+evade:         0
+phys_def:      5
+mag_power:     10
+mag_def:       0
+mag_evade:     0
+level:         44
+
+Enemy:         NeoExdeath
+Steal:         Dragoon Lance /  
+Drop:            /  
+hp:            55000
+mp:            65000
+exp:           0
+gil:           0
+gauge_time:    27
+phys_power:    99
+phys_mult:     19
+evade:         10
+phys_def:      30
+mag_power:     10
+mag_def:       20
+mag_evade:     75
+level:         83
+
+Enemy:         NeoExdeath
+Steal:           / Pinwheel
+Drop:            /  
+hp:            55000
+mp:            65000
+exp:           0
+gil:           0
+gauge_time:    35
+phys_power:    99
+phys_mult:     19
+evade:         10
+phys_def:      30
+mag_power:     21
+mag_def:       19
+mag_evade:     80
+level:         67
+
+Enemy:         NeoExdeath
+Steal:         Tempest /  
+Drop:            /  
+hp:            50000
+mp:            65000
+exp:           0
+gil:           0
+gauge_time:    55
+phys_power:    99
+phys_mult:     19
+evade:         10
+phys_def:      30
+mag_power:     10
+mag_def:       25
+mag_evade:     76
+level:         81
+
+Enemy:         NeoExdeath
+Steal:         Ragnarok /  
+Drop:            /  
+hp:            60000
+mp:            65000
+exp:           0
+gil:           0
+gauge_time:    35
+phys_power:    99
+phys_mult:     19
+evade:         10
+phys_def:      30
+mag_power:     15
+mag_def:       20
+mag_evade:     66
+level:         86
+
+Enemy:         Gilgamesh
+Steal:           / Genji Armor
+Drop:            /  
+hp:            55000
+mp:            9000
+exp:           0
+gil:           0
+gauge_time:    88
+phys_power:    115
+phys_mult:     25
+evade:         30
+phys_def:      35
+mag_power:     0
+mag_def:       0
+mag_evade:     0
+level:         93
+
+-----*******-----
+-----FORMATIONS-----
+Tier: 1 Rank: 3 Boss: Byblos
+Tier: 2 Rank: 5 Boss: WingRaptor, WingRaptor
+Tier: 3 Rank: 7 Boss: Karlabos
+Tier: 2 Rank: 6 Boss: Siren, Siren
+Tier: 1 Rank: 2 Boss: Forza, Magisa
+Tier: 3 Rank: 8 Boss: Galura
+Tier: 2 Rank: 6 Boss: LiquiFlame, LiquiFlame, LiquiFlame
+Tier: 3 Rank: 7 Boss: Sergeant, Karnak, Karnak, Karnak, Iron Claw
+Tier: 4 Rank: 11 Boss: Hole, Hole, Hole, Sandworm, Sandworm, Sandworm
+Tier: 4 Rank: 12 Boss: AdamanTiMi
+Tier: 2 Rank: 5 Boss: Sol Cannon, Launcher, Launcher
+Tier: 2 Rank: 5 Boss: ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis
+Tier: 4 Rank: 11 Boss: Chim.Brain
+Tier: 2 Rank: 6 Boss: Titan
+Tier: 4 Rank: 10 Boss: Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros
+Tier: 4 Rank: 11 Boss: Gilgamesh
+Tier: 2 Rank: 4 Boss: Gilgamesh
+Tier: 3 Rank: 9 Boss: Tyrasaurus
+Tier: 1 Rank: 1 Boss: Abductor
+Tier: 1 Rank: 2 Boss: HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr
+Tier: 2 Rank: 4 Boss: Gilgamesh, Enkidou
+Tier: 2 Rank: 6 Boss: Atmos
+Tier: 3 Rank: 9 Boss: Guardian, Guardian, Guardian, Guardian
+Tier: 3 Rank: 9 Boss: Carbunkle, Carbunkle
+Tier: 3 Rank: 7 Boss: Gilgamesh, Gilgamesh
+Tier: 4 Rank: 12 Boss: Antlion
+Tier: 2 Rank: 5 Boss: Halicarnaso
+Tier: 2 Rank: 4 Boss: Merugene, Merugene, Merugene, Merugene
+Tier: 3 Rank: 7 Boss: Odin
+Tier: 3 Rank: 8 Boss: Gargoyle, Gargoyle
+Tier: 2 Rank: 5 Boss: Triton, Neregeid, Phobos
+Tier: 3 Rank: 9 Boss: Omniscient
+Tier: 4 Rank: 10 Boss: Minotauros
+Tier: 2 Rank: 5 Boss: Leviathan
+Tier: 3 Rank: 9 Boss: Stalker, Stalker, Stalker, Stalker
+Tier: 2 Rank: 6 Boss: Gogo
+Tier: 2 Rank: 4 Boss: Bahamut
+Tier: 3 Rank: 9 Boss: Ifrit
+Tier: 2 Rank: 4 Boss: Shiva, Commander, Commander, Commander
+Tier: 1 Rank: 1 Boss: Calofisteri
+Tier: 2 Rank: 6 Boss: Apocalypse
+Tier: 1 Rank: 3 Boss: Catastroph
+Tier: 2 Rank: 5 Boss: Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh
+Tier: 3 Rank: 8 Boss: Twin Tania, Twin Tania
+Tier: 2 Rank: 5 Boss: Apanda
+Tier: 2 Rank: 4 Boss: Crayclaw
+-----**********-----

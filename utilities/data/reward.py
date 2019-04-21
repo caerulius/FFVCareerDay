@@ -39,6 +39,8 @@ class Reward:
     def short_output(self):
         if self.collectible is None:
             return ""
+        if str(type(self.collectible)) == "<class 'collectible.KeyItem'>":
+            return f"{self.description} -> {self.collectible.reward_name}"
         if self.mib_type is None:
             return f"{self.description} {self.original_reward} -> {self.collectible.reward_name}"
         else:
@@ -87,8 +89,13 @@ class RewardManager:
         return output
 
     def get_spoiler(self):
-        output = "-----CHESTS AND EVENTS-----\n"
-        for i in self.rewards:
+        output = "-----KEY ITEMS------\n"
+        for i in [x for x in self.rewards if str(type(x.collectible)) == "<class 'collectible.KeyItem'>"]:
+            output = output + i.short_output + "\n"
+        output = output + "-----*********-----\n\n\n"
+
+        output = output +  "-----CHESTS AND EVENTS-----\n"
+        for i in [x for x in self.rewards if str(type(x.collectible)) != "<class 'collectible.KeyItem'>"]:
             output = output + i.short_output + "\n"
         output = output + "-----****************-----\n"
 

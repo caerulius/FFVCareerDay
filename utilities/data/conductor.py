@@ -62,6 +62,7 @@ class Conductor():
     def get_crystals(self):
         crystals = self.CM.get_all_of_type(Crystal)
         starting_crystal = self.RE.choice(crystals)
+        self.CM.add_to_placement_history(starting_crystal) #don't allow the starting crystal to appear anywhere in game
         if starting_crystal.starting_spell_list == ['']:
             starting_crystal.starting_spell = "None"
             starting_crystal.starting_spell_id = "FF"
@@ -863,7 +864,7 @@ class Conductor():
             #print("working on address: " + kuzar_reward_addresses[i])
             c = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
             #print("collectible there is: " + c.reward_name)
-            output = output + run_kuzar_encrypt({c.reward_name: kuzar_text_addresses[i]})
+            output = output + run_kuzar_encrypt({c.reward_name.replace('>', ''): kuzar_text_addresses[i]})
         return output
 
     def randomize(self, random_engine=None):
