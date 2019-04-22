@@ -62,6 +62,7 @@ class Conductor():
     def get_crystals(self):
         crystals = self.CM.get_all_of_type(Crystal)
         starting_crystal = self.RE.choice(crystals)
+        self.CM.add_to_placement_history(starting_crystal) #don't allow the starting crystal to appear anywhere in game
         if starting_crystal.starting_spell_list == ['']:
             starting_crystal.starting_spell = "None"
             starting_crystal.starting_spell_id = "FF"
@@ -392,6 +393,8 @@ class Conductor():
                 [x for x in self.SM.shops if x.shop_type == "01" and x.valid and x.num_items > 0][chosen_shop].contents[chosen_slot] = item_to_place
 
     def randomize_bosses(self):
+        list_of_randomized_enemies = []
+
         # This has to be done twice in order for the enemy classes to NOT be shared objects
         # Very important or else swapping HP becomes very muddy and original hp values on enemies are not preserved
                         
@@ -431,7 +434,7 @@ class Conductor():
 
             #this is specifically an unworkable situation
             #this will just cycle gogo to the end and get a new boss
-            if random_boss.name_string == "Gogo" and original_boss.name_string == "Odin":
+            if random_boss.enemy_1 == "Gogo" and original_boss.enemy_1 == "Odin":
                 original_boss_list = [original_boss] + original_boss
                 original_boss = original_boss_list.pop()
 
@@ -744,6 +747,7 @@ class Conductor():
             text_str = og_text
             write_flag = False
             for enemy in random_boss.enemy_classes:
+                list_of_randomized_enemies.append(enemy) #maintain a list of only the enemies we've actually randomized
                 text_str = text_str + '; ENEMY: '+enemy.enemy_name+'\n'
                 df_temp = self.DM.files['boss_scaling'][(self.DM.files['boss_scaling']['idx']==int(enemy.idx)) & (self.DM.files['boss_scaling']['tier']==new_tier)]
                 
@@ -825,6 +829,8 @@ class Conductor():
                     file.write(";---------\n")
             '''
 
+        self.EM.relevant_enemies = list_of_randomized_enemies
+
     def starting_crystal_patch(self):
         output = ";================"
         output = output + "\n;starting crystal"
@@ -858,7 +864,7 @@ class Conductor():
             #print("working on address: " + kuzar_reward_addresses[i])
             c = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
             #print("collectible there is: " + c.reward_name)
-            output = output + run_kuzar_encrypt({c.reward_name: kuzar_text_addresses[i]})
+            output = output + run_kuzar_encrypt({c.reward_name.replace('>', ''): kuzar_text_addresses[i]})
         return output
 
     def randomize(self, random_engine=None):
@@ -902,7 +908,7 @@ class Conductor():
         patch = patch + self.RM.get_patch()
         patch = patch + self.SM.get_patch()
         patch = patch + self.SPM.get_patch()
-        patch = patch + self.EM.get_patch()
+        patch = patch + self.EM.get_patch(relevant=True)
         patch = patch + self.FM.get_patch()
         patch = patch + self.kuzar_text_patch()
 

@@ -1,4 +1,4 @@
-﻿offset,idx,randomized_boss,rank,boss_rank,event_id,event_lookup_loc1,event_lookup_loc2,event_formation_reference,formationid_1,escape_%,abp,visible_enemy,enemy_1,enemy_2,enemy_3,enemy_4,enemy_5,enemy_6,enemy_7,enemy_8,formationid_13,formationid_14,formationid_15,formationid_16,enemy_list,enemy_1_name,enemy_2_name,enemy_3_name,enemy_4_name,enemy_5_name,enemy_6_name,enemy_7_name,enemy_8_name
+offset,idx,randomized_boss,rank,boss_rank,event_id,event_lookup_loc1,event_lookup_loc2,event_formation_reference,formationid_1,escape_%,abp,visible_enemy,enemy_1,enemy_2,enemy_3,enemy_4,enemy_5,enemy_6,enemy_7,enemy_8,formationid_13,formationid_14,formationid_15,formationid_16,enemy_list,enemy_1_name,enemy_2_name,enemy_3_name,enemy_4_name,enemy_5_name,enemy_6_name,enemy_7_name,enemy_8_name
 D03000,1,,standard,,4E,,,,00,64,01,80,00,FF,FF,FF,FF,FF,FF,FF,00,00,00,00,Goblin,Goblin, , , , , , , 
 D03010,2,,standard,,,,,,00,64,01,C0,01,01,FF,FF,FF,FF,FF,FF,00,00,00,00,"Killer Bee, Killer Bee",Killer Bee,Killer Bee, , , , , , 
 D03020,3,,standard,,,,,,00,64,01,E0,00,00,00,FF,FF,FF,FF,FF,00,00,00,00,"Goblin, Goblin, Goblin",Goblin,Goblin,Goblin, , , , , 

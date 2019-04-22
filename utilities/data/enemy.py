@@ -233,12 +233,17 @@ class Enemy(object):
 class EnemyManager(object):
     def __init__(self, data_manager):
         self.enemies = [Enemy(x, data_manager) for x in range(0, NUM_ENEMIES)]
+        self.relevant_enemies = []
 
-    def get_patch(self):
+    def get_patch(self, relevant=False):
         output = ";======="
         output = output + "\n;enemies"
         output = output + "\n;=======\n"
-        for i in self.enemies:
+        if relevant == True:
+            l = self.relevant_enemies
+        else:
+            l = self.enemies
+        for i in l:
             output = output + i.asar_output + "\n"
         output = output + "\n"
 
