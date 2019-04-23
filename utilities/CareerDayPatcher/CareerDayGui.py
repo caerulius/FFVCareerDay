@@ -75,6 +75,7 @@ class Window(Frame):
 		self.master.bind("<Enter>", self.onEnter)
 		self.master.bind("<Leave>", self.onLeave)
 		self.master.bind("<FocusOut>", self.onUnfocus)
+		self.master.bind("<Return>", self.performRandomizationProxy)
 
 	def onClick(self, event):
 		if str(event.widget) == ".rompath":
@@ -141,6 +142,9 @@ class Window(Frame):
 			else:
 				self.statusLabel['text'] = "Choose your options and click \nrandomize when ready"
 
+	def performRandomizationProxy(self, event):
+		self.performRandomization()
+
 	def performRandomization(self):
 		options = {}
 		options['xp'] = self.xp
@@ -150,6 +154,8 @@ class Window(Frame):
 			self.success, self.filepath = create_career_day_seed(self.rompath.get(), str(random.randint(1000000, 9999999)), options)
 		else:
 			self.success, self.filepath = create_career_day_seed(self.rompath.get(), self.seed.get(), options)
+
+		os.startfile(self.filepath)
 
 		self.updateLabel("")
 

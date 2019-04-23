@@ -61,5 +61,5 @@ idx,address,shop_type,slot1,slot2,slot3,slot4,slot5,slot6,slot7,slot8,readable_n
 60,D12F53,00,17,29,36,3B,3E,48,49,4A,Mirage Magic 2,TRUE,8
 61,D12F5C,03,E0,E1,E4,E5,E8,E9,EC,ED,Mirage Inn 1,TRUE,8
 62,D12F65,06,E3,E2,E6,F2,F3,F4,F5,F6,Mirage Inn 2,TRUE,8
-63,D12F6E,81,04,0F,22,32,33,34,5E,00,Karnak Weapon (discount),TRUE,7
-64,D12F77,82,84,8C,9D,A3,A8,B6,B7,00,Karnak Armor (discount),TRUE,7
+63,D12F6E,81,04,0F,22,32,33,34,5E,00,Karnak Weapon (discount),FALSE,7
+64,D12F77,82,84,8C,9D,A3,A8,B6,B7,00,Karnak Armor (discount),FALSE,7

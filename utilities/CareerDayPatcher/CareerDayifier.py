@@ -204,7 +204,7 @@ def create_career_day_seed(rompath, seed, options):
         if output.returncode == 0:
             print("Complete!")
             os.rename(local_path, os.path.join(OUTPUT_PATH, seed + r"-ff5careerday.sfc"))
-            return True, foldername
+            return True, OUTPUT_PATH
         else:
             input()
             print(output.stdout)
@@ -213,7 +213,7 @@ def create_career_day_seed(rompath, seed, options):
 
     else:
         print("Complete!")
-        return True, foldername
+        return True, OUTPUT_PATH
 
 def add_header(byte_list):
     return FAKE_HEADER + byte_list

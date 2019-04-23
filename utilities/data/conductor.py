@@ -227,11 +227,14 @@ class Conductor():
 
     def randomize_shops(self):
         required_items = {}
-        required_items["E6"] = False #Revivify
-        required_items["F1"] = False #Cabin
-        required_items["E1"] = False #HiPotion
-        required_items["E4"] = False #Fenix Down
-        required_items["E2"] = False #Ether
+        required_items["E6"] = 0 #Revivify
+        required_items["F1"] = 0 #Cabin
+        required_items["E1"] = 0 #HiPotion
+        required_items["E4"] = 0 #Fenix Down
+        required_items["E2"] = 0 #Ether
+        required_items["EC"] = 0 #Soft
+        required_items["F0"] = 0 #Tent
+        required_items["E3"] = 0 #Elixir
 
         item_chance = .6
         magic_chance = .25
@@ -299,7 +302,7 @@ class Conductor():
                             break
 
                     if item_to_place.reward_id in required_items.keys():
-                        required_items[item_to_place.reward_id] = True
+                        required_items[item_to_place.reward_id] = required_items[item_to_place.reward_id] + 1
                     contents.append(item_to_place)
                     
             elif kind == "magic":
@@ -367,30 +370,22 @@ class Conductor():
                 print(shop.valid)
 
         #manage the must place items here
-        #extra checking done to make sure we don't replace
-        #a must place item with a different one
         for index, value in required_items.items():
-            used_spots = []
             chosen_shop = None
             chosen_slot = None
-            if value is False:
+            while value < 3:
                 #print("guaranteeing " + index)
                 item_to_place = self.CM.get_by_id_and_type(index, "40")
                 #print(item_to_place.reward_name)
-                while True:
-                    item_shops = [x for x in self.SM.shops if x.shop_type == "01" and x.valid and x.num_items > 0]
-                    #print("number of item shops: " + str(len(item_shops)))
-                    chosen_shop = random.choice(range(0, len(item_shops)))
-                    #print("chosen shop index: " + str(chosen_shop))
-                    #print("chosen shop num items: " + str(self.SM.shops[chosen_shop].num_items))
-                    chosen_slot = random.choice(range(0, item_shops[chosen_shop].num_items))
-                    #print("chosen slot index: " + str(chosen_slot))
-                    if (chosen_shop, chosen_slot) not in used_spots:
-                        break
+                item_shops = [x for x in self.SM.shops if x.shop_type == "01" and x.valid and x.num_items > 0 and x.num_items < 8]
+                #print("number of item shops: " + str(len(item_shops)))
+                chosen_shop = item_shops[random.choice(range(0, len(item_shops)))]
+                slot = chosen_shop.num_items #because of 0 indexing, we want this, not this + 1
+                #print("chosen slot index: " + str(chosen_slot))
 
-                used_spots.append((chosen_shop, chosen_slot))
-
-                [x for x in self.SM.shops if x.shop_type == "01" and x.valid and x.num_items > 0][chosen_shop].contents[chosen_slot] = item_to_place
+                chosen_shop.contents[slot] = item_to_place
+                chosen_shop.num_items = chosen_shop.num_items + 1
+                value = value + 1
 
     def randomize_bosses(self):
         list_of_randomized_enemies = []
@@ -411,7 +406,7 @@ class Conductor():
         # Very explicit definitions
         # Randomized boss list will be updated
         # Original boss list will be referenced for what boss location & stats to change to, 
-                # and the list will be reduced to 0 as random formations are assigned
+                # and the list will be reduced tox 0 as random formations are assigned
                 
        
         # Shuffle original boss list
@@ -864,7 +859,8 @@ class Conductor():
             #print("working on address: " + kuzar_reward_addresses[i])
             c = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
             #print("collectible there is: " + c.reward_name)
-            output = output + run_kuzar_encrypt({c.reward_name.replace('>', ''): kuzar_text_addresses[i]})
+            #@ will be used for our newline character, won't otherwise be present, and don't have the problems \n causes
+            output = output + run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@').replace(' ', '@'): kuzar_text_addresses[i]})
         return output
 
     def randomize(self, random_engine=None):
@@ -900,7 +896,7 @@ class Conductor():
         spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.RM.get_spoiler()
         spoiler = spoiler + self.SM.get_spoiler()
-        spoiler = spoiler + self.EM.get_spoiler()
+        #spoiler = spoiler + self.EM.get_spoiler()
         spoiler = spoiler + self.FM.get_spoiler()
 
         patch = ""

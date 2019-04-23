@@ -51,8 +51,8 @@ class Shop(object):
     @property
     def short_output(self):
         #these two lists format the None collectibles into strings for easy reading
-        readable_original = [x.reward_name if x is not None else "None" for x in self.original_contents]
-        readable_current = [x.reward_name if x is not None else "None" for x in self.contents]
+        readable_original = [x.shop_name if x is not None else "None" for x in self.original_contents]
+        readable_current = [x.shop_name if x is not None else "None" for x in self.contents]
         output = "Shop: " + self.readable_name + "\n"
         output = output + "Shop Type: " + self.shop_type + "\n"
         output = output + "Shop Item 1: " + readable_original[0] + " -> " + readable_current[0] + "\n"
