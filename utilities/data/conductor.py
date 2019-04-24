@@ -858,8 +858,6 @@ class Conductor():
         for i in range(0, len(kuzar_reward_addresses)):
             #print("working on address: " + kuzar_reward_addresses[i])
             c = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
-            print(kuzar_text_addresses[i])
-            print(c.reward_name)
             #print("collectible there is: " + c.reward_name)
             #@ will be used for our newline character, won't otherwise be present, and don't have the problems \n causes
             output = output + run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
