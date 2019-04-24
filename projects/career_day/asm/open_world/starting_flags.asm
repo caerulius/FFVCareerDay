@@ -2,13 +2,24 @@
 ; this is EVENT code that is set in the middle of the intro cutscene. 
 
 
-    
+; set world 1 custom flag
+db $A2, $C8
     
 ; all 3 world 1 chars
 
-db $B7, $02							;Add/Remove character 02
-db $B7, $09							;Add/Remove character 09
-db $B7, $03							;Add/Remove character 09
+db $B7, $09							;Add/Remove character 01 (Lenna)
+db $B7, $0A							;Add/Remove character 02 (Galuf)
+db $B7, $0B							;Add/Remove character 03 (Faris)
+
+; db $B7, $89
+; db $B7, $8A
+; db $B7, $8B
+; db $B7, $8C
+
+; db $B7, $81
+; db $B7, $82
+; db $B7, $83
+; db $B7, $84
 
 ; add WarpShard
 db $AA, $EE                     ;Add Item Potion
@@ -412,7 +423,7 @@ db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
 ; db $A2, $83                     ;Turn on bit 08 at address 0x7e0a24 (THIS IS TABLET 1 FOR KUZAR, NOT KEY ITEM, ACTUAL TABLET)
 
 ; SECOND TABLET → FORK TOWER
-db $A4, $5B            ; set address 000A3F bit ON 08
+; db $A4, $5B            ; set address 000A3F bit ON 08
 
 
 ; FINAL EXDEATH

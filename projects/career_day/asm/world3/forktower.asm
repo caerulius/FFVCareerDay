@@ -48,8 +48,8 @@ pad $C99FCC
 
 org $C99F3A
 
-db $F3, $B1, $0E, $20, $C1      ;Set Map Tiles B1 0E 20 C1
-db $D1, $F1, $B2, $01           ;(Timer?) F1 B2 01
+; db $F3, $B1, $0E, $20, $C1      ;Set Map Tiles B1 0E 20 C1
+; db $D1, $F1, $B2, $01           ;(Timer?) F1 B2 01
 db $F3, $AE, $0E, $20, $C1      ;Set Map Tiles AE 0E 20 C1
 db $D1, $F1, $B2, $01           ;(Timer?) F1 B2 01
 db $F3, $B0, $0E, $20, $C1      ;Set Map Tiles B0 0E 20 C1

@@ -23,6 +23,7 @@
 !ADDRESS_originalmagicprices = $F80000
 !ADDRESS_startingcharstats = $F81000
 !ADDRESS_startingcharstatsindex = $F80F00
+!ADDRESS_useableitemstable = $F83500
 !ADDRESS_shophook = $F00680
 !ADDRESS_shopcheckreward = $F00700
 !ADDRESS_shopawardreward = $F00800

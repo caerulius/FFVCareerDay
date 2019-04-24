@@ -242,7 +242,6 @@ JMP FinishCustomItem
 
 FinishCustomItem:
 ; Original code and branch
-STZ $29E7
 ; PHX
 JML $c2bbac
 
@@ -307,6 +306,11 @@ BranchToItemWarpClause2:
 JML $C2BCA9
 
 BranchToItemWarpClause:
+PHA
+LDA #$00
+STA $7E29E8
+STA $7E29E9
+PLA
 JML $C2BCB9
 
 
@@ -340,8 +344,8 @@ JML $C2BCB9
 
 ; Data rewrites:
 ; Allow for item $EE to be used 
-org $C0EEF2
-db $EE
+; org $C0EEF2
+; db $EE
 
 ; Remove item $12 for now to end loop code...?
 ;org $C0EEF4
@@ -350,3 +354,31 @@ db $EE
 ; WarpShard cannot sell
 org $D12BDC
 db $81, $00
+
+; WarpShard will have an item description now
+org $D10AF3
+db $A7
+; ... and OmegaMedal/DragonCrest will not
+org $D10B3B
+db $80
+org $D10B43
+db $80
+
+; Overwrite OmegaMedal/DragonCrest text
+org $D144D0
+db $76, $7A, $8B, $89, $96, $7B, $7E, $8D, $90, $7E, $7E, $87, $96, $90, $88, $8B, $85, $7D, $8C, $96, $96,$96,$96,$96,$96,$96,$96,$96, $74, $8C, $7E, $7A, $7B, $85, $7E, $96, $82, $87, $96, $86, $88, $8C, $8D, $96, $85, $88, $7C, $7A, $8D, $82, $88, $87, $8C, $00 
+
+; change references to custom table for useable items/magic
+org $c2dadc
+LDA !ADDRESS_useableitemstable, X
+org $c2e413
+LDA !ADDRESS_useableitemstable, X
+
+; recreate custom table for useable items
+org !ADDRESS_useableitemstable
+db $e0, $13, $e1, $13, $e2, $13, $e3, $13, $e4, $13, $e5, $13, $e6, $13, $e8, $13, $e9, $13, $ec, $13, $ed, $13, $f0, $00, $f1, $00, $f9, $44, $fa, $47, $fb, $4b
+;   NEW ITEM
+db $EE, $00
+;   END
+db $00, $00
+

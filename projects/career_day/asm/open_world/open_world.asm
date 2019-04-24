@@ -93,7 +93,10 @@ db $AA
 ; Similar to above, change barrier tower fight cutscene to deactivate from a different flag than the underwater barrier access warp tile
 ; org $D8F37D
 org $F052FD
-db $FD, $7C
+db $FD, $77
+
+
+
 
 ; FORK TOWER
 ; Galuf in party causes problems. Temporarily setting access after Mua forest boss → getting Cara
@@ -135,14 +138,43 @@ db $BC
 
 
 ; FINAL EXDEATH
-; Always trigger the cutscene for the final fight
+; ; Always trigger the cutscene for the final fight
+; org $F05D3D
+; db $FF, $85, $07
+; ; edit LEAVING event to move player down 1 tile
+; org $C9C4CD
+; db $23
+
+;FINAL EXDEATH
+;Always trigger the cutscene for the final fight
 org $F05D3D
 db $FF, $85, $07
+
+org $F05D49
+db $FF, $9F, $06
+
+org $F053B7 ; this is the actual tile to trigger the fight 
+db $FF, $84, $07, $00, $00
+
+; edit LEAVING event to move player down 1 tile
+org $C9C4CD
+db $23
+org $C9FE8A
+db $31
+
+; to be VERY Safe that Exdeath sprite doesnt show up, delete
+org $CE9A7D
+pad $CE9AC3
 
 
 ; spring nullify
 org $F04BA4
 db $33
+
+;TULE
+; change tutorial guy in Tule (duplicate text from 2nd floor guy)
+org $CE5E6A
+db $68
 
 ; AFTER TULE BOAT CUTSCENE
 ; world map trigger
@@ -212,10 +244,7 @@ db $FF, $00, $00, $00, $00, $00, $FF, $00, $00
 org $F04AEC
 db $FE, $B8
 
-; FINAL EXDEATH WARP
-; edit event to move player down 1 tile
-org $C9C4CD
-db $23
+
 
 ; CARWEN
 ; remove lady
@@ -229,3 +258,15 @@ db $4B, $01, $11, $0d
 ;map data warp
 org $CE4DDC
 db $01, $00, $AC, $A5
+
+
+; NEW TEXT FOR DEBUG TO WARP AREA
+org $e178fa
+db $63, $64, $61, $74, $66, $9B, $96, $76, $7A, $8B, $89, $82, $87, $80, $96, $8D, $88, $96, $76, $7A, $8B, $89, $96, $60, $8B, $7E, $7A, $A3, $96, $01, $6D, $88, $8D, $96, $7A, $96, $7B, $8E, $80, $A1, $00
+
+; STEAMSHIP / AIRSHIP
+; never have the steamship (if it happens to spawn on world map??) or airship do anything except let you ride it (no cutscenes)
+org $F04F57
+db $FF, $00, $00
+
+

@@ -21,6 +21,11 @@ db $00, $02, $F9
 
 ; world 2 warp
 org $F90200
+; change world flag to WORLD 2
+db $A3, $C8 ; off
+db $A2, $C9 ; on
+db $A3, $CA ; off
+
 db $C5, $80                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
 db $C4, $03

@@ -85,8 +85,9 @@ db $FF                          ;End Event
 
 pad $C986E7
 
-org $C94B8A
-db $07, $07, $07
+; manually override any flag set for world map 4 meteors pointing
+org $C94B88
+db $00,$00, $07, $07, $07
 
 org $C8DD65
 
@@ -103,3 +104,11 @@ db $A4, $EF                     ;Turn on bit 80 at address 0x7e0a51
 db $FF                          ;End Event
 
 pad $C8DD84
+
+; overwrite event after 4 meteors to only update flags, no cutscene
+
+org $C984DF
+db $CA, $F9, $00                ;Turn on bit 02 at address  0x7e0a73
+db $CA, $FB, $00                ;Turn on bit 08 at address  0x7e0a73
+db $FF
+pad $C984F8

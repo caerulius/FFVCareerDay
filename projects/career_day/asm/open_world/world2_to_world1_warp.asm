@@ -37,6 +37,11 @@ db $40, $00, $F9
 
 ; world 1 warp
 org $F90040
+; change world flag to WORLD 1
+db $A2, $C8 ; on
+db $A3, $C9 ; off
+db $A3, $CA ; off
+
 db $C5, $80                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
 db $C4, $03
@@ -94,6 +99,11 @@ db $80, $01, $F9
 
 ; world 3 warp
 org $F90180
+; change world flag to WORLD 3
+db $A3, $C8 ; off
+db $A3, $C9 ; off
+db $A2, $CA ; on
+
 db $C5, $80                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
 db $C4, $03

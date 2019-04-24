@@ -1,31 +1,34 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
-
+import os
 
 # NEED TO CHOOSE ONE OF THE TWO:
 
-# table = 'text_table_shop.csv'
+#table = 'text_table_shop.csv'
 table = 'text_table_chest.csv'
 
 
-text_dict = pd.read_csv('tables/'+table,header=None,index_col=0).to_dict()[1]
-text_dict2 = pd.read_csv('tables/'+table,header=None,index_col=1).to_dict()[0]
+text_dict = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=0).to_dict()[1]
+text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=1).to_dict()[0]
 
 #ability_shop_table = pd.read_csv('tables/text_tables/ability_shop_text.csv',header=None,index_col=0).to_dict()[1]
 #ability_chest_table = pd.read_csv('tables/text_tables/ability_chest_text.csv',header=None,index_col=0).to_dict()[1]
 #job_shop_table = pd.read_csv('tables/text_tables/job_shop_text.csv',header=None,index_col=0).to_dict()[1]
 #job_chest_table = pd.read_csv('tables/text_tables/job_chest_text.csv',header=None,index_col=0).to_dict()[1]
 #magic_chest_table = pd.read_csv('tables/text_tables/magic_chest_text.csv',header=None,index_col=0).to_dict()[1]
-key_item_table = pd.read_csv('tables/text_tables/key_item_text.csv',header=None,index_col=0).to_dict()[1]
+key_item_table = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','key_item_text.csv'),header=None,index_col=0).to_dict()[1]
 #key_item_reward_table = pd.read_csv('tables/text_tables/key_item_reward_text.csv',header=None,index_col=0).to_dict()[1]
 #kuzar_rewards = pd.read_csv('tables/text_tables/kuzar_rewards.csv',header=None,index_col=0).to_dict()[1]
 
 
 data = '''
 
-717e8c8d888b7e8c96676f00717e8c8d
-888b7e8c966c6f006288868985
+aa78888e8b967b8b7a8f7e8b9296898b
+7a828c7e7d017f888b968f827c8d888b
+92a399
+
 '''
+
 data = data.replace("\n","ZZ")
 n = 2
 byte_list = [data[i:i+n] for i in range(0, len(data), n)]

@@ -31,7 +31,7 @@ db $75
 ; db $A4, $EA                     ;Turn on bit 04 at address 0x7e0a51. This sets the tile on the world map to inactive 
 db $A2, $7C                     ;Turn on bit 10 at address 0x7e0a23
 ; db $A4, $EB                     ;Turn on bit 08 at address 0x7e0a51
-db $D2, $01, $AD, $9F, $6C      ;(Map) 01 AD 9F 6C
+; db $D2, $01, $CE, $C8, $6C      ;(Map) 01 AD 9F 6C
 db $CA, $DB, $02                ;Turn on bit 08 at address  0x7e0aaf
 db $CA, $DC, $02                ;Turn on bit 10 at address  0x7e0aaf
 db $CA, $DD, $02                ;Turn on bit 20 at address  0x7e0aaf

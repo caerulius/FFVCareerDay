@@ -82,4 +82,4 @@ for i in list_of_conditional_codes:
     df3.index = df3.index + 1
     df3 = df3.sort_index()
 df3 = df3.sort_values(by='code')
-df3.to_csv('conditional_output.csv',index=None)
+df3.to_csv('npc.csv',index=None)
