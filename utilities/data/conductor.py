@@ -849,7 +849,7 @@ class Conductor():
 
     def kuzar_text_patch(self):
         kuzar_reward_addresses = ['C0FB02','C0FB04','C0FB06','C0FB08','C0FB0A','C0FB0C','C0FB0E','C0FB10','C0FB12','C0FB14','C0FB16','C0FB18']
-        kuzar_text_addresses =   ['E23F98','E240A6','E23F7A','E2404C','E240C4','E23FD4','E24010','E24088','E23FF2','E2406A','E23FB6','E2402E']
+        kuzar_text_addresses =   ['E23F98','E240A5','E23F7A','E2404C','E240C4','E23FD6','E24011','E24088','E23FF4','E2406A','E23FB7','E2402D']
         
         output = ";=====================\n"
         output = output + ";Kuzar Reward Text Fix\n"
@@ -858,9 +858,11 @@ class Conductor():
         for i in range(0, len(kuzar_reward_addresses)):
             #print("working on address: " + kuzar_reward_addresses[i])
             c = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
+            print(kuzar_text_addresses[i])
+            print(c.reward_name)
             #print("collectible there is: " + c.reward_name)
             #@ will be used for our newline character, won't otherwise be present, and don't have the problems \n causes
-            output = output + run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@').replace(' ', '@'): kuzar_text_addresses[i]})
+            output = output + run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
         return output
 
     def randomize(self, random_engine=None):
