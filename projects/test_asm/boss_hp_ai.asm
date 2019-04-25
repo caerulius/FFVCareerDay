@@ -1,26 +1,26 @@
 hirom
 ; --------------------------
-; Original boss Byblos rank 4 -> Randomized boss Leviathan rank 9
-; HP: 3600 -> 40000
+; Original boss Byblos rank 4 -> Randomized boss Galura rank 3
+; HP: 3600 -> 1200
 ; ENEMY: Byblos
-; Skills: ['WindSlash', 'WindSlash']
-; New skill: WindSlash
+; Skills: ['BreathWing', 'BreathWing']
+; New skill: BreathWing
 org $d0a0db
-db $AB
-; New skill: WindSlash
+db $DA
+; New skill: BreathWing
 org $d0a0e1
-db $AB
+db $DA
 ; --------------------------
-; Original boss WingRaptor, WingRaptor rank 1 -> Randomized boss Apocalypse rank 11
-; HP: 250 -> 27900
+; Original boss WingRaptor, WingRaptor rank 1 -> Randomized boss Byblos rank 4
+; HP: 250 -> 3600
 ; --------------------------
-; Original boss Karlabos rank 1 -> Randomized boss Catastroph rank 11
-; HP: 650 -> 19997
+; Original boss Karlabos rank 1 -> Randomized boss Antlion rank 6
+; HP: 650 -> 8100
 ; --------------------------
-; Original boss Siren, Siren rank 2 -> Randomized boss Merugene, Merugene, Merugene, Merugene rank 8
-; HP: 900 -> 20000
+; Original boss Siren, Siren rank 2 -> Randomized boss Calofisteri rank 10
+; HP: 900 -> 18000
 ; ENEMY: Siren
-; Skills: ['Mute', 'Slow2', 'Haste', 'Cure2', 'Ice3', 'Scan', 'Armor', 'Sleep', 'Bolt2']
+; Skills: ['Mute', 'Slow2', 'Haste', 'Cure2', 'Ice3', 'Scan', 'Armor', 'Sleep', 'Bolt3']
 ; New skill: Mute
 org $d0b2e6
 db $15
@@ -45,13 +45,13 @@ db $16
 ; New skill: Sleep
 org $d0b2ef
 db $28
-; New skill: Bolt2
+; New skill: Bolt3
 org $d0b2f0
-db $2C
+db $0E
 ; ENEMY: Siren
 ; --------------------------
-; Original boss Forza, Magisa rank 2 -> Randomized boss Gargoyle, Gargoyle rank 7
-; HP: 850 -> 10000
+; Original boss Forza, Magisa rank 2 -> Randomized boss Omniscient rank 8
+; HP: 850 -> 16999
 ; ENEMY: Forza
 ; ENEMY: Magisa
 ; Skills: ['Fire2', 'Ice2', 'Bolt2', 'Aero3', 'Specialty', 'Drain']
@@ -73,21 +73,21 @@ db $81
 ; New skill: Drain
 org $d0b353
 db $2D
-; Original HP: 5000
-; New trigger HP: 2300
+; Original HP: 8500
+; New trigger HP: 3910
 org $d0b329
-db $fc, $08
+db $46, $0f
 ; --------------------------
-; Original boss Galura rank 3 -> Randomized boss Gilgamesh, Enkidou rank 6
-; HP: 1200 -> 17776
+; Original boss Galura rank 3 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; HP: 1200 -> 12000
 ; ENEMY: Galura
-; Original HP: 17776
-; New trigger HP: 11732
+; Original HP: 12000
+; New trigger HP: 7920
 org $d0b36a
-db $d4, $2d
+db $f0, $1e
 ; --------------------------
-; Original boss LiquiFlame, LiquiFlame, LiquiFlame rank 4 -> Randomized boss Halicarnaso rank 11
-; HP: 3000 -> 33333
+; Original boss LiquiFlame, LiquiFlame, LiquiFlame rank 4 -> Randomized boss AdamanTiMi rank 4
+; HP: 3000 -> 2000
 ; ENEMY: LiquiFlame
 ; Skills: ['Fight', 'Specialty', 'Flame']
 ; New skill: Fight
@@ -100,21 +100,21 @@ db $81
 org $d0b383
 db $DB
 ; ENEMY: LiquiFlame
-; Skills: ['Flare']
-; New skill: Flare
+; Skills: ['Fire2']
+; New skill: Fire2
 org $d0b3a8
-db $33
+db $2A
 ; ENEMY: LiquiFlame
-; Skills: ['Fire3']
-; New skill: Fire3
+; Skills: ['Fire2']
+; New skill: Fire2
 org $d0b3b8
-db $30
+db $2A
 ; --------------------------
-; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Calofisteri rank 10
-; HP: 1000 -> 18000
+; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Catastroph rank 11
+; HP: 1000 -> 19997
 ; --------------------------
-; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
-; HP: 3000 -> 12000
+; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4
+; HP: 3000 -> 3000
 ; ENEMY: Hole
 ; Skills: ['Demi']
 ; New skill: Demi
@@ -165,21 +165,21 @@ org $d0b3dd
 db $C9
 ; ENEMY: Hole
 ; --------------------------
-; Original boss AdamanTiMi rank 4 -> Randomized boss Forza, Magisa rank 2
-; HP: 2000 -> 850
+; Original boss AdamanTiMi rank 4 -> Randomized boss Carbunkle, Carbunkle rank 7
+; HP: 2000 -> 15000
 ; --------------------------
-; Original boss Sol Cannon, Launcher, Launcher rank 5 -> Randomized boss Gilgamesh rank 5
-; HP: 22500 -> 11500
+; Original boss Sol Cannon, Launcher, Launcher rank 5 -> Randomized boss Apocalypse rank 11
+; HP: 22500 -> 27900
 ; ENEMY: Sol Cannon
-; Original HP: 11500
-; New trigger HP: 5060
+; Original HP: 27900
+; New trigger HP: 12276
 org $d0b4ef
-db $c4, $13
+db $f4, $2f
 ; ENEMY: Launcher
 ; ENEMY: Launcher
 ; --------------------------
-; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Chim.Brain rank 5
-; HP: 1600 -> 3300
+; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Gilgamesh, Enkidou rank 6
+; HP: 1600 -> 17776
 ; ENEMY: ArchaeAvis
 ; Skills: ['Fight', 'BreathWing', 'Specialty']
 ; New skill: Fight
@@ -322,10 +322,10 @@ db $CB
 org $d0b594
 db $80
 ; --------------------------
-; Original boss Titan rank 5 -> Randomized boss LiquiFlame, LiquiFlame, LiquiFlame rank 4
-; HP: 2500 -> 3000
+; Original boss Titan rank 5 -> Randomized boss Twin Tania, Twin Tania rank 12
+; HP: 2500 -> 50000
 ; ENEMY: Titan
-; Skills: ['Fight', 'Fight', 'Specialty', 'Fight', 'Quicksand', 'Specialty']
+; Skills: ['Fight', 'Fight', 'Specialty', 'Fight', 'EarthShaker', 'Specialty']
 ; New skill: Fight
 org $d0b59d
 db $80
@@ -338,143 +338,143 @@ db $81
 ; New skill: Fight
 org $d0b5a1
 db $80
-; New skill: Quicksand
+; New skill: EarthShaker
 org $d0b5a2
-db $C9
+db $CF
 ; New skill: Specialty
 org $d0b5a3
 db $81
 ; --------------------------
-; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Minotauros rank 8
-; HP: 1500 -> 19850
+; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Apanda rank 10
+; HP: 1500 -> 22200
 ; --------------------------
-; Original boss Gilgamesh rank 5 -> Randomized boss Shiva, Commander, Commander, Commander rank 4
-; HP: 11500 -> 1500
+; Original boss Gilgamesh rank 5 -> Randomized boss Gilgamesh rank 5
+; HP: 11500 -> 6500
 ; ENEMY: Gilgamesh
-; Original HP: 1500
-; New trigger HP: 1305
+; Original HP: 6500
+; New trigger HP: 5655
 org $d0b5f5
-db $19, $05
+db $17, $16
 ; --------------------------
-; Original boss Gilgamesh rank 5 -> Randomized boss Guardian, Guardian, Guardian, Guardian rank 7
-; HP: 6500 -> 31108
+; Original boss Gilgamesh rank 5 -> Randomized boss Gilgamesh, Gilgamesh rank 7
+; HP: 6500 -> 55000
 ; ENEMY: Gilgamesh
-; Original HP: 31108
-; New trigger HP: 11821
+; Original HP: 55000
+; New trigger HP: 20900
 org $d0b674
-db $2d, $2e
+db $a4, $51
 ; --------------------------
-; Original boss Tyrasaurus rank 5 -> Randomized boss Karlabos rank 1
-; HP: 5000 -> 650
+; Original boss Tyrasaurus rank 5 -> Randomized boss Gargoyle, Gargoyle rank 7
+; HP: 5000 -> 10000
 ; --------------------------
-; Original boss Abductor rank 6 -> Randomized boss Siren, Siren rank 2
-; HP: 2500 -> 900
+; Original boss Abductor rank 6 -> Randomized boss Leviathan rank 9
+; HP: 2500 -> 40000
 ; --------------------------
-; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Gilgamesh rank 5
-; HP: 12000 -> 6500
+; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Forza, Magisa rank 2
+; HP: 12000 -> 850
 ; --------------------------
-; Original boss Gilgamesh, Enkidou rank 6 -> Randomized boss Antlion rank 6
-; HP: 8888 -> 8100
+; Original boss Gilgamesh, Enkidou rank 6 -> Randomized boss Gilgamesh rank 5
+; HP: 8888 -> 11500
 ; ENEMY: Gilgamesh
-; Original HP: 4050
-; New trigger HP: 2714
+; Original HP: 5750
+; New trigger HP: 3853
 org $d0b761
-db $9a, $0a
+db $0d, $0f
 ; ENEMY: Enkidou
 ; Skills: ['Aero2']
 ; New skill: Aero2
 org $d0b7c0
 db $90
 ; --------------------------
-; Original boss Atmos rank 6 -> Randomized boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5
-; HP: 19997 -> 1500
+; Original boss Atmos rank 6 -> Randomized boss Minotauros rank 8
+; HP: 19997 -> 19850
 ; --------------------------
-; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss WingRaptor, WingRaptor rank 1
-; HP: 7777 -> 250
+; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5
+; HP: 7777 -> 8000
 ; ENEMY: Guardian
-; Skills: ['Fire']
-; New skill: Fire
+; Skills: ['Fire2']
+; New skill: Fire2
 org $d0b865
-db $24
-; Original HP: 62
-; New trigger HP: 24
+db $2A
+; Original HP: 2000
+; New trigger HP: 760
 org $d0b85e
-db $18, $00
+db $f8, $02
 ; ENEMY: Guardian
 ; Skills: ['Quicksand']
 ; New skill: Quicksand
 org $d0b877
 db $C9
-; Original HP: 62
-; New trigger HP: 24
+; Original HP: 2000
+; New trigger HP: 760
 org $d0b874
-db $18, $00
+db $f8, $02
 ; ENEMY: Guardian
 ; Skills: ['MiniBlaze']
 ; New skill: MiniBlaze
 org $d0b889
 db $CB
-; Original HP: 62
-; New trigger HP: 24
+; Original HP: 2000
+; New trigger HP: 760
 org $d0b886
-db $18, $00
+db $f8, $02
 ; ENEMY: Guardian
-; Skills: ['Aero']
-; New skill: Aero
+; Skills: ['Aero2']
+; New skill: Aero2
 org $d0b89f
-db $8F
-; Original HP: 62
-; New trigger HP: 24
+db $90
+; Original HP: 2000
+; New trigger HP: 760
 org $d0b898
-db $18, $00
+db $f8, $02
 ; --------------------------
-; Original boss Carbunkle, Carbunkle rank 7 -> Randomized boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5
-; HP: 15000 -> 8000
+; Original boss Carbunkle, Carbunkle rank 7 -> Randomized boss Guardian, Guardian, Guardian, Guardian rank 7
+; HP: 15000 -> 31108
 ; ENEMY: Carbunkle
-; Original HP: 8000
-; New trigger HP: 5280
+; Original HP: 31108
+; New trigger HP: 20531
 org $d0b8ae
-db $a0, $14
-; Original HP: 8000
-; New trigger HP: 2640
+db $33, $50
+; Original HP: 31108
+; New trigger HP: 10266
 org $d0b8d1
-db $50, $0a
+db $1a, $28
 ; ENEMY: Carbunkle
 ; --------------------------
-; Original boss Gilgamesh, Gilgamesh rank 7 -> Randomized boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4
-; HP: 55000 -> 3000
+; Original boss Gilgamesh, Gilgamesh rank 7 -> Randomized boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4
+; HP: 55000 -> 1000
 ; ENEMY: Gilgamesh
-; Original HP: 3000
-; New trigger HP: 2280
+; Original HP: 1000
+; New trigger HP: 760
 org $d0b98c
-db $e8, $08
+db $f8, $02
 ; ENEMY: Gilgamesh
 ; --------------------------
-; Original boss Antlion rank 6 -> Randomized boss Tyrasaurus rank 5
-; HP: 8100 -> 5000
+; Original boss Antlion rank 6 -> Randomized boss Siren, Siren rank 2
+; HP: 8100 -> 900
 ; --------------------------
-; Original boss Halicarnaso rank 11 -> Randomized boss Twin Tania, Twin Tania rank 12
-; HP: 33333 -> 50000
+; Original boss Halicarnaso rank 11 -> Randomized boss Crayclaw rank 6
+; HP: 33333 -> 2000
 ; --------------------------
-; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss Gogo rank 9
-; HP: 20000 -> 47714
+; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5
+; HP: 20000 -> 1500
 ; ENEMY: Merugene
-; Skills: ['Fight', 'Fight', 'Bolt3', 'Fight', 'Ice3', 'Fight', 'Fight', 'NoDamage', 'Bolt3', 'NoDamage', 'Ice3', 'NoDamage', 'Fight', 'NoDamage', 'Bolt3', 'NoDamage', 'Ice3', 'NoDamage', 'Ice3']
+; Skills: ['Fight', 'Fight', 'Bolt2', 'Fight', 'Ice2', 'Fight', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Ice2']
 ; New skill: Fight
 org $d0bac0
 db $80
 ; New skill: Fight
 org $d0bac1
 db $80
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0bac4
-db $0E
+db $2C
 ; New skill: Fight
 org $d0bac5
 db $80
-; New skill: Ice3
+; New skill: Ice2
 org $d0bac8
-db $31
+db $2B
 ; New skill: Fight
 org $d0bac9
 db $80
@@ -484,15 +484,15 @@ db $80
 ; New skill: NoDamage
 org $d0bacd
 db $AC
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0bad0
-db $0E
+db $2C
 ; New skill: NoDamage
 org $d0bad1
 db $AC
-; New skill: Ice3
+; New skill: Ice2
 org $d0bad4
-db $31
+db $2B
 ; New skill: NoDamage
 org $d0bad5
 db $AC
@@ -502,38 +502,38 @@ db $80
 ; New skill: NoDamage
 org $d0bad9
 db $AC
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0badc
-db $0E
+db $2C
 ; New skill: NoDamage
 org $d0badd
 db $AC
-; New skill: Ice3
+; New skill: Ice2
 org $d0bae0
-db $31
+db $2B
 ; New skill: NoDamage
 org $d0bae1
 db $AC
-; New skill: Ice3
+; New skill: Ice2
 org $d0baf1
-db $31
+db $2B
 ; ENEMY: Merugene
-; Skills: ['Fight', 'Fight', 'Bolt3', 'Fight', 'Fire3', 'Fight', 'Fight', 'NoDamage', 'Bolt3', 'NoDamage', 'Fire3', 'NoDamage', 'Fight', 'NoDamage', 'Bolt3', 'NoDamage', 'Fire3', 'NoDamage', 'Bolt3']
+; Skills: ['Fight', 'Fight', 'Bolt2', 'Fight', 'Fire2', 'Fight', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Fire2', 'NoDamage', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Fire2', 'NoDamage', 'Bolt2']
 ; New skill: Fight
 org $d0baff
 db $80
 ; New skill: Fight
 org $d0bb00
 db $80
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0bb03
-db $0E
+db $2C
 ; New skill: Fight
 org $d0bb04
 db $80
-; New skill: Fire3
+; New skill: Fire2
 org $d0bb07
-db $30
+db $2A
 ; New skill: Fight
 org $d0bb08
 db $80
@@ -543,15 +543,15 @@ db $80
 ; New skill: NoDamage
 org $d0bb0c
 db $AC
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0bb0f
-db $0E
+db $2C
 ; New skill: NoDamage
 org $d0bb10
 db $AC
-; New skill: Fire3
+; New skill: Fire2
 org $d0bb13
-db $30
+db $2A
 ; New skill: NoDamage
 org $d0bb14
 db $AC
@@ -561,38 +561,38 @@ db $80
 ; New skill: NoDamage
 org $d0bb18
 db $AC
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0bb1b
-db $0E
+db $2C
 ; New skill: NoDamage
 org $d0bb1c
 db $AC
-; New skill: Fire3
+; New skill: Fire2
 org $d0bb1f
-db $30
+db $2A
 ; New skill: NoDamage
 org $d0bb20
 db $AC
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0bb30
-db $0E
+db $2C
 ; ENEMY: Merugene
-; Skills: ['Fight', 'Fight', 'Ice3', 'Fight', 'Fire3', 'Fight', 'Fight', 'NoDamage', 'Ice3', 'NoDamage', 'Fire3', 'NoDamage', 'Fight', 'NoDamage', 'Ice3', 'NoDamage', 'Fire3', 'NoDamage', 'Fire3']
+; Skills: ['Fight', 'Fight', 'Ice2', 'Fight', 'Fire2', 'Fight', 'Fight', 'NoDamage', 'Ice2', 'NoDamage', 'Fire2', 'NoDamage', 'Fight', 'NoDamage', 'Ice2', 'NoDamage', 'Ice2', 'NoDamage', 'Fire2']
 ; New skill: Fight
 org $d0bb3e
 db $80
 ; New skill: Fight
 org $d0bb3f
 db $80
-; New skill: Ice3
+; New skill: Ice2
 org $d0bb42
-db $31
+db $2B
 ; New skill: Fight
 org $d0bb43
 db $80
-; New skill: Fire3
+; New skill: Fire2
 org $d0bb46
-db $30
+db $2A
 ; New skill: Fight
 org $d0bb47
 db $80
@@ -602,15 +602,15 @@ db $80
 ; New skill: NoDamage
 org $d0bb4b
 db $AC
-; New skill: Ice3
+; New skill: Ice2
 org $d0bb4e
-db $31
+db $2B
 ; New skill: NoDamage
 org $d0bb4f
 db $AC
-; New skill: Fire3
+; New skill: Fire2
 org $d0bb52
-db $30
+db $2A
 ; New skill: NoDamage
 org $d0bb53
 db $AC
@@ -620,91 +620,91 @@ db $80
 ; New skill: NoDamage
 org $d0bb57
 db $AC
-; New skill: Ice3
+; New skill: Ice2
 org $d0bb5a
-db $31
+db $2B
 ; New skill: NoDamage
 org $d0bb5b
 db $AC
-; New skill: Fire3
+; New skill: Ice2
 org $d0bb5e
-db $30
+db $2B
 ; New skill: NoDamage
 org $d0bb5f
 db $AC
-; New skill: Fire3
+; New skill: Fire2
 org $d0bb6f
-db $30
+db $2A
 ; ENEMY: Merugene
-; Skills: ['Fire3', 'Nothing', 'Ice3', 'Nothing', 'Bolt3', 'Nothing', 'Fire3', 'NoDamage', 'Ice3', 'NoDamage', 'Bolt3', 'NoDamage', 'Fire3', 'NoDamage', 'Ice3', 'NoDamage', 'Bolt3', 'NoDamage']
-; New skill: Fire3
+; Skills: ['Fire2', 'Nothing', 'Ice2', 'Nothing', 'Bolt2', 'Nothing', 'Fire2', 'NoDamage', 'Ice2', 'NoDamage', 'Bolt2', 'NoDamage', 'Fire2', 'NoDamage', 'Ice2', 'NoDamage', 'Bolt2', 'NoDamage']
+; New skill: Fire2
 org $d0bb7d
-db $30
+db $2A
 ; New skill: Nothing
 org $d0bb7e
 db $AA
-; New skill: Ice3
+; New skill: Ice2
 org $d0bb81
-db $31
+db $2B
 ; New skill: Nothing
 org $d0bb82
 db $AA
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0bb85
-db $0E
+db $2C
 ; New skill: Nothing
 org $d0bb86
 db $AA
-; New skill: Fire3
+; New skill: Fire2
 org $d0bb89
-db $30
+db $2A
 ; New skill: NoDamage
 org $d0bb8a
 db $AC
-; New skill: Ice3
+; New skill: Ice2
 org $d0bb8d
-db $31
+db $2B
 ; New skill: NoDamage
 org $d0bb8e
 db $AC
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0bb91
-db $0E
+db $2C
 ; New skill: NoDamage
 org $d0bb92
 db $AC
-; New skill: Fire3
+; New skill: Fire2
 org $d0bb95
-db $30
+db $2A
 ; New skill: NoDamage
 org $d0bb96
 db $AC
-; New skill: Ice3
+; New skill: Ice2
 org $d0bb99
-db $31
+db $2B
 ; New skill: NoDamage
 org $d0bb9a
 db $AC
-; New skill: Bolt3
+; New skill: Bolt2
 org $d0bb9d
-db $0E
+db $2C
 ; New skill: NoDamage
 org $d0bb9e
 db $AC
 ; --------------------------
-; Original boss Odin rank 9 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
-; HP: 17000 -> 65535
+; Original boss Odin rank 9 -> Randomized boss Shiva, Commander, Commander, Commander rank 4
+; HP: 17000 -> 1500
 ; ENEMY: Odin
-; Skills: ['TrueEdge']
-; New skill: TrueEdge
+; Skills: ['ReaperSword']
+; New skill: ReaperSword
 org $d0bbb8
-db $D0
+db $B0
 ; --------------------------
-; Original boss Gargoyle, Gargoyle rank 7 -> Randomized boss Titan rank 5
+; Original boss Gargoyle, Gargoyle rank 7 -> Randomized boss Abductor rank 6
 ; HP: 5000 -> 2500
 ; --------------------------
-; Original boss Triton, Neregeid, Phobos rank 9 -> Randomized boss Crayclaw rank 6
-; HP: 13333 -> 2000
+; Original boss Triton, Neregeid, Phobos rank 9 -> Randomized boss Atmos rank 6
+; HP: 13333 -> 19997
 ; ENEMY: Triton
 ; Skills: ['Fight', 'Fight', 'Fire2', 'Fire2', 'Fight', 'Fight', 'Fight', 'Fire2']
 ; New skill: Fight
@@ -784,19 +784,19 @@ db $80
 org $d0bc68
 db $2F
 ; --------------------------
-; Original boss Omniscient rank 8 -> Randomized boss Gilgamesh, Gilgamesh rank 7
-; HP: 16999 -> 55000
+; Original boss Omniscient rank 8 -> Randomized boss Sol Cannon, Launcher, Launcher rank 5
+; HP: 16999 -> 22500
 ; ENEMY: Omniscient
-; Skills: ['Bolt3', 'Fire3', 'Ice3', 'Cure', 'Fire', 'Ice', 'Cure2', 'Fire2', 'Bolt2', 'Ice2']
-; New skill: Bolt3
+; Skills: ['Bolt2', 'Fire2', 'Ice2', 'Cure', 'Fire', 'Ice', 'Cure2', 'Fire2', 'Bolt2', 'Ice2']
+; New skill: Bolt2
 org $d0bc72
-db $0E
-; New skill: Fire3
+db $2C
+; New skill: Fire2
 org $d0bc73
-db $30
-; New skill: Ice3
+db $2A
+; New skill: Ice2
 org $d0bc74
-db $31
+db $2B
 ; New skill: Cure
 org $d0bc7c
 db $12
@@ -818,18 +818,18 @@ db $2C
 ; New skill: Ice2
 org $d0bc95
 db $2B
-; Original HP: 55000
-; New trigger HP: 13200
+; Original HP: 22500
+; New trigger HP: 5400
 org $d0bc6e
-db $90, $33
+db $18, $15
 ; --------------------------
-; Original boss Minotauros rank 8 -> Randomized boss Apanda rank 10
-; HP: 19850 -> 22200
+; Original boss Minotauros rank 8 -> Randomized boss Titan rank 5
+; HP: 19850 -> 2500
 ; --------------------------
-; Original boss Leviathan rank 9 -> Randomized boss Abductor rank 6
-; HP: 40000 -> 2500
+; Original boss Leviathan rank 9 -> Randomized boss Triton, Neregeid, Phobos rank 9
+; HP: 40000 -> 39999
 ; ENEMY: Leviathan
-; Skills: ['Fight', 'Fight', 'AquaRake', 'Fight', 'Fight', 'Ice', 'Fight', 'Fight', 'Ice2', 'Fight', 'AquaRake', 'Fight', 'Fight', 'Fight', 'Ice2', 'Fight', 'AquaRake', 'Fight', 'Fight', 'AquaRake', 'AquaRake', 'AquaRake', 'AquaRake', 'AquaRake', 'AquaRake', 'Fight', 'AquaRake', 'Fight', 'AquaRake', 'AquaRake', 'Fight', 'Fight', 'AquaRake', 'Fight', 'AquaRake', 'AquaRake', 'Fight', 'AquaRake', 'AquaRake', 'AquaRake']
+; Skills: ['Fight', 'Fight', 'AquaRake', 'Fight', 'Fight', 'AquaRake', 'Fight', 'Specialty', 'AquaRake', 'Fight', 'AquaRake', 'AquaRake', 'Fight', 'Fight', 'AquaRake', 'Fight', 'TidalWave', 'Specialty', 'Fight', 'AquaRake', 'AquaRake', 'AquaRake', 'TidalWave', 'Specialty', 'Specialty', 'Fight', 'TidalWave', 'Fight', 'TidalWave', 'Specialty', 'Fight', 'Fight', 'Specialty', 'Fight', 'Specialty', 'TidalWave', 'Fight', 'Specialty', 'TidalWave', 'TidalWave']
 ; New skill: Fight
 org $d0bcde
 db $80
@@ -845,45 +845,45 @@ db $80
 ; New skill: Fight
 org $d0bce3
 db $80
-; New skill: Ice
+; New skill: AquaRake
 org $d0bce4
-db $25
+db $84
 ; New skill: Fight
 org $d0bcea
 db $80
-; New skill: Fight
+; New skill: Specialty
 org $d0bceb
-db $80
-; New skill: Ice2
+db $81
+; New skill: AquaRake
 org $d0bcec
-db $2B
+db $84
 ; New skill: Fight
 org $d0bcee
 db $80
 ; New skill: AquaRake
 org $d0bcef
 db $84
-; New skill: Fight
+; New skill: AquaRake
 org $d0bcf0
-db $80
+db $84
 ; New skill: Fight
 org $d0bcf2
 db $80
 ; New skill: Fight
 org $d0bcf3
 db $80
-; New skill: Ice2
+; New skill: AquaRake
 org $d0bcf4
-db $2B
+db $84
 ; New skill: Fight
 org $d0bcf6
 db $80
-; New skill: AquaRake
+; New skill: TidalWave
 org $d0bcf7
-db $84
-; New skill: Fight
+db $D1
+; New skill: Specialty
 org $d0bcf8
-db $80
+db $81
 ; New skill: Fight
 org $d0bcfa
 db $80
@@ -896,74 +896,74 @@ db $84
 ; New skill: AquaRake
 org $d0bd02
 db $84
-; New skill: AquaRake
+; New skill: TidalWave
 org $d0bd03
-db $84
-; New skill: AquaRake
+db $D1
+; New skill: Specialty
 org $d0bd04
-db $84
-; New skill: AquaRake
+db $81
+; New skill: Specialty
 org $d0bd06
-db $84
+db $81
 ; New skill: Fight
 org $d0bd07
 db $80
-; New skill: AquaRake
+; New skill: TidalWave
 org $d0bd08
-db $84
+db $D1
 ; New skill: Fight
 org $d0bd0a
 db $80
-; New skill: AquaRake
+; New skill: TidalWave
 org $d0bd0b
-db $84
-; New skill: AquaRake
+db $D1
+; New skill: Specialty
 org $d0bd0c
-db $84
+db $81
 ; New skill: Fight
 org $d0bd0e
 db $80
 ; New skill: Fight
 org $d0bd0f
 db $80
-; New skill: AquaRake
+; New skill: Specialty
 org $d0bd10
-db $84
+db $81
 ; New skill: Fight
 org $d0bd16
 db $80
-; New skill: AquaRake
+; New skill: Specialty
 org $d0bd17
-db $84
-; New skill: AquaRake
+db $81
+; New skill: TidalWave
 org $d0bd18
-db $84
+db $D1
 ; New skill: Fight
 org $d0bd1a
 db $80
-; New skill: AquaRake
+; New skill: Specialty
 org $d0bd1b
-db $84
-; New skill: AquaRake
+db $81
+; New skill: TidalWave
 org $d0bd1c
-db $84
-; New skill: AquaRake
+db $D1
+; New skill: TidalWave
 org $d0bd24
-db $84
+db $D1
 ; --------------------------
-; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss Bahamut rank 9
-; HP: 20000 -> 40000
+; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss WingRaptor, WingRaptor rank 1
+; HP: 20000 -> 250
 ; --------------------------
-; Original boss Gogo rank 9 -> Randomized boss Omniscient rank 8
-; HP: 47714 -> 16999
+; Original boss Gogo rank 9 -> Randomized boss Bahamut rank 9
+; HP: 47714 -> 40000
 ; ENEMY: Gogo
-; Original HP: 16999
-; New trigger HP: 11729
+; Original HP: 40000
+; New trigger HP: 27600
 org $d0be14
-db $d1, $2d
+db $d0, $6b
 ; --------------------------
-; Original boss Bahamut rank 9 -> Randomized boss Galura rank 3
-; HP: 40000 -> 1200
+; Original boss Bahamut rank 9 -> Randomized boss Tyrasaurus rank 5
+; HP: 40000 -> 5000
 ; ENEMY: Bahamut
 ; Skills: ['Flare', 'Flare', 'Fight', 'DanceoftheDead', 'DanceoftheDead', 'Fight', 'MiniBlaze', 'MiniBlaze', 'Fight', 'Maelstrom', 'Maelstrom', 'Fight', 'SurgeBeam', 'SurgeBeam', 'Fight', 'WindSlash', 'WindSlash', 'Fight', 'Thunder', 'Thunder', 'Fight', 'Flame', 'Flame', 'Fight', 'Quicksand', 'Quicksand', 'Fight', 'WindSlash', 'WindSlash', 'Fight', 'Flame', 'Flame', 'Fight', 'Flare', 'Flare', 'Flare']
 ; New skill: Flare
@@ -1074,51 +1074,51 @@ db $33
 ; New skill: Flare
 org $d0bebe
 db $33
-; Original HP: 1200
-; New trigger HP: 300
+; Original HP: 5000
+; New trigger HP: 1250
 org $d0be5e
-db $2c, $01
-; Original HP: 1200
-; New trigger HP: 456
+db $e2, $04
+; Original HP: 5000
+; New trigger HP: 1900
 org $d0be68
-db $c8, $01
-; Original HP: 1200
-; New trigger HP: 600
+db $6c, $07
+; Original HP: 5000
+; New trigger HP: 2500
 org $d0be76
-db $58, $02
-; Original HP: 1200
-; New trigger HP: 756
+db $c4, $09
+; Original HP: 5000
+; New trigger HP: 3150
 org $d0be84
-db $f4, $02
-; Original HP: 1200
-; New trigger HP: 900
+db $4e, $0c
+; Original HP: 5000
+; New trigger HP: 3750
 org $d0be92
-db $84, $03
-; Original HP: 1200
-; New trigger HP: 1044
+db $a6, $0e
+; Original HP: 5000
+; New trigger HP: 4350
 org $d0bea0
-db $14, $04
-; Original HP: 1200
-; New trigger HP: 300
+db $fe, $10
+; Original HP: 5000
+; New trigger HP: 1250
 org $d0beb7
-db $2c, $01
+db $e2, $04
 ; --------------------------
-; Original boss Ifrit rank 3 -> Randomized boss Atmos rank 6
-; HP: 3000 -> 19997
+; Original boss Ifrit rank 3 -> Randomized boss Halicarnaso rank 11
+; HP: 3000 -> 33333
 ; ENEMY: Ifrit
-; Skills: ['Flame', 'Fire2', 'Fire2', 'Blaze', 'Fight', 'Specialty']
+; Skills: ['Flame', 'Fire3', 'Flare', 'AtomicRay', 'Fight', 'Specialty']
 ; New skill: Flame
 org $d0a2fb
 db $DB
-; New skill: Fire2
+; New skill: Fire3
 org $d0a2fc
-db $2A
-; New skill: Fire2
+db $30
+; New skill: Flare
 org $d0a2fd
-db $2A
-; New skill: Blaze
+db $33
+; New skill: AtomicRay
 org $d0a2ff
-db $CD
+db $CA
 ; New skill: Fight
 org $d0a300
 db $80
@@ -1126,13 +1126,13 @@ db $80
 org $d0a301
 db $81
 ; --------------------------
-; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Stalker, Stalker, Stalker, Stalker rank 9
-; HP: 1500 -> 20000
+; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
+; HP: 1500 -> 65535
 ; ENEMY: Shiva
-; Skills: ['Ice3', 'Ice3']
-; New skill: Ice3
+; Skills: ['Snowstorm', 'Ice3']
+; New skill: Snowstorm
 org $d0b6c0
-db $31
+db $CC
 ; New skill: Ice3
 org $d0b6c5
 db $31
@@ -1140,11 +1140,11 @@ db $31
 ; ENEMY: Commander
 ; ENEMY: Commander
 ; --------------------------
-; Original boss Calofisteri rank 10 -> Randomized boss Triton, Neregeid, Phobos rank 9
-; HP: 18000 -> 39999
+; Original boss Calofisteri rank 10 -> Randomized boss Chim.Brain rank 5
+; HP: 18000 -> 3300
 ; --------------------------
-; Original boss Apocalypse rank 11 -> Randomized boss AdamanTiMi rank 4
-; HP: 27900 -> 2000
+; Original boss Apocalypse rank 11 -> Randomized boss Stalker, Stalker, Stalker, Stalker rank 9
+; HP: 27900 -> 20000
 ; ENEMY: Apocalypse
 ; Skills: ['Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2']
 ; New skill: Aero2
@@ -1190,31 +1190,31 @@ db $90
 org $d0c15d
 db $90
 ; --------------------------
-; Original boss Catastroph rank 11 -> Randomized boss Odin rank 9
-; HP: 19997 -> 17000
+; Original boss Catastroph rank 11 -> Randomized boss LiquiFlame, LiquiFlame, LiquiFlame rank 4
+; HP: 19997 -> 3000
 ; ENEMY: Catastroph
-; Skills: ['Quicksand', 'ReversePolarity', 'DemonEye', 'Fight', 'EarthShaker', 'Specialty']
-; New skill: Quicksand
+; Skills: ['Fight', 'Quicksand', 'DemonEye', 'Fight', 'SurgeBeam', 'Specialty']
+; New skill: Fight
 org $d0c1e0
-db $C9
-; New skill: ReversePolarity
+db $80
+; New skill: Quicksand
 org $d0c1e1
-db $E7
+db $C9
 ; New skill: DemonEye
 org $d0c1e2
 db $EB
 ; New skill: Fight
 org $d0c1e4
 db $80
-; New skill: EarthShaker
+; New skill: SurgeBeam
 org $d0c1e5
-db $CF
+db $DD
 ; New skill: Specialty
 org $d0c1e6
 db $81
 ; --------------------------
-; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Sol Cannon, Launcher, Launcher rank 5
-; HP: 44044 -> 22500
+; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Gogo rank 9
+; HP: 44044 -> 47714
 ; ENEMY: Necrofobia
 ; Skills: ['Flare', 'Fire2', 'Bolt2', 'Ice2']
 ; New skill: Flare
@@ -1230,25 +1230,25 @@ db $2C
 org $d0c222
 db $2B
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire2', 'Ice2', 'Bolt2', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2']
+; New skill: Fire2
 org $d0c581
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c582
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c583
-db $26
-; New skill: Fire
+db $2C
+; New skill: Fire2
 org $d0c589
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c58a
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c58b
-db $26
+db $2C
 ; New skill: Fire2
 org $d0c591
 db $2A
@@ -1258,35 +1258,35 @@ db $2B
 ; New skill: Bolt2
 org $d0c593
 db $2C
-; New skill: Fire
+; New skill: Fire2
 org $d0c599
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c59a
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c59b
-db $26
+db $2C
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire2', 'Ice2', 'Bolt2', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2']
+; New skill: Fire2
 org $d0c581
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c582
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c583
-db $26
-; New skill: Fire
+db $2C
+; New skill: Fire2
 org $d0c589
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c58a
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c58b
-db $26
+db $2C
 ; New skill: Fire2
 org $d0c591
 db $2A
@@ -1296,35 +1296,35 @@ db $2B
 ; New skill: Bolt2
 org $d0c593
 db $2C
-; New skill: Fire
+; New skill: Fire2
 org $d0c599
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c59a
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c59b
-db $26
+db $2C
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire2', 'Ice2', 'Bolt2', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2']
+; New skill: Fire2
 org $d0c581
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c582
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c583
-db $26
-; New skill: Fire
+db $2C
+; New skill: Fire2
 org $d0c589
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c58a
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c58b
-db $26
+db $2C
 ; New skill: Fire2
 org $d0c591
 db $2A
@@ -1334,35 +1334,35 @@ db $2B
 ; New skill: Bolt2
 org $d0c593
 db $2C
-; New skill: Fire
+; New skill: Fire2
 org $d0c599
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c59a
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c59b
-db $26
+db $2C
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire2', 'Ice2', 'Bolt2', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2', 'Fire2', 'Ice2', 'Bolt2']
+; New skill: Fire2
 org $d0c581
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c582
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c583
-db $26
-; New skill: Fire
+db $2C
+; New skill: Fire2
 org $d0c589
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c58a
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c58b
-db $26
+db $2C
 ; New skill: Fire2
 org $d0c591
 db $2A
@@ -1372,19 +1372,19 @@ db $2B
 ; New skill: Bolt2
 org $d0c593
 db $2C
-; New skill: Fire
+; New skill: Fire2
 org $d0c599
-db $24
-; New skill: Ice
+db $2A
+; New skill: Ice2
 org $d0c59a
-db $25
-; New skill: Bolt
+db $2B
+; New skill: Bolt2
 org $d0c59b
-db $26
+db $2C
 ; ENEMY: Gilgamesh
 ; --------------------------
-; Original boss Twin Tania, Twin Tania rank 12 -> Randomized boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4
-; HP: 50000 -> 1000
+; Original boss Twin Tania, Twin Tania rank 12 -> Randomized boss Karlabos rank 1
+; HP: 50000 -> 650
 ; ENEMY: Twin Tania
 ; Skills: ['Flame', 'Thunder', 'Fight', 'Flame', 'Thunder', 'Fight', 'Bone', 'BreathWing', 'BreathWing', 'AquaRake', 'Flare']
 ; New skill: Flame
@@ -1426,8 +1426,8 @@ db $33
 org $d0b2d8
 db $33
 ; --------------------------
-; Original boss Apanda rank 10 -> Randomized boss Carbunkle, Carbunkle rank 7
-; HP: 22200 -> 15000
+; Original boss Apanda rank 10 -> Randomized boss Merugene, Merugene, Merugene, Merugene rank 8
+; HP: 22200 -> 20000
 ; ENEMY: Apanda
 ; Skills: ['WindSlash', 'WindSlash']
 ; New skill: WindSlash
@@ -1437,5 +1437,5 @@ db $AB
 org $d0c410
 db $AB
 ; --------------------------
-; Original boss Crayclaw rank 6 -> Randomized boss Byblos rank 4
-; HP: 2000 -> 3600
+; Original boss Crayclaw rank 6 -> Randomized boss Odin rank 9
+; HP: 2000 -> 17000

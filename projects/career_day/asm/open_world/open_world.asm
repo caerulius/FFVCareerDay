@@ -49,6 +49,9 @@ db $11
 org $F0510E
 db $72
 
+; always trigger cutscene for opening path to boss
+org $F04D66
+db $FC, $FB
 ; MOOGLE VILLAGE
 ; Event code [$A4, $3C] or setting bit 10 on $000A3B corresponds to both Tyrasaur being defeated and Moogle Village being open
 ; This fix allows for Tyrasaur to remain on $000A3B bit 10, while Moogle Village is swapped to another bit usually set upon 
@@ -68,6 +71,13 @@ db $C1                     ;Refer to event code [$A4, $C1]
 org $F055B2
 db $10
 
+; BAL CASTLE
+org $f04d3d
+db $ff, $00, $00
+
+; disable hiryuu event
+org $c9f3f7
+db $FF
 
 ; ZEZA FLEET
 ; After Gilgamesh, change one of the flags for Hiryuu spawning to normal to be based off of:
@@ -90,8 +100,8 @@ db $FD, $7C
 ; Bit 80 at address 0x7e0a4b
 
 ; org $D8F85A
-org $F057DA
-db $BF
+org $F057D9
+db $FD, $C6
 
 
 ; ANTLION
@@ -128,3 +138,94 @@ db $BC
 ; Always trigger the cutscene for the final fight
 org $F05D3D
 db $FF, $85, $07
+
+
+; spring nullify
+org $F04BA4
+db $33
+
+; AFTER TULE BOAT CUTSCENE
+; world map trigger
+org $F04F59
+db $FB, $FB
+
+; KUZAR 
+; disable cutscene after placing first tablet
+org $F051AD
+db $FB, $FB
+
+; BLACK CHOCOBO
+; set to always have recatch cutscene play
+; org $F04757
+; db $85, $00
+
+org $F04752
+db $FD, $3A, $FF, $85, $00, $FF, $47, $03, $FF, $00, $00
+
+org $CE17E0
+db $fe, $3a, $fe, $3a, $ff, $7e, $00, $fe, $3a, $ff, $7e, $00, $f7, $00, $ff, $f6, $02
+
+
+; set backup text to NOT crash the game
+; org $CE7879
+; db $F6, $00
+; org $CE7880
+; db $F6, $00
+
+
+
+; GIL CAVE
+; set to always trigger door opening
+org $F05A8C
+db $FB
+
+; GUIDO CAVE
+; Guido never appears 
+org $F0509A
+db $FB, $FB
+org $F050A1
+db $FB, $FB
+
+; BLACK CHOCO W3
+; make it so black choco always respawns at mirage
+org $C99EBB
+db $00, $00, $00
+
+; NORTH MOUNTAIN
+; conditional event for never interacting with hiryuu at top
+org $F04835
+db $FD, $79, $FF, $00, $00
+
+; nuke npcs
+org $ce670E
+pad $CE673F
+
+
+; EXDEATH WORLD 2 CASTLE
+org $F05699
+db $FC, $BF, $FF, $E1, $00, $00, $00, $00, $00
+org $F056A2
+db $FF, $00, $00, $00, $00, $00, $FF, $00, $00
+
+; EARTH CRYSTAL
+; if you wanna fix later, disable this flag getting set at c89b13 (for FD, B8, not FE)
+org $F04AEC
+db $FE, $B8
+
+; FINAL EXDEATH WARP
+; edit event to move player down 1 tile
+org $C9C4CD
+db $23
+
+; CARWEN
+; remove lady
+org $CE65E1
+pad $CE65EF
+
+; SUBMARINE
+; warp to new locations, ignore submarine entirely
+org $C93F4B
+db $4B, $01, $11, $0d
+;map data warp
+org $CE4DDC
+db $01, $00, $AC, $A5

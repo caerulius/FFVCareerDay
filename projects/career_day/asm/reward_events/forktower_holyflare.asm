@@ -3,11 +3,11 @@ hirom
 org $c9a22f
 
 db $A4, $FE                     ;Turn on bit 40 at address 0x7e0a53
-db $71                          ;Short pause
+;db $71                          ;Short pause
 db $C8, $35, $07                ;Display Message/Text/Dialogue 35 07
-db $71                          ;Short pause
+;db $71                          ;Short pause
 db $16                          ;Player pose: face left, standing
-db $73                          ;Long pause
+;db $73                          ;Long pause
 db $E3, $9A, $01, $1F, $08, $00 ;Inter-map cutscene? 9A 01 1F 08 00
 db $0A                          ;Player Hide
 db $C3, $0C                     ;Fade in Speed 0C
@@ -17,9 +17,9 @@ db $71                          ;Short pause
 db $77                          ;<Unknown>
 db $CE, $10, $01                ;Play next 01 bytes 10 times
 db $04                          ;Player move Left
-db $71                          ;Short pause
+;db $71                          ;Short pause
 db $C8, $37, $07                ;Display Message/Text/Dialogue 37 07
-db $71                          ;Short pause
+;db $71                          ;Short pause
 db $CE, $10, $01                ;Play next 01 bytes 10 times
 db $02                          ;Player Move Right
 db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
@@ -49,7 +49,7 @@ db $22                          ;Player pose: face down, left hand on head
 db $00                          ;Player Hold
 db $FF                          ;End Event
 
-pad $C9A27C
+; pad $C9A27C
 
 org $C9A27D
 

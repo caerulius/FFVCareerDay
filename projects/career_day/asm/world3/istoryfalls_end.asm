@@ -69,11 +69,6 @@ db $89, $03                     ;Sprite 089 do event: Move Down
 db $89, $0A                     ;Sprite 089 do event: Hide
 db $C5                          ;<unknown>
 db $80, $39                     ;Sprite 080 do event: face down, both arms raised
-db $71                          ;Short pause
-db $B4, $29                     ;Play Background Music Fanfare 1 (short)
-db $DE, $10				; set up reward
-db $DF					; call text handler
-db $E4, $B4                     ;Unknown
 db $24                          ;Player pose: face down, right hand raised in
 db $A2, $92                     ;Set Event Flag 092
 db $FF                          ;End Event
@@ -81,3 +76,6 @@ db $FF                          ;End Event
 
 padbyte $00
 pad $C9BC3F
+
+org $C9BBE7
+db $00, $00, $00

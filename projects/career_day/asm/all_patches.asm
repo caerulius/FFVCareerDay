@@ -4,6 +4,7 @@ incsrc core_code/init.asm
 
 ; priority writes
 incsrc core_code/relocate_conditional_events.asm
+incsrc ../../shared_asm/data_tables/starting_stats.asm
 
 ; conditionals. asar command line defines now
 ;!testing = 1 ; this enables debugging below 
@@ -15,8 +16,8 @@ incsrc core_code/relocate_conditional_events.asm
 ; incsrc ../../test_asm/key_items-patch.asm
 
 ; other core_code testing
-incsrc open_world/scratchpad.asm
-incsrc open_world/test_constants.asm
+; incsrc open_world/scratchpad.asm
+; incsrc open_world/test_constants.asm
 
 
 
@@ -198,9 +199,11 @@ incsrc ../../shared_asm/shared_core/utility.asm
 incsrc ../../shared_asm/shared_core/walk_speed.asm
 incsrc ../../shared_asm/shared_core/chest_magicreward.asm
 incsrc ../../shared_asm/shared_core/shop_hook.asm
+incsrc ../../shared_asm/shared_core/battle_hook.asm
 incsrc ../../shared_asm/balancing/exp_abp_modifier.asm
 incsrc ../../shared_asm/recovery/all_inns.asm
 incsrc ../../shared_asm/recovery/tent.asm
+
 
 ; reward events
 incsrc reward_events/piratescave_syldra.asm
@@ -244,6 +247,7 @@ incsrc open_world/world3_to_world2_warp.asm
 incsrc open_world/pyramid_disable.asm
 incsrc open_world/custom_lock_cutscenes.asm
 incsrc open_world/warp_area.asm
+incsrc open_world/debug_key_items.asm
 
 incsrc world2/mooglewaterway_encounters.asm
 

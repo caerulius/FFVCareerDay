@@ -154,9 +154,10 @@ LDA #$20
 LDX #$003C
 JSL SetKeyItemBits
 
-LDA #$20
-LDX #$0022
-JSL SetKeyItemBits
+; reinstituted
+; LDA #$20
+; LDX #$0022
+; JSL SetKeyItemBits
 
 RTL
 

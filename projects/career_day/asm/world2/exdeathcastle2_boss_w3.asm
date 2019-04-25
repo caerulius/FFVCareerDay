@@ -37,7 +37,7 @@ db $E1, $01, $00, $A0, $9D, $00 ;Return from cutscene?
 
 
 
-db $A5, $7F                     ;Clear Event Flag 17F
+; db $A5, $7F                     ;Clear Event Flag 17F
 db $CB, $96, $01                ;Clear Flag 2/3/4/5/96 01
 db $A2, $79                     ;Set Event Flag 079
 db $CB, $7C, $01                ;Clear Flag 2/3/4/5/7C 01
@@ -77,13 +77,14 @@ db $CB, $01, $01                ;Turn off bit 02 at address  0x7e0a74
 db $CA, $0A, $01                ;Turn on bit 04 at address  0x7e0a75
 db $A2, $52                     ;Turn on bit 04 at address 0x7e0a1e
 
-db $A4, $FF                     ;Set Event Flag 1FF
+; db $A4, $FF                     ;Set Event Flag 1FF
 db $DB                          ;Restore Player status
 db $10                          ;Player pose: face up, left hand forward
 db $C3, $02                     ;Fade in Speed 06
 db $75                          ;Extremely long pause
 db $CC, $24                  	;Custom destination flag 24
 db $A4, $FB						;Turn on bit 08 at address 0x7e0a53 ;Enables the world map right before we transition to world 3 in case you haven't picked it up
+; db $B4, $27                     ; music world map 2
 db $CD, $7F, $05				;Run event index 057F ; Party Heal
 db $FF                          ;End Event
 

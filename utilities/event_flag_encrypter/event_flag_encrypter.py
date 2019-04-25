@@ -1,3 +1,5 @@
+import math
+
 bitset = {}
 bitset['01'] = 0
 bitset['02'] = 1
@@ -82,8 +84,55 @@ def encrypt(address,bit,type_set):
             
             
             
-            
-            
+def conditional_flag(argument, value):
+    argument = argument.upper()
+    if argument == 'FB' or argument == 'FC':
+        if argument == 'FB':
+            type_set = 'unset'
+        if argument == 'FC':
+            type_set = 'set'
+        base = int('000A34',base=16)
+    else:
+        if argument == 'FD':
+            type_set = 'unset'
+        if argument == 'FE':
+            type_set = 'set'
+        base = int('000A14',base=16)
+    value_int = int(value,base=16) * 8
+    value_upper = math.trunc(value_int / 64)
+    bit = 7 - (int(value,base=16) % 8)
+    delta = (base + value_upper) 
+    delta = hex(delta).replace("0x","$")
+    print("Code: $"+argument+", $"+value)
+    print("Address: "+delta+" bit: "+str(bitsetnum[bit])+" type: "+type_set)
+    print("----")
+    
+def reverse_conditional_flag(address, bit, type_set):
+    address_int = int(address,base=16)
+    
+    if address_int >= 2612:
+        base_int = int('A34',base=16)
+        if type_set == 'set':
+            final_command = 'FC'
+        elif type_set == 'unset':
+            final_command = 'FB'
+    else:
+        base_int = int('A14',base=16)
+        if type_set == 'set':
+            final_command = 'FE'
+        elif type_set == 'unset':
+            final_command = 'FD'
+    
+    delta = ((address_int - base_int) * 8) + bitset[bit]
+    
+    new_address = hex(delta)
+    print("Code: $"+final_command+", $"+new_address.replace("0x","").upper())
+    print("Address: $"+address+" bit: "+bit+" type: "+type_set)
+    print("----")
+    
+        
+conditional_flag('FB','19')
+#reverse_conditional_flag('A2C','40','unset')
             
             
             
@@ -92,34 +141,34 @@ def encrypt(address,bit,type_set):
             
 before_text = """
 00000000000000000000000000000000
-0000000000003b300000000ac0a00093
-95482400000000000000000100000000
-000000000000003c28300c3000100000
-0000000000000000000000c0d0000010
-0783008400bffe7fdbd62bc7ff7f404e
-ff757fb9f4feff93ffff0f80afe7fc82
-814becc0ff197078ffff03d8feffe9ff
-ff0b0400fdfefffffffffff0ff03ff6f
+0000000000003b0000600002c0a000d8
+954c0000010000000000f82000000000
+000000000000003c28300c2000000108
+000000d0000000800000000000000010
+0783280800befe7fdbd62bc7ff7f404e
+ff757fb9f4feff73feff0f80afe7fc82
+814bece0ff197078ffff03d0feffa5ff
+ff0d7800fdfefffffffffff0ff03ff6f
 3fa6df23fcc38f7fffffff3f0f3e019f
 fdf4ffd7ffffffdffdc7ff0103fef0c7
-7ffe17000ff801000080bfbf0f180000
-fffffe9ff0fffffcffff000000000000
+7ffe17000ff801000080bebf0f180000
+fffffe9ff0ff7ffdffff000000000000
 """
 
 after_text = """
 00000000000000000000000000000000
-0000000000003b300000000ac0a00093
-95482400000000000000f80100000000
-000000000000003c28300c3000100000
-0000000000000000000000c0d0000010
-0783008400bffe7fdbd62bc7ff7f404e
-ff757fb9f4feff93ffff0f80afe7fc82
-814bece0ff197078ffff03d8feffe9ff
-ff0b0400fdfefffffffffff0ff03ff6f
+0000000000003b0000600002c0a000d8
+954c0000010000000000f82000000000
+000000000000003c28300c2000000108
+000000d0000000800000000000000010
+0783280800befe7fdbd62bc7ff7f404e
+ff757fb9f4feff73feff0f80afe7fc82
+814bece0ff197078ffff03d0feffa5ff
+ff0d7800fdfefffffffffff0ff03ff6f
 3fa6df23fcc38f7fffffff3f0f3e019f
 fdf4ffd7ffffffdffdc7ff0103fef0c7
-7ffe17000ff801000080bfbf0f180000
-fffffe9ff0fffffcffff000000000000
+7ffe17000ff801000080bebf0f180000
+fffffe9ff0ff7ffdffff000000000000
 """
 
 

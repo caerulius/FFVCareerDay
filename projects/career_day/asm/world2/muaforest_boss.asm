@@ -127,7 +127,7 @@ db $DE, $76 ; custom reward
 db $DF
 db $75
 db $C4, $02
-; db $A2, $75                     ;Turn on bit 20 at address 0x7e0a22
+db $A2, $75                     ;Turn on bit 20 at address 0x7e0a22
 db $E3, $67, $01, $93, $12, $00 ;Inter-map cutscene? 67 01 93 12 00
 db $CD, $40, $04                ;Run event index 0440
 db $88, $09                     ;Sprite 088 do event: Show
@@ -182,11 +182,15 @@ db $CA, $4A, $02                ;Turn on bit 04 at address  0x7e0a9d
 db $CA, $4B, $02                ;Turn on bit 08 at address  0x7e0a9d
 db $CA, $4C, $02                ;Turn on bit 10 at address  0x7e0a9d
 db $CA, $4D, $02                ;Turn on bit 20 at address  0x7e0a9d
+; new flag for cara joining
+db $A2, $C6            ; set address 000A2C bit ON 40
+
 db $09                          ;Player Show
 db $C3, $02
 db $14                          ;Player pose: face down, left hand forward
 db $CC, $23                  ;Custom destination flag 23
 db $A4, $45					; Trigger for Exdeath cutscene
+db $E1, $01, $00, $2E, $87, $00 ;Return from cutscene? 00 00 9C 96 00
 db $D2, $01, $2E, $86, $D8
 ; db $EB, $FF                     ;DISABLED FOR NOW - believed to reset Cara's state to Freelancer
 db $FF

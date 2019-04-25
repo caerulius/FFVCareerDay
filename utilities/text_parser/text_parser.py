@@ -23,11 +23,8 @@ key_item_table = pd.read_csv('tables/text_tables/key_item_text.csv',header=None,
 
 data = '''
 
-608b7eff92888eff7b7e808287877e8b
-8ca2006f857e7a8c7e9dff7c88867eff
-8887ff8287a1006d6eff6b6e68736471
-686d66a3a3a300666473ff6e7473a1a1
-00
+717e8c8d888b7e8c96676f00717e8c8d
+888b7e8c966c6f006288868985
 '''
 data = data.replace("\n","ZZ")
 n = 2
