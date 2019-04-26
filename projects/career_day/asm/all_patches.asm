@@ -230,6 +230,7 @@ incsrc reward_events/walsetower_gogo.asm
 incsrc reward_events/tycoon_hiddenarea.asm
 incsrc reward_events/istory_toad.asm
 incsrc reward_events/aegis_shield.asm
+incsrc reward_events/carwen_lone_wolf_barrel.asm
 
 
 ; open world
@@ -244,6 +245,7 @@ incsrc open_world/world3_to_world2_warp.asm
 incsrc open_world/pyramid_disable.asm
 incsrc open_world/custom_lock_cutscenes.asm
 incsrc open_world/warp_area.asm
+incsrc open_world/npc_fixes.asm
 
 incsrc world2/mooglewaterway_encounters.asm
 

@@ -1,0 +1,1036 @@
+-----STARTING JOB, WEAPON, MAGIC-----
+Starting job:     Geomancer Job Crystal
+Starting weapon:  Giyaman
+Starting spell:   None
+Starting ability: Terrain
+-----***************************-----
+-----KEY ITEMS------
+Byblos -> Big Bridge Key
+WingRaptor -> 4th Tablet
+Magisa & Forza -> 3rd Tablet
+Galura -> Trench Page
+LiquiFlame -> Sandworm Bait
+AdamanTiMi -> Walse Tower Key
+Chim.Brain -> Elder Branch
+Titan -> Shrine Page
+Tyrasaurus -> Falls Page
+HiryuuPlant -> Pyramid Page
+Gilgamesh 3 & Enkidou -> Steamship Key
+Gilgamesh 4 -> Moogle Suit
+Merugene -> 1st Tablet
+Odin -> Adamantite
+Omniscient -> Hiryuu Call
+Leviathan -> Anti Barrier
+Stalker -> 2nd Tablet
+Bahamut -> Submarine Key
+Ifrit -> Canal Key
+Shiva -> Ifrit’s Fire
+Crayclaw -> Bracelet
+-----*********-----
+
+
+-----CHESTS AND EVENTS-----
+Wind Crystal Knight -> Plumed Hat
+Wind Crystal BlueMage -> Tricorn Hat
+Wind Crystal BlackMage -> Staff
+Wind Crystal WhiteMage -> Tent
+Wind Crystal Monk -> Knife
+Wind Crystal Thief -> HiPotion
+Fire Crystal Mediator -> Ice Black Magic Progressive
+Fire Crystal Geomancer -> DragonFang
+Fire Crystal Ninja -> Thunder Bow
+Black Choco Crystals Bard -> Red1->Red2->Red3->X-Magic
+Black Choco Crystals Hunter -> Broadsword
+Earth Crystal Samurai -> Flash->Time Slip->DethClaw
+Earth Crystal Dragoon -> Cover
+Earth Crystal Chemist -> Void->Demi->Qrter->Old
+Earth Crystal Dancer -> Golem
+Leviathan Esper Levia -> GbnPnch->Emision->Missle->Blwfsh
+Titan Titan -> Mute->Psych->Holy Sword
+Carbuncle Crbnkl -> Avis Killer
+Syldra Syldra -> Comet->Meteo
+Odin Odin -> Whip
+Phoenix Phenix -> Tent
+Bahamut Bahmut -> Yoichi Bow
+Life (or Strength) Song from Crescent Town bard Vitality -> Slumber Sword
+Temptation Song at Lix Charm -> Thunder Rod
+Love Song at Istory Love -> Fire Rod
+Requiem Song at Kelb Requiem -> Charm->Hero@Song
+Speed Song at Surgate Speed -> Gold Hairpin
+Magic Song at Ancient Library Magic -> DarkMatter
+Power Song from Crescent Town Power -> Katana
+Hero Song from Crescent Town Hero -> Mimic Job Crystal
+Fork Tower, two Magics Holy -> Maiden's Kiss
+Fork Tower, two Magics Flare -> Thunder Rod
+Meteo Meteo -> Gaia Gear
+5 potions in Wind Shrine, bottom left guy Potion -> Bronze Helm
+8 potions, Pirate after Torna Canal Key acquired Potion -> Magus
+Chancellor at Tycoon Healing Staff -> Judgement Staff
+Magisa & Forza Mythril Helm -> Equip Katana
+CornaJar at Kelb CornaJar -> Cure White Magic Progressive
+Ribbon from girl in Rugor Ribbon -> Silver Harp
+Mirage Vest from Chocobo Tour/Mirage Village Mirage Vest -> Katana
+12 Kuzar Events Assassin -> Equip Shield
+12 Kuzar Events Apollo's Harp -> Rune Axe
+12 Kuzar Events Excalibur -> Mute->Psych->Holy Sword
+12 Kuzar Events Flame Whip -> Tiger Mask
+12 Kuzar Events Earth Bell -> Equip Ribbon
+12 Kuzar Events Holy Lance -> Hero Drink
+12 Kuzar Events Masamune -> Full Moon
+12 Kuzar Events Wizard Rod -> ManEater
+12 Kuzar Events Rune Axe -> Venom->Drain->Break Sword
+12 Kuzar Events Sage's Staff -> Berserker Job Crystal
+12 Kuzar Events Sasuke -> Avis Killer
+12 Kuzar Events Yoichi Bow -> Silver Plate
+Shiva Shiva -> OmegaMedl
+Ifrit Ifrit -> Tent
+Water Crystal Samurai -> Mythril Shield
+Water Crystal Berserker -> Whip
+Water Crystal MysticKnight -> Slow->Stop->Slow2
+Water Crystal TimeMage -> Chemist Job Crystal
+Water Crystal Summoner -> Bizen
+Brave Blade Brave Blade -> Mythril Glove
+Chicken Knife Chicken Knife -> Venom->Drain->Break Sword
+Tycoon Castle Cabin Cabin -> Dimen Ability Progressive
+Tycoon Castle Cabin Cabin -> ????->Fusion->Exploder->DrkShock
+Walse Tower Chest GoGo -> Staff of Light
+Pyramid Top Pyramid Tablet -> Sleep->Bio->Flare Sword
+Toad Event Toad -> Venom Axe
+Aegis Shield Chest Aegis Shield -> Fire Black Magic Progressive
+Lone Wolf Barrel Cabin -> Chicken Knife
+Wind Shrine Chest Broadsword -> Mythril Knife
+Beginner's House Chest Ether -> Bronze Shield
+Beginner's House Chest 100 -> Soft
+Beginner's House Chest Potion -> Bronze Helm
+Beginner's House Chest Phoenix Down -> Rod
+Beginner's House Chest Tent -> Whip
+Beginner's House Chest Leather Shoes -> Thunder Scroll
+Pirate's Cave Chest Leather Cap -> Thunder Scroll
+Pirate's Cave Chest Tent -> Smoke
+Pirate's Cave Chest Ether -> Eyedrop
+Pirate's Cave Chest 300 -> Plumed Hat
+Wind Shrine Chest Tent -> LuckMallet
+Wind Shrine Chest Leather Cap -> Broadsword
+Wind Shrine Chest Staff -> Antidote
+Tule Barrel 150 -> Potion
+Tule Box Leather Shoes -> Chain Whip
+Tule Barrel Potion -> Tent (monster in a box)
+Tule Box Tent -> Flame Scroll
+Tule Bush Phoenix Down -> Broadsword
+Ship Graveyard Chest Flail -> Cabin
+Ship Graveyard Chest Phoenix Down -> Bronze Armor
+Ship Graveyard Chest Tent -> Revivify
+Ship Graveyard Box 990 -> Tricorn Hat
+Ship Graveyard Chest Potion -> Bandana
+Ship Graveyard Chest Antidote -> Mythril Knife
+Ship Graveyard Chest Antidote -> Bandana
+Ship Graveyard Chest Phoenix Down -> Broadsword
+Carwen Barrel Antidote -> Antidote
+Carwen Box Ice Rod -> Ice Sword Magic Progressive
+Carwen Pot 1000 -> Antdt->Image->Heal
+North Mountain Chest Soft -> Venom Rod
+North Mountain Chest Phoenix Down -> Samurai Job Crystal
+Walse Town Pot Glasses -> Steal
+Tycoon Castle Pot Hi-Potion -> Vampire->MindBlst->WhiteWind
+Tycoon Castle Pot Ether -> Black Ability Progressive
+Tycoon Castle Barrel Elixir -> Elixir
+Tycoon Castle Barrel Phoenix Down -> Trident
+Tycoon Castle Barrel Cabin -> Cabin
+Tycoon Castle Pot Ether -> RedMage Job Crystal
+Tycoon Castle Pot Elixir -> Throw
+Tycoon Castle Pot Phoenix Down -> Bolt Black Magic Progressive
+Tycoon Castle Pot Maiden's Kiss -> HP +X%
+Tycoon Castle Chest Shuriken -> L4Qrter->L3Flare->L2Old->L5Doom
+Tycoon Castle Chest Giyaman -> Glasses
+Tycoon Castle Chest Katana -> White Ability Progressive
+Walse Castle Chest Elf Cape -> AntiMagic Bow
+Walse Castle Pot 1000 -> OmegaMedl
+Walse Castle Pot Drag -> Mythril Armor
+Walse Castle Pot 1000 -> Revive
+Walse Castle Box 490 -> Crystal Armor
+Walse Castle Barrel Tent -> Slash
+Walse Castle Barrel Phoenix Down -> Red Lv.1
+Walse Tower Chest Silk robe -> MgcSword Ability Progressive
+Walse Tower Chest Maiden's Kiss -> Magus
+Walse Tower Chest Silver Armlet -> Diamond Armlet
+Walse Tower Chest Ether -> Escape
+Tycoon Meteor Chest Phoenix Down -> Bronze Shield
+Karnak Castle Chest Gungnir -> Leather Cap (monster in a box)
+Karnak Castle Chest Thunder Scroll -> Crystal Helm
+Karnak Castle Chest 2000 -> Enhancer (monster in a box)
+Karnak Castle Chest Elixir -> Mythril Spear
+Karnak Castle Chest Elixir -> Diamond Armor (monster in a box)
+Karnak Castle Chest Elixir -> Excailbur (monster in a box)
+Karnak Castle Chest 2000 -> DarkSuit (monster in a box)
+Karnak Castle Chest Elixir -> Diamond Shield (monster in a box)
+Karnak Castle Chest Elixir -> Cursed Ring (monster in a box)
+Karnak Castle Chest Ribbon -> Flametongue
+Karnak Castle Chest Shuriken -> Coronet (monster in a box)
+Karnak Castle Chest 2000 -> Partisan (monster in a box)
+Karnak Castle Chest Elixir -> Chain Whip (monster in a box)
+Karnak Castle Chest Elf Cape -> Partisan (monster in a box)
+Karnak Castle Chest Guardian -> Fire Bow (monster in a box)
+Karnak Town Barrel Fire Rod -> Mage Masher
+Steamship Chest Cabin -> Training Suit
+Steamship Chest Phoenix Down -> Avis Killer
+Steamship Chest Elixir -> Guard Ring
+Steamship Chest GrnBeret -> Shiva->Ramuh->Ifrit->Bahmut
+Steamship Chest Thief's Glove -> Rainbow Dress
+Steamship Chest Elixir -> Blue
+Ancient Library Chest Ether -> Monk Job Crystal
+Ancient Library Chest Phoenix Down -> Genji Shield
+Ancient Library Chest Stealth Suit -> DragonFang
+Jacole Cave Chest Shuriken -> Mute->Size->Bersk
+Jacole Cave Chest Tent -> Mythril Shield
+Ruined City Chest Shuriken -> Sylph->Crbnkl->Phenix->Syldra
+Ruined City Chest Shuriken -> IceBrand
+Ruined City Chest Size -> Mimic
+Flying Lonka Ruins Chest Golden Armor -> FrogSong->TinySong->MoonFlut
+Flying Lonka Ruins Chest Elixir -> Condemn->Roulette->AquaRake
+Flying Lonka Ruins Chest Phoenix Down -> Condemn->Roulette->AquaRake
+Flying Lonka Ruins Chest Golden Shield -> Bolt Black Magic Progressive
+Steamship Chest Mythril Glove -> Rod
+Steamship Chest Elixir -> Ice Shield
+Steamship Chest Full Moon -> White Ability Progressive
+Flying Lonka Ruins Chest Hi-Potion -> Life->Life2
+Flying Lonka Ruins Chest 5000 -> Haste->Exit->Hast2->Quick
+Flying Lonka Ruins Chest Shuriken -> Dimen Ability Progressive
+Flying Lonka Ruins Chest Ancient Sword -> Assassin
+Flying Lonka Ruins Chest Full Moon -> Shiva->Ramuh->Ifrit->Bahmut
+Flying Lonka Ruins Chest Power Wrist -> Fire Bow
+Flying Lonka Ruins Chest Ether -> Tame
+Flying Lonka Ruins Chest Cabin -> Leather Cap
+Exdeath's Castle Chest Ether -> Epee Sword
+Exdeath's Castle Chest Diamond Shield -> BlueMage Job Crystal
+Exdeath's Castle Chest Ice Shield -> RisingSun
+Exdeath's Castle Chest Ether -> DarkMatter
+Exdeath's Castle Chest Elixir -> Staff
+Exdeath's Castle Chest Gale Bow -> Power->Vitality Song
+Exdeath's Castle Chest IceBrand -> Regen->Float->Reset->Xzone
+Exdeath's Castle Chest Kotetsu -> Gold Hairpin
+Exdeath's Castle Chest 9900 -> Sleep->Psych->Doom
+Exdeath's Castle Chest Elixir -> Cursed Shield
+Exdeath's Castle Chest 8000 -> Dragoon Lance
+Exdeath's Castle Chest DblLance -> Phoenix Down
+Exdeath's Castle Chest Partisan -> Giant's Axe
+Exdeath's Castle Chest Pinwheel -> Black Ability Progressive
+Moogle Cave Chest 4400 -> Revivify
+Moogle Cave Chest Phoenix Down -> Staff
+Moogle Village Chest Cabin -> Leather Armor
+Moogle Village Chest Dancing Dagger -> Tent
+Moogle Village Chest 1 -> Eyedrop
+Moogle Village Chest 10000 -> Javelin
+Moogle Village Chest Phoenix Down -> Water Scroll
+Moogle Village Chest Ether -> Maiden's Kiss
+Moogle Village Chest Elf Cape -> Mythril Knife
+Bal Castle Chest Angel Gwn -> Void->Demi->Qrter->Old
+Bal Castle Chest Hero Drink -> Magus
+Bal Castle Chest Exit -> Ribbon
+Hiryuu Valley Skull Bone Mail -> Javelin
+Hiryuu Valley Chest 5000 -> Red Lv.2
+Hiryuu Valley Chest Cabin -> Wonder Wand
+Hiryuu Valley Chest 7000 -> Tiger Mask
+Hiryuu Valley Chest Coronet -> Bolt Black Magic Progressive
+Hiryuu Valley Chest Air Blade -> GbnPnch->Emision->Missle->Blwfsh
+Hiryuu Valley Chest Phoenix Down -> Ice Sword Magic Progressive
+Surgate Castle Chest 5000 -> ????->Fusion->Exploder->DrkShock
+Surgate Castle Chest Float -> Sing
+Barrier Tower Chest Drain Sword -> Flail
+Barrier Tower Chest 9000 -> Power Drink (monster in a box)
+Barrier Tower Chest 18000 -> Full Moon (monster in a box)
+Barrier Tower Chest Gold Hairpin -> Mythril Shield
+Mua Town Barrel Guardian -> Guardian
+Mua Forest Chest 2500 -> Armor->Shell->Wall->Dispel
+Mua Forest Chest Ether -> Pray
+Mua Forest Chest 4900 -> Tinkerbell
+Mua Forest Chest Phoenix Down -> Mage Masher
+Mua Forest Chest 9500 -> Scan->Charm->Holy
+Mua Forest Chest Soot -> Antdt->Image->Heal
+Mua Forest Chest Flametongue -> Bard Job Crystal
+Mua Forest Chest Cabin -> CopperPlt
+Mua Forest Chest Giant Drink -> Animals->Aim->X-Fight
+Mua Forest Chest Elixir -> Slow->Stop->Slow2
+Mua Forest Chest Morning Star -> Morning Star
+Solitary Island Chest Ether -> Cure White Magic Progressive
+Solitary Island Chest DragonFang -> Elixir
+Pyramid Chest Elixir -> Iron Helm
+Pyramid Chest Elixir -> Lumina Robe (monster in a box)
+Pyramid Chest Black Robe -> Black Robe
+Pyramid Chest Thornlet -> Black Robe (monster in a box)
+Pyramid Chest DarkMatter -> Guard Ring
+Pyramid Chest Crystal Armor -> White Robe
+Pyramid Chest Cursed Ring -> Morning Star
+Pyramid Chest Ice Shield -> Plumed Hat
+Pyramid Chest Flame Shield -> Protect Drink
+Pyramid Chest DarkMatter -> Magic Lamp (monster in a box)
+Pyramid Chest White Robe -> DarkMatter (monster in a box)
+Pyramid Chest DarkSuit -> Angel Ring (monster in a box)
+Pyramid Chest DarkMatter -> Leather Cap
+Pyramid Chest DarkMatter -> Avis Killer
+Pyramid Chest DarkMatter -> Thunder Scroll (monster in a box)
+Pyramid Chest 9000 -> Thor Hammer
+Pyramid Chest 8000 -> Flame Whip (monster in a box)
+Pyramid Chest Earth Hammer -> Dagger (monster in a box)
+Pyramid Chest 10000 -> Aero Blue Magic Progressive
+Pyramid Chest Cabin -> Antidote (monster in a box)
+Pyramid Chest Elixir -> Venom Axe
+Pyramid Chest 12000 -> Dragon's Whisker (monster in a box)
+Pyramid Chest DarkMatter -> Elf Cape (monster in a box)
+Pyramid Chest Elixir -> RegalCut (monster in a box)
+Pyramid Chest DarkMatter -> Tempest (monster in a box)
+Pyramid Chest Guard Ring -> Red1->Red2->Red3->X-Magic
+Pyramid Chest Ribbon -> Flame Whip
+Pyramid Chest Gold Hairpin -> Flametongue (monster in a box)
+Solitary Island Chest 12000 -> Bard's Surplice
+Solitary Island Chest Hi-Potion -> Lumina Robe
+Solitary Island Chest Protect Drink -> Crystal Shield (monster in a box)
+Solitary Island Chest BeastKiller -> Armor->Shell->Wall->Dispel
+Solitary Island Chest RisingSun -> HiPotion
+Solitary Island Chest Ether -> Trident
+Solitary Island Chest Guard Ring -> Knife
+Solitary Island Chest Crystal Helm -> MgcSword Ability Progressive
+Solitary Island Chest 9000 -> Crystal Armor (monster in a box)
+Solitary Island Chest Elixir -> Equip Bows
+Solitary Island Chest DarkMatter -> Fire Sword Magic Progressive
+Solitary Island Chest Circlet -> Dream Harp
+Fork Tower L. Chest Ether -> L4Qrter->L3Flare->L2Old->L5Doom
+Fork Tower L. Chest Wonder Wand -> Equip Axes
+Fork Tower R. Chest Hi-Potion -> Gaia Gear
+Fork Tower R. Chest Defender Sword -> Mythril Glove
+Great Trench Chest Water Scroll -> Air Lance
+Great Trench Chest Flame Ring -> Flash->Time Slip->DethClaw
+Great Trench Chest DragonFang -> Crystal Armor
+Great Trench Chest Ether -> Control
+Great Trench Chest Phoenix Down -> Mute->Size->Bersk
+Great Trench Chest Kaiser Knuckles -> Kaiser Knuckles
+Istory Falls Chest Ether -> Gauntlets
+Istory Falls Chest TurtleShell -> Armor->Shell->Wall->Dispel
+Istory Falls Chest Air Lance -> Rune Axe
+Istory Falls Chest Giant Drink -> Hunter Job Crystal
+Istory Falls Chest RuneEdge -> Dancing Dagger
+Istory Falls Chest Guard Ring -> Giant's Axe
+Istory Falls Chest Wall Ring -> Chain Whip
+Istory Falls Chest Phoenix Down -> Antdt->Image->Heal
+Istory Falls Chest Enhancer -> DarkHood
+Istory Falls Chest 12000 -> Full Moon
+Istory Falls Chest Artemis Bow -> Epee Sword
+Istory Falls Chest Pinwheel -> Dimen Ability Progressive
+Istory Falls Chest Aegis Shield -> Sylph->Crbnkl->Phenix->Syldra
+Istory Falls Chest Giant's Axe -> Red Lv.3
+Phoenix Tower Pot 5000 -> Mythril Knife (monster in a box)
+Phoenix Tower Pot Phoenix Down -> Flame Scroll
+Phoenix Tower Pot 10000 -> Bronze Shield
+Phoenix Tower Pot Phoenix Down -> Soft (monster in a box)
+Phoenix Tower Pot Phoenix Down -> Leather Cap (monster in a box)
+Phoenix Tower Pot 15000 -> Plumed Hat
+Phoenix Tower Pot 20000 -> Staff (monster in a box)
+Phoenix Tower Pot Phoenix Down -> Cabin
+Phoenix Tower Pot Avis Killer -> Maiden's Kiss (monster in a box)
+Phoenix Tower Pot 25000 -> Cotton Robe
+Mirage Village Barrel Thief Knife -> Mirage Vest
+Rift (Ruins) Chest Ether -> Antidote
+Rift (Ruins) Chest Cabin -> Fire Sword Magic Progressive
+Rift (Ruins) Chest Elixir -> Bolt Sword Magic Progressive
+Rift (Ruins) Chest DarkMatter -> Bolt Sword Magic Progressive
+Rift (Ruins) Chest Elixir -> Life->Life2
+Rift (Ruins) Chest Drain Sword -> Magus
+Rift (Forest) Chest DragonFang -> Masamune
+Rift (Forest) Chest Ribbon -> Soot
+Rift (Forest) Chest Enhancer -> Void->Demi->Qrter->Old
+Rift (Forest) Chest Lillith Rod -> Giant Drink
+Rift (Cave) Chest Angel Ring -> Lillith Rod
+Rift (Cave) Chest Coral Ring -> BlackMage Job Crystal
+Rift (Castle) Chest Thor Hammer -> ????->Fusion->Exploder->DrkShock
+Rift (Castle) Chest Running Shoes -> Sylph->Crbnkl->Phenix->Syldra
+Rift (Castle) Chest Red Shoes -> Observe
+Rift (Castle) Chest Rainbow Dress -> Combine
+Rift (Castle) Chest ManEater -> DblLance
+The Void Chest Pinwheel -> Mythril Knife
+The Void Chest Pinwheel -> Venom->Drain->Break
+The Void Chest Elixir -> Animals->Aim->X-Fight
+The Void Chest Ragnarok -> Shuriken (monster in a box)
+The Void Chest Pinwheel -> MgcSword Ability Progressive
+Karlabos New -> Murasume
+Siren New -> Tinkerbell
+Sergeant & DeathClaw New -> Assassin
+Sandworm New -> Genji Helm
+Sol Cannon New -> Crystal Helm
+ArchaeAvis New -> Yoichi Bow
+Puroboros New -> DiamndPlt
+Gilgamesh 1 New -> Masamune
+Gilgamesh 2 New -> Gold Hairpin
+Abductor New -> Enhancer
+Atmos New -> Enhancer
+Guardians New -> Excailbur
+Carbunkle New -> Wizard Rod
+Antlion New -> Enhancer
+Triton, Neregeid & Phobos New -> Murasume
+Minotauros New -> Elf Cape
+GoGo New -> Flame Ring
+-----****************-----
+-----SHOPS-----
+Shop: Tule Weapon
+Shop Type: 00
+Shop Item 1: Broadsword -> Bio
+Shop Item 2: Rod -> Syldra
+Shop Item 3: Staff -> Flare
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Tule Armor
+Shop Type: 01
+Shop Item 1: Leather Shield -> Protect Drink
+Shop Item 2: Leather Cap -> Coral Ring
+Shop Item 3: Leather Armor -> Giant Drink
+Shop Item 4: None -> Thornlet
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Tule Inn
+Shop Type: 01
+Shop Item 1: Potion -> Guard Ring
+Shop Item 2: Tent -> Air Blade
+Shop Item 3: None -> Venom Axe
+Shop Item 4: None -> Sage's Staff
+Shop Item 5: None -> Elixir
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Tule Magic
+Shop Type: 07
+Shop Item 1: Fire -> Brawl
+Shop Item 2: Ice -> White Lv.6
+Shop Item 3: Bolt -> Equip Armors
+Shop Item 4: Cure -> SwdSlap
+Shop Item 5: Scan -> None
+Shop Item 6: Antdt -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Carwen Weapon
+Shop Type: 01
+Shop Item 1: Dagger -> Tricorn Hat
+Shop Item 2: RegalCut -> Sage's Staff
+Shop Item 3: Rod -> Ice Shield
+Shop Item 4: Staff -> Earth Hammer
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Carwen Armor
+Shop Type: 01
+Shop Item 1: Bronze Shield -> Venom Rod
+Shop Item 2: Bronze Helm -> Slumber Sword
+Shop Item 3: Bronze Armor -> Angel Ring
+Shop Item 4: CopperPlt -> Circlet
+Shop Item 5: Cotton Robe -> Hero Drink
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Carwen Inn
+Shop Type: 00
+Shop Item 1: Potion -> Shoat
+Shop Item 2: Antidote -> Speed
+Shop Item 3: Eyedrop -> Aero 2
+Shop Item 4: Maiden's Kiss -> Aero 3
+Shop Item 5: LuckMallet -> Flash
+Shop Item 6: Soft -> None
+Shop Item 7: Phoenix Down -> None
+Shop Item 8: Tent -> None
+
+Shop: Carwen Magic
+Shop Type: 07
+Shop Item 1: Fire -> Black Lv.3
+Shop Item 2: Ice -> Summoner
+Shop Item 3: Bolt -> Black Lv.2
+Shop Item 4: Sleep -> Medicine
+Shop Item 5: Cure -> None
+Shop Item 6: Antdt -> None
+Shop Item 7: Mute -> None
+Shop Item 8: Armor -> None
+
+Shop: Worus Weapon
+Shop Type: 00
+Shop Item 1: Battle Axe -> Sleep
+Shop Item 2: RegalCut -> Bio
+Shop Item 3: Dagger -> Psych
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Worus Armor
+Shop Type: 07
+Shop Item 1: Iron Shield -> Equip Swords
+Shop Item 2: Iron Helm -> Black Lv.1
+Shop Item 3: Iron Armor -> X-Magic
+Shop Item 4: Training Suit -> None
+Shop Item 5: Cotton Robe -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Worus Magic
+Shop Type: 01
+Shop Item 1: Slow -> Mythril Sword
+Shop Item 2: Regen -> Bizen
+Shop Item 3: Void -> Leather Cap
+Shop Item 4: Haste -> Crystal Armor
+Shop Item 5: Chocob -> Potion
+Shop Item 6: Sylph -> Silk robe
+Shop Item 7: Remora -> RisingSun
+Shop Item 8: Fire -> None
+
+Shop: Karnak Weapon 1
+Shop Type: 01
+Shop Item 1: Mythril Knife -> Coronet
+Shop Item 2: Mythril Sword -> Stealth Suit
+Shop Item 3: Mythril Hammer -> Mythril Armor
+Shop Item 4: Fire Rod -> Avis Killer
+Shop Item 5: Ice Rod -> Orialcon
+Shop Item 6: Thunder Rod -> Defender Sword
+Shop Item 7: Flail -> TurtleShell
+Shop Item 8: None -> HiPotion
+
+Shop: Karnak Weapon 2
+Shop Type: 07
+Shop Item 1: Mythril Spear -> Aim
+Shop Item 2: Kunai -> Agility
+Shop Item 3: Whip -> Flirt
+Shop Item 4: Giyaman -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Karnak Armor
+Shop Type: 07
+Shop Item 1: Mythril Shield -> BuildUp
+Shop Item 2: Mythril Helm -> Analyze
+Shop Item 3: Plumed Hat -> Jump
+Shop Item 4: Mythril Armor -> Caution
+Shop Item 5: Silver Plate -> None
+Shop Item 6: Silk robe -> None
+Shop Item 7: Mythril Glove -> None
+Shop Item 8: Silver Armlet -> None
+
+Shop: Common World 1 Inn
+Shop Type: 01
+Shop Item 1: Potion -> Diamond Armlet
+Shop Item 2: Antidote -> DarkSuit
+Shop Item 3: Eyedrop -> Lamia's Tiara
+Shop Item 4: Maiden's Kiss -> Antidote
+Shop Item 5: LuckMallet -> Thornlet
+Shop Item 6: Soft -> Maiden's Kiss
+Shop Item 7: Phoenix Down -> DarkHood
+Shop Item 8: Tent -> Golden Armor
+
+Shop: Karnak Magic 1
+Shop Type: 00
+Shop Item 1: Fire2 -> Drain
+Shop Item 2: Ice2 -> Charm
+Shop Item 3: Bolt2 -> Remora
+Shop Item 4: Venom -> Chocob
+Shop Item 5: Sleep -> Break
+Shop Item 6: Fire -> None
+Shop Item 7: Ice -> None
+Shop Item 8: Bolt -> None
+
+Shop: Karnak Magic 2
+Shop Type: 07
+Shop Item 1: Cure2 -> White Lv.2
+Shop Item 2: Life -> Dance
+Shop Item 3: Charm -> MgcSwrd Lv.4
+Shop Item 4: Mute -> White Lv.5
+Shop Item 5: Armor -> None
+Shop Item 6: Cure -> None
+Shop Item 7: Scan -> None
+Shop Item 8: Antdt -> None
+
+Shop: Karnak Magic 3
+Shop Type: 01
+Shop Item 1: Demi -> Earth Bell
+Shop Item 2: Stop -> Partisan
+Shop Item 3: Haste -> Bard's Surplice
+Shop Item 4: Void -> Water Scroll
+Shop Item 5: Slow -> Gaia Gear
+Shop Item 6: Regen -> Cursed Ring
+Shop Item 7: Fire -> HiPotion
+Shop Item 8: Fire -> Soft
+
+Shop: Crescent Weapon
+Shop Type: 07
+Shop Item 1: Fire Bow -> Capture
+Shop Item 2: Ice Bow -> Thief
+Shop Item 3: Thunder Bow -> Dbl Grip
+Shop Item 4: Silver Harp -> Mantra
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Crescent Armor
+Shop Type: 01
+Shop Item 1: Plumed Hat -> ManEater
+Shop Item 2: Bard's Surplice -> RegalCut
+Shop Item 3: None -> Antidote
+Shop Item 4: None -> Golden Armor
+Shop Item 5: None -> Revivify
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Istory Relic
+Shop Type: 01
+Shop Item 1: Flame Ring -> Air Blade
+Shop Item 2: Coral Ring -> Thornlet
+Shop Item 3: Angel Ring -> Wind Spear
+Shop Item 4: None -> Crystal Helm
+Shop Item 5: None -> Elf Cape
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Jacole Weapon
+Shop Type: 00
+Shop Item 1: Ogre Killer -> Cure
+Shop Item 2: Coral Sword -> Fire
+Shop Item 3: Mage Masher -> DrkShock
+Shop Item 4: Trident -> Ice3
+Shop Item 5: Katana -> TinySong
+Shop Item 6: Silver Bow -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Jacole Armor
+Shop Type: 00
+Shop Item 1: GrnBeret -> Hero
+Shop Item 2: Stealth Suit -> Fire
+Shop Item 3: Bard's Surplice -> Shiva
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Common World 2 Inn 1
+Shop Type: 00
+Shop Item 1: Ether -> MgthyGrd
+Shop Item 2: Revivify -> Demi
+Shop Item 3: Cabin -> FrogSong
+Shop Item 4: Giant Drink -> Love
+Shop Item 5: Power Drink -> Emission
+Shop Item 6: Speed Drink -> None
+Shop Item 7: Protect Drink -> None
+Shop Item 8: Hero Drink -> None
+
+Shop: Lix Guild
+Shop Type: 01
+Shop Item 1: Kunai -> Diamond Helm
+Shop Item 2: Shuriken -> Venom Rod
+Shop Item 3: Flame Scroll -> Flame Shield
+Shop Item 4: Water Scroll -> Black Robe
+Shop Item 5: Thunder Scroll -> Cabin
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Lix Armor
+Shop Type: 07
+Shop Item 1: GrnBeret -> Equip Spears
+Shop Item 2: Stealth Suit -> Counter
+Shop Item 3: None -> None
+Shop Item 4: None -> None
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Lix Magic
+Shop Type: 01
+Shop Item 1: Heal -> Gauntlets
+Shop Item 2: Fire -> Training Suit
+Shop Item 3: Fire -> Crystal Armor
+Shop Item 4: Fire -> Mythril Hammer
+Shop Item 5: Fire -> None
+Shop Item 6: Fire -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Rugor Weapon
+Shop Type: 00
+Shop Item 1: Orialcon -> Hast2
+Shop Item 2: War Hammer -> Scan
+Shop Item 3: Katana -> GuardOff
+Shop Item 4: Slumber Sword -> Float
+Shop Item 5: Wind Spear -> Vampire
+Shop Item 6: Darkness Bow -> None
+Shop Item 7: Dream Harp -> None
+Shop Item 8: Chain Whip -> None
+
+Shop: Rugor Armor
+Shop Type: 07
+Shop Item 1: Golden Shield -> Drink
+Shop Item 2: Golden Helm -> Equip Harps
+Shop Item 3: GrnBeret -> White Lv.3
+Shop Item 4: Tricorn Hat -> Conjure
+Shop Item 5: Golden Armor -> None
+Shop Item 6: Stealth Suit -> None
+Shop Item 7: Gaia Gear -> None
+Shop Item 8: None -> None
+
+Shop: Common World 2 Inn 2
+Shop Type: 00
+Shop Item 1: HiPotion -> Golem
+Shop Item 2: Potion -> L4 Qrter
+Shop Item 3: Phoenix Down -> Odin
+Shop Item 4: Soft -> Holy
+Shop Item 5: Maiden's Kiss -> Hammer
+Shop Item 6: LuckMallet -> None
+Shop Item 7: Eyedrop -> None
+Shop Item 8: Antidote -> None
+
+Shop: Bal/Kelb Weapon
+Shop Type: 00
+Shop Item 1: Orialcon -> Comet
+Shop Item 2: War Hammer -> MindBlst
+Shop Item 3: Katana -> Ice3
+Shop Item 4: Slumber Sword -> Titan
+Shop Item 5: Wind Spear -> Ramuh
+Shop Item 6: Darkness Bow -> None
+Shop Item 7: Dream Harp -> None
+Shop Item 8: Chain Whip -> None
+
+Shop: Bal/Kelb Armor
+Shop Type: 07
+Shop Item 1: Golden Shield -> Hide
+Shop Item 2: Golden Helm -> Kick
+Shop Item 3: GrnBeret -> Freelancer
+Shop Item 4: Tricorn Hat -> Dimen Lv.1
+Shop Item 5: Golden Armor -> None
+Shop Item 6: Stealth Suit -> None
+Shop Item 7: Gaia Gear -> None
+Shop Item 8: Gauntlets -> None
+
+Shop: Kelb Weapon
+Shop Type: 01
+Shop Item 1: Kodachi -> Soft
+Shop Item 2: Killer Bow -> Thief's Glove
+Shop Item 3: Venom Rod -> Epee Sword
+Shop Item 4: Shuriken -> Battle Axe
+Shop Item 5: Flame Scroll -> Leather Armor
+Shop Item 6: Water Scroll -> Mythril Helm
+Shop Item 7: Thunder Scroll -> Bronze Armor
+Shop Item 8: None -> Tent
+
+Shop: Kelb Armor
+Shop Type: 01
+Shop Item 1: Bandana -> Battle Axe
+Shop Item 2: Strength -> Mythril Sword
+Shop Item 3: Power Wrist -> Apollo's Harp
+Shop Item 4: None -> Aegis Shield
+Shop Item 5: None -> Elixir
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Common World 2 Magic 1
+Shop Type: 07
+Shop Item 1: Image -> Knight
+Shop Item 2: Shell -> Preemptive
+Shop Item 3: Heal -> MP +30%
+Shop Item 4: Fire -> None
+Shop Item 5: Fire -> None
+Shop Item 6: Fire -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Common World 2 Magic 2
+Shop Type: 07
+Shop Item 1: Drain -> Evade
+Shop Item 2: Break -> GilToss
+Shop Item 3: Bio -> Ninja
+Shop Item 4: Fire -> None
+Shop Item 5: Fire -> None
+Shop Item 6: Fire -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Common World 2 Magic 3
+Shop Type: 00
+Shop Item 1: Comet -> Exit
+Shop Item 2: Slow2 -> L2 Old
+Shop Item 3: Reset -> Fire3
+Shop Item 4: Fire -> None
+Shop Item 5: Fire -> None
+Shop Item 6: Fire -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Surgate Weapon
+Shop Type: 07
+Shop Item 1: Epee Sword -> Dimen Lv.4
+Shop Item 2: Gungnir -> Summon Lv.5
+Shop Item 3: Bizen -> Terrain
+Shop Item 4: Venom Axe -> Dimen Lv.2
+Shop Item 5: None -> None
+Shop Item 6: None -> None
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Surgate Armor
+Shop Type: 00
+Shop Item 1: Golden Shield -> Ice
+Shop Item 2: Golden Helm -> Power
+Shop Item 3: Bandana -> Requiem
+Shop Item 4: Tricorn Hat -> Quick
+Shop Item 5: Golden Armor -> GblinPnch
+Shop Item 6: Strength -> None
+Shop Item 7: Gaia Gear -> None
+Shop Item 8: Gauntlets -> None
+
+Shop: Mua Weapon
+Shop Type: 01
+Shop Item 1: Air Lance -> Cursed Shield
+Shop Item 2: Elven Bow -> AntiMagic Bow
+Shop Item 3: None -> Dagger
+Shop Item 4: None -> Mirage Vest
+Shop Item 5: None -> Revivify
+Shop Item 6: None -> Ether
+Shop Item 7: None -> Ether
+Shop Item 8: None -> None
+
+Shop: Mua Armor
+Shop Type: 07
+Shop Item 1: Diamond Shield -> Mediator
+Shop Item 2: Diamond Helm -> 2-Handed
+Shop Item 3: Tiger Mask -> Equip Rods
+Shop Item 4: Magus -> Image
+Shop Item 5: Diamond Armor -> None
+Shop Item 6: DiamndPlt -> None
+Shop Item 7: Lumina Robe -> None
+Shop Item 8: Diamond Armlet -> None
+
+Shop: Mua Magic 1
+Shop Type: 01
+Shop Item 1: Cure3 -> Mythril Knife
+Shop Item 2: Wall -> BeastKiller
+Shop Item 3: Bersk -> Water Scroll
+Shop Item 4: Image -> Mythril Glove
+Shop Item 5: Shell -> Kunai
+Shop Item 6: Heal -> Soot
+Shop Item 7: Fire -> Tent
+Shop Item 8: Fire -> None
+
+Shop: Mua Magic 2
+Shop Type: 01
+Shop Item 1: Fire3 -> Morning Star
+Shop Item 2: Ice3 -> Kotetsu
+Shop Item 3: Bolt3 -> Silver Harp
+Shop Item 4: Drain -> Strength
+Shop Item 5: Break -> Holy Lance
+Shop Item 6: Bio -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Mua Magic 3
+Shop Type: 01
+Shop Item 1: Qrter -> CornaJar
+Shop Item 2: Hast2 -> Golden Armor
+Shop Item 3: Old -> Elf Cape
+Shop Item 4: Comet -> Ragnarok
+Shop Item 5: Slow2 -> Cabin
+Shop Item 6: Reset -> Ether
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Lix Inn
+Shop Type: 01
+Shop Item 1: Ether -> Tiger Mask
+Shop Item 2: Potion -> AntiMagic Bow
+Shop Item 3: Antidote -> Ribbon
+Shop Item 4: Eyedrop -> Power Staff
+Shop Item 5: LuckMallet -> Cursed Shield
+Shop Item 6: Maiden's Kiss -> Trident
+Shop Item 7: Soft -> Dagger
+Shop Item 8: Tent -> Silk robe
+
+Shop: Dwarf Magic
+Shop Type: 07
+Shop Item 1: Life2 -> WhiteMage
+Shop Item 2: Dispel -> TimeMage
+Shop Item 3: Doom -> Summon Lv.1
+Shop Item 4: Psych -> Equip Whips
+Shop Item 5: Quick -> None
+Shop Item 6: Xzone -> None
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Dwarf Weapon
+Shop Type: 01
+Shop Item 1: Earth Hammer -> Mythril Staff
+Shop Item 2: Morning Star -> Rune Axe
+Shop Item 3: AntiMagic Bow -> Crystal Armor
+Shop Item 4: Forged -> Ice Rod
+Shop Item 5: None -> Phoenix Down
+Shop Item 6: None -> Elixir
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Dwarf Armor
+Shop Type: 01
+Shop Item 1: Crystal Shield -> Ice Bow
+Shop Item 2: Crystal Helm -> Silk robe
+Shop Item 3: DarkHood -> Training Suit
+Shop Item 4: Circlet -> Thunder Bow
+Shop Item 5: Crystal Armor -> Earth Bell
+Shop Item 6: DarkSuit -> Killer Bow
+Shop Item 7: Black Robe -> Wind Spear
+Shop Item 8: White Robe -> Water Scroll
+
+Shop: Mirage Weapon
+Shop Type: 07
+Shop Item 1: Flametongue -> Catch
+Shop Item 2: IceBrand -> DmgFloor
+Shop Item 3: Earth Hammer -> Summon Lv.4
+Shop Item 4: Morning Star -> HP +10%
+Shop Item 5: AntiMagic Bow -> None
+Shop Item 6: Forged -> None
+Shop Item 7: Partisan -> None
+Shop Item 8: None -> None
+
+Shop: Mirage Guild
+Shop Type: 01
+Shop Item 1: Pinwheel -> BeastKiller
+Shop Item 2: Shuriken -> DarkSuit
+Shop Item 3: DblLance -> Maiden's Kiss
+Shop Item 4: Full Moon -> War Hammer
+Shop Item 5: Flame Scroll -> Coral Ring
+Shop Item 6: Water Scroll -> Phoenix Down
+Shop Item 7: Thunder Scroll -> None
+Shop Item 8: None -> None
+
+Shop: Mirage Armor
+Shop Type: 01
+Shop Item 1: Crystal Shield -> Excalibur
+Shop Item 2: Crystal Helm -> Running Shoes
+Shop Item 3: DarkHood -> Speed Drink
+Shop Item 4: Circlet -> ManEater
+Shop Item 5: Crystal Armor -> Leather Shield
+Shop Item 6: DarkSuit -> Spear
+Shop Item 7: Black Robe -> Rod
+Shop Item 8: White Robe -> Gale Bow
+
+Shop: Mirage Relic
+Shop Type: 01
+Shop Item 1: Running Shoes -> Cotton Robe
+Shop Item 2: Angel Ring -> Leather Armor
+Shop Item 3: Flame Ring -> Lamia's Tiara
+Shop Item 4: Coral Ring -> Gale Bow
+Shop Item 5: Lamia's Tiara -> Rune Axe
+Shop Item 6: Angel Gwn -> Revivify
+Shop Item 7: None -> None
+Shop Item 8: None -> None
+
+Shop: Mirage Magic 1
+Shop Type: 01
+Shop Item 1: Life2 -> Kaiser Knuckles
+Shop Item 2: Dispel -> Diamond Armor
+Shop Item 3: Doom -> Mythril Spear
+Shop Item 4: Psych -> DarkMatter
+Shop Item 5: Quick -> Cabin
+Shop Item 6: Xzone -> HiPotion
+Shop Item 7: Fire -> None
+Shop Item 8: Fire -> None
+
+Shop: Mirage Magic 2
+Shop Type: 01
+Shop Item 1: Size -> IceBrand
+Shop Item 2: Toad -> Fire Bow
+Shop Item 3: None -> Silk robe
+Shop Item 4: Float -> Mythril Sword
+Shop Item 5: Exit -> Bronze Shield
+Shop Item 6: Chocob -> Tent
+Shop Item 7: Sylph -> None
+Shop Item 8: Remora -> None
+
+Shop: Mirage Inn 1
+Shop Type: 01
+Shop Item 1: Potion -> Ribbon
+Shop Item 2: HiPotion -> Gold Hairpin
+Shop Item 3: Phoenix Down -> Kodachi
+Shop Item 4: Maiden's Kiss -> DoomCut
+Shop Item 5: Antidote -> Phoenix Down
+Shop Item 6: Eyedrop -> None
+Shop Item 7: Soft -> None
+Shop Item 8: LuckMallet -> None
+
+Shop: Mirage Inn 2
+Shop Type: 01
+Shop Item 1: Elixir -> Power Drink
+Shop Item 2: Ether -> Potion
+Shop Item 3: Revivify -> RisingSun
+Shop Item 4: Giant Drink -> Soft
+Shop Item 5: Power Drink -> Diamond Armor
+Shop Item 6: Speed Drink -> CopperPlt
+Shop Item 7: Protect Drink -> Orialcon
+Shop Item 8: Hero Drink -> Mythril Helm
+
+-----*****-----
+-----FORMATIONS-----
+Tier: 2 Rank: 4 Boss: Byblos
+Tier: 3 Rank: 7 Boss: WingRaptor, WingRaptor
+Tier: 4 Rank: 12 Boss: Karlabos
+Tier: 2 Rank: 4 Boss: Siren, Siren
+Tier: 3 Rank: 8 Boss: Forza, Magisa
+Tier: 2 Rank: 6 Boss: Galura
+Tier: 3 Rank: 9 Boss: LiquiFlame, LiquiFlame, LiquiFlame
+Tier: 4 Rank: 11 Boss: Sergeant, Karnak, Karnak, Karnak, Iron Claw
+Tier: 3 Rank: 7 Boss: Hole, Hole, Hole, Sandworm, Sandworm, Sandworm
+Tier: 3 Rank: 9 Boss: AdamanTiMi
+Tier: 1 Rank: 3 Boss: Sol Cannon, Launcher, Launcher
+Tier: 2 Rank: 5 Boss: ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis
+Tier: 4 Rank: 12 Boss: Chim.Brain
+Tier: 3 Rank: 9 Boss: Titan
+Tier: 2 Rank: 6 Boss: Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros
+Tier: 2 Rank: 6 Boss: Gilgamesh
+Tier: 2 Rank: 6 Boss: Gilgamesh
+Tier: 2 Rank: 5 Boss: Tyrasaurus
+Tier: 3 Rank: 9 Boss: Abductor
+Tier: 3 Rank: 9 Boss: HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr
+Tier: 4 Rank: 10 Boss: Gilgamesh, Enkidou
+Tier: 2 Rank: 5 Boss: Atmos
+Tier: 4 Rank: 10 Boss: Guardian, Guardian, Guardian, Guardian
+Tier: 3 Rank: 8 Boss: Carbunkle, Carbunkle
+Tier: 2 Rank: 5 Boss: Gilgamesh, Gilgamesh
+Tier: 1 Rank: 1 Boss: Antlion
+Tier: 2 Rank: 4 Boss: Halicarnaso
+Tier: 1 Rank: 2 Boss: Merugene, Merugene, Merugene, Merugene
+Tier: 1 Rank: 3 Boss: Odin
+Tier: 2 Rank: 5 Boss: Gargoyle, Gargoyle
+Tier: 2 Rank: 5 Boss: Triton, Neregeid, Phobos
+Tier: 3 Rank: 9 Boss: Omniscient
+Tier: 2 Rank: 5 Boss: Minotauros
+Tier: 2 Rank: 6 Boss: Leviathan
+Tier: 4 Rank: 11 Boss: Stalker, Stalker, Stalker, Stalker
+Tier: 2 Rank: 5 Boss: Gogo
+Tier: 3 Rank: 8 Boss: Bahamut
+Tier: 4 Rank: 11 Boss: Ifrit
+Tier: 2 Rank: 4 Boss: Shiva, Commander, Commander, Commander
+Tier: 3 Rank: 7 Boss: Calofisteri
+Tier: 2 Rank: 4 Boss: Apocalypse
+Tier: 2 Rank: 6 Boss: Catastroph
+Tier: 1 Rank: 2 Boss: Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh
+Tier: 2 Rank: 4 Boss: Twin Tania, Twin Tania
+Tier: 3 Rank: 7 Boss: Apanda
+Tier: 1 Rank: 1 Boss: Crayclaw
+-----**********-----
