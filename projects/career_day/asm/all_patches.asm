@@ -231,7 +231,8 @@ incsrc reward_events/tycoon_hiddenarea.asm
 incsrc reward_events/istory_toad.asm
 incsrc reward_events/aegis_shield.asm
 incsrc reward_events/carwen_lone_wolf_barrel.asm
-
+incsrc reward_events/bal_epee.asm
+incsrc reward_events/jacole_thunder_whip.asm
 
 ; open world
 incsrc open_world/canal_fix.asm
