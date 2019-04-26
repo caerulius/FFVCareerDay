@@ -352,8 +352,8 @@ idx,address,original_reward,area,description,reward_style,force_type,required_ke
 350,C0FBA4,New,Desert,Merugene,key,,
 351,C0FBA6,New,Bal Castle,Odin,key,,
 352,C0FBA8,New,Great Trench,"Triton, Neregeid & Phobos",key,,"[“Submarine Key”, “Trench Page”]"
-353,C0FBAA,New,Fork Tower,Omniscient,key,,"[“Elder Branch”, “Shrine Page”]"
-354,C0FBAC,New,Fork Tower,Minotauros,key,,"[“Elder Branch”, “Shrine Page”]"
+353,C0FBAA,New,Fork Tower,Omniscient,key,,[“Elder Branch”]
+354,C0FBAC,New,Fork Tower,Minotauros,key,,[“Elder Branch”]
 355,C0FBAE,New,Istory Falls,Leviathan,key,,"[“Submarine Key”, “Falls Page”]"
 356,C0FBB0,New,Solitary Island,Stalker,key,,[“Shrine Page”]
 357,C0FBB2,New,Walse,GoGo,key,,[“Submarine Key”]
