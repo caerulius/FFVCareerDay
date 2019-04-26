@@ -297,7 +297,7 @@ class Conductor():
                     while True:
                         item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
                                                                        monitor_counts=True,
-                                                                       of_type=Item)
+                                                                       of_type=Item, disable_zerozero=True)
                         if item_to_place not in contents:
                             break
 
@@ -330,7 +330,7 @@ class Conductor():
                     for i in range(0, value.num_items):
                         contents.append(self.CM.get_random_collectible(random, respect_weight=True,
                                                                        monitor_counts=True,
-                                                                       of_type=Item))
+                                                                       of_type=Item, disable_zerozero=True))
                 
             else:
                 if value.num_items > 4:
@@ -356,7 +356,7 @@ class Conductor():
                     for i in range(0, value.num_items):
                         contents.append(self.CM.get_random_collectible(random, respect_weight=True,
                                                                        monitor_counts=True,
-                                                                       of_type=Item))
+                                                                       of_type=Item, disable_zerozero=True))
 
             while(len(contents) < 8):
                 contents.append(None)
