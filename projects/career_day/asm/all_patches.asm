@@ -234,6 +234,7 @@ incsrc reward_events/carwen_lone_wolf_barrel.asm
 incsrc reward_events/bal_epee.asm
 incsrc reward_events/jacole_thunder_whip.asm
 incsrc reward_events/lamia_harp_bal.asm
+incsrc reward_events/magic_lamp.asm
 
 ; open world
 incsrc open_world/canal_fix.asm
