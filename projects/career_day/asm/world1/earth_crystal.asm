@@ -56,7 +56,7 @@ db $DE, $0F				; set up reward
 db $DF					; call text handler
 
 
-
+db $C8, $AF, $01 ; CUSTOM MESSAGE FOR WARPZONE
 
 db $C7, $08                     ;Play next 06 bytes simultaneously
 db $89, $04                     ;Sprite 08B do event: Move Left
@@ -85,14 +85,19 @@ db $A3, $B2                     ;Clear Event Flag 0B2
 db $A3, $B1                     ;Clear Event Flag 0B1
 db $A4, $E7                     ;Set Event Flag 1E7
 db $C2, $02                     ;Map 02
-db $E1, $00, $00, $40, $A2, $D8 ;Return from cutscene? 00 00 40 A2 D8
-db $CD, $7F, $05                ;Run event index 057F
-db $CD, $42, $07                ;Run event index 0742
+
+; ORIGINAL WARP, CHANGED TO GENERIC WARP AREA FOR SAFETY
+; db $E1, $00, $00, $40, $A2, $D8 ;Return from cutscene? 00 00 40 A2 D8
+db $E1, $FE, $01, $03, $13, $00 ;Return from cutscene? 00 00 9C 96 00
+
+
+; db $CD, $7F, $05                ;Run event index 057F
+; db $CD, $42, $07                ;Run event index 0742
 ; db $B7, $82                     ;Add/Remove character 82
 db $DB                          ;Restore Player status
 db $09                          ;Player Show
 db $C3, $10                     ;Fade in Speed 10
-db $7B                          ;*YOU DIDNT MEAN TO USE THIS*
+; db $7B                          ;*YOU DIDNT MEAN TO USE THIS*
 db $CB, $0E, $00                ;Clear Flag 2/3/4/5/0E 00
 db $CB, $01, $02                ;Clear Flag 2/3/4/5/01 02
 db $CB, $FD, $01                ;Clear Flag 2/3/4/5/FD 01

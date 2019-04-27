@@ -171,7 +171,7 @@ WRITEDIRECTORY = os.getcwd()
 os.chdir(app_path)
 
 root.geometry("500x250")
-root.title("Career Day v0.0.71.0")
+root.title("Career Day v0.0.71.1")
 root.iconbitmap("favicon.ico")
 
 os.chdir(WRITEDIRECTORY)

@@ -27,7 +27,29 @@ db $93, $24                     ;Sprite 193 do event: face down, right hand rais
 db $73                          ;Long pause
 db $93, $0A                     ;Sprite 193 do event: Hide
 db $BD, $24, $FF                ;Start Event Battle 24
-db $75
+db $B4, $24					;music
+db $72
+
+
+db $C5, $80
+db $B5, $02
+db $70
+db $C5, $50
+db $B5, $02
+db $70
+db $C5, $20
+db $B5, $02
+db $70
+db $C5, $60
+db $B5, $02
+db $70
+db $C5, $F0
+db $B5, $02
+db $71
+db $C8, $A9, $05                ; Text: Phase 1 against final Exdeath weakened!
+
+db $CD, $9C, $03
+
 db $C4, $02                     ;Fade in Speed 06
 db $75
 
@@ -68,7 +90,10 @@ db $CB, $48, $00                ;Clear Flag 2/3/4/5/48 00
 db $CB, $49, $00                ;Clear Flag 2/3/4/5/49 00
 db $CB, $30, $00                ;Clear Flag 2/3/4/5/30 00
 db $A5, $9A                     ;Clear Event Flag 19A
+db $A2, $CC						; CUSTOM FLAG for final exdeath death phase 1
 db $CA, $73, $02                ;Set Flag 2/3/4/5/73 02
+
+
 
 
 

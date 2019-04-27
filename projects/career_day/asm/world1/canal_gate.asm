@@ -92,3 +92,9 @@ db $FF                          ;End Event
 
 pad $C89770
 
+
+
+; NEW - Disable Torna Canal lock entirely
+; tie it to world map, always on, never not set
+org $F04D84
+db $FC, $FB

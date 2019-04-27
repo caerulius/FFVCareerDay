@@ -280,7 +280,7 @@ class CollectibleManager():
                                                                   x.max_count is None or
                                                                   x.max_count < self.placement_history[x])]
 
-    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False):   
+    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False, disable_zerozero=False):   
         if type(of_type) is str: # this is a literal string definition of a type, so let's cast it first
             if of_type in type_dict.keys():
                 of_type = type_dict[of_type]
@@ -312,6 +312,9 @@ class CollectibleManager():
                 working_list = [x for x in self.get_all_of_type(of_type) if x.max_count != 1 and x.valid]
             else:
                 working_list = [x for x in self.collectibles if x.max_count != 1 and x.valid]
+
+        if disable_zerozero:
+            working_list = [x for x in working_list if x.patch_id != '00'] #disable any id of 00, because this ends shops
 
         if respect_weight is False:
             choice = random_engine.choice(working_list)

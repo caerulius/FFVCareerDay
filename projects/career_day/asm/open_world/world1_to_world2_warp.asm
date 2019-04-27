@@ -8,6 +8,12 @@ hirom
 
 org $C8A6D3
 
+; change world flag to WORLD 2
+db $A3, $C8 ; off
+db $A2, $C9 ; on
+db $A3, $CA ; off
+
+
 ; CAREERDAY
 ; db $E3, $01, $00, $A0, $A2, $00 ;Inter-map cutscene? 01 00 D9 2B 00
 db $C4, $03

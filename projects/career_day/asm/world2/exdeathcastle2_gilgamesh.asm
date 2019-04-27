@@ -39,6 +39,9 @@ db $03                          ;Player Move Down
 db $80, $01                     ;Sprite 080 do event: Move Up
 db $80, $0A                     ;Sprite 080 do event: Hide
 db $BD, $23, $FF                ;Start Event Battle 23
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $78 ; custom reward
 db $DF
 db $76                          ;<Unknown>

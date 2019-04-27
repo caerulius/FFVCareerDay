@@ -2,13 +2,24 @@
 ; this is EVENT code that is set in the middle of the intro cutscene. 
 
 
-    
+; set world 1 custom flag
+db $A2, $C8
     
 ; all 3 world 1 chars
 
-db $B7, $02							;Add/Remove character 02
-db $B7, $09							;Add/Remove character 09
-db $B7, $03							;Add/Remove character 09
+db $B7, $09							;Add/Remove character 01 (Lenna)
+db $B7, $0A							;Add/Remove character 02 (Galuf)
+db $B7, $0B							;Add/Remove character 03 (Faris)
+
+; db $B7, $89
+; db $B7, $8A
+; db $B7, $8B
+; db $B7, $8C
+
+; db $B7, $81
+; db $B7, $82
+; db $B7, $83
+; db $B7, $84
 
 ; add WarpShard
 db $AA, $EE                     ;Add Item Potion
@@ -77,6 +88,9 @@ db $A4, $3D            ; set address 000A3B bit ON 20 (navigate to wind shrine c
 ; 000A18 set bits 10 and 20 (10 sets a cutscene triggered, both together unlock torna gate)
 ; db $A2, $1C            ; set address 000A17 bit ON 10
 ; db $A2, $1D            ; set address 000A17 bit ON 20
+
+; This is for PERMANENTLY OPENING Torna Canal
+db $A2, $1E            ; set address 000A17 bit ON 40 
 
 
 
@@ -194,6 +208,7 @@ db $CA, $0E, $00                ;Turn on bit 40 at address  0x7e0a55
 ; Set big bridge encounters complete, full walk access
 ; db $A2, $61            ; set address 000A20 bit ON 02 (bal castle gates)
 db $A2, $5D            ; set address 000A1F bit ON 20
+db $A2, $5D            ; set address 000A1F bit ON 20
 db $CB, $2E, $03            ; set address 000AB9 bit OFF 40
 db $CB, $2D, $03            ; set address 000AB9 bit OFF 20
 
@@ -301,6 +316,10 @@ db $CB, $D8, $00            ; set address 000A6F bit OFF 01
 ; GUIDO CAVE
 ; award branch, trigger discussion flag
 ; db $A2, $71                     ;Set Event Flag 071
+
+; MUA
+; Brave blade chicken knife room open
+db $CB, $13, $00                ;Clear Flag 2/3/4/5/13 00
 
 ; MUA FOREST
 ; Mua's event was changed to refer to this. Refer to open_world.asm for explanation
@@ -412,7 +431,7 @@ db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
 ; db $A2, $83                     ;Turn on bit 08 at address 0x7e0a24 (THIS IS TABLET 1 FOR KUZAR, NOT KEY ITEM, ACTUAL TABLET)
 
 ; SECOND TABLET → FORK TOWER
-db $A4, $5B            ; set address 000A3F bit ON 08
+; db $A4, $5B            ; set address 000A3F bit ON 08
 
 
 ; FINAL EXDEATH

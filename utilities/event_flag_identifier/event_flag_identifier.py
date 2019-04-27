@@ -2,7 +2,6 @@
 """
 Created on Fri Apr 19 10:02:50 2019
 
-@author: Patrick McMahon
 """
 
 import pandas as pd
@@ -13,7 +12,7 @@ import pandas as pd
 with open('events.txt') as file:
     events = file.readlines()
 events = events[0].replace(" ","")
-    
+events = events.upper() 
     
 list_of_event_codes = []
 
@@ -44,7 +43,7 @@ df.to_csv('events_output.csv',index=None)
 with open('conditional.txt') as file:
     conditionals = file.readlines()
 conditionals = conditionals[0].replace(" ","")
-
+conditionals = conditionals.upper()
    
 list_of_conditional_codes = []
 
@@ -66,7 +65,7 @@ df2.to_csv('conditional_output.csv',index=None)
 with open('npc.txt') as file:
     npc = file.readlines()
 npc = npc[0].replace(" ","")
-
+npc = npc.upper()
    
 list_of_npc_codes = []
 
@@ -76,10 +75,10 @@ for i in range(0,256):
         list_of_npc_codes.append(new_code)
         
 df3 = pd.DataFrame(columns=['address','code','matches'])
-for i in list_of_conditional_codes:
-    number = conditionals.count(i)
+for i in list_of_npc_codes:
+    number = npc.count(i)
     df3.loc[-1] = ['',i,number]
     df3.index = df3.index + 1
     df3 = df3.sort_index()
 df3 = df3.sort_values(by='code')
-df3.to_csv('conditional_output.csv',index=None)
+df3.to_csv('npc.csv',index=None)

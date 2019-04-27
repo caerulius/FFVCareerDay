@@ -77,5 +77,23 @@ db $FF                          ;End Event
 padbyte $00
 pad $C9BC3F
 
-org $C9BBE7
-db $00, $00, $00
+org $C9BBDB
+db $71                          ;Short pause
+db $82, $03                     ;Sprite 082 do event: Move Down
+db $82, $0A                     ;Sprite 082 do event: Hide
+db $71                          ;Short pause
+db $14                          ;Player pose: face down, left hand forward
+db $71                          ;Short pause
+db $39                          ;Player pose: face down, both arms raised
+db $71                          ;Short pause
+db $B4, $29                     ;Play Background Music Fanfare 1 (short)
+db $E4, $C9                     ;Unknown
+db $48                          ;Player pose: garbage
+db $0F                          ;<Unknown>
+db $A2, $93                     ;Turn on bit 08 at address 0x7e0a26
+db $A4, $54                     ;Turn on bit 10 at address 0x7e0a3e 
+db $CB, $7F, $02                ;Turn off bit 80 at address  0x7e0aa3
+; db $A4, $CA                     ;Turn on bit 04 at address 0x7e0a4d (key item)
+db $FF                          ;End Event
+
+pad $C9BBF7

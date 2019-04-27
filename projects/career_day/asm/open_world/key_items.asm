@@ -109,8 +109,8 @@ RTL
 KeyItemSubmarineKey:
 
 ; write submarine coordinates if in world 2
-LDA $000AF5
-CMP #$01
+LDA $000A2D
+CMP #$02
 BNE KeyItemSubmarineKeyFinish
 lda #$30
 sta $0AE9
@@ -126,8 +126,8 @@ RTL
 KeyItemHiryuuCall:
 
 ; write hiryuu coordinates if in world 2
-LDA $000AF5
-CMP #$01
+LDA $000A2D
+CMP #$02
 BNE KeyItemHiryuuCallFinish
 lda #$2C
 sta $0AE5
