@@ -63,6 +63,7 @@ incsrc world1/magisa.asm
 incsrc world1/hiryuu_north_mountain.asm            ; 07 Walse Castle
 incsrc world1/carwen_lady.asm  
 
+incsrc world1/walse_tower.asm
 incsrc world1/walse_king_post_tower.asm       
 incsrc world1/walse_meteor_falls.asm                   ; 08 Walse Tower
 incsrc world1/lone_wolf_text.asm
@@ -84,6 +85,7 @@ incsrc world1/fire_crystal.asm
 incsrc world1/after_karnak_escape.asm
 incsrc world1/karnak_escape_boss.asm ; (keep this order for boss after escape here)
 
+incsrc world1/ancient_library.asm
 incsrc world1/ifrit.asm
 incsrc world1/byblos.asm                                   
 incsrc world1/mid_after_byblos.asm					   ; 0D Karnak Pub
@@ -150,6 +152,7 @@ incsrc world2/muaforest_fire.asm
 incsrc world2/muaforest_boss.asm                         ; 23 Exdeath Castle
 incsrc world2/exdeathcastle2_gilgamesh.asm
 incsrc world2/exdeathcastle2_transform.asm
+incsrc world2/exdeathcastle2_keyitems.asm
 incsrc world2/exdeathcastle2_boss_w3.asm             ; 24 Tycoon Castle
 
 ; world 3
@@ -248,7 +251,7 @@ incsrc open_world/pyramid_disable.asm
 incsrc open_world/custom_lock_cutscenes.asm
 incsrc open_world/warp_area.asm
 incsrc open_world/debug_key_items.asm
-; incsrc open_world/exdeath_overwrite.asm
+incsrc open_world/exdeath_overwrite.asm
 incsrc core_code/credits.asm
 
 incsrc world2/mooglewaterway_encounters.asm

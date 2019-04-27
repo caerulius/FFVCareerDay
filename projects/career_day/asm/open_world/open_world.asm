@@ -137,13 +137,8 @@ db $BC
 ; db $FC, $BB
 
 
-; FINAL EXDEATH
-; ; Always trigger the cutscene for the final fight
-; org $F05D3D
-; db $FF, $85, $07
-; ; edit LEAVING event to move player down 1 tile
-; org $C9C4CD
-; db $23
+
+
 
 ;FINAL EXDEATH
 ;Always trigger the cutscene for the final fight
@@ -161,6 +156,10 @@ org $C9C4CD
 db $23
 org $C9FE8A
 db $31
+
+
+
+
 
 ; to be VERY Safe that Exdeath sprite doesnt show up, delete
 org $CE9A7D
@@ -270,3 +269,37 @@ org $F04F57
 db $FF, $00, $00
 
 
+; METEOR WALSE
+org $C984FC
+db $FF
+
+; Big Bridge
+; Clear out encounters 
+org $F0500E
+db $00, $00
+org $F05015
+db $00, $00
+org $F0501C
+db $00, $00
+org $F05023
+db $00, $00
+org $F0502A
+db $00, $00
+org $F05031
+db $00, $00
+org $F05038
+db $00, $00
+org $F0503D
+db $00, $00
+org $F05054
+db $00, $00
+org $F0505B
+db $00, $00
+org $F05007
+db $00, $00
+org $F0500E
+db $00, $00
+org $F05015
+db $00, $00
+org $F0501C
+db $00, $00

@@ -89,6 +89,9 @@ db $A4, $3D            ; set address 000A3B bit ON 20 (navigate to wind shrine c
 ; db $A2, $1C            ; set address 000A17 bit ON 10
 ; db $A2, $1D            ; set address 000A17 bit ON 20
 
+; This is for PERMANENTLY OPENING Torna Canal
+db $A2, $1E            ; set address 000A17 bit ON 40 
+
 
 
 ; WALSE TOWER
@@ -205,6 +208,7 @@ db $CA, $0E, $00                ;Turn on bit 40 at address  0x7e0a55
 ; Set big bridge encounters complete, full walk access
 ; db $A2, $61            ; set address 000A20 bit ON 02 (bal castle gates)
 db $A2, $5D            ; set address 000A1F bit ON 20
+db $A2, $5D            ; set address 000A1F bit ON 20
 db $CB, $2E, $03            ; set address 000AB9 bit OFF 40
 db $CB, $2D, $03            ; set address 000AB9 bit OFF 20
 
@@ -312,6 +316,10 @@ db $CB, $D8, $00            ; set address 000A6F bit OFF 01
 ; GUIDO CAVE
 ; award branch, trigger discussion flag
 ; db $A2, $71                     ;Set Event Flag 071
+
+; MUA
+; Brave blade chicken knife room open
+db $CB, $13, $00                ;Clear Flag 2/3/4/5/13 00
 
 ; MUA FOREST
 ; Mua's event was changed to refer to this. Refer to open_world.asm for explanation

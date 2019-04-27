@@ -17,18 +17,10 @@ events = events.upper()
 list_of_event_codes = []
 
 for i in range(0,256):
-    for x in ['A2','A3','A4','A5']:
-        new_code = str(x+hex(i).replace("0x","").zfill(2)).upper()
-        list_of_event_codes.append(new_code)
-        
-        
-#### THESE are less important because they dont correspond to conditionals 
-        
-#    for y in range(0,16):
-#        new_code = 'CA'+hex(y).replace("0x","").zfill(2)+hex(i).replace("0x","").zfill(2)
-#        list_of_event_codes.append(new_code)
-#        new_code2 = 'CB'+hex(y).replace("0x","").zfill(2)+hex(i).replace("0x","").zfill(2)
-#        list_of_event_codes.append(new_code2)
+    for y in range(0,8):
+        new_code = 'CD'+hex(i).replace("0x","").zfill(2)+hex(y).replace("0x","").zfill(2)
+        list_of_event_codes.append(new_code.upper())
+
         
 df = pd.DataFrame(columns=['address','code','matches'])
 for i in list_of_event_codes:
@@ -48,9 +40,10 @@ conditionals = conditionals.upper()
 list_of_conditional_codes = []
 
 for i in range(0,256):
-    for x in ['FB','FC','FD','FE']:
-        new_code = str(x+hex(i).replace("0x","").zfill(2)).upper()
-        list_of_conditional_codes.append(new_code)
+    for y in range(0,8):
+        new_code = 'FF'+hex(i).replace("0x","").zfill(2)+hex(y).replace("0x","").zfill(2)
+        list_of_conditional_codes.append(new_code.upper())
+
         
 df2 = pd.DataFrame(columns=['address','code','matches'])
 for i in list_of_conditional_codes:
@@ -66,13 +59,14 @@ with open('npc.txt') as file:
     npc = file.readlines()
 npc = npc[0].replace(" ","")
 npc = npc.upper()
+
    
 list_of_npc_codes = []
 
 for i in range(0,256):
-    for x in ['FB','FC','FD','FE']:
-        new_code = str(x+hex(i).replace("0x","").zfill(2)).upper()
-        list_of_npc_codes.append(new_code)
+    for y in range(0,8):
+        new_code = 'FF'+hex(i).replace("0x","").zfill(2)+hex(y).replace("0x","").zfill(2)
+        list_of_npc_codes.append(new_code.upper())
         
 df3 = pd.DataFrame(columns=['address','code','matches'])
 for i in list_of_npc_codes:

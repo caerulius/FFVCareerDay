@@ -35,15 +35,6 @@ padbyte $00
 pad $C99E39
 
 
-; clear out Exdeath's final cutscene, lots of space
-org $C9DCCE
-db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53
-db $A4, $9F                     ;Turn on bit 80 at address 0x7e0a47
-db $CB, $97, $03                ;Turn off bit 80 at address  0x7e0ac6
-db $FF
-
-pad $C9E727
-
 ; if you leave the cleft, disable cutscene:
 
 org $C93038

@@ -23,9 +23,9 @@ key_item_table = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_t
 
 data = '''
 
-aa78888e8b967b8b7a8f7e8b9296898b
-7a828c7e7d017f888b968f827c8d888b
-92a399
+727a8b828c7a9bffff767a7a7a81a101
+689986ff80888287809dff8d8888a1a1
+00
 
 '''
 
@@ -115,8 +115,68 @@ def run_kuzar_encrypt(passed_dict):
 
     return return_text
 
+def run_exdeath_rewards(passed_dict):
+    '''
+    Pass in a DICTIONARY of 3 key items (actual text) and 3 key item reward 
+        locations by related id (e.g. Sandworm has Big Bridge Key, 
+            which is custom reward $68)
+            DO NOT Big Bridge Key's ID - use Sandworm loc's ID
         
-        
+        Final input should look like:
+        {'Walse Tower Key':'68','Big Bridge Key':'77','SandWormBait':'82'}
+            
+    Returns asm patch
+    '''
+    
+    list_of_keys = passed_dict.keys()
+    list_of_locs = passed_dict.values()
+    
+    # This is for main 'key item' menu
+    base_addr_1 = 'E2A0A7'
+    # These are for the 3 text boxes asking if you want X item 
+    list_of_individual_bases = ['E2A10B','E2A166','E2A1C6']
+
+    
+    text_asar = '; Key items individual text \norg $'+base_addr_1+'\ndb' # main menu
+    for x in list_of_keys:
+        text_list = []
+        for i in x:
+            text_list.append(text_dict2[i])
+        for y in text_list:
+            text_asar = text_asar + " $" + y + ","
+        text_asar = text_asar + " $01, "
+
+    text_asar = text_asar + "$00\n"
+    
+
+    # Messy iteration trying to do both at once, replicate again...
+
+    item_dict = dict(zip(list_of_individual_bases,list_of_keys))
+    text_asar2 = '; Key items menu \n'
+    for base, key_name in item_dict.items():
+        text_asar2 = text_asar2 + ";"+key_name+"\norg $"+base+"\ndb "
+        text_list = []
+        for i in key_name:
+            text_list.append(text_dict2[i])
+        for y in text_list:
+            text_asar2 = text_asar2 + " $" + y + ","
+        text_asar2 = text_asar2 + " $A2, $00\n"
+
+
+    text_asar3 = '; Addresses for key item actual rewards\n'
+    loc_dict = dict(zip(['F90406','C93E3C','F90486'],list_of_locs))
+    for base, loc in loc_dict.items():
+        text_asar3 = text_asar3 + 'org $'+base+"\ndb $"+str(loc)+"\n"
+    
+    return_text = text_asar2 + "\n" + text_asar + "\n" + text_asar3
+    return return_text
+
+
+
+
+
+
+    
 def generate_keyitems():
     print("Writing file to career_day/asm/asm_patches/text_tables/key_item_tables.asm...")
     write_text = ''

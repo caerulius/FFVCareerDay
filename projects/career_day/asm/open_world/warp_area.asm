@@ -94,3 +94,78 @@ db $FF, $A4, $03
 ; finally disable books entirely
 org $CE8A7E
 pad $CE8AA1
+
+
+
+
+; Code for NPC Triggered on Necrophobe defeat
+
+; NPC 3
+org $CE9B09
+db $DB, $02 ; action
+org $CE9B0B
+db $1B ; change sprite
+org $CE9B0C
+db $03, $0D ; x/y
+org $CE9B0E
+db $3F, $1B ; walk cycle properties
+
+; change NPC behavior for calling an event
+org $CE1DD7
+db $35, $04
+
+; change address for custom event
+org $C83FBF
+db $20, $00, $F9
+
+
+
+
+
+; Rift Warp Dialogue
+org $F90020
+
+db $F0, $03, $02              ;Conditional yes/no dialogue at 04B7
+db $CD, $43, $04                ;Run event index 0408
+db $FF
+db $FF
+
+
+
+org $C83FE9
+db $40, $02, $F9
+
+; world 3 warp
+org $F90240
+; change world flag to WORLD 3
+db $A3, $C8 ; off
+db $A3, $C9 ; off
+db $A2, $CA ; on
+
+db $C5, $80                     ;<unknown>
+db $B5, $02                     ;Play Sound Effect Void, Image
+db $C4, $03
+db $73
+db $E1, $FC, $01, $27, $2A, $00 ;Return from cutscene? 00 00 9C 96 00
+db $D2, $02, $93, $51, $D8     ; airship
+; WORLD CONDITIONALS
+; Submarine conditional $EE
+; db $A4, $F9            ; set address 000A53 bit ON 02
+; ; Lonka ruin restrict access
+db $A5, $FA            ; set address 000A53 bit OFF 04
+; Set world 3 on status
+db $A2, $79            ; set address 000A23 bit ON 02
+
+
+db $EE
+
+db $14
+db $C3, $03
+db $73
+db $FF
+
+
+; Text box
+; Warp to final Rift save point?
+org $E1926A
+db $76, $7A, $8B, $89, $96, $8D, $88, $96, $7F, $82, $87, $7A, $85, $96, $71, $82, $7F, $8D, $96, $8C, $7A, $8F, $7E, $96, $89, $88, $82, $87, $8D, $A2, $00
