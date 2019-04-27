@@ -13,7 +13,7 @@ crystal_id,shop_id,readable_name,value,related_jobs,max_count,starting_weapon,st
 0B,94,TimeMage,1,[“TimeMage”],1,Rod,31,"[“Drag”, “Slow”, “Regen”]","[“36”, “37”, “38”]",Dimen Lv. 1,43
 0C,95,Summoner,2,[“Summoner”],1,Rod,31,"[“Chocob”, “Sylph”, “Remora”]","[“48”, “49”, “4A”]",Summon Lv. 1,48
 0D,96,BlueMage,2,[“BlueMage”],1,Knife,02,"[“Aero”, “GblinPnch”, “Hammer”]","[“8F”, “93” ,”99”]",Blue,4d
-0E,97,RedMage,1,[“RedMage”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”, “Cure”, “Scan”, “Antdt”]","[“00”, “01, “02”, “12”, “13”, “14”]",Red Lv. 1,4b
+0E,97,RedMage,1,[“RedMage”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”, “Cure”, “Scan”, “Antdt”]","[“24”, “25, “26”, “12”, “13”, “14”]",Red Lv. 1,4b
 0F,98,Mediator,0,[“Mediator”],1,Whip,4B,[],[“FF”],Tame,1d
 10,99,Chemist,2,[“Chemist”],1,Staff,38,[],[“FF”],Combine,20
 11,9A,Geomancer,1,[“Geomancer”],1,Giyaman,50,[],[“FF”],Terrain,23

@@ -236,7 +236,11 @@ incsrc reward_events/walsetower_gogo.asm
 incsrc reward_events/tycoon_hiddenarea.asm
 incsrc reward_events/istory_toad.asm
 incsrc reward_events/aegis_shield.asm
-
+incsrc reward_events/carwen_lone_wolf_barrel.asm
+incsrc reward_events/bal_epee.asm
+incsrc reward_events/jacole_thunder_whip.asm
+incsrc reward_events/lamia_harp_bal.asm
+incsrc reward_events/magic_lamp.asm
 
 ; open world
 incsrc open_world/canal_fix.asm
@@ -253,6 +257,7 @@ incsrc open_world/warp_area.asm
 incsrc open_world/debug_key_items.asm
 incsrc open_world/exdeath_overwrite.asm
 incsrc core_code/credits.asm
+incsrc open_world/npc_fixes.asm
 
 incsrc world2/mooglewaterway_encounters.asm
 

@@ -35,6 +35,16 @@ class Collectible(ABC):
         @abstractmethod
         def patch_id(self):
             pass
+
+        @property
+        @abstractmethod
+        def type_str(self):
+            pass
+
+        @property
+        @abstractmethod
+        def shop_name(self):
+            pass
         
 class Item(Collectible):
     reward_type = '40'
@@ -52,8 +62,15 @@ class Item(Collectible):
     @property
     def reward_name(self):
         return self.collectible_name
+
+    @property
+    def type_str(self):
+        return "Item"
+
+    @property
+    def shop_name(self):
+        return self.collectible_name
     
-        
 class Magic(Collectible):
     reward_type = '20'
     def __init__(self, magic_id, data_row):
@@ -79,6 +96,14 @@ class Magic(Collectible):
             return progression_magic[self.progression_id]
         else:
             return self.collectible_name
+
+    @property
+    def type_str(self):
+        return "Magic"
+
+    @property
+    def shop_name(self):
+        return self.collectible_name
 
 
 class Crystal(Collectible):
@@ -110,6 +135,14 @@ class Crystal(Collectible):
     @property
     def reward_name(self):
         return self.collectible_name + " " + "Job Crystal"
+
+    @property
+    def type_str(self):
+        return "Crystal"
+
+    @property
+    def shop_name(self):
+        return self.collectible_name
         
 class Ability(Collectible):
     reward_type = '60'
@@ -136,6 +169,14 @@ class Ability(Collectible):
         else:
             return self.collectible_name
 
+    @property
+    def type_str(self):
+        return "Ability"
+
+    @property
+    def shop_name(self):
+        return self.collectible_name
+
 
 class Gil(Collectible):
     reward_type = ""
@@ -150,6 +191,14 @@ class Gil(Collectible):
 
     @property
     def reward_name(self):
+        return self.collectible_name
+
+    @property
+    def type_str(self):
+        return "Gil"
+
+    @property
+    def shop_name(self):
         return self.collectible_name
 
 class KeyItem(Collectible):
@@ -171,6 +220,14 @@ class KeyItem(Collectible):
 
     @property
     def reward_name(self):
+        return self.collectible_name
+
+    @property
+    def type_str(self):
+        return "KeyItem"
+
+    @property
+    def shop_name(self):
         return self.collectible_name
 
 class CollectibleManager():
@@ -223,7 +280,7 @@ class CollectibleManager():
                                                                   x.max_count is None or
                                                                   x.max_count < self.placement_history[x])]
 
-    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False):   
+    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False, disable_zerozero=False):   
         if type(of_type) is str: # this is a literal string definition of a type, so let's cast it first
             if of_type in type_dict.keys():
                 of_type = type_dict[of_type]
@@ -255,6 +312,9 @@ class CollectibleManager():
                 working_list = [x for x in self.get_all_of_type(of_type) if x.max_count != 1 and x.valid]
             else:
                 working_list = [x for x in self.collectibles if x.max_count != 1 and x.valid]
+
+        if disable_zerozero:
+            working_list = [x for x in working_list if x.patch_id != '00'] #disable any id of 00, because this ends shops
 
         if respect_weight is False:
             choice = random_engine.choice(working_list)

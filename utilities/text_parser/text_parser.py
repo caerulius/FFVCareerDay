@@ -101,12 +101,12 @@ def run_kuzar_encrypt(passed_dict):
             else:    
                 text_list.append(text_dict2[char])
                 counter = counter + 1
-        text_asar = 'db $01, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF,'
+        text_asar = 'db '
         for i in text_list:
             text_asar = text_asar + " $" + i + ","
         text_asar = text_asar[:-1]
         #print("; "+x)
-        return_text = return_text + "; "+x +"\n"
+        return_text = return_text + "; "+x.replace('@', '\\n') +"\n"
         #print('org $'+passed_dict[x])
         return_text = return_text + 'org $'+passed_dict[x] +"\n"
 
