@@ -618,8 +618,8 @@ class Conductor():
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .4)            
                 random_boss.enemy_classes[3].num_hp = round(new_hp * .4)
                 
-            # CLAUSE FOR SOLCANNON
-            elif random_boss.event_id in ['0E']:
+            # CLAUSE FOR SOLCANNON, GOLEM
+            elif random_boss.event_id in ['0E','3E']:
                 # Apply 50% to Launchers
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .5)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .5)
@@ -742,6 +742,8 @@ class Conductor():
             og_text = "; --------------------------\n; Original boss {} rank {} -> Randomized boss {} rank {}\n; HP: {} -> {}\n".format(random_boss.enemy_list, str(prev_rank),original_boss.enemy_list,str(new_rank),str(prev_hp),str(new_hp))
             text_str = og_text
             write_flag = False
+            #import pdb
+            #pdb.set_trace()
             for enemy in random_boss.enemy_classes:
                 list_of_randomized_enemies.append(enemy) #maintain a list of only the enemies we've actually randomized
                 text_str = text_str + '; ENEMY: '+enemy.enemy_name+'\n'

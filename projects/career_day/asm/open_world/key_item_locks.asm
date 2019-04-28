@@ -57,7 +57,7 @@ org $F05F52
 ; No direction required here, just step on tile
 ; Failure case, blocking textbox & step down
 ; In this case, no need for another event on sucess case, just allow access, because door panel works fine
-db $FF, $5D, $03
+db $FF, $F8, $00
 
 
 

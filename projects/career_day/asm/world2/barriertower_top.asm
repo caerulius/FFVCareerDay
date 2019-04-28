@@ -43,6 +43,11 @@ db $CB, $E5, $02                ;Turn off bit 20 at address  0x7e0ab0
 db $CB, $11, $03                ;Turn off bit 02 at address  0x7e0ab6
 db $CB, $0E, $00                ;Turn off bit 40 at address  0x7e0a55
 
+; CAREER DAY
+; Disable submarine bit flags
+db $A3, $C1            ; set address 000A2C bit OFF 02
+db $A3, $C0            ; set address 000A2C bit OFF 01
+
 ; below skips sub cutscene with Galuf waiting. No timer is ever set, Galuf never removed from party
 
 db $A5, $FE                     ;Turn off bit 40 at address 0x7e0a53

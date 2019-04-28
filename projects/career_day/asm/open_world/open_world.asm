@@ -250,13 +250,19 @@ db $FE, $B8
 org $CE65E1
 pad $CE65EF
 
-; SUBMARINE
-; warp to new locations, ignore submarine entirely
-org $C93F4B
-db $4B, $01, $11, $0d
-;map data warp
-org $CE4DDC
-db $01, $00, $AC, $A5
+
+
+; Swapping GUIDO CAVE for BARRIER TOWER
+
+org $c98874
+; warp to barrier tower instead of guido (change event)
+db $E0, $4B, $01, $11, $0d, $00 ;Unknown
+db $FF                          ;End Event
+
+; disable guido warp
+org $F046AC
+db $00
+
 
 
 ; NEW TEXT FOR DEBUG TO WARP AREA
