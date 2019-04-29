@@ -140,7 +140,7 @@ class Window(Frame):
 			elif str(self.rompath.get()) == "<path to rom>" or str(self.rompath.get()) == "":
 				self.statusLabel['text'] = "Select your rom"
 			else:
-				self.statusLabel['text'] = "Choose your options and click \nrandomize when ready"
+				self.statusLabel['text'] = "Click randomize when ready"
 
 	def performRandomizationProxy(self, event):
 		self.performRandomization()
@@ -171,7 +171,7 @@ WRITEDIRECTORY = os.getcwd()
 os.chdir(app_path)
 
 root.geometry("500x250")
-root.title("Career Day v0.0.71.1")
+root.title("Career Day v0.0.72.0")
 root.iconbitmap("favicon.ico")
 
 os.chdir(WRITEDIRECTORY)

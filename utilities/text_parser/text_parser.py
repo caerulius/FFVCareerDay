@@ -8,17 +8,21 @@ import os
 table = 'text_table_chest.csv'
 
 
-text_dict = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=0).to_dict()[1]
-text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=1).to_dict()[0]
+#text_dict = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=0).to_dict()[1]
+text_dict = pd.read_csv('tables/text_tables/' + table, header=None,index_col=0).to_dict()[1]
+#text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=1).to_dict()[0]
+text_dict2 = pd.read_csv('tables/text_tables/' + table, header=None,index_col=1).to_dict()[0]
 
 #ability_shop_table = pd.read_csv('tables/text_tables/ability_shop_text.csv',header=None,index_col=0).to_dict()[1]
 #ability_chest_table = pd.read_csv('tables/text_tables/ability_chest_text.csv',header=None,index_col=0).to_dict()[1]
 #job_shop_table = pd.read_csv('tables/text_tables/job_shop_text.csv',header=None,index_col=0).to_dict()[1]
 #job_chest_table = pd.read_csv('tables/text_tables/job_chest_text.csv',header=None,index_col=0).to_dict()[1]
 #magic_chest_table = pd.read_csv('tables/text_tables/magic_chest_text.csv',header=None,index_col=0).to_dict()[1]
-key_item_table = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','key_item_text.csv'),header=None,index_col=0).to_dict()[1]
 #key_item_reward_table = pd.read_csv('tables/text_tables/key_item_reward_text.csv',header=None,index_col=0).to_dict()[1]
 #kuzar_rewards = pd.read_csv('tables/text_tables/kuzar_rewards.csv',header=None,index_col=0).to_dict()[1]
+
+#key_item_table = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','key_item_text.csv'),header=None,index_col=0).to_dict()[1]
+key_item_table = pd.read_csv('tables/text_tables/' + 'key_item_text.csv',header=None,index_col=0).to_dict()[1]
 
 
 data = '''

@@ -428,10 +428,10 @@ class Conductor():
             original_boss = original_boss_list.pop()
 
             #this is specifically an unworkable situation
-            #this will just cycle gogo to the end and get a new boss
-            while random_boss.enemy_1 == "Gogo" and original_boss.enemy_1 == "Odin" or \
-                  random_boss.enemy_1 == "Stalker" and original_boss.enemy_1 == "Odin":
-                original_boss_list = [original_boss] + original_boss
+            #this will just cycle gogo/stalker to the end and get a new boss
+            while (random_boss.enemy_1_name == "Gogo" and original_boss.enemy_1_name == "Odin") or \
+                  (random_boss.enemy_1_name == "Stalker" and original_boss.enemy_1_name == "Odin"):
+                original_boss_list = [original_boss] + original_boss_list
                 original_boss = original_boss_list.pop()
 
             # Assign random boss location to the original spots (overwriting it)
