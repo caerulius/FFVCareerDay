@@ -325,3 +325,8 @@ db $00, $00
 
 org $C2D9F1
 lda #$7F
+
+
+; delete guy blocking lone wolf item in carwen
+org $CE65B7
+db $00
