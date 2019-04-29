@@ -25,3 +25,5 @@ db $FF                          ;End Event
 padbyte $00
 pad $C9AEFF
 
+org $c9aedA
+db $6A, $00

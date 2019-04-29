@@ -48,8 +48,8 @@ db $FF
 
 ; relocate event 3 for confirm ; relates to CDC203
 org $c83e66
-db $80, 04, $F9
-org $F90480
+db $10, 04, $F9
+org $F90410
 db $C5, $A0
 db $B5, $02
 db $71
@@ -89,5 +89,5 @@ org $F90406
 db $65
 org $C93E3C
 db $6B
-org $F90486
+org $F90416
 db $72

@@ -258,6 +258,8 @@ incsrc open_world/debug_key_items.asm
 incsrc open_world/exdeath_overwrite.asm
 incsrc core_code/credits.asm
 incsrc open_world/npc_fixes.asm
+incsrc open_world/summon_bosses.asm
+incsrc open_world/gargoyles_restructure.asm
 
 incsrc world2/mooglewaterway_encounters.asm
 

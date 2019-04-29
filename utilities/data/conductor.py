@@ -545,6 +545,10 @@ class Conductor():
             if original_formation_id in ['0F']:
                 new_hp = new_hp * 5
                 
+            # CLAUSE FOR SOL CANNON
+            if original_formation_id in ['0E']:
+                new_hp = min(new_hp - 10000,1)
+                
             # CLAUSE FOR NECROPHOBIA:
             if original_formation_id in ['4B']:
                 # This takes Necrofobia's HP and applies a 1.5x bonus. Barriers have 8k, Necrofobia has 40k. Results in 60k, normalized in STEP 2 later
@@ -555,7 +559,6 @@ class Conductor():
                 # Sandworm - it technically grabs the Hole's HP, but its 3k 
                 # Sergeant - grabs Sergeant's HP, which is shared with IronClaw
                 # Shiva - Shiva's HP is enough
-                # Sol Cannon - Sol Cannon's HP is significant enough, Launchers ignored
                 # All enemies with shared hp (e.g., LiquiFlame, WingRaptor, Carbunkle) - Grab the first HP only
             
             if new_hp > 65535:
@@ -620,6 +623,15 @@ class Conductor():
                 
             # CLAUSE FOR SOLCANNON
             elif random_boss.event_id in ['0E']:
+                # Add 10k HP to pool, apply 50% to Launchers
+                new_hp = new_hp + 10000
+                random_boss.enemy_classes[0].num_hp = new_hp
+                random_boss.enemy_classes[1].num_hp = round(new_hp * .5)
+                random_boss.enemy_classes[2].num_hp = round(new_hp * .5)
+                
+                
+            # CLAUSE FOR GOLEM
+            elif random_boss.event_id in [3E']:
                 # Apply 50% to Launchers
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .5)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .5)
@@ -742,6 +754,8 @@ class Conductor():
             og_text = "; --------------------------\n; Original boss {} rank {} -> Randomized boss {} rank {}\n; HP: {} -> {}\n".format(random_boss.enemy_list, str(prev_rank),original_boss.enemy_list,str(new_rank),str(prev_hp),str(new_hp))
             text_str = og_text
             write_flag = False
+            #import pdb
+            #pdb.set_trace()
             for enemy in random_boss.enemy_classes:
                 list_of_randomized_enemies.append(enemy) #maintain a list of only the enemies we've actually randomized
                 text_str = text_str + '; ENEMY: '+enemy.enemy_name+'\n'

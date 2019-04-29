@@ -68,6 +68,7 @@ db $CB, $36, $00            ; set address 000A5A bit OFF 40
 db $CA, $3A, $00            ; set address 000A5B bit ON 04
 db $CA, $39, $00            ; set address 000A5B bit ON 02
 db $CA, $38, $00            ; set address 000A5B bit ON 01
+db $CA, $3C, $00                ;Turn on bit 10 at address  0x7e0a5b
 db $A4, $3D            ; set address 000A3B bit ON 20 (navigate to wind shrine cutscene)
 
 

@@ -76,23 +76,23 @@ JMP FinishABPHookImmediate
 
 
 
-; for each multipler, add an asl command. its effectively 2x to the value for abp
-asl ;2x
-; asl ;4x
-;asl ;8x
-
 ABPMult2:
-
+CLC
 lda $d03000,x
 asl
+BCS LoadMaxABP
 JMP FinishABPReward
 ABPMult4:
-
+CLC
 lda $d03000,x
 asl
+BCS LoadMaxABP
 asl
+BCS LoadMaxABP
 JMP FinishABPReward
 
+LoadMaxABP:
+lda #$FF
 
 FinishABPReward:
 sta $3eef,y
