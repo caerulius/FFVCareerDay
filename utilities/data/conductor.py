@@ -17,7 +17,7 @@ from monster_in_a_box import *
 
 
 STARTING_CRYSTAL_ADDRESS = 'E79F00'
-DEFAULT_POWER_CHANGE = 1.5
+DEFAULT_POWER_CHANGE = 1.75
 STAT_MULTIPLIER = .25
 adjust_mult = 6
 RANK_EXP_REWARD = {1:50*adjust_mult,
@@ -34,7 +34,7 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 12:15044*adjust_mult}
 
 SHINRYUU_VANILLA = True
-NUM_KEY_ITEMS = 21
+NUM_KEY_ITEMS = 20
 
 
 class Conductor():
