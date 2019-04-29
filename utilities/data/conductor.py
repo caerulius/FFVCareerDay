@@ -545,6 +545,10 @@ class Conductor():
             if original_formation_id in ['0F']:
                 new_hp = new_hp * 5
                 
+            # CLAUSE FOR SOL CANNON
+            if original_formation_id in ['0E']:
+                new_hp = min(new_hp - 10000,1)
+                
             # CLAUSE FOR NECROPHOBIA:
             if original_formation_id in ['4B']:
                 # This takes Necrofobia's HP and applies a 1.5x bonus. Barriers have 8k, Necrofobia has 40k. Results in 60k, normalized in STEP 2 later
@@ -555,7 +559,6 @@ class Conductor():
                 # Sandworm - it technically grabs the Hole's HP, but its 3k 
                 # Sergeant - grabs Sergeant's HP, which is shared with IronClaw
                 # Shiva - Shiva's HP is enough
-                # Sol Cannon - Sol Cannon's HP is significant enough, Launchers ignored
                 # All enemies with shared hp (e.g., LiquiFlame, WingRaptor, Carbunkle) - Grab the first HP only
             
             if new_hp > 65535:
@@ -618,8 +621,17 @@ class Conductor():
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .4)            
                 random_boss.enemy_classes[3].num_hp = round(new_hp * .4)
                 
-            # CLAUSE FOR SOLCANNON, GOLEM
-            elif random_boss.event_id in ['0E','3E']:
+            # CLAUSE FOR SOLCANNON
+            elif random_boss.event_id in ['0E']:
+                # Add 10k HP to pool, apply 50% to Launchers
+                new_hp = new_hp + 10000
+                random_boss.enemy_classes[0].num_hp = new_hp
+                random_boss.enemy_classes[1].num_hp = round(new_hp * .5)
+                random_boss.enemy_classes[2].num_hp = round(new_hp * .5)
+                
+                
+            # CLAUSE FOR GOLEM
+            elif random_boss.event_id in [3E']:
                 # Apply 50% to Launchers
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .5)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .5)

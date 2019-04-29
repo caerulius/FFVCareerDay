@@ -89,6 +89,11 @@ db $FF
 org $F051D4
 db $AA
 
+; If used submarine to get here early, disallow access until hiryuu call is obtained
+org $F051C1
+db $FC, $B2
+
+
 ; BARRIER TOWER
 ; Similar to above, change barrier tower fight cutscene to deactivate from a different flag than the underwater barrier access warp tile
 ; org $D8F37D
@@ -123,6 +128,11 @@ db $7A
 org $CE288C
 db $AD, $E9, $F0, $01
 
+
+; PYRAMID TOP
+; change conditional flag to be a custom one 
+org $F04B1D
+db $FD, $78
 
 ; GARGOYLES
 ; Change each conditional event to have individual flags associated with their respective key items
@@ -309,3 +319,9 @@ org $F05015
 db $00, $00
 org $F0501C
 db $00, $00
+
+
+; Chicken Knife always max power
+
+org $C2D9F1
+lda #$7F
