@@ -15,28 +15,28 @@ db $6D, $88, $90, $96, $7C, $81, $88, $88, $8C, $7E, $96, $7A, $87, $96, $82, $8
 
 ; Key items displayed before choosing individually. All 3 choices appear. 
 ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<< 
-org $E2A0A7
-; [TEXT BLOCK] Big Bridge Key
-db $61, $82, $80, $96, $61, $8B, $82, $7D, $80, $7E, $96, $6A, $7E, $92, $01
-; [TEXT BLOCK] Walse Tower Key
-db $76, $7A, $85, $8C, $7E, $96, $73, $88, $90, $7E, $8B, $96, $6A, $7E, $92, $01
-; [TEXT BLOCK] Hiryuu Call
-db $67, $82, $8B, $92, $8E, $8E, $96, $62, $7A, $85, $85, $01
-; terminator
-db $00
+; org $E2A0A7
+; ; [TEXT BLOCK] Big Bridge Key
+; db $61, $82, $80, $96, $61, $8B, $82, $7D, $80, $7E, $96, $6A, $7E, $92, $01
+; ; [TEXT BLOCK] Walse Tower Key
+; db $76, $7A, $85, $8C, $7E, $96, $73, $88, $90, $7E, $8B, $96, $6A, $7E, $92, $01
+; ; [TEXT BLOCK] Hiryuu Call
+; db $67, $82, $8B, $92, $8E, $8E, $96, $62, $7A, $85, $85, $01
+; ; terminator
+; db $00
 
 
-; Key items menu. Each one now shows up alone in it's own text box
-; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<< 
-; [ TEXT 1 ] Big Bridge Key
-org $E2A10B
-db  $61, $82, $80, $96, $61, $8B, $82, $7D, $80, $7E, $96, $6A, $7E, $92, $A2, $00
-; [ TEXT 2 ] Walse Tower Key
-org $E2A166
-db  $76, $7A, $85, $8C, $7E, $96, $73, $88, $90, $7E, $8B, $96, $6A, $7E, $92, $A2, $00
-; [ TEXT 3 ] Hiryuu Call
-org $E2A1C6
-db  $67, $82, $8B, $92, $8E, $8E, $96, $62, $7A, $85, $85, $A2, $00
+; ; Key items menu. Each one now shows up alone in it's own text box
+; ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<< 
+; ; [ TEXT 1 ] Big Bridge Key
+; org $E2A10B
+; db  $61, $82, $80, $96, $61, $8B, $82, $7D, $80, $7E, $96, $6A, $7E, $92, $A2, $00
+; ; [ TEXT 2 ] Walse Tower Key
+; org $E2A166
+; db  $76, $7A, $85, $8C, $7E, $96, $73, $88, $90, $7E, $8B, $96, $6A, $7E, $92, $A2, $00
+; ; [ TEXT 3 ] Hiryuu Call
+; org $E2A1C6
+; db  $67, $82, $8B, $92, $8E, $8E, $96, $62, $7A, $85, $85, $A2, $00
 
 
 
@@ -84,7 +84,7 @@ org $F90400
 db $C5, $60
 db $B5, $02
 db $71
-db $DE, $65 ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<<  THIS GETS WRITTEN WITH A NEW "KEY ITEM LOCATION". SEE BOTTOM CODE FOR ADDRESSES
+db $DE, $60 ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<<  THIS GETS WRITTEN WITH A NEW "KEY ITEM LOCATION". SEE BOTTOM CODE FOR ADDRESSES
 db $DF
 db $FF
 
@@ -94,7 +94,7 @@ org $C83C8F
 db $20, $04, $F9
 org $F90420
 db $C5, $20
-db $B5, $02
+db $B5, $61
 db $71
 db $DE, $6B ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<<  THIS GETS WRITTEN WITH A NEW "KEY ITEM LOCATION". SEE BOTTOM CODE FOR ADDRESSES
 db $DF
@@ -106,7 +106,7 @@ org $c83e66
 db $10, $04, $F9
 org $F90410
 db $C5, $A0
-db $B5, $02
+db $B5, $62
 db $71
 db $DE, $72  ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<<  THIS GETS WRITTEN WITH A NEW "KEY ITEM LOCATION". SEE BOTTOM CODE FOR ADDRESSES
 db $DF
@@ -123,9 +123,9 @@ db $FF
     ; This ID of $65 is where Big Bridge Key is for THIS seed
     ; So, we write $65 to the first event below at $F90406
 
-org $F90406
-db $62
-org $F90426
-db $7F
-org $F90416
-db $70
+; org $F90406
+; db $62
+; org $F90426
+; db $7F
+; org $F90416
+; db $70

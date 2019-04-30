@@ -12,12 +12,12 @@ from shop_price import *
 from area import *
 from enemy import *
 from formation import *
-from text_parser.text_parser import *
+from text_parser import *
 from monster_in_a_box import *
 
 
 STARTING_CRYSTAL_ADDRESS = 'E79F00'
-DEFAULT_POWER_CHANGE = 1.5
+DEFAULT_POWER_CHANGE = 1.75
 STAT_MULTIPLIER = .25
 adjust_mult = 6
 RANK_EXP_REWARD = {1:50*adjust_mult,
@@ -34,7 +34,7 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 12:15044*adjust_mult}
 
 SHINRYUU_VANILLA = True
-NUM_KEY_ITEMS = 21
+NUM_KEY_ITEMS = 20
 
 
 class Conductor():
@@ -227,14 +227,20 @@ class Conductor():
 
     def randomize_shops(self):
         required_items = {}
-        required_items["E6"] = 0 #Revivify
-        required_items["F1"] = 0 #Cabin
+        required_items["E0"] = 0 #Potion
         required_items["E1"] = 0 #HiPotion
-        required_items["E4"] = 0 #Fenix Down
         required_items["E2"] = 0 #Ether
-        required_items["EC"] = 0 #Soft
-        required_items["F0"] = 0 #Tent
         required_items["E3"] = 0 #Elixir
+        required_items["E4"] = 0 #Fenix Down
+        required_items["E5"] = 0 #MaidensKiss
+        required_items["E6"] = 0 #Revivify
+        required_items["E7"] = 0 #Revivify
+        required_items["E8"] = 0 #Antidote
+        required_items["E9"] = 0 #Eyedrop
+        required_items["EC"] = 0 #Soft
+        required_items["ED"] = 0 #LuckMallet
+        required_items["F0"] = 0 #Tent
+        required_items["F1"] = 0 #Cabin
 
         item_chance = .6
         magic_chance = .25
@@ -428,10 +434,10 @@ class Conductor():
             original_boss = original_boss_list.pop()
 
             #this is specifically an unworkable situation
-            #this will just cycle gogo to the end and get a new boss
-            while random_boss.enemy_1 == "Gogo" and original_boss.enemy_1 == "Odin" or \
-                  random_boss.enemy_1 == "Stalker" and original_boss.enemy_1 == "Odin":
-                original_boss_list = [original_boss] + original_boss
+            #this will just cycle gogo/stalker to the end and get a new boss
+            while (random_boss.enemy_1_name == "Gogo" and original_boss.enemy_1_name == "Odin") or \
+                  (random_boss.enemy_1_name == "Stalker" and original_boss.enemy_1_name == "Odin"):
+                original_boss_list = [original_boss] + original_boss_list
                 original_boss = original_boss_list.pop()
 
             # Assign random boss location to the original spots (overwriting it)
@@ -624,7 +630,7 @@ class Conductor():
             # CLAUSE FOR SOLCANNON
             elif random_boss.event_id in ['0E']:
                 # Add 10k HP to pool, apply 50% to Launchers
-                new_hp = new_hp + 10000
+                new_hp = max(new_hp + 10000,65535)
                 random_boss.enemy_classes[0].num_hp = new_hp
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .1)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .1)

@@ -325,8 +325,8 @@ idx,address,original_reward,area,description,reward_style,force_type,required_ke
 323,D135FE,Pinwheel,Void,The Void Chest,chest,,
 324,C0FB70,New,Ancient Library,Byblos,key,,[“Ifrit’s Fire”]
 325,C0FB72,New,Wind Shrine,WingRaptor,key,,
-326,C0FB74,New,Torna Canal,Karlabos,key,,[“Canal Key”]
-327,C0FB76,New,Ship Graveyard,Siren,key,,[“Canal Key”]
+326,C0FB74,New,Torna Canal,Karlabos,key,,
+327,C0FB76,New,Ship Graveyard,Siren,key,,
 328,C0FB78,New,North Mountain,Magisa & Forza,key,,
 329,C0FB7A,New,Walse,Galura,key,,[“Walse Tower Key”]
 330,C0FB7C,New,Steamship,LiquiFlame,key,,[“Steamship Key”]
