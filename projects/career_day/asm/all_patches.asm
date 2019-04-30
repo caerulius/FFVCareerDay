@@ -193,6 +193,7 @@ incsrc world3/cleft_necrophobe.asm
 ; other patches
 
 incsrc core_code/menu_hook.asm
+incsrc core_code/battle_code.asm
 incsrc core_code/custom_items.asm
 
 incsrc ../../shared_asm/shared_core/reward_manager.asm

@@ -43,7 +43,8 @@ org $F05E3C
 db $FE, $CC, $FF, $23, $07
 
 
-; Exdeath's final cutscene, lots of space
+; Exdeath's final cutscene, lots of space. 
+; VERSION FOR EXDEATH PHASE 1 SKIP FIGHT
 org $C9DCCE
 
 db $01, $01, $01
@@ -61,11 +62,31 @@ db $BD, $A8, $1C ; ASPIS FIGHT
 db $D0, $F0, $00                ;(Music) F0 00
 db $B4, $11                     ;Play Background Music (Nothing)
 db $75                          ;Extremely long pause
+db $B7, $0C 					; add cara over galuf for non glitchy ending...?
+db $CD, $43, $01                ;Run event index 0143
+
+db $FF
+
+; VERSION FOR NORMAL
+
+org $c9fe66
+db $B5, $2D                     ;Play Sound Effect Demi, Qrter
+db $CD, $86, $07                ;Run event index 0786
+db $C8, $11, $08                ;Display Message/Text/Dialogue 11 08
+db $71                          ;Short pause
+db $0C                          ;<Unknown>
+db $06                          ;Player Bounce in Place
+db $01                          ;Player Move Up
+db $0B                          ;<Unknown>
+db $BD, $BA, $1C                ;Start Event Battle BA
+db $D0, $F0, $00                ;(Music) F0 00
+db $B4, $11                     ;Play Background Music (Nothing)
+db $B7, $0C 					; add cara over galuf for non glitchy ending...?
 db $CD, $43, $01                ;Run event index 0143
 
 
 
-db $FF
+
 
 pad $C9E727
 

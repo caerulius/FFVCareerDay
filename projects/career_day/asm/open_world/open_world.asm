@@ -321,7 +321,21 @@ org $F0501C
 db $00, $00
 
 
-; Chicken Knife always max power
-
+; Chicken Knife always max power on equip menu
 org $C2D9F1
 lda #$7F
+; Brave Blade always max power on equip menu
+org $C2D9D3
+lda #$00
+
+; Chicken Knife max power in battle
+org $C28626
+lda #$7F
+nop
+
+; Brave Blade max power in battle
+org $C2857E
+nop
+nop
+nop
+

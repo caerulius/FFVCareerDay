@@ -12,7 +12,7 @@ from shop_price import *
 from area import *
 from enemy import *
 from formation import *
-from text_parser import *
+from text_parser.text_parser import *
 from monster_in_a_box import *
 
 
@@ -626,13 +626,13 @@ class Conductor():
                 # Add 10k HP to pool, apply 50% to Launchers
                 new_hp = new_hp + 10000
                 random_boss.enemy_classes[0].num_hp = new_hp
-                random_boss.enemy_classes[1].num_hp = round(new_hp * .5)
-                random_boss.enemy_classes[2].num_hp = round(new_hp * .5)
+                random_boss.enemy_classes[1].num_hp = round(new_hp * .1)
+                random_boss.enemy_classes[2].num_hp = round(new_hp * .1)
                 
                 
             # CLAUSE FOR GOLEM
-            elif random_boss.event_id in [3E']:
-                # Apply 50% to Launchers
+            elif random_boss.event_id in ['3E']:
+                # Apply 50% to other enemies
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .5)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .5)
                 
