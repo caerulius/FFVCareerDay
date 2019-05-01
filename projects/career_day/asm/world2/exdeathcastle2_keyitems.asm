@@ -24,6 +24,9 @@ db $6D, $88, $90, $96, $7C, $81, $88, $88, $8C, $7E, $96, $7A, $87, $96, $82, $8
 ; db $67, $82, $8B, $92, $8E, $8E, $96, $62, $7A, $85, $85, $01
 ; ; terminator
 ; db $00
+org $E2A0A7
+; terminator
+db $00
 
 
 ; ; Key items menu. Each one now shows up alone in it's own text box
@@ -38,8 +41,12 @@ db $6D, $88, $90, $96, $7C, $81, $88, $88, $8C, $7E, $96, $7A, $87, $96, $82, $8
 ; org $E2A1C6
 ; db  $67, $82, $8B, $92, $8E, $8E, $96, $62, $7A, $85, $85, $A2, $00
 
-
-
+org $E2A10B
+db $00
+org $E2A166
+db $00
+org $E2A1C6
+db $00
 
 
 ; QUESTION EVENTS - asking the player do they want X item
@@ -94,9 +101,9 @@ org $C83C8F
 db $20, $04, $F9
 org $F90420
 db $C5, $20
-db $B5, $61
+db $B5, $02
 db $71
-db $DE, $6B ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<<  THIS GETS WRITTEN WITH A NEW "KEY ITEM LOCATION". SEE BOTTOM CODE FOR ADDRESSES
+db $DE, $61 ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<<  THIS GETS WRITTEN WITH A NEW "KEY ITEM LOCATION". SEE BOTTOM CODE FOR ADDRESSES
 db $DF
 db $FF
 
@@ -106,9 +113,9 @@ org $c83e66
 db $10, $04, $F9
 org $F90410
 db $C5, $A0
-db $B5, $62
+db $B5, $02
 db $71
-db $DE, $72  ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<<  THIS GETS WRITTEN WITH A NEW "KEY ITEM LOCATION". SEE BOTTOM CODE FOR ADDRESSES
+db $DE, $64  ; >>>>>>>>>>> [ DYNAMICALLY CHANGED ] <<<<<<<<<<  THIS GETS WRITTEN WITH A NEW "KEY ITEM LOCATION". SEE BOTTOM CODE FOR ADDRESSES
 db $DF
 db $FF
 

@@ -59,16 +59,19 @@ def get_shops(c,random_num):
     shops = shops.replace("-----SHOPS-----\n","")
     shops = shops.split("\n\n")
     shops.remove('-----*****-----\n')
+    item_list = []
     for shop in shops:
         data = shop.split("\n")
         shop_name = data[0].split(": ")[1]
         shop_type = data[1].split(": ")[1]
-        item_list = []
         for item in data[2:]:
-            item_list.append(item.split("-> ")[1])
-    df = pd.DataFrame(columns=['item'],data=item_list)
-    df['shop_name'] = shop_name
-    df['shop_type'] = shop_type
+            item_dict = {}
+            item_name = item.split("-> ")[1]
+            item_dict['shop_name'] = shop_name
+            item_dict['shop_type'] = shop_type
+            item_dict['item'] = item_name
+            item_list.append(item_dict)
+    df = pd.DataFrame(data=item_list)
     df['seed'] = random_num
     df = df[['shop_name','shop_type','item','seed']]
     return df
@@ -92,4 +95,21 @@ def run_collection(NUM_ITERATIONS):
         df_shops_master = df_shops_master.append(get_shops(c,random_num))
     return df_key_master, df_rewards_master, df_crystals_master, df_shops_master
 
-df_key_master, df_rewards_master, df_crystals_master, df_shops_master = run_collection(10)
+def run_pivots(df_rewards,df_shops):
+    df_rewards = pd.merge(df_rewards,df_all,left_on="reward",right_on="readable_name")
+    df_rewards.pivot_table(index=['check','reward'],values='value',aggfunc='count').to_csv('log_analysis_render/rewards_count.csv')
+    df_rewards.pivot_table(index=['check'],values='value',aggfunc=np.average).to_csv('log_analysis_render/rewards_average_value.csv')
+    
+    df_shops = pd.merge(df_shops,df_all,left_on="item",right_on="readable_name")[['shop_name','shop_type','item','value']]
+    df_shops.pivot_table(index=['shop_name','item'],values='value',aggfunc='count').to_csv('log_analysis_render/shops_count.csv')
+    df_shops.pivot_table(index=['shop_name'],values='value',aggfunc=np.average).to_csv('log_analysis_render/shops_average_value.csv')
+    
+df_key, df_rewards, df_crystals, df_shops = run_collection(100)
+
+df_item = pd.read_csv('tables/item_id.csv')[['readable_name','value']]
+df_magic = pd.read_csv('tables/magic_id.csv')[['readable_name','value']]
+df_ability = pd.read_csv('tables/ability_id.csv')[['readable_name','value']]
+
+df_all = df_item.append(df_magic).append(df_ability)
+
+run_pivots(df_rewards,df_shops)
