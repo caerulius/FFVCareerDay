@@ -7,29 +7,23 @@ import os
 #table = 'text_table_shop.csv'
 table = 'text_table_chest.csv'
 
+GUI_FLAG = True
+# LOCAL PY VERSION
 
-#text_dict = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=0).to_dict()[1]
-text_dict = pd.read_csv('tables/text_tables/' + table, header=None,index_col=0).to_dict()[1]
-#text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=1).to_dict()[0]
-text_dict2 = pd.read_csv('tables/text_tables/' + table, header=None,index_col=1).to_dict()[0]
+if GUI_FLAG:
+    text_dict = pd.read_csv('tables/text_tables/' + table, header=None,index_col=0).to_dict()[1]
+    text_dict2 = pd.read_csv('tables/text_tables/' + table, header=None,index_col=1).to_dict()[0]
+    key_item_table = pd.read_csv('tables/text_tables/' + 'key_item_text.csv',header=None,index_col=0).to_dict()[1]
+else:
+    text_dict = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=0).to_dict()[1]
+    text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=1).to_dict()[0]
+    key_item_table = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','key_item_text.csv'),header=None,index_col=0).to_dict()[1]
 
-#ability_shop_table = pd.read_csv('tables/text_tables/ability_shop_text.csv',header=None,index_col=0).to_dict()[1]
-#ability_chest_table = pd.read_csv('tables/text_tables/ability_chest_text.csv',header=None,index_col=0).to_dict()[1]
-#job_shop_table = pd.read_csv('tables/text_tables/job_shop_text.csv',header=None,index_col=0).to_dict()[1]
-#job_chest_table = pd.read_csv('tables/text_tables/job_chest_text.csv',header=None,index_col=0).to_dict()[1]
-#magic_chest_table = pd.read_csv('tables/text_tables/magic_chest_text.csv',header=None,index_col=0).to_dict()[1]
-#key_item_reward_table = pd.read_csv('tables/text_tables/key_item_reward_text.csv',header=None,index_col=0).to_dict()[1]
-#kuzar_rewards = pd.read_csv('tables/text_tables/kuzar_rewards.csv',header=None,index_col=0).to_dict()[1]
-
-#key_item_table = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','key_item_text.csv'),header=None,index_col=0).to_dict()[1]
-key_item_table = pd.read_csv('tables/text_tables/' + 'key_item_text.csv',header=None,index_col=0).to_dict()[1]
-
+    
 
 data = '''
 
-727a8b828c7a9bffff767a7a7a81a101
-689986ff80888287809dff8d8888a1a1
-00
+728E7B867A8B82877E966A7E92A2
 
 '''
 
@@ -124,8 +118,9 @@ def run_exdeath_rewards(passed_dict):
     '''
     Pass in a DICTIONARY of 3 key items (actual text) and 3 key item reward 
         locations by related id (e.g. Sandworm has Big Bridge Key, 
-            which is custom reward $68)
+            which is custom reward $68 every seed)
             DO NOT Big Bridge Key's ID - use Sandworm loc's ID
+            Because THIS seed Sandworm has Big Bridge Key
         
         Final input should look like:
         {'Walse Tower Key':'68','Big Bridge Key':'77','SandWormBait':'82'}
@@ -142,7 +137,7 @@ def run_exdeath_rewards(passed_dict):
     list_of_individual_bases = ['E2A10B','E2A166','E2A1C6']
 
     
-    text_asar = '; Key items individual text \norg $'+base_addr_1+'\ndb' # main menu
+    text_asar = '; Key items block text (menu choices before choosing) \norg $'+base_addr_1+'\ndb' # main menu
     for x in list_of_keys:
         text_list = []
         for i in x:
@@ -157,7 +152,7 @@ def run_exdeath_rewards(passed_dict):
     # Messy iteration trying to do both at once, replicate again...
 
     item_dict = dict(zip(list_of_individual_bases,list_of_keys))
-    text_asar2 = '; Key items menu \n'
+    text_asar2 = '; Key items prompts (1 per key item) \n'
     for base, key_name in item_dict.items():
         text_asar2 = text_asar2 + ";"+key_name+"\norg $"+base+"\ndb "
         text_list = []
@@ -168,8 +163,8 @@ def run_exdeath_rewards(passed_dict):
         text_asar2 = text_asar2 + " $A2, $00\n"
 
 
-    text_asar3 = '; Addresses for key item actual rewards\n'
-    loc_dict = dict(zip(['F90406','C93E3C','F90486'],list_of_locs))
+    text_asar3 = '; Addresses in events for key item actual rewards\n'
+    loc_dict = dict(zip(['F90406','F90426','F90416'],list_of_locs))
     for base, loc in loc_dict.items():
         text_asar3 = text_asar3 + 'org $'+base+"\ndb $"+str(loc)+"\n"
     
