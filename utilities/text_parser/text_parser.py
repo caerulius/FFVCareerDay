@@ -120,6 +120,7 @@ def run_kuzar_encrypt(passed_dict):
     return return_text
 
 def run_exdeath_rewards(passed_dict):
+    print(passed_dict)
     '''
     Pass in a DICTIONARY of 3 key items (actual text) and 3 key item reward 
         locations by related id (e.g. Sandworm has Big Bridge Key, 

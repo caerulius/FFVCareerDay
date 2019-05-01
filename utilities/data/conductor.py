@@ -57,6 +57,8 @@ class Conductor():
         self.chosen_crystals = crystals[1]
         self.chosen_crystals_names = [x.reward_name for x in self.chosen_crystals]
 
+        self.exdeath_patch = ""
+
         self.weigh_collectibles()
 
     def get_crystals(self):
@@ -105,6 +107,7 @@ class Conductor():
 
     def randomize_key_items(self):
         num_placed_key_items = 0
+        exdeath_list = []
 
         for _ in range(0, NUM_KEY_ITEMS):
             next_key_reward = self.RE.choice([x for x in self.RM.get_rewards_by_style('key') if x.randomized == False])
@@ -139,6 +142,8 @@ class Conductor():
                 else:
                     next_key_item = self.RE.choice(possible_key_items)
                     next_key_reward.set_collectible(next_key_item)
+                    if "tablet" not in next_key_item.reward_name:
+                        exdeath_list.append(next_key_reward)
                     next_key_item.required_by_placement.extend(next_key_reward.required_key_items)
                     self.CM.add_to_placement_history(next_key_item) #add this manually, usually get_random_collectible handles it
                     next_key_reward.randomized = True
@@ -148,6 +153,12 @@ class Conductor():
             key_item_collectible = self.CM.get_of_value_or_lower(self.RE, value=4)
             key_item_reward.set_collectible(key_item_collectible)
             key_item_reward.randomized = True
+
+        exdeath_rewards = {}
+        for i in self.RE.sample(exdeath_list, 3):
+            exdeath_rewards[i.collectible.reward_name] = i.exdeath_address
+
+        self.exdeath_patch = run_exdeath_rewards(exdeath_rewards)
 
         return num_placed_key_items
 
@@ -631,7 +642,7 @@ class Conductor():
                 
                 
             # CLAUSE FOR GOLEM
-            elif random_boss.event_id in [3E']:
+            elif random_boss.event_id in ['3E']:
                 # Apply 50% to Launchers
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .5)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .5)
@@ -917,6 +928,7 @@ class Conductor():
         patch = ""
         patch = patch + self.starting_crystal_patch()
         patch = patch + self.RM.get_patch()
+        patch = patch + self.exdeath_patch
         patch = patch + self.SM.get_patch()
         patch = patch + self.SPM.get_patch()
         patch = patch + self.EM.get_patch(relevant=True)
