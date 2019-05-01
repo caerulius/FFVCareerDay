@@ -70,8 +70,3 @@ LDA #$01
 STA $DB9A
 CLC
 JML $C116EC
-
-
-; fix message speed to permanently be fastest
-org $c104f0
-lda #$05

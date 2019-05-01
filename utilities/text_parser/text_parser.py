@@ -7,7 +7,7 @@ import os
 #table = 'text_table_shop.csv'
 table = 'text_table_chest.csv'
 
-GUI_FLAG = True
+GUI_FLAG = False
 # LOCAL PY VERSION
 
 if GUI_FLAG:
