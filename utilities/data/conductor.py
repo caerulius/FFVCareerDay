@@ -15,10 +15,6 @@ from formation import *
 from text_parser import *
 from monster_in_a_box import *
 
-
-STARTING_CRYSTAL_ADDRESS = 'E79F00'
-DEFAULT_POWER_CHANGE = 1.75
-STAT_MULTIPLIER = .25
 adjust_mult = 6
 RANK_EXP_REWARD = {1:50*adjust_mult,
 2:101*adjust_mult,
@@ -33,13 +29,19 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 11:13087*adjust_mult,
 12:15044*adjust_mult}
 
-SHINRYUU_VANILLA = True
 NUM_KEY_ITEMS = 20
+ITEM_TYPE = "40"
 
+ITEM_SHOP_TYPE = "01"
+MAGIC_SHOP_TYPE = "00"
+CRYSTAL_SHOP_TYPE = "07"
 
 class Conductor():
-    def __init__(self, random_engine):
+    def __init__(self, random_engine, config_file="local-config.ini"):
         self.RE = random_engine
+        self.config = configparser.ConfigParser()
+        self.config.read(config_file)
+        self.conductor_config = self.config['CONDUCTOR']
 
         self.DM = DataManager()                                 #Data manager loads all the csv's into memory and sets them up for processing
         self.CM = CollectibleManager(self.DM)                   #Set up collectibles (Includes Items, magic, crystals, and abilities)
@@ -50,6 +52,7 @@ class Conductor():
         self.EM = EnemyManager(self.DM)                         #Set up enemies and bosses
         self.FM = FormationManager(self.DM, self.EM)            #Set up battle formations
         self.MIBM = MonsterInABoxManager(self.DM, self.RE)      #Set up monsters in boxes
+        self.TP = TextParser()                                  #Set up Text Parser Utility Object
         
         self.difficulty = random.randint(1,10)
         crystals = self.get_crystals()
@@ -75,10 +78,11 @@ class Conductor():
             
         crystals = [x for x in crystals if x != starting_crystal]
 
-        crystal_count = self.RE.randint(8, len(crystals))
-        crystal_count = crystal_count - (self.difficulty // 3)
-        if crystal_count < 4:
-            crystal_count = 4
+        crystal_count = self.RE.randint(int(self.conductor_config['STARTING_CRYSTAL_COUNT']), len(crystals))
+        crystal_count = crystal_count - (self.difficulty // 3) #TODO: bring this to config
+
+        if crystal_count < int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT']):
+            crystal_count = int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT'])
 
         chosen_crystals = self.RE.sample(crystals, crystal_count)
 
@@ -88,13 +92,13 @@ class Conductor():
         for index, value in enumerate(self.CM.collectibles):
             related = [i for i in value.related_jobs if i in self.chosen_crystals_names]
             if len(related) > 0:
-                increase_amount = 3
+                increase_amount = int(self.conductor_config['ITEM_RELEVANCE_WEIGHT_MODIFIER'])
                 if type(value) == Crystal:
-                    increase_amount = 100000 #all but guarantee crystals appear
+                    increase_amount = int(self.conductor_config['CRYSTAL_RELEVANCE_WEIGHT_MODIFIER']) #all but guarantee crystals appear
                 if type(value) == Ability:
-                    increase_amount = 10 #much more likely to find these abilities
+                    increase_amount = int(self.conductor_config['ABILITY_RELEVANCE_WEIGHT_MODIFIER'])  #much more likely to find these abilities
                 if type(value) == Magic:
-                    increase_amount = 10 #much more likely to find these magics
+                    increase_amount = int(self.conductor_config['MAGIC_RELEVANCE_WEIGHT_MODIFIER'])  #much more likely to find these magics
                 value.place_weight = value.place_weight + increase_amount
 
     def randomize_rewards(self):
@@ -109,7 +113,7 @@ class Conductor():
         num_placed_key_items = 0
         exdeath_list = []
 
-        for _ in range(0, NUM_KEY_ITEMS):
+        for _ in range(0, int(self.conductor_config['NUM_KEY_ITEMS'])):
             next_key_reward = self.RE.choice([x for x in self.RM.get_rewards_by_style('key') if x.randomized == False])
 
             if next_key_reward.required_key_items == None:
@@ -158,7 +162,7 @@ class Conductor():
         for i in self.RE.sample(exdeath_list, 3):
             exdeath_rewards[i.collectible.reward_name] = i.exdeath_address
 
-        self.exdeath_patch = run_exdeath_rewards(exdeath_rewards)
+        self.exdeath_patch = self.TP.run_exdeath_rewards(exdeath_rewards)
 
         return num_placed_key_items
 
@@ -166,8 +170,8 @@ class Conductor():
         #this is just manually doing the shinryuu chest first.
         #we set all the info as if it had been randomized normally
         #and it's skipped during the main process
-        if SHINRYUU_VANILLA:
-            shinryuu_address = 'D135FA'
+        if self.conductor_config.getboolean('SHINRYUU_VANILLA'):
+            shinryuu_address = self.conductor_config['SHINRYUU_ADDRESS']
             shinryuu_chest = self.RM.get_reward_by_address(shinryuu_address)
             mib = self.MIBM.get_mib_by_address(shinryuu_address)
 
@@ -237,25 +241,11 @@ class Conductor():
             
 
     def randomize_shops(self):
-        required_items = {}
-        required_items["E0"] = 0 #Potion
-        required_items["E1"] = 0 #HiPotion
-        required_items["E2"] = 0 #Ether
-        required_items["E3"] = 0 #Elixir
-        required_items["E4"] = 0 #Fenix Down
-        required_items["E5"] = 0 #MaidensKiss
-        required_items["E6"] = 0 #Revivify
-        required_items["E7"] = 0 #Revivify
-        required_items["E8"] = 0 #Antidote
-        required_items["E9"] = 0 #Eyedrop
-        required_items["EC"] = 0 #Soft
-        required_items["ED"] = 0 #LuckMallet
-        required_items["F0"] = 0 #Tent
-        required_items["F1"] = 0 #Cabin
+        required_items = {i:0 for i in self.config['REQUIREDITEMS']['item_ids'].split('\n')}
 
-        item_chance = .6
-        magic_chance = .25
-        crystal_chance = .15
+        item_chance = float(self.conductor_config['ITEM_SHOP_CHANCE'])
+        magic_chance = float(self.conductor_config['MAGIC_SHOP_CHANCE'])
+        crystal_chance = float(self.conductor_config['CRYSTAL_SHOP_CHANCE'])
 
         #print("difficulty: " + str(self.difficulty))
         
@@ -267,7 +257,7 @@ class Conductor():
             #for the discount shops, put a single item in there
             if "discount" in value.readable_name:
                 value.num_items = 1
-                value.shop_type = "01"
+                value.shop_type = ITEM_SHOP_TYPE
                 value.contents = [self.CM.get_random_collectible(random, respect_weight=True,
                                                                    monitor_counts=True,
                                                                    of_type=Item)] + [None] * 7
@@ -309,7 +299,7 @@ class Conductor():
                 item_chance = item_chance - .1
                 magic_chance = magic_chance + .05
                 crystal_chance = crystal_chance + .05
-                value.shop_type = "01" #shop type: item
+                value.shop_type = ITEM_SHOP_TYPE
                 for i in range(0, value.num_items):
                     while True:
                         item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
@@ -329,7 +319,7 @@ class Conductor():
                 item_chance = item_chance + .05
                 magic_chance = magic_chance - .1
                 crystal_chance = crystal_chance + .05
-                value.shop_type = "00" #shop type: magic
+                value.shop_type = MAGIC_SHOP_TYPE
                 try:
                     for i in range(0, value.num_items):
                         while True:
@@ -343,7 +333,7 @@ class Conductor():
                         
                 except Exception as e:
                     contents = []
-                    value.shop_type = "01"
+                    value.shop_type = ITEM_SHOP_TYPE
                     for i in range(0, value.num_items):
                         contents.append(self.CM.get_random_collectible(random, respect_weight=True,
                                                                        monitor_counts=True,
@@ -356,7 +346,7 @@ class Conductor():
                 item_chance = item_chance + .05
                 magic_chance = magic_chance + .05
                 crystal_chance = crystal_chance - .1
-                value.shop_type = "07" #shop type: crystal/ability
+                value.shop_type = CRYSTAL_SHOP_TYPE #shop type: crystal/ability
                 try:
                     for i in range(0, value.num_items):
                         while True:
@@ -369,7 +359,7 @@ class Conductor():
                         contents.append(item_to_place)
                 except Exception as e:
                     contents = []
-                    value.shop_type = "01"
+                    value.shop_type = ITEM_SHOP_TYPE
                     for i in range(0, value.num_items):
                         contents.append(self.CM.get_random_collectible(random, respect_weight=True,
                                                                        monitor_counts=True,
@@ -380,11 +370,13 @@ class Conductor():
                 
             value.contents = contents
 
+        '''
         for shop in [x for x in self.SM.shops if x.valid]:
             if shop.num_items == 0:
                 print(shop.readable_name)
                 print(shop.shop_type)
                 print(shop.valid)
+        '''
 
         #manage the must place items here
         for index, value in required_items.items():
@@ -392,9 +384,9 @@ class Conductor():
             chosen_slot = None
             while value < 3:
                 #print("guaranteeing " + index)
-                item_to_place = self.CM.get_by_id_and_type(index, "40")
+                item_to_place = self.CM.get_by_id_and_type(index, ITEM_TYPE)
                 #print(item_to_place.reward_name)
-                item_shops = [x for x in self.SM.shops if x.shop_type == "01" and x.valid and x.num_items > 0 and x.num_items < 8]
+                item_shops = [x for x in self.SM.shops if x.shop_type == ITEM_SHOP_TYPE and x.valid and x.num_items > 0 and x.num_items < 8]
                 #print("number of item shops: " + str(len(item_shops)))
                 chosen_shop = item_shops[random.choice(range(0, len(item_shops)))]
                 slot = chosen_shop.num_items #because of 0 indexing, we want this, not this + 1
@@ -438,6 +430,7 @@ class Conductor():
         # Create patch file for custom AI and clear out any previous 
         #with open('../../projects/test_asm/boss_hp_ai.asm','w') as file:
         #    file.write('hirom\n')
+        banned_at_odin = self.config['BANNEDATODIN']['boss_names'].split('\n')
     
 
         for random_boss in [x for x in self.FM.formations if x.randomized_boss == 'y']:
@@ -446,8 +439,7 @@ class Conductor():
 
             #this is specifically an unworkable situation
             #this will just cycle gogo/stalker to the end and get a new boss
-            while (random_boss.enemy_1_name == "Gogo" and original_boss.enemy_1_name == "Odin") or \
-                  (random_boss.enemy_1_name == "Stalker" and original_boss.enemy_1_name == "Odin"):
+            while (original_boss.enemy_1_name == "Odin" and random_boss.enemy_1_name in banned_at_odin):
                 original_boss_list = [original_boss] + original_boss_list
                 original_boss = original_boss_list.pop()
 
@@ -486,11 +478,11 @@ class Conductor():
 
             rank_adj_flag = int(new_rank) % ((new_tier * 3)-1)
             if rank_adj_flag == 1:
-                stat_rank_mult = 0.8
+                stat_rank_mult = float(self.conductor_config['BOSS_RANK_ADJUST_LOW'])
             elif rank_adj_flag == 0:
-                stat_rank_mult = 1.0
+                stat_rank_mult = float(self.conductor_config['BOSS_RANK_ADJUST_MED'])
             else:
-                stat_rank_mult = 1.2
+                stat_rank_mult = float(self.conductor_config['BOSS_RANK_ADJUST_HIGH'])
             #print(str(rank_adj_flag)+"   "+str((int(new_rank)))+"  "+str((new_tier * 3)-1))
             #print(str(stat_rank_mult))
 
@@ -684,7 +676,7 @@ class Conductor():
             # So invert the multiplier
     
             # First use 25% multiplier over 100% of the original (the +1 at the end)
-            rank_mult = (abs(rank_delta) * STAT_MULTIPLIER) + 1 
+            rank_mult = (abs(rank_delta) * float(self.conductor_config['STAT_MULTIPLIER'])) + 1 
             
             new_exp = base_exp * 1/rank_mult
             # Round for nice number, merely for presentation
@@ -862,7 +854,7 @@ class Conductor():
         output = ";================"
         output = output + "\n;starting crystal"
         output = output + "\n;================\n"
-        output = output + "org $" + STARTING_CRYSTAL_ADDRESS
+        output = output + "org $" + self.conductor_config['STARTING_CRYSTAL_ADDRESS']
         output = output + "\ndb $" + self.starting_crystal.patch_id
         output = output + ", $" + self.starting_crystal.starting_weapon_id
         output = output + ", $" + self.starting_crystal.starting_spell_id
@@ -892,14 +884,14 @@ class Conductor():
             c = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
             #print("collectible there is: " + c.reward_name)
             #@ will be used for our newline character, won't otherwise be present, and don't have the problems \n causes
-            output = output + run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
+            output = output + self.TP.run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
         return output
 
     def randomize(self, random_engine=None):
         if random_engine is None:
             random_engine = self.RE
         
-        self.AM.change_power_level(DEFAULT_POWER_CHANGE)
+        self.AM.change_power_level(float(self.conductor_config['DEFAULT_POWER_CHANGE']))
         print("Randomizing key items...")
         num_placed_key_items = self.randomize_key_items()
         #print(num_placed_key_items)
@@ -942,3 +934,7 @@ class Conductor():
         patch = patch + self.kuzar_text_patch()
 
         return(spoiler, patch)
+
+#c = Conductor(random)
+#(spoiler, patch) = c.randomize()
+#print(spoiler)
