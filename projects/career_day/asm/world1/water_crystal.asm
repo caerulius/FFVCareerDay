@@ -34,7 +34,7 @@ db $84, $03                     ;Sprite 084 do event: Move Down
 db $84, $03                     ;Sprite 084 do event: Move Down
 db $84, $0A                     ;Sprite 084 do event: Hide
 
-
+db $D8, $86, $04
 db $BD, $06, $FF                ;Start Event Battle 06
 
 db $C5, $80
@@ -109,25 +109,26 @@ db $03                          ;Player Move Down
 db $03                          ;Player Move Down
 db $03                          ;Player Move Down
 db $03                          ;Player Move Down
-db $85, $54                     ;Sprite 085 do event: 54
-db $D3, $86, $00, $00           ;Sprite 86 set map position 00, 00
-db $85, $09                     ;Sprite 085 do event: Show
-db $85, $11                     ;Sprite 085 do event: face up, right hand forward
-db $81, $26                     ;Sprite 081 do event: face up, right hand raised out
-db $80, $26                     ;Sprite 080 do event: face up, right hand raised out
-db $83, $26                     ;Sprite 083 do event: face up, right hand raised out
-db $82, $26                     ;Sprite 082 do event: face up, right hand raised out
-db $CE, $03, $02                ;Play next 02 bytes 03 times
-db $85, $03                     ;Sprite 085 do event: Move Down
-db $81, $24                     ;Sprite 081 do event: face down, right hand raised in
-db $80, $24                     ;Sprite 080 do event: face down, right hand raised in
-db $83, $24                     ;Sprite 083 do event: face down, right hand raised in
-db $82, $24                     ;Sprite 082 do event: face down, right hand raised in
-db $85, $02                     ;Sprite 085 do event: Move Right
-db $85, $02                     ;Sprite 085 do event: Move Right
-db $85, $03                     ;Sprite 085 do event: Move Down
-db $D8, $86, $04, $85           ;Unknown
-db $0A                          ;Player Hide
+; db $85, $54                     ;Sprite 085 do event: 54
+; db $D3, $86, $00, $00           ;Sprite 86 set map position 00, 00
+; db $85, $09                     ;Sprite 085 do event: Show
+; db $85, $11                     ;Sprite 085 do event: face up, right hand forward
+; db $81, $26                     ;Sprite 081 do event: face up, right hand raised out
+; db $80, $26                     ;Sprite 080 do event: face up, right hand raised out
+; db $83, $26                     ;Sprite 083 do event: face up, right hand raised out
+; db $82, $26                     ;Sprite 082 do event: face up, right hand raised out
+; db $CE, $03, $02                ;Play next 02 bytes 03 times
+; db $85, $11                     ;Sprite 080 do event face right, down hand backward
+; db $85, $03                     ;Sprite 085 do event: Move Down
+; db $81, $24                     ;Sprite 081 do event: face down, right hand raised in
+; db $80, $24                     ;Sprite 080 do event: face down, right hand raised in
+; db $83, $24                     ;Sprite 083 do event: face down, right hand raised in
+; db $82, $24                     ;Sprite 082 do event: face down, right hand raised in
+; db $85, $02                     ;Sprite 085 do event: Move Right
+; db $85, $02                     ;Sprite 085 do event: Move Right
+; db $85, $03                     ;Sprite 085 do event: Move Down
+
+db $85, $0A                          
 db $09                          ;Player Show
 db $80, $0A                     ;Sprite 080 do event: Hide
 db $DB                          ;Restore Player status

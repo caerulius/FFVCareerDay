@@ -28,8 +28,8 @@ db $A3, $CA ; off
 
 db $C5, $80                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
-db $C4, $03
-db $73
+db $C4, $06
+db $71
 db $E1, $01, $00, $4C, $6F, $00 ;Return from cutscene? E1 00 97 1A 00
 db $ED, $01, $4B, $6E, $6C ; hiryuu CONDITIONAL
 db $ED, $01, $4C, $73, $90 ; submarine CONDITIONAL
@@ -43,8 +43,8 @@ db $A5, $F9            ; set address 000A53 bit OFF 02
 
 db $EE
 db $14
-db $C3, $03
-db $73
+db $C3, $06
+db $71
 db $FF
 
 ; Warp message world 2
