@@ -931,7 +931,7 @@ class Conductor():
         patch = patch + self.SPM.get_patch()
         patch = patch + self.EM.get_patch(relevant=True)
         patch = patch + self.FM.get_patch()
-        # patch = patch + self.kuzar_text_patch()
+        patch = patch + self.kuzar_text_patch()
 
         return(spoiler, patch)
 
