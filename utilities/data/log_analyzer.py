@@ -85,14 +85,17 @@ def run_collection(NUM_ITERATIONS):
     df_shops_master = pd.DataFrame()
     
     for num in range(0,NUM_ITERATIONS):
-        c = Conductor(random)
-        random_num = round(random.random()*10000000)
-        c.randomize(random_num)
-        spoiler = c.RM.get_spoiler()
-        df_key_master = df_key_master.append(get_key_item_df(spoiler,random_num))
-        df_rewards_master = df_rewards_master.append(get_rewards_df(spoiler,random_num))
-        df_crystals_master = df_crystals_master.append(get_crystals(c,random_num))
-        df_shops_master = df_shops_master.append(get_shops(c,random_num))
+        try:
+            c = Conductor(random)
+            random_num = round(random.random()*10000000)
+            c.randomize(random_num)
+            spoiler = c.RM.get_spoiler()
+            df_key_master = df_key_master.append(get_key_item_df(spoiler,random_num))
+            df_rewards_master = df_rewards_master.append(get_rewards_df(spoiler,random_num))
+            df_crystals_master = df_crystals_master.append(get_crystals(c,random_num))
+            df_shops_master = df_shops_master.append(get_shops(c,random_num))
+        except:
+            pass
     return df_key_master, df_rewards_master, df_crystals_master, df_shops_master
 
 def run_pivots(df_rewards,df_shops):
