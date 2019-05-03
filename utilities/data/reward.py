@@ -16,6 +16,7 @@ class Reward:
         self.reward_style (event, chest, key)
         self.force_type (Item, Gil, etc.)
         self.required_key_items (Sandworm Bait, Adamantite, etc.)
+        self.exdeath_address (Address only relevant to the key item rewards, that tells the special exdeath rewards where to write)
         '''
         if type(self.force_type) == float:
             self.force_type = None

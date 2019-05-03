@@ -48,7 +48,7 @@ progression_abilities = {
 	"22": "Black Ability Progressive",
 	"23": "Dimen Ability Progressive",
 	"24": "Summon Ability Progressive",
-	"24": "Red1->Red2->Red3->X-Magic",
+	"25": "Red1->Red2->Red3->X-Magic",
 	"32": "HP +X%",
 	"33": "MP +X%"
 }

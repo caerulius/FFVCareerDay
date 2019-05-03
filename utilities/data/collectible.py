@@ -183,7 +183,7 @@ class Gil(Collectible):
     def __init__(self, gil_id, data_row):
         self.reward_type = data_row['power_byte']
         super().__init__(data_row['number_byte'], str(data_row['readable_amount']) + " gil",
-                         int(data_row['value']), [], data_row['max_count'], valid = True)
+                         int(data_row['value']), [], data_row['max_count'])
 
     @property
     def patch_id(self):
@@ -280,7 +280,7 @@ class CollectibleManager():
                                                                   x.max_count is None or
                                                                   x.max_count < self.placement_history[x])]
 
-    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False, disable_zerozero=False):   
+    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False, disable_zerozero=False):
         if type(of_type) is str: # this is a literal string definition of a type, so let's cast it first
             if of_type in type_dict.keys():
                 of_type = type_dict[of_type]
@@ -292,10 +292,13 @@ class CollectibleManager():
         else:
             working_list = [x for x in self.collectibles if x.valid and type(x) != KeyItem] #this will be a non shop
 
-        if gil_allowed and len(self.placed_gil_rewards) < len([x for x in self.get_all_of_type(Gil)]): #first, place all our gil rewards
+        if gil_allowed and len(self.placed_gil_rewards) < len([x for x in self.collectibles if x.type_str == 'Gil']): #first, place all our gil rewards
             choice = random.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards])
             self.placed_gil_rewards.append(choice)
             return choice
+
+        if not gil_allowed:
+            working_list = [x for x in working_list if type(x) is not Gil]
             
         if monitor_counts is True:
             working_list = [y for y in [x for x in working_list if
