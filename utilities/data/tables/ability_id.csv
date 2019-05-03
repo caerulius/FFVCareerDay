@@ -41,7 +41,7 @@ ability_id,readable_name,valid,value,related_jobs,max_count,progression_id
 27,Sing,TRUE,2,[“Bard”],1,1C
 28,Flirt,TRUE,2,[“Dancer”],1,1D
 29,Dance,TRUE,2,[“Dancer”],1,1E
-2A,Mimic,TRUE,2,[“Mimic”],1,1C
+2A,Mimic,TRUE,2,[“Mimic”],1,1F
 2B,Blank18,FALSE,0,[],0,FF
 2C,Blank19,FALSE,0,[],0,FF
 2D,Blank20,FALSE,0,[],0,FF
