@@ -545,7 +545,7 @@ class Conductor():
                 new_hp = new_hp * 3
                 
             # CLAUSE FOR ENEMIES WITH 4x BOSS AS SEPARATE ENEMIES
-            # TRITON/PHOBOS/NEREGEID
+            # GUARDIANS
             if original_formation_id in ['21']:
                 new_hp = new_hp * 4
                 
