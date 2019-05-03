@@ -43,16 +43,16 @@ class Conductor():
         self.config.read(config_file)
         self.conductor_config = self.config['CONDUCTOR']
 
-        self.DM = DataManager()                                 #Data manager loads all the csv's into memory and sets them up for processing
-        self.CM = CollectibleManager(self.DM)                   #Set up collectibles (Includes Items, magic, crystals, and abilities)
-        self.RM = RewardManager(self.CM, self.DM)               #Set up rewards (Includes chests and events)
-        self.SM = ShopManager(self.CM, self.DM)                 #Set up shops
-        self.SPM = ShopPriceManager(self.CM, self.DM)           #Set up shop prices
-        self.AM = AreaManager(self.DM, self.RE)                 #Set up areas (Tule, The Void, etc)
-        self.EM = EnemyManager(self.DM)                         #Set up enemies and bosses
-        self.FM = FormationManager(self.DM, self.EM)            #Set up battle formations
-        self.MIBM = MonsterInABoxManager(self.DM, self.RE)      #Set up monsters in boxes
-        self.TP = TextParser()                                  #Set up Text Parser Utility Object
+        self.DM = DataManager()                            #Data manager loads all the csv's into memory and sets them up for processing
+        self.CM = CollectibleManager(self.DM)              #Set up collectibles (Includes Items, magic, crystals, and abilities)
+        self.RM = RewardManager(self.CM, self.DM)          #Set up rewards (Includes chests and events)
+        self.SM = ShopManager(self.CM, self.DM)            #Set up shops
+        self.SPM = ShopPriceManager(self.CM, self.DM)      #Set up shop prices
+        self.AM = AreaManager(self.DM, self.RE)            #Set up areas (Tule, The Void, etc)
+        self.EM = EnemyManager(self.DM)                    #Set up enemies and bosses
+        self.FM = FormationManager(self.DM, self.EM)       #Set up battle formations
+        self.MIBM = MonsterInABoxManager(self.DM, self.RE) #Set up monsters in boxes
+        self.TP = TextParser()                             #Set up Text Parser Utility Object
         
         self.difficulty = random.randint(1,10)
         crystals = self.get_crystals()
@@ -184,7 +184,7 @@ class Conductor():
         while self.AM.any_areas_not_full():
             #print()
             #print("not full yet")
-            area = self.AM.get_next_area()
+            area = self.AM.get_emptiest_area()
             if area is None:
                 break
             #print("next area to place in: " + area.area_name)
