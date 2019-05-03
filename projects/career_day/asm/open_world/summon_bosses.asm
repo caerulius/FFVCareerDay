@@ -20,3 +20,20 @@ org $D06EB8
 db $B2, $00
 org $D06EB0
 db $B2, $00
+
+
+; write formation flags to not run away
+org $D034C1
+db $FF
+org $D03BB1
+db $FF
+org $D03A51
+db $FF
+
+; give them boss music
+org $D034CE
+db $08
+org $D03BBE
+db $08
+org $D03A5E
+db $08

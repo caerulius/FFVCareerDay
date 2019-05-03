@@ -277,7 +277,7 @@ idx,enemy_name,enemy_rank,tier,num_gauge_time,num_phys_power,num_phys_mult,num_e
 343,Apocalypse,boss,4,45,65,21,10,30,25,70,33,50000,d0c0a6,"[47,48,49,51,52,53,55,56,57,63,64,65,119,183]","[Aero3,Aero3,Aero3,Aero3,Aero3,Aero3,Aero3,Aero3,Aero3,Aero3,Aero3,Aero3,Aero3,Aero3]",[],[]
 344,Catastroph,boss,1,30,5,12,15,0,0,0,0,19997,d0c1d3,"[13,14,15,17,18,19]","[Fight,Quicksand,DemonEye,Fight,Quicksand,Specialty]",[],[]
 344,Catastroph,boss,2,35,25,14,15,15,10,7,16,19997,d0c1d3,"[13,14,15,17,18,19]","[Fight,Quicksand,DemonEye,Fight,SurgeBeam,Specialty]",[],[]
-344,Catastroph,boss,3,40,44,16,15,30,15,13,33,19997,d0c1d3,"[13,14,15,17,18,19]","[Quicksand,ReversePolarity,DemonEye,Fight,EarthShaker,Specialty]",[],[]
+344,Catastroph,boss,3,40,44,16,15,30,15,13,33,19997,d0c1d3,"[13,14,15,17,18,19]","[Quicksand,DemonEye,DemonEye,Fight,EarthShaker,Specialty]",[],[]
 344,Catastroph,boss,4,45,67,18,15,40,20,20,33,19997,d0c1d3,"[13,14,15,17,18,19]","[EarthShaker,DemonEye,DemonEye,Fight,Quake,Specialty]",[],[]
 345,Necrofobia,boss,1,32,5,16,0,4,0,4,25,10000,d0c1e9,"[21,50,51,57]","[Flare,Fire,Bolt,Ice]",[],[]
 345,Necrofobia,boss,2,37,20,16,10,10,30,10,37,10000,d0c1e9,"[21,50,51,57]","[Flare,Fire2,Bolt2,Ice2]",[],[]

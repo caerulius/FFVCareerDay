@@ -521,29 +521,6 @@ db $FF                          ;End Event
 
 
 
-org $C9C863
-db $CE, $04, $0C                ;Play next 0C bytes 04 times
-db $10                          ;Player pose: face up, left hand forward
-db $00, $00
-db $10                          ;Player pose: face up, left hand forward
-db $00, $00
-db $12                          ;Player pose: face right, standing
-db $00, $00
-db $14                          ;Player pose: face down, left hand forward
-db $00, $00
-db $38                          ;Player pose: face down, squatting
-db $00
-db $39                          ;Player pose: face down, both arms raised
-db $0B                          ;<Unknown>
-db $B4, $29                     ;Play Background Music Fanfare 1 (short)
-db $00, $00
-db $00, $00, $00
-db $E4, $B4                     ;Unknown
-db $24                          ;Player pose: face down, right hand raised in
-db $FF                          ;End Event
-
-
-
 ; remove unsetting of key items in key item inventory
 org $C9B5A6
 db $00, $00
@@ -553,3 +530,11 @@ org $C9B5B6
 db $00, $00
 org $C9B5BE
 db $00, $00
+
+; speed up get item cutscene
+org $C9C863
+db $0B                          ;<Unknown>
+; db $B4, $29                     ;Play Background Music Fanfare 1 (short)
+db $24                          ;Player pose: face down, right hand raised in
+
+db $FF                          ;End Event

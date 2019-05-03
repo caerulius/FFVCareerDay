@@ -8,23 +8,23 @@ hirom
 
 org $C8C7DF
 
-db $B1, $04                     ;Set Player Sprite 04
-db $D3, $84, $94, $24           ;Sprite 84 set map position 94, 24
-db $D3, $85, $94, $24           ;Sprite 85 set map position 94, 24
-db $D3, $87, $94, $24           ;Sprite 87 set map position 94, 24
-db $84, $09                     ;Sprite 084 do event Show
-db $85, $09                     ;Sprite 085 do event Show
-db $87, $09                     ;Sprite 087 do event Show
-db $C7, $06                     ;Play next 06 bytes simultaneously
-db $84, $01                     ;Sprite 084 do event Move Up
-db $85, $01                     ;Sprite 085 do event Move Up
-db $87, $01                     ;Sprite 087 do event Move Up
-db $C7, $04                     ;Play next 04 bytes simultaneously
-db $85, $02                     ;Sprite 085 do event Move Right
-db $87, $04                     ;Sprite 087 do event Move Left
-db $84, $24                     ;Sprite 084 do event face down, right hand raised in
-db $85, $24                     ;Sprite 085 do event face down, right hand raised in
-db $87, $24                     ;Sprite 087 do event face down, right hand raised in
+; db $B1, $01                     ;Set Player Sprite 04
+; db $D3, $84, $94, $24           ;Sprite 84 set map position 94, 24
+; db $D3, $85, $94, $24           ;Sprite 85 set map position 94, 24
+; db $D3, $87, $94, $24           ;Sprite 87 set map position 94, 24
+; db $84, $09                     ;Sprite 084 do event Show
+; db $85, $09                     ;Sprite 085 do event Show
+; db $87, $09                     ;Sprite 087 do event Show
+; db $C7, $06                     ;Play next 06 bytes simultaneously
+; db $84, $01                     ;Sprite 084 do event Move Up
+; db $85, $01                     ;Sprite 085 do event Move Up
+; db $87, $01                     ;Sprite 087 do event Move Up
+; db $C7, $04                     ;Play next 04 bytes simultaneously
+; db $85, $02                     ;Sprite 085 do event Move Right
+; db $87, $04                     ;Sprite 087 do event Move Left
+; db $84, $24                     ;Sprite 084 do event face down, right hand raised in
+; db $85, $24                     ;Sprite 085 do event face down, right hand raised in
+; db $87, $24                     ;Sprite 087 do event face down, right hand raised in
 db $F0, $B7, $04              ;Conditional yes/no dialogue at 04B7
 db $CD, $08, $04                ;Run event index 0408
 db $FF                          ;End Event
@@ -143,27 +143,27 @@ db $BE, $00                     ;Rumble effect of 00 magnitude
 db $A5, $00                     ;Clear Event Flag 100
 db $14                          ;Player pose: face down, left hand forward
 db $70                          ;Short pause
-db $D3, $84, $94, $2E           ;Sprite 84 set map position 94, 2E
-db $D3, $85, $94, $2E           ;Sprite 85 set map position 94, 2E
-db $D3, $87, $94, $2E           ;Sprite 87 set map position 94, 2E
-db $84, $09                     ;Sprite 084 do event: Show
-db $85, $09                     ;Sprite 085 do event: Show
-db $87, $09                     ;Sprite 087 do event: Show
-db $C7, $06                     ;Play next 06 bytes simultaneously
-db $84, $01                     ;Sprite 084 do event: Move Up
-db $85, $01                     ;Sprite 085 do event: Move Up
-db $87, $01                     ;Sprite 087 do event: Move Up
-db $C7, $04                     ;Play next 04 bytes simultaneously
-db $85, $02                     ;Sprite 085 do event: Move Right
-db $87, $04                     ;Sprite 087 do event: Move Left
-db $84, $24                     ;Sprite 084 do event: face down, right hand raised in
-db $85, $24                     ;Sprite 085 do event: face down, right hand raised in
-db $87, $24                     ;Sprite 087 do event: face down, right hand raised in
+; db $D3, $84, $94, $2E           ;Sprite 84 set map position 94, 2E
+; db $D3, $85, $94, $2E           ;Sprite 85 set map position 94, 2E
+; db $D3, $87, $94, $2E           ;Sprite 87 set map position 94, 2E
+; db $84, $09                     ;Sprite 084 do event: Show
+; db $85, $09                     ;Sprite 085 do event: Show
+; db $87, $09                     ;Sprite 087 do event: Show
+; db $C7, $06                     ;Play next 06 bytes simultaneously
+; db $84, $01                     ;Sprite 084 do event: Move Up
+; db $85, $01                     ;Sprite 085 do event: Move Up
+; db $87, $01                     ;Sprite 087 do event: Move Up
+; db $C7, $04                     ;Play next 04 bytes simultaneously
+; db $85, $02                     ;Sprite 085 do event: Move Right
+; db $87, $04                     ;Sprite 087 do event: Move Left
+; db $84, $24                     ;Sprite 084 do event: face down, right hand raised in
+; db $85, $24                     ;Sprite 085 do event: face down, right hand raised in
+; db $87, $24                     ;Sprite 087 do event: face down, right hand raised in
 db $BE, $01                     ;Rumble effect of 01 magnitude
 db $70                          ;Short pause
-db $90, $09                     ;Sprite 190 do event: Show
+; db $90, $09                     ;Sprite 190 do event: Show
 db $91, $09                     ;Sprite 191 do event: Show
-db $92, $09                     ;Sprite 192 do event: Show
+; db $92, $09                     ;Sprite 192 do event: Show
 db $CF, $06, $06                ;Play next 06 bytes simultaneously 06 times
 db $90, $01                     ;Sprite 190 do event: Move Up
 db $91, $01                     ;Sprite 191 do event: Move Up

@@ -125,7 +125,7 @@ db $B5, $02
 db $71
 db $DE, $76 ; custom reward
 db $DF
-db $75
+db $71
 db $C4, $02
 db $A2, $75                     ;Turn on bit 20 at address 0x7e0a22
 db $E3, $67, $01, $93, $12, $00 ;Inter-map cutscene? 67 01 93 12 00
@@ -134,32 +134,33 @@ db $88, $09                     ;Sprite 088 do event: Show
 db $88, $24                     ;Sprite 088 do event: face down, right hand raised in
 db $0A                          ;Player Hide
 db $B4, $30                     ;Play Background Music The Day Will Come
-db $D3, $82, $93, $0F           ;Sprite 82 set map position 93, 0F
-db $D3, $83, $93, $11           ;Sprite 83 set map position 93, 11
-db $D3, $85, $93, $11           ;Sprite 85 set map position 93, 11
+; db $D3, $82, $93, $0F           ;Sprite 82 set map position 93, 0F
+; db $D3, $83, $93, $11           ;Sprite 83 set map position 93, 11
+; db $D3, $85, $93, $11           ;Sprite 85 set map position 93, 11
 db $C3, $02                     ;Fade in Speed 08
-db $B3, $10                     ;Pause for 100 cycles
-db $CD, $73, $07                ;Run event index 0773
-db $88, $02                     ;Sprite 088 do event: Move Right
-db $88, $04                     ;Sprite 088 do event: Move Left
-db $88, $04                     ;Sprite 088 do event: Move Left
-db $CD, $73, $07                ;Run event index 0773
-db $88, $20                     ;Sprite 088 do event: face down, left hand raised out
-db $B4, $30                     ;Play Background Music The Day Will Come
-db $CD, $88, $07                ;Run event index 0788
-db $CD, $73, $07                ;Run event index 0773
-db $88, $03                     ;Sprite 088 do event: Move Down
-db $88, $03                     ;Sprite 088 do event: Move Down
-db $88, $3E                     ;Sprite 088 do event: face up, both arms raised in
-db $88, $24                     ;Sprite 088 do event: face down, right hand raised in
-db $86, $01                     ;Sprite 086 do event: Move Up
-db $C5                          ;<unknown>
-db $40                          ;Player pose: face down, looking right, eyes lowered
-db $86, $0A                     ;Sprite 086 do event: Hide
-db $C5                          ;<unknown>
-db $40                          ;Player pose: face down, looking right, eyes lowered
-db $C5                          ;<unknown>
-db $40                          ;Player pose: face down, looking right, eyes lowered
+db $74
+; db $B3, $10                     ;Pause for 100 cycles
+; db $CD, $73, $07                ;Run event index 0773
+; db $88, $02                     ;Sprite 088 do event: Move Right
+; db $88, $04                     ;Sprite 088 do event: Move Left
+; db $88, $04                     ;Sprite 088 do event: Move Left
+; db $CD, $73, $07                ;Run event index 0773
+; db $88, $20                     ;Sprite 088 do event: face down, left hand raised out
+; db $B4, $30                     ;Play Background Music The Day Will Come
+; db $CD, $88, $07                ;Run event index 0788
+; db $CD, $73, $07                ;Run event index 0773
+; db $88, $03                     ;Sprite 088 do event: Move Down
+; db $88, $03                     ;Sprite 088 do event: Move Down
+; db $88, $3E                     ;Sprite 088 do event: face up, both arms raised in
+; db $88, $24                     ;Sprite 088 do event: face down, right hand raised in
+; db $86, $01                     ;Sprite 086 do event: Move Up
+; db $C5                          ;<unknown>
+; db $40                          ;Player pose: face down, looking right, eyes lowered
+; db $86, $0A                     ;Sprite 086 do event: Hide
+; db $C5                          ;<unknown>
+; db $40                          ;Player pose: face down, looking right, eyes lowered
+; db $C5                          ;<unknown>
+; db $40                          ;Player pose: face down, looking right, eyes lowered
 db $C8, $E2, $05                ;Display Message/Text/Dialogue E2 05
 db $C4, $02
 db $75

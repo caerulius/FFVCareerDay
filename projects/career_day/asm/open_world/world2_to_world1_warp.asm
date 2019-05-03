@@ -44,8 +44,8 @@ db $A3, $CA ; off
 
 db $C5, $80                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
-db $C4, $03
-db $73
+db $C4, $06
+db $71
 db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
 db $D2, $00, $91, $74, $D8
 db $14
@@ -60,8 +60,8 @@ db $A3, $79            ; set address 000A23 bit OFF 02
 
 db $EE				; Conditional flag handling event
 
-db $C3, $03
-db $73
+db $C3, $06
+db $71
 
 db $FF
 
@@ -106,10 +106,11 @@ db $A2, $CA ; on
 
 db $C5, $80                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
-db $C4, $03
-db $73
+db $C4, $06
+db $71
 db $E1, $02, $00, $93, $52, $00 ;Return from cutscene? 00 00 9C 96 00
 db $D2, $02, $93, $51, $D8     ; airship
+db $D2, $02, $AE, $E9, $48     ; bchoco
 ; WORLD CONDITIONALS
 ; Submarine conditional $EE
 ; db $A4, $F9            ; set address 000A53 bit ON 02
@@ -122,8 +123,8 @@ db $A2, $79            ; set address 000A23 bit ON 02
 db $EE
 
 db $14
-db $C3, $03
-db $73
+db $C3, $06
+db $71
 db $FF
 
 

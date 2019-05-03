@@ -342,3 +342,16 @@ nop
 ; delete guy blocking lone wolf item in carwen
 org $CE65B7
 db $00
+
+
+; gilgamesh music fix
+org $D0495E
+db $18
+org $D04C9E
+db $18
+org $D04D0E
+db $18
+org $D04D4E
+db $18
+org $D04D8E
+db $18

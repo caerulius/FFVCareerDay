@@ -7,10 +7,9 @@ org $C88F0C
 db $C5, $80                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
 db $72
-db $C4, $02
-db $75
-db $E1, $FE, $01, $03, $13, $00 ;Return from cutscene? 00 00 9C 96 00
+db $C4, $06
 db $71
+db $E1, $FE, $01, $03, $13, $00 ;Return from cutscene? 00 00 9C 96 00
 
 ; this disables all timer related events 
 db $CB, $38, $05
@@ -35,8 +34,8 @@ db $A3, $C0            ; set address 000A2C bit OFF 01
 ; restore player status for SAFETY
 db $DB
 
-db $C3, $03
-db $74
+db $C3, $06
+db $71
 db $FF
 pad $C88F86
 
@@ -144,8 +143,8 @@ db $A2, $CA ; on
 
 db $C5, $80                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
-db $C4, $03
-db $73
+db $C4, $06
+db $71
 db $E1, $FC, $01, $27, $2A, $00 ;Return from cutscene? 00 00 9C 96 00
 db $D2, $02, $93, $51, $D8     ; airship
 ; WORLD CONDITIONALS
@@ -160,8 +159,8 @@ db $A2, $79            ; set address 000A23 bit ON 02
 db $EE
 
 db $14
-db $C3, $03
-db $73
+db $C3, $06
+db $71
 db $FF
 
 

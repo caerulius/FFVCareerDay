@@ -196,6 +196,7 @@ db $A2, $5E            ; set address 000A1F bit ON 40  - sets barrier active
 db $CB, $15, $03                ;Turn off bit 20 at address  0x7e0ab6
 db $CB, $16, $03                ;Turn off bit 40 at address  0x7e0ab6
 db $CB, $17, $03                ;Turn off bit 80 at address  0x7e0ab6
+db $CA, $18, $03            ; set address 000AB7 bit ON 01
 db $CB, $1B, $03                ;Turn off bit 08 at address  0x7e0ab7
 db $CA, $0E, $00                ;Turn on bit 40 at address  0x7e0a55
 ; db $A2, $58                     ;Turn on bit 01 at address 0x7e0a1f
@@ -222,8 +223,8 @@ db $A3, $5D            ; set address 000A1F bit OFF 20
 
 ; MOOGLE VILLAGE
 ; Set flags for open village
-db $CB, $3E, $02                        ;Clear Flag 2/3/4/5/3E 02
-db $CB, $3F, $02                        ;Clear Flag 2/3/4/5/3F 02
+; db $CB, $3E, $02                        ;Clear Flag 2/3/4/5/3E 02
+; db $CB, $3F, $02                        ;Clear Flag 2/3/4/5/3F 02
 ; db $A4, $3C                     ;Set Event Flag 13C (this is tyrasaur being defeated, and previously moogle village unlocked)
 db $A4, $2C                     ;Turn on bit 10 at address 0x7e0a39 (this is now village being unlocked)
 db $CB, $E6, $01                ;Clear Flag 2/3/4/5/E6 01
@@ -293,7 +294,7 @@ db $CA, $2A, $00                ;Turn on bit 04 at address  0x7e0a59
 
 
 ; HIRYUU VALLEY
-db $CB, $D3, $02                ;Clear Flag 2/3/4/5/D3 02
+; db $CB, $D3, $02                ;Clear Flag 2/3/4/5/D3 02
 
 
 ; GUIDO ISLAND

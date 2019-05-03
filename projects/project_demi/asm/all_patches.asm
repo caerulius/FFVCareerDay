@@ -189,7 +189,8 @@ incsrc ../../shared_asm/recovery/tent.asm
 incsrc reward_events/piratescave_syldra.asm
 incsrc reward_events/balcastle_odin.asm
 incsrc reward_events/forktower_holyflare.asm
-incsrc reward_events/istory_lovesong.asm
+; incsrc reward_events/istory_lovesong.asm  ; Update reward
+; incsrc reward_events/istory_toad.asm  ; Update reward
 incsrc reward_events/kelb_cornajar.asm
 incsrc reward_events/kelb_requiem.asm
 incsrc reward_events/lix_temptationsong.asm

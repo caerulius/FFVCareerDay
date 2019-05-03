@@ -555,8 +555,8 @@ class Conductor():
                 new_hp = new_hp * 5
                 
             # CLAUSE FOR SOL CANNON
-            if original_formation_id in ['0E']:
-                new_hp = min(new_hp - 10000,1)
+#            if original_formation_id in ['0E']:
+#                new_hp = new_hp + 10000
                 
             # CLAUSE FOR NECROPHOBIA:
             if original_formation_id in ['4B']:
@@ -633,7 +633,7 @@ class Conductor():
             # CLAUSE FOR SOLCANNON
             elif random_boss.event_id in ['0E']:
                 # Add 10k HP to pool, apply 50% to Launchers
-                new_hp = max(new_hp + 10000,65535)
+                # new_hp = min(new_hp - 10000,1) # min, just in case
                 random_boss.enemy_classes[0].num_hp = new_hp
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .1)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .1)
@@ -931,7 +931,7 @@ class Conductor():
         patch = patch + self.SPM.get_patch()
         patch = patch + self.EM.get_patch(relevant=True)
         patch = patch + self.FM.get_patch()
-        patch = patch + self.kuzar_text_patch()
+        # patch = patch + self.kuzar_text_patch()
 
         return(spoiler, patch)
 

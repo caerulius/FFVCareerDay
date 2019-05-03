@@ -10,4 +10,8 @@ db $FF              ;End Event
 
 padbyte $00
 pad $C853A1
- 
+
+
+; speed up cutscene where 3 chests are
+org $C90DD3
+db $70
