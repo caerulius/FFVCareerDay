@@ -304,7 +304,7 @@ class Conductor():
                     while True:
                         item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
                                                                        monitor_counts=True,
-                                                                       of_type=Item, disable_zerozero=True)
+                                                                       of_type=Item)
                         if item_to_place not in contents:
                             break
 
@@ -325,7 +325,7 @@ class Conductor():
                         while True:
                             item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
                                                                            monitor_counts=True,
-                                                                           of_type=Magic)
+                                                                           of_type=Magic, disable_zerozero=True)
                             if item_to_place not in contents:
                                 break
 
