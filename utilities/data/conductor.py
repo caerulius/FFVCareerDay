@@ -146,7 +146,7 @@ class Conductor():
                 else:
                     next_key_item = self.RE.choice(possible_key_items)
                     next_key_reward.set_collectible(next_key_item)
-                    if "tablet" not in next_key_item.reward_name:
+                    if "Tablet" not in next_key_item.reward_name:
                         exdeath_list.append(next_key_reward)
                     next_key_item.required_by_placement.extend(next_key_reward.required_key_items)
                     self.CM.add_to_placement_history(next_key_item) #add this manually, usually get_random_collectible handles it
