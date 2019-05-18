@@ -17,6 +17,7 @@
 !ADDRESS_worldmaphook = $F00050
 !ADDRESS_menuhook = $F00500
 !ADDRESS_NEWEVENT_jobsetting = $F00B80
+!ADDRESS_NPC_LOCKS = $F01A00
 !ADDRESS_NEWEVENT_conditionalvehicles = $F01100
 !ADDRESS_NEWEVENT_conditionaleventflags = $F01180
 !ADDRESS_NEWEVENT_conditionalrifttablet = $F01800

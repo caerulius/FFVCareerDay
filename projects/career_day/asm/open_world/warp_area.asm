@@ -113,6 +113,20 @@ db $3F, $1B ; walk cycle properties
 org $CE1DD7
 db $35, $04
 
+; disable guards from calling above event
+org $CE8997
+db $E3
+org $CE899E
+db $E3
+org $CE89A5
+db $E3
+org $CE89AC
+db $E3
+org $CE89B3
+db $E3
+org $CE89BA
+db $E3
+
 ; change address for custom event
 org $C83FBF
 db $20, $00, $F9

@@ -53,9 +53,9 @@ db $6F, $7E, $87, $7D, $7A, $87, $8D, $96, $54
 ; Pendant 2
 org $E735DD
 db $6F, $7E, $87, $7D, $7A, $87, $8D, $96, $55
-; Canal Key
+; Mirage Radar (formerly Canal Key)
 org $E735EA
-db $62, $7A, $87, $7A, $85, $96, $6A, $7E, $92
+db $6C, $82, $8B, $7A, $80, $7E, $96, $71, $7A, $7D, $7A, $8B
 ; Hiryuu Plant
 org $E735F7
 db $67, $82, $8B, $92, $8E, $8E, $96, $6F, $85, $7A, $87, $8D
@@ -150,9 +150,9 @@ db $6F, $7E, $87, $7D, $7A, $87, $8D, $96, $54
 ; Pendant 2
 org $E78298
 db $6F, $7E, $87, $7D, $7A, $87, $8D, $96, $55
-; Canal Key
+; Mirage Radar (formerly Canal Key)
 org $E782B0
-db $62, $7A, $87, $7A, $85, $96, $6A, $7E, $92
+db $6C, $82, $8B, $7A, $80, $7E, $96, $71, $7A, $7D, $7A, $8B
 ; Hiryuu Plant
 org $E782C8
 db $67, $82, $8B, $92, $8E, $8E, $96, $6F, $85, $7A, $87, $8D

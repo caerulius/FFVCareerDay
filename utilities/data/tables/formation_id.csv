@@ -444,7 +444,7 @@ D04B90,442,y,boss,2,03,D0780C,D0780E,B901,00,80,05,80,04,05,FF,FF,FF,FF,FF,FF,10
 D04BA0,443,y,boss,2,04,D07810,D07812,BA01,00,80,06,40,06,07,FF,FF,FF,FF,FF,FF,10,00,08,20,"Forza, Magisa",Forza,Magisa, , , , , , 
 D04BB0,444,y,boss,3,06,D07818,D0781A,BB01,00,80,05,80,08,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,Galura,Galura, , , , , , , 
 D04BC0,445,y,boss,4,07,D0781C,D0781E,BC01,00,80,06,80,09,0A,0B,FF,FF,FF,FF,FF,00,00,08,60,"LiquiFlame, LiquiFlame, LiquiFlame",LiquiFlame,LiquiFlame,LiquiFlame, , , , , 
-D04BD0,446,y,boss,4,08,D07820,D07822,BD01,00,80,03,F0,52,53,53,53,51,FF,FF,FF,15,80,C0,20,"Sergeant, Karnak, Karnak, Karnak, Iron Claw",Sergeant,Karnak,Karnak,Karnak,Iron Claw, , , 
+D04BD0,446,y,boss,4,08,D07820,D07822,BD01,00,80,03,F0,52,53,53,53,51,FF,FF,FF,15,80,08,20,"Sergeant, Karnak, Karnak, Karnak, Iron Claw",Sergeant,Karnak,Karnak,Karnak,Iron Claw, , , 
 D04BE0,447,,boss,,09,,,,02,80,07,80,20,FF,FF,FF,FF,FF,FF,FF,18,00,08,41,FlyingKillr,FlyingKillr, , , , , , , 
 D04BF0,448,y,boss,4,0A,D07828,D0782A,BF01,00,80,05,E2,0E,0E,0E,0D,0D,0D,0F,FF,01,58,08,70,"Hole, Hole, Hole, Sandworm, Sandworm, Sandworm",Hole,Hole,Hole,Sandworm,Sandworm,Sandworm, , 
 D04C00,449,y,boss,4,0B,D0782C,D0782E,C001,00,80,05,80,10,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,AdamanTiMi,AdamanTiMi, , , , , , , 

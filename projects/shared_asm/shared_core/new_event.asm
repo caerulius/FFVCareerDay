@@ -258,6 +258,13 @@ pla
 ora $0840,x
 sta $0840,x
 
+; set everyone to have 1 ability count from the start
+lda #$01
+sta $08F3
+sta $08F4
+sta $08F5
+sta $08F6
+
 ; start data move for stats
 rep #$20
 lda #$0000

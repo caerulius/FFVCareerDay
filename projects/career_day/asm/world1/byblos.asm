@@ -30,6 +30,8 @@ db $81, $0A                     ;Sprite 081 do event: Hide
 db $BD, $09, $FF                ;Start Event Battle 09
 db $B1, $02                     ;Set Player Sprite 02
 db $DB                          ;Restore Player status
+db $C5, $80
+db $B5, $02
 db $71                          ;Short pause
 db $DE, $60
 db $DF

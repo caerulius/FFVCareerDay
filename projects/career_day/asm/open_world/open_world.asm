@@ -232,6 +232,11 @@ db $FB, $FB
 org $C99EBB
 db $00, $00, $00
 
+; MIRAGE VILLAGE
+; make it so canal key's old item ($000A4C, bit 20) now required to enter
+org $F057B4
+db $FC, $C5
+
 ; NORTH MOUNTAIN
 ; conditional event for never interacting with hiryuu at top
 org $F04835

@@ -56,12 +56,12 @@ db $CC, $0C                  ;Custom destination flag 0C
 db $D2, $00, $54, $4E, $D8          ; set airship again
 ; db $D2, $00, $54, $4F, $B5		; disable standard steamship
 
-db $71
-db $C8, $AF, $01 ; CUSTOM MESSAGE FOR WARPZONE
+; db $71
+; db $C8, $AF, $01 ; CUSTOM MESSAGE FOR WARPZONE
 db $C4, $03						;Fade in speed 0C
 db $73
-; ORIGINAL WARP, CHANGED TO GENERIC WARP AREA FOR SAFETY
-db $E1, $FE, $01, $03, $13, $00 ;Return from cutscene? 00 00 9C 96 00
+db $E1, $93, $00, $1C, $28, $00 ;Return from cutscene? 00 00 9C 96 00
+
 
 ; db $E3, $00, $00, $53, $4E, $00	;Inter-map cutscene? 00 00 53 4E 00
 ; db $DB							;Restore Player status

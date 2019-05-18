@@ -63,7 +63,7 @@ db $CB, $76, $01				;Clear Flag 2/3/4/5/76 01
 db $D7, $96, $20, $05			;(Timer?) 96 20 05
 db $A4, $DB						;Set Event Flag 1DB
 db $E1, $92, $00, $B9, $3C, $00	;Return from cutscene? 92 00 B9 3C 00
-db $B4, $26						;Play Background Music Hurry! Hurry!
+db $B4, $31						;Play Background Music Hurry! Hurry!
 db $B9, $C1						;Toggle Subtracitve Tint by C1
 db $C3, $03						;Fade in at speed $0C
 db $74							;Medium-long pause

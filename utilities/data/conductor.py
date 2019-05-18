@@ -61,6 +61,7 @@ class Conductor():
         self.chosen_crystals_names = [x.reward_name for x in self.chosen_crystals]
 
         self.exdeath_patch = ""
+        self.odin_location_fix_patch = ""
 
         self.weigh_collectibles()
 
@@ -442,6 +443,8 @@ class Conductor():
             while (original_boss.enemy_1_name == "Odin" and random_boss.enemy_1_name in banned_at_odin):
                 original_boss_list = [original_boss] + original_boss_list
                 original_boss = original_boss_list.pop()
+            if original_boss.enemy_1_name == "Odin":                
+                self.odin_location_fix_patch = '\n; Odin location animation fix (resolve softlocks)\norg $'+random_boss.offset[:-1]+"F\ndb $20\n"
 
             # Assign random boss location to the original spots (overwriting it)
             # This is grabbing event_lookuploc1 / loc2 from the original
@@ -870,6 +873,24 @@ class Conductor():
         output = output + "\nStarting ability: " + self.starting_crystal.starting_ability
         output = output + "\n-----***************************-----\n"
         return output
+    
+
+    
+
+
+    def karnak_escape_patch(self):
+        '''
+        Random song chosen, outputs asar code
+        '''
+        songs = ['00','01','02','03','04','05','06','07','08','09',
+                 '0A','0B','0C','0D','0E','0F','10','12','13','14',
+                 '15','16','17','18','19','1A','1B','1C','1D','1E',
+                 '1F','20','21','22','23','24','25','26','27','28',
+                 '2B','2C','2D','2E','2F','30','31','32','33','3D',
+                 '3F','40','41','42','43','44']
+        song = random.choice(songs)
+        return ';Karnak escape song\norg $C8796D\ndb $'+song+"\n"
+    
 
     def kuzar_text_patch(self):
         kuzar_reward_addresses = ['C0FB02','C0FB04','C0FB06','C0FB08','C0FB0A','C0FB0C','C0FB0E','C0FB10','C0FB12','C0FB14','C0FB16','C0FB18']
@@ -931,7 +952,9 @@ class Conductor():
         patch = patch + self.SPM.get_patch()
         patch = patch + self.EM.get_patch(relevant=True)
         patch = patch + self.FM.get_patch()
-        # patch = patch + self.kuzar_text_patch()
+        patch = patch + self.karnak_escape_patch()
+        patch = patch + self.kuzar_text_patch()
+        patch = patch + self.odin_location_fix_patch
 
         return(spoiler, patch)
 
