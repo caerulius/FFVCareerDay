@@ -245,3 +245,5 @@ incsrc ../../shared_asm/data_tables/magic_ability_crystal_shop_prices.asm
 incsrc ../../shared_asm/data_tables/original_magic_prices.asm
 
 incsrc core_code/credits.asm
+
+incsrc ../../shared_asm/colors/galuf_mimic.asm
