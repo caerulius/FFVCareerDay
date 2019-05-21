@@ -197,9 +197,6 @@ endif
 if !pitfalls = 1
 	incsrc ../../shared_asm/optionals/pitfalls.asm
 endif
-if !save_anywhere = 1
-	incsrc ../../shared_asm/optionals/save_anywhere.asm
-endif
 if !double_atb = 1
 	incsrc ../../shared_asm/optionals/double_atb.asm
 endif
