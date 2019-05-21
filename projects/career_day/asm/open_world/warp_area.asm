@@ -34,6 +34,9 @@ db $A3, $C0            ; set address 000A2C bit OFF 01
 ; restore player status for SAFETY
 db $DB
 
+; this blanket disables cutscene flag
+db $A5, $FE                     ;Clear Event Flag 1FE
+
 db $C3, $06
 db $71
 db $FF

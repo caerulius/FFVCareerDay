@@ -75,6 +75,13 @@ db $CA, $51, $01					;Set Flag 2/3/4/5/51 01
 db $A2, $32							;Set Event Flag 032
 db $A2, $33							;Set Event Flag 033
 db $CC, $0C                  		;Custom destination flag 0C
+; ancient library respawns
+db $CA, $97, $01				;Clear Flag 2/3/4/5/97 01 ; respawn ifrit
+db $CA, $98, $01            ; set address 000A87 bit ON 01
+db $CA, $99, $01            ; set address 000A87 bit ON 01
+db $CA, $9A, $01            ; set address 000A87 bit ON 01
+db $CA, $9B, $01            ; set address 000A87 bit ON 01
+db $CA, $9C, $01            ; set address 000A87 bit ON 01
 db $E3, $00, $00, $53, $4E, $00		;Inter-map cutscene? 00 00 53 4E 00
 db $DB								;Restore Player status
 db $B4, $23							;Play Background Music Four Valiant Hearts

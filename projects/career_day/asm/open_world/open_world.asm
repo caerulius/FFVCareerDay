@@ -278,7 +278,9 @@ db $FF                          ;End Event
 org $F046AC
 db $00
 
-
+; disable guido bit flag $000A2C bit $01
+org $C8CE86
+db $00, $00
 
 ; NEW TEXT FOR DEBUG TO WARP AREA
 org $e178fa

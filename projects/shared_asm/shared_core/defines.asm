@@ -6,6 +6,7 @@
 !ADDRESS_chesthook = $F03000
 !ADDRESS_jobindexing = $F00400
 !ADDRESS_magicreward = $F00480
+!ADDRESS_double_atb = $F004A0
 ; !ADDRESS_shoatsound = $F01200
 !ADDRESS_customitem1 = $F01600
 !ADDRESS_customitem2 = $F01300
@@ -15,6 +16,9 @@
 !ADDRESS_shopindexing = $F00980
 !ADDRESS_encounterhook = $F00000
 !ADDRESS_worldmaphook = $F00050
+!ADDRESS_innhook = $F00270
+!ADDRESS_innhook2 = $F002E0
+!ADDRESS_innhook3 = $F00340
 !ADDRESS_menuhook = $F00500
 !ADDRESS_NEWEVENT_jobsetting = $F00B80
 !ADDRESS_NPC_LOCKS = $F01A00

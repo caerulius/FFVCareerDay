@@ -97,3 +97,21 @@ db $73, $7A, $7B, $85, $7E, $8D, $96, $7A, $7C, $7C, $7E, $89, $8D, $7E, $7D, $A
 ; Code below is replicating Torna Canal again
 org $CE2808
 db $AA, $58, $C5, $00
+
+
+
+; Submarine disallow access at shoat cave without sub key
+; event bd01 
+org $c9148d
+db $01, $FF
+
+; event bd02
+org $C914A4
+db $03
+db $C8, $BE, $04                ;Display Message/Text/Dialogue BB 04
+
+db $FF
+
+; No submarine key text
+org $e258fe
+db $64, $91, $82, $8D, $96, $7B, $85, $88, $7C, $84, $7E, $7D, $96, $88, $7F, $7F, $A3, $00

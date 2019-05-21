@@ -1,14 +1,16 @@
 hirom
-; make conditional true for any player to always execute dash when b is held
-org $c01261
-lda #$FF
+
+if !dash = 1
+	; make conditional true for any player to always execute dash when b is held
+	org $c01261
+	lda #$FF
 
 
-; make hold b to dash here not effective
-org $c01278
-nop
-nop
-
+	; make hold b to dash here not effective
+	org $c01278
+	nop
+	nop
+endif
 
 
 
@@ -31,7 +33,12 @@ HandleWorldMapSpeed:
 
 lda !walkinginput
 and #$80    ; check for b input, if so, run 
-BMI RunSpeedWorldMap
+if !dash = 1
+	BMI RunSpeedWorldMap
+	BRA SpeedSettingDefault
+else
+	BRA SpeedSettingDefault
+endif
 
 ; else set to standard
 BRA SpeedSettingDefault
@@ -79,7 +86,11 @@ RunSpeed:
 ; BEQ SpeedSettingFast1
 
 ; Now just default to #$08. 
-BRA SpeedSettingFast1
+if !dash = 1
+	BRA SpeedSettingFast1
+else
+	BRA SpeedSettingDefault
+endif
 
 SpeedSettingDefault:
 lda #$04

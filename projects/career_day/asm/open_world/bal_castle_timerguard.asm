@@ -53,13 +53,14 @@ db $B0, $02, $F9
 
 ; new conditional event for guard, C8 06
 org $F90280
-db $F0, $06, $02              ;Conditional yes/no dialogue at 04B7
+db $AD, $F0              ; Run inn event with special F0 parameter
 db $CD, $C9, $06
-db $FF
 db $FF
 
 ; If so, perform award, C9 06
 org $F90290
+db $CE, $32, $04
+db $B0, $64
 db $C5, $A0
 db $B5, $02
 db $71
@@ -103,12 +104,133 @@ db $FF                          ;End Event
 
 
 
+; Hook for inn purchases 
+; this is for bal guard, whenever the event says "call inn message AD F0" 
+; the "F0" is very important and will be hooked upon 
+
+org $E02D41
+JML !ADDRESS_innhook
+
+org !ADDRESS_innhook
+STA $B1
+ASL A
+CLC
+ADC $B1
+TAX
+
+;if 000bdf is $F0, then load an entirely different set of text
+SEP #$20
+LDA $0BDF
+CMP #$F0
+BNE FinishInnNormal
+
+; if match $F0, there's now two possibilities. First for queue text, second for confirm
+; Compare if 001E6C (free ram space) is $00 or $01
+LDA $1E6C
+CMP #$01
+BEQ BalCastleInnText2
+
+; first queue text - custom set $E193B6
+REP #$20
+LDA #$93B6
+STA $B1
+SEP #$20
+; set trigger for next run
+LDA #$01
+STA $1E6C
+
+LDA #$E1
+STA $19D5
+; return
+JML $e02d57
+
+BalCastleInnText2:
+; second confirm text - custom set $e18bd0  E19470
+REP #$20
+LDA #$9470
+STA $B1
+SEP #$20
+; set trigger back to default
+LDA #$00
+STA $1E6C
+
+LDA #$E1
+STA $19D5
+; return
+JML $e02d57
+
+
+FinishInnNormal:
+REP #$20
+LDA $E013F0,X
+STA $B1
+SEP #$20
+LDA $E013F2,X
+STA $19D5
+; return
+JML $e02d57
+
+
+; hook for 'player said no' case, now we need to
+; set the text bit back to $00 
+
+org $c0bbc1
+JML !ADDRESS_innhook3
+
+org !ADDRESS_innhook3
+LDA #$00
+STA $1E6C
+lda #$01
+sta $1697
+
+JML $c0bbd9
 
 
 
 
+; hook for after the inn is confirmed via yes prompt, manually load 50k 
+org $C0BBFD
+JML !ADDRESS_innhook2
 
+org !ADDRESS_innhook2
+; if $0BDF is $F0, manually set 50k
+LDA $0BDF
+CMP #$F0
+BNE ResumeInnHook2
+; if so, set 50k to 000b37
+; if it fails, branch to c0bc15
 
+LDA #$50
+STA $0B37
+LDA #$C3
+STA $0B38
+
+lda $0947
+SEC
+sbc $37
+sta $001E6D
+lda $0948
+sbc $38
+sta $001E6E
+lda $0949
+sbc $39
+sta $001E6F
+
+; finally check if this value is $FF, if so, you underflowed, so reject
+CMP #$FF
+BEQ RejectBalGuardInn
+; Success case, don't change money (handled by event) but succeed case
+JML $c0bc2e
+; fail case
+RejectBalGuardInn:
+JML $C0BC15
+
+ResumeInnHook2:
+lda $0947
+sec
+sbc $37
+sta $08
+JML $C0BC05
 
 
 

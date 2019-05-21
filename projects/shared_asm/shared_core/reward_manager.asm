@@ -34,15 +34,18 @@ ply
 JML $c00e74
 
 IntermediateBranchToMagicReward:
-phy
-phx
-php
-JSL BranchToMagicReward
-plp
-plx
-ply
-JML $C00E69
-
+if !vanillarewards = 1
+	JML $C00E67
+else	
+	phy
+	phx
+	php
+	JSL BranchToMagicReward
+	plp
+	plx
+	ply
+	JML $C00E69
+endif
 IntermediateBranchToKeyItemReward:
 JSL BranchToKeyItemReward
 JML $c00e74

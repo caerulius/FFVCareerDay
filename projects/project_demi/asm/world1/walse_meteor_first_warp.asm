@@ -17,6 +17,7 @@ db $89, $0A					;Sprite 089 do event: Hide
 db $CD, $C8, $02			;Run event index 02C8
 db $A2, $A4                 ;Set Event Flag 0A4
 db $A2, $2A                 ;Set Event Flag 02A
+db $D2, $00, $54, $4F, $B5		;(Map) 00 54 4F B5
 db $CC, $0A                  ;Custom destination flag 0A
 
 db $FF						;End Event

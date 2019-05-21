@@ -6,28 +6,6 @@ incsrc core_code/init.asm
 incsrc core_code/relocate_conditional_events.asm
 incsrc ../../shared_asm/data_tables/starting_stats.asm
 
-; conditionals. asar command line defines now
-;!testing = 1 ; this enables debugging below 
-; !allkeysunlocked = 1 ; this starts the player with all keys
-
-; randomizer testing
-; use .sh scripts for this instead
-; incsrc ../../test_asm/r-patch.asm
-; incsrc ../../test_asm/key_items-patch.asm
-
-; other core_code testing
-; incsrc open_world/scratchpad.asm
-; incsrc open_world/test_constants.asm
-
-
-
-
-
-
-
-
-
-
 ; world 1                                   Destinations:
 incsrc world1/tycoon_meteor_01_mount.asm
 incsrc world1/tycoon_meteor_02_mount.asm
@@ -195,11 +173,11 @@ incsrc world3/cleft_necrophobe.asm
 incsrc core_code/menu_hook.asm
 incsrc core_code/battle_code.asm
 incsrc core_code/custom_items.asm
+incsrc core_code/utility.asm
 
 incsrc ../../shared_asm/shared_core/reward_manager.asm
 incsrc ../../shared_asm/shared_core/new_event.asm
 incsrc ../../shared_asm/shared_core/encounter_toggle.asm
-incsrc ../../shared_asm/shared_core/utility.asm
 incsrc ../../shared_asm/shared_core/walk_speed.asm
 incsrc ../../shared_asm/shared_core/chest_magicreward.asm
 incsrc ../../shared_asm/shared_core/shop_hook.asm
@@ -207,6 +185,24 @@ incsrc ../../shared_asm/shared_core/battle_hook.asm
 incsrc ../../shared_asm/balancing/exp_abp_modifier.asm
 incsrc ../../shared_asm/recovery/all_inns.asm
 incsrc ../../shared_asm/recovery/tent.asm
+
+
+; optionals
+if !learning = 1
+	incsrc ../../shared_asm/optionals/learning.asm
+endif
+if !passages = 1
+	incsrc ../../shared_asm/optionals/passages.asm
+endif
+if !pitfalls = 1
+	incsrc ../../shared_asm/optionals/pitfalls.asm
+endif
+if !save_anywhere = 1
+	incsrc ../../shared_asm/optionals/save_anywhere.asm
+endif
+if !double_atb = 1
+	incsrc ../../shared_asm/optionals/double_atb.asm
+endif
 
 
 ; reward events
@@ -272,8 +268,9 @@ incsrc ../../shared_asm/text_tables/ability_chest_table.asm
 incsrc ../../shared_asm/text_tables/job_shop_table.asm
 incsrc ../../shared_asm/text_tables/job_chest_table.asm
 incsrc ../../shared_asm/text_tables/magic_chest_table.asm
-incsrc ../../shared_asm/text_tables/key_item_tables.asm
+incsrc tables/key_item_tables.asm
 incsrc ../../shared_asm/text_tables/misc_text.asm
+incsrc tables/misc_open_world_text.asm
 
 ; other tables
 incsrc ../../shared_asm/data_tables/progressive_ability_table.asm

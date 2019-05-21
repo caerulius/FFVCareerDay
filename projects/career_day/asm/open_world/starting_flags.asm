@@ -446,54 +446,6 @@ db $CB, $97, $03                ;Clear Flag 2/3/4/5/97 03
 
 
 ; tutorial section
-
-
 incsrc tutorial_event.asm
-
-
-
-
-
-
-
-
-
-; TESTING!!!!!!!
-; custom text box for key item
-if !testing == 1
-	if !allkeysunlocked == 1
-		db $DE, $60
-		db $DE, $61
-		db $DE, $62
-		db $DE, $63
-		db $DE, $64
-		db $DE, $65
-		db $DE, $66
-		db $DE, $67
-		db $DE, $68
-		db $DE, $69
-		db $DE, $6A
-		db $DE, $6B
-		db $DE, $6C
-		db $DE, $6D
-		db $DE, $6E
-		db $DE, $6F
-		db $DE, $70
-		db $DE, $71
-		db $DE, $72
-		db $DE, $73
-		db $DE, $74
-		db $DE, $75
-		db $DE, $76
-		db $DE, $77
-		db $DE, $78
-	else
-		db $DE, $60				; set up reward
-		db $DE, $61				; set up reward
-		; db $DE, $62				; set up reward
-		; db $DE, $63				; set up reward
-		; db $DE, $64				; set up reward
-	endif
-endif
 
 db $14

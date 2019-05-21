@@ -88,6 +88,15 @@ org $F05F95
 db $FC, $22, $ff, $9e, $00, $ff, $77, $00
 
 
+; SHOAT CAVE
+org $F05F9C
+db $F7, $02, $FF, $00, $00, $FE, $C0, $ff, $BD, $01, $FE, $C1, $ff, $BD, $01, $FE, $C2, $ff, $BD, $01, $FE, $C3, $ff, $BD, $01, $FE, $C4, $ff, $BD, $01, $FE, $C5, $ff, $BD, $01, $FE, $C7, $ff, $BD, $01, $ff, $BE, $01
+
+; $ff, $BD, $01, $ff, $BE, $01
+
+
+
+
 ; X Y CUSTOM COORDINATES
 
 org $CE3660
@@ -107,12 +116,10 @@ db $2C, $38, $7d, $02
 org $CE3678
 db $16, $2C, $7d, $02
 
-
-
-
-
-
-
+; ; Shoat Cave
+org $CE367C
+db $17, $24, $7a, $00
+db $0E, $1D, $00, $00
 
 
 
@@ -212,10 +219,31 @@ TAX
 LDA #$127C
 STA $23
 JMP XYCoordinateHookContinueNormalCase
+
+
+
 XYCoordinateHookContinueCase5:
+; ; SHOAT CAVE
+lda !mapid
+CMP #$01AC
+BNE XYCoordinateHookContinueCase6
+lda !xycoordcheck
+CMP #$1D0E
+BNE XYCoordinateHookContinueCase6
 
+; ; IF these match, set up coordinates specifically
+LDA #$127C
+STA $26
+TAX
+LDA #$1284
+STA $23
+JMP XYCoordinateHookContinueNormalCase
+XYCoordinateHookContinueCase6:
 
+; ce34a4
+; ce536e
 
+; 01004231
 
 
 XYCoordinateHookContinueNormalCase:
@@ -514,6 +542,23 @@ STA $26
 JMP KeyItemLockingImmediateFinish
 KeyItemLockingNextCheck11:
 
+; SHOAT CAVE ACCESS
+lda !mapid
+CMP #$01AC
+BNE KeyItemLockingNextCheck12
+lda !xycoordcheck
+CMP #$1D0E
+BNE KeyItemLockingNextCheck12
+
+; HANDLE SHOAT CAVE ACCESS
+
+LDA #$1F9C
+STA $23
+LDA #$1FA9
+STA $26
+JMP KeyItemLockingImmediateFinish
+KeyItemLockingNextCheck12:
+
 
 
 
@@ -589,9 +634,9 @@ pad $D90000
 
 
 
-; what is this event...?
+; This event is the submarine leaving barrier tower
 org $C98882
-db $E0, $03, $20, $A9, $A5, $D3
+db $E0, $03, $20, $A9, $A5, $91
 db $A3, $C1            ; set address 000A2C bit OFF 02
 db $FF                          ;End Event
 pad $C988F4
