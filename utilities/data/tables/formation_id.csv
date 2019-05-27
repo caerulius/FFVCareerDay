@@ -510,4 +510,4 @@ D04FB0,508,,boss,,37,,,,00,80,0B,80,61,4B,FF,FF,FF,FF,FF,FF,10,00,08,60,"Alte Ro
 D04FC0,509,,standard,,29,,,,00,80,02,80,FB,FF,FF,FF,FF,FF,FF,FF,00,00,C0,00,,, , , , , , , 
 D04FD0,510,,standard,,4D,,,,00,80,64,80,FD,FF,FF,FF,FF,FF,FF,FF,00,00,00,41,,, , , , , , , 
 D04FE0,511,,standard,,,,,,00,64,00,80,FE,FF,FF,FF,FF,FF,FF,FF,00,00,00,00,,, , , , , , , 
-D04FF0,512,,boss,,6D,,,,00,64,64,80,0B,FF,FF,FF,FF,FF,FF,FF,00,00,30,04,LiquiFlame,LiquiFlame, , , , , , , 
+D04FF0,512,,boss,,6D,,,,00,64,FF,80,0B,FF,FF,FF,FF,FF,FF,FF,00,00,30,04,MagicPot,MagicPot, , , , , , , 

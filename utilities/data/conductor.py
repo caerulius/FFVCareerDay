@@ -62,6 +62,8 @@ class Conductor():
 
         self.exdeath_patch = ""
         self.odin_location_fix_patch = ""
+        self.superbosses_spoiler = ""
+        self.code_of_the_void = ""
 
         self.weigh_collectibles()
 
@@ -558,8 +560,8 @@ class Conductor():
                 new_hp = new_hp * 5
                 
             # CLAUSE FOR SOL CANNON
-#            if original_formation_id in ['0E']:
-#                new_hp = new_hp + 10000
+            if original_formation_id in ['0E']:
+                new_hp = min(new_hp - 10000,1) # shouldnt ever be different than 12500hp here, but for safety
                 
             # CLAUSE FOR NECROPHOBIA:
             if original_formation_id in ['4B']:
@@ -636,7 +638,7 @@ class Conductor():
             # CLAUSE FOR SOLCANNON
             elif random_boss.event_id in ['0E']:
                 # Add 10k HP to pool, apply 50% to Launchers
-                # new_hp = min(new_hp - 10000,1) # min, just in case
+                new_hp = max(new_hp - 10000,65535) # min, just in case
                 random_boss.enemy_classes[0].num_hp = new_hp
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .1)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .1)
@@ -703,8 +705,8 @@ class Conductor():
             # Split exp
             
             # CLAUSE FOR FORMATIONS WITH SHARED HP, ONLY ONE ENEMY ACTIVE ON THE FIELD
-            # WINGRAPTOR, SIREN, LIQUIFLAME, ARCHEOAVIS, MELUSINE, CARBUNKLE, GILGAMESH, TWINTANIA, STALKER, SANDWORM
-            if random_boss.event_id in ['01','03','07','0F','2B','22','23','4A','2E','0A']:
+            # WINGRAPTOR, SIREN, LIQUIFLAME, ARCHEOAVIS, MELUSINE, CARBUNKLE, GILGAMESH, TWINTANIA, STALKER
+            if random_boss.event_id in ['01','03','07','0F','2B','22','23','4A','2E']:
                 for enemy in random_boss.enemy_classes:
                     enemy.num_exp = new_exp
             # CLAUSE FOR FORMATIONS WITH 2x SAME/SIMILAR BOSS:
@@ -731,11 +733,25 @@ class Conductor():
             elif random_boss.event_id in ['21']:
                 for enemy in random_boss.enemy_classes:
                     enemy.num_exp = round(new_exp / 4)
+                    
+            # CLAUSE FOR SANDWORM:
+            elif random_boss.event_id in ['0A']:
+                for enemy in [random_boss.enemy_classes[3],random_boss.enemy_classes[4],random_boss.enemy_classes[5]]:
+                    enemy.num_exp = new_exp
+                    
             else:    
                 random_boss.enemy_classes[0].num_exp = new_exp
         
-
-
+        
+########  DEBUG VIEWS FOR EXP 
+#            print("BOSS EXP: "+original_boss.enemy_list+" → "+random_boss.enemy_list+" EXP: "+str(new_exp))
+#            exp_vals = 0
+#            for i in random_boss.enemy_classes:
+#                exp_vals = exp_vals + i.num_exp
+#                print("--------"+i.enemy_name+": "+str(i.num_exp))
+#                
+#            print("-----TOTAL: "+str(exp_vals))
+#            print("****************************")
 
             # STATS / AI
             # Stats - Update stats based on boss_scaling.csv for every enemy
@@ -852,6 +868,8 @@ class Conductor():
             '''
 
         self.EM.relevant_enemies = list_of_randomized_enemies
+        
+
 
     def starting_crystal_patch(self):
         output = ";================"
@@ -876,6 +894,270 @@ class Conductor():
     
 
     
+    def randomize_superbosses(self):
+        elemental_map = {
+            'fire':'01',
+            'ice':'02',
+            'lightning':'04',
+            'poison':'08',
+            'holy':'10',
+            'earth':'20',
+            'wind':'40',
+            'water':'80',
+            }
+            
+        # organized by status, then offset
+        status_map = {
+        'darkness':('01','status0'),
+        'zombie':('02','status0'),
+        'poison':('04','status0'),
+        'float':('08','status0'),
+        'mini':('10','status0'),
+        'toad':('20','status0'),
+        'petrify':('40','status0'),
+        'dead':('80','status0'),
+        'image1':('01','status1'),
+        'image2':('02','status1'),
+        'mute':('04','status1'),
+        'berserk':('08','status1'),
+        'charm':('10','status1'),
+        'paralyze':('20','status1'),
+        'sleep':('40','status1'),
+        'aging':('80','status1'),
+        'regen':('01','status2'),
+        'invul':('02','status2'),
+        'slow':('04','status2'),
+        'haste':('08','status2'),
+        'stop':('10','status2'),
+        'shell':('20','status2'),
+        'armor':('40','status2'),
+        'wall':('80','status2')
+        }
+            
+        creature_map = {
+            'undead':'01',
+            'toad':'02',
+            'creature':'04',
+            'avis':'08',
+            'dragon':'10',
+            'heavy':'20',
+            'desert':'40',
+            'human':'80'
+            }
+           
+        for i in self.EM.enemies:
+            if i.idx == '253':
+                OMEGA = i
+            elif i.idx == '361':
+                SHINRYUU = i
+            elif i.idx == '11':
+                MAGICPOT = i # we're not randomizing them, but we need them in self.relevant_enemies
+
+        # Have to do it somewhere - add Magic Pot to relevant enemies
+        self.EM.relevant_enemies.append(MAGICPOT)
+
+        # helper functions 
+        def add_hex(x,y):
+            return hex(int(x,base=16) + int(y,base=16)).replace("0x","")[0:2] 
+
+        def elemental_randomize():
+            
+            # Now, this is hardcoded for: 
+            # 3 Absorbs
+            # 3 Immunities
+            # 2 Weaknesses
+            immunity_start = 3
+            weakness_start = 6
+            
+            random_elements = sorted(list(elemental_map.keys()), key=lambda k: random.random())
+            absorbs, immunities, weaknesses = random_elements[:immunity_start], random_elements[immunity_start:weakness_start], random_elements[weakness_start:]
+            
+            
+            absorb_hex = '00'
+            for i in absorbs:
+                absorb_hex = add_hex(absorb_hex,elemental_map[i])
+            immunities_hex = '00'
+            for i in immunities:
+                immunities_hex = add_hex(immunities_hex,elemental_map[i])
+            weakness_hex = '00'
+            for i in weaknesses:
+                weakness_hex = add_hex(weakness_hex,elemental_map[i])
+                
+            return absorbs, immunities, weaknesses, absorb_hex, immunities_hex, weakness_hex
+
+        def status_afflict_randomize():            
+            
+            # Hardcoded number of status afflictions for now:
+            num_afflict = 3
+            
+            status_afflict = []
+            random_statuses = sorted(list(status_map.keys()), key=lambda k: random.random())
+            while num_afflict > 0:
+                i = random.choice(random_statuses)
+                random_statuses.remove(i)
+                if i not in ['image1','image2','haste','stop','regen','shell','armor','wall','invul']:
+                    status_afflict.append(i)
+                    num_afflict = num_afflict - 1
+            return status_afflict        
+            
+           
+        #####################################    
+        # First randomize stats - these are all stored with the enemy and will get written
+        # as part of the Conductor.randomize() method with the enemy spoiler patch
+        #####################################    
+        output_str = ''
+        self.superbosses_spoiler = self.superbosses_spoiler + '\n--------------- SUPERBOSSES: --------------- \n'
+        for random_enemy in [OMEGA,SHINRYUU]:
+            ######################################
+            # Elemental Absorb/Immune/Weakness
+            ######################################
+            self.superbosses_spoiler = self.superbosses_spoiler +'-----------'+ random_enemy.enemy_name.upper() + "-----------\n"
+            # Force elemental immunities to be zero - using an absorb/weakness system only 
+            
+            random_enemy_absorbs, random_enemy_immunities, random_enemy_weaknesses, random_enemy_absorb_hex, random_enemy_immunities_hex, random_enemy_weakness_hex = elemental_randomize()
+            
+            self.superbosses_spoiler = self.superbosses_spoiler + "Absorbs "+str(random_enemy_absorbs)+" Immunities "+str(random_enemy_immunities)+" Weaknesses: "+str(random_enemy_weaknesses)+'\n'
+            
+            # Formally set the bytes to the object now
+            random_enemy.elemental_absorb = random_enemy_absorb_hex
+            random_enemy.elemental_immune = random_enemy_immunities_hex
+            random_enemy.elemental_weakness = random_enemy_weakness_hex
+            ######################################
+            # Status Afflictions 
+            ######################################
+            random_enemy_status_afflict = status_afflict_randomize()
+            
+            self.superbosses_spoiler = self.superbosses_spoiler + "Status afflictions (weaknesses) "+str(random_enemy_status_afflict)+"\n"
+            
+            random_enemy_status0, random_enemy_status1, random_enemy_status2 = '00','00','00'
+            for status in random_enemy_status_afflict:
+                status_hex, status_index = status_map[status][0], status_map[status][1]
+                if status_index == 'status0':
+                    random_enemy_status0 = add_hex(random_enemy_status0, status_hex)
+                if status_index == 'status1':
+                    random_enemy_status1 = add_hex(random_enemy_status1, status_hex)
+                if status_index == 'status2':
+                    random_enemy_status2 = add_hex(random_enemy_status2, status_hex)
+                    
+            # Now we have three hexes of what the statuses are, but we need to INVERT them because
+            # it's immunity. So all other statuses will be immune except these
+            
+            random_enemy_status0 = hex(255 - int(random_enemy_status0,base=16)).replace("0x","")
+            random_enemy_status1 = hex(255 - int(random_enemy_status1,base=16)).replace("0x","")
+            random_enemy_status2 = hex(255 - int(random_enemy_status2,base=16)).replace("0x","")
+                    
+            # Formally set the bytes to the object now
+            random_enemy.status0_immune = random_enemy_status0
+            random_enemy.status1_immune = random_enemy_status1
+            random_enemy.status2_immune = random_enemy_status2
+            
+    
+            ######################################
+            # Enemy type 
+            ######################################
+            
+            # Choose a random type
+            random_type = random.choice(list(creature_map.keys()))
+            # If it's not heavy, make it heavy too
+            if random_type != 'heavy':
+                random_enemy.enemy_type = add_hex(creature_map[random_type],'20') # heavy + random type
+                self.superbosses_spoiler = self.superbosses_spoiler + "Enemy type - heavy and "+random_type+"\n"
+            else:
+                random_enemy.enemy_type = creature_map[random_type] # heavy
+                self.superbosses_spoiler = self.superbosses_spoiler + "Enemy type - heavy\n"
+            
+            
+            ######################################
+            # Stats 
+            ######################################
+            
+            # Randomize levels and stats 
+            # A few stats will have a random int from -10 to 10 applied
+            for stat in ['num_phys_power','num_phys_def','num_evade','num_mag_power','num_mag_def','num_level']:
+                new_stat = str(round(int(getattr(random_enemy,stat)) + random.randint(-10,10)))
+                setattr(random_enemy,stat,new_stat)
+                self.superbosses_spoiler = self.superbosses_spoiler + "Stat "+stat+" changed to "+new_stat+"\n"
+            
+            # Magic Evade decreased to $20 
+            # This is done so the player can reasonably use the statuses they found out, 
+            #   and not fail to use their new knowledge because of insanely high mag evade
+            random_enemy.num_mag_evade = 32
+            self.superbosses_spoiler = self.superbosses_spoiler + "Stat num_mag_evade changed to 32\n"
+            
+            # Finally post updates to stats
+            random_enemy.update_all()
+            
+            
+            #####################################    
+            # Now randomize the AI, somewhat manually
+            #####################################    
+            aoe_skills = ['45','84','85','86','87','88','AB','B6','B9','CC','CD','CF','D0','D1','D2','D6','DA','DB','DC','DD','C2']
+            single_target_skills = ['B2','B3','B4','30','31','32','33','34','35','3C','3F','42','43','81','8C','8E','91','92','93','97','98','99','9C','9D','9F','B0','B7','B8','BD','C3','C4','C5','C6','C7','E8','22','2F','C0','80']
+            status_skills = ['15','37','39','3A','3D','40','44','82','83','89','8A','8B','8D','94','95','9A','B5','BB','BC','EB','2E']
+            
+            
+            skill_name_dict = dict([(value, key) for key, value in self.DM.files['enemy_skills'].items()]) 
+
+            output_str = output_str + ';  ########################### \n'
+            output_str = output_str + ';  # New AI for enemy: '+random_enemy.enemy_name+'\n'
+            output_str = output_str + ';  ########################### \n'
+
+            aoe_skill_names = []
+            single_skill_names = []
+            status_skill_names = []
+            if random_enemy.idx == '253': # OMEGA
+                ai_aoe = ['D0B235','D0B238','D0B23D','D0B245','D0B248','D0B24E']
+                ai_single = ['D0B236','D0B237','D0B23A','D0B23B','D0B23C','D0B243','D0B244','D0B247','D0B249','D0B24C','D0B24D','D0B25B','D0B25C','D0B25F','D0B260']
+                ai_status = ['D0B25D','D0B261']
+                
+            if random_enemy.idx == '361': # SHINRYUU
+                ai_aoe = ['D0C532','D0C533','D0C534','D0C53F','D0C540','D0C55C','D0C567']
+                ai_single = ['D0C52F','D0C53B','D0C546','D0C547','D0C54A','D0C54B','D0C52E']
+                ai_status = ['D0C530','D0C53A','D0C53C','D0C53E','D0C548','D0C54C']
+            for ai in ai_aoe:
+                random_skill_hex = random.choice(aoe_skills)
+                random_skill_name = skill_name_dict[random_skill_hex]
+                aoe_skill_names.append(random_skill_name)
+                output_str = output_str + '; New AOE skill: '+random_skill_name+'\norg $'+ai+'\ndb $'+random_skill_hex+'\n'
+            for ai in ai_single:
+                random_skill_hex = random.choice(single_target_skills)
+                random_skill_name = skill_name_dict[random_skill_hex]
+                single_skill_names.append(random_skill_name)
+                output_str = output_str + '; New single target skill: '+random_skill_name+'\norg $'+ai+'\ndb $'+random_skill_hex+'\n'
+            for ai in ai_status:
+                random_skill_hex = random.choice(status_skills)
+                random_skill_name = skill_name_dict[random_skill_hex]
+                status_skill_names.append(random_skill_name)
+                output_str = output_str + '; New status skill: '+random_skill_name+'\norg $'+ai+'\ndb $'+random_skill_hex+'\n'
+            self.superbosses_spoiler = self.superbosses_spoiler + "AOE skills: "+str(aoe_skill_names)+"\n"
+            self.superbosses_spoiler = self.superbosses_spoiler + "Single target skills: "+str(single_skill_names)+"\n"
+            self.superbosses_spoiler = self.superbosses_spoiler + "Status skills: "+str(status_skill_names)+"\n\n\n"
+            
+            
+            # Add these to the relevant enemies list             
+            self.EM.relevant_enemies.append(random_enemy)
+            
+        # Finally, create the "CODE OF THE VOID"
+        
+        # For some reason, couldn't get this to load in from star import from text_parser
+        import os
+        text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_chest.csv'),header=None,index_col=1).to_dict()[0]
+        
+        letters = random.sample('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',6)
+        code_str = 'db '
+        for letter in letters:
+            code_str = code_str + "$" +str(text_dict2[letter]) + ", "
+        code_str = code_str[:-2]
+        output_str = output_str + '\n; CODE OF THE VOID: \norg $E77476\n'+code_str+'\norg $F80900\n'+code_str+'\n\n'
+
+        
+        self.superbosses_spoiler = self.superbosses_spoiler + "\n ***** CODE OF THE VOID *****\n"+''.join(letters)
+            
+        return output_str
+                
+                
+        
+
 
 
     def karnak_escape_patch(self):
@@ -936,13 +1218,7 @@ class Conductor():
         for i in self.RM.rewards:
             if i.collectible is None:
                 print(i.description)
-
-        spoiler = ""
-        spoiler = spoiler + self.starting_crystal_spoiler()
-        spoiler = spoiler + self.RM.get_spoiler()
-        spoiler = spoiler + self.SM.get_spoiler()
-        #spoiler = spoiler + self.EM.get_spoiler()
-        spoiler = spoiler + self.FM.get_spoiler()
+        # Patch now comes first, because some functions (randomize_superbosses) now create the spoiler as part of their process
 
         patch = ""
         patch = patch + self.starting_crystal_patch()
@@ -950,11 +1226,20 @@ class Conductor():
         patch = patch + self.exdeath_patch
         patch = patch + self.SM.get_patch()
         patch = patch + self.SPM.get_patch()
+        patch = patch + self.randomize_superbosses() # this comes first, because it updates the contents of EnemyManager. 
         patch = patch + self.EM.get_patch(relevant=True)
         patch = patch + self.FM.get_patch()
         patch = patch + self.karnak_escape_patch()
         patch = patch + self.kuzar_text_patch()
         patch = patch + self.odin_location_fix_patch
+
+        spoiler = ""
+        spoiler = spoiler + self.starting_crystal_spoiler()
+        spoiler = spoiler + self.RM.get_spoiler()
+        spoiler = spoiler + self.SM.get_spoiler()
+        #spoiler = spoiler + self.EM.get_spoiler()
+        spoiler = spoiler + self.FM.get_spoiler()
+        spoiler = spoiler + self.superbosses_spoiler
 
         return(spoiler, patch)
 

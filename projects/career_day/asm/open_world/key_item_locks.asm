@@ -84,16 +84,18 @@ db $F7, $02, $FF, $00, $00, $FB, $69, $FF, $FF, $00, $FB, $68, $FF, $05, $01, $F
 
 ; TORNA CANAL
 ;org $D90015
-org $F05F95
-db $FC, $22, $ff, $9e, $00, $ff, $77, $00
+org $F05F97
+db $FC, $22, $ff, $9e, $00, $FB, $22, $ff, $77, $00
 
 
 ; SHOAT CAVE
-org $F05F9C
+org $F05F9E
 db $F7, $02, $FF, $00, $00, $FE, $C0, $ff, $BD, $01, $FE, $C1, $ff, $BD, $01, $FE, $C2, $ff, $BD, $01, $FE, $C3, $ff, $BD, $01, $FE, $C4, $ff, $BD, $01, $FE, $C5, $ff, $BD, $01, $FE, $C7, $ff, $BD, $01, $ff, $BE, $01
 
-; $ff, $BD, $01, $ff, $BE, $01
-
+; PHOENIX TOWER
+;org $D90015
+org $F05FC9
+db $FE, $5A, $FF, $00, $00, $FD, $65, $FF, $43, $00, $FE, $F63, $FF, $27, $00, $FD, $F63, $FF, $22, $00
 
 
 
@@ -537,7 +539,7 @@ BNE KeyItemLockingNextCheck11
 
 LDA #$1F95
 STA $23
-LDA #$1F99
+LDA #$1F9E
 STA $26
 JMP KeyItemLockingImmediateFinish
 KeyItemLockingNextCheck11:
@@ -552,12 +554,30 @@ BNE KeyItemLockingNextCheck12
 
 ; HANDLE SHOAT CAVE ACCESS
 
-LDA #$1F9C
+LDA #$1F9E
 STA $23
-LDA #$1FA9
+LDA #$1FC9
 STA $26
 JMP KeyItemLockingImmediateFinish
 KeyItemLockingNextCheck12:
+
+
+; PHOENIX CAVE VALIDATION
+lda !mapid
+CMP #$01B2
+BNE KeyItemLockingNextCheck13
+lda !xycoordcheck
+CMP #$160F
+BNE KeyItemLockingNextCheck13
+
+; HANDLE PHOENIX CAVE VALIDATION
+
+LDA #$1FC9
+STA $23
+LDA #$1FDB
+STA $26
+JMP KeyItemLockingImmediateFinish
+KeyItemLockingNextCheck13:
 
 
 

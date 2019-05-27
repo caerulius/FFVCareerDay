@@ -175,52 +175,6 @@ JMP $C7A4 ; branch the fk out and hope it works (it does)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ; RANDOMIZER JOB SETTING  : Code $EC
 ; On rando seeds, this will trigger from the values written to E79F00:
 ; $00 = job id
@@ -238,9 +192,16 @@ RandomizerJobSetting:
 pha
 phx
 
+
+
+
 ; turn off freelancer
 LDA #$00
 STA $000842
+
+; set control to zero for name validation (phoenix tower)
+STA !charnamecontrol
+
 
 ; set job value to learned jobs
 LDX #$0000
@@ -574,3 +535,90 @@ JML $C0A628 ; end event function
 ;; RONKA RUINS always unset
 ; LDA #$04
 ; TRB $0A53
+
+
+
+
+; NAME INPUT VALIDATER : Code $F2
+org $C0A5CC 
+db $38, $CE 
+
+org $C0CE38
+JML !ADDRESS_NEWEVENT_namevalidation
+
+org !ADDRESS_NEWEVENT_namevalidation
+lda !charnamecontrol
+CMP #$01
+BEQ CharNameControlOn
+; Control off - save name, set it to on and branch
+LDA $0990
+STA !charname1
+LDA $0991
+STA !charname2
+LDA $0992
+STA !charname3
+LDA $0993
+STA !charname4
+LDA $0994
+STA !charname5
+LDA $0995
+STA !charname6
+
+LDA #$01
+STA !charnamecontrol
+JMP CharNameValidationFinish
+
+; Control on - compare each byte to !ADDRESS_phoenixtowername and set !charnamepass if so
+; Then always restore original name & set control off
+CharNameControlOn:
+LDA $0990
+CMP !ADDRESS_phoenixtowername
+BNE FinishControlOn
+LDA $0991
+CMP !ADDRESS_phoenixtowername+1
+BNE FinishControlOn
+LDA $0992
+CMP !ADDRESS_phoenixtowername+2
+BNE FinishControlOn
+LDA $0993
+CMP !ADDRESS_phoenixtowername+3
+BNE FinishControlOn
+LDA $0994
+CMP !ADDRESS_phoenixtowername+4
+BNE FinishControlOn
+LDA $0995
+CMP !ADDRESS_phoenixtowername+5
+BNE FinishControlOn
+; if it made it this far, the name passed, so set the event code bit
+
+LDA #$08
+TSB $0A20
+
+FinishControlOn:
+LDA !charname1
+STA $0990
+LDA !charname2
+STA $0991
+LDA !charname3
+STA $0992
+LDA !charname4
+STA $0993
+LDA !charname5
+STA $0994
+LDA !charname6
+STA $0995
+
+
+LDA #$00
+STA !charnamecontrol
+
+
+
+
+
+
+
+CharNameValidationFinish:
+JML $C0A628 ; hopefully this works 
+
+

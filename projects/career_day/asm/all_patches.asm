@@ -255,7 +255,7 @@ incsrc core_code/credits.asm
 incsrc open_world/summon_bosses.asm
 incsrc open_world/gargoyles_restructure.asm
 incsrc open_world/bal_castle_timerguard.asm
-
+incsrc open_world/phoenix_tower.asm
 incsrc world2/mooglewaterway_encounters.asm
 
 ; text tables
@@ -274,5 +274,6 @@ incsrc ../../shared_asm/data_tables/progressive_ability_table.asm
 incsrc ../../shared_asm/data_tables/progressive_magic_table.asm
 incsrc ../../shared_asm/data_tables/magic_ability_crystal_shop_prices.asm
 incsrc ../../shared_asm/data_tables/original_magic_prices.asm
+incsrc ../../shared_asm/data_tables/exp_table_lv50_modified.asm
 
 incsrc ../../shared_asm/colors/galuf_mimic.asm

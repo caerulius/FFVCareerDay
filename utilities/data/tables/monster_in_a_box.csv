@@ -30,9 +30,14 @@ monster_box_id,readable_name,area,monster_chest_id,monster_chest_data,reward_id,
 28,,Pyramid,D134DE,A6,D134DF,EB
 29,,Solitary Island,D134FE,AB,D134FF,64
 30,,Solitary Island,D13506,AC,D13507,AF
-31,,Phoenix Tower,D13582,AD,D13583,E4
-32,,Phoenix Tower,D1358A,AD,D1358B,E4
-33,,Phoenix Tower,D1358E,AD,D1358F,E4
-34,,Phoenix Tower,D1359A,AD,D1359B,E4
-35,,Phoenix Tower,D1359E,AD,D1359F,68
-36,,Void,D135FA,AE,D135FB,16
+31,,Phoenix Tower,D1357E,AD,D1357F,E4
+32,,Phoenix Tower,D13582,AD,D13583,E4
+33,,Phoenix Tower,D13586,AD,D13587,E4
+34,,Phoenix Tower,D1358A,AD,D1358B,E4
+35,,Phoenix Tower,D1358E,AD,D1358F,E4
+36,,Phoenix Tower,D13592,AD,D13593,E4
+37,,Phoenix Tower,D13596,AD,D13597,E4
+38,,Phoenix Tower,D1359A,AD,D1359B,E4
+39,,Phoenix Tower,D1359E,AD,D1359F,68
+40,,Phoenix Tower,D135A2,AD,D135A3,E4
+41,,Void,D135FA,AE,D135FB,16
