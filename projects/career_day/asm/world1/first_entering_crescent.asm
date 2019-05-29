@@ -51,4 +51,4 @@ db $FF							;End Event
 db $FF							;End Event
 
 padbyte $00
-pad $C88B25
+pad $C88A39

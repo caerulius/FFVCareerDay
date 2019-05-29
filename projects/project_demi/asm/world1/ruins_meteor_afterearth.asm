@@ -67,7 +67,7 @@ db $CD, $B7, $04                ;Run event index 04B7
 db $CB, $36, $01                ;Clear Flag 2/3/4/5/36 01
 db $A2, $54                     ;Set Event Flag 054
 db $A3, $BC                     ;Clear Event Flag 0BC
-db $CC, $17                  ;Custom destination flag 17
+db $CC, $16
 db $FF                          ;End Event
 
 pad $C986E7
@@ -88,6 +88,7 @@ db $80, $12                     ;Sprite 080 do event: face right, standing
 db $81, $12                     ;Sprite 081 do event: face right, standing
 db $83, $12                     ;Sprite 083 do event: face right, standing
 db $A4, $EF                     ;Turn on bit 80 at address 0x7e0a51
+db $CC, $17 ; baham
 db $FF                          ;End Event
 
 pad $C8DD84

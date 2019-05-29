@@ -350,6 +350,12 @@ nop
 org $CE65B7
 db $00
 
+; Delete King Walse
+org $CE6A9C
+pad $CE6AA3
+; Change NPC dialogue bc King Walse not there
+org $CE6AAA
+db $D1
 
 ; gilgamesh music fix
 org $D0495E
@@ -362,3 +368,8 @@ org $D04D4E
 db $18
 org $D04D8E
 db $18
+
+
+; disable surgate NPCs in bed
+org $CE8A15
+pad $CE8A38
