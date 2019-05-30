@@ -15,15 +15,23 @@ if GUI_FLAG:
     text_dict2 = pd.read_csv('tables/text_tables/' + table, header=None,index_col=1).to_dict()[0]
     key_item_table = pd.read_csv('tables/text_tables/' + 'key_item_text.csv',header=None,index_col=0).to_dict()[1]
 else:
-    text_dict = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=0).to_dict()[1]
-    text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables',table),header=None,index_col=1).to_dict()[0]
+    text_dict = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables',table),header=None,index_col=0).to_dict()[1]
+    text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables',table),header=None,index_col=1).to_dict()[0]
     key_item_table = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','key_item_text.csv'),header=None,index_col=0).to_dict()[1]
 
     
 
 data = '''
-
-728E7B867A8B82877E966A7E92A2
+73817eff7e8f8285ff9082937a8b7dff
+64878e88ff908188ff8d8b827e7dff8d
+88ff01ffff867a847eff8d817eff9088
+8b857dff81828cff889087ff90828d81
+ff8d817e01ffff8988907e8bff887fff
+8d817effab7588827d9aa3a3a30101a3
+a3a3817eff8182868c7e857fff907a8c
+ff8c8e7c847e7dff82878d88ff8d817e
+ff01ffff7588827dff7a877dff7d828c
+7a89897e7a8b7e7da3a3a300
 
 '''
 

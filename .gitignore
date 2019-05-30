@@ -3,3 +3,4 @@
 *.sublime-*
 *.~lock.*
 *.sfc
+utilities/data/log_analysis_render/*

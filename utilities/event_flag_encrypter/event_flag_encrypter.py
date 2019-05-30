@@ -131,8 +131,8 @@ def reverse_conditional_flag(address, bit, type_set):
     print("----")
     
         
-conditional_flag('FB','19')
-#reverse_conditional_flag('A2C','40','unset')
+#conditional_flag('FB','19')
+reverse_conditional_flag('A1E','10','set')
             
             
             

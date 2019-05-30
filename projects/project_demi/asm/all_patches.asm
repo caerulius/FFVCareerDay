@@ -5,8 +5,6 @@ incsrc core_code/init.asm
 incsrc ../../shared_asm/data_tables/starting_stats.asm
 
 ; conditionals
-; !vanillarewards defined in command line 
-!testing = 0
 
 ; world 1                                   Destinations:
 incsrc world1/intro_cutscene.asm           ; 00 Tycoon Meteor
@@ -64,7 +62,7 @@ incsrc world1/steamship_accelerator.asm
 incsrc world1/fire_crystal.asm
 incsrc world1/after_karnak_escape.asm
 
-incsrc world1/ancient_library.asm
+; incsrc world1/ancient_library.asm ; disabled for consistency - fight the page >=[
 incsrc world1/ifrit.asm
 incsrc world1/byblos.asm                                   
 incsrc world1/mid_after_byblos.asm					   ; 0D Karnak Pub
@@ -172,11 +170,10 @@ incsrc world3/cleft_necrophobe.asm
 
 incsrc core_code/menu_hook.asm
 incsrc core_code/key_item_dummy.asm
-
+incsrc core_code/utility.asm
 incsrc ../../shared_asm/shared_core/reward_manager.asm
 incsrc ../../shared_asm/shared_core/new_event.asm
 incsrc ../../shared_asm/shared_core/encounter_toggle.asm
-incsrc ../../shared_asm/shared_core/utility.asm
 incsrc ../../shared_asm/shared_core/walk_speed.asm
 incsrc ../../shared_asm/shared_core/chest_magicreward.asm
 incsrc ../../shared_asm/shared_core/shop_hook.asm
@@ -184,6 +181,25 @@ incsrc ../../shared_asm/shared_core/battle_hook.asm
 incsrc ../../shared_asm/balancing/exp_abp_modifier.asm
 incsrc ../../shared_asm/recovery/all_inns.asm
 incsrc ../../shared_asm/recovery/tent.asm
+
+; optionals
+if !learning = 1
+	incsrc ../../shared_asm/optionals/learning.asm
+endif
+if !passages = 1
+	incsrc ../../shared_asm/optionals/passages.asm
+endif
+if !pitfalls = 1
+	incsrc ../../shared_asm/optionals/pitfalls.asm
+endif
+if !double_atb = 1
+	incsrc ../../shared_asm/optionals/double_atb.asm
+endif
+if !boss_exp = 1
+	incsrc ../../shared_asm/optionals/boss_exp.asm
+endif
+
+
 
 ; reward events
 incsrc reward_events/piratescave_syldra.asm
@@ -220,7 +236,6 @@ incsrc ../../shared_asm/text_tables/ability_chest_table.asm
 incsrc ../../shared_asm/text_tables/job_shop_table.asm
 incsrc ../../shared_asm/text_tables/job_chest_table.asm
 incsrc ../../shared_asm/text_tables/magic_chest_table.asm
-incsrc ../../shared_asm/text_tables/key_item_tables.asm
 incsrc ../../shared_asm/text_tables/misc_text.asm
 
 ; other tables
@@ -228,3 +243,7 @@ incsrc ../../shared_asm/data_tables/progressive_ability_table.asm
 incsrc ../../shared_asm/data_tables/progressive_magic_table.asm
 incsrc ../../shared_asm/data_tables/magic_ability_crystal_shop_prices.asm
 incsrc ../../shared_asm/data_tables/original_magic_prices.asm
+
+incsrc core_code/credits.asm
+
+incsrc ../../shared_asm/colors/galuf_mimic.asm

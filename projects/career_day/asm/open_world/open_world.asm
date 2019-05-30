@@ -232,6 +232,11 @@ db $FB, $FB
 org $C99EBB
 db $00, $00, $00
 
+; MIRAGE VILLAGE
+; make it so canal key's old item ($000A4C, bit 20) now required to enter
+org $F057B4
+db $FC, $C5
+
 ; NORTH MOUNTAIN
 ; conditional event for never interacting with hiryuu at top
 org $F04835
@@ -273,7 +278,9 @@ db $FF                          ;End Event
 org $F046AC
 db $00
 
-
+; disable guido bit flag $000A2C bit $01
+org $C8CE86
+db $00, $00
 
 ; NEW TEXT FOR DEBUG TO WARP AREA
 org $e178fa
@@ -343,6 +350,12 @@ nop
 org $CE65B7
 db $00
 
+; Delete King Walse
+org $CE6A9C
+pad $CE6AA3
+; Change NPC dialogue bc King Walse not there
+org $CE6AAA
+db $D1
 
 ; gilgamesh music fix
 org $D0495E
@@ -355,3 +368,8 @@ org $D04D4E
 db $18
 org $D04D8E
 db $18
+
+
+; disable surgate NPCs in bed
+org $CE8A15
+pad $CE8A38

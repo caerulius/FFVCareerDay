@@ -34,6 +34,9 @@ db $A3, $C0            ; set address 000A2C bit OFF 01
 ; restore player status for SAFETY
 db $DB
 
+; this blanket disables cutscene flag
+db $A5, $FE                     ;Clear Event Flag 1FE
+
 db $C3, $06
 db $71
 db $FF
@@ -112,6 +115,20 @@ db $3F, $1B ; walk cycle properties
 ; change NPC behavior for calling an event
 org $CE1DD7
 db $35, $04
+
+; disable guards from calling above event
+org $CE8997
+db $E3
+org $CE899E
+db $E3
+org $CE89A5
+db $E3
+org $CE89AC
+db $E3
+org $CE89B3
+db $E3
+org $CE89BA
+db $E3
 
 ; change address for custom event
 org $C83FBF

@@ -121,8 +121,8 @@ BEQ ProceedRejectedItem2
 CMP #$DC00
 BEQ ProceedRejectedItem2
 ; Zeza fleet
-; CMP #$4601
-; BEQ ProceedRejectedItem2
+CMP #$4601
+BEQ ProceedRejectedItem2
 ; Zeza fleet below deck
 CMP #$4701
 BEQ ProceedRejectedItem2

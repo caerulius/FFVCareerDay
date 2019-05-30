@@ -4,6 +4,7 @@ hirom
 ; After picking up final crystal
 org $C8729A
 
+db $CC, $09                  	;Custom destination flag 09
 db $B4, $31			;Play Background Music Run!
 db $B5, $84			;Play Sound Effect Exdeath destroyed 2
 db $BE, $49			;Rumble effect of 49 magnitude

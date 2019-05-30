@@ -6,28 +6,6 @@ incsrc core_code/init.asm
 incsrc core_code/relocate_conditional_events.asm
 incsrc ../../shared_asm/data_tables/starting_stats.asm
 
-; conditionals. asar command line defines now
-;!testing = 1 ; this enables debugging below 
-; !allkeysunlocked = 1 ; this starts the player with all keys
-
-; randomizer testing
-; use .sh scripts for this instead
-; incsrc ../../test_asm/r-patch.asm
-; incsrc ../../test_asm/key_items-patch.asm
-
-; other core_code testing
-; incsrc open_world/scratchpad.asm
-; incsrc open_world/test_constants.asm
-
-
-
-
-
-
-
-
-
-
 ; world 1                                   Destinations:
 incsrc world1/tycoon_meteor_01_mount.asm
 incsrc world1/tycoon_meteor_02_mount.asm
@@ -195,11 +173,11 @@ incsrc world3/cleft_necrophobe.asm
 incsrc core_code/menu_hook.asm
 incsrc core_code/battle_code.asm
 incsrc core_code/custom_items.asm
+incsrc core_code/utility.asm
 
 incsrc ../../shared_asm/shared_core/reward_manager.asm
 incsrc ../../shared_asm/shared_core/new_event.asm
 incsrc ../../shared_asm/shared_core/encounter_toggle.asm
-incsrc ../../shared_asm/shared_core/utility.asm
 incsrc ../../shared_asm/shared_core/walk_speed.asm
 incsrc ../../shared_asm/shared_core/chest_magicreward.asm
 incsrc ../../shared_asm/shared_core/shop_hook.asm
@@ -207,6 +185,21 @@ incsrc ../../shared_asm/shared_core/battle_hook.asm
 incsrc ../../shared_asm/balancing/exp_abp_modifier.asm
 incsrc ../../shared_asm/recovery/all_inns.asm
 incsrc ../../shared_asm/recovery/tent.asm
+
+
+; optionals
+if !learning = 1
+	incsrc ../../shared_asm/optionals/learning.asm
+endif
+if !passages = 1
+	incsrc ../../shared_asm/optionals/passages.asm
+endif
+if !pitfalls = 1
+	incsrc ../../shared_asm/optionals/pitfalls.asm
+endif
+if !double_atb = 1
+	incsrc ../../shared_asm/optionals/double_atb.asm
+endif
 
 
 ; reward events
@@ -247,6 +240,7 @@ incsrc reward_events/magic_lamp.asm
 incsrc open_world/canal_fix.asm
 incsrc open_world/key_items.asm
 incsrc open_world/key_item_locks.asm
+incsrc open_world/npc_locks.asm
 incsrc open_world/open_world.asm
 incsrc open_world/intro_cutscene.asm
 incsrc open_world/world1_to_world2_warp.asm
@@ -260,7 +254,8 @@ incsrc open_world/exdeath_overwrite.asm
 incsrc core_code/credits.asm
 incsrc open_world/summon_bosses.asm
 incsrc open_world/gargoyles_restructure.asm
-
+incsrc open_world/bal_castle_timerguard.asm
+incsrc open_world/phoenix_tower.asm
 incsrc world2/mooglewaterway_encounters.asm
 
 ; text tables
@@ -270,11 +265,15 @@ incsrc ../../shared_asm/text_tables/ability_chest_table.asm
 incsrc ../../shared_asm/text_tables/job_shop_table.asm
 incsrc ../../shared_asm/text_tables/job_chest_table.asm
 incsrc ../../shared_asm/text_tables/magic_chest_table.asm
-incsrc ../../shared_asm/text_tables/key_item_tables.asm
+incsrc tables/key_item_tables.asm
 incsrc ../../shared_asm/text_tables/misc_text.asm
+incsrc tables/misc_open_world_text.asm
 
 ; other tables
 incsrc ../../shared_asm/data_tables/progressive_ability_table.asm
 incsrc ../../shared_asm/data_tables/progressive_magic_table.asm
 incsrc ../../shared_asm/data_tables/magic_ability_crystal_shop_prices.asm
 incsrc ../../shared_asm/data_tables/original_magic_prices.asm
+incsrc ../../shared_asm/data_tables/exp_table_lv50_modified.asm
+
+incsrc ../../shared_asm/colors/galuf_mimic.asm

@@ -12,6 +12,7 @@ keyitem_id,readable_name,valid,writeable_name,text_location
 0C,Shrine Page,TRUE,Shrine Page,E7359C
 0D,Trench Page,TRUE,Trench Page,E735A9
 0E,Falls Page,TRUE,Falls Page,E735B6
+12,Mirage Radar,TRUE,Mirage Radar,E735EA
 15,Adamantite,TRUE,Adamantite,E73611
 16,Moogle Suit,TRUE,Moogle Suit,E7361E
 18,Elder Branch,TRUE,Elder Branch,E73638
