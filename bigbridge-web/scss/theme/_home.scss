@@ -1,0 +1,542 @@
+
+.dup-body {
+	background: $primary-color;
+}
+.dup-body-wrap {
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.2);
+	margin: 50px;
+	position: relative;
+	@include media-breakpoint-down (sm) {
+		margin: 30px;
+	}
+	@include media-breakpoint-down (xs) {
+		margin: 10px;
+	}
+}
+.container {
+	@include media-breakpoint-down(lg) {
+		padding: 0 30px;
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 0 15px;
+	}
+}
+.section-gap {
+	padding: 120px 0;
+}
+.primary-btn {
+	line-height: 42px;
+	padding-left: 30px;
+	padding-right: 60px;
+	border-radius: 25px;
+	background: transparent;
+	border: 1px solid $primary-color;
+	color: $title-color;
+	display: inline-block;
+	font-weight: 500;
+	position: relative;
+	@include transition();
+	cursor: pointer;
+	text-transform: uppercase;
+	position: relative;
+	&:focus {
+		outline: none;
+	}
+	span {
+		color: $title-color;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-60%);
+		right: 30px;
+		@include transition();
+	}
+	&:hover {
+		background: $primary-color;
+		color: $white;
+		span {
+			color: $white;
+			right: 20px;
+		}
+	}
+	&.white {
+		border: 1px solid $white;
+		color: $white;
+		span {
+			color: $white;
+		}
+		&:hover {
+			background: $white;
+			color: $primary-color;
+			span {
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+//--------- Start Banner Area -------------//
+
+.banner-area {
+	background: $white;
+	.fullscreen {
+		@include media-breakpoint-down (sm) {
+			height: 800px !important;
+		}
+	}
+}
+.banner-content {
+	@include media-breakpoint-down(sm) {
+		margin-top: 100px;
+	}
+	h1 {
+		font-size: 42px;
+		font-weight: 600;
+		line-height: 1.15em;
+		margin-bottom: 20px;
+		@include media-breakpoint-down(md) {
+			font-size: 36px;
+		}
+		br {
+			@include media-breakpoint-down (md) {
+				display: none;
+			}
+		}
+	}
+	p {
+		margin-bottom: 60px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 20px;
+		}
+		font-size: 16px;
+		br {
+			@include media-breakpoint-down (md) {
+				display: none;
+			}
+		}
+	}
+}
+
+.generic-banner {
+	background: $white;
+	&.element-banner {
+		background: $primary-color;
+	}
+	.height {
+		height: 550px;
+		@include media-breakpoint-down (sm) {
+			height: 400px;
+		}
+	}
+	.banner-content {
+		h2 {
+			line-height: 1.2em;
+			margin-bottom: 20px;
+			br {
+				@include media-breakpoint-down (md) {
+					display: none;
+				}
+			}
+		}
+		p {
+			margin-bottom: 0;
+			font-size: 16px;
+			br {
+				@include media-breakpoint-down (md) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+//--------- End Banner Area -------------//
+
+//--------- Start studio Area -------------//
+
+.studio-area {
+	position: relative;
+	background: url(../img/studio-bg.jpg) no-repeat center center/cover;
+	.overlay-bg {
+		background: rgba($primary-color, .8);
+	}
+	.studio-thumb {
+		border-radius: 3px;
+		overflow: hidden;
+		display: inline-block;
+	}
+	.studio-content {
+		@include media-breakpoint-down(xs) {
+			margin-top: 30px;
+		}
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			right: 100%;
+			top: 0;
+			background: $white;
+			width: 70px;
+			height: 100%;
+			border-radius: 5px 0 0 5px;
+			@include media-breakpoint-down(md) {
+				width: 50px;
+			}
+			@include media-breakpoint-down(xs) {
+				display: none;
+			}
+		}
+		border-radius: 0 5px 5px 0;
+		background: $white;
+		padding: 35px 100px 40px 0;
+		@include media-breakpoint-down(md) {
+			padding: 30px 30px 30px 0;
+		}
+		@include media-breakpoint-down(xs) {
+			padding: 30px;
+			border-radius: 5px;
+		}
+		h2 {
+			line-height: 1.15em;
+			margin-bottom: 10px;
+		}
+	}
+}
+//--------- End Studio Area -------------//
+
+//--------- Start Achivement Area -------------//
+
+.achivement-area {
+	background: $white;
+	.achivement-content {
+		h2 {
+			line-height: 1.15em;
+			margin-bottom: 10px;
+		}
+	}
+	.single-achivement {
+		margin-top: 30px;
+		text-align: center;
+		.achivement-link {
+			display: block;
+			background: #f9fcff;
+			text-align: center;
+			border-radius: 3px;
+			@include transition();
+			i {
+				display: inline-block;
+				padding: 40px 0;
+				font-size: 42px;
+				color: $text-color;
+				@include transition();
+			}
+		}
+		h6 {
+			margin-top: 25px;
+			margin-bottom: 10px;
+			a {
+				color: $title-color;
+				font-weight: 300;
+			}
+		}
+		&:hover {
+			.achivement-link {
+				background: $primary-color;
+				i {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+//--------- End Achivement Area -------------//
+
+//--------- Start video Area -------------//
+
+.video-area {
+	position: relative;
+	background: url(../img/video-area-bg.jpg) no-repeat center center/cover;
+	.overlay-bg {
+		background: rgba($primary-color, .8);
+	}
+	.video-content {
+		padding: 200px 0;
+		text-align: center;
+		position: relative;
+		z-index: 2;
+		a {
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+	}
+}
+//--------- End video Area -------------//
+
+//--------- Start Skill Area -------------//
+
+.skill-area {
+	background: $white;
+	.skill-content {
+		h2 {
+			margin-bottom: 5px;
+		}
+	}
+}
+.total-progress-bar {
+	@include media-breakpoint-down(md) {
+		margin-top: 50px;
+	}
+}
+.single-progressbar {
+	background: #f9fcff;
+	.progress-bar {
+		background: $primary-color;
+		height: 5px;
+		line-height: 5px;
+	}
+}
+//--------- End Skill Area -------------//
+//--------- Start Carousel Area -------------//
+.carousel-area {
+	position: relative;
+	background: url(../img/carousel-bg.jpg) no-repeat center center/cover;
+	.overlay-bg {
+		background: rgba($primary-color, .8);
+	}
+}
+.active-bottle-carousel {
+	.carousel-thumb {
+		border-radius: 5px;
+		overflow: hidden;
+		img {
+			width: auto;
+		}
+	}
+	.carousel-content {
+		@include media-breakpoint-down(lg) {
+			padding-right: 30px;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-top: 50px;
+			padding-right: 0;
+		}
+	}
+	position: relative;
+	.owl-controls {
+		position: absolute;
+		top: 50%;
+		right: 50px;
+		@include media-breakpoint-down (lg) {
+			right: 0;
+		}
+		@include media-breakpoint-down (sm) {
+			display: none;
+		}
+		transform: translateY(-50%);
+		.owl-dots {
+			@include flexbox();
+			@include flex-direction(column);
+			@include align-items(end);
+			.owl-dot {
+				width: 30px;
+				height: 3px;
+				background: rgba($white, .3);
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&.active {
+					background: rgba($white, 1);
+					width: 50px;
+				}
+			}
+		}
+	}
+}
+
+//--------- End Carousel Area -------------//
+
+//--------- Start Carousel Area -------------//
+.contact-area {
+	background: $white;
+	padding: 90px 0 120px 0;
+	.single-address {
+		margin-top: 30px;
+		padding: 0 5px;
+		h6 {
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+//--------- End Carousel Area -------------//
+
+.subscription-area {
+	padding-bottom: 90px;
+}
+.subscription {
+	input {
+		width: 100%;
+		line-height: 50px;
+		padding: 0 180px 0 25px;
+		border: none;
+		background: transparent;
+		font-weight: 300;
+		border-radius: 25px;
+		background: #f9f9ff;
+	}
+	.primary-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 5px;
+		background: $primary-color;
+		color: $white;
+		span {
+			color: $white;
+		}
+	}
+	.info {
+		position: absolute;
+		top: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $white;
+		font-size: 12px;
+		&.valid {
+			color: $white;
+		}
+		&.error {
+			color: $white;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		input {
+			padding: 0 25px;
+		}
+		.primary-btn {
+			top: 120%;
+			transform: translate(50%, 0);
+			right: 50%;
+			width: 220px;
+		}
+		.info {
+			top: 110px;
+		}
+	}
+}
+
+.footer-widget-area {
+	position: relative;
+	background: url(../img/f-bg.jpg) no-repeat center center/cover;
+	.overlay-bg {
+		background: rgba($primary-color, .8);
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+	.footer-nav {
+		margin-top: -7px;
+		li {
+			margin-top: 8px;
+			a {
+				color: rgba($white, .7);
+				&:hover {
+					color: rgba($white, 1);
+				}
+			}
+		}
+	}
+}
+.instafeed {
+	margin: -5px;
+	li {
+		overflow: hidden;
+		width: 25%;
+		img {
+			margin: 5px;
+		}
+	}
+}
+.single-footer-widget {
+	margin-bottom: 30px;
+}
+.footer-bottom {
+	padding-top: 40px;
+	.footer-text {
+		color: $white;
+		i {
+			color: $white;
+		}
+		a {
+			text-decoration: underline;
+			color: rgba($white, .7);
+			&:hover {
+				color: rgba($white, 1);
+			}
+		}
+	}
+}
+.footer-social {
+	@include media-breakpoint-down(sm) {
+		margin-top: 10px;
+	}
+	a {
+		border: 1px solid rgba($white, .3);
+		width: 30px;
+		line-height: 30px;
+		display: inline-block;
+		text-align: center;
+		margin-right: 5px;
+		i {
+			color: $white;
+			@include transition();
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			background: $white;
+			border: 1px solid rgba($white, 1);
+			i {
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+//----------- Start Generic Page -------------//
+
+.about-generic-area {
+	position: relative;
+	background: url(../img/g-bg.jpg) no-repeat center center/cover;
+	.overlay-bg {
+		background: rgba($primary-color, .8);
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+	.border-top-generic {
+		padding: 100px 15px;
+	}
+	p {
+		margin-bottom: 30px;
+	}
+}
+.white-bg {
+	background: $white;
+}
+.section-top-border {
+	padding: 70px 0;
+	border-top: 1px dotted #eee;
+}
+.switch-wrap {
+	margin-bottom: 10px;
+	p {
+		margin: 0;
+	}
+}
+//----------- End Generic Page -------------//

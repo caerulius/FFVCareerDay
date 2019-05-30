@@ -1,0 +1,68 @@
+
+.default-header {
+	padding: 20px 60px;
+	@include media-breakpoint-down(lg) {
+		padding: 20px 30px;
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 20px 15px;
+	}
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+}
+.menu-bar {
+	cursor: pointer;
+	span {
+		color: $title-color;
+		font-size: 24px;
+	}
+}
+.main-menubar {
+	position: relative;
+}
+nav {
+	margin-right: 70px;
+	@include media-breakpoint-down (sm) {
+		margin-right: 0;
+		position: absolute;
+		right: 0;
+		top: 47px;
+		text-align: right;
+		padding: 20px 0;
+		z-index: 5;
+		background: $white;
+	}
+	@include transition();
+	 transform-origin: 100% 50%;
+	&.hide {
+		transform: scale(0);
+	}
+	a {
+		font-size: 12px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $title-color;
+		margin: 0 25px;
+		display: inline-block;
+		@include media-breakpoint-down (sm) {
+			margin: 5px 25px;
+		}
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+.white-menubar {
+	.menu-bar span {
+		color: $white;
+	}
+	nav a {
+		color: rgba($white, .7);
+		&:hover {
+			color: rgba($white, 1);
+		}
+	}
+}

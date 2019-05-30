@@ -7,6 +7,12 @@ import math
 from progression_translation import *
 
 class Collectible(ABC):
+    """A single something, retreived from a chest, event, or shop.
+
+    Collectibles are anything the player can receive at any point.
+    Collectible is an abstract class and is implemented in currently
+    six ways.
+    """ 
     def __init__(self, reward_id, reward_name, reward_value, related_jobs,
                  max_count, valid = None):
         #pandas imports a blank field as a float nan. This is the easiest way to none it.
