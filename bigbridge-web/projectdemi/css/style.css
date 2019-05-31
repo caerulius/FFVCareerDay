@@ -150,7 +150,7 @@ color: #fff;
 
 
 .link{
-	padding:15px 35px;
+	padding:35px 35px;
 	background:#A651BC;
 	color:#fff !important;
 	font-size:16px;
@@ -868,6 +868,16 @@ border: 2px solid #fff;
 .big-download {
 	height: 100px;
 	width: 300px;
+	font-size:1.8em;
+	margin-top:40px;
+	outline:0;
+	display:block;
+}
+
+.big-download:disabled {
+	cursor:not-allowed;
+	background: #EDDDF2;
+	color:#ababab !important;
 }
 
 .github .fa {
@@ -920,4 +930,70 @@ border: 2px solid #fff;
 .delay-12s { 
 	animation-delay: 1.2s; 
 	-webkit-animation-delay: 1.2s; 
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: #A651BC;
+    cursor: inherit;
+    display: block;
+    width:20em;
+    height:5em;
+}
+.file-browse {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.file-browse + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #fff;
+    background-color: #A651BC;
+    display: inline-block;
+    padding:20px;
+    border-radius:5px;
+    margin-bottom:20px;
+}
+
+.file-browse:focus + label,
+.file-browse + label:hover {
+    background-color: #844096;
+    cursor:pointer;
+}
+
+.file-info{
+	display:inline-block;
+	margin-left:15px;
+	font-size:1.7em;
+}
+.pretty.p-default input:checked~.state label:after{
+	color: #A651BC !important;
+}
+
+.state{
+	font-size:20px;
+}
+
+.check-icon{
+	color: #A651BC !important;
+}
+
+.check-div{
+	margin:15px;
 }
