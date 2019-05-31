@@ -1137,6 +1137,36 @@ class Conductor():
             # Add these to the relevant enemies list             
             self.EM.relevant_enemies.append(random_enemy)
             
+                
+            # Then update dialogue for NPCs in Mirage Village & Moogle Forest
+            
+            # e303ac mirage start
+            
+            if random_enemy.idx == '253': # OMEGA
+                output_str = output_str + "\n\n; ***Mirage Village NPC [Omega]***\n"
+                output_str = output_str + "org $E303AC\npadbyte $FF\npad $E30447\npadbyte $00\norg $E303AC\ndb $6E, $6C, $64, $66, $60, $9D, $96, $8D, $81, $7E, $96, $90, $7A, $8B, $96, $86, $7A, $7C, $81, $82, $87, $7E, $A3, $A3, $A3, $01, $81, $7A, $8C, $96, $90, $7E, $7A, $84, $87, $7E, $8C, $8C, $7E, $8C, $A3, $A3, $A3, $01\n"
+            if random_enemy.idx == '361': # SHINRYUU
+                output_str = output_str + "\n\n; ***Moogle Forest NPC [Shinryuu]***\n"
+                output_str = output_str + "org $E24487\npadbyte $FF\npad $E245C7\npadbyte $00\norg $E24487\ndb $72, $67, $68, $6D, $71, $78, $74, $74, $9D, $96, $8D, $81, $7E, $96, $87, $88, $8F, $7A, $96, $7D, $8B, $7A, $80, $88, $87, $A3, $A3, $A3, $01, $81, $7A, $8C, $96, $90, $7E, $7A, $84, $87, $7E, $8C, $8C, $7E, $8C, $A3, $A3, $A3, $01\n"
+            for weakness in random_enemy_weaknesses:
+                new_text = weakness[0].upper() + weakness[1:]
+                new_text = self.TP.run_encrypt_text_string(new_text)
+                output_str = output_str + new_text + ", $01\n"
+            output_str = output_str + "db $60, $87, $7D, $96, $7F, $88, $8B, $96, $8C, $8D, $7A, $8D, $8E, $8C, $7E, $8C, $A3, $A3, $A3, $01\n"
+            for weakness in random_enemy_status_afflict:
+                new_text = weakness[0].upper() + weakness[1:]
+                new_text = self.TP.run_encrypt_text_string(new_text)
+                output_str = output_str + new_text + ", $01\n"
+            output_str = output_str + "db $00\n"
+            
+                
+            
+            
+            
+            
+            
+            
+            
         # Finally, create the "CODE OF THE VOID"
         
         # For some reason, couldn't get this to load in from star import from text_parser

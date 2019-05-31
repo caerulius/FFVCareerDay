@@ -244,6 +244,8 @@ incsrc ../../shared_asm/data_tables/progressive_magic_table.asm
 incsrc ../../shared_asm/data_tables/magic_ability_crystal_shop_prices.asm
 incsrc ../../shared_asm/data_tables/original_magic_prices.asm
 
+; other code
 incsrc core_code/credits.asm
+incsrc core_code/misc_fixes.asm
 
 incsrc ../../shared_asm/colors/galuf_mimic.asm

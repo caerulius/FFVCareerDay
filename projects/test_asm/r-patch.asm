@@ -3,872 +3,872 @@ hirom
 ;starting crystal
 ;================
 org $E79F00
-db $05, $02, $FF, $13
+db $0E, $02, $26, $4b
 
 ;=================
 ;Chests and Events
 ;=================
 org $C0FAB2 
-db $60, $22
-org $C0FAB4 
-db $60, $2A
-org $C0FAB6 
-db $20, $26
-org $C0FAB8 
-db $40, $33
-org $C0FABA 
-db $40, $E1
-org $C0FABC 
-db $40, $35
-org $C0FABE 
-db $20, $0F
-org $C0FAC0 
-db $60, $20
-org $C0FAC2 
-db $40, $D0
-org $C0FAC4 
-db $40, $E4
-org $C0FAC6 
-db $40, $C7
-org $C0FAC8 
-db $40, $82
-org $C0FACA 
-db $40, $CF
-org $C0FACC 
-db $40, $F3
-org $C0FACE 
-db $40, $A5
-org $C0FAD0 
-db $40, $39
-org $C0FAD2 
-db $40, $56
-org $C0FAD4 
-db $20, $04
-org $C0FAD6 
-db $40, $31
-org $C0FAD8 
-db $20, $24
-org $C0FADA 
-db $20, $14
-org $C0FADC 
-db $60, $02
-org $C0FADE 
-db $40, $A4
-org $C0FAE0 
-db $40, $CA
-org $C0FAE2 
-db $60, $2C
-org $C0FAE4 
-db $40, $44
-org $C0FAE6 
-db $60, $08
-org $C0FAE8 
-db $40, $CA
-org $C0FAEA 
-db $40, $FC
-org $C0FAEC 
-db $60, $13
-org $C0FAEE 
-db $40, $12
-org $C0FAF0 
 db $20, $1A
-org $C0FAF2 
-db $40, $FE
-org $C0FAF4 
-db $40, $C9
-org $C0FAF6 
-db $40, $9A
-org $C0FAF8 
-db $40, $AE
-org $C0FAFA 
-db $40, $81
-org $C0FAFC 
-db $60, $0E
-org $C0FAFE 
-db $60, $25
-org $C0FB00 
-db $40, $87
-org $C0FB02 
-db $40, $E2
-org $C0FB04 
-db $60, $09
-org $C0FB06 
-db $60, $38
-org $C0FB08 
-db $20, $1D
-org $C0FB0A 
-db $40, $41
-org $C0FB0C 
-db $40, $4F
-org $C0FB0E 
-db $40, $35
-org $C0FB10 
-db $40, $92
-org $C0FB12 
-db $60, $43
-org $C0FB14 
-db $40, $81
-org $C0FB16 
-db $40, $CE
-org $C0FB18 
-db $40, $6C
-org $C0FB1A 
-db $40, $B9
-org $C0FB1C 
-db $60, $01
-org $C0FB1E 
-db $40, $E1
-org $C0FB20 
-db $40, $0C
-org $C0FB22 
-db $20, $20
-org $C0FB24 
-db $20, $06
-org $C0FB26 
-db $20, $1B
-org $C0FB28 
-db $60, $0E
-org $C0FB2A 
-db $50, $00
-org $C0FB2C 
-db $20, $10
-org $C0FB2E 
-db $60, $39
-org $C0FB30 
-db $40, $E2
-org $C0FB32 
-db $40, $FD
-org $C0FB34 
-db $40, $3C
-org $C0FB36 
-db $40, $86
-org $C0FB38 
-db $40, $5F
-org $C0FB3A 
-db $40, $4D
-org $C0FB3C 
-db $60, $0C
-org $C0FB3E 
-db $50, $09
-org $C0FB40 
-db $40, $EF
-org $D13212 
-db $20, $08
-org $D13216 
-db $60, $3C
-org $D1321A 
-db $40, $0E
-org $D1321E 
-db $40, $F3
-org $D13222 
-db $40, $E0
-org $D13226 
-db $40, $AF
-org $D1322A 
-db $A4, $13
-org $D1322E 
-db $02, $03
-org $D13232 
-db $20, $02
-org $D13236 
-db $20, $13
-org $D1323A 
-db $40, $2E
-org $D1323E 
-db $04, $02
-org $D13242 
-db $03, $0F
-org $D13246 
-db $40, $8A
-org $D1324A 
-db $40, $3A
-org $D1324E 
-db $40, $0E
-org $D13252 
+org $C0FAB4 
+db $40, $0B
+org $C0FAB6 
+db $40, $CC
+org $C0FAB8 
+db $40, $AD
+org $C0FABA 
+db $40, $11
+org $C0FABC 
+db $40, $02
+org $C0FABE 
+db $40, $13
+org $C0FAC0 
+db $40, $2B
+org $C0FAC2 
+db $40, $8F
+org $C0FAC4 
+db $60, $22
+org $C0FAC6 
+db $60, $20
+org $C0FAC8 
 db $60, $23
-org $D13256 
-db $40, $F1
-org $D1325A 
-db $40, $C3
-org $D1325E 
-db $40, $09
-org $D13262 
-db $60, $1B
-org $D13266 
+org $C0FACA 
+db $40, $57
+org $C0FACC 
+db $40, $45
+org $C0FACE 
+db $20, $00
+org $C0FAD0 
+db $40, $51
+org $C0FAD2 
+db $40, $6A
+org $C0FAD4 
+db $40, $47
+org $C0FAD6 
+db $40, $23
+org $C0FAD8 
+db $50, $10
+org $C0FADA 
+db $40, $E5
+org $C0FADC 
+db $50, $0D
+org $C0FADE 
+db $50, $08
+org $C0FAE0 
+db $20, $0E
+org $C0FAE2 
+db $20, $00
+org $C0FAE4 
+db $40, $5A
+org $C0FAE6 
+db $60, $31
+org $C0FAE8 
+db $20, $0B
+org $C0FAEA 
+db $40, $65
+org $C0FAEC 
+db $60, $24
+org $C0FAEE 
+db $20, $02
+org $C0FAF0 
+db $20, $01
+org $C0FAF2 
+db $40, $93
+org $C0FAF4 
+db $60, $30
+org $C0FAF6 
+db $20, $16
+org $C0FAF8 
+db $40, $EC
+org $C0FAFA 
+db $60, $21
+org $C0FAFC 
+db $20, $0A
+org $C0FAFE 
+db $40, $87
+org $C0FB00 
+db $20, $0F
+org $C0FB02 
+db $40, $1E
+org $C0FB04 
+db $60, $22
+org $C0FB06 
+db $40, $5A
+org $C0FB08 
+db $20, $13
+org $C0FB0A 
+db $40, $E4
+org $C0FB0C 
+db $40, $30
+org $C0FB0E 
+db $40, $CE
+org $C0FB10 
+db $40, $4C
+org $C0FB12 
+db $40, $E3
+org $C0FB14 
+db $40, $93
+org $C0FB16 
+db $40, $E8
+org $C0FB18 
+db $40, $9D
+org $C0FB1A 
+db $40, $1F
+org $C0FB1C 
+db $40, $02
+org $C0FB1E 
+db $50, $15
+org $C0FB20 
+db $40, $68
+org $C0FB22 
+db $40, $AE
+org $C0FB24 
+db $40, $AE
+org $C0FB26 
+db $20, $0C
+org $C0FB28 
+db $40, $33
+org $C0FB2A 
+db $40, $63
+org $C0FB2C 
+db $40, $FC
+org $C0FB2E 
+db $20, $03
+org $C0FB30 
+db $60, $41
+org $C0FB32 
+db $40, $81
+org $C0FB34 
+db $40, $AC
+org $C0FB36 
 db $60, $1C
-org $D1326A 
+org $C0FB38 
+db $20, $1D
+org $C0FB3A 
+db $40, $AB
+org $C0FB3C 
+db $20, $1D
+org $C0FB3E 
+db $20, $0D
+org $C0FB40 
+db $40, $8A
+org $D13212 
+db $40, $A4
+org $D13216 
+db $40, $CB
+org $D1321A 
+db $60, $1E
+org $D1321E 
+db $01, $31
+org $D13222 
+db $60, $35
+org $D13226 
+db $40, $12
+org $D1322A 
+db $A4, $58
+org $D1322E 
 db $04, $01
+org $D13232 
+db $40, $A8
+org $D13236 
+db $40, $14
+org $D1323A 
+db $20, $1F
+org $D1323E 
+db $03, $08
+org $D13242 
+db $60, $24
+org $D13246 
+db $04, $01
+org $D1324A 
+db $20, $05
+org $D1324E 
+db $40, $9B
+org $D13252 
+db $40, $6E
+org $D13256 
+db $40, $EA
+org $D1325A 
+db $20, $17
+org $D1325E 
+db $40, $34
+org $D13262 
+db $03, $0C
+org $D13266 
+db $20, $07
+org $D1326A 
+db $01, $0F
 org $D1326E 
-db $03, $09
+db $40, $86
 org $D13272 
-db $40, $97
+db $02, $31
 org $D13276 
-db $40, $99
-org $D1327A 
 db $20, $27
+org $D1327A 
+db $20, $17
 org $D1327E 
-db $40, $5B
+db $04, $01
 org $D13282 
 db $40, $33
 org $D13286 
-db $03, $0C
+db $03, $05
 org $D1328A 
-db $03, $09
+db $03, $12
 org $D1328E 
-db $40, $87
-org $D13292 
 db $03, $0C
+org $D13292 
+db $20, $1F
 org $D13296 
-db $20, $17
+db $20, $0E
 org $D1329A 
-db $02, $01
+db $03, $0F
 org $D1329E 
-db $50, $0B
+db $40, $A4
 org $D132A2 
-db $40, $E4
+db $03, $02
 org $D132A6 
-db $20, $26
+db $40, $94
 org $D132AA 
-db $40, $62
+db $60, $0E
 org $D132AE 
-db $40, $AE
+db $20, $27
 org $D132B2 
-db $40, $E4
+db $40, $B6
 org $D132B6 
 db $40, $E5
 org $D132BA 
-db $40, $F1
+db $60, $00
 org $D132BE 
-db $40, $2A
+db $20, $25
 org $D132C2 
-db $40, $05
+db $60, $20
 org $D132C6 
-db $20, $1F
+db $40, $4A
 org $D132CA 
-db $40, $66
-org $D132CE 
-db $20, $07
-org $D132D2 
-db $40, $E5
-org $D132D6 
-db $04, $01
-org $D132DA 
-db $40, $2A
-org $D132DE 
-db $40, $CA
-org $D132E2 
-db $40, $49
-org $D132E6 
-db $40, $CC
-org $D132EA 
-db $40, $35
-org $D132EE 
-db $20, $06
-org $D132F2 
-db $20, $1A
-org $D132F6 
-db $A1, $93
-org $D132FA 
-db $40, $97
-org $D132FE 
-db $A2, $91
-org $D13302 
-db $A0, $E3
-org $D13306 
-db $A3, $FD
-org $D1330A 
-db $A0, $29
-org $D1330E 
-db $A3, $CB
-org $D13312 
-db $A2, $2F
-org $D13316 
-db $40, $38
-org $D1331A 
-db $A0, $4D
-org $D1331E 
-db $A0, $E8
-org $D13322 
-db $A0, $A8
-org $D13326 
-db $40, $8C
-org $D1332A 
-db $A1, $93
-org $D1332E 
-db $A1, $57
-org $D13332 
-db $60, $23
-org $D13336 
-db $40, $B1
-org $D1333A 
-db $40, $AE
-org $D1333E 
-db $40, $67
-org $D13342 
-db $03, $19
-org $D13346 
-db $20, $15
-org $D1334A 
-db $01, $31
-org $D1334E 
-db $40, $81
-org $D13352 
-db $40, $6B
-org $D13356 
-db $20, $09
-org $D1335A 
-db $02, $2C
-org $D1335E 
-db $03, $02
-org $D13362 
-db $20, $1D
-org $D13366 
-db $40, $AD
-org $D1336A 
-db $03, $05
-org $D1336E 
-db $02, $01
-org $D13372 
-db $20, $13
-org $D13376 
-db $40, $33
-org $D1337A 
-db $40, $24
-org $D1337E 
-db $02, $31
-org $D13382 
-db $40, $37
-org $D13386 
-db $20, $10
-org $D1338A 
-db $40, $1D
-org $D1338E 
-db $01, $0F
-org $D13392 
-db $20, $19
-org $D13396 
-db $40, $C1
-org $D1339A 
-db $02, $63
-org $D1339E 
-db $60, $23
-org $D133A2 
-db $40, $FE
-org $D133A6 
-db $40, $12
-org $D133AA 
-db $40, $95
-org $D133AE 
-db $60, $31
-org $D133B2 
-db $60, $20
-org $D133B6 
-db $60, $37
-org $D133BA 
-db $03, $12
-org $D133BE 
-db $40, $6E
-org $D133C2 
-db $04, $01
-org $D133C6 
-db $20, $03
-org $D133CA 
-db $40, $66
-org $D133CE 
-db $20, $09
-org $D133D2 
-db $40, $41
-org $D133D6 
-db $20, $24
-org $D133DA 
-db $03, $01
-org $D133DE 
-db $20, $07
-org $D133E2 
-db $40, $E6
-org $D133E6 
-db $40, $50
-org $D133EA 
-db $60, $1A
-org $D133EE 
-db $20, $0A
-org $D133F2 
-db $20, $1A
-org $D133F6 
-db $02, $5F
-org $D133FA 
-db $40, $3E
-org $D133FE 
-db $03, $05
-org $D13402 
-db $40, $A3
-org $D13406 
-db $03, $02
-org $D1340A 
-db $40, $F6
-org $D1340E 
-db $03, $02
-org $D13412 
-db $20, $17
-org $D13416 
-db $60, $34
-org $D1341A 
-db $20, $1C
-org $D1341E 
-db $20, $17
-org $D13422 
-db $03, $01
-org $D13426 
-db $04, $02
-org $D1342A 
-db $40, $39
-org $D1342E 
-db $03, $08
-org $D13432 
-db $60, $0D
-org $D13436 
-db $40, $93
-org $D1343A 
-db $40, $44
-org $D1343E 
-db $A5, $B0
-org $D13442 
-db $A5, $5F
-org $D13446 
-db $40, $E9
-org $D1344A 
-db $03, $01
-org $D1344E 
-db $40, $28
-org $D13452 
-db $40, $A6
-org $D13456 
-db $40, $E4
-org $D1345A 
-db $60, $23
-org $D1345E 
-db $40, $A0
-org $D13462 
-db $40, $23
-org $D13466 
-db $40, $B5
-org $D1346A 
-db $40, $F2
-org $D1346E 
-db $20, $16
-org $D13472 
-db $40, $9F
-org $D13476 
-db $40, $C2
-org $D1347A 
-db $60, $33
-org $D1347E 
-db $A6, $8C
-org $D13482 
-db $20, $02
-org $D13486 
-db $A6, $34
-org $D1348A 
-db $A9, $16
-org $D1348E 
-db $40, $88
-org $D13492 
-db $A6, $0D
-org $D13496 
-db $40, $39
-org $D1349A 
-db $40, $93
-org $D1349E 
-db $A6, $2A
-org $D134A2 
-db $A7, $8E
-org $D134A6 
-db $40, $B5
-org $D134AA 
-db $40, $C0
-org $D134AE 
-db $A6, $24
-org $D134B2 
-db $40, $0E
-org $D134B6 
-db $40, $EB
-org $D134BA 
-db $40, $E8
-org $D134BE 
-db $40, $14
-org $D134C2 
-db $A6, $C6
-org $D134C6 
-db $A6, $32
-org $D134CA 
-db $A8, $56
-org $D134CE 
-db $A6, $41
-org $D134D2 
-db $20, $14
-org $D134D6 
-db $40, $F6
-org $D134DA 
-db $A6, $B5
-org $D134DE 
-db $40, $13
-org $D134E2 
-db $AA, $95
-org $D134E6 
-db $40, $29
-org $D134EA 
-db $A6, $50
-org $D134EE 
-db $AB, $88
-org $D134F2 
 db $40, $A7
-org $D134F6 
-db $20, $17
-org $D134FA 
-db $40, $98
-org $D134FE 
-db $40, $6A
-org $D13502 
-db $AC, $AE
-org $D13506 
-db $40, $09
-org $D1350A 
-db $40, $38
-org $D1350E 
+org $D132CE 
+db $40, $F0
+org $D132D2 
+db $40, $0F
+org $D132D6 
+db $40, $1D
+org $D132DA 
 db $03, $0C
-org $D13512 
-db $40, $B6
-org $D13516 
-db $40, $85
-org $D1351A 
-db $40, $B3
-org $D1351E 
-db $03, $05
-org $D13522 
-db $20, $13
-org $D13526 
-db $03, $01
-org $D1352A 
-db $40, $81
-org $D1352E 
+org $D132DE 
+db $60, $11
+org $D132E2 
+db $60, $24
+org $D132E6 
+db $40, $48
+org $D132EA 
 db $40, $B0
-org $D13532 
-db $60, $06
-org $D13536 
+org $D132EE 
+db $40, $9F
+org $D132F2 
+db $40, $83
+org $D132F6 
+db $A1, $08
+org $D132FA 
+db $A0, $AC
+org $D132FE 
+db $A0, $68
+org $D13302 
+db $A2, $EB
+org $D13306 
+db $A2, $F3
+org $D1330A 
+db $A0, $66
+org $D1330E 
+db $A1, $8E
+org $D13312 
+db $A3, $65
+org $D13316 
+db $40, $97
+org $D1331A 
+db $A1, $07
+org $D1331E 
+db $A0, $B1
+org $D13322 
+db $20, $1C
+org $D13326 
+db $A3, $24
+org $D1332A 
+db $40, $B8
+org $D1332E 
+db $A0, $8F
+org $D13332 
 db $04, $01
-org $D1353A 
-db $40, $A5
-org $D1353E 
-db $20, $12
-org $D13542 
-db $60, $32
-org $D13546 
-db $60, $3F
-org $D1354A 
-db $40, $1C
-org $D1354E 
-db $02, $19
-org $D13552 
-db $20, $1F
-org $D13556 
-db $40, $B5
-org $D1355A 
-db $40, $55
-org $D1355E 
-db $50, $04
-org $D13562 
-db $20, $21
-org $D13566 
-db $60, $2D
-org $D1356A 
-db $20, $05
-org $D1356E 
+org $D13336 
+db $40, $B6
+org $D1333A 
+db $20, $14
+org $D1333E 
+db $40, $50
+org $D13342 
 db $03, $09
-org $D13572 
-db $40, $5B
-org $D13576 
-db $40, $98
-org $D1357A 
-db $60, $20
-org $D1357E 
-db $AD, $F7
-org $D13582 
-db $AD, $51
-org $D13586 
-db $AD, $40
-org $D1358A 
-db $AD, $A6
-org $D1358E 
-db $AD, $92
-org $D13592 
-db $AD, $03
-org $D13596 
-db $AD, $46
-org $D1359A 
-db $AD, $E8
-org $D1359E 
-db $AD, $FB
-org $D135A2 
-db $AD, $B2
-org $D135A6 
-db $40, $23
-org $D135AA 
-db $50, $0E
-org $D135AE 
-db $40, $FA
-org $D135B2 
-db $40, $38
-org $D135B6 
-db $60, $03
-org $D135BA 
-db $40, $BA
-org $D135BE 
-db $40, $BD
-org $D135C2 
-db $03, $01
-org $D135C6 
-db $20, $15
-org $D135CA 
-db $20, $0E
-org $D135CE 
-db $20, $15
-org $D135D2 
-db $01, $63
-org $D135D6 
-db $02, $01
-org $D135DA 
-db $20, $0C
-org $D135DE 
+org $D13346 
 db $03, $0C
-org $D135E2 
-db $40, $03
-org $D135E6 
-db $60, $32
-org $D135EA 
-db $60, $30
-org $D135EE 
-db $40, $94
-org $D135F2 
-db $40, $3B
-org $D135F6 
-db $03, $08
-org $D135FA 
-db $AE, $5E
-org $D135FE 
+org $D1334A 
+db $40, $BF
+org $D1334E 
+db $20, $07
+org $D13352 
+db $40, $CF
+org $D13356 
+db $02, $31
+org $D1335A 
+db $03, $05
+org $D1335E 
+db $02, $5F
+org $D13362 
+db $03, $0C
+org $D13366 
 db $60, $22
-org $C0FB70 
-db $40, $AE
-org $C0FB72 
-db $40, $8F
-org $C0FB74 
-db $30, $0D
-org $C0FB76 
-db $30, $0B
-org $C0FB78 
-db $40, $2E
-org $C0FB7A 
-db $30, $07
-org $C0FB7C 
-db $30, $02
-org $C0FB7E 
-db $30, $16
-org $C0FB80 
-db $40, $86
-org $C0FB82 
-db $40, $26
-org $C0FB84 
-db $30, $12
-org $C0FB86 
-db $30, $04
-org $C0FB88 
-db $40, $67
-org $C0FB8A 
-db $30, $1C
-org $C0FB8C 
-db $40, $27
-org $C0FB8E 
-db $40, $C9
-org $C0FB90 
-db $40, $AE
-org $C0FB92 
-db $40, $2E
-org $C0FB94 
-db $40, $45
-org $C0FB96 
-db $40, $5C
-org $C0FB98 
-db $40, $A0
-org $C0FB9A 
-db $40, $28
-org $C0FB9C 
-db $30, $03
-org $C0FB9E 
-db $30, $06
-org $C0FBA0 
-db $30, $0E
-org $C0FBA2 
-db $30, $1B
-org $C0FBA4 
-db $30, $00
-org $C0FBA6 
-db $30, $1D
-org $C0FBA8 
-db $30, $05
-org $C0FBAA 
-db $40, $37
-org $C0FBAC 
-db $30, $1A
-org $C0FBAE 
-db $40, $C9
-org $C0FBB0 
-db $30, $01
-org $C0FBB2 
+org $D1336A 
+db $40, $1B
+org $D1336E 
+db $40, $B4
+org $D13372 
+db $40, $24
+org $D13376 
+db $60, $25
+org $D1337A 
+db $40, $AA
+org $D1337E 
+db $03, $0F
+org $D13382 
+db $40, $58
+org $D13386 
+db $40, $31
+org $D1338A 
+db $01, $0F
+org $D1338E 
+db $40, $0F
+org $D13392 
+db $40, $02
+org $D13396 
+db $20, $02
+org $D1339A 
+db $03, $09
+org $D1339E 
+db $40, $9A
+org $D133A2 
+db $60, $32
+org $D133A6 
+db $20, $11
+org $D133AA 
+db $60, $18
+org $D133AE 
+db $50, $0A
+org $D133B2 
+db $40, $0E
+org $D133B6 
+db $60, $22
+org $D133BA 
+db $40, $16
+org $D133BE 
+db $03, $05
+org $D133C2 
+db $20, $15
+org $D133C6 
+db $40, $84
+org $D133CA 
+db $03, $02
+org $D133CE 
+db $60, $17
+org $D133D2 
+db $02, $2C
+org $D133D6 
+db $40, $1C
+org $D133DA 
+db $60, $37
+org $D133DE 
+db $20, $09
+org $D133E2 
+db $03, $0C
+org $D133E6 
+db $40, $8C
+org $D133EA 
+db $20, $26
+org $D133EE 
+db $60, $32
+org $D133F2 
+db $20, $17
+org $D133F6 
+db $40, $A8
+org $D133FA 
+db $60, $21
+org $D133FE 
+db $20, $08
+org $D13402 
+db $40, $5F
+org $D13406 
+db $40, $BB
+org $D1340A 
+db $40, $9A
+org $D1340E 
+db $20, $01
+org $D13412 
+db $40, $13
+org $D13416 
+db $03, $19
+org $D1341A 
+db $02, $19
+org $D1341E 
+db $60, $08
+org $D13422 
+db $20, $15
+org $D13426 
+db $40, $B0
+org $D1342A 
+db $60, $3C
+org $D1342E 
+db $40, $48
+org $D13432 
+db $03, $02
+org $D13436 
+db $40, $17
+org $D1343A 
+db $60, $2D
+org $D1343E 
+db $A5, $F4
+org $D13442 
+db $A5, $99
+org $D13446 
+db $20, $25
+org $D1344A 
+db $40, $EA
+org $D1344E 
+db $20, $1C
+org $D13452 
+db $40, $F1
+org $D13456 
+db $03, $08
+org $D1345A 
+db $20, $22
+org $D1345E 
+db $01, $63
+org $D13462 
+db $03, $01
+org $D13466 
+db $40, $F1
+org $D1346A 
+db $03, $01
+org $D1346E 
+db $02, $03
+org $D13472 
+db $40, $85
+org $D13476 
+db $AB, $AD
+org $D1347A 
+db $20, $24
+org $D1347E 
+db $40, $81
+org $D13482 
+db $60, $23
+org $D13486 
+db $A6, $31
+org $D1348A 
+db $40, $CC
+org $D1348E 
+db $40, $95
+org $D13492 
+db $40, $4F
+org $D13496 
+db $03, $01
+org $D1349A 
+db $A6, $02
+org $D1349E 
+db $A6, $6B
+org $D134A2 
+db $40, $3F
+org $D134A6 
+db $A6, $A9
+org $D134AA 
+db $40, $90
+org $D134AE 
+db $40, $0A
+org $D134B2 
+db $A6, $AA
+org $D134B6 
+db $A6, $04
+org $D134BA 
+db $A8, $46
+org $D134BE 
+db $A6, $09
+org $D134C2 
+db $40, $A6
+org $D134C6 
+db $A7, $AE
+org $D134CA 
+db $20, $03
+org $D134CE 
+db $40, $CB
+org $D134D2 
+db $40, $C8
+org $D134D6 
+db $40, $CC
+org $D134DA 
+db $A6, $CB
+org $D134DE 
+db $AA, $9B
+org $D134E2 
+db $A9, $2F
+org $D134E6 
+db $A6, $90
+org $D134EA 
+db $A6, $E4
+org $D134EE 
+db $60, $23
+org $D134F2 
+db $40, $97
+org $D134F6 
+db $40, $61
+org $D134FA 
+db $40, $96
+org $D134FE 
+db $AC, $02
+org $D13502 
 db $40, $14
-org $C0FBB4 
-db $40, $86
-org $C0FBB6 
+org $D13506 
+db $40, $28
+org $D1350A 
+db $40, $AA
+org $D1350E 
+db $60, $38
+org $D13512 
+db $60, $20
+org $D13516 
+db $50, $00
+org $D1351A 
+db $20, $0D
+org $D1351E 
+db $20, $23
+org $D13522 
+db $03, $08
+org $D13526 
+db $40, $BE
+org $D1352A 
+db $40, $FE
+org $D1352E 
+db $40, $83
+org $D13532 
+db $02, $01
+org $D13536 
+db $20, $18
+org $D1353A 
+db $03, $09
+org $D1353E 
+db $40, $D0
+org $D13542 
+db $03, $09
+org $D13546 
+db $40, $68
+org $D1354A 
+db $60, $23
+org $D1354E 
+db $40, $91
+org $D13552 
+db $03, $01
+org $D13556 
+db $20, $11
+org $D1355A 
+db $20, $07
+org $D1355E 
+db $60, $25
+org $D13562 
+db $60, $0E
+org $D13566 
+db $60, $2A
+org $D1356A 
+db $40, $10
+org $D1356E 
+db $40, $46
+org $D13572 
+db $20, $12
+org $D13576 
+db $60, $05
+org $D1357A 
+db $02, $01
+org $D1357E 
+db $AD, $FD
+org $D13582 
+db $40, $E0
+org $D13586 
+db $AD, $96
+org $D1358A 
+db $AD, $CE
+org $D1358E 
+db $AD, $FE
+org $D13592 
+db $40, $0E
+org $D13596 
+db $AD, $38
+org $D1359A 
+db $AD, $91
+org $D1359E 
+db $AD, $82
+org $D135A2 
+db $AD, $FD
+org $D135A6 
+db $02, $63
+org $D135AA 
+db $40, $24
+org $D135AE 
+db $50, $07
+org $D135B2 
+db $40, $AA
+org $D135B6 
+db $03, $12
+org $D135BA 
+db $60, $03
+org $D135BE 
+db $40, $AA
+org $D135C2 
+db $40, $95
+org $D135C6 
+db $40, $3B
+org $D135CA 
+db $03, $19
+org $D135CE 
+db $01, $63
+org $D135D2 
+db $40, $05
+org $D135D6 
+db $40, $81
+org $D135DA 
+db $20, $27
+org $D135DE 
+db $60, $24
+org $D135E2 
+db $60, $2B
+org $D135E6 
+db $40, $50
+org $D135EA 
+db $20, $22
+org $D135EE 
+db $40, $11
+org $D135F2 
+db $04, $02
+org $D135F6 
+db $40, $A8
+org $D135FA 
+db $AE, $81
+org $D135FE 
+db $20, $08
+org $C0FB70 
+db $30, $1B
+org $C0FB72 
+db $30, $03
+org $C0FB74 
+db $40, $69
+org $C0FB76 
+db $40, $69
+org $C0FB78 
+db $30, $01
+org $C0FB7A 
+db $30, $0D
+org $C0FB7C 
+db $30, $00
+org $C0FB7E 
+db $30, $1A
+org $C0FB80 
+db $30, $18
+org $C0FB82 
+db $40, $B2
+org $C0FB84 
+db $40, $C6
+org $C0FB86 
+db $30, $1C
+org $C0FB88 
+db $40, $2E
+org $C0FB8A 
+db $40, $94
+org $C0FB8C 
+db $30, $05
+org $C0FB8E 
+db $30, $02
+org $C0FB90 
+db $30, $1D
+org $C0FB92 
+db $30, $06
+org $C0FB94 
+db $30, $16
+org $C0FB96 
 db $30, $08
-org $C0FBB8 
-db $30, $15
-org $C0FBBA 
+org $C0FB98 
+db $03, $19
+org $C0FB9A 
+db $40, $14
+org $C0FB9C 
+db $40, $BD
+org $C0FB9E 
+db $40, $68
+org $C0FBA0 
+db $30, $04
+org $C0FBA2 
+db $30, $12
+org $C0FBA4 
+db $40, $C6
+org $C0FBA6 
+db $40, $69
+org $C0FBA8 
+db $30, $07
+org $C0FBAA 
+db $40, $BD
+org $C0FBAC 
 db $30, $0C
+org $C0FBAE 
+db $40, $5C
+org $C0FBB0 
+db $30, $0E
+org $C0FBB2 
+db $40, $67
+org $C0FBB4 
+db $40, $14
+org $C0FBB6 
+db $30, $15
+org $C0FBB8 
+db $40, $BE
+org $C0FBBA 
+db $40, $88
 ; Key items prompts (1 per key item) 
-;Hiryuu Call
+;Ifrit's Fire
 org $E2A10B
-db  $67, $82, $8B, $92, $8E, $8E, $96, $62, $7A, $85, $85, $A2, $00
-;Big Bridge Key
+db  $68, $7F, $8B, $82, $8D, $99, $8C, $96, $65, $82, $8B, $7E, $A2, $00
+;Elder Branch
 org $E2A166
-db  $61, $82, $80, $96, $61, $8B, $82, $7D, $80, $7E, $96, $6A, $7E, $92, $A2, $00
-;Mirage Radar
+db  $64, $85, $7D, $7E, $8B, $96, $61, $8B, $7A, $87, $7C, $81, $A2, $00
+;Walse Tower Key
 org $E2A1C6
-db  $6C, $82, $8B, $7A, $80, $7E, $96, $71, $7A, $7D, $7A, $8B, $A2, $00
+db  $76, $7A, $85, $8C, $7E, $96, $73, $88, $90, $7E, $8B, $96, $6A, $7E, $92, $A2, $00
 
 ; Key items block text (menu choices before choosing) 
 org $E2A0A7
-db $67, $82, $8B, $92, $8E, $8E, $96, $62, $7A, $85, $85, $01,  $61, $82, $80, $96, $61, $8B, $82, $7D, $80, $7E, $96, $6A, $7E, $92, $01,  $6C, $82, $8B, $7A, $80, $7E, $96, $71, $7A, $7D, $7A, $8B, $01, $00
+db $68, $7F, $8B, $82, $8D, $99, $8C, $96, $65, $82, $8B, $7E, $01,  $64, $85, $7D, $7E, $8B, $96, $61, $8B, $7A, $87, $7C, $81, $01,  $76, $7A, $85, $8C, $7E, $96, $73, $88, $90, $7E, $8B, $96, $6A, $7E, $92, $01, $00
 
 ; Addresses in events for key item actual rewards
 org $F90406
-db $7C
+db $6F
 org $F90426
-db $6B
+db $68
 org $F90416
-db $6A
+db $66
 ;=====
 ;shops
 ;=====
 org $D12D40
-db $00, $58, $55, $31, $00, $00, $00, $00, $00
+db $01, $A7, $1B, $63, $95, $E5, $E9, $EC, $EC
 org $D12D49
-db $01, $E2, $6D, $37, $92, $E6, $E9, $EC, $F0
+db $07, $16, $18, $60, $00, $00, $00, $00, $00
 org $D12D52
-db $07, $11, $69, $00, $00, $00, $00, $00, $00
+db $01, $35, $C7, $2E, $B7, $F1, $00, $00, $00
 org $D12D5B
-db $07, $42, $45, $70, $76, $00, $00, $00, $00
+db $00, $1C, $8D, $8A, $34, $3F, $00, $00, $00
 org $D12D64
-db $01, $48, $10, $EF, $6A, $ED, $ED, $00, $00
+db $01, $6A, $56, $31, $10, $00, $00, $00, $00
 org $D12D6D
-db $01, $99, $4B, $97, $B4, $00, $00, $00, $00
+db $07, $22, $28, $10, $8E, $00, $00, $00, $00
 org $D12D76
-db $07, $51, $85, $1F, $54, $00, $00, $00, $00
+db $01, $8C, $40, $85, $29, $31, $1A, $6D, $41
 org $D12D7F
-db $00, $0A, $9B, $16, $95, $11, $00, $00, $00
+db $01, $B6, $8C, $13, $5E, $17, $2A, $A6, $57
 org $D12D88
-db $01, $56, $65, $E0, $3F, $E8, $00, $00, $00
+db $01, $22, $82, $85, $4E, $F0, $F1, $00, $00
 org $D12D91
-db $00, $4D, $51, $96, $09, $2F, $00, $00, $00
+db $00, $3C, $93, $41, $33, $9A, $00, $00, $00
 org $D12D9A
-db $00, $89, $37, $94, $19, $88, $00, $00, $00
+db $07, $3D, $8A, $52, $9A, $00, $00, $00, $00
 org $D12DA3
-db $01, $9B, $E3, $48, $CE, $A1, $CD, $3A, $E4
+db $07, $78, $1B, $8D, $77, $00, $00, $00, $00
 org $D12DAC
-db $01, $67, $89, $EC, $17, $E1, $E4, $E8, $EC
+db $00, $8F, $43, $3D, $00, $00, $00, $00, $00
 org $D12DB5
-db $07, $8F, $1E, $32, $52, $00, $00, $00, $00
+db $07, $48, $0A, $94, $9B, $00, $00, $00, $00
 org $D12DBE
-db $01, $ED, $B8, $47, $19, $06, $58, $40, $B7
+db $00, $90, $87, $17, $2D, $51, $00, $00, $00
 org $D12DC7
-db $00, $83, $5E, $33, $24, $15, $00, $00, $00
+db $01, $E7, $F9, $11, $A8, $82, $9C, $33, $B0
 org $D12DD0
-db $01, $86, $E0, $8F, $C0, $95, $08, $BA, $F7
+db $00, $14, $40, $9F, $4A, $10, $00, $00, $00
 org $D12DD9
-db $07, $31, $9C, $34, $6A, $00, $00, $00, $00
+db $01, $29, $CD, $CE, $F4, $25, $8F, $E2, $E2
 org $D12DE2
-db $00, $0C, $5B, $9C, $00, $00, $00, $00, $00
+db $01, $98, $0F, $6C, $24, $E4, $E6, $EC, $ED
 org $D12DEB
-db $01, $06, $51, $57, $59, $E3, $E7, $E8, $F1
+db $00, $55, $8C, $00, $00, $00, $00, $00, $00
 org $D12DFD
-db $07, $8A, $4B, $9D, $00, $00, $00, $00, $00
+db $07, $92, $6F, $98, $7D, $00, $00, $00, $00
 org $D12E18
-db $01, $52, $B0, $14, $0B, $07, $EA, $E5, $E9
+db $01, $4C, $03, $E1, $6B, $6E, $3F, $E5, $E6
 org $D12E21
-db $00, $92, $2D, $2E, $00, $00, $00, $00, $00
+db $00, $4C, $00, $00, $00, $00, $00, $00, $00
 org $D12E2A
-db $07, $18, $3C, $19, $93, $00, $00, $00, $00
+db $01, $B2, $AC, $19, $35, $33, $6B, $07, $E8
 org $D12E33
-db $00, $21, $29, $3B, $2B, $98, $00, $00, $00
+db $00, $50, $9C, $47, $57, $00, $00, $00, $00
 org $D12E3C
-db $07, $73, $00, $00, $00, $00, $00, $00, $00
+db $07, $8C, $0C, $00, $00, $00, $00, $00, $00
 org $D12E45
-db $07, $43, $00, $00, $00, $00, $00, $00, $00
+db $00, $19, $1A, $00, $00, $00, $00, $00, $00
 org $D12E4E
-db $01, $58, $32, $BA, $33, $0D, $BE, $A1, $92
+db $07, $42, $11, $6D, $82, $00, $00, $00, $00
 org $D12E57
-db $00, $0D, $13, $18, $52, $26, $00, $00, $00
+db $07, $27, $83, $21, $69, $00, $00, $00, $00
 org $D12E60
-db $07, $53, $7E, $8B, $28, $00, $00, $00, $00
+db $01, $18, $97, $5F, $BD, $BB, $9D, $E1, $E5
 org $D12E69
-db $01, $CB, $F2, $14, $4B, $1A, $E0, $AF, $33
+db $00, $07, $56, $88, $28, $46, $00, $00, $00
 org $D12E72
-db $00, $25, $30, $44, $8F, $05, $00, $00, $00
+db $07, $7A, $81, $1A, $8F, $00, $00, $00, $00
 org $D12E7B
-db $01, $10, $9E, $8D, $F1, $B1, $F5, $9F, $E1
+db $00, $89, $12, $54, $24, $2B, $00, $00, $00
 org $D12E84
-db $07, $58, $95, $38, $00, $00, $00, $00, $00
+db $07, $38, $7E, $00, $00, $00, $00, $00, $00
 org $D12E8D
-db $07, $06, $90, $10, $00, $00, $00, $00, $00
+db $01, $10, $92, $A5, $F6, $E0, $E2, $E3, $E8
 org $D12E96
-db $00, $06, $0E, $00, $00, $00, $00, $00, $00
+db $01, $53, $E0, $C0, $42, $E9, $ED, $F1, $00
 org $D12E9F
-db $01, $3F, $B4, $44, $6B, $63, $E7, $E9, $F1
+db $07, $9D, $12, $49, $00, $00, $00, $00, $00
 org $D12EA8
-db $00, $35, $8E, $40, $42, $82, $00, $00, $00
+db $01, $69, $58, $A4, $8A, $ED, $00, $00, $00
 org $D12EB1
-db $01, $23, $0D, $FD, $15, $20, $18, $E7, $5D
+db $07, $75, $59, $70, $1E, $00, $00, $00, $00
 org $D12EBA
-db $07, $68, $20, $00, $00, $00, $00, $00, $00
+db $00, $9D, $04, $53, $4D, $00, $00, $00, $00
 org $D12EC3
-db $00, $1A, $9E, $93, $01, $00, $00, $00, $00
+db $00, $82, $52, $1E, $95, $35, $00, $00, $00
 org $D12ECC
-db $00, $10, $8A, $3E, $49, $59, $00, $00, $00
+db $00, $3B, $05, $5B, $0A, $2C, $00, $00, $00
 org $D12ED5
-db $01, $69, $12, $BE, $99, $6E, $95, $E2, $E5
+db $07, $35, $17, $32, $0F, $00, $00, $00, $00
 org $D12EDE
-db $00, $3F, $9A, $54, $90, $07, $00, $00, $00
+db $00, $44, $5E, $11, $22, $0F, $00, $00, $00
 org $D12EF9
-db $07, $0A, $61, $50, $82, $00, $00, $00, $00
+db $01, $51, $3B, $95, $A9, $93, $E8, $5A, $E6
 org $D12F02
-db $00, $4A, $99, $14, $0F, $1C, $00, $00, $00
+db $01, $F0, $94, $B8, $44, $A7, $58, $E0, $E4
 org $D12F0B
-db $01, $2A, $F0, $B5, $03, $E3, $05, $E4, $E6
+db $00, $39, $30, $02, $91, $1D, $00, $00, $00
 org $D12F14
-db $07, $4D, $1C, $29, $1A, $00, $00, $00, $00
+db $07, $6A, $0D, $08, $87, $00, $00, $00, $00
 org $D12F26
-db $01, $02, $96, $64, $F0, $B8, $88, $F7, $E5
+db $01, $87, $5C, $1C, $9B, $36, $F5, $E3, $E7
 org $D12F2F
-db $07, $15, $39, $81, $9A, $00, $00, $00, $00
+db $07, $07, $61, $3C, $76, $00, $00, $00, $00
 org $D12F38
-db $07, $27, $6F, $6C, $44, $00, $00, $00, $00
+db $01, $A8, $9A, $CB, $1D, $E4, $35, $9B, $CE
 org $D12F41
-db $01, $CB, $2D, $F8, $A2, $F4, $E1, $00, $00
+db $00, $8B, $2E, $96, $59, $18, $00, $00, $00
 org $D12F4A
-db $01, $81, $CB, $64, $8E, $AF, $31, $E2, $E6
+db $07, $31, $9C, $1C, $8B, $00, $00, $00, $00
 org $D12F53
-db $01, $B6, $EB, $58, $A3, $48, $61, $26, $C3
+db $07, $24, $68, $95, $13, $00, $00, $00, $00
 org $D12F5C
-db $07, $79, $7A, $9B, $99, $00, $00, $00, $00
+db $01, $C5, $F3, $B3, $3F, $F0, $CE, $E7, $E9
 org $D12F65
-db $07, $59, $60, $17, $91, $00, $00, $00, $00
+db $01, $5D, $AC, $4E, $B1, $60, $E1, $E3, $00
 
 ;===========
 ;shop prices
@@ -2410,144 +2410,176 @@ db $00, $00
 ;  ########################### 
 ;  # New AI for enemy: Omega
 ;  ########################### 
-; New AOE skill: L3
+; New AOE skill: Flame
 org $D0B235
-db $88
-; New AOE skill: TidalWave
+db $DB
+; New AOE skill: Meteo
 org $D0B238
-db $D1
-; New AOE skill: L3
+db $45
+; New AOE skill: EarthShaker
 org $D0B23D
-db $88
-; New AOE skill: BreathWing
+db $CF
+; New AOE skill: Thunder
 org $D0B245
-db $DA
-; New AOE skill: Blaze
+db $DC
+; New AOE skill: MegaFlare
 org $D0B248
-db $CD
-; New AOE skill: Snowstorm
+db $D2
+; New AOE skill: TrueEdge
 org $D0B24E
-db $CC
-; New single target skill: Demi
+db $D0
+; New single target skill: Beak
 org $D0B236
-db $3C
-; New single target skill: GoblinPunch
+db $B3
+; New single target skill: Emission
 org $D0B237
-db $93
-; New single target skill: Haste2
-org $D0B23A
-db $43
-; New single target skill: Fight
-org $D0B23B
-db $80
-; New single target skill: Bolt3
-org $D0B23C
-db $32
-; New single target skill: MindBlast
-org $D0B243
-db $97
-; New single target skill: Vampire
-org $D0B244
-db $98
-; New single target skill: Demi
-org $D0B247
-db $3C
+db $92
 ; New single target skill: Time
-org $D0B249
+org $D0B23A
 db $8C
-; New single target skill: Question
+; New single target skill: Emission
+org $D0B23B
+db $92
+; New single target skill: Vampire
+org $D0B23C
+db $98
+; New single target skill: Bolt3
+org $D0B243
+db $32
+; New single target skill: Comet
+org $D0B244
+db $3F
+; New single target skill: Blowfish
+org $D0B247
+db $9D
+; New single target skill: Fight
+org $D0B249
+db $80
+; New single target skill: MagicHammer
 org $D0B24C
-db $9C
+db $99
 ; New single target skill: Vampire
 org $D0B24D
 db $98
-; New single target skill: Emission
+; New single target skill: Psych
 org $D0B25B
-db $92
-; New single target skill: Bolt3
+db $35
+; New single target skill: Hug
 org $D0B25C
-db $32
-; New single target skill: ZombiePowder
-org $D0B25F
-db $B8
+db $B4
 ; New single target skill: Bone
-org $D0B260
+org $D0B25F
 db $C3
-; New status skill: Slow2
+; New single target skill: Specialty
+org $D0B260
+db $81
+; New status skill: Void
 org $D0B25D
-db $40
-; New status skill: Flash
+db $39
+; New status skill: Mute
 org $D0B261
-db $8B
+db $15
+
+
+; ***Mirage Village NPC [Omega]***
+org $E303AC
+padbyte $FF
+pad $E30447
+padbyte $00
+org $E303AC
+db $6E, $6C, $64, $66, $60, $9D, $96, $8D, $81, $7E, $96, $90, $7A, $8B, $96, $86, $7A, $7C, $81, $82, $87, $7E, $A3, $A3, $A3, $01, $81, $7A, $8C, $96, $90, $7E, $7A, $84, $87, $7E, $8C, $8C, $7E, $8C, $A3, $A3, $A3, $01
+db $6B, $82, $80, $81, $8D, $87, $82, $87, $80, $01
+db $67, $88, $85, $92, $01
+db $60, $87, $7D, $96, $7F, $88, $8B, $96, $8C, $8D, $7A, $8D, $8E, $8C, $7E, $8C, $A3, $A3, $A3, $01
+db $6F, $7A, $8B, $7A, $85, $92, $93, $7E, $01
+db $6C, $8E, $8D, $7E, $01
+db $72, $85, $7E, $7E, $89, $01
+db $00
 ;  ########################### 
 ;  # New AI for enemy: Shinryuu
 ;  ########################### 
-; New AOE skill: SurgeBeam
+; New AOE skill: Quake
 org $D0C532
-db $DD
-; New AOE skill: Maelstrom
+db $D6
+; New AOE skill: L3
 org $D0C533
-db $C2
+db $88
 ; New AOE skill: L2
 org $D0C534
 db $87
-; New AOE skill: L4
+; New AOE skill: Thunder
 org $D0C53F
-db $86
-; New AOE skill: TrueEdge
+db $DC
+; New AOE skill: MegaFlare
 org $D0C540
-db $D0
+db $D2
 ; New AOE skill: EarthShaker
 org $D0C55C
 db $CF
-; New AOE skill: MegaFlare
+; New AOE skill: Blaze
 org $D0C567
-db $D2
-; New single target skill: WhiteHole
+db $CD
+; New single target skill: MagicHammer
 org $D0C52F
-db $C0
-; New single target skill: WhiteHole
+db $99
+; New single target skill: ReaperSword
 org $D0C53B
-db $C0
-; New single target skill: Doom
+db $B0
+; New single target skill: Demi
 org $D0C546
-db $34
-; New single target skill: GoblinPunch
-org $D0C547
-db $93
-; New single target skill: Tailscrew
-org $D0C54A
-db $C4
-; New single target skill: Fire3
-org $D0C54B
-db $30
+db $3C
 ; New single target skill: Bolt3
-org $D0C52E
+org $D0C547
 db $32
-; New status skill: DarkShock
-org $D0C530
-db $94
-; New status skill: Stop
-org $D0C53A
-db $3D
-; New status skill: Mute
-org $D0C53C
-db $15
+; New single target skill: GoblinPunch
+org $D0C54A
+db $93
+; New single target skill: Hug
+org $D0C54B
+db $B4
+; New single target skill: Bio
+org $D0C52E
+db $2F
 ; New status skill: Condemn
-org $D0C53E
+org $D0C530
 db $82
-; New status skill: Void
-org $D0C548
-db $39
+; New status skill: MightyGuard
+org $D0C53A
+db $9A
 ; New status skill: DarkShock
-org $D0C54C
+org $D0C53C
 db $94
+; New status skill: Flash
+org $D0C53E
+db $8B
+; New status skill: FrogSong
+org $D0C548
+db $89
+; New status skill: Allure
+org $D0C54C
+db $BB
+
+
+; ***Moogle Forest NPC [Shinryuu]***
+org $E24487
+padbyte $FF
+pad $E245C7
+padbyte $00
+org $E24487
+db $72, $67, $68, $6D, $71, $78, $74, $74, $9D, $96, $8D, $81, $7E, $96, $87, $88, $8F, $7A, $96, $7D, $8B, $7A, $80, $88, $87, $A3, $A3, $A3, $01, $81, $7A, $8C, $96, $90, $7E, $7A, $84, $87, $7E, $8C, $8C, $7E, $8C, $A3, $A3, $A3, $01
+db $76, $7A, $8D, $7E, $8B, $01
+db $6F, $88, $82, $8C, $88, $87, $01
+db $60, $87, $7D, $96, $7F, $88, $8B, $96, $8C, $8D, $7A, $8D, $8E, $8C, $7E, $8C, $A3, $A3, $A3, $01
+db $61, $7E, $8B, $8C, $7E, $8B, $84, $01
+db $79, $88, $86, $7B, $82, $7E, $01
+db $6F, $88, $82, $8C, $88, $87, $01
+db $00
 
 ; CODE OF THE VOID: 
 org $E77476
-db $93, $6C, $61, $7A, $90, $67
+db $83, $76, $68, $6F, $86, $63
 org $F80900
-db $93, $6C, $61, $7A, $90, $67
+db $83, $76, $68, $6F, $86, $63
 
 ;=======
 ;enemies
@@ -2555,15 +2587,15 @@ db $93, $6C, $61, $7A, $90, $67
 ; Enemy: Ramuh
 ; Stats: 
 org $D004E0
-db $30, $50, $08, $0a, $10, $38, $04, $0a, $50, $c3, $10, $27, $a4, $9c, $00, $00, $34, $00, $64, $F4, $00, $04, $00, $00, $80, $18, $00, $00, $00, $00, $27, $11
+db $2d, $34, $08, $0a, $10, $00, $04, $0a, $68, $42, $10, $27, $cc, $74, $00, $00, $34, $00, $64, $F4, $00, $04, $00, $00, $80, $18, $00, $00, $00, $00, $27, $11
 ; Loot: 
 org $D0509C
 db $E1, $E1, $00, $F9
 ; --------------------------
-; Original boss Ramuh rank 7 -> Randomized boss Twin Tania, Twin Tania rank 12
-; HP: 4000 -> 50000
+; Original boss Ramuh rank 7 -> Randomized boss Odin rank 9
+; HP: 4000 -> 17000
 ; ENEMY: Ramuh
-; Skills: ['Bolt3', 'Thunder', 'Bolt3', 'Flash', 'Bolt3', 'Thunder', 'Bolt3', 'Thunder', 'Psych']
+; Skills: ['Bolt3', 'Thunder', 'Bolt3', 'Flash', 'Bolt3', 'ElectricShock', 'Bolt3', 'Thunder', 'Psych']
 ; New skill: Bolt3
 org $d0a1a2
 db $32
@@ -2579,9 +2611,9 @@ db $8B
 ; New skill: Bolt3
 org $d0a1aa
 db $32
-; New skill: Thunder
+; New skill: ElectricShock
 org $d0a1ab
-db $DC
+db $CE
 ; New skill: Bolt3
 org $d0a1ad
 db $32
@@ -2595,50 +2627,50 @@ db $35
 ; Enemy: Shoat
 ; Stats: 
 org $D00E40
-db $23, $10, $08, $00, $04, $28, $00, $00, $8a, $02, $10, $27, $64, $00, $00, $00, $00, $00, $FB, $FF, $EF, $00, $00, $00, $34, $18, $00, $00, $00, $00, $72, $1e
+db $2a, $2c, $0a, $00, $08, $28, $04, $00, $1d, $4e, $10, $27, $04, $29, $00, $00, $00, $00, $FB, $FF, $EF, $00, $00, $00, $34, $18, $00, $00, $00, $00, $72, $1e
 ; Loot: 
 org $D051C8
 db $E4, $00, $00, $FA
 ; --------------------------
-; Original boss Shoat rank 7 -> Randomized boss Karlabos rank 1
-; HP: 5000 -> 650
+; Original boss Shoat rank 7 -> Randomized boss Atmos rank 6
+; HP: 5000 -> 19997
 ; ENEMY: Shoat
 
 ; Enemy: Golem
 ; Stats: 
 org $D00CE0
-db $0a, $30, $08, $00, $00, $00, $00, $00, $50, $46, $c4, $09, $e4, $89, $00, $00, $00, $00, $F0, $00, $00, $00, $00, $00, $00, $18, $00, $00, $00, $00, $67, $04
+db $0a, $20, $08, $00, $00, $00, $00, $00, $62, $ba, $c4, $09, $cc, $74, $00, $00, $00, $00, $F0, $00, $00, $00, $00, $00, $00, $18, $00, $00, $00, $00, $67, $02
 ; Loot: 
 org $D0519C
 db $EC, $EC, $00, $00
 ; --------------------------
-; Original boss Golem, BoneDragon, ZombieDrgn, Golem rank 7 -> Randomized boss Calofisteri rank 10
-; HP: 2500 -> 18000
+; Original boss Golem, BoneDragon, ZombieDrgn, Golem rank 7 -> Randomized boss Gogo rank 9
+; HP: 2500 -> 47714
 ; ENEMY: Golem
 
 ; Enemy: BoneDragon
 ; Stats: 
 org $D01420
-db $23, $60, $0a, $14, $30, $00, $18, $0a, $28, $23, $b8, $0b, $00, $00, $00, $00, $00, $08, $34, $E0, $00, $08, $00, $01, $31, $00, $00, $00, $00, $00, $A1, $2c
+db $1e, $28, $0a, $0a, $20, $00, $08, $0a, $31, $5d, $b8, $0b, $00, $00, $00, $00, $00, $08, $34, $E0, $00, $08, $00, $01, $31, $00, $00, $00, $00, $00, $A1, $1e
 ; Loot: 
 org $D05284
 db $00, $00, $00, $00
 ; --------------------------
-; Original boss Golem, BoneDragon, ZombieDrgn, Golem rank 7 -> Randomized boss Calofisteri rank 10
-; HP: 2500 -> 18000
+; Original boss Golem, BoneDragon, ZombieDrgn, Golem rank 7 -> Randomized boss Gogo rank 9
+; HP: 2500 -> 47714
 ; ENEMY: Golem
 ; ENEMY: BoneDragon
 
 ; Enemy: ZombieDrgn
 ; Stats: 
 org $D014C0
-db $23, $60, $0a, $14, $18, $00, $18, $0a, $28, $23, $a0, $0f, $00, $00, $00, $00, $00, $08, $74, $60, $00, $08, $00, $01, $31, $00, $00, $00, $00, $00, $A6, $2c
+db $1e, $28, $0a, $0a, $10, $00, $08, $0a, $31, $5d, $a0, $0f, $00, $00, $00, $00, $00, $08, $74, $60, $00, $08, $00, $01, $31, $00, $00, $00, $00, $00, $A6, $1e
 ; Loot: 
 org $D05298
 db $00, $00, $00, $00
 ; --------------------------
-; Original boss Golem, BoneDragon, ZombieDrgn, Golem rank 7 -> Randomized boss Calofisteri rank 10
-; HP: 2500 -> 18000
+; Original boss Golem, BoneDragon, ZombieDrgn, Golem rank 7 -> Randomized boss Gogo rank 9
+; HP: 2500 -> 47714
 ; ENEMY: Golem
 ; ENEMY: BoneDragon
 ; ENEMY: ZombieDrgn
@@ -2646,13 +2678,13 @@ db $00, $00, $00, $00
 ; Enemy: Golem
 ; Stats: 
 org $D01CA0
-db $3c, $3c, $0a, $00, $3c, $00, $3c, $00, $30, $75, $10, $27, $00, $00, $00, $00, $00, $FF, $FF, $FF, $FF, $00, $00, $00, $20, $18, $00, $00, $00, $00, $E5, $55
+db $3c, $28, $0a, $00, $28, $00, $28, $00, $30, $75, $10, $27, $00, $00, $00, $00, $00, $FF, $FF, $FF, $FF, $00, $00, $00, $20, $18, $00, $00, $00, $00, $E5, $39
 ; Loot: 
 org $D05394
 db $00, $EC, $00, $FB
 ; --------------------------
-; Original boss Golem, BoneDragon, ZombieDrgn, Golem rank 7 -> Randomized boss Calofisteri rank 10
-; HP: 2500 -> 18000
+; Original boss Golem, BoneDragon, ZombieDrgn, Golem rank 7 -> Randomized boss Gogo rank 9
+; HP: 2500 -> 47714
 ; ENEMY: Golem
 ; ENEMY: BoneDragon
 ; ENEMY: ZombieDrgn
@@ -2661,86 +2693,86 @@ db $00, $EC, $00, $FB
 ; Enemy: Byblos
 ; Stats: 
 org $D00400
-db $25, $1e, $07, $0a, $05, $0a, $14, $0a, $e4, $0c, $e8, $03, $d4, $17, $00, $00, $00, $00, $F8, $D4, $10, $FE, $00, $11, $04, $18, $00, $00, $00, $00, $20, $18
+db $22, $04, $00, $00, $00, $04, $08, $00, $fa, $00, $e8, $03, $c8, $00, $00, $00, $00, $00, $F8, $D4, $10, $FE, $00, $11, $04, $18, $00, $00, $00, $00, $20, $13
 ; Loot: 
 org $D05080
 db $EB, $ED, $00, $F5
 ; --------------------------
-; Original boss Byblos rank 4 -> Randomized boss Chim.Brain rank 5
-; HP: 3600 -> 3300
+; Original boss Byblos rank 4 -> Randomized boss WingRaptor, WingRaptor rank 1
+; HP: 3600 -> 250
 ; ENEMY: Byblos
-; Skills: ['WindSlash', 'WindSlash']
-; New skill: WindSlash
+; Skills: ['BreathWing', 'BreathWing']
+; New skill: BreathWing
 org $d0a0db
-db $AB
-; New skill: WindSlash
+db $DA
+; New skill: BreathWing
 org $d0a0e1
-db $AB
+db $DA
 
 ; Enemy: WingRaptor
 ; Stats: 
 org $D02000
-db $20, $24, $06, $00, $00, $01, $0c, $0a, $10, $0e, $19, $00, $98, $08, $00, $00, $00, $00, $70, $00, $00, $00, $40, $00, $20, $18, $88, $00, $00, $00, $00, $01
+db $19, $06, $02, $00, $00, $01, $08, $0a, $8a, $02, $19, $00, $2c, $01, $00, $00, $00, $00, $70, $00, $00, $00, $40, $00, $20, $18, $88, $00, $00, $00, $00, $01
 ; Loot: 
 org $D05400
 db $00, $E0, $00, $E4
 ; --------------------------
-; Original boss WingRaptor, WingRaptor rank 1 -> Randomized boss Byblos rank 4
-; HP: 250 -> 3600
+; Original boss WingRaptor, WingRaptor rank 1 -> Randomized boss Karlabos rank 1
+; HP: 250 -> 650
 ; ENEMY: WingRaptor
 
 ; Enemy: WingRaptor
 ; Stats: 
 org $D02020
-db $20, $24, $07, $28, $18, $01, $0c, $0a, $10, $0e, $00, $00, $98, $08, $00, $00, $00, $00, $70, $00, $00, $00, $40, $00, $20, $18, $88, $00, $00, $00, $01, $02
+db $19, $06, $03, $28, $10, $01, $08, $0a, $8a, $02, $00, $00, $2c, $01, $00, $00, $00, $00, $70, $00, $00, $00, $40, $00, $20, $18, $88, $00, $00, $00, $01, $02
 ; Loot: 
 org $D05404
 db $00, $E0, $00, $E4
 ; --------------------------
-; Original boss WingRaptor, WingRaptor rank 1 -> Randomized boss Byblos rank 4
-; HP: 250 -> 3600
+; Original boss WingRaptor, WingRaptor rank 1 -> Randomized boss Karlabos rank 1
+; HP: 250 -> 650
 ; ENEMY: WingRaptor
 ; ENEMY: WingRaptor
 
 ; Enemy: Karlabos
 ; Stats: 
 org $D02040
-db $25, $32, $07, $00, $03, $00, $0d, $00, $88, $13, $64, $00, $d8, $0e, $00, $00, $00, $00, $FF, $FF, $00, $00, $00, $04, $20, $18, $00, $00, $00, $00, $02, $05
+db $2d, $54, $08, $00, $08, $00, $14, $00, $a0, $0f, $64, $00, $d0, $20, $00, $00, $00, $00, $FF, $FF, $00, $00, $00, $04, $20, $18, $00, $00, $00, $00, $02, $06
 ; Loot: 
 org $D05408
 db $00, $E0, $00, $F0
 ; --------------------------
-; Original boss Karlabos rank 1 -> Randomized boss Tyrasaurus rank 5
-; HP: 650 -> 5000
+; Original boss Karlabos rank 1 -> Randomized boss Ramuh rank 7
+; HP: 650 -> 4000
 ; ENEMY: Karlabos
 
 ; Enemy: Siren
 ; Stats: 
 org $D02080
-db $28, $12, $06, $00, $00, $0c, $24, $00, $dc, $05, $f4, $01, $28, $0a, $00, $00, $00, $00, $30, $44, $00, $00, $00, $00, $A0, $18, $00, $00, $00, $00, $04, $02
+db $2d, $0c, $06, $00, $00, $18, $28, $00, $50, $c3, $e8, $03, $c8, $64, $00, $00, $00, $00, $30, $44, $00, $00, $00, $00, $A0, $18, $00, $00, $00, $00, $04, $02
 ; Loot: 
 org $D05410
 db $00, $00, $00, $9B
 ; --------------------------
-; Original boss Siren, Siren rank 2 -> Randomized boss Shiva, Commander, Commander, Commander rank 4
-; HP: 900 -> 1500
+; Original boss Siren, Siren rank 2 -> Randomized boss Twin Tania, Twin Tania rank 12
+; HP: 900 -> 50000
 ; ENEMY: Siren
-; Skills: ['Mute', 'Slow', 'Haste', 'Cure2', 'Ice2', 'Scan', 'Armor', 'Sleep', 'Bolt2']
+; Skills: ['Mute', 'Slow2', 'Haste', 'Cure2', 'Ice3', 'Scan', 'Armor', 'Sleep', 'Bolt3']
 ; New skill: Mute
 org $d0b2e6
 db $15
-; New skill: Slow
+; New skill: Slow2
 org $d0b2e7
-db $37
+db $40
 ; New skill: Haste
 org $d0b2e8
 db $3A
 ; New skill: Cure2
 org $d0b2ea
 db $18
-; New skill: Ice2
+; New skill: Ice3
 org $d0b2eb
-db $2B
+db $31
 ; New skill: Scan
 org $d0b2ec
 db $13
@@ -2750,37 +2782,37 @@ db $16
 ; New skill: Sleep
 org $d0b2ef
 db $28
-; New skill: Bolt2
+; New skill: Bolt3
 org $d0b2f0
-db $2C
+db $32
 
 ; Enemy: Siren
 ; Stats: 
 org $D020A0
-db $28, $3c, $0a, $00, $18, $00, $00, $00, $dc, $05, $c8, $00, $28, $0a, $00, $00, $00, $00, $34, $FF, $10, $08, $00, $01, $A1, $18, $00, $00, $00, $00, $05, $02
+db $2d, $58, $0c, $00, $20, $00, $00, $00, $50, $c3, $c8, $00, $c8, $64, $00, $00, $00, $00, $34, $FF, $10, $08, $00, $01, $A1, $18, $00, $00, $00, $00, $05, $02
 ; Loot: 
 org $D05414
 db $00, $00, $00, $82
 ; --------------------------
-; Original boss Siren, Siren rank 2 -> Randomized boss Shiva, Commander, Commander, Commander rank 4
-; HP: 900 -> 1500
+; Original boss Siren, Siren rank 2 -> Randomized boss Twin Tania, Twin Tania rank 12
+; HP: 900 -> 50000
 ; ENEMY: Siren
-; Skills: ['Mute', 'Slow', 'Haste', 'Cure2', 'Ice2', 'Scan', 'Armor', 'Sleep', 'Bolt2']
+; Skills: ['Mute', 'Slow2', 'Haste', 'Cure2', 'Ice3', 'Scan', 'Armor', 'Sleep', 'Bolt3']
 ; New skill: Mute
 org $d0b2e6
 db $15
-; New skill: Slow
+; New skill: Slow2
 org $d0b2e7
-db $37
+db $40
 ; New skill: Haste
 org $d0b2e8
 db $3A
 ; New skill: Cure2
 org $d0b2ea
 db $18
-; New skill: Ice2
+; New skill: Ice3
 org $d0b2eb
-db $2B
+db $31
 ; New skill: Scan
 org $d0b2ec
 db $13
@@ -2790,36 +2822,36 @@ db $16
 ; New skill: Sleep
 org $d0b2ef
 db $28
-; New skill: Bolt2
+; New skill: Bolt3
 org $d0b2f0
-db $2C
+db $32
 ; ENEMY: Siren
 
 ; Enemy: Forza
 ; Stats: 
 org $D020C0
-db $28, $3c, $09, $00, $0a, $00, $06, $05, $f4, $01, $64, $00, $14, $05, $00, $00, $00, $00, $F0, $00, $00, $00, $00, $00, $A0, $18, $00, $00, $00, $00, $06, $0a
+db $2d, $40, $09, $00, $08, $00, $04, $05, $10, $27, $64, $00, $d6, $1f, $00, $00, $00, $00, $F0, $00, $00, $00, $00, $00, $A0, $18, $00, $00, $00, $00, $06, $06
 ; Loot: 
 org $D05418
 db $00, $00, $00, $F3
 ; --------------------------
-; Original boss Forza, Magisa rank 2 -> Randomized boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4
-; HP: 850 -> 1000
+; Original boss Forza, Magisa rank 2 -> Randomized boss Stalker, Stalker, Stalker, Stalker rank 9
+; HP: 850 -> 20000
 ; ENEMY: Forza
 
 ; Enemy: Magisa
 ; Stats: 
 org $D020E0
-db $23, $3c, $05, $05, $00, $30, $0c, $05, $f4, $01, $f4, $01, $14, $05, $00, $00, $00, $00, $F0, $FB, $00, $00, $00, $00, $80, $18, $00, $00, $00, $00, $07, $0a
+db $26, $40, $05, $05, $00, $38, $10, $05, $10, $27, $20, $03, $d6, $1f, $00, $00, $00, $00, $F0, $FB, $00, $00, $00, $00, $80, $18, $00, $00, $00, $00, $07, $06
 ; Loot: 
 org $D0541C
 db $00, $00, $00, $4B
 ; --------------------------
-; Original boss Forza, Magisa rank 2 -> Randomized boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4
-; HP: 850 -> 1000
+; Original boss Forza, Magisa rank 2 -> Randomized boss Stalker, Stalker, Stalker, Stalker rank 9
+; HP: 850 -> 20000
 ; ENEMY: Forza
 ; ENEMY: Magisa
-; Skills: ['Fire2', 'Ice2', 'Bolt2', 'Aero2', 'Specialty', 'Drain']
+; Skills: ['Fire2', 'Ice2', 'Bolt2', 'Aero3', 'Specialty', 'Drain']
 ; New skill: Fire2
 org $d0b34d
 db $2A
@@ -2829,46 +2861,46 @@ db $2B
 ; New skill: Bolt2
 org $d0b34f
 db $2C
-; New skill: Aero2
+; New skill: Aero3
 org $d0b351
-db $90
+db $91
 ; New skill: Specialty
 org $d0b352
 db $81
 ; New skill: Drain
 org $d0b353
 db $2D
-; Original HP: 500
-; New trigger HP: 230
+; Original HP: 10000
+; New trigger HP: 4600
 org $d0b329
-db $e6, $00
+db $f8, $11
 
 ; Enemy: Galura
 ; Stats: 
 org $D02100
-db $1f, $28, $09, $00, $06, $00, $03, $00, $70, $45, $64, $00, $4c, $1d, $00, $00, $00, $00, $10, $40, $00, $00, $00, $00, $04, $18, $00, $00, $00, $00, $08, $02
+db $1f, $3c, $09, $00, $06, $00, $03, $00, $40, $9c, $64, $00, $ec, $45, $00, $00, $00, $00, $10, $40, $00, $00, $00, $00, $04, $18, $00, $00, $00, $00, $08, $02
 ; Loot: 
 org $D05420
 db $E1, $E0, $00, $E1
 ; --------------------------
-; Original boss Galura rank 3 -> Randomized boss Gilgamesh, Enkidou rank 6
-; HP: 1200 -> 17776
+; Original boss Galura rank 3 -> Randomized boss Bahamut rank 9
+; HP: 1200 -> 40000
 ; ENEMY: Galura
-; Original HP: 17776
-; New trigger HP: 11732
+; Original HP: 40000
+; New trigger HP: 26400
 org $d0b36a
-db $d4, $2d
+db $20, $67
 
 ; Enemy: LiquiFlame
 ; Stats: 
 org $D02120
-db $25, $20, $0b, $14, $00, $0a, $0f, $00, $64, $19, $c8, $00, $d4, $17, $00, $00, $00, $88, $77, $EF, $FF, $41, $00, $02, $00, $18, $00, $00, $00, $00, $09, $13
+db $2e, $48, $0b, $14, $00, $0a, $0f, $00, $1d, $4e, $20, $03, $b8, $6f, $00, $00, $00, $88, $77, $EF, $FF, $41, $00, $02, $00, $18, $00, $00, $00, $00, $09, $13
 ; Loot: 
 org $D05424
 db $00, $00, $00, $FC
 ; --------------------------
-; Original boss LiquiFlame, LiquiFlame, LiquiFlame rank 4 -> Randomized boss Gilgamesh rank 5
-; HP: 3000 -> 6500
+; Original boss LiquiFlame, LiquiFlame, LiquiFlame rank 4 -> Randomized boss Catastroph rank 11
+; HP: 3000 -> 19997
 ; ENEMY: LiquiFlame
 ; Skills: ['Fight', 'Specialty', 'Flame']
 ; New skill: Fight
@@ -2884,13 +2916,13 @@ db $DB
 ; Enemy: LiquiFlame
 ; Stats: 
 org $D02140
-db $25, $20, $08, $0a, $00, $1e, $1e, $00, $64, $19, $5a, $00, $d4, $17, $00, $00, $00, $FE, $77, $EF, $FF, $41, $00, $02, $20, $18, $00, $00, $00, $00, $09, $13
+db $2e, $48, $08, $0a, $00, $1e, $1e, $00, $1d, $4e, $58, $02, $b8, $6f, $00, $00, $00, $FE, $77, $EF, $FF, $41, $00, $02, $20, $18, $00, $00, $00, $00, $09, $13
 ; Loot: 
 org $D05428
 db $00, $00, $00, $32
 ; --------------------------
-; Original boss LiquiFlame, LiquiFlame, LiquiFlame rank 4 -> Randomized boss Gilgamesh rank 5
-; HP: 3000 -> 6500
+; Original boss LiquiFlame, LiquiFlame, LiquiFlame rank 4 -> Randomized boss Catastroph rank 11
+; HP: 3000 -> 19997
 ; ENEMY: LiquiFlame
 ; Skills: ['Fight', 'Specialty', 'Flame']
 ; New skill: Fight
@@ -2903,21 +2935,21 @@ db $81
 org $d0b383
 db $DB
 ; ENEMY: LiquiFlame
-; Skills: ['Fire2']
-; New skill: Fire2
+; Skills: ['Flare']
+; New skill: Flare
 org $d0b3a8
-db $2A
+db $33
 
 ; Enemy: LiquiFlame
 ; Stats: 
 org $D02160
-db $25, $20, $05, $1e, $00, $14, $0f, $00, $64, $19, $64, $00, $d4, $17, $00, $00, $00, $88, $77, $EF, $FF, $41, $00, $02, $00, $18, $00, $00, $00, $00, $09, $13
+db $2e, $48, $05, $1e, $00, $14, $0f, $00, $1d, $4e, $90, $01, $b8, $6f, $00, $00, $00, $88, $77, $EF, $FF, $41, $00, $02, $00, $18, $00, $00, $00, $00, $09, $13
 ; Loot: 
 org $D0542C
 db $00, $00, $00, $3F
 ; --------------------------
-; Original boss LiquiFlame, LiquiFlame, LiquiFlame rank 4 -> Randomized boss Gilgamesh rank 5
-; HP: 3000 -> 6500
+; Original boss LiquiFlame, LiquiFlame, LiquiFlame rank 4 -> Randomized boss Catastroph rank 11
+; HP: 3000 -> 19997
 ; ENEMY: LiquiFlame
 ; Skills: ['Fight', 'Specialty', 'Flame']
 ; New skill: Fight
@@ -2930,53 +2962,38 @@ db $81
 org $d0b383
 db $DB
 ; ENEMY: LiquiFlame
-; Skills: ['Fire2']
-; New skill: Fire2
+; Skills: ['Flare']
+; New skill: Flare
 org $d0b3a8
-db $2A
+db $33
 ; ENEMY: LiquiFlame
-; Skills: ['Fire2']
-; New skill: Fire2
+; Skills: ['Fire3']
+; New skill: Fire3
 org $d0b3b8
-db $2A
+db $30
 
 ; Enemy: Sergeant
 ; Stats: 
 org $D02A40
-db $14, $07, $02, $00, $00, $05, $0a, $0a, $c4, $09, $19, $00, $d4, $17, $64, $00, $00, $00, $30, $00, $00, $00, $00, $00, $00, $18, $00, $00, $00, $00, $52, $00
+db $14, $07, $02, $00, $00, $05, $0a, $0a, $64, $19, $19, $00, $d4, $17, $64, $00, $00, $00, $30, $00, $00, $00, $00, $00, $00, $18, $00, $00, $00, $00, $52, $00
 ; Loot: 
 org $D05548
 db $00, $E0, $E9, $00
 ; --------------------------
-; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Titan rank 5
-; HP: 1000 -> 2500
+; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Gilgamesh rank 5
+; HP: 1000 -> 6500
 ; ENEMY: Sergeant
 
 ; Enemy: Karnak
 ; Stats: 
 org $D02A60
-db $0a, $12, $04, $00, $00, $00, $00, $14, $ee, $02, $19, $00, $00, $00, $8d, $00, $00, $00, $10, $00, $00, $00, $00, $00, $04, $18, $00, $00, $00, $00, $53, $13
+db $0a, $12, $04, $00, $00, $00, $00, $14, $9e, $07, $19, $00, $00, $00, $8d, $00, $00, $00, $10, $00, $00, $00, $00, $00, $04, $18, $00, $00, $00, $00, $53, $13
 ; Loot: 
 org $D0554C
 db $00, $E0, $E0, $00
 ; --------------------------
-; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Titan rank 5
-; HP: 1000 -> 2500
-; ENEMY: Sergeant
-; ENEMY: Karnak
-; ENEMY: Karnak
-; ENEMY: Karnak
-
-; Enemy: Karnak
-; Stats: 
-org $D02A60
-db $0a, $12, $04, $00, $00, $00, $00, $14, $ee, $02, $19, $00, $00, $00, $8d, $00, $00, $00, $10, $00, $00, $00, $00, $00, $04, $18, $00, $00, $00, $00, $53, $13
-; Loot: 
-org $D0554C
-db $00, $E0, $E0, $00
-; --------------------------
-; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Titan rank 5
-; HP: 1000 -> 2500
+; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Gilgamesh rank 5
+; HP: 1000 -> 6500
 ; ENEMY: Sergeant
 ; ENEMY: Karnak
 ; ENEMY: Karnak
@@ -2985,13 +3002,28 @@ db $00, $E0, $E0, $00
 ; Enemy: Karnak
 ; Stats: 
 org $D02A60
-db $0a, $12, $04, $00, $00, $00, $00, $14, $ee, $02, $19, $00, $00, $00, $8d, $00, $00, $00, $10, $00, $00, $00, $00, $00, $04, $18, $00, $00, $00, $00, $53, $13
+db $0a, $12, $04, $00, $00, $00, $00, $14, $9e, $07, $19, $00, $00, $00, $8d, $00, $00, $00, $10, $00, $00, $00, $00, $00, $04, $18, $00, $00, $00, $00, $53, $13
 ; Loot: 
 org $D0554C
 db $00, $E0, $E0, $00
 ; --------------------------
-; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Titan rank 5
-; HP: 1000 -> 2500
+; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Gilgamesh rank 5
+; HP: 1000 -> 6500
+; ENEMY: Sergeant
+; ENEMY: Karnak
+; ENEMY: Karnak
+; ENEMY: Karnak
+
+; Enemy: Karnak
+; Stats: 
+org $D02A60
+db $0a, $12, $04, $00, $00, $00, $00, $14, $9e, $07, $19, $00, $00, $00, $8d, $00, $00, $00, $10, $00, $00, $00, $00, $00, $04, $18, $00, $00, $00, $00, $53, $13
+; Loot: 
+org $D0554C
+db $00, $E0, $E0, $00
+; --------------------------
+; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Gilgamesh rank 5
+; HP: 1000 -> 6500
 ; ENEMY: Sergeant
 ; ENEMY: Karnak
 ; ENEMY: Karnak
@@ -3000,13 +3032,13 @@ db $00, $E0, $E0, $00
 ; Enemy: Iron Claw
 ; Stats: 
 org $D02A20
-db $28, $32, $09, $00, $14, $01, $0a, $0a, $c4, $09, $96, $00, $00, $00, $64, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $51, $27
+db $28, $32, $09, $00, $14, $01, $0a, $0a, $64, $19, $96, $00, $00, $00, $64, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $51, $27
 ; Loot: 
 org $D05544
 db $00, $F6, $B4, $00
 ; --------------------------
-; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Titan rank 5
-; HP: 1000 -> 2500
+; Original boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4 -> Randomized boss Gilgamesh rank 5
+; HP: 1000 -> 6500
 ; ENEMY: Sergeant
 ; ENEMY: Karnak
 ; ENEMY: Karnak
@@ -3016,13 +3048,13 @@ db $00, $F6, $B4, $00
 ; Enemy: Hole
 ; Stats: 
 org $D021C0
-db $01, $14, $0a, $00, $00, $01, $08, $0a, $b0, $04, $8d, $27, $00, $00, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $40, $0E, $09
+db $01, $14, $0a, $00, $00, $01, $08, $0a, $e0, $2e, $8d, $27, $00, $00, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $40, $0E, $09
 ; Loot: 
 org $D05438
 db $00, $00, $00, $00
 ; --------------------------
-; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss Galura rank 3
-; HP: 3000 -> 1200
+; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; HP: 3000 -> 12000
 ; ENEMY: Hole
 ; Skills: ['Demi']
 ; New skill: Demi
@@ -3042,13 +3074,13 @@ db $3C
 ; Enemy: Hole
 ; Stats: 
 org $D021C0
-db $01, $14, $0a, $00, $00, $01, $08, $0a, $b0, $04, $8d, $27, $00, $00, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $40, $0E, $09
+db $01, $14, $0a, $00, $00, $01, $08, $0a, $e0, $2e, $8d, $27, $00, $00, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $40, $0E, $09
 ; Loot: 
 org $D05438
 db $00, $00, $00, $00
 ; --------------------------
-; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss Galura rank 3
-; HP: 3000 -> 1200
+; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; HP: 3000 -> 12000
 ; ENEMY: Hole
 ; Skills: ['Demi']
 ; New skill: Demi
@@ -3068,13 +3100,13 @@ db $3C
 ; Enemy: Hole
 ; Stats: 
 org $D021C0
-db $01, $14, $0a, $00, $00, $01, $08, $0a, $b0, $04, $8d, $27, $00, $00, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $40, $0E, $09
+db $01, $14, $0a, $00, $00, $01, $08, $0a, $e0, $2e, $8d, $27, $00, $00, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $40, $0E, $09
 ; Loot: 
 org $D05438
 db $00, $00, $00, $00
 ; --------------------------
-; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss Galura rank 3
-; HP: 3000 -> 1200
+; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; HP: 3000 -> 12000
 ; ENEMY: Hole
 ; Skills: ['Demi']
 ; New skill: Demi
@@ -3094,13 +3126,13 @@ db $3C
 ; Enemy: Sandworm
 ; Stats: 
 org $D021A0
-db $32, $08, $07, $00, $00, $01, $08, $0a, $b0, $04, $8d, $27, $78, $05, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $00, $0D, $09
+db $32, $18, $08, $00, $00, $01, $08, $0a, $e0, $2e, $8d, $27, $fc, $21, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $00, $0D, $09
 ; Loot: 
 org $D05434
 db $00, $00, $00, $00
 ; --------------------------
-; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss Galura rank 3
-; HP: 3000 -> 1200
+; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; HP: 3000 -> 12000
 ; ENEMY: Hole
 ; Skills: ['Demi']
 ; New skill: Demi
@@ -3117,35 +3149,35 @@ db $3C
 org $d0b3fd
 db $3C
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
@@ -3153,13 +3185,13 @@ db $C9
 ; Enemy: Sandworm
 ; Stats: 
 org $D021A0
-db $32, $08, $07, $00, $00, $01, $08, $0a, $b0, $04, $8d, $27, $78, $05, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $00, $0D, $09
+db $32, $18, $08, $00, $00, $01, $08, $0a, $e0, $2e, $8d, $27, $fc, $21, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $00, $0D, $09
 ; Loot: 
 org $D05434
 db $00, $00, $00, $00
 ; --------------------------
-; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss Galura rank 3
-; HP: 3000 -> 1200
+; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; HP: 3000 -> 12000
 ; ENEMY: Hole
 ; Skills: ['Demi']
 ; New skill: Demi
@@ -3176,35 +3208,35 @@ db $3C
 org $d0b3fd
 db $3C
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
@@ -3212,13 +3244,13 @@ db $C9
 ; Enemy: Sandworm
 ; Stats: 
 org $D021A0
-db $32, $08, $07, $00, $00, $01, $08, $0a, $b0, $04, $8d, $27, $78, $05, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $00, $0D, $09
+db $32, $18, $08, $00, $00, $01, $08, $0a, $e0, $2e, $8d, $27, $fc, $21, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $00, $60, $18, $00, $00, $00, $00, $0D, $09
 ; Loot: 
 org $D05434
 db $00, $00, $00, $00
 ; --------------------------
-; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss Galura rank 3
-; HP: 3000 -> 1200
+; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; HP: 3000 -> 12000
 ; ENEMY: Hole
 ; Skills: ['Demi']
 ; New skill: Demi
@@ -3235,35 +3267,35 @@ db $3C
 org $d0b3fd
 db $3C
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
@@ -3271,13 +3303,13 @@ db $C9
 ; Enemy: Hole
 ; Stats: 
 org $D021E0
-db $62, $06, $02, $00, $00, $01, $08, $0a, $b0, $04, $8d, $27, $00, $00, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $80, $60, $18, $00, $00, $00, $80, $0F, $0e
+db $62, $06, $02, $00, $00, $01, $08, $0a, $e0, $2e, $8d, $27, $00, $00, $00, $00, $00, $00, $FF, $FF, $10, $00, $00, $80, $60, $18, $00, $00, $00, $80, $0F, $0e
 ; Loot: 
 org $D0543C
 db $00, $00, $00, $00
 ; --------------------------
-; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss Galura rank 3
-; HP: 3000 -> 1200
+; Original boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; HP: 3000 -> 12000
 ; ENEMY: Hole
 ; Skills: ['Demi']
 ; New skill: Demi
@@ -3294,35 +3326,35 @@ db $3C
 org $d0b3fd
 db $3C
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
 ; ENEMY: Sandworm
-; Skills: ['Fight', 'Fight', 'Quicksand']
+; Skills: ['Fight', 'Quicksand', 'Quicksand']
 ; New skill: Fight
 org $d0b3db
 db $80
-; New skill: Fight
+; New skill: Quicksand
 org $d0b3dc
-db $80
+db $C9
 ; New skill: Quicksand
 org $d0b3dd
 db $C9
@@ -3331,24 +3363,24 @@ db $C9
 ; Enemy: AdamanTiMi
 ; Stats: 
 org $D02200
-db $1e, $1f, $12, $00, $19, $00, $05, $32, $dc, $05, $7d, $00, $d4, $17, $00, $00, $00, $00, $7A, $70, $10, $00, $00, $02, $00, $18, $00, $00, $60, $00, $10, $14
+db $1e, $1f, $12, $00, $19, $00, $05, $32, $c4, $09, $7d, $00, $d4, $17, $00, $00, $00, $00, $7A, $70, $10, $00, $00, $02, $00, $18, $00, $00, $60, $00, $10, $14
 ; Loot: 
 org $D05440
 db $00, $F5, $00, $E7
 ; --------------------------
-; Original boss AdamanTiMi rank 4 -> Randomized boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5
-; HP: 2000 -> 1500
+; Original boss AdamanTiMi rank 4 -> Randomized boss Titan rank 5
+; HP: 2000 -> 2500
 ; ENEMY: AdamanTiMi
 
 ; Enemy: Sol Cannon
 ; Stats: 
 org $D02280
-db $37, $06, $02, $00, $04, $01, $08, $0a, $ff, $ff, $e8, $03, $04, $29, $50, $00, $00, $C8, $FF, $FF, $10, $00, $00, $04, $20, $98, $00, $00, $00, $00, $14, $1d
+db $37, $08, $02, $00, $06, $01, $0c, $0a, $ff, $ff, $e8, $03, $1c, $0c, $78, $00, $00, $C8, $FF, $FF, $10, $00, $00, $04, $20, $98, $00, $00, $00, $00, $14, $2b
 ; Loot: 
 org $D05450
 db $E3, $E2, $00, $EB
 ; --------------------------
-; Original boss Sol Cannon, Launcher, Launcher rank 5 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; Original boss Sol Cannon, Launcher, Launcher rank 5 -> Randomized boss LiquiFlame, LiquiFlame, LiquiFlame rank 4
 ; HP: 22500 -> 65535
 ; ENEMY: Sol Cannon
 ; Original HP: 65535
@@ -3359,12 +3391,12 @@ db $a3, $70
 ; Enemy: Launcher
 ; Stats: 
 org $D02B60
-db $14, $06, $02, $00, $00, $01, $04, $05, $9a, $19, $e8, $03, $00, $00, $00, $00, $00, $C8, $FF, $FF, $00, $00, $00, $00, $20, $98, $00, $00, $00, $00, $5B, $28
+db $14, $08, $02, $00, $00, $01, $06, $05, $9a, $19, $e8, $03, $00, $00, $00, $00, $00, $C8, $FF, $FF, $00, $00, $00, $00, $20, $98, $00, $00, $00, $00, $5B, $3c
 ; Loot: 
 org $D0556C
 db $00, $E2, $00, $E1
 ; --------------------------
-; Original boss Sol Cannon, Launcher, Launcher rank 5 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; Original boss Sol Cannon, Launcher, Launcher rank 5 -> Randomized boss LiquiFlame, LiquiFlame, LiquiFlame rank 4
 ; HP: 22500 -> 65535
 ; ENEMY: Sol Cannon
 ; Original HP: 65535
@@ -3376,12 +3408,12 @@ db $a3, $70
 ; Enemy: Launcher
 ; Stats: 
 org $D02B80
-db $14, $06, $02, $00, $00, $01, $04, $05, $9a, $19, $e8, $03, $00, $00, $00, $00, $00, $C8, $FF, $FF, $00, $00, $00, $00, $20, $98, $00, $00, $00, $00, $5B, $28
+db $14, $08, $02, $00, $00, $01, $06, $05, $9a, $19, $e8, $03, $00, $00, $00, $00, $00, $C8, $FF, $FF, $00, $00, $00, $00, $20, $98, $00, $00, $00, $00, $5B, $3c
 ; Loot: 
 org $D05570
 db $00, $E2, $00, $E1
 ; --------------------------
-; Original boss Sol Cannon, Launcher, Launcher rank 5 -> Randomized boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6
+; Original boss Sol Cannon, Launcher, Launcher rank 5 -> Randomized boss LiquiFlame, LiquiFlame, LiquiFlame rank 4
 ; HP: 22500 -> 65535
 ; ENEMY: Sol Cannon
 ; Original HP: 65535
@@ -3394,13 +3426,13 @@ db $a3, $70
 ; Enemy: ArchaeAvis
 ; Stats: 
 org $D022A0
-db $1e, $54, $07, $0a, $16, $01, $08, $00, $33, $33, $d0, $07, $20, $80, $00, $00, $00, $20, $F4, $FF, $10, $00, $40, $40, $20, $98, $88, $00, $00, $00, $15, $11
+db $1e, $2f, $07, $0a, $0e, $01, $07, $00, $d0, $02, $d0, $07, $1c, $0c, $00, $00, $00, $20, $F4, $FF, $10, $00, $40, $40, $20, $98, $88, $00, $00, $00, $15, $19
 ; Loot: 
 org $D05454
 db $00, $00, $00, $F2
 ; --------------------------
-; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
-; HP: 1600 -> 65535
+; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Byblos rank 4
+; HP: 1600 -> 3600
 ; ENEMY: ArchaeAvis
 ; Skills: ['Fight', 'BreathWing', 'Specialty']
 ; New skill: Fight
@@ -3416,13 +3448,13 @@ db $81
 ; Enemy: ArchaeAvis
 ; Stats: 
 org $D022C0
-db $1e, $54, $07, $0a, $1a, $01, $0e, $00, $33, $33, $d0, $07, $20, $80, $00, $00, $00, $20, $F4, $FF, $10, $02, $40, $00, $00, $98, $88, $00, $00, $00, $15, $0f
+db $1e, $2f, $07, $0a, $10, $01, $0e, $00, $d0, $02, $d0, $07, $1c, $0c, $00, $00, $00, $20, $F4, $FF, $10, $02, $40, $00, $00, $98, $88, $00, $00, $00, $15, $17
 ; Loot: 
 org $D05458
 db $00, $00, $00, $F3
 ; --------------------------
-; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
-; HP: 1600 -> 65535
+; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Byblos rank 4
+; HP: 1600 -> 3600
 ; ENEMY: ArchaeAvis
 ; Skills: ['Fight', 'BreathWing', 'Specialty']
 ; New skill: Fight
@@ -3435,13 +3467,13 @@ db $DA
 org $d0b500
 db $81
 ; ENEMY: ArchaeAvis
-; Skills: ['Fight', 'Blaze', 'Specialty']
+; Skills: ['Fight', 'MiniBlaze', 'Specialty']
 ; New skill: Fight
 org $d0b513
 db $80
-; New skill: Blaze
+; New skill: MiniBlaze
 org $d0b514
-db $CD
+db $CB
 ; New skill: Specialty
 org $d0b515
 db $81
@@ -3449,13 +3481,13 @@ db $81
 ; Enemy: ArchaeAvis
 ; Stats: 
 org $D022E0
-db $1e, $54, $07, $0a, $18, $01, $18, $00, $33, $33, $d0, $07, $20, $80, $00, $00, $00, $20, $F4, $FF, $10, $01, $40, $00, $20, $98, $88, $00, $00, $00, $15, $12
+db $1e, $2f, $07, $0a, $11, $01, $16, $00, $d0, $02, $d0, $07, $1c, $0c, $00, $00, $00, $20, $F4, $FF, $10, $01, $40, $00, $20, $98, $88, $00, $00, $00, $15, $1c
 ; Loot: 
 org $D0545C
 db $00, $00, $00, $F4
 ; --------------------------
-; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
-; HP: 1600 -> 65535
+; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Byblos rank 4
+; HP: 1600 -> 3600
 ; ENEMY: ArchaeAvis
 ; Skills: ['Fight', 'BreathWing', 'Specialty']
 ; New skill: Fight
@@ -3468,24 +3500,24 @@ db $DA
 org $d0b500
 db $81
 ; ENEMY: ArchaeAvis
-; Skills: ['Fight', 'Blaze', 'Specialty']
+; Skills: ['Fight', 'MiniBlaze', 'Specialty']
 ; New skill: Fight
 org $d0b513
 db $80
-; New skill: Blaze
+; New skill: MiniBlaze
 org $d0b514
-db $CD
+db $CB
 ; New skill: Specialty
 org $d0b515
 db $81
 ; ENEMY: ArchaeAvis
-; Skills: ['Fight', 'Flame', 'Specialty']
+; Skills: ['Fight', 'MiniBlaze', 'Specialty']
 ; New skill: Fight
 org $d0b528
 db $80
-; New skill: Flame
+; New skill: MiniBlaze
 org $d0b529
-db $DB
+db $CB
 ; New skill: Specialty
 org $d0b52a
 db $81
@@ -3493,13 +3525,13 @@ db $81
 ; Enemy: ArchaeAvis
 ; Stats: 
 org $D02300
-db $1e, $54, $07, $0a, $1a, $01, $1d, $00, $33, $33, $d0, $07, $20, $80, $00, $00, $00, $20, $F4, $FF, $10, $04, $40, $00, $00, $98, $88, $00, $00, $00, $15, $13
+db $1e, $2f, $07, $0a, $13, $01, $1d, $00, $d0, $02, $d0, $07, $1c, $0c, $00, $00, $00, $20, $F4, $FF, $10, $04, $40, $00, $00, $98, $88, $00, $00, $00, $15, $1d
 ; Loot: 
 org $D05460
 db $00, $00, $00, $F5
 ; --------------------------
-; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
-; HP: 1600 -> 65535
+; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Byblos rank 4
+; HP: 1600 -> 3600
 ; ENEMY: ArchaeAvis
 ; Skills: ['Fight', 'BreathWing', 'Specialty']
 ; New skill: Fight
@@ -3512,24 +3544,24 @@ db $DA
 org $d0b500
 db $81
 ; ENEMY: ArchaeAvis
-; Skills: ['Fight', 'Blaze', 'Specialty']
+; Skills: ['Fight', 'MiniBlaze', 'Specialty']
 ; New skill: Fight
 org $d0b513
 db $80
-; New skill: Blaze
+; New skill: MiniBlaze
 org $d0b514
-db $CD
+db $CB
 ; New skill: Specialty
 org $d0b515
 db $81
 ; ENEMY: ArchaeAvis
-; Skills: ['Fight', 'Flame', 'Specialty']
+; Skills: ['Fight', 'MiniBlaze', 'Specialty']
 ; New skill: Fight
 org $d0b528
 db $80
-; New skill: Flame
+; New skill: MiniBlaze
 org $d0b529
-db $DB
+db $CB
 ; New skill: Specialty
 org $d0b52a
 db $81
@@ -3548,13 +3580,13 @@ db $81
 ; Enemy: ArchaeAvis
 ; Stats: 
 org $D02320
-db $23, $5c, $09, $0a, $0d, $01, $20, $00, $33, $33, $d0, $07, $20, $80, $00, $00, $00, $67, $F4, $FF, $10, $00, $40, $00, $20, $98, $88, $00, $00, $00, $15, $10
+db $23, $32, $09, $0a, $0c, $01, $24, $00, $d0, $02, $d0, $07, $1c, $0c, $00, $00, $00, $67, $F4, $FF, $10, $00, $40, $00, $20, $98, $88, $00, $00, $00, $15, $18
 ; Loot: 
 org $D05464
 db $00, $00, $00, $F6
 ; --------------------------
-; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
-; HP: 1600 -> 65535
+; Original boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5 -> Randomized boss Byblos rank 4
+; HP: 1600 -> 3600
 ; ENEMY: ArchaeAvis
 ; Skills: ['Fight', 'BreathWing', 'Specialty']
 ; New skill: Fight
@@ -3567,24 +3599,24 @@ db $DA
 org $d0b500
 db $81
 ; ENEMY: ArchaeAvis
-; Skills: ['Fight', 'Blaze', 'Specialty']
+; Skills: ['Fight', 'MiniBlaze', 'Specialty']
 ; New skill: Fight
 org $d0b513
 db $80
-; New skill: Blaze
+; New skill: MiniBlaze
 org $d0b514
-db $CD
+db $CB
 ; New skill: Specialty
 org $d0b515
 db $81
 ; ENEMY: ArchaeAvis
-; Skills: ['Fight', 'Flame', 'Specialty']
+; Skills: ['Fight', 'MiniBlaze', 'Specialty']
 ; New skill: Fight
 org $d0b528
 db $80
-; New skill: Flame
+; New skill: MiniBlaze
 org $d0b529
-db $DB
+db $CB
 ; New skill: Specialty
 org $d0b52a
 db $81
@@ -3600,7 +3632,7 @@ db $DC
 org $d0b53f
 db $81
 ; ENEMY: ArchaeAvis
-; Skills: ['BreathWing', 'Maelstrom', 'Specialty', 'Entangle', 'Fight', 'Specialty', 'Flame', 'Maelstrom', 'Specialty', 'Entangle', 'Fight', 'Specialty', 'Thunder', 'Maelstrom', 'Specialty', 'Entangle', 'Fight', 'Specialty', 'Blaze', 'Maelstrom', 'Specialty', 'Entangle', 'Fight', 'Specialty']
+; Skills: ['BreathWing', 'Maelstrom', 'Specialty', 'Entangle', 'Fight', 'Specialty', 'Flame', 'Maelstrom', 'Specialty', 'Entangle', 'Fight', 'Specialty', 'Thunder', 'Maelstrom', 'Specialty', 'Entangle', 'Fight', 'Specialty', 'MiniBlaze', 'Maelstrom', 'Specialty', 'Entangle', 'Fight', 'Specialty']
 ; New skill: BreathWing
 org $d0b567
 db $DA
@@ -3655,9 +3687,9 @@ db $80
 ; New skill: Specialty
 org $d0b57d
 db $81
-; New skill: Blaze
+; New skill: MiniBlaze
 org $d0b57f
-db $CD
+db $CB
 ; New skill: Maelstrom
 org $d0b580
 db $C2
@@ -3708,15 +3740,15 @@ db $CD
 ; Enemy: Titan
 ; Stats: 
 org $D02360
-db $19, $66, $0a, $0a, $0c, $00, $00, $00, $d8, $d6, $d0, $07, $4c, $36, $00, $00, $00, $00, $F7, $DF, $00, $20, $00, $00, $A0, $18, $00, $00, $00, $00, $1B, $01
+db $19, $36, $09, $0a, $0c, $00, $00, $00, $dc, $05, $d0, $07, $1c, $0c, $00, $00, $00, $00, $F7, $DF, $00, $20, $00, $00, $A0, $18, $00, $00, $00, $00, $1B, $01
 ; Loot: 
 org $D0546C
 db $26, $E0, $00, $E1
 ; --------------------------
-; Original boss Titan rank 5 -> Randomized boss Gilgamesh, Gilgamesh rank 7
-; HP: 2500 -> 55000
+; Original boss Titan rank 5 -> Randomized boss Shiva, Commander, Commander, Commander rank 4
+; HP: 2500 -> 1500
 ; ENEMY: Titan
-; Skills: ['Fight', 'Fight', 'Specialty', 'Fight', 'EarthShaker', 'Specialty']
+; Skills: ['Fight', 'Fight', 'Specialty', 'Fight', 'Quicksand', 'Specialty']
 ; New skill: Fight
 org $d0b59d
 db $80
@@ -3729,9 +3761,9 @@ db $81
 ; New skill: Fight
 org $d0b5a1
 db $80
-; New skill: EarthShaker
+; New skill: Quicksand
 org $d0b5a2
-db $CF
+db $C9
 ; New skill: Specialty
 org $d0b5a3
 db $81
@@ -3739,13 +3771,13 @@ db $81
 ; Enemy: Puroboros
 ; Stats: 
 org $D02380
-db $14, $24, $07, $00, $00, $08, $00, $00, $46, $05, $64, $00, $d6, $06, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $06
+db $14, $41, $07, $00, $00, $0a, $00, $00, $11, $0b, $64, $00, $a7, $0b, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $16
 ; Loot: 
 org $D05470
 db $E9, $00, $E0, $00
 ; --------------------------
-; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Antlion rank 6
-; HP: 1500 -> 8100
+; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Omniscient rank 8
+; HP: 1500 -> 16999
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
@@ -3756,13 +3788,13 @@ db $E9, $00, $E0, $00
 ; Enemy: Puroboros
 ; Stats: 
 org $D02380
-db $14, $24, $07, $00, $00, $08, $00, $00, $46, $05, $64, $00, $d6, $06, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $06
+db $14, $41, $07, $00, $00, $0a, $00, $00, $11, $0b, $64, $00, $a7, $0b, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $16
 ; Loot: 
 org $D05470
 db $E9, $00, $E0, $00
 ; --------------------------
-; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Antlion rank 6
-; HP: 1500 -> 8100
+; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Omniscient rank 8
+; HP: 1500 -> 16999
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
@@ -3773,13 +3805,13 @@ db $E9, $00, $E0, $00
 ; Enemy: Puroboros
 ; Stats: 
 org $D02380
-db $14, $24, $07, $00, $00, $08, $00, $00, $46, $05, $64, $00, $d6, $06, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $06
+db $14, $41, $07, $00, $00, $0a, $00, $00, $11, $0b, $64, $00, $a7, $0b, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $16
 ; Loot: 
 org $D05470
 db $E9, $00, $E0, $00
 ; --------------------------
-; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Antlion rank 6
-; HP: 1500 -> 8100
+; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Omniscient rank 8
+; HP: 1500 -> 16999
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
@@ -3790,13 +3822,13 @@ db $E9, $00, $E0, $00
 ; Enemy: Puroboros
 ; Stats: 
 org $D02380
-db $14, $24, $07, $00, $00, $08, $00, $00, $46, $05, $64, $00, $d6, $06, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $06
+db $14, $41, $07, $00, $00, $0a, $00, $00, $11, $0b, $64, $00, $a7, $0b, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $16
 ; Loot: 
 org $D05470
 db $E9, $00, $E0, $00
 ; --------------------------
-; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Antlion rank 6
-; HP: 1500 -> 8100
+; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Omniscient rank 8
+; HP: 1500 -> 16999
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
@@ -3807,13 +3839,13 @@ db $E9, $00, $E0, $00
 ; Enemy: Puroboros
 ; Stats: 
 org $D02380
-db $14, $24, $07, $00, $00, $08, $00, $00, $46, $05, $64, $00, $d6, $06, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $06
+db $14, $41, $07, $00, $00, $0a, $00, $00, $11, $0b, $64, $00, $a7, $0b, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $16
 ; Loot: 
 org $D05470
 db $E9, $00, $E0, $00
 ; --------------------------
-; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Antlion rank 6
-; HP: 1500 -> 8100
+; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Omniscient rank 8
+; HP: 1500 -> 16999
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
@@ -3824,13 +3856,13 @@ db $E9, $00, $E0, $00
 ; Enemy: Puroboros
 ; Stats: 
 org $D02380
-db $14, $24, $07, $00, $00, $08, $00, $00, $46, $05, $64, $00, $d6, $06, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $06
+db $14, $41, $07, $00, $00, $0a, $00, $00, $11, $0b, $64, $00, $a7, $0b, $00, $00, $00, $00, $30, $30, $00, $00, $00, $00, $00, $08, $00, $00, $00, $00, $1C, $16
 ; Loot: 
 org $D05470
 db $E9, $00, $E0, $00
 ; --------------------------
-; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Antlion rank 6
-; HP: 1500 -> 8100
+; Original boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5 -> Randomized boss Omniscient rank 8
+; HP: 1500 -> 16999
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
 ; ENEMY: Puroboros
@@ -3841,94 +3873,94 @@ db $E9, $00, $E0, $00
 ; Enemy: Gilgamesh
 ; Stats: 
 org $D023C0
-db $19, $30, $06, $00, $00, $00, $00, $00, $b8, $0b, $d0, $07, $1c, $0c, $00, $00, $0E, $00, $64, $70, $00, $00, $00, $00, $00, $98, $00, $00, $00, $00, $1E, $1f
+db $19, $0c, $06, $00, $00, $00, $00, $00, $b0, $04, $d0, $07, $b0, $04, $00, $00, $0E, $00, $64, $70, $00, $00, $00, $00, $00, $98, $00, $00, $00, $00, $1E, $15
 ; Loot: 
 org $D05478
 db $00, $00, $00, $E3
 ; --------------------------
-; Original boss Gilgamesh rank 5 -> Randomized boss LiquiFlame, LiquiFlame, LiquiFlame rank 4
-; HP: 11500 -> 3000
+; Original boss Gilgamesh rank 5 -> Randomized boss Galura rank 3
+; HP: 11500 -> 1200
 ; ENEMY: Gilgamesh
-; Original HP: 3000
-; New trigger HP: 2610
+; Original HP: 1200
+; New trigger HP: 1044
 org $d0b5f5
-db $32, $0a
+db $14, $04
 
 ; Enemy: Gilgamesh
 ; Stats: 
 org $D02460
-db $2d, $20, $07, $0a, $0b, $00, $08, $00, $1d, $4e, $e8, $03, $04, $29, $00, $00, $10, $00, $F4, $70, $10, $00, $00, $00, $A0, $98, $00, $00, $00, $00, $23, $16
+db $2d, $6c, $07, $0a, $14, $00, $0c, $00, $10, $27, $e8, $03, $4c, $36, $00, $00, $10, $00, $F4, $70, $10, $00, $00, $00, $A0, $98, $00, $00, $00, $00, $23, $22
 ; Loot: 
 org $D0548C
 db $1A, $F6, $00, $91
 ; --------------------------
-; Original boss Gilgamesh rank 5 -> Randomized boss Atmos rank 6
-; HP: 6500 -> 19997
+; Original boss Gilgamesh rank 5 -> Randomized boss Gargoyle, Gargoyle rank 7
+; HP: 6500 -> 10000
 ; ENEMY: Gilgamesh
-; Original HP: 19997
-; New trigger HP: 7599
+; Original HP: 10000
+; New trigger HP: 3800
 org $d0b674
-db $af, $1d
+db $d8, $0e
 
 ; Enemy: Tyrasaurus
 ; Stats: 
 org $D02480
-db $32, $5a, $08, $00, $1e, $00, $1e, $00, $84, $79, $e8, $03, $4c, $36, $00, $00, $00, $02, $74, $74, $10, $00, $00, $01, $11, $18, $00, $00, $00, $00, $24, $23
+db $32, $3c, $08, $00, $14, $00, $14, $00, $40, $9c, $e8, $03, $80, $57, $00, $00, $00, $02, $74, $74, $10, $00, $00, $01, $11, $18, $00, $00, $00, $00, $24, $17
 ; Loot: 
 org $D05490
 db $85, $00, $E3, $00
 ; --------------------------
-; Original boss Tyrasaurus rank 5 -> Randomized boss Guardian, Guardian, Guardian, Guardian rank 7
-; HP: 5000 -> 31108
+; Original boss Tyrasaurus rank 5 -> Randomized boss Leviathan rank 9
+; HP: 5000 -> 40000
 ; ENEMY: Tyrasaurus
 
 ; Enemy: Abductor
 ; Stats: 
 org $D024C0
-db $23, $54, $07, $00, $0c, $3c, $13, $00, $c4, $09, $e8, $03, $3c, $41, $00, $00, $00, $00, $34, $20, $00, $00, $40, $00, $00, $18, $88, $00, $00, $00, $26, $23
+db $23, $46, $07, $00, $0a, $32, $10, $00, $20, $4e, $e8, $03, $a4, $51, $00, $00, $00, $00, $34, $20, $00, $00, $40, $00, $00, $18, $88, $00, $00, $00, $26, $1d
 ; Loot: 
 org $D05498
 db $BA, $E1, $E0, $00
 ; --------------------------
-; Original boss Abductor rank 6 -> Randomized boss Golem, BoneDragon, ZombieDrgn, Golem rank 7
-; HP: 2500 -> 2500
+; Original boss Abductor rank 6 -> Randomized boss Merugene, Merugene, Merugene, Merugene rank 8
+; HP: 2500 -> 20000
 ; ENEMY: Abductor
 
 ; Enemy: HiryuuPlant
 ; Stats: 
 org $D024E0
-db $2d, $41, $08, $00, $00, $32, $32, $00, $67, $42, $e8, $03, $a4, $51, $00, $00, $00, $00, $74, $74, $00, $00, $00, $00, $80, $18, $80, $00, $01, $00, $27, $21
+db $2a, $20, $06, $00, $00, $28, $24, $00, $b8, $22, $e8, $03, $2c, $33, $00, $00, $00, $00, $74, $74, $00, $00, $00, $00, $80, $18, $80, $00, $01, $00, $27, $1a
 ; Loot: 
 org $D0549C
 db $00, $00, $00, $E3
 ; --------------------------
-; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Omniscient rank 8
-; HP: 12000 -> 16999
+; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Gilgamesh, Enkidou rank 6
+; HP: 12000 -> 17776
 ; ENEMY: HiryuuPlant
 
 ; Enemy: HiryuuFlowr
 ; Stats: 
 org $D02500
-db $16, $0f, $14, $00, $00, $32, $32, $1e, $52, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $1f
+db $16, $04, $14, $00, $00, $20, $20, $1e, $79, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $19
 ; Loot: 
 org $D054A0
 db $00, $00, $E4, $00
 ; --------------------------
-; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Omniscient rank 8
-; HP: 12000 -> 16999
+; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Gilgamesh, Enkidou rank 6
+; HP: 12000 -> 17776
 ; ENEMY: HiryuuPlant
 ; ENEMY: HiryuuFlowr
 
 ; Enemy: HiryuuFlowr
 ; Stats: 
 org $D02520
-db $11, $0f, $14, $00, $00, $32, $32, $1e, $52, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $1f
+db $11, $04, $14, $00, $00, $20, $20, $1e, $79, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $19
 ; Loot: 
 org $D054A4
 db $00, $00, $E4, $00
 ; --------------------------
-; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Omniscient rank 8
-; HP: 12000 -> 16999
+; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Gilgamesh, Enkidou rank 6
+; HP: 12000 -> 17776
 ; ENEMY: HiryuuPlant
 ; ENEMY: HiryuuFlowr
 ; ENEMY: HiryuuFlowr
@@ -3936,13 +3968,13 @@ db $00, $00, $E4, $00
 ; Enemy: HiryuuFlowr
 ; Stats: 
 org $D02540
-db $1b, $0f, $14, $00, $00, $32, $32, $1e, $52, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $21
+db $1b, $04, $14, $00, $00, $20, $20, $1e, $79, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $1a
 ; Loot: 
 org $D054A8
 db $00, $00, $E4, $00
 ; --------------------------
-; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Omniscient rank 8
-; HP: 12000 -> 16999
+; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Gilgamesh, Enkidou rank 6
+; HP: 12000 -> 17776
 ; ENEMY: HiryuuPlant
 ; ENEMY: HiryuuFlowr
 ; ENEMY: HiryuuFlowr
@@ -3951,13 +3983,13 @@ db $00, $00, $E4, $00
 ; Enemy: HiryuuFlowr
 ; Stats: 
 org $D02560
-db $16, $0f, $14, $00, $00, $32, $32, $1e, $52, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $1f
+db $16, $04, $14, $00, $00, $20, $20, $1e, $79, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $19
 ; Loot: 
 org $D054AC
 db $00, $00, $E4, $00
 ; --------------------------
-; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Omniscient rank 8
-; HP: 12000 -> 16999
+; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Gilgamesh, Enkidou rank 6
+; HP: 12000 -> 17776
 ; ENEMY: HiryuuPlant
 ; ENEMY: HiryuuFlowr
 ; ENEMY: HiryuuFlowr
@@ -3967,13 +3999,13 @@ db $00, $00, $E4, $00
 ; Enemy: HiryuuFlowr
 ; Stats: 
 org $D02580
-db $12, $0f, $14, $00, $00, $32, $32, $1e, $52, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $23
+db $12, $04, $14, $00, $00, $20, $20, $1e, $79, $03, $e8, $03, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $18, $80, $00, $01, $00, $28, $1c
 ; Loot: 
 org $D054B0
 db $00, $00, $E4, $00
 ; --------------------------
-; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Omniscient rank 8
-; HP: 12000 -> 16999
+; Original boss HiryuuPlant, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr, HiryuuFlowr rank 6 -> Randomized boss Gilgamesh, Enkidou rank 6
+; HP: 12000 -> 17776
 ; ENEMY: HiryuuPlant
 ; ENEMY: HiryuuFlowr
 ; ENEMY: HiryuuFlowr
@@ -3984,34 +4016,34 @@ db $00, $00, $E4, $00
 ; Enemy: Gilgamesh
 ; Stats: 
 org $D025A0
-db $30, $7e, $07, $14, $18, $54, $18, $0a, $5c, $2b, $78, $03, $5a, $3c, $00, $00, $2A, $00, $74, $70, $10, $00, $00, $00, $A0, $18, $00, $00, $00, $00, $2D, $25
+db $2f, $4b, $06, $0f, $0f, $37, $0f, $0a, $c5, $26, $78, $03, $d2, $28, $00, $00, $2A, $00, $74, $70, $10, $00, $00, $00, $A0, $18, $00, $00, $00, $00, $2D, $1f
 ; Loot: 
 org $D054B4
 db $00, $C9, $00, $85
 ; --------------------------
-; Original boss Gilgamesh, Enkidou rank 6 -> Randomized boss Apanda rank 10
-; HP: 8888 -> 22200
+; Original boss Gilgamesh, Enkidou rank 6 -> Randomized boss Minotauros rank 8
+; HP: 8888 -> 19850
 ; ENEMY: Gilgamesh
-; Original HP: 11100
-; New trigger HP: 7437
+; Original HP: 9925
+; New trigger HP: 6650
 org $d0b761
-db $0d, $1d
+db $fa, $19
 
 ; Enemy: Enkidou
 ; Stats: 
 org $D025C0
-db $30, $7e, $05, $1e, $00, $3c, $00, $14, $5c, $2b, $e8, $03, $5a, $3c, $00, $00, $23, $20, $74, $70, $10, $00, $00, $00, $80, $08, $88, $00, $00, $00, $2E, $23
+db $2f, $4b, $05, $19, $00, $28, $00, $14, $c5, $26, $e8, $03, $d2, $28, $00, $00, $23, $20, $74, $70, $10, $00, $00, $00, $80, $08, $88, $00, $00, $00, $2E, $1d
 ; Loot: 
 org $D054B8
 db $00, $97, $00, $1A
 ; --------------------------
-; Original boss Gilgamesh, Enkidou rank 6 -> Randomized boss Apanda rank 10
-; HP: 8888 -> 22200
+; Original boss Gilgamesh, Enkidou rank 6 -> Randomized boss Minotauros rank 8
+; HP: 8888 -> 19850
 ; ENEMY: Gilgamesh
-; Original HP: 11100
-; New trigger HP: 7437
+; Original HP: 9925
+; New trigger HP: 6650
 org $d0b761
-db $0d, $1d
+db $fa, $19
 ; ENEMY: Enkidou
 ; Skills: ['Aero3']
 ; New skill: Aero3
@@ -4021,257 +4053,257 @@ db $91
 ; Enemy: Atmos
 ; Stats: 
 org $D025E0
-db $2c, $0c, $0a, $00, $11, $60, $18, $14, $98, $3a, $10, $27, $3c, $41, $00, $00, $00, $00, $FF, $BF, $FF, $00, $00, $00, $20, $18, $00, $00, $08, $00, $2F, $31
+db $30, $0a, $0a, $00, $0e, $50, $14, $14, $fc, $6c, $10, $27, $54, $88, $00, $00, $00, $00, $FF, $BF, $FF, $00, $00, $00, $20, $18, $00, $00, $08, $00, $2F, $29
 ; Loot: 
 org $D054BC
 db $5E, $E2, $00, $EB
 ; --------------------------
-; Original boss Atmos rank 6 -> Randomized boss Carbunkle, Carbunkle rank 7
-; HP: 19997 -> 15000
+; Original boss Atmos rank 6 -> Randomized boss Apocalypse rank 11
+; HP: 19997 -> 27900
 ; ENEMY: Atmos
 
 ; Enemy: Guardian
 ; Stats: 
 org $D02600
-db $28, $30, $0a, $00, $08, $0c, $10, $14, $10, $27, $10, $27, $33, $1d, $00, $00, $00, $1E, $74, $FC, $10, $01, $00, $00, $00, $18, $00, $00, $00, $00, $30, $3e
+db $28, $48, $0a, $00, $0c, $12, $18, $14, $61, $1e, $10, $27, $69, $14, $00, $00, $00, $1E, $74, $FC, $10, $01, $00, $00, $00, $18, $00, $00, $00, $00, $30, $5c
 ; Loot: 
 org $D054C0
 db $E3, $00, $62, $00
 ; --------------------------
-; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss Leviathan rank 9
-; HP: 7777 -> 40000
+; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss Guardian, Guardian, Guardian, Guardian rank 7
+; HP: 7777 -> 31108
 ; ENEMY: Guardian
 ; Skills: ['Fire3']
 ; New skill: Fire3
 org $d0b865
 db $30
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b85e
-db $d8, $0e
+db $8b, $0b
 
 ; Enemy: Guardian
 ; Stats: 
 org $D02620
-db $28, $30, $0a, $00, $08, $01, $10, $14, $10, $27, $10, $27, $33, $1d, $00, $00, $00, $1E, $74, $FC, $10, $20, $00, $00, $00, $18, $00, $00, $00, $00, $31, $3e
+db $28, $48, $0a, $00, $0c, $01, $18, $14, $61, $1e, $10, $27, $69, $14, $00, $00, $00, $1E, $74, $FC, $10, $20, $00, $00, $00, $18, $00, $00, $00, $00, $31, $5c
 ; Loot: 
 org $D054C4
 db $E3, $00, $62, $00
 ; --------------------------
-; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss Leviathan rank 9
-; HP: 7777 -> 40000
+; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss Guardian, Guardian, Guardian, Guardian rank 7
+; HP: 7777 -> 31108
 ; ENEMY: Guardian
 ; Skills: ['Fire3']
 ; New skill: Fire3
 org $d0b865
 db $30
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b85e
-db $d8, $0e
+db $8b, $0b
 ; ENEMY: Guardian
 ; Skills: ['EarthShaker']
 ; New skill: EarthShaker
 org $d0b877
 db $CF
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b874
-db $d8, $0e
+db $8b, $0b
 
 ; Enemy: Guardian
 ; Stats: 
 org $D02640
-db $2d, $30, $0a, $00, $08, $0c, $10, $14, $10, $27, $10, $27, $33, $1d, $00, $00, $00, $1E, $74, $FC, $10, $80, $00, $00, $00, $18, $00, $00, $00, $00, $32, $3e
+db $2d, $48, $0a, $00, $0c, $12, $18, $14, $61, $1e, $10, $27, $69, $14, $00, $00, $00, $1E, $74, $FC, $10, $80, $00, $00, $00, $18, $00, $00, $00, $00, $32, $5c
 ; Loot: 
 org $D054C8
 db $E3, $00, $62, $00
 ; --------------------------
-; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss Leviathan rank 9
-; HP: 7777 -> 40000
+; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss Guardian, Guardian, Guardian, Guardian rank 7
+; HP: 7777 -> 31108
 ; ENEMY: Guardian
 ; Skills: ['Fire3']
 ; New skill: Fire3
 org $d0b865
 db $30
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b85e
-db $d8, $0e
+db $8b, $0b
 ; ENEMY: Guardian
 ; Skills: ['EarthShaker']
 ; New skill: EarthShaker
 org $d0b877
 db $CF
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b874
-db $d8, $0e
+db $8b, $0b
 ; ENEMY: Guardian
 ; Skills: ['AquaRake']
 ; New skill: AquaRake
 org $d0b889
 db $84
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b886
-db $d8, $0e
+db $8b, $0b
 
 ; Enemy: Guardian
 ; Stats: 
 org $D02660
-db $32, $30, $0a, $00, $08, $08, $10, $14, $10, $27, $10, $27, $33, $1d, $00, $00, $00, $1E, $74, $FC, $10, $40, $00, $00, $00, $18, $00, $00, $00, $00, $33, $3e
+db $32, $48, $0a, $00, $0c, $0c, $18, $14, $61, $1e, $10, $27, $69, $14, $00, $00, $00, $1E, $74, $FC, $10, $40, $00, $00, $00, $18, $00, $00, $00, $00, $33, $5c
 ; Loot: 
 org $D054CC
 db $E3, $00, $62, $00
 ; --------------------------
-; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss Leviathan rank 9
-; HP: 7777 -> 40000
+; Original boss Guardian, Guardian, Guardian, Guardian rank 7 -> Randomized boss Guardian, Guardian, Guardian, Guardian rank 7
+; HP: 7777 -> 31108
 ; ENEMY: Guardian
 ; Skills: ['Fire3']
 ; New skill: Fire3
 org $d0b865
 db $30
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b85e
-db $d8, $0e
+db $8b, $0b
 ; ENEMY: Guardian
 ; Skills: ['EarthShaker']
 ; New skill: EarthShaker
 org $d0b877
 db $CF
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b874
-db $d8, $0e
+db $8b, $0b
 ; ENEMY: Guardian
 ; Skills: ['AquaRake']
 ; New skill: AquaRake
 org $d0b889
 db $84
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b886
-db $d8, $0e
+db $8b, $0b
 ; ENEMY: Guardian
 ; Skills: ['Aero3']
 ; New skill: Aero3
 org $d0b89f
 db $91
-; Original HP: 10000
-; New trigger HP: 3800
+; Original HP: 7777
+; New trigger HP: 2955
 org $d0b898
-db $d8, $0e
+db $8b, $0b
 
 ; Enemy: Carbunkle
 ; Stats: 
 org $D02680
-db $28, $1e, $0a, $46, $1e, $1e, $1e, $1e, $ec, $2c, $10, $27, $ec, $13, $00, $00, $00, $20, $F4, $FB, $10, $00, $00, $00, $24, $18, $88, $00, $80, $00, $34, $2c
+db $32, $60, $0a, $46, $48, $f0, $48, $3c, $50, $46, $10, $27, $e4, $89, $00, $00, $00, $20, $F4, $FB, $10, $00, $00, $00, $24, $18, $88, $00, $80, $00, $34, $35
 ; Loot: 
 org $D054D0
 db $F2, $CA, $E7, $00
 ; --------------------------
-; Original boss Carbunkle, Carbunkle rank 7 -> Randomized boss Gilgamesh rank 5
-; HP: 15000 -> 11500
+; Original boss Carbunkle, Carbunkle rank 7 -> Randomized boss Calofisteri rank 10
+; HP: 15000 -> 18000
 ; ENEMY: Carbunkle
-; Original HP: 11500
-; New trigger HP: 7590
+; Original HP: 18000
+; New trigger HP: 11880
 org $d0b8ae
-db $a6, $1d
-; Original HP: 11500
-; New trigger HP: 3795
+db $68, $2e
+; Original HP: 18000
+; New trigger HP: 5940
 org $d0b8d1
-db $d3, $0e
+db $34, $17
 
 ; Enemy: Carbunkle
 ; Stats: 
 org $D02BC0
-db $19, $05, $02, $07, $07, $07, $00, $00, $ec, $2c, $e8, $03, $ec, $13, $00, $00, $00, $00, $80, $0B, $00, $00, $00, $FF, $00, $18, $00, $00, $00, $00, $5E, $01
+db $19, $0c, $02, $0d, $10, $10, $00, $00, $50, $46, $e8, $03, $e4, $89, $00, $00, $00, $00, $80, $0B, $00, $00, $00, $FF, $00, $18, $00, $00, $00, $00, $5E, $01
 ; Loot: 
 org $D05578
 db $F2, $CA, $E7, $00
 ; --------------------------
-; Original boss Carbunkle, Carbunkle rank 7 -> Randomized boss Gilgamesh rank 5
-; HP: 15000 -> 11500
+; Original boss Carbunkle, Carbunkle rank 7 -> Randomized boss Calofisteri rank 10
+; HP: 15000 -> 18000
 ; ENEMY: Carbunkle
-; Original HP: 11500
-; New trigger HP: 7590
+; Original HP: 18000
+; New trigger HP: 11880
 org $d0b8ae
-db $a6, $1d
-; Original HP: 11500
-; New trigger HP: 3795
+db $68, $2e
+; Original HP: 18000
+; New trigger HP: 5940
 org $d0b8d1
-db $d3, $0e
+db $34, $17
 ; ENEMY: Carbunkle
 
 ; Enemy: Gilgamesh
 ; Stats: 
 org $D02BA0
-db $41, $24, $0c, $00, $05, $01, $09, $14, $c4, $09, $d0, $07, $04, $29, $00, $00, $00, $00, $F7, $FC, $10, $00, $00, $00, $A0, $98, $00, $00, $00, $00, $5D, $2a
+db $41, $78, $0c, $00, $0c, $01, $18, $28, $b8, $56, $d0, $07, $e4, $89, $00, $00, $00, $00, $F7, $FC, $10, $00, $00, $00, $A0, $98, $00, $00, $00, $00, $5D, $40
 ; Loot: 
 org $D05574
 db $C2, $E1, $00, $00
 ; --------------------------
-; Original boss Gilgamesh, Gilgamesh rank 7 -> Randomized boss Abductor rank 6
-; HP: 55000 -> 2500
+; Original boss Gilgamesh, Gilgamesh rank 7 -> Randomized boss Apanda rank 10
+; HP: 55000 -> 22200
 ; ENEMY: Gilgamesh
-; Original HP: 2500
-; New trigger HP: 1900
+; Original HP: 22200
+; New trigger HP: 16872
 org $d0c3a5
-db $6c, $07
+db $e8, $41
 
 ; Enemy: Gilgamesh
 ; Stats: 
 org $D026C0
-db $4b, $28, $01, $00, $10, $00, $08, $00, $c4, $09, $28, $23, $04, $29, $00, $00, $5C, $00, $F4, $FC, $10, $00, $00, $00, $A0, $98, $00, $00, $01, $00, $36, $36
+db $4b, $3c, $01, $00, $18, $00, $0c, $00, $b8, $56, $28, $23, $e4, $89, $00, $00, $5C, $00, $F4, $FC, $10, $00, $00, $00, $A0, $98, $00, $00, $01, $00, $36, $50
 ; Loot: 
 org $D054D8
 db $00, $C7, $00, $5C
 ; --------------------------
-; Original boss Gilgamesh, Gilgamesh rank 7 -> Randomized boss Abductor rank 6
-; HP: 55000 -> 2500
+; Original boss Gilgamesh, Gilgamesh rank 7 -> Randomized boss Apanda rank 10
+; HP: 55000 -> 22200
 ; ENEMY: Gilgamesh
-; Original HP: 2500
-; New trigger HP: 1900
+; Original HP: 22200
+; New trigger HP: 16872
 org $d0c3a5
-db $6c, $07
+db $e8, $41
 ; ENEMY: Gilgamesh
 
 ; Enemy: Antlion
 ; Stats: 
 org $D02700
-db $28, $20, $0d, $07, $08, $00, $04, $07, $d0, $07, $e8, $03, $2c, $33, $60, $09, $00, $20, $F4, $30, $10, $00, $00, $80, $20, $18, $00, $00, $00, $00, $38, $1b
+db $28, $30, $0d, $07, $0c, $00, $06, $07, $d0, $07, $e8, $03, $28, $0a, $10, $0e, $00, $20, $F4, $30, $10, $00, $00, $80, $20, $18, $00, $00, $00, $00, $38, $29
 ; Loot: 
 org $D054E0
 db $00, $E1, $00, $F1
 ; --------------------------
-; Original boss Antlion rank 6 -> Randomized boss Crayclaw rank 6
+; Original boss Antlion rank 6 -> Randomized boss AdamanTiMi rank 4
 ; HP: 8100 -> 2000
 ; ENEMY: Antlion
 
 ; Enemy: Halicarnaso
 ; Stats: 
 org $D02980
-db $28, $2c, $0c, $00, $08, $50, $10, $42, $3f, $9c, $88, $13, $cc, $74, $00, $00, $00, $00, $E4, $78, $10, $00, $00, $00, $20, $18, $00, $00, $00, $00, $4C, $4e
+db $28, $0a, $0c, $00, $00, $00, $00, $21, $84, $03, $88, $13, $c8, $00, $00, $00, $00, $00, $E4, $78, $10, $00, $00, $00, $20, $18, $00, $00, $00, $00, $4C, $61
 ; Loot: 
 org $D05530
 db $86, $3C, $B2, $00
 ; --------------------------
-; Original boss Halicarnaso rank 11 -> Randomized boss Triton, Neregeid, Phobos rank 9
-; HP: 33333 -> 39999
+; Original boss Halicarnaso rank 11 -> Randomized boss Siren, Siren rank 2
+; HP: 33333 -> 900
 ; ENEMY: Halicarnaso
 
 ; Enemy: Merugene
 ; Stats: 
 org $D02780
-db $28, $1e, $0d, $0a, $24, $24, $00, $0a, $d0, $07, $f4, $01, $d0, $07, $00, $00, $00, $F8, $F4, $88, $00, $06, $00, $01, $20, $18, $00, $00, $00, $00, $3C, $23
+db $28, $19, $0d, $0a, $1e, $1e, $00, $0a, $40, $1f, $f4, $01, $cc, $10, $00, $00, $00, $F8, $F4, $88, $00, $06, $00, $01, $20, $18, $00, $00, $00, $00, $3C, $1d
 ; Loot: 
 org $D054F0
 db $00, $9A, $E5, $00
 ; --------------------------
-; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss AdamanTiMi rank 4
-; HP: 20000 -> 2000
+; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5
+; HP: 20000 -> 8000
 ; ENEMY: Merugene
 ; Skills: ['Fight', 'Fight', 'Bolt2', 'Fight', 'Ice2', 'Fight', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Ice2']
 ; New skill: Fight
@@ -4335,13 +4367,13 @@ db $2B
 ; Enemy: Merugene
 ; Stats: 
 org $D027A0
-db $28, $1e, $0d, $0a, $24, $24, $00, $0a, $d0, $07, $f4, $01, $d0, $07, $00, $00, $00, $F8, $F4, $88, $00, $05, $00, $02, $20, $18, $00, $00, $00, $00, $3C, $23
+db $28, $19, $0d, $0a, $1e, $1e, $00, $0a, $40, $1f, $f4, $01, $cc, $10, $00, $00, $00, $F8, $F4, $88, $00, $05, $00, $02, $20, $18, $00, $00, $00, $00, $3C, $1d
 ; Loot: 
 org $D054F4
 db $00, $89, $E5, $00
 ; --------------------------
-; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss AdamanTiMi rank 4
-; HP: 20000 -> 2000
+; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5
+; HP: 20000 -> 8000
 ; ENEMY: Merugene
 ; Skills: ['Fight', 'Fight', 'Bolt2', 'Fight', 'Ice2', 'Fight', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Ice2']
 ; New skill: Fight
@@ -4464,13 +4496,13 @@ db $2C
 ; Enemy: Merugene
 ; Stats: 
 org $D027C0
-db $28, $1e, $0d, $0a, $24, $24, $00, $0a, $d0, $07, $f4, $01, $d0, $07, $00, $00, $00, $F8, $F4, $88, $00, $03, $00, $04, $20, $18, $00, $00, $00, $00, $3C, $23
+db $28, $19, $0d, $0a, $1e, $1e, $00, $0a, $40, $1f, $f4, $01, $cc, $10, $00, $00, $00, $F8, $F4, $88, $00, $03, $00, $04, $20, $18, $00, $00, $00, $00, $3C, $1d
 ; Loot: 
 org $D054F8
 db $00, $C0, $E5, $00
 ; --------------------------
-; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss AdamanTiMi rank 4
-; HP: 20000 -> 2000
+; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5
+; HP: 20000 -> 8000
 ; ENEMY: Merugene
 ; Skills: ['Fight', 'Fight', 'Bolt2', 'Fight', 'Ice2', 'Fight', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Ice2']
 ; New skill: Fight
@@ -4652,13 +4684,13 @@ db $2A
 ; Enemy: Merugene
 ; Stats: 
 org $D027E0
-db $28, $1e, $0d, $00, $00, $00, $24, $1e, $d0, $07, $f4, $01, $d0, $07, $00, $00, $00, $F8, $F4, $88, $00, $07, $40, $00, $20, $18, $00, $00, $00, $00, $3C, $28
+db $28, $19, $0d, $00, $00, $00, $1e, $1e, $40, $1f, $f4, $01, $cc, $10, $00, $00, $00, $F8, $F4, $88, $00, $07, $40, $00, $20, $18, $00, $00, $00, $00, $3C, $21
 ; Loot: 
 org $D054FC
 db $00, $81, $E5, $00
 ; --------------------------
-; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss AdamanTiMi rank 4
-; HP: 20000 -> 2000
+; Original boss Merugene, Merugene, Merugene, Merugene rank 8 -> Randomized boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5
+; HP: 20000 -> 8000
 ; ENEMY: Merugene
 ; Skills: ['Fight', 'Fight', 'Bolt2', 'Fight', 'Ice2', 'Fight', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Fight', 'NoDamage', 'Bolt2', 'NoDamage', 'Ice2', 'NoDamage', 'Ice2']
 ; New skill: Fight
@@ -4896,13 +4928,13 @@ db $AC
 ; Enemy: Odin
 ; Stats: 
 org $D02800
-db $23, $14, $0a, $0a, $05, $00, $05, $1e, $84, $03, $f4, $01, $c8, $00, $00, $00, $2F, $00, $B4, $10, $00, $10, $00, $00, $A0, $18, $00, $00, $00, $00, $40, $02
+db $28, $23, $0a, $0a, $0a, $0a, $0a, $32, $dc, $05, $f4, $01, $d8, $0e, $00, $00, $2F, $00, $B4, $10, $00, $10, $00, $00, $A0, $18, $00, $00, $00, $00, $40, $02
 ; Loot: 
 org $D05500
 db $AF, $00, $C4, $00
 ; --------------------------
-; Original boss Odin rank 9 -> Randomized boss Siren, Siren rank 2
-; HP: 17000 -> 900
+; Original boss Odin rank 9 -> Randomized boss Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros rank 5
+; HP: 17000 -> 1500
 ; ENEMY: Odin
 ; Skills: ['ReaperSword']
 ; New skill: ReaperSword
@@ -4912,39 +4944,39 @@ db $B0
 ; Enemy: Gargoyle
 ; Stats: 
 org $D02820
-db $22, $55, $09, $0a, $0f, $32, $0f, $28, $0e, $27, $2c, $01, $c2, $4c, $00, $00, $00, $00, $30, $10, $00, $10, $40, $00, $A0, $18, $00, $00, $00, $00, $41, $21
+db $22, $0a, $09, $0a, $05, $28, $05, $14, $dc, $05, $2c, $01, $c2, $01, $00, $00, $00, $00, $30, $10, $00, $10, $40, $00, $A0, $18, $00, $00, $00, $00, $41, $15
 ; Loot: 
 org $D05504
 db $E4, $E0, $E1, $00
 ; --------------------------
-; Original boss Gargoyle, Gargoyle rank 7 -> Randomized boss Catastroph rank 11
-; HP: 5000 -> 19997
+; Original boss Gargoyle, Gargoyle rank 7 -> Randomized boss Ifrit rank 3
+; HP: 5000 -> 3000
 ; ENEMY: Gargoyle
 ; ENEMY: Gargoyle
 
 ; Enemy: Gargoyle
 ; Stats: 
 org $D02820
-db $22, $55, $09, $0a, $0f, $32, $0f, $28, $0e, $27, $2c, $01, $c2, $4c, $00, $00, $00, $00, $30, $10, $00, $10, $40, $00, $A0, $18, $00, $00, $00, $00, $41, $21
+db $22, $0a, $09, $0a, $05, $28, $05, $14, $dc, $05, $2c, $01, $c2, $01, $00, $00, $00, $00, $30, $10, $00, $10, $40, $00, $A0, $18, $00, $00, $00, $00, $41, $15
 ; Loot: 
 org $D05504
 db $E4, $E0, $E1, $00
 ; --------------------------
-; Original boss Gargoyle, Gargoyle rank 7 -> Randomized boss Catastroph rank 11
-; HP: 5000 -> 19997
+; Original boss Gargoyle, Gargoyle rank 7 -> Randomized boss Ifrit rank 3
+; HP: 5000 -> 3000
 ; ENEMY: Gargoyle
 ; ENEMY: Gargoyle
 
 ; Enemy: Triton
 ; Stats: 
 org $D02840
-db $23, $26, $0b, $00, $00, $08, $11, $32, $0b, $1a, $10, $27, $8d, $20, $00, $00, $00, $00, $30, $08, $04, $01, $00, $02, $01, $18, $00, $00, $00, $00, $42, $25
+db $23, $2e, $0b, $00, $00, $0a, $14, $32, $88, $13, $10, $27, $19, $12, $00, $00, $00, $00, $30, $08, $04, $01, $00, $02, $01, $18, $00, $00, $00, $00, $42, $2c
 ; Loot: 
 org $D05508
 db $E3, $EC, $F5, $00
 ; --------------------------
-; Original boss Triton, Neregeid, Phobos rank 9 -> Randomized boss Merugene, Merugene, Merugene, Merugene rank 8
-; HP: 13333 -> 20000
+; Original boss Triton, Neregeid, Phobos rank 9 -> Randomized boss Carbunkle, Carbunkle rank 7
+; HP: 13333 -> 15000
 ; ENEMY: Triton
 ; Skills: ['Fight', 'Fight', 'Fire3', 'Fire3', 'Fight', 'Fight', 'Fight', 'Fire3']
 ; New skill: Fight
@@ -4975,13 +5007,13 @@ db $30
 ; Enemy: Neregeid
 ; Stats: 
 org $D02860
-db $23, $25, $0b, $00, $00, $08, $11, $32, $0b, $1a, $10, $27, $8d, $20, $00, $00, $00, $00, $30, $08, $04, $02, $00, $01, $01, $18, $00, $00, $00, $00, $43, $14
+db $23, $2c, $0b, $00, $00, $0a, $14, $32, $88, $13, $10, $27, $19, $12, $00, $00, $00, $00, $30, $08, $04, $02, $00, $01, $01, $18, $00, $00, $00, $00, $43, $18
 ; Loot: 
 org $D0550C
 db $E3, $EC, $F3, $00
 ; --------------------------
-; Original boss Triton, Neregeid, Phobos rank 9 -> Randomized boss Merugene, Merugene, Merugene, Merugene rank 8
-; HP: 13333 -> 20000
+; Original boss Triton, Neregeid, Phobos rank 9 -> Randomized boss Carbunkle, Carbunkle rank 7
+; HP: 13333 -> 15000
 ; ENEMY: Triton
 ; Skills: ['Fight', 'Fight', 'Fire3', 'Fire3', 'Fight', 'Fight', 'Fight', 'Fire3']
 ; New skill: Fight
@@ -5038,13 +5070,13 @@ db $31
 ; Enemy: Phobos
 ; Stats: 
 org $D02880
-db $23, $26, $0b, $00, $00, $08, $11, $32, $0b, $1a, $10, $27, $8d, $20, $00, $00, $00, $00, $30, $08, $04, $08, $00, $20, $01, $18, $00, $00, $00, $00, $44, $27
+db $23, $2e, $0b, $00, $00, $0a, $14, $32, $88, $13, $10, $27, $19, $12, $00, $00, $00, $00, $30, $08, $04, $08, $00, $20, $01, $18, $00, $00, $00, $00, $44, $2f
 ; Loot: 
 org $D05510
 db $E3, $EC, $F2, $00
 ; --------------------------
-; Original boss Triton, Neregeid, Phobos rank 9 -> Randomized boss Merugene, Merugene, Merugene, Merugene rank 8
-; HP: 13333 -> 20000
+; Original boss Triton, Neregeid, Phobos rank 9 -> Randomized boss Carbunkle, Carbunkle rank 7
+; HP: 13333 -> 15000
 ; ENEMY: Triton
 ; Skills: ['Fight', 'Fight', 'Fire3', 'Fire3', 'Fight', 'Fight', 'Fight', 'Fire3']
 ; New skill: Fight
@@ -5127,24 +5159,24 @@ db $2F
 ; Enemy: Omniscient
 ; Stats: 
 org $D028A0
-db $2a, $78, $14, $00, $00, $18, $0a, $00, $a0, $0f, $30, $75, $3c, $41, $00, $00, $00, $00, $F4, $50, $00, $00, $00, $40, $20, $18, $00, $00, $61, $00, $45, $40
+db $28, $50, $14, $00, $00, $08, $06, $00, $d0, $07, $30, $75, $fc, $21, $00, $00, $00, $00, $F4, $50, $00, $00, $00, $40, $20, $18, $00, $00, $61, $00, $45, $2a
 ; Loot: 
 org $D05514
 db $C5, $E0, $00, $00
 ; --------------------------
-; Original boss Omniscient rank 8 -> Randomized boss Ramuh rank 7
-; HP: 16999 -> 4000
+; Original boss Omniscient rank 8 -> Randomized boss Crayclaw rank 6
+; HP: 16999 -> 2000
 ; ENEMY: Omniscient
-; Skills: ['Bolt3', 'Fire3', 'Ice3', 'Cure', 'Fire', 'Ice', 'Cure2', 'Fire2', 'Bolt2', 'Ice2']
-; New skill: Bolt3
+; Skills: ['Bolt2', 'Fire2', 'Ice2', 'Cure', 'Fire', 'Ice', 'Cure2', 'Fire2', 'Bolt2', 'Ice2']
+; New skill: Bolt2
 org $d0bc72
-db $32
-; New skill: Fire3
+db $2C
+; New skill: Fire2
 org $d0bc73
-db $30
-; New skill: Ice3
+db $2A
+; New skill: Ice2
 org $d0bc74
-db $31
+db $2B
 ; New skill: Cure
 org $d0bc7c
 db $12
@@ -5166,35 +5198,35 @@ db $2C
 ; New skill: Ice2
 org $d0bc95
 db $2B
-; Original HP: 4000
-; New trigger HP: 960
+; Original HP: 2000
+; New trigger HP: 480
 org $d0bc6e
-db $c0, $03
+db $e0, $01
 
 ; Enemy: Minotauros
 ; Stats: 
 org $D028C0
-db $2a, $3c, $09, $00, $00, $00, $00, $00, $40, $1f, $00, $00, $cc, $10, $00, $00, $00, $B8, $FF, $FF, $FF, $B8, $00, $00, $A0, $18, $00, $00, $00, $00, $46, $25
+db $2c, $6c, $09, $00, $00, $00, $00, $00, $d8, $d6, $00, $00, $3c, $41, $00, $00, $00, $B8, $FF, $FF, $FF, $B8, $00, $00, $A0, $18, $00, $00, $00, $00, $46, $2c
 ; Loot: 
 org $D05518
 db $5B, $C0, $00, $00
 ; --------------------------
-; Original boss Minotauros rank 8 -> Randomized boss ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis, ArchaeAvis rank 5
-; HP: 19850 -> 8000
+; Original boss Minotauros rank 8 -> Randomized boss Gilgamesh, Gilgamesh rank 7
+; HP: 19850 -> 55000
 ; ENEMY: Minotauros
 
 ; Enemy: Leviathan
 ; Stats: 
 org $D028E0
-db $2c, $42, $0e, $08, $11, $01, $11, $37, $10, $27, $d0, $07, $4c, $36, $00, $00, $00, $21, $F4, $F8, $10, $80, $00, $04, $30, $18, $00, $00, $00, $00, $47, $2c
+db $2a, $19, $0c, $04, $08, $01, $08, $28, $01, $00, $d0, $07, $d8, $0e, $00, $00, $00, $21, $F4, $F8, $10, $80, $00, $04, $30, $18, $00, $00, $00, $00, $47, $25
 ; Loot: 
 org $D0551C
 db $00, $E3, $00, $CA
 ; --------------------------
-; Original boss Leviathan rank 9 -> Randomized boss Gargoyle, Gargoyle rank 7
-; HP: 40000 -> 10000
+; Original boss Leviathan rank 9 -> Randomized boss Sol Cannon, Launcher, Launcher rank 5
+; HP: 40000 -> 1
 ; ENEMY: Leviathan
-; Skills: ['Fight', 'Fight', 'AquaRake', 'Fight', 'Fight', 'AquaRake', 'Fight', 'Specialty', 'AquaRake', 'Fight', 'AquaRake', 'AquaRake', 'Fight', 'Fight', 'AquaRake', 'Fight', 'TidalWave', 'Specialty', 'Fight', 'AquaRake', 'AquaRake', 'AquaRake', 'TidalWave', 'Specialty', 'Specialty', 'Fight', 'TidalWave', 'Fight', 'TidalWave', 'Specialty', 'Fight', 'Fight', 'Specialty', 'Fight', 'Specialty', 'TidalWave', 'Fight', 'Specialty', 'TidalWave', 'TidalWave']
+; Skills: ['Fight', 'Fight', 'AquaRake', 'Fight', 'Fight', 'Ice', 'Fight', 'Fight', 'Ice2', 'Fight', 'AquaRake', 'Fight', 'Fight', 'Fight', 'Ice2', 'Fight', 'AquaRake', 'Fight', 'Fight', 'AquaRake', 'AquaRake', 'AquaRake', 'AquaRake', 'AquaRake', 'AquaRake', 'Fight', 'AquaRake', 'Fight', 'AquaRake', 'AquaRake', 'Fight', 'Fight', 'AquaRake', 'Fight', 'AquaRake', 'AquaRake', 'Fight', 'AquaRake', 'AquaRake', 'AquaRake']
 ; New skill: Fight
 org $d0bcde
 db $80
@@ -5210,45 +5242,45 @@ db $80
 ; New skill: Fight
 org $d0bce3
 db $80
-; New skill: AquaRake
+; New skill: Ice
 org $d0bce4
-db $84
+db $25
 ; New skill: Fight
 org $d0bcea
 db $80
-; New skill: Specialty
+; New skill: Fight
 org $d0bceb
-db $81
-; New skill: AquaRake
+db $80
+; New skill: Ice2
 org $d0bcec
-db $84
+db $2B
 ; New skill: Fight
 org $d0bcee
 db $80
 ; New skill: AquaRake
 org $d0bcef
 db $84
-; New skill: AquaRake
+; New skill: Fight
 org $d0bcf0
-db $84
+db $80
 ; New skill: Fight
 org $d0bcf2
 db $80
 ; New skill: Fight
 org $d0bcf3
 db $80
-; New skill: AquaRake
+; New skill: Ice2
 org $d0bcf4
-db $84
+db $2B
 ; New skill: Fight
 org $d0bcf6
 db $80
-; New skill: TidalWave
+; New skill: AquaRake
 org $d0bcf7
-db $D1
-; New skill: Specialty
+db $84
+; New skill: Fight
 org $d0bcf8
-db $81
+db $80
 ; New skill: Fight
 org $d0bcfa
 db $80
@@ -5261,86 +5293,71 @@ db $84
 ; New skill: AquaRake
 org $d0bd02
 db $84
-; New skill: TidalWave
+; New skill: AquaRake
 org $d0bd03
-db $D1
-; New skill: Specialty
+db $84
+; New skill: AquaRake
 org $d0bd04
-db $81
-; New skill: Specialty
+db $84
+; New skill: AquaRake
 org $d0bd06
-db $81
+db $84
 ; New skill: Fight
 org $d0bd07
 db $80
-; New skill: TidalWave
+; New skill: AquaRake
 org $d0bd08
-db $D1
+db $84
 ; New skill: Fight
 org $d0bd0a
 db $80
-; New skill: TidalWave
+; New skill: AquaRake
 org $d0bd0b
-db $D1
-; New skill: Specialty
+db $84
+; New skill: AquaRake
 org $d0bd0c
-db $81
+db $84
 ; New skill: Fight
 org $d0bd0e
 db $80
 ; New skill: Fight
 org $d0bd0f
 db $80
-; New skill: Specialty
+; New skill: AquaRake
 org $d0bd10
-db $81
+db $84
 ; New skill: Fight
 org $d0bd16
 db $80
-; New skill: Specialty
+; New skill: AquaRake
 org $d0bd17
-db $81
-; New skill: TidalWave
+db $84
+; New skill: AquaRake
 org $d0bd18
-db $D1
+db $84
 ; New skill: Fight
 org $d0bd1a
 db $80
-; New skill: Specialty
+; New skill: AquaRake
 org $d0bd1b
-db $81
-; New skill: TidalWave
+db $84
+; New skill: AquaRake
 org $d0bd1c
-db $D1
-; New skill: TidalWave
+db $84
+; New skill: AquaRake
 org $d0bd24
-db $D1
+db $84
 
 ; Enemy: Stalker
 ; Stats: 
 org $D02900
-db $28, $19, $0a, $00, $00, $00, $00, $00, $01, $00, $00, $20, $d8, $0e, $00, $00, $4F, $20, $F4, $BC, $10, $80, $00, $00, $20, $18, $88, $00, $00, $00, $48, $07
+db $28, $19, $0a, $00, $00, $00, $00, $00, $ec, $2c, $00, $20, $d8, $0e, $00, $00, $4F, $20, $F4, $BC, $10, $80, $00, $00, $20, $18, $88, $00, $00, $00, $48, $07
 ; Loot: 
 org $D05520
 db $00, $EB, $00, $00
 ; --------------------------
-; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss Sol Cannon, Launcher, Launcher rank 5
-; HP: 20000 -> 1
-; ENEMY: Stalker
-; ENEMY: Stalker
-; ENEMY: Stalker
-; ENEMY: Stalker
-
-; Enemy: Stalker
-; Stats: 
-org $D02900
-db $28, $19, $0a, $00, $00, $00, $00, $00, $01, $00, $00, $20, $d8, $0e, $00, $00, $4F, $20, $F4, $BC, $10, $80, $00, $00, $20, $18, $88, $00, $00, $00, $48, $07
-; Loot: 
-org $D05520
-db $00, $EB, $00, $00
-; --------------------------
-; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss Sol Cannon, Launcher, Launcher rank 5
-; HP: 20000 -> 1
+; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss Gilgamesh rank 5
+; HP: 20000 -> 11500
 ; ENEMY: Stalker
 ; ENEMY: Stalker
 ; ENEMY: Stalker
@@ -5349,13 +5366,13 @@ db $00, $EB, $00, $00
 ; Enemy: Stalker
 ; Stats: 
 org $D02900
-db $28, $19, $0a, $00, $00, $00, $00, $00, $01, $00, $00, $20, $d8, $0e, $00, $00, $4F, $20, $F4, $BC, $10, $80, $00, $00, $20, $18, $88, $00, $00, $00, $48, $07
+db $28, $19, $0a, $00, $00, $00, $00, $00, $ec, $2c, $00, $20, $d8, $0e, $00, $00, $4F, $20, $F4, $BC, $10, $80, $00, $00, $20, $18, $88, $00, $00, $00, $48, $07
 ; Loot: 
 org $D05520
 db $00, $EB, $00, $00
 ; --------------------------
-; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss Sol Cannon, Launcher, Launcher rank 5
-; HP: 20000 -> 1
+; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss Gilgamesh rank 5
+; HP: 20000 -> 11500
 ; ENEMY: Stalker
 ; ENEMY: Stalker
 ; ENEMY: Stalker
@@ -5364,13 +5381,28 @@ db $00, $EB, $00, $00
 ; Enemy: Stalker
 ; Stats: 
 org $D02900
-db $28, $19, $0a, $00, $00, $00, $00, $00, $01, $00, $00, $20, $d8, $0e, $00, $00, $4F, $20, $F4, $BC, $10, $80, $00, $00, $20, $18, $88, $00, $00, $00, $48, $07
+db $28, $19, $0a, $00, $00, $00, $00, $00, $ec, $2c, $00, $20, $d8, $0e, $00, $00, $4F, $20, $F4, $BC, $10, $80, $00, $00, $20, $18, $88, $00, $00, $00, $48, $07
 ; Loot: 
 org $D05520
 db $00, $EB, $00, $00
 ; --------------------------
-; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss Sol Cannon, Launcher, Launcher rank 5
-; HP: 20000 -> 1
+; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss Gilgamesh rank 5
+; HP: 20000 -> 11500
+; ENEMY: Stalker
+; ENEMY: Stalker
+; ENEMY: Stalker
+; ENEMY: Stalker
+
+; Enemy: Stalker
+; Stats: 
+org $D02900
+db $28, $19, $0a, $00, $00, $00, $00, $00, $ec, $2c, $00, $20, $d8, $0e, $00, $00, $4F, $20, $F4, $BC, $10, $80, $00, $00, $20, $18, $88, $00, $00, $00, $48, $07
+; Loot: 
+org $D05520
+db $00, $EB, $00, $00
+; --------------------------
+; Original boss Stalker, Stalker, Stalker, Stalker rank 9 -> Randomized boss Gilgamesh rank 5
+; HP: 20000 -> 11500
 ; ENEMY: Stalker
 ; ENEMY: Stalker
 ; ENEMY: Stalker
@@ -5379,29 +5411,29 @@ db $00, $EB, $00, $00
 ; Enemy: Gogo
 ; Stats: 
 org $D02920
-db $32, $60, $19, $1e, $18, $1c, $10, $63, $62, $ba, $60, $ea, $00, $af, $00, $00, $00, $80, $F5, $F8, $10, $00, $00, $80, $A0, $98, $00, $00, $00, $00, $49, $3e
+db $32, $78, $19, $1e, $1e, $23, $14, $63, $52, $03, $60, $ea, $c8, $00, $00, $00, $00, $80, $F5, $F8, $10, $00, $00, $80, $A0, $98, $00, $00, $00, $00, $49, $4d
 ; Loot: 
 org $D05524
 db $94, $9A, $C3, $00
 ; --------------------------
-; Original boss Gogo rank 9 -> Randomized boss Gogo rank 9
-; HP: 47714 -> 47714
+; Original boss Gogo rank 9 -> Randomized boss Forza, Magisa rank 2
+; HP: 47714 -> 850
 ; ENEMY: Gogo
-; Original HP: 47714
-; New trigger HP: 32923
+; Original HP: 850
+; New trigger HP: 586
 org $d0be14
-db $9b, $80
+db $4a, $02
 
 ; Enemy: Bahamut
 ; Stats: 
 org $D02940
-db $28, $37, $10, $05, $08, $10, $10, $21, $40, $9c, $10, $27, $00, $af, $00, $00, $00, $20, $F4, $F8, $00, $00, $60, $00, $20, $18, $88, $00, $00, $00, $4A, $4f
+db $28, $37, $10, $05, $08, $10, $10, $21, $3f, $9c, $10, $27, $00, $af, $00, $00, $00, $20, $F4, $F8, $00, $00, $60, $00, $20, $18, $88, $00, $00, $00, $4A, $4f
 ; Loot: 
 org $D05528
 db $EA, $EA, $EA, $00
 ; --------------------------
-; Original boss Bahamut rank 9 -> Randomized boss Bahamut rank 9
-; HP: 40000 -> 40000
+; Original boss Bahamut rank 9 -> Randomized boss Triton, Neregeid, Phobos rank 9
+; HP: 40000 -> 39999
 ; ENEMY: Bahamut
 ; Skills: ['MegaFlare', 'Flare', 'Fight', 'PoisonBreath', 'DanceoftheDead', 'Fight', 'ZombieBreath', 'DanceoftheDead', 'Fight', 'Maelstrom', 'Maelstrom', 'Fight', 'Snowstorm', 'Snowstorm', 'Fight', 'WindSlash', 'AquaRake', 'Fight', 'Thunder', 'Thunder', 'Fight', 'Flame', 'Flame', 'Fight', 'Quicksand', 'EarthShaker', 'Fight', 'Flame', 'Flame', 'Fight', 'MiniBlaze', 'MiniBlaze', 'Fight', 'MegaFlare', 'Flare', 'Flare']
 ; New skill: MegaFlare
@@ -5512,31 +5544,31 @@ db $33
 ; New skill: Flare
 org $d0bebe
 db $33
-; Original HP: 40000
+; Original HP: 39999
 ; New trigger HP: 10000
 org $d0be5e
 db $10, $27
-; Original HP: 40000
+; Original HP: 39999
 ; New trigger HP: 15200
 org $d0be68
 db $60, $3b
-; Original HP: 40000
+; Original HP: 39999
 ; New trigger HP: 20000
 org $d0be76
 db $20, $4e
-; Original HP: 40000
-; New trigger HP: 25200
+; Original HP: 39999
+; New trigger HP: 25199
 org $d0be84
-db $70, $62
-; Original HP: 40000
-; New trigger HP: 30000
+db $6f, $62
+; Original HP: 39999
+; New trigger HP: 29999
 org $d0be92
-db $30, $75
-; Original HP: 40000
-; New trigger HP: 34800
+db $2f, $75
+; Original HP: 39999
+; New trigger HP: 34799
 org $d0bea0
-db $f0, $87
-; Original HP: 40000
+db $ef, $87
+; Original HP: 39999
 ; New trigger HP: 10000
 org $d0beb7
 db $10, $27
@@ -5544,24 +5576,24 @@ db $10, $27
 ; Enemy: Ifrit
 ; Stats: 
 org $D006A0
-db $28, $40, $08, $14, $08, $00, $10, $0a, $68, $42, $e8, $03, $ec, $45, $00, $00, $00, $08, $30, $40, $00, $01, $00, $82, $20, $18, $00, $00, $00, $00, $35, $12
+db $25, $23, $06, $0a, $0c, $0c, $0c, $0a, $b8, $0b, $e8, $03, $1c, $0c, $00, $00, $00, $08, $30, $40, $00, $01, $00, $82, $20, $18, $00, $00, $00, $00, $35, $1a
 ; Loot: 
 org $D050D4
 db $00, $E4, $00, $FC
 ; --------------------------
-; Original boss Ifrit rank 3 -> Randomized boss Odin rank 9
-; HP: 3000 -> 17000
+; Original boss Ifrit rank 3 -> Randomized boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4
+; HP: 3000 -> 3000
 ; ENEMY: Ifrit
-; Skills: ['Flame', 'Fire3', 'Fire3', 'Blaze', 'Fight', 'Specialty']
+; Skills: ['Flame', 'Fire2', 'Fire2', 'Blaze', 'Fight', 'Specialty']
 ; New skill: Flame
 org $d0a2fb
 db $DB
-; New skill: Fire3
+; New skill: Fire2
 org $d0a2fc
-db $30
-; New skill: Fire3
+db $2A
+; New skill: Fire2
 org $d0a2fd
-db $30
+db $2A
 ; New skill: Blaze
 org $d0a2ff
 db $CD
@@ -5575,62 +5607,40 @@ db $81
 ; Enemy: Shiva
 ; Stats: 
 org $D024A0
-db $1e, $20, $06, $00, $00, $08, $08, $14, $20, $4e, $e8, $03, $bc, $4d, $00, $00, $00, $00, $FA, $FF, $10, $02, $00, $01, $A0, $18, $00, $00, $00, $00, $25, $09
+db $19, $19, $06, $00, $00, $00, $05, $00, $e4, $0c, $e8, $03, $d4, $17, $00, $00, $00, $00, $FA, $FF, $10, $02, $00, $01, $A0, $18, $00, $00, $00, $00, $25, $0b
 ; Loot: 
 org $D05494
 db $E4, $E1, $00, $33
 ; --------------------------
-; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Stalker, Stalker, Stalker, Stalker rank 9
-; HP: 1500 -> 20000
+; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Chim.Brain rank 5
+; HP: 1500 -> 3300
 ; ENEMY: Shiva
-; Skills: ['Ice3', 'Ice3']
-; New skill: Ice3
+; Skills: ['Ice2', 'Ice2']
+; New skill: Ice2
 org $d0b6c0
-db $31
-; New skill: Ice3
+db $2B
+; New skill: Ice2
 org $d0b6c5
-db $31
+db $2B
 
 ; Enemy: Commander
 ; Stats: 
 org $D02180
-db $19, $22, $06, $0a, $00, $08, $00, $00, $40, $1f, $c8, $00, $00, $00, $00, $00, $00, $00, $10, $00, $00, $02, $00, $01, $80, $18, $00, $00, $00, $00, $0C, $02
+db $19, $15, $06, $0a, $00, $0a, $00, $00, $28, $05, $c8, $00, $00, $00, $00, $00, $00, $00, $10, $00, $00, $02, $00, $01, $80, $18, $00, $00, $00, $00, $0C, $04
 ; Loot: 
 org $D05430
 db $00, $0F, $0E, $00
 ; --------------------------
-; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Stalker, Stalker, Stalker, Stalker rank 9
-; HP: 1500 -> 20000
+; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Chim.Brain rank 5
+; HP: 1500 -> 3300
 ; ENEMY: Shiva
-; Skills: ['Ice3', 'Ice3']
-; New skill: Ice3
+; Skills: ['Ice2', 'Ice2']
+; New skill: Ice2
 org $d0b6c0
-db $31
-; New skill: Ice3
+db $2B
+; New skill: Ice2
 org $d0b6c5
-db $31
-; ENEMY: Commander
-; ENEMY: Commander
-; ENEMY: Commander
-
-; Enemy: Commander
-; Stats: 
-org $D02180
-db $19, $22, $06, $0a, $00, $08, $00, $00, $40, $1f, $c8, $00, $00, $00, $00, $00, $00, $00, $10, $00, $00, $02, $00, $01, $80, $18, $00, $00, $00, $00, $0C, $02
-; Loot: 
-org $D05430
-db $00, $0F, $0E, $00
-; --------------------------
-; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Stalker, Stalker, Stalker, Stalker rank 9
-; HP: 1500 -> 20000
-; ENEMY: Shiva
-; Skills: ['Ice3', 'Ice3']
-; New skill: Ice3
-org $d0b6c0
-db $31
-; New skill: Ice3
-org $d0b6c5
-db $31
+db $2B
 ; ENEMY: Commander
 ; ENEMY: Commander
 ; ENEMY: Commander
@@ -5638,21 +5648,43 @@ db $31
 ; Enemy: Commander
 ; Stats: 
 org $D02180
-db $19, $22, $06, $0a, $00, $08, $00, $00, $40, $1f, $c8, $00, $00, $00, $00, $00, $00, $00, $10, $00, $00, $02, $00, $01, $80, $18, $00, $00, $00, $00, $0C, $02
+db $19, $15, $06, $0a, $00, $0a, $00, $00, $28, $05, $c8, $00, $00, $00, $00, $00, $00, $00, $10, $00, $00, $02, $00, $01, $80, $18, $00, $00, $00, $00, $0C, $04
 ; Loot: 
 org $D05430
 db $00, $0F, $0E, $00
 ; --------------------------
-; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Stalker, Stalker, Stalker, Stalker rank 9
-; HP: 1500 -> 20000
+; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Chim.Brain rank 5
+; HP: 1500 -> 3300
 ; ENEMY: Shiva
-; Skills: ['Ice3', 'Ice3']
-; New skill: Ice3
+; Skills: ['Ice2', 'Ice2']
+; New skill: Ice2
 org $d0b6c0
-db $31
-; New skill: Ice3
+db $2B
+; New skill: Ice2
 org $d0b6c5
-db $31
+db $2B
+; ENEMY: Commander
+; ENEMY: Commander
+; ENEMY: Commander
+
+; Enemy: Commander
+; Stats: 
+org $D02180
+db $19, $15, $06, $0a, $00, $0a, $00, $00, $28, $05, $c8, $00, $00, $00, $00, $00, $00, $00, $10, $00, $00, $02, $00, $01, $80, $18, $00, $00, $00, $00, $0C, $04
+; Loot: 
+org $D05430
+db $00, $0F, $0E, $00
+; --------------------------
+; Original boss Shiva, Commander, Commander, Commander rank 4 -> Randomized boss Chim.Brain rank 5
+; HP: 1500 -> 3300
+; ENEMY: Shiva
+; Skills: ['Ice2', 'Ice2']
+; New skill: Ice2
+org $d0b6c0
+db $2B
+; New skill: Ice2
+org $d0b6c5
+db $2B
 ; ENEMY: Commander
 ; ENEMY: Commander
 ; ENEMY: Commander
@@ -5660,25 +5692,25 @@ db $31
 ; Enemy: Calofisteri
 ; Stats: 
 org $D02AC0
-db $2d, $46, $10, $0a, $32, $1b, $1e, $0a, $fc, $6c, $e8, $03, $50, $f5, $00, $00, $3D, $00, $F0, $78, $10, $00, $20, $00, $A4, $18, $00, $00, $00, $00, $56, $44
+db $2d, $46, $10, $0a, $32, $1b, $1e, $0a, $35, $82, $e8, $03, $50, $f5, $00, $00, $3D, $00, $F0, $78, $10, $00, $20, $00, $A4, $18, $00, $00, $00, $00, $56, $44
 ; Loot: 
 org $D05558
 db $CA, $90, $A5, $00
 ; --------------------------
-; Original boss Calofisteri rank 10 -> Randomized boss Apocalypse rank 11
-; HP: 18000 -> 27900
+; Original boss Calofisteri rank 10 -> Randomized boss Halicarnaso rank 11
+; HP: 18000 -> 33333
 ; ENEMY: Calofisteri
 
 ; Enemy: Apocalypse
 ; Stats: 
 org $D02AE0
-db $2d, $12, $15, $03, $0c, $12, $24, $10, $b8, $0b, $50, $c3, $78, $05, $00, $00, $2D, $00, $F4, $FC, $14, $00, $00, $08, $20, $18, $00, $00, $00, $00, $57, $44
+db $2d, $0c, $15, $03, $08, $0c, $18, $10, $c4, $09, $50, $c3, $a8, $16, $00, $00, $2D, $00, $F4, $FC, $14, $00, $00, $08, $20, $18, $00, $00, $00, $00, $57, $2e
 ; Loot: 
 org $D0555C
 db $B1, $E3, $98, $00
 ; --------------------------
-; Original boss Apocalypse rank 11 -> Randomized boss Hole, Hole, Hole, Sandworm, Sandworm, Sandworm rank 4
-; HP: 27900 -> 3000
+; Original boss Apocalypse rank 11 -> Randomized boss Abductor rank 6
+; HP: 27900 -> 2500
 ; ENEMY: Apocalypse
 ; Skills: ['Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2', 'Aero2']
 ; New skill: Aero2
@@ -5727,30 +5759,30 @@ db $90
 ; Enemy: Catastroph
 ; Stats: 
 org $D02B00
-db $1e, $04, $0c, $0f, $00, $00, $00, $00, $fa, $00, $1d, $4e, $64, $00, $00, $00, $00, $00, $F4, $5C, $10, $20, $00, $00, $20, $18, $00, $00, $00, $00, $58, $39
+db $28, $35, $10, $0f, $24, $12, $10, $21, $c4, $09, $1d, $4e, $a0, $28, $00, $00, $00, $00, $F4, $5C, $10, $20, $00, $00, $20, $18, $00, $00, $00, $00, $58, $55
 ; Loot: 
 org $D05560
 db $F1, $E3, $00, $EC
 ; --------------------------
-; Original boss Catastroph rank 11 -> Randomized boss WingRaptor, WingRaptor rank 1
-; HP: 19997 -> 250
+; Original boss Catastroph rank 11 -> Randomized boss Golem, BoneDragon, ZombieDrgn, Golem rank 7
+; HP: 19997 -> 2500
 ; ENEMY: Catastroph
-; Skills: ['Fight', 'Quicksand', 'DemonEye', 'Fight', 'Quicksand', 'Specialty']
-; New skill: Fight
-org $d0c1e0
-db $80
+; Skills: ['Quicksand', 'DemonEye', 'DemonEye', 'Fight', 'EarthShaker', 'Specialty']
 ; New skill: Quicksand
-org $d0c1e1
+org $d0c1e0
 db $C9
+; New skill: DemonEye
+org $d0c1e1
+db $EB
 ; New skill: DemonEye
 org $d0c1e2
 db $EB
 ; New skill: Fight
 org $d0c1e4
 db $80
-; New skill: Quicksand
+; New skill: EarthShaker
 org $d0c1e5
-db $C9
+db $CF
 ; New skill: Specialty
 org $d0c1e6
 db $81
@@ -5758,735 +5790,735 @@ db $81
 ; Enemy: Necrofobia
 ; Stats: 
 org $D02B20
-db $20, $04, $10, $00, $03, $00, $03, $19, $b8, $0b, $10, $27, $f4, $01, $00, $00, $1E, $00, $F4, $F8, $10, $00, $00, $FF, $20, $18, $00, $00, $02, $00, $59, $35
+db $2f, $4f, $10, $0a, $28, $28, $28, $4b, $0c, $ac, $10, $27, $ff, $ff, $00, $00, $1E, $00, $F4, $F8, $10, $00, $00, $FF, $20, $18, $00, $00, $02, $00, $59, $35
 ; Loot: 
 org $D05564
 db $B0, $E3, $AB, $00
 ; --------------------------
-; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Ifrit rank 3
-; HP: 44044 -> 3000
+; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
+; HP: 44044 -> 65535
 ; ENEMY: Necrofobia
-; Skills: ['Flare', 'Fire', 'Bolt', 'Ice']
+; Skills: ['Flare', 'Fire3', 'Bolt3', 'Ice3']
 ; New skill: Flare
 org $d0c1fe
 db $33
-; New skill: Fire
+; New skill: Fire3
 org $d0c21b
-db $24
-; New skill: Bolt
+db $30
+; New skill: Bolt3
 org $d0c21c
-db $26
-; New skill: Ice
+db $32
+; New skill: Ice3
 org $d0c222
-db $25
+db $31
 
 ; Enemy: Barrier
 ; Stats: 
 org $D02D40
-db $14, $00, $0a, $00, $00, $00, $00, $00, $58, $02, $2c, $01, $00, $00, $00, $00, $00, $20, $3F, $FB, $00, $00, $00, $00, $20, $98, $80, $00, $80, $00, $6A, $12
+db $23, $50, $0a, $00, $18, $04, $08, $0a, $33, $33, $2c, $01, $00, $00, $00, $00, $00, $20, $3F, $FB, $00, $00, $00, $00, $20, $98, $80, $00, $80, $00, $6A, $12
 ; Loot: 
 org $D055A8
 db $CA, $E1, $00, $00
 ; --------------------------
-; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Ifrit rank 3
-; HP: 44044 -> 3000
+; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
+; HP: 44044 -> 65535
 ; ENEMY: Necrofobia
-; Skills: ['Flare', 'Fire', 'Bolt', 'Ice']
+; Skills: ['Flare', 'Fire3', 'Bolt3', 'Ice3']
 ; New skill: Flare
 org $d0c1fe
 db $33
-; New skill: Fire
+; New skill: Fire3
 org $d0c21b
-db $24
-; New skill: Bolt
+db $30
+; New skill: Bolt3
 org $d0c21c
-db $26
-; New skill: Ice
+db $32
+; New skill: Ice3
 org $d0c222
-db $25
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 
 ; Enemy: Barrier
 ; Stats: 
 org $D02D40
-db $14, $00, $0a, $00, $00, $00, $00, $00, $58, $02, $2c, $01, $00, $00, $00, $00, $00, $20, $3F, $FB, $00, $00, $00, $00, $20, $98, $80, $00, $80, $00, $6A, $12
+db $23, $50, $0a, $00, $18, $04, $08, $0a, $33, $33, $2c, $01, $00, $00, $00, $00, $00, $20, $3F, $FB, $00, $00, $00, $00, $20, $98, $80, $00, $80, $00, $6A, $12
 ; Loot: 
 org $D055A8
 db $CA, $E1, $00, $00
 ; --------------------------
-; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Ifrit rank 3
-; HP: 44044 -> 3000
+; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
+; HP: 44044 -> 65535
 ; ENEMY: Necrofobia
-; Skills: ['Flare', 'Fire', 'Bolt', 'Ice']
+; Skills: ['Flare', 'Fire3', 'Bolt3', 'Ice3']
 ; New skill: Flare
 org $d0c1fe
 db $33
-; New skill: Fire
+; New skill: Fire3
 org $d0c21b
-db $24
-; New skill: Bolt
+db $30
+; New skill: Bolt3
 org $d0c21c
-db $26
-; New skill: Ice
+db $32
+; New skill: Ice3
 org $d0c222
-db $25
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 
 ; Enemy: Barrier
 ; Stats: 
 org $D02D40
-db $14, $00, $0a, $00, $00, $00, $00, $00, $58, $02, $2c, $01, $00, $00, $00, $00, $00, $20, $3F, $FB, $00, $00, $00, $00, $20, $98, $80, $00, $80, $00, $6A, $12
+db $23, $50, $0a, $00, $18, $04, $08, $0a, $33, $33, $2c, $01, $00, $00, $00, $00, $00, $20, $3F, $FB, $00, $00, $00, $00, $20, $98, $80, $00, $80, $00, $6A, $12
 ; Loot: 
 org $D055A8
 db $CA, $E1, $00, $00
 ; --------------------------
-; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Ifrit rank 3
-; HP: 44044 -> 3000
+; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
+; HP: 44044 -> 65535
 ; ENEMY: Necrofobia
-; Skills: ['Flare', 'Fire', 'Bolt', 'Ice']
+; Skills: ['Flare', 'Fire3', 'Bolt3', 'Ice3']
 ; New skill: Flare
 org $d0c1fe
 db $33
-; New skill: Fire
+; New skill: Fire3
 org $d0c21b
-db $24
-; New skill: Bolt
+db $30
+; New skill: Bolt3
 org $d0c21c
-db $26
-; New skill: Ice
+db $32
+; New skill: Ice3
 org $d0c222
-db $25
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 
 ; Enemy: Barrier
 ; Stats: 
 org $D02D40
-db $14, $00, $0a, $00, $00, $00, $00, $00, $58, $02, $2c, $01, $00, $00, $00, $00, $00, $20, $3F, $FB, $00, $00, $00, $00, $20, $98, $80, $00, $80, $00, $6A, $12
+db $23, $50, $0a, $00, $18, $04, $08, $0a, $33, $33, $2c, $01, $00, $00, $00, $00, $00, $20, $3F, $FB, $00, $00, $00, $00, $20, $98, $80, $00, $80, $00, $6A, $12
 ; Loot: 
 org $D055A8
 db $CA, $E1, $00, $00
 ; --------------------------
-; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Ifrit rank 3
-; HP: 44044 -> 3000
+; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
+; HP: 44044 -> 65535
 ; ENEMY: Necrofobia
-; Skills: ['Flare', 'Fire', 'Bolt', 'Ice']
+; Skills: ['Flare', 'Fire3', 'Bolt3', 'Ice3']
 ; New skill: Flare
 org $d0c1fe
 db $33
-; New skill: Fire
+; New skill: Fire3
 org $d0c21b
-db $24
-; New skill: Bolt
+db $30
+; New skill: Bolt3
 org $d0c21c
-db $26
-; New skill: Ice
+db $32
+; New skill: Ice3
 org $d0c222
-db $25
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 
 ; Enemy: Gilgamesh
 ; Stats: 
@@ -6496,288 +6528,288 @@ db $58, $5c, $19, $1e, $1c, $00, $00, $00, $d8, $d6, $28, $23, $00, $00, $00, $0
 org $D055BC
 db $00, $C8, $00, $00
 ; --------------------------
-; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Ifrit rank 3
-; HP: 44044 -> 3000
+; Original boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12 -> Randomized boss Necrofobia, Barrier, Barrier, Barrier, Barrier, Gilgamesh rank 12
+; HP: 44044 -> 65535
 ; ENEMY: Necrofobia
-; Skills: ['Flare', 'Fire', 'Bolt', 'Ice']
+; Skills: ['Flare', 'Fire3', 'Bolt3', 'Ice3']
 ; New skill: Flare
 org $d0c1fe
 db $33
-; New skill: Fire
+; New skill: Fire3
 org $d0c21b
-db $24
-; New skill: Bolt
+db $30
+; New skill: Bolt3
 org $d0c21c
-db $26
-; New skill: Ice
+db $32
+; New skill: Ice3
 org $d0c222
-db $25
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Barrier
-; Skills: ['Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt', 'Fire', 'Ice', 'Bolt']
-; New skill: Fire
+; Skills: ['Flare', 'Holy', 'Flare', 'Fire3', 'Bolt3', 'Ice3', 'Holy', 'Flare', 'Holy', 'Fire3', 'Bolt3', 'Ice3']
+; New skill: Flare
 org $d0c581
-db $24
-; New skill: Ice
+db $33
+; New skill: Holy
 org $d0c582
-db $25
-; New skill: Bolt
+db $22
+; New skill: Flare
 org $d0c583
-db $26
-; New skill: Fire
+db $33
+; New skill: Fire3
 org $d0c589
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c58a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c58b
-db $26
-; New skill: Fire
+db $31
+; New skill: Holy
 org $d0c591
-db $24
-; New skill: Ice
+db $22
+; New skill: Flare
 org $d0c592
-db $25
-; New skill: Bolt
+db $33
+; New skill: Holy
 org $d0c593
-db $26
-; New skill: Fire
+db $22
+; New skill: Fire3
 org $d0c599
-db $24
-; New skill: Ice
+db $30
+; New skill: Bolt3
 org $d0c59a
-db $25
-; New skill: Bolt
+db $32
+; New skill: Ice3
 org $d0c59b
-db $26
+db $31
 ; ENEMY: Gilgamesh
 
 ; Enemy: Twin Tania
 ; Stats: 
 org $D02B40
-db $23, $5a, $0e, $00, $1e, $07, $10, $0a, $35, $82, $10, $27, $50, $f5, $00, $00, $00, $00, $F4, $F8, $10, $00, $00, $90, $24, $18, $00, $00, $00, $00, $5A, $27
+db $1c, $1c, $0e, $00, $0a, $00, $04, $00, $88, $13, $10, $27, $f0, $0a, $00, $00, $00, $00, $F4, $F8, $10, $00, $00, $90, $24, $18, $00, $00, $00, $00, $5A, $27
 ; Loot: 
 org $D05568
 db $C4, $E4, $53, $00
 ; --------------------------
-; Original boss Twin Tania, Twin Tania rank 12 -> Randomized boss Halicarnaso rank 11
-; HP: 50000 -> 33333
+; Original boss Twin Tania, Twin Tania rank 12 -> Randomized boss Tyrasaurus rank 5
+; HP: 50000 -> 5000
 ; ENEMY: Twin Tania
-; Skills: ['AtomicRay', 'Snowstorm', 'Fight', 'AtomicRay', 'Snowstorm', 'Fight', 'MindBlast', 'WindSlash', 'WindSlash', 'TidalWave', 'MegaFlare']
-; New skill: AtomicRay
+; Skills: ['Flame', 'Thunder', 'Fight', 'Flame', 'Thunder', 'Fight', 'Bone', 'BreathWing', 'BreathWing', 'AquaRake', 'Flare']
+; New skill: Flame
 org $d0c2f6
-db $CA
-; New skill: Snowstorm
+db $DB
+; New skill: Thunder
 org $d0c2f7
-db $CC
+db $DC
 ; New skill: Fight
 org $d0c2f8
 db $80
-; New skill: AtomicRay
+; New skill: Flame
 org $d0c2fa
-db $CA
-; New skill: Snowstorm
+db $DB
+; New skill: Thunder
 org $d0c2fb
-db $CC
+db $DC
 ; New skill: Fight
 org $d0c2fc
 db $80
-; New skill: MindBlast
+; New skill: Bone
 org $d0c301
-db $97
-; New skill: WindSlash
+db $C3
+; New skill: BreathWing
 org $d0c302
-db $AB
-; New skill: WindSlash
+db $DA
+; New skill: BreathWing
 org $d0c303
-db $AB
-; New skill: TidalWave
+db $DA
+; New skill: AquaRake
 org $d0c310
-db $D1
-; New skill: MegaFlare
+db $84
+; New skill: Flare
 org $d0c31a
-db $D2
+db $33
 
 ; Enemy: Twin Tania
 ; Stats: 
 org $D02060
-db $51, $5a, $0e, $00, $00, $48, $00, $00, $35, $82, $10, $27, $50, $f5, $00, $00, $00, $00, $14, $F8, $00, $00, $00, $90, $04, $18, $00, $00, $00, $00, $03, $1e
+db $51, $1c, $0e, $00, $00, $12, $00, $00, $88, $13, $10, $27, $f0, $0a, $00, $00, $00, $00, $14, $F8, $00, $00, $00, $90, $04, $18, $00, $00, $00, $00, $03, $1e
 ; Loot: 
 org $D0540C
 db $00, $6A, $2E, $00
 ; --------------------------
-; Original boss Twin Tania, Twin Tania rank 12 -> Randomized boss Halicarnaso rank 11
-; HP: 50000 -> 33333
+; Original boss Twin Tania, Twin Tania rank 12 -> Randomized boss Tyrasaurus rank 5
+; HP: 50000 -> 5000
 ; ENEMY: Twin Tania
-; Skills: ['AtomicRay', 'Snowstorm', 'Fight', 'AtomicRay', 'Snowstorm', 'Fight', 'MindBlast', 'WindSlash', 'WindSlash', 'TidalWave', 'MegaFlare']
-; New skill: AtomicRay
+; Skills: ['Flame', 'Thunder', 'Fight', 'Flame', 'Thunder', 'Fight', 'Bone', 'BreathWing', 'BreathWing', 'AquaRake', 'Flare']
+; New skill: Flame
 org $d0c2f6
-db $CA
-; New skill: Snowstorm
+db $DB
+; New skill: Thunder
 org $d0c2f7
-db $CC
+db $DC
 ; New skill: Fight
 org $d0c2f8
 db $80
-; New skill: AtomicRay
+; New skill: Flame
 org $d0c2fa
-db $CA
-; New skill: Snowstorm
+db $DB
+; New skill: Thunder
 org $d0c2fb
-db $CC
+db $DC
 ; New skill: Fight
 org $d0c2fc
 db $80
-; New skill: MindBlast
+; New skill: Bone
 org $d0c301
-db $97
-; New skill: WindSlash
+db $C3
+; New skill: BreathWing
 org $d0c302
-db $AB
-; New skill: WindSlash
+db $DA
+; New skill: BreathWing
 org $d0c303
-db $AB
-; New skill: TidalWave
+db $DA
+; New skill: AquaRake
 org $d0c310
-db $D1
-; New skill: MegaFlare
+db $84
+; New skill: Flare
 org $d0c31a
-db $D2
+db $33
 ; ENEMY: Twin Tania
-; Skills: ['GigaFlare']
-; New skill: GigaFlare
+; Skills: ['Flare']
+; New skill: Flare
 org $d0b2d8
-db $E1
+db $33
 
 ; Enemy: Apanda
 ; Stats: 
 org $D02C00
-db $2d, $28, $12, $0d, $10, $14, $07, $14, $8a, $4d, $e8, $03, $a4, $51, $00, $00, $00, $00, $F4, $F0, $10, $00, $00, $01, $24, $18, $00, $00, $00, $00, $60, $3b
+db $25, $14, $12, $07, $06, $00, $02, $0a, $a4, $1f, $e8, $03, $c8, $19, $00, $00, $00, $00, $F4, $F0, $10, $00, $00, $01, $24, $18, $00, $00, $00, $00, $60, $2f
 ; Loot: 
 org $D05580
 db $62, $62, $00, $62
 ; --------------------------
-; Original boss Apanda rank 10 -> Randomized boss Minotauros rank 8
-; HP: 22200 -> 19850
+; Original boss Apanda rank 10 -> Randomized boss Antlion rank 6
+; HP: 22200 -> 8100
 ; ENEMY: Apanda
-; Skills: ['WindSlash', 'WindSlash']
-; New skill: WindSlash
+; Skills: ['BreathWing', 'WindSlash']
+; New skill: BreathWing
 org $d0c409
-db $AB
+db $DA
 ; New skill: WindSlash
 org $d0c410
 db $AB
@@ -6785,13 +6817,13 @@ db $AB
 ; Enemy: Crayclaw
 ; Stats: 
 org $D02A80
-db $28, $0c, $06, $00, $08, $01, $08, $0a, $52, $03, $f4, $01, $2c, $01, $00, $00, $00, $00, $30, $00, $00, $80, $00, $04, $24, $18, $00, $00, $00, $00, $54, $2b
+db $28, $2c, $06, $00, $11, $01, $11, $0a, $e8, $03, $f4, $01, $28, $0a, $00, $00, $00, $00, $30, $00, $00, $80, $00, $04, $24, $18, $00, $00, $00, $00, $54, $34
 ; Loot: 
 org $D05550
 db $00, $10, $00, $40
 ; --------------------------
-; Original boss Crayclaw rank 6 -> Randomized boss Forza, Magisa rank 2
-; HP: 2000 -> 850
+; Original boss Crayclaw rank 6 -> Randomized boss Sergeant, Karnak, Karnak, Karnak, Iron Claw rank 4
+; HP: 2000 -> 1000
 ; ENEMY: Crayclaw
 
 ; Enemy: Magic Pot
@@ -6805,7 +6837,7 @@ db $E3, $00, $E3, $00
 ; Enemy: Omega
 ; Stats: 
 org $D01FA0
-db $4c, $7d, $19, $56, $c7, $bf, $8f, $20, $ea, $d8, $1c, $ed, $00, $00, $50, $c3, $00, $83, $e7, $f7, $ff, $38, $20, $44, $28, $98, $80, $00, $B0, $00, $FD, $7c
+db $4c, $6c, $19, $63, $c7, $bf, $9b, $20, $ea, $d8, $1c, $ed, $00, $00, $50, $c3, $00, $49, $ff, $9b, $ff, $a2, $20, $14, $21, $98, $80, $00, $B0, $00, $FD, $7b
 ; Loot: 
 org $D053F4
 db $00, $00, $00, $F8
@@ -6813,7 +6845,7 @@ db $00, $00, $00, $F8
 ; Enemy: Shinryuu
 ; Stats: 
 org $D02D20
-db $57, $b9, $26, $0f, $3a, $7a, $32, $20, $cc, $d8, $38, $c7, $00, $00, $00, $00, $00, $15, $d7, $7f, $ff, $8a, $00, $60, $30, $98, $00, $00, $00, $00, $69, $60
+db $57, $b7, $26, $1c, $3d, $88, $44, $20, $cc, $d8, $38, $c7, $00, $00, $00, $00, $00, $32, $f9, $f7, $ff, $45, $00, $88, $60, $98, $00, $00, $00, $00, $69, $66
 ; Loot: 
 org $D055A4
 db $4F, $EA, $00, $F7
@@ -6822,296 +6854,295 @@ db $4F, $EA, $00, $F7
 ;==========
 ;formations
 ;==========
-; Ramuh (Rank 7) > Twin Tania (Rank 12) 
-org $D07928
+; Ramuh (Rank 7) > Odin (Rank 9) 
+org $D078B0
 db $4c, $00 
-org $D0792A
+org $D078B2
 db $4c, $00
-; Shoat (Rank 7) > Karlabos (Rank 1) 
-org $D07808
+; Shoat (Rank 7) > Atmos (Rank 6) 
+org $D07880
 db $A5, $00 
-org $D0780A
+org $D07882
 db $A5, $00
-; Golem (Rank 7) > Calofisteri (Rank 10) 
-org $D0791C
+; Golem (Rank 7) > Gogo (Rank 9) 
+org $D078CC
 db $BB, $00 
-org $D0791E
+org $D078CE
 db $BB, $00
-; Byblos (Rank 4) > Chim.Brain (Rank 5) 
-org $D07840
+; Byblos (Rank 4) > WingRaptor (Rank 1) 
+org $D07804
 db $BE, $01 
-org $D07842
+org $D07806
 db $BE, $01
-; WingRaptor (Rank 1) > Byblos (Rank 4) 
-org $D07824
+; WingRaptor (Rank 1) > Karlabos (Rank 1) 
+org $D07808
 db $B7, $01 
-org $D07826
+org $D0780A
 db $B7, $01
-; Karlabos (Rank 1) > Tyrasaurus (Rank 5) 
-org $D07870
+; Karlabos (Rank 1) > Ramuh (Rank 7) 
+org $D078F4
 db $B8, $01 
-org $D07872
+org $D078F6
 db $B8, $01
-; Siren (Rank 2) > Shiva (Rank 4) 
-org $D07814
+; Siren (Rank 2) > Twin Tania (Rank 12) 
+org $D07928
 db $B9, $01 
-org $D07816
+org $D0792A
 db $B9, $01
-; Forza (Rank 2) > Sergeant (Rank 4) 
-org $D07820
+; Forza (Rank 2) > Stalker (Rank 9) 
+org $D078B8
 db $BA, $01 
-org $D07822
+org $D078BA
 db $BA, $01
-; Galura (Rank 3) > Gilgamesh (Rank 6) 
-org $D0787C
+; Galura (Rank 3) > Bahamut (Rank 9) 
+org $D078D0
 db $BB, $01 
-org $D0787E
+org $D078D2
 db $BB, $01
-; LiquiFlame (Rank 4) > Gilgamesh (Rank 5) 
-org $D0786C
+; LiquiFlame (Rank 4) > Catastroph (Rank 11) 
+org $D07924
 db $BC, $01 
-org $D0786E
+org $D07926
 db $BC, $01
-; Sergeant (Rank 4) > Titan (Rank 5) 
-org $D07844
+; Sergeant (Rank 4) > Gilgamesh (Rank 5) 
+org $D0786C
 db $BD, $01 
-org $D07846
+org $D0786E
 db $BD, $01
-; Hole (Rank 4) > Galura (Rank 3) 
-org $D07818
-db $BF, $01 
-org $D0781A
-db $BF, $01
-; AdamanTiMi (Rank 4) > Puroboros (Rank 5) 
-org $D07848
-db $C0, $01 
-org $D0784A
-db $C0, $01
-; Sol Cannon (Rank 5) > HiryuuPlant (Rank 6) 
+; Hole (Rank 4) > HiryuuPlant (Rank 6) 
 org $D07878
-db $C3, $01 
+db $BF, $01 
 org $D0787A
+db $BF, $01
+; AdamanTiMi (Rank 4) > Titan (Rank 5) 
+org $D07844
+db $C0, $01 
+org $D07846
+db $C0, $01
+; Sol Cannon (Rank 5) > LiquiFlame (Rank 4) 
+org $D0781C
+db $C3, $01 
+org $D0781E
 db $C3, $01
-; ArchaeAvis (Rank 5) > Necrofobia (Rank 12) 
-org $D0792C
+; ArchaeAvis (Rank 5) > Byblos (Rank 4) 
+org $D07824
 db $C4, $01 
-org $D0792E
+org $D07826
 db $C4, $01
 ; Chim.Brain (Rank 5) > Shoat (Rank 7) 
 org $D078FC
 db $C5, $01 
 org $D078FE
 db $C5, $01
-; Titan (Rank 5) > Gilgamesh (Rank 7) 
-org $D0788C
+; Titan (Rank 5) > Shiva (Rank 4) 
+org $D07814
 db $C6, $01 
-org $D0788E
+org $D07816
 db $C6, $01
-; Puroboros (Rank 5) > Antlion (Rank 6) 
-org $D07894
-db $C7, $01 
-org $D07896
-db $C7, $01
-; Gilgamesh (Rank 5) > LiquiFlame (Rank 4) 
-org $D0781C
-db $C9, $01 
-org $D0781E
-db $C9, $01
-; Gilgamesh (Rank 5) > Atmos (Rank 6) 
-org $D07880
-db $D0, $01 
-org $D07882
-db $D0, $01
-; Tyrasaurus (Rank 5) > Guardian (Rank 7) 
-org $D07884
-db $D1, $01 
-org $D07886
-db $D1, $01
-; Abductor (Rank 6) > Golem (Rank 7) 
-org $D078F8
-db $D2, $01 
-org $D078FA
-db $D2, $01
-; HiryuuPlant (Rank 6) > Omniscient (Rank 8) 
+; Puroboros (Rank 5) > Omniscient (Rank 8) 
 org $D078BC
-db $D3, $01 
+db $C7, $01 
 org $D078BE
-db $D3, $01
-; Gilgamesh (Rank 6) > Apanda (Rank 10) 
-org $D078D8
-db $D4, $01 
-org $D078DA
-db $D4, $01
-; Atmos (Rank 6) > Carbunkle (Rank 7) 
-org $D07888
-db $D5, $01 
-org $D0788A
-db $D5, $01
-; Guardian (Rank 7) > Leviathan (Rank 9) 
-org $D078C4
-db $D6, $01 
-org $D078C6
-db $D6, $01
-; Carbunkle (Rank 7) > Gilgamesh (Rank 5) 
-org $D07850
-db $D7, $01 
-org $D07852
-db $D7, $01
-; Gilgamesh (Rank 7) > Abductor (Rank 6) 
-org $D07874
-db $D8, $01 
-org $D07876
-db $D8, $01
-; Antlion (Rank 6) > Crayclaw (Rank 6) 
-org $D078D4
-db $DA, $01 
-org $D078D6
-db $DA, $01
-; Halicarnaso (Rank 11) > Triton (Rank 9) 
-org $D078C8
-db $DE, $01 
-org $D078CA
-db $DE, $01
-; Merugene (Rank 8) > AdamanTiMi (Rank 4) 
-org $D0782C
-db $E0, $01 
-org $D0782E
-db $E0, $01
-; Odin (Rank 9) > Siren (Rank 2) 
-org $D0780C
-db $E1, $01 
-org $D0780E
-db $E1, $01
-; Gargoyle (Rank 7) > Catastroph (Rank 11) 
-org $D07924
-db $E2, $01 
-org $D07926
-db $E2, $01
-; Triton (Rank 9) > Merugene (Rank 8) 
-org $D078AC
-db $E3, $01 
-org $D078AE
-db $E3, $01
-; Omniscient (Rank 8) > Ramuh (Rank 7) 
-org $D078F4
-db $E4, $01 
-org $D078F6
-db $E4, $01
-; Minotauros (Rank 8) > ArchaeAvis (Rank 5) 
-org $D0783C
-db $E5, $01 
-org $D0783E
-db $E5, $01
-; Leviathan (Rank 9) > Gargoyle (Rank 7) 
+db $C7, $01
+; Gilgamesh (Rank 5) > Galura (Rank 3) 
+org $D07818
+db $C9, $01 
+org $D0781A
+db $C9, $01
+; Gilgamesh (Rank 5) > Gargoyle (Rank 7) 
 org $D078B4
-db $E6, $01 
+db $D0, $01 
 org $D078B6
-db $E6, $01
-; Stalker (Rank 9) > Sol Cannon (Rank 5) 
-org $D07838
-db $E7, $01 
-org $D0783A
-db $E7, $01
-; Gogo (Rank 9) > Gogo (Rank 9) 
-org $D078CC
-db $E8, $01 
-org $D078CE
-db $E8, $01
-; Bahamut (Rank 9) > Bahamut (Rank 9) 
-org $D078D0
-db $E9, $01 
-org $D078D2
-db $E9, $01
-; Ifrit (Rank 3) > Odin (Rank 9) 
-org $D078B0
-db $EE, $01 
-org $D078B2
-db $EE, $01
-; Shiva (Rank 4) > Stalker (Rank 9) 
-org $D078B8
-db $F1, $01 
-org $D078BA
-db $F1, $01
-; Calofisteri (Rank 10) > Apocalypse (Rank 11) 
-org $D07920
-db $F2, $01 
-org $D07922
-db $F2, $01
-; Apocalypse (Rank 11) > Hole (Rank 4) 
-org $D07828
-db $F3, $01 
-org $D0782A
-db $F3, $01
-; Catastroph (Rank 11) > WingRaptor (Rank 1) 
-org $D07804
-db $F4, $01 
-org $D07806
-db $F4, $01
-; Necrofobia (Rank 12) > Ifrit (Rank 3) 
-org $D078E4
-db $F5, $01 
-org $D078E6
-db $F5, $01
-; Twin Tania (Rank 12) > Halicarnaso (Rank 11) 
-org $D078E0
-db $F6, $01 
-org $D078E2
-db $F6, $01
-; Apanda (Rank 10) > Minotauros (Rank 8) 
+db $D0, $01
+; Tyrasaurus (Rank 5) > Leviathan (Rank 9) 
+org $D078C4
+db $D1, $01 
+org $D078C6
+db $D1, $01
+; Abductor (Rank 6) > Merugene (Rank 8) 
+org $D078AC
+db $D2, $01 
+org $D078AE
+db $D2, $01
+; HiryuuPlant (Rank 6) > Gilgamesh (Rank 6) 
+org $D0787C
+db $D3, $01 
+org $D0787E
+db $D3, $01
+; Gilgamesh (Rank 6) > Minotauros (Rank 8) 
 org $D078C0
-db $F8, $01 
+db $D4, $01 
 org $D078C2
-db $F8, $01
-; Crayclaw (Rank 6) > Forza (Rank 2) 
+db $D4, $01
+; Atmos (Rank 6) > Apocalypse (Rank 11) 
+org $D07920
+db $D5, $01 
+org $D07922
+db $D5, $01
+; Guardian (Rank 7) > Guardian (Rank 7) 
+org $D07884
+db $D6, $01 
+org $D07886
+db $D6, $01
+; Carbunkle (Rank 7) > Calofisteri (Rank 10) 
+org $D0791C
+db $D7, $01 
+org $D0791E
+db $D7, $01
+; Gilgamesh (Rank 7) > Apanda (Rank 10) 
+org $D078D8
+db $D8, $01 
+org $D078DA
+db $D8, $01
+; Antlion (Rank 6) > AdamanTiMi (Rank 4) 
+org $D0782C
+db $DA, $01 
+org $D0782E
+db $DA, $01
+; Halicarnaso (Rank 11) > Siren (Rank 2) 
+org $D0780C
+db $DE, $01 
+org $D0780E
+db $DE, $01
+; Merugene (Rank 8) > ArchaeAvis (Rank 5) 
+org $D0783C
+db $E0, $01 
+org $D0783E
+db $E0, $01
+; Odin (Rank 9) > Puroboros (Rank 5) 
+org $D07848
+db $E1, $01 
+org $D0784A
+db $E1, $01
+; Gargoyle (Rank 7) > Ifrit (Rank 3) 
+org $D078E4
+db $E2, $01 
+org $D078E6
+db $E2, $01
+; Triton (Rank 9) > Carbunkle (Rank 7) 
+org $D07888
+db $E3, $01 
+org $D0788A
+db $E3, $01
+; Omniscient (Rank 8) > Crayclaw (Rank 6) 
+org $D078D4
+db $E4, $01 
+org $D078D6
+db $E4, $01
+; Minotauros (Rank 8) > Gilgamesh (Rank 7) 
+org $D0788C
+db $E5, $01 
+org $D0788E
+db $E5, $01
+; Leviathan (Rank 9) > Sol Cannon (Rank 5) 
+org $D07838
+db $E6, $01 
+org $D0783A
+db $E6, $01
+; Stalker (Rank 9) > Gilgamesh (Rank 5) 
+org $D07850
+db $E7, $01 
+org $D07852
+db $E7, $01
+; Gogo (Rank 9) > Forza (Rank 2) 
 org $D07810
-db $FA, $01 
+db $E8, $01 
 org $D07812
+db $E8, $01
+; Bahamut (Rank 9) > Triton (Rank 9) 
+org $D078C8
+db $E9, $01 
+org $D078CA
+db $E9, $01
+; Ifrit (Rank 3) > Hole (Rank 4) 
+org $D07828
+db $EE, $01 
+org $D0782A
+db $EE, $01
+; Shiva (Rank 4) > Chim.Brain (Rank 5) 
+org $D07840
+db $F1, $01 
+org $D07842
+db $F1, $01
+; Calofisteri (Rank 10) > Halicarnaso (Rank 11) 
+org $D078E0
+db $F2, $01 
+org $D078E2
+db $F2, $01
+; Apocalypse (Rank 11) > Abductor (Rank 6) 
+org $D07874
+db $F3, $01 
+org $D07876
+db $F3, $01
+; Catastroph (Rank 11) > Golem (Rank 7) 
+org $D078F8
+db $F4, $01 
+org $D078FA
+db $F4, $01
+; Necrofobia (Rank 12) > Necrofobia (Rank 12) 
+org $D0792C
+db $F5, $01 
+org $D0792E
+db $F5, $01
+; Twin Tania (Rank 12) > Tyrasaurus (Rank 5) 
+org $D07870
+db $F6, $01 
+org $D07872
+db $F6, $01
+; Apanda (Rank 10) > Antlion (Rank 6) 
+org $D07894
+db $F8, $01 
+org $D07896
+db $F8, $01
+; Crayclaw (Rank 6) > Sergeant (Rank 4) 
+org $D07820
+db $FA, $01 
+org $D07822
 db $FA, $01
 
 ;Karnak escape song
 org $C8796D
-db $20
+db $13
 ;=====================
 ;Kuzar Reward Text Fix
 ;=====================
-; Ether
+; DblLance
 org $E23F98
-db  $64, $8D, $81, $7E, $8B, $00
-; Image
+db  $63, $7B, $85, $6B, $7A, $87, $7C, $7E, $00
+; Black Ability\n
 org $E240A5
-db  $68, $86, $7A, $80, $7E, $00
-; Cover
+db  $61, $85, $7A, $7C, $84, $96, $60, $7B, $82, $85, $82, $8D, $92, $01, $00
+; Shuriken
 org $E23F7A
-db  $62, $88, $8F, $7E, $8B, $00
-; Magic\nLove\nSong
+db  $72, $81, $8E, $8B, $82, $84, $7E, $87, $00
+; Regen\nFloat\nReset\nXzone
 org $E2404C
-db  $6C, $7A, $80, $82, $7C, $01, $6B, $88, $8F, $7E, $01, $72, $88, $87, $80, $00
-; Thunder Bow
+db  $71, $7E, $80, $7E, $87, $01, $65, $85, $88, $7A, $8D, $01, $71, $7E, $8C, $7E, $8D, $01, $77, $93, $88, $87, $7E, $00
+; Phoenix Down
 org $E240C4
-db  $73, $81, $8E, $87, $7D, $7E, $8B, $96, $61, $88, $90, $00
-; Dragon's Whisker
+db  $6F, $81, $88, $7E, $87, $82, $91, $96, $63, $88, $90, $87, $00
+; Tempest
 org $E23FD6
-db  $63, $8B, $7A, $80, $88, $87, $99, $8C, $96, $76, $81, $82, $8C, $84, $7E, $8B, $00
-; Venom Rod
-org $E24011
-db  $75, $7E, $87, $88, $86, $96, $71, $88, $7D, $00
-; Magus
-org $E24088
-db  $6C, $7A, $80, $8E, $8C, $00
-; Equip Rods
-org $E23FF4
-db  $64, $8A, $8E, $82, $89, $96, $71, $88, $7D, $8C, $00
-; Leather Shield
-org $E2406A
-db  $6B, $7E, $7A, $8D, $81, $7E, $8B, $96, $72, $81, $82, $7E, $85, $7D, $00
+db  $73, $7E, $86, $89, $7E, $8C, $8D, $00
 ; Cursed Shield
-org $E23FB7
+org $E24011
 db  $62, $8E, $8B, $8C, $7E, $7D, $96, $72, $81, $82, $7E, $85, $7D, $00
-; Thief Knife
+; Chain Whip
+org $E24088
+db  $62, $81, $7A, $82, $87, $96, $76, $81, $82, $89, $00
+; Elixir
+org $E23FF4
+db  $64, $85, $82, $91, $82, $8B, $00
+; Circlet
+org $E2406A
+db  $62, $82, $8B, $7C, $85, $7E, $8D, $00
+; Antidote
+org $E23FB7
+db  $60, $87, $8D, $82, $7D, $88, $8D, $7E, $00
+; Mythril Armor
 org $E2402D
-db  $73, $81, $82, $7E, $7F, $96, $6A, $87, $82, $7F, $7E, $00
+db  $6C, $92, $8D, $81, $8B, $82, $85, $96, $60, $8B, $86, $88, $8B, $00
 
 ; Odin location animation fix (resolve softlocks)
-org $D04EEF
+org $D034CF
 db $20
-

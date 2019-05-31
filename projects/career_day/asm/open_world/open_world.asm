@@ -373,3 +373,7 @@ db $18
 ; disable surgate NPCs in bed
 org $CE8A15
 pad $CE8A38
+
+; Moogle text adjust for shinryuu help text
+org $c975a8
+db $81, $04

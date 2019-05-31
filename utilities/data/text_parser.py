@@ -95,6 +95,27 @@ class TextParser():
 
         return return_text
 
+    def run_encrypt_text_string(self, x):
+        counter = 0
+        text_list = []
+        while counter < len(x):
+            char = x[counter]
+            if char == "<":
+                left = x.find("<")
+                right = x.find(">")+1
+                new_char = x[left:right]
+                text_list.append(self.text_dict2[new_char])
+                counter = right
+            else:    
+                text_list.append(self.text_dict2[char])
+                counter = counter + 1
+        text_asar = 'db'
+        for i in text_list:
+            text_asar = text_asar + " $" + i + ","
+        text_asar = text_asar[:-1]
+        return text_asar
+
+
     def run_exdeath_rewards(self, passed_dict):
         '''
         Pass in a DICTIONARY of 3 key items (actual text) and 3 key item reward 

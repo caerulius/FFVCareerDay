@@ -90,6 +90,29 @@ def run_encrypt(passed_dict):
         return_text = return_text + text_asar + "\n"
     return return_text
 
+def run_encrypt_text_string(x):
+    return_text = ''
+    counter = 0
+    text_list = []
+    while counter < len(x):
+        char = x[counter]
+        if char == "<":
+            left = x.find("<")
+            right = x.find(">")+1
+            new_char = x[left:right]
+            text_list.append(text_dict2[new_char])
+            counter = right
+        else:    
+            text_list.append(text_dict2[char])
+            counter = counter + 1
+    text_asar = 'db'
+    for i in text_list:
+        text_asar = text_asar + " $" + i + ","
+    text_asar = text_asar[:-1]
+    print(text_asar)
+    return_text = return_text + text_asar + "\n"
+    return return_text
+
 
 def run_kuzar_encrypt(passed_dict):
     return_text = ''
@@ -120,6 +143,7 @@ def run_kuzar_encrypt(passed_dict):
         return_text = return_text + text_asar + ", $00\n"
 
     return return_text
+
 
 def run_exdeath_rewards(passed_dict):
     print(passed_dict)
