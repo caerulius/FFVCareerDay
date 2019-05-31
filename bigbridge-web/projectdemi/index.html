@@ -11,6 +11,7 @@
 
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+	<link href='https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css' rel='stylesheet' type='text/css'>
 
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
@@ -27,7 +28,9 @@
 	<script type="text/javascript" src="js/wow.js"></script>
 	<script type="text/javascript" src="js/classie.js"></script>
 	<script type="text/javascript" src="js/magnific-popup.js"></script>
-	
+	<script type="text/javascript" src="js/dropzone.js"></script>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.154.0.min.js"></script>
+
 	<!-- =======================================================
     Theme Name: Knight
     Theme URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
@@ -112,25 +115,79 @@
 	</section>
 	<!--main-section-end-->
 
-	<section class="main-section" id="download">
+	<section class="main-section">
 		<!--main-section-start-->
 		<div class="container">
-			<h2>Download</h2>
-			<div>
-				<h6><a class="link animated fadeInUp servicelink big-download" href="Project Demi v1.0.zip"><span class="fa fa-4x fa-download"/></a></h6>
-					<a class="github-link" href="https://github.com/caerulius/FFVCareerDay/releases/tag/1.0" target="_blank">Or download directly from Github here</a>
-			</div>
-			<hr class="pre-contact">
-
-			<ul class="social-link">
-				<li class="twitter"><a href="https://twitter.com/StudioBigBridge" target="_blank"><i class="fa fa-twitter"></i></a></li>
-				<li class="mail"><a href="mailto:studiobigbridge@gmail.com?Subject=Project%20Demi%20Feedback"><i class="fa fa-envelope"></i></a></li>
-				<li class="discord"><a href="https://discord.gg/6Yw6HbK" target="_blank"><img src="img/discordlogo.png" width="60%" style="padding-bottom: 6px"></i></a></li>
-				<li class="github"><a href="https://github.com/caerulius/FFVCareerDay/" target="_blank"><i class="fa fa-github"></i></a></li>
-				<div  style="float: right">
-					<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Studio Big Bridge', '#A651BC', 'Z8Z0OSWF');kofiwidget2.draw();</script>
+			<h2>Generate Patched Rom</h2>
+			<input type="file" accept=".smc, .sfc" class="file-browse" id="fileupload"/>
+			<label for="fileupload"><i class="fa fa-upload"></i>  Browse</label>
+			<div class="file-info" id="file-info">Upload a Final Fantasy 5 ROM, Japanese or patched with the RPGe Translation</div><br/>
+			<hr style="border-top: dashed 6px">
+			<div class="row">
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="dash" checked="checked">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						Innate Dash Ability
+					</label>
 				</div>
-			</ul>
+			</div><br/>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="learning">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						Innate Learning Ability
+					</label>
+				</div>
+			</div><br/>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="pitfalls">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						Innate Pitfalls Ability
+					</label>
+				</div>
+			</div><br/>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="passages">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						Innate Passages Ability
+					</label>
+				</div>
+			</div><br/>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="boss">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						All major storyline bosses now reward experience to curve to level 30 before Exdeath. <span style="color:darkgrey;font-size:.8em">(All new exp will stack with the config menu multiplier)</span>
+					</label>
+				</div>
+			</div><br />
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="atb">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						ATB fill rate doubled (including enemies) <span style="color:darkred">Warning: Experimental</div>
+					</label>
+				</div>
+			</div>
+
+			<h6><button onclick="generate()" disabled="disabled" class="link servicelink big-download center-block" id="generate">Generate</button></h6>
+			<img src="img/spinner.gif" id="spinner" style="display:none" class="center-block"/>
+			<h6><button style="display:none" class="link servicelink big-download center-block" id="download"><i class="fa fa-1x fa-download"></i> Download</button></h6>
+			
+			<!--<div>
+				<a class="github-link" href="https://github.com/caerulius/FFVCareerDay/releases/tag/1.0" target="_blank">Or download directly from Github here</a>
+			</div>
+		-->
+			<hr class="pre-contact">
 		</div>
 	</section>
 	<!--main-section-end-->
@@ -179,9 +236,11 @@
 			$('.main-nav li a, .servicelink').bind('click', function(event) {
 				var $anchor = $(this);
 
+				/*
 				$('html, body').stop().animate({
 					scrollTop: $($anchor.attr('href')).offset().top - 102
 				}, 1500, 'easeInOutExpo');
+				*/
 				/*
 				if you don't want to use the easing effects:
 				$('html, body').stop().animate({
