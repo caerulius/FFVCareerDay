@@ -11,8 +11,8 @@ org $C99DBE
 db $00, $00, $00
 
 ; HARDCODE TEMP FOR VALIDATION NAME, NEEDS TO BE SET BY RANDOMIZER
-org !ADDRESS_phoenixtowername
-db $61, $8E, $8D, $93, $93, $93
+; org !ADDRESS_phoenixtowername
+; db $61, $8E, $8D, $93, $93, $93
 
 ; change floor 1 phoenix tower for x/y events
 org $CE34BC

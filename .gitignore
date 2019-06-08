@@ -4,3 +4,4 @@
 *.~lock.*
 *.sfc
 utilities/data/log_analysis_render/*
+projects/test_asm/*
