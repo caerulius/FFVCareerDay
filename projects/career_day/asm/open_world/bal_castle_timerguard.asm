@@ -118,8 +118,11 @@ CLC
 ADC $B1
 TAX
 
-;if 000bdf is $F0, then load an entirely different set of text
+;if 000BDE is $AD and 000bdf is $F0, then load an entirely different set of text
 SEP #$20
+LDA $0BDE
+CMP #$AD
+BNE FinishInnNormal
 LDA $0BDF
 CMP #$F0
 BNE FinishInnNormal
@@ -193,7 +196,10 @@ org $C0BBFD
 JML !ADDRESS_innhook2
 
 org !ADDRESS_innhook2
-; if $0BDF is $F0, manually set 50k
+; if #0BDE is $AD and $0BDF is $F0, manually set 50k
+LDA $0BDE
+CMP #$AD
+BNE ResumeInnHook2
 LDA $0BDF
 CMP #$F0
 BNE ResumeInnHook2

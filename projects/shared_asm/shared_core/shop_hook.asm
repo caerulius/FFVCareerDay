@@ -352,38 +352,40 @@ JML $C2F01A
 ; award it to the player
 ; We want to disable entirely for abilities and jobs 
 
-org $C2EFF0
-JML CheckMagicSwordAward
+if !vanillarewards = 0
+    org $C2EFF0
+    JML CheckMagicSwordAward
 
 
-org !ADDRESS_shopmagicsword
-CheckMagicSwordAward:
-PHA
-LDA $7E2802
-CMP #$89
-BEQ HandleMagicSword
-BNE SkipMagicSword
+    org !ADDRESS_shopmagicsword
+    CheckMagicSwordAward:
+    PHA
+    LDA $7E2802
+    CMP #$89
+    BEQ HandleMagicSword
+    BNE SkipMagicSword
 
-; if it's magic still, replicate magic sword checking then jump back
-HandleMagicSword:
+    ; if it's magic still, replicate magic sword checking then jump back
+    HandleMagicSword:
 
-PLA
-LDX $8E
-MagicSwordStart:
-LDA $D12890,x
-BEQ MagicSwordAward1
-CMP $2809
-BEQ MagicSwordAward2
-inx
-inx
-BRA MagicSwordStart
+    PLA
+    LDX $8E
+    MagicSwordStart:
+    LDA $D12890,x
+    BEQ MagicSwordAward1
+    CMP $2809
+    BEQ MagicSwordAward2
+    inx
+    inx
+    BRA MagicSwordStart
 
-MagicSwordAward1:
-JML $C2F008
-MagicSwordAward2:
-JML $C2F001
+    MagicSwordAward1:
+    JML $C2F008
+    MagicSwordAward2:
+    JML $C2F001
 
 
-SkipMagicSword:
-PLA
-JML $C2F008
+    SkipMagicSword:
+    PLA
+    JML $C2F008
+endif

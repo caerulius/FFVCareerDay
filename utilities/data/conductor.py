@@ -29,7 +29,6 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 11:13087*adjust_mult,
 12:15044*adjust_mult}
 
-NUM_KEY_ITEMS = 20
 ITEM_TYPE = "40"
 
 ITEM_SHOP_TYPE = "01"
@@ -164,7 +163,6 @@ class Conductor():
         exdeath_rewards = {}
         for i in self.RE.sample(exdeath_list, 3):
             exdeath_rewards[i.collectible.reward_name] = i.exdeath_address
-
         self.exdeath_patch = self.TP.run_exdeath_rewards(exdeath_rewards)
 
         return num_placed_key_items
@@ -1228,7 +1226,7 @@ class Conductor():
         print("Randomizing key items...")
         num_placed_key_items = self.randomize_key_items()
         #print(num_placed_key_items)
-        while num_placed_key_items < NUM_KEY_ITEMS:
+        while num_placed_key_items < int(self.conductor_config['NUM_KEY_ITEMS']):
             #print("didn't place them all, retrying")
             self.CM.reset_all_of_type(KeyItem)
             self.RM.reset_rewards_by_style("key")
