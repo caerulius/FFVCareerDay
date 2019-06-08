@@ -4,6 +4,11 @@
 
 Both Project Demi and Career Day are developed here. The set of instructions in this readme is simply for Project Demi - for more information about Career Day, please visit the [Discord](https://discord.gg/6Yw6HbK) server. 
 
+# Version Releases
+## Current version: 1.0
+### 1.0 Hotfixes:
+6/8/2019 - Fixed a bug with magic sword spells not being awarded upon buying magic. Fixed a bug with reward multipliers only affecting the first enemy in a formation. 
+
 # How to download
 Visit https://www.bigbridge.studio/projectdemi/ and follow the instructions. You will have to supply a Final Fantasy V ROM, either the original Japanese version (preferable) or RPGe translated patched version. You can select which features you'd like. For any feature (including experimental), if you end up having troubles or simply want to enable/disable a feature, repatch the original ROM and rename it the same as your current playthrough's ROM (then replace the old ROM), and your save file should work. 
 
