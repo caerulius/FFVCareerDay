@@ -62,11 +62,11 @@ def patch_and_return():
     if request.method == 'POST':
         
         reheader = False
-        onlyheader = False
+        smc = False
         rpge = False
 
         data = request.form.to_dict()
-        filename = str(random.randint(1000000,9999999)) + '.smc'
+        filename = str(random.randint(1000000,9999999))
         r = requests.get(data["fileLocation"])
 
         with open(filename, 'wb') as f:  
@@ -77,31 +77,38 @@ def patch_and_return():
 
         if len(romdata) == UNHEADERED_J_SIZE:
             print("Detected unheadered, untranslated rom")
-            onlyheader = False
             reheader = True
+            smc = True
             rpge = True
         if len(romdata) == HEADERED_J_SIZE:
             print("Detected headered, untranslated rom")
-            onlyheader = False
             reheader = False
+            smc = True
             rpge = True
         if len(romdata) == UNHEADERED_U_SIZE:
             print("Detected unheadered, translated rom")
-            onlyheader = True
             reheader = False
+            smc = False
             rpge = False
         if len(romdata) == HEADERED_U_SIZE:
             print("Detected headered, translated rom")
-            onlyheader = False
             reheader = False
+            smc = True
             rpge = False
 
-        headers_and_translate(filename, onlyheader, reheader, rpge)
+        if smc:
+            os.rename(filename, filename + ".smc")
+            filename = filename + ".smc"
+        else:
+            os.rename(filename, filename + ".sfc")
+            filename = filename + ".sfc"
+
+        headers_and_translate(filename, reheader, rpge)
 
         patch(filename, to_int(data["dash"]), to_int(data["learning"]), to_int(data["pitfalls"]), to_int(data["passages"]), to_int(data["atb"]), to_int(data["boss"]))
 
         s3 = boto3.client('s3')
-        s3_filename = "projectdemidownloads/ProjectDemi" + filename[:3] + ".smc" 
+        s3_filename = "projectdemidownloads/ProjectDemi" + filename[:3] + ".smc"
         bucket_name = "bigbridgecareerday"
 
         s3.upload_file(filename, bucket_name, s3_filename, ExtraArgs={'ContentType': "application/vnd.nintendo.snes.rom"})
@@ -112,12 +119,7 @@ def patch_and_return():
 
         return jsonify(s3_filename)
 
-def headers_and_translate(filename, onlyheader, reheader, rpge):
-    with open(filename, "rb") as file:
-        romdata = bytearray(file.read())
-
-    logging.error("entering headering/translating with file of size: " + str(len(romdata)))
-
+def headers_and_translate(filename, reheader, rpge):
     if reheader:
         logging.error("Reheadering rom for RPGe patch application")
         with open(filename, "r+b") as file:
@@ -138,23 +140,6 @@ def headers_and_translate(filename, onlyheader, reheader, rpge):
     except Exception as e:
         logging.error("Error applying RPGe Translation Patch")
         logging.error("Unknown exception...")
-
-    with open(filename, "rb") as file:
-        romdata = bytearray(file.read())
-    logging.error("before unheader with file of size: " + str(len(romdata)))
-
-    if onlyheader:
-        logging.error("Adding header for Project Demi patch application")
-        with open(filename, "r+b") as file:
-            data = bytearray(file.read())
-            data = add_header(data)
-            file.seek(0)
-            file.write(data)
-        logging.error("Rom reheadered")
-
-    with open(filename, "rb") as file:
-        romdata = bytearray(file.read())
-    logging.error("leaving headering/translating with file of size: " + str(len(romdata)))
 
 def add_header(byte_list):
     return FAKE_HEADER + byte_list

@@ -13,8 +13,9 @@ JML EXPHook
 org !ADDRESS_expmod
 EXPHook:
 
-CPY #$0000
-BNE FinishEXPHookImmediate
+; This code below was only changing the first enemy for rewards. Don't think there's a reason to use it, keeping here just in case. 
+; CPY #$0000
+; BNE FinishEXPHookImmediate
 
 ; Load reward config 
 LDA #$0000
