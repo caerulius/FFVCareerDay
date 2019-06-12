@@ -3,5 +3,6 @@
 *.sublime-*
 *.~lock.*
 *.sfc
+*.smc
 utilities/data/log_analysis_render/*
 projects/test_asm/*
