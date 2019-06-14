@@ -243,6 +243,7 @@ incsrc open_world/key_item_locks.asm
 incsrc open_world/npc_locks.asm
 incsrc open_world/open_world.asm
 incsrc open_world/intro_cutscene.asm
+incsrc open_world/tutorial_beginner_house.asm
 incsrc open_world/world1_to_world2_warp.asm
 incsrc open_world/world2_to_world1_warp.asm
 incsrc open_world/world3_to_world2_warp.asm
