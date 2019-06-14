@@ -45,7 +45,7 @@
 		<!--header-start-->
 		<div class="container">
 			<h1 class="animated fadeInDown delay-01s header-text"><b>Career Day</b></h1>
-			<h2 class="animated fadeInDown delay-01s header-text" style="color:white; font-size: 20px">by Studio Big Bridge</h2>
+			<h2 class="animated fadeInDown delay-01s header-text" style="color:white; font-size: 20px">A Final Fantasy 5 open world randomizer by Studio Big Bridge</h2>
 		</div>
 	</header>
 	<!--header-end-->
@@ -65,19 +65,24 @@
 	<section class="main-section">
 		<!--main-section-start-->
 		<div class="container">
-			<h2>Generate Patched Rom</h2>
+			<h2>Generate Randomized FF5 Rom (v0.72.0)</h2>
 			<input type="file" accept=".smc, .sfc" class="file-browse" id="fileupload"/>
 			<label for="fileupload"><i class="fa fa-upload"></i>  Browse</label>
 			<div class="file-info" id="file-info">Upload a Final Fantasy 5 ROM, Japanese or patched with the RPGe Translation</div><br/>
 			<hr style="border-top: dashed 6px">
 			<div class="row">
-				<div style="text-align: center">
+				<div style="text-align: center" class="col-sm-4 col-sm-push-4">
 					<label for="seed">Seed Value (leave blank for random seed)</label><br/>
-					<input type="text" id="seed" placeholder="random"></input>
+					<input type="text" id="seed" placeholder="random" class="form-control"></input>
 				</div>
-				<h6><button onclick="generate()" disabled="disabled" class="link servicelink big-download center-block" id="generate">Generate</button></h6>
-				<img src="img/spinner.gif" id="spinner" style="display:none" class="center-block"/>
-				<h6><button style="display:none" class="link servicelink big-download center-block" id="download"><i class="fa fa-1x fa-download"></i> Download</button></h6>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 col-sm-push-4" style="margin-left:30px">
+					<h6><button onclick="generate()" disabled="disabled" class="link servicelink big-download" id="generate">Generate</button></h6>
+					<img src="img/spinner.gif" id="spinner" style="display:none" class=""/>
+					<h6><button style="display:none" class="link servicelink big-download" id="download"><i class="fa fa-1x fa-download"></i> Download</button></h6>
+				</div>
+			</div>
 				
 				<!--<a class="github-link" href="https://github.com/caerulius/FFVCareerDay" target="_blank">Check Github for the changelog</a>-->
 
@@ -85,53 +90,19 @@
 			</div>
 	</section>
 
-	<section class="main-section" id="about">
+	<section class="main-section" id="about" style="padding-left:240px; padding-bottom:50px;padding-top:40px">
 		<!--main-section-start-->
 		<div class="container">
-			<h2 style="padding-bottom:20px">Career Day</h2>
-			<h6 class="center-text">A Final Fantasy 5 open world randomizer</h6>
-			<div class="row">
-				<div class="col-lg-4 col-sm-6 wow">
-					<div class="service-list enhanced">
-						<div class="service-list-col1">
-							<i class="fa fa-level-up fa-10x" style="margin-left:7px"></i>
-						</div>
-						<div class="service-list-col2">
-							<h3>Enhanced</h3>
-							<p>Toggle random encounters. Optional patches for increased EXP and ABP from battles. Walking & dashing speed increased.</p>
-						</div>
-					</div>
-					<div class="service-list streamlined">
-						<div class="service-list-col1">
-							<i class="fa fa-magic"></i>
-						</div>
-						<div class="service-list-col2">
-							<h3>Streamlined</h3>
-							<p>Long cutscenes sped up or cut entirely, gamefeel and charm retained.</p>
-						</div>
-					</div>
-					<div class="service-list welcoming">
-						<div class="service-list-col1">
-							<i class="fa fa-lightbulb-o fa-10x" style="margin-left:7px"></i>
-						</div>
-						<div class="service-list-col2">
-							<h3>Welcoming</h3>
-							<p>A new menu screen will always point you in the right direction if you get lost.</p>
-						</div>
-					</div>
-				</div>
-				<figure class="col-lg-8 col-sm-6 text-right wow highlight">
-					<video width=640 height=360 class="default_source" controls autoplay muted loop>
-						<source src="img/ffv_pd_trailer.mp4" type="video/mp4">
-					</video>
-					<img width=384 height=336 class="enhanced_source" src="img/encounters.png" style="display:none; margin-right:150px"></img>
-					<video width=640 height=360 class="streamlined_source" controls autoplay muted loop style="display:none">
-						<source src="img/streamlined.mp4" type="video/mp4">
-					</video>
-					<img width=384 height=336 class="welcoming_source" src="img/destination.png" style="display:none; margin-right:150px"></img>
-				</figure>
-
-			</div>
+			<figure class="col-lg-8 col-sm-6 text-right wow highlight">
+				<video width=640 height=360 class="default_source" controls autoplay muted loop>
+					<source src="img/ffv_pd_trailer.mp4" type="video/mp4">
+				</video>
+				<img width=384 height=336 class="enhanced_source" src="img/encounters.png" style="display:none; margin-right:150px"></img>
+				<video width=640 height=360 class="streamlined_source" controls autoplay muted loop style="display:none">
+					<source src="img/streamlined.mp4" type="video/mp4">
+				</video>
+				<img width=384 height=336 class="welcoming_source" src="img/destination.png" style="display:none; margin-right:150px"></img>
+			</figure>
 		</div>
 	</section>
 	<!--main-section-end-->

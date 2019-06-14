@@ -1,0 +1,22 @@
+keyitem_id,readable_name,valid,writeable_name,text_location
+00,Walse Tower Key,TRUE,WalseTower<Key>,E73500
+01,Steamship Key,TRUE,Steamship <Key>,E7350D
+02,Ifrit's Fire,TRUE,Ifrits Fire,E7351A
+03,Sandworm Bait,TRUE,SandWormBait,E73527
+04,Big Bridge Key,TRUE,Big Bridge<Key>,E73534
+05,Hiryuu Call,TRUE,Hiryuu Call,E73541
+06,Submarine Key,TRUE,Submarine <Key>,E7354E
+07,Anti Barrier,TRUE,Anti Barrier,E7355B
+08,Bracelet,TRUE,Bracelet,E73568
+0B,Pyramid Page,TRUE,PyramidPage,E7358F
+0C,Shrine Page,TRUE,Shrine Page,E7359C
+0D,Trench Page,TRUE,Trench Page,E735A9
+0E,Falls Page,TRUE,Falls Page,E735B6
+12,Mirage Radar,TRUE,Mirage Radar,E735EA
+15,Adamantite,TRUE,Adamantite,E73611
+16,Moogle Suit,TRUE,Moogle Suit,E7361E
+18,Elder Branch,TRUE,Elder Branch,E73638
+1A,1st Tablet,TRUE,1st Tablet,E73652
+1B,2nd Tablet,TRUE,2nd Tablet,E7365F
+1C,3rd Tablet,TRUE,3rd Tablet,E7366C
+1D,4th Tablet,TRUE,4th Tablet,E73679

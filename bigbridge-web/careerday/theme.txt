@@ -1,0 +1,11 @@
+Design Notes for Theme:
+
+Main highlight Color: #A651BC    rgb(166,81,188)
+Button darken Color : #844096    rgb(132,64,150)
+Hover link Color    : #C996D6    rgb(201,150,214)
+Very light accent   : #EDDDF2    rgb(237,221,242)
+Very very light     : #F5E9F6    rgb(245,233,246)
+Accent complement   : #23022E    rgb(35,2,46)
+Light Accent Compl. : #4B3054    rgb(75,48,84)
+
+Title should be written <b>Project <i>Demi</i></b>
