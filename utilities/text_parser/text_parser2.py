@@ -22,16 +22,20 @@ else:
     
 
 data = '''
-73817eff7e8f8285ff9082937a8b7dff
-64878e88ff908188ff8d8b827e7dff8d
-88ff01ffff867a847eff8d817eff9088
-8b857dff81828cff889087ff90828d81
-ff8d817e01ffff8988907e8bff887fff
-8d817effab7588827d9aa3a3a30101a3
-a3a3817eff8182868c7e857fff907a8c
-ff8c8e7c847e7dff82878d88ff8d817e
-ff01ffff7588827dff7a877dff7d828c
-7a89897e7a8b7e7da3a3a300
+617eff8887ff8d817eff85888884888e
+8dff7f888bff8c7e7c8b7e8dff01ffff
+897a8c8c7a807e8ca1ffff65888bff7e
+917a8689857e9dff92888eff7c7a87ff
+01ffff897a8c8cff8d818b888e8081ff
+8d817eff907a8585ff8887ff8692ff85
+7e7f8da1010160858c889dff827fff7a
+8792ff7c817a8b7a7c8d7e8bff828cff
+7aff7381827e7fff888bff01ffff817a
+8cff8d817effaa6f7a8c8c7a807e8c99
+ff607b8285828d929dff92888e998585
+ff01ffff7b7eff7a7b857eff8d88ff8c
+7e7eff8d817e8c7eff81827d7d7e87ff
+01ffff897a8c8c7a807e8ca300
 
 '''
 
@@ -91,6 +95,8 @@ def run_encrypt(passed_dict):
     return return_text
 
 def run_encrypt_text_string(x):
+    print("\n")
+    print(";"+str(x))
     return_text = ''
     counter = 0
     text_list = []
@@ -111,6 +117,7 @@ def run_encrypt_text_string(x):
     text_asar = text_asar[:-1]
     print(text_asar)
     return_text = return_text + text_asar + "\n"
+    print("\n")
     return return_text
 
 
