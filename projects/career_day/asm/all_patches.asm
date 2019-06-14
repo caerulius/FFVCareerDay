@@ -275,6 +275,7 @@ incsrc ../../shared_asm/data_tables/progressive_ability_table.asm
 incsrc ../../shared_asm/data_tables/progressive_magic_table.asm
 incsrc ../../shared_asm/data_tables/magic_ability_crystal_shop_prices.asm
 incsrc ../../shared_asm/data_tables/original_magic_prices.asm
+incsrc ../../shared_asm/data_tables/shop_prices.asm
 incsrc ../../shared_asm/data_tables/exp_table_lv50_modified.asm
 
 incsrc ../../shared_asm/colors/galuf_mimic.asm
