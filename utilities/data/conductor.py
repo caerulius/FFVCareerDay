@@ -1169,7 +1169,8 @@ class Conductor():
         
         # For some reason, couldn't get this to load in from star import from text_parser
         import os
-        text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_chest.csv'),header=None,index_col=1).to_dict()[0]
+        text_dict2 = pd.read_csv(self.config['PATHS']['text_table_path'] + self.config['PATHS']['text_table_to_use'], header=None, index_col=1).to_dict()[0]
+        #text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_chest.csv'),header=None,index_col=1).to_dict()[0]
         
         letters = random.sample('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',6)
         code_str = 'db '

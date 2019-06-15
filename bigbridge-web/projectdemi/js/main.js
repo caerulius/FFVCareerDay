@@ -115,7 +115,9 @@ function apiCall(data){
 }
 
 function downloadFile(filePath){
+	console.log("filepath: " + filePath);
     var link=document.createElement('a');
+    document.body.appendChild(link);
     link.href = filePath
     link.download = "ProjectDemi.smc";
     link.click();

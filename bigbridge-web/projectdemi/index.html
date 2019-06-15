@@ -183,10 +183,8 @@
 			<img src="img/spinner.gif" id="spinner" style="display:none" class="center-block"/>
 			<h6><button style="display:none" class="link servicelink big-download center-block" id="download"><i class="fa fa-1x fa-download"></i> Download</button></h6>
 			
-			<!--<div>
-				<a class="github-link" href="https://github.com/caerulius/FFVCareerDay/releases/tag/1.0" target="_blank">Or download directly from Github here</a>
-			</div>
-		-->
+				<a class="github-link" href="https://github.com/caerulius/FFVCareerDay" target="_blank">Check Github for the changelog</a>
+
 			<hr class="pre-contact">
 		</div>
 	</section>
@@ -197,6 +195,7 @@
 			<div class="footer-logo"><img src="img/logo.png" alt=""></a></div>
 			<span class="copyright">&copy; Knight Theme. All Rights Reserved</span>
 			<div class="credits">
+				Art by <a href="https://kdoodle.carrd.co/">kdoodle</a><br />
 				Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
 			</div>
 		</div>
@@ -235,18 +234,6 @@
 
 			$('.main-nav li a, .servicelink').bind('click', function(event) {
 				var $anchor = $(this);
-
-				/*
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top - 102
-				}, 1500, 'easeInOutExpo');
-				*/
-				/*
-				if you don't want to use the easing effects:
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top
-				}, 1000);
-				*/
 				if ($(window).width() < 768) {
 					$('.main-nav').hide();
 				}

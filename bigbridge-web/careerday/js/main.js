@@ -1,276 +1,122 @@
-;(function () {
-	
-	'use strict';
+$('.enhanced').hover(function(e){
+	$('.enhanced_source').show();
+	$('.default_source').hide();
+}, function(e){
+	$('.enhanced_source').hide();
+	$('.default_source').show();
+});
 
-	var isMobile = {
-		Android: function() {
-			return navigator.userAgent.match(/Android/i);
-		},
-			BlackBerry: function() {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-			iOS: function() {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-			Opera: function() {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-			Windows: function() {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-			any: function() {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
+$('.streamlined').hover(function(e){
+	$('.streamlined_source').show();
+	$('.default_source').hide();
+}, function(e){
+	$('.streamlined_source').hide();
+	$('.default_source').show();
+});
 
-	var mobileMenuOutsideClick = function() {
+$('.welcoming').hover(function(e){
+	$('.welcoming_source').show();
+	$('.default_source').hide();
+}, function(e){
+	$('.welcoming_source').hide();
+	$('.default_source').show();
+});
 
-		$(document).click(function (e) {
-	    var container = $("#colorlib-offcanvas, .js-colorlib-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-
-	    	if ( $('body').hasClass('offcanvas') ) {
-
-    			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
-				
-	    	}
-	    
-	    	
-	    }
-		});
-
-	};
-
-
-	var offcanvasMenu = function() {
-
-		$('#page').prepend('<div id="colorlib-offcanvas" />');
-		$('#page').prepend('<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle colorlib-nav-white"><i></i></a>');
-		var clone1 = $('.menu-1 > ul').clone();
-		$('#colorlib-offcanvas').append(clone1);
-		var clone2 = $('.menu-2 > ul').clone();
-		$('#colorlib-offcanvas').append(clone2);
-
-		$('#colorlib-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown');
-		$('#colorlib-offcanvas')
-			.find('li')
-			.removeClass('has-dropdown');
-
-		// Hover dropdown menu on mobile
-		$('.offcanvas-has-dropdown').mouseenter(function(){
-			var $this = $(this);
-
-			$this
-				.addClass('active')
-				.find('ul')
-				.slideDown(500, 'easeOutExpo');				
-		}).mouseleave(function(){
-
-			var $this = $(this);
-			$this
-				.removeClass('active')
-				.find('ul')
-				.slideUp(500, 'easeOutExpo');				
-		});
-
-
-		$(window).resize(function(){
-
-			if ( $('body').hasClass('offcanvas') ) {
-
-    			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
-				
-	    	}
-		});
-	};
-
-	var burgerMenu = function() {
-
-		$('body').on('click', '.js-colorlib-nav-toggle', function(event){
-			var $this = $(this);
-
-
-			if ( $('body').hasClass('overflow offcanvas') ) {
-				$('body').removeClass('overflow offcanvas');
-			} else {
-				$('body').addClass('overflow offcanvas');
-			}
-			$this.toggleClass('active');
-			event.preventDefault();
-
-		});
-	};
-	
-
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.animate-box').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('animated-fast') ) {
-				
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .animate-box.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn animated-fast');
-							} else if ( effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft animated-fast');
-							} else if ( effect === 'fadeInRight') {
-								el.addClass('fadeInRight animated-fast');
-							} else {
-								el.addClass('fadeInUp animated-fast');
-							}
-
-							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
-					});
-					
-				}, 100);
-				
-			}
-
-		} , { offset: '85%' } );
-	};
-
-
-	var dropdown = function() {
-
-		$('.has-dropdown').mouseenter(function(){
-
-			var $this = $(this);
-			$this
-				.find('.dropdown')
-				.css('display', 'block')
-				.addClass('animated-fast fadeInUpMenu');
-
-		}).mouseleave(function(){
-			var $this = $(this);
-
-			$this
-				.find('.dropdown')
-				.css('display', 'none')
-				.removeClass('animated-fast fadeInUpMenu');
-		});
-
-	};
-
-
-	var goToTop = function() {
-
-		$('.js-gotop').on('click', function(event){
-			
-			event.preventDefault();
-
-			$('html, body').animate({
-				scrollTop: $('html').offset().top
-			}, 500, 'easeInOutExpo');
-			
-			return false;
-		});
-
-		$(window).scroll(function(){
-
-			var $win = $(window);
-			if ($win.scrollTop() > 200) {
-				$('.js-top').addClass('active');
-			} else {
-				$('.js-top').removeClass('active');
-			}
-
-		});
-	
-	};
-
-
-	// Loading page
-	var loaderPage = function() {
-		$(".colorlib-loader").fadeOut("slow");
-	};
-
-
-	var parallax = function() {
-
-		if ( !isMobile.any() ) {
-			$(window).stellar({
-				horizontalScrolling: false,
-				hideDistantElements: false, 
-				responsive: true
-
-			});
-		}
-	};
-
-	var counter = function() {
-		$('.js-counter').countTo({
-			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals);
-	    },
-		});
-	};
-
-
-	var counterWayPoint = function() {
-		if ($('#colorlib-counter').length > 0 ) {
-			$('#colorlib-counter').waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);					
-					$(this.element).addClass('animated');
-				}
-			} , { offset: '90%' } );
-		}
-	};
-
-	// Owl Carousel
-	var owlCrouselFeatureSlide = function() {
-		var owl = $('.owl-carousel');
-		owl.owlCarousel({
-			animateOut: 'fadeOut',
-		   animateIn: 'fadeIn',
-			autoplay: true,
-			items: 1,
-		   loop: true,
-		   margin: 0,
-		   responsiveClass: true,
-		   nav: false,
-		   dots: true,
-		   autoplayHoverPause: true,
-		   smartSpeed: 500,
-		   navText: [
-		      "<i class='icon-arrow-left3 owl-direction'></i>",
-		      "<i class='icon-arrow-right3 owl-direction'></i>"
-	     	]
-		});
-
-	};
-
-	var bgVideo = function() {
-		$('.player').mb_YTPlayer();
-	};
-
-	
-	$(function(){
-		mobileMenuOutsideClick();
-		offcanvasMenu();
-		burgerMenu();
-		contentWayPoint();
-		dropdown();
-		goToTop();
-		loaderPage();
-		parallax();
-		counter();
-		counterWayPoint();
-		owlCrouselFeatureSlide();
-		bgVideo();
+$(document).ready( function() {
+	$(document).on('change', ':file', function() {
+	    var input = $(this),
+	        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+	        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+	    input.trigger('fileselect', [numFiles, label]);
 	});
 
+    $(':file').on('fileselect', function(event, numFiles, label) {
+    	var acceptableSizes = [2097664, 2097152, 2621440, 2621952]
+    	if(numFiles > 0){
+    		var file = event.target.files[0];
+    		if(!acceptableSizes.includes(file.size)){
+    			$("#file-info").html("Invalid ROM");
+    			$("#generate").attr('disabled', 'disabled');
+    		}
+    		else{
+    			$("#file-info").html(label);
+    			$("#generate").removeAttr('disabled');
+    		}
+    	}
+    	else{
+    		$("#file-info").html("Upload a Final Fantasy 5 ROM, Japanese or patched with the RPGe Translation");
+    		$("#generate").attr('disabled', 'disabled');
+    	}
+    });
+});
 
-}());
+var url = "/careerdayapi/";
+var baseBucketUrl = 'https://s3-us-west-1.amazonaws.com/bigbridgecareerday/';
+var spinnerHtml = "<img src='img/spinner.gif'></img>";
+
+function generate(myFormData){
+	$('#generate').hide();
+	$('#spinner').show();
+	uploadToS3($('#fileupload')[0].files[0]);
+}
+
+function uploadToS3(file){
+	var bucketname = "bigbridgecareerday";
+	var region = "us-east-1";
+	var identityPoolId = "us-east-1:0cc71965-b227-4aaf-a63f-b1429258c26e";
+	// Initialize the Amazon Cognito credentials provider
+	AWS.config.region = region; // Region
+	AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+	    IdentityPoolId: identityPoolId,
+	});
+
+	var s3 = new AWS.S3({
+      apiVersion: '2006-03-01',
+      params: {Bucket: bucketname}
+    });
+
+	var d = new Date();
+	var t = d.getTime();
+	var key = 'careerdayuploads/' + t + '-' + file.name; 
+	s3.upload({
+	    Key: key,
+	    Body: file,
+	    ContentType: 'application/vnd.nintendo.snes.rom',
+	    ACL: 'public-read'
+	  }, function(err, data){
+	    if(err){
+	        console.log(err);
+	    } else {
+	    	apiCall(data);
+        }
+	  });
+}
+
+
+function apiCall(data){
+	var myFormData = new FormData();
+	var postData = {
+		"seed": $('#seed').val(),
+		"fileLocation": data.Location
+	}
+	$.post(url, postData, function(data){
+		var file_url = baseBucketUrl + data;
+		$("#spinner").hide();
+		$("#download").show();
+		$("#download").click(function() {
+			downloadFile(file_url);
+		});
+	});
+}
+
+function downloadFile(filePath){
+	console.log("filepath: " + filePath);
+    var link=document.createElement('a');
+    document.body.appendChild(link);
+    link.href = filePath
+    link.download = "ProjectDemi.smc";
+    link.click();
+
+	$("#download").hide();
+	$("#generate").show();
+}
