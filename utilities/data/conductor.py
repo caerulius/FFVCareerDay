@@ -443,8 +443,19 @@ class Conductor():
             while (original_boss.enemy_1_name == "Odin" and random_boss.enemy_1_name in banned_at_odin):
                 original_boss_list = [original_boss] + original_boss_list
                 original_boss = original_boss_list.pop()
-            if original_boss.enemy_1_name == "Odin":                
-                self.odin_location_fix_patch = '\n; Odin location animation fix (resolve softlocks)\norg $'+random_boss.offset[:-1]+"F\ndb $20\n"
+            if original_boss.enemy_1_name == "Odin":               
+                # all we need to do is take the current final flag of random boss
+                # which corresponds to in battle flags associated with that formation
+                # and turn off bit 01 which corresponds to the white flash 
+
+                x = random_boss.formationid_16
+                x = int(x,base=16)
+                x = bin(x).replace("0b","")
+                x = x.zfill(8)
+                x = x[0:7]
+                x = hex(int(x + '0',2))
+                x = x.replace("0x","").zfill(2)
+                self.odin_location_fix_patch = '\n; Odin location animation fix (resolve softlocks)\norg $'+random_boss.offset[:-1]+"F\ndb $"+x+"\n"
 
             # Assign random boss location to the original spots (overwriting it)
             # This is grabbing event_lookuploc1 / loc2 from the original
@@ -559,7 +570,7 @@ class Conductor():
                 
             # CLAUSE FOR SOL CANNON
             if original_formation_id in ['0E']:
-                new_hp = min(new_hp - 10000,1) # shouldnt ever be different than 12500hp here, but for safety
+                new_hp = 12500
                 
             # CLAUSE FOR NECROPHOBIA:
             if original_formation_id in ['4B']:
@@ -636,7 +647,7 @@ class Conductor():
             # CLAUSE FOR SOLCANNON
             elif random_boss.event_id in ['0E']:
                 # Add 10k HP to pool, apply 50% to Launchers
-                new_hp = max(new_hp - 10000,65535) # min, just in case
+                new_hp = min(new_hp + 10000,65535)
                 random_boss.enemy_classes[0].num_hp = new_hp
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .1)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .1)
@@ -667,6 +678,12 @@ class Conductor():
             
             else:
                 random_boss.enemy_classes[0].num_hp = new_hp
+
+#            if random_boss.enemy_classes[0].idx == '276':
+#                print("Sol Cannon new HP: "+original_boss.enemy_classes[0].enemy_name+" "+str(random_boss.enemy_classes[0].num_hp))
+#            elif original_boss.enemy_classes[0].idx == '276':
+#                print("Sol Cannon's location HP: "+random_boss.enemy_classes[0].enemy_name+" "+str(random_boss.enemy_classes[0].num_hp))
+
 
             # Get base exp
             base_exp = RANK_EXP_REWARD[int(new_rank)]
