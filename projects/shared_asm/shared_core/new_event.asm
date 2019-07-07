@@ -178,8 +178,6 @@ JMP $C7A4 ; branch the fk out and hope it works (it does)
 ; RANDOMIZER JOB SETTING  : Code $EC
 ; On rando seeds, this will trigger from the values written to E79F00:
 ; $00 = job id
-; $01 = starting weapon
-; $02 = starting magic
 
 org $C0A5C0
 db $F0, $CE ; branch to $C0CE20
@@ -188,89 +186,288 @@ org $C0CEF0
 JML RandomizerJobSetting
 
 org !ADDRESS_NEWEVENT_jobsetting
-RandomizerJobSetting:
-pha
-phx
+; This process will be VERY different for Four Job mode, so entirely changing
+; the code on conditional
+
+if !fourjobmode == 0
+; #####################
+; # NORMAL MODE
+; #####################
+    RandomizerJobSetting:
+    pha
+    phx
 
 
 
+    ; turn off freelancer
+    LDA #$00
+    STA $000842
 
-; turn off freelancer
-LDA #$00
-STA $000842
-
-; set control to zero for name validation (phoenix tower)
-STA !charnamecontrol
-
-
-; set job value to learned jobs
-LDX #$0000
-LDA $E79F00
-AND #$07
-tax
-LDA $C0C9B9,X
-pha
-LDA $E79F00
-lsr
-lsr
-lsr
-tax
-pla
-ora $0840,x
-sta $0840,x
-
-; set everyone to have 1 ability count from the start
-lda #$01
-sta $08F3
-sta $08F4
-sta $08F5
-sta $08F6
-
-; start data move for stats
-rep #$20
-lda #$0000
-sep #$20
-lda $E79F00
-rep #$20
-asl
-TAX
-LDA #$0500
-TAY
-LDA $F80F00, X
-XBA
-TAX
-
-LDA #$013F
-MVN $F800
-
-LDA #$0000
-sep #$20
-
-; set starting magic
-LDA $E79F02
-CMP #$FF
-BEQ RandomizedJobSkipMagic
-AND #$07
-tax
-LDA $C0C9B9,X
-pha
-LDA $E79F02
-lsr
-lsr
-lsr
-tax
-pla
-ora $0950,x
-sta $0950,x
-
-RandomizedJobSkipMagic:
-
-plx
-pla
-
-JML $C0A628 ; hopefully this works 
+    ; set control to zero for name validation (phoenix tower)
+    STA !charnamecontrol
 
 
+    ; set job value to learned jobs
+    LDX #$0000
+    LDA $E79F00
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F00
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0840,x
+    sta $0840,x
+
+    ; set everyone to have 1 ability count from the start
+    lda #$01
+    sta $08F3
+    sta $08F4
+    sta $08F5
+    sta $08F6
+
+    ; start data move for stats
+    rep #$20
+    lda #$0000
+    sep #$20
+    lda $E79F00
+    rep #$20
+    asl
+    TAX
+    LDA #$0500
+    TAY
+    LDA $F80F00, X
+    XBA
+    TAX
+
+    LDA #$013F
+    MVN $F800
+
+    LDA #$0000
+    sep #$20
+
+    ; set starting magic
+    LDA $E79F02
+    CMP #$FF
+    BEQ RandomizedJobSkipMagic
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F02
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0950,x
+    sta $0950,x
+
+    RandomizedJobSkipMagic:
+
+    plx
+    pla
+
+    JML $C0A628 ; hopefully this works 
+
+elseif !fourjobmode == 1
+; #####################
+; # FOUR JOB MODE
+; #####################
+    RandomizerJobSetting:
+    pha
+    phx
+
+    ; turn off freelancer
+    LDA #$00
+    STA $000842
+
+    ; set control to zero for name validation (phoenix tower)
+    STA !charnamecontrol
+
+    ; set job value to learned jobs
+    LDX #$0000
+    LDA $E79F00
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F00
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0840,x
+    sta $0840,x
+
+    ; job2
+    LDX #$0000
+    LDA $E79F01
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F01
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0840,x
+    sta $0840,x
+
+    ; job3
+    LDX #$0000
+    LDA $E79F02
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F02
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0840,x
+    sta $0840,x
+
+    ; job4
+    LDX #$0000
+    LDA $E79F03
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F03
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0840,x
+    sta $0840,x
+
+    ; set everyone to have 1 ability count from the start
+    lda #$01
+    sta $08F3
+    sta $08F4
+    sta $08F5
+    sta $08F6
+
+    ; start data move for stats
+    rep #$20
+    lda #$0000
+    sep #$20
+    lda $E79F00
+    rep #$20
+    asl
+    TAX
+    LDA #$0500
+    TAY
+    LDA $F80F00, X
+    XBA
+    TAX
+    LDA #$004F
+    MVN $F800
+
+    ; job2
+    rep #$20
+    lda #$0000
+    sep #$20
+    lda $E79F01
+    rep #$20
+    asl
+    TAX
+    LDA #$0550
+    TAY
+    LDA $F80F00, X
+    XBA
+    ; offset by char #
+    STA $1F08 ; SCRATCH RAM
+    LDA #$0050
+    ADC $1F08    
+    TAX
+
+    LDA #$004F
+    MVN $F800
+    
+    ; job3
+    rep #$20
+    lda #$0000
+    sep #$20
+    lda $E79F02
+    rep #$20
+    asl
+    TAX
+    LDA #$05A0
+    TAY
+    LDA $F80F00, X
+    XBA
+    ; offset by char #
+    STA $1F08; SCRATCH RAM
+    LDA #$00A0
+    ADC $1F08    
+    TAX
+    LDA #$004F
+    MVN $F800
+
+    ; job4
+    rep #$20
+    lda #$0000
+    sep #$20
+    lda $E79F03
+    rep #$20
+    asl
+    TAX
+    LDA #$05F0
+    TAY
+    LDA $F80F00, X
+    XBA
+    ; offset by char #
+    STA $1F08; SCRATCH RAM
+    LDA #$00F0
+    ADC $1F08
+    TAX
+
+    LDA #$004F
+    MVN $F800
+
+    LDA #$0000
+    sep #$20
+
+
+    ; ; set starting magic
+    ; LDA $E79F02
+    ; CMP #$FF
+    ; BEQ RandomizedJobSkipMagic
+    ; AND #$07
+    ; tax
+    ; LDA $C0C9B9,X
+    ; pha
+    ; LDA $E79F02
+    ; lsr
+    ; lsr
+    ; lsr
+    ; tax
+    ; pla
+    ; ora $0950,x
+    ; sta $0950,x
+
+    ; RandomizedJobSkipMagic:
+
+    plx
+    pla
+
+    JML $C0A628 ; hopefully this works 
+
+
+endif
 
 
 

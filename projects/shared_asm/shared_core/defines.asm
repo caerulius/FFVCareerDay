@@ -20,7 +20,7 @@
 !ADDRESS_innhook2 = $F002E0
 !ADDRESS_innhook3 = $F00340
 !ADDRESS_menuhook = $F00500
-!ADDRESS_NEWEVENT_jobsetting = $F00B80
+!ADDRESS_NEWEVENT_jobsetting = $F00F00
 !ADDRESS_NEWEVENT_namevalidation = $F00C80
 !ADDRESS_NPC_LOCKS = $F01A00
 !ADDRESS_NEWEVENT_conditionalvehicles = $F01100

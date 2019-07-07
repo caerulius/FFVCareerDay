@@ -62,6 +62,7 @@ class Conductor():
         self.exdeath_patch = ""
         self.odin_location_fix_patch = ""
         self.superbosses_spoiler = ""
+        self.job_color_palettes_patch = ""
         self.code_of_the_void = ""
 
         self.weigh_collectibles()
@@ -884,7 +885,32 @@ class Conductor():
 
         self.EM.relevant_enemies = list_of_randomized_enemies
         
-
+    def randomize_job_color_palettes(self):
+        if True: # Future - flag for if all job palettes shuffled (for all chars and jobs)
+            palettes = self.DM.files['job_color_palettes']['byte_string'].to_list()
+            random.shuffle(palettes)
+            output_str = "\n\n; JOB COLOR PALETTES \n\norg $D4A3C0\ndb "
+            for palette in palettes:
+                palette_asar = ["$"+palette[z:z+2]+", " for z in range(0,len(palette),2)]
+                output_str = output_str + ''.join(palette_asar)
+            output_str = output_str[:-2]
+            print(output_str)
+            return output_str
+        
+        if False: # Future - flag for keeping palettes among characters
+            output_str = "\n\n; JOB COLOR PALETTES \n\norg $D4A3C0\ndb "
+            for character in self.DM.files['job_color_palettes']['char'].unique():
+                palettes_df = self.DM.files['job_color_palettes']
+                palettes_df = palettes_df[palettes_df['char']==character]
+                palettes = palettes_df['byte_string'].to_list()
+                random.shuffle(palettes)
+                for palette in palettes:
+                    palette_asar = ["$"+palette[z:z+2]+", " for z in range(0,len(palette),2)]
+                    output_str = output_str + ''.join(palette_asar)
+            output_str = output_str[:-2]
+            print(output_str)
+            return output_str
+            
 
     def starting_crystal_patch(self):
         output = ";================"

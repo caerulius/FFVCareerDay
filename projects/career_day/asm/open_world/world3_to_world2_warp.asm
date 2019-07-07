@@ -6,7 +6,11 @@ db $B0, $00, $F9
 
 ; World 2 Warp Dialogue
 org $F900B0
-; db $CD, $7F, $05                ;Run event index 057F
+
+; ; TESTING MUSIC ONLY
+; db $B4, $19
+
+; db $FF
 db $F0, $01, $02              ;Conditional yes/no dialogue at 04B7
 db $CD, $C6, $06                ;Run event index 0408
 db $FF
