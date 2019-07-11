@@ -70,7 +70,7 @@ def patch_and_return():
         data = request.form.to_dict()
         seed = data["seed"]
         if seed == "":
-            seed = random.randint(1000000, 9999999)
+            seed = str(random.randint(1000000, 9999999))
         filename = "CareerDay-{}".format(seed)
         r = requests.get(data["fileLocation"])
 

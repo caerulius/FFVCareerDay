@@ -1,0 +1,41 @@
+index,byte1,byte2,byte3,byte4,name
+00,00,06,0C,FF,Fire Sword Magic
+01,01,07,0D,FF,Ice Sword Magic
+02,02,08,0E,FF,Bolt Sword Magic
+03,03,09,0A,FF,Venom/Drain/Break Sword Magic
+04,04,11,0F,FF,Mute/Psych/Holy Sword Magic
+05,05,0B,10,FF,Sleep/Bio/Flare Sword Magic
+06,12,18,1E,FF,Cure White Magic
+07,16,1C,1F,23,Armor/Shell/Wall/Dispel White Magic
+08,15,17,20,FF,Mute/Size/Bersk White Magic
+09,14,1B,1D,FF,Antdt/Image/Heal White Magic
+0A,13,1A,22,FF,Scan/Charm/Holy White Magic
+0B,19,21,FF,FF,Life/Life2 White Magic
+0C,24,2A,30,FF,Fire Black Magic
+0D,25,2B,31,FF,Ice Black Magic
+0E,26,2C,32,FF,Bolt Black Magic
+0F,27,2D,2E,FF,Venom/Drain/Break Black Magic
+10,28,35,34,FF,Sleep/Psych/Doom Black Magic
+11,29,2F,33,FF,Toad/Bio/Flare Black Magic
+12,37,3D,40,FF,Slow/Stop/Slow2 Time Magic
+13,38,3B,41,47,Regen/Float/Reset/Xzone Time Magic
+14,39,3C,42,44,Void/Demi/Qrter/Old Time Magic
+15,3A,3E,43,46,Haste/Exit/Hast2/Quick Time Magic
+16,3F,45,FF,FF,Comet/Meteo Time Magic
+17,48,4E,4F,53,Chocob/Titan/Golem/Odin Summon Magic
+18,49,51,54,52,Sylph/Crbnkl/Phenix/Syldra Summon Magic
+19,4A,50,55,FF,Remora/Shoat/Levia Summon Magic
+1A,4B,4C,4D,56,Shiva/Ramuh/Ifrit/Bahmut Summon Magic
+1B,57,59,FF,FF,Power/Vitality Song
+1C,58,5C,FF,FF,Speed/Requiem Song
+1D,5A,5D,FF,FF,Magic/Love Song
+1E,5E,5B,FF,FF,Charm/Hero Song
+1F,86,88,87,85,L4 Qrter/L3 Flare/L2 Old/L5 Doom Blue Magic
+20,8F,90,91,FF,Aero Blue Magic
+21,89,8A,8D,FF,FrogSong/TinySong/MoonFlut Blue Magic
+22,82,83,84,FF,Condemn/Roulette/AquaRake Blue Magic
+23,95,99,9A,FF,GuardOff/Hammer/MghtyGrd Blue Magic
+24,8B,8C,8E,FF,Flash/Time Slip/DethClaw Blue Magic
+25,9C,96,9B,94,????/Fusion/Exploder/DrkShock Blue Magic
+26,93,92,9F,9D,GblinPnch/Emission/Missile/Blowfish Blue Magic
+27,98,97,9E,FF,Vampire/MindBlst/WhiteWind Blue Magic
