@@ -4,6 +4,7 @@
 
 db $E3, $0D, $00, $8A, $07, $00 ;Inter-map cutscene? 0D 00 8A 07 00
 db $0A                          ;Player Hide
+db $D0, $F0, $00                ;(Music) F0 00
 db $C3, $0C                     ;Fade in Speed 0C
 db $73                          ;Long pause
 db $D3, $80, $40, $07           ;Sprite 80 set map position 40, 07
@@ -33,6 +34,11 @@ db $80, $05                     ;Sprite 080 do event: Bounce
 db $80, $00                     ;Sprite 080 do event: Hold
 db $71                          ;Short pause
 db $C8, $A3, $01                ;Display Message/Text/Dialogue B1 00
+
+; TESTING MUSIC ONLY
+db $B4, $30
+db $C8, $A3, $01                ;Display Message/Text/Dialogue B1 00
+
 
 db $80, $05                     ;Sprite 080 do event: Bounce
 db $80, $00                     ;Sprite 080 do event: Hold
