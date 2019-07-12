@@ -37,7 +37,7 @@ MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
 
 class Conductor():
-    def __init__(self, random_engine, config_file="local-config.ini"):
+    def __init__(self, random_engine, fjf=False, config_file="local-config.ini"):
         self.RE = random_engine
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
@@ -67,7 +67,7 @@ class Conductor():
 
         self.weigh_collectibles()
 
-    def get_crystals(self):
+    def get_crystals(self, fjf=False):
         crystals = self.CM.get_all_of_type(Crystal)
         starting_crystal = self.RE.choice(crystals)
         self.CM.add_to_placement_history(starting_crystal) #don't allow the starting crystal to appear anywhere in game
@@ -81,15 +81,21 @@ class Conductor():
             
         crystals = [x for x in crystals if x != starting_crystal]
 
-        crystal_count = self.RE.randint(int(self.conductor_config['STARTING_CRYSTAL_COUNT']), len(crystals))
-        crystal_count = crystal_count - (self.difficulty // 3) #TODO: bring this to config
+        if not fjf:
+            crystal_count = self.RE.randint(int(self.conductor_config['STARTING_CRYSTAL_COUNT']), len(crystals))
+            crystal_count = crystal_count - (self.difficulty // 3) #TODO: bring this to config
 
-        if crystal_count < int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT']):
-            crystal_count = int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT'])
+
+            if crystal_count < int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT']):
+                crystal_count = int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT'])
+            
+        else:
+            crystal_count = 3
 
         chosen_crystals = self.RE.sample(crystals, crystal_count)
 
         return (starting_crystal, chosen_crystals)
+
 
     def weigh_collectibles(self):
         for index, value in enumerate(self.CM.collectibles):

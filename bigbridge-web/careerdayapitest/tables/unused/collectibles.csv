@@ -1,0 +1,1430 @@
+id,readable_name,readable_location,type,type_address,type_data,item_address,item_data,kind
+1,Broadsword,Wind Shrine Chest,Item,D13212,40,D13213,0D,Reward
+2,Ether,Beginner’s House Chest,Item,D13216,40,D13217,E2,Reward
+3,100,Beginner’s House Chest,Gil,D1321A,02,D1321B,01,Reward
+4,Potion,Beginner’s House Chest,Item,D1321E,40,D1321F,E0,Reward
+5,Phoenix Down,Beginner’s House Chest,Item,D13222,40,D13223,E4,Reward
+6,Tent,Beginner’s House Chest,Item,D13226,40,D13227,F0,Reward
+7,Leather Shoes,Beginner’s House Chest,Monster,D1322A,A4,D1322B,C0,Reward
+8,Leather Cap,Pirate’s Cave Chest,Item,D1322E,40,D1322F,89,Reward
+9,Tent,Pirate’s Cave Chest,Item,D13232,40,D13233,F0,Reward
+10,Ether,Pirate’s Cave Chest,Item,D13236,40,D13237,E2,Reward
+11,300,Pirate’s Cave Chest,Gil,D1323A,02,D1323B,03,Reward
+12,Tent,Wind Shrine Chest,Item,D1323E,40,D1323F,F0,Reward
+13,Leather Cap,Wind Shrine Chest,Item,D13242,40,D13243,89,Reward
+14,Staff,Wind Shrine Chest,Item,D13246,40,D13247,38,Reward
+15,150,Tule Barrel,Gil,D1324A,01,D1324B,0F,Reward
+16,Leather Shoes,Tule Box,Item,D1324E,40,D1324F,C0,Reward
+17,Potion,Tule Barrel,Item,D13252,40,D13253,E0,Reward
+18,Tent,Tule Box,Item,D13256,40,D13257,F0,Reward
+19,Phoenix Down,Tule Bush,Item,D1325A,40,D1325B,E4,Reward
+20,Flail,Ship Graveyard Chest,Item,D1325E,40,D1325F,5E,Reward
+21,Phoenix Down,Ship Graveyard Chest,Item,D13262,40,D13263,E4,Reward
+22,Tent,Ship Graveyard Chest,Item,D13266,40,D13267,F0,Reward
+23,990,Ship Graveyard Box,Gil,D1326A,01,D1326B,63,Reward
+24,Potion,Ship Graveyard Chest,Item,D1326E,40,D1326F,E0,Reward
+25,Antidote,Ship Graveyard Chest,Item,D13272,40,D13273,E8,Reward
+26,Antidote,Ship Graveyard Chest,Item,D13276,40,D13277,E8,Reward
+27,Phoenix Down,Ship Graveyard Chest,Item,D1327A,40,D1327B,E4,Reward
+28,Antidote,Carwen Barrel,Item,D1327E,40,D1327F,E8,Reward
+29,Ice Rod,Carwen Box,Item,D13282,40,D13283,33,Reward
+30,1000,Carwen Pot,Gil,D13286,03,D13287,01,Reward
+31,Soft,North Mountain Chest,Item,D1328A,40,D1328B,EC,Reward
+32,Phoenix Down,North Mountain Chest,Item,D1328E,40,D1328F,E4,Reward
+33,Glasses,Worus Town Pot,Item,D13292,40,D13293,B4,Reward
+34,Hi-Potion,Tycoon Castle Pot,Item,D13296,40,D13297,E1,Reward
+35,Ether,Tycoon Castle Pot,Item,D1329A,40,D1329B,E2,Reward
+36,Elixir,Tycoon Castle Barrel,Item,D1329E,40,D1329F,E3,Reward
+37,Phoenix Down,Tycoon Castle Barrel,Item,D132A2,40,D132A3,E4,Reward
+38,Cabin,Tycoon Castle Barrel,Item,D132A6,40,D132A7,F1,Reward
+39,Ether,Tycoon Castle Pot,Item,D132AA,40,D132AB,E2,Reward
+40,Elixir,Tycoon Castle Pot,Item,D132AE,40,D132AF,E3,Reward
+41,Phoenix Down,Tycoon Castle Pot,Item,D132B2,40,D132B3,E4,Reward
+42,Maiden's Kiss,Tycoon Castle Pot,Item,D132B6,40,D132B7,E5,Reward
+43,Shuriken,Tycoon Castle Chest,Item,D132BA,40,D132BB,5A,Reward
+44,Giyaman,Tycoon Castle Chest,Item,D132BE,40,D132BF,50,Reward
+45,Katana,Tycoon Castle Chest,Item,D132C2,40,D132C3,29,Reward
+46,Elf Cape,Worus Castle Chest,Item,D132C6,40,D132C7,B2,Reward
+47,1000,Worus Castle Pot,Gil,D132CA,03,D132CB,01,Reward
+48,Drag,Worus Castle Pot,Magic,D132CE,20,D132CF,36,Reward
+49,1000,Worus Castle Pot,Gil,D132D2,03,D132D3,01,Reward
+50,490,Worus Castle Box,Gil,D132D6,01,D132D7,31,Reward
+51,Tent,Worus Castle Barrel,Item,D132DA,40,D132DB,F0,Reward
+52,Phoenix Down,Worus Castle Barrel,Item,D132DE,40,D132DF,E4,Reward
+53,Silk robe,Worus Tower Chest,Item,D132E2,40,D132E3,A8,Reward
+54,Maiden's Kiss,Worus Tower Chest,Item,D132E6,40,D132E7,E5,Reward
+55,Silver Armlet,Worus Tower Chest,Item,D132EA,40,D132EB,B7,Reward
+56,Ether,Worus Tower Chest,Item,D132EE,40,D132EF,E2,Reward
+57,Phoenix Down,Tycoon Meteor Chest,Item,D132F2,40,D132F3,E4,Reward
+58,Gungnir,Karnak Castle Chest,Monster,D132F6,E2,D132F7,1D,Reward
+59,Thunder Scroll,Karnak Castle Chest,Monster,D132FA,A0,D132FB,FE,Reward
+60,2000,Karnak Castle Chest,Gil,D132FE,03,D132FF,02,Reward
+61,Elixir,Karnak Castle Chest,Monster,D13302,A0,D13303,E3,Reward
+62,Elixir,Karnak Castle Chest,Monster,D13306,A1,D13307,E3,Reward
+63,Elixir,Karnak Castle Chest,Monster,D1330A,A0,D1330B,E3,Reward
+64,2000,Karnak Castle Chest,Gil,D1330E,03,D1330F,02,Reward
+65,Elixir,Karnak Castle Chest,Monster,D13312,A1,D13313,E3,Reward
+66,Elixir,Karnak Castle Chest,Monster,D13316,A0,D13317,E3,Reward
+67,Ribbon,Karnak Castle Chest,Monster,D1331A,A2,D1331B,95,Reward
+68,Shuriken,Karnak Castle Chest,Monster,D1331E,A1,D1331F,5A,Reward
+69,2000,Karnak Castle Chest,Gil,D13322,01,D13323,C8,Reward
+70,Elixir,Karnak Castle Chest,Monster,D13326,A0,D13327,E3,Reward
+71,Elf Cape,Karnak Castle Chest,Monster,D1332A,A3,D1332B,B2,Reward
+72,Guardian,Karnak Castle Chest,Monster,D1332E,A3,D1332F,07,Reward
+73,Fire Rod,Karnak Town Barrel,Item,D13332,40,D13333,32,Reward
+74,Cabin,Steamship Chest,Item,D13336,40,D13337,F1,Reward
+75,Phoenix Down,Steamship Chest,Item,D1333A,40,D1333B,E4,Reward
+76,Elixir,Steamship Chest,Item,D1333E,40,D1333F,E3,Reward
+77,GrnBeret,Steamship Chest,Item,D13342,40,D13343,97,Reward
+78,Thief's Glove,Steamship Chest,Item,D13346,40,D13347,B0,Reward
+79,Elixir,Steamship Chest,Item,D1334A,40,D1334B,E3,Reward
+80,Ether,Ancient Library Chest,Item,D1334E,40,D1334F,E2,Reward
+81,Phoenix Down,Ancient Library Chest,Item,D13352,40,D13353,E4,Reward
+82,Stealth Suit,Ancient Library Chest,Item,D13356,40,D13357,A4,Reward
+83,Shuriken,Jacole Cave Chest,Item,D1335A,40,D1335B,5A,Reward
+84,Tent,Jacole Cave Chest,Item,D1335E,40,D1335F,F0,Reward
+85,Shuriken,Ruined City Chest,Item,D13362,40,D13363,5A,Reward
+86,Shuriken,Ruined City Chest,Item,D13366,40,D13367,5A,Reward
+87,Size,Ruined City Chest,Magic,D1336A,20,D1336B,17,Reward
+88,Golden Armor,Flying Lonka Ruins Chest,Item,D1336E,40,D1336F,9E,Reward
+89,Elixir,Flying Lonka Ruins Chest,Item,D13372,40,D13373,E3,Reward
+90,Phoenix Down,Flying Lonka Ruins Chest,Item,D13376,40,D13377,E4,Reward
+91,Golden Shield,Flying Lonka Ruins Chest,Item,D1337A,40,D1337B,85,Reward
+92,Mythril Glove,Steamship Chest,Item,D1337E,40,D1337F,B6,Reward
+93,Elixir,Steamship Chest,Item,D13382,40,D13383,E3,Reward
+94,Full Moon,Steamship Chest,Item,D13386,40,D13387,59,Reward
+95,Hi-Potion,Flying Lonka Ruins Chest,Item,D1338A,40,D1338B,E1,Reward
+96,5000,Flying Lonka Ruins Chest,Gil,D1338E,03,D1338F,05,Reward
+97,Shuriken,Flying Lonka Ruins Chest,Item,D13392,40,D13393,5A,Reward
+98,Ancient Sword,Flying Lonka Ruins Chest,Item,D13396,40,D13397,11,Reward
+99,Full Moon,Flying Lonka Ruins Chest,Item,D1339A,40,D1339B,59,Reward
+100,Power Wrist,Flying Lonka Ruins Chest,Item,D1339E,40,D1339F,BA,Reward
+101,Ether,Flying Lonka Ruins Chest,Item,D133A2,40,D133A3,E2,Reward
+102,Cabin,Flying Lonka Ruins Chest,Item,D133A6,40,D133A7,F1,Reward
+103,Ether,Exdeath’s Castle Chest,Item,D133AA,40,D133AB,E2,Reward
+104,Diamond Shield,Exdeath’s Castle Chest,Item,D133AE,40,D133AF,87,Reward
+105,Ice Shield,Exdeath’s Castle Chest,Item,D133B2,40,D133B3,CD,Reward
+106,Ether,Exdeath’s Castle Chest,Item,D133B6,40,D133B7,E2,Reward
+107,Elixir,Exdeath’s Castle Chest,Item,D133BA,40,D133BB,E3,Reward
+108,Gale Bow,Exdeath’s Castle Chest,Item,D133BE,40,D133BF,66,Reward
+109,IceBrand,Exdeath’s Castle Chest,Item,D133C2,40,D133C3,58,Reward
+110,Kotetsu,Exdeath’s Castle Chest,Item,D133C6,40,D133C7,2B,Reward
+111,9900,Exdeath’s Castle Chest,Gil,D133CA,02,D133CB,63,Reward
+112,Elixir,Exdeath’s Castle Chest,Item,D133CE,40,D133CF,E3,Reward
+113,8000,Exdeath’s Castle Chest,Gil,D133D2,03,D133D3,08,Reward
+114,DblLance,Exdeath’s Castle Chest,Item,D133D6,40,D133D7,1E,Reward
+115,Partisan,Exdeath’s Castle Chest,Item,D133DA,40,D133DB,1C,Reward
+116,Pinwheel,Exdeath’s Castle Chest,Item,D133DE,40,D133DF,5B,Reward
+117,4400,Moogle Cave Chest,Gil,D133E2,02,D133E3,2C,Reward
+118,Phoenix Down,Moogle Cave Chest,Item,D133E6,40,D133E7,E4,Reward
+119,Cabin,Moogle Village Chest,Item,D133EA,40,D133EB,F1,Reward
+120,Dancing Dagger,Moogle Village Chest,Item,D133EE,40,D133EF,6D,Reward
+121,1,Moogle Village Chest,Gil,D133F2,00,D133F3,01,Reward
+122,10000,Moogle Village Chest,Gil,D133F6,04,D133F7,01,Reward
+123,Phoenix Down,Moogle Village Chest,Item,D133FA,40,D133FB,E4,Reward
+124,Ether,Moogle Village Chest,Item,D133FE,40,D133FF,E2,Reward
+125,Elf Cape,Moogle Village Chest,Item,D13402,40,D13403,B2,Reward
+126,Angel Gwn,Bal Castle Chest,Item,D13406,40,D13407,BB,Reward
+127,Hero Drink,Bal Castle Chest,Item,D1340A,40,D1340B,F6,Reward
+128,Exit,Bal Castle Chest,Magic,D1340E,20,D1340F,3E,Reward
+129,Bone Mail,Hiryuu Valley Skull,Item,D13412,40,D13413,BF,Reward
+130,5000,Hiryuu Valley Chest,Gil,D13416,03,D13417,05,Reward
+131,Cabin,Hiryuu Valley Chest,Item,D1341A,40,D1341B,F1,Reward
+132,7000,Hiryuu Valley Chest,Gil,D1341E,03,D1341F,07,Reward
+133,Coronet,Hiryuu Valley Chest,Item,D13422,40,D13423,CB,Reward
+134,Air Blade,Hiryuu Valley Chest,Item,D13426,40,D13427,2A,Reward
+135,Phoenix Down,Hiryuu Valley Chest,Item,D1342A,40,D1342B,E4,Reward
+136,5000,Surgate Castle Chest,Gil,D1342E,03,D1342F,05,Reward
+137,Float,Surgate Castle Chest,Magic,D13432,20,D13433,3B,Reward
+138,Drain Sword,Barrier Tower Chest,Monster,D13436,A5,D13437,55,Reward
+139,9000,Barrier Tower Chest,Gil,D1343A,03,D1343B,09,Reward
+140,18000,Barrier Tower Chest,Gil,D1343E,03,D1343F,12,Reward
+141,Gold Hairpin,Barrier Tower Chest,Monster,D13442,A5,D13443,94,Reward
+142,Guardian,Mua Town Barrel,Item,D13446,40,D13447,07,Reward
+143,2500,Mua Forest Chest,Gil,D1344A,02,D1344B,19,Reward
+144,Ether,Mua Forest Chest,Item,D1344E,40,D1344F,E2,Reward
+145,4900,Mua Forest Chest,Gil,D13452,02,D13453,31,Reward
+146,Phoenix Down,Mua Forest Chest,Item,D13456,40,D13457,E4,Reward
+147,9500,Mua Forest Chest,Gil,D1345A,02,D1345B,5F,Reward
+148,Soot,Mua Forest Chest,Item,D1345E,40,D1345F,62,Reward
+149,Flametongue,Mua Forest Chest,Item,D13462,40,D13463,57,Reward
+150,Cabin,Mua Forest Chest,Item,D13466,40,D13467,F1,Reward
+151,Giant Drink,Mua Forest Chest,Item,D1346A,40,D1346B,F2,Reward
+152,Elixir,Mua Forest Chest,Item,D1346E,40,D1346F,E3,Reward
+153,Morning Star,Mua Forest Chest,Item,D13472,40,D13473,5F,Reward
+154,Ether,Solitary Island Chest,Item,D13476,40,D13477,E2,Reward
+155,DragonFang,Solitary Island Chest,Item,D1347A,40,D1347B,EA,Reward
+156,Elixir,Pyramid Chest,Item,D1347E,40,D1347F,E3,Reward
+157,Elixir,Pyramid Chest,Item,D13482,40,D13483,E3,Reward
+158,Black Robe,Pyramid Chest,Monster,D13486,A7,D13487,AC,Reward
+159,Thornlet,Pyramid Chest,Item,D1348A,40,D1348B,CC,Reward
+160,DarkMatter,Pyramid Chest,Monster,D1348E,A6,D1348F,EB,Reward
+161,Crystal Armor,Pyramid Chest,Monster,D13492,AA,D13493,A0,Reward
+162,Cursed Ring,Pyramid Chest,Item,D13496,40,D13497,B3,Reward
+163,Ice Shield,Pyramid Chest,Monster,D1349A,A6,D1349B,CD,Reward
+164,Flame Shield,Pyramid Chest,Monster,D1349E,A6,D1349F,C4,Reward
+165,DarkMatter,Pyramid Chest,Monster,D134A2,A6,D134A3,EB,Reward
+166,White Robe,Pyramid Chest,Monster,D134A6,A8,D134A7,AD,Reward
+167,DarkSuit,Pyramid Chest,Monster,D134AA,A9,D134AB,A6,Reward
+168,DarkMatter,Pyramid Chest,Monster,D134AE,A6,D134AF,EB,Reward
+169,DarkMatter,Pyramid Chest,Monster,D134B2,A6,D134B3,EB,Reward
+170,DarkMatter,Pyramid Chest,Monster,D134B6,A6,D134B7,EB,Reward
+171,9000,Pyramid Chest,Gil,D134BA,03,D134BB,09,Reward
+172,8000,Pyramid Chest,Gil,D134BE,03,D134BF,08,Reward
+173,Earth Hammer,Pyramid Chest,Monster,D134C2,A6,D134C3,26,Reward
+174,10000,Pyramid Chest,Gil,D134C6,03,D134C7,0A,Reward
+175,Cabin,Pyramid Chest,Item,D134CA,40,D134CB,F1,Reward
+176,Elixir,Pyramid Chest,Item,D134CE,40,D134CF,E3,Reward
+177,12000,Pyramid Chest,Gil,D134D2,03,D134D3,0C,Reward
+178,DarkMatter,Pyramid Chest,Monster,D134D6,A6,D134D7,EB,Reward
+179,Elixir,Pyramid Chest,Item,D134DA,40,D134DB,E3,Reward
+180,DarkMatter,Pyramid Chest,Monster,D134DE,A6,D134DF,EB,Reward
+181,Guard Ring,Pyramid Chest,Item,D134E2,40,D134E3,AF,Reward
+182,Ribbon,Pyramid Chest,Item,D134E6,40,D134E7,95,Reward
+183,Gold Hairpin,Pyramid Chest,Item,D134EA,40,D134EB,94,Reward
+184,12000,Solitary Island Chest,Gil,D134EE,03,D134EF,0C,Reward
+185,Hi-Potion,Solitary Island Chest,Item,D134F2,40,D134F3,E1,Reward
+186,Protect Drink,Solitary Island Chest,Item,D134F6,40,D134F7,F5,Reward
+187,BeastKiller,Solitary Island Chest,Item,D134FA,40,D134FB,5D,Reward
+188,RisingSun,Solitary Island Chest,Monster,D134FE,AB,D134FF,64,Reward
+189,Ether,Solitary Island Chest,Item,D13502,40,D13503,E2,Reward
+190,Guard Ring,Solitary Island Chest,Monster,D13506,AC,D13507,AF,Reward
+191,Crystal Helm,Solitary Island Chest,Item,D1350A,40,D1350B,8F,Reward
+192,9000,Solitary Island Chest,Gil,D1350E,03,D1350F,09,Reward
+193,Elixir,Solitary Island Chest,Item,D13512,40,D13513,E3,Reward
+194,DarkMatter,Solitary Island Chest,Item,D13516,40,D13517,EB,Reward
+195,Circlet,Solitary Island Chest,Item,D1351A,40,D1351B,93,Reward
+196,Ether,Fork Tower L. Chest,Item,D1351E,40,D1351F,E2,Reward
+197,Wonder Wand,Fork Tower L. Chest,Item,D13522,40,D13523,60,Reward
+198,Hi-Potion,Fork Tower R. Chest,Item,D13526,40,D13527,E1,Reward
+199,Defender Sword,Fork Tower R. Chest,Item,D1352A,40,D1352B,14,Reward
+200,Water Scroll,Great Trench Chest,Item,D1352E,40,D1352F,FD,Reward
+201,Flame Ring,Great Trench Chest,Item,D13532,40,D13533,BD,Reward
+202,DragonFang,Great Trench Chest,Item,D13536,40,D13537,EA,Reward
+203,Ether,Great Trench Chest,Item,D1353A,40,D1353B,E2,Reward
+204,Phoenix Down,Great Trench Chest,Item,D1353E,40,D1353F,E4,Reward
+205,Kaiser Knuckles,Great Trench Chest,Item,D13542,40,D13543,C1,Reward
+206,Ether,Istory Falls Chest,Item,D13546,40,D13547,E2,Reward
+207,TurtleShell,Istory Falls Chest,Item,D1354A,40,D1354B,E7,Reward
+208,Air Lance,Istory Falls Chest,Item,D1354E,40,D1354F,0A,Reward
+209,Giant Drink,Istory Falls Chest,Item,D13552,40,D13553,F2,Reward
+210,RuneEdge,Istory Falls Chest,Item,D13556,40,D13557,56,Reward
+211,Guard Ring,Istory Falls Chest,Item,D1355A,40,D1355B,AF,Reward
+212,Wall Ring,Istory Falls Chest,Item,D1355E,40,D1355F,CA,Reward
+213,Phoenix Down,Istory Falls Chest,Item,D13562,40,D13563,E4,Reward
+214,Enhancer,Istory Falls Chest,Item,D13566,40,D13567,6E,Reward
+215,12000,Istory Falls Chest,Gil,D1356A,02,D1356B,78,Reward
+216,Artemis Bow,Istory Falls Chest,Item,D1356E,40,D1356F,46,Reward
+217,Pinwheel,Istory Falls Chest,Item,D13572,40,D13573,5B,Reward
+218,Aegis Shield,Istory Falls Chest,Item,D13576,40,D13577,86,Reward
+219,Giant's Axe,Istory Falls Chest,Item,D1357A,40,D1357B,6A,Reward
+220,5000,Phoenix Tower Pot,Gil,D1357E,03,D1357F,05,Reward
+221,Phoenix Down,Phoenix Tower Pot,Monster,D13582,AD,D13583,E4,Reward
+222,10000,Phoenix Tower Pot,Gil,D13586,03,D13587,0A,Reward
+223,Phoenix Down,Phoenix Tower Pot,Monster,D1358A,AD,D1358B,E4,Reward
+224,Phoenix Down,Phoenix Tower Pot,Monster,D1358E,AD,D1358F,E4,Reward
+225,15000,Phoenix Tower Pot,Gil,D13592,03,D13593,0F,Reward
+226,20000,Phoenix Tower Pot,Gil,D13596,03,D13597,14,Reward
+227,Phoenix Down,Phoenix Tower Pot,Monster,D1359A,AD,D1359B,E4,Reward
+228,Avis Killer,Phoenix Tower Pot,Monster,D1359E,AD,D1359F,68,Reward
+229,25000,Phoenix Tower Pot,Gil,D135A2,03,D135A3,19,Reward
+230,Thief Knife,Mirage Village Barrel,Item,D135A6,40,D135A7,6C,Reward
+231,Ether,Rift (Ruins) Chest,Item,D135AA,40,D135AB,E2,Reward
+232,Cabin,Rift (Ruins) Chest,Item,D135AE,40,D135AF,F1,Reward
+233,Elixir,Rift (Ruins) Chest,Item,D135B2,40,D135B3,E3,Reward
+234,DarkMatter,Rift (Ruins) Chest,Item,D135B6,40,D135B7,EB,Reward
+235,Elixir,Rift (Ruins) Chest,Item,D135BA,40,D135BB,E3,Reward
+236,Drain Sword,Rift (Ruins) Chest,Item,D135BE,40,D135BF,55,Reward
+237,DragonFang,Rift (Forest) Chest,Item,D135C2,40,D135C3,EA,Reward
+238,Ribbon,Rift (Forest) Chest,Item,D135C6,40,D135C7,95,Reward
+239,Enhancer,Rift (Forest) Chest,Item,D135CA,40,D135CB,6E,Reward
+240,Lillith Rod,Rift (Forest) Chest,Item,D135CE,40,D135CF,36,Reward
+241,Angel Ring,Rift (Cave) Chest,Item,D135D2,40,D135D3,BC,Reward
+242,Coral Ring,Rift (Cave) Chest,Item,D135D6,40,D135D7,BE,Reward
+243,Thor Hammer,Rift (Castle) Chest,Item,D135DA,40,D135DB,28,Reward
+244,Running Shoes,Rift (Castle) Chest,Item,D135DE,40,D135DF,B5,Reward
+245,Red Shoes,Rift (Castle) Chest,Item,D135E2,40,D135E3,D0,Reward
+246,Rainbow Dress,Rift (Castle) Chest,Item,D135E6,40,D135E7,CF,Reward
+247,ManEater,Rift (Castle) Chest,Item,D135EA,40,D135EB,6B,Reward
+248,Pinwheel,The Void Chest,Item,D135EE,40,D135EF,5B,Reward
+249,Pinwheel,The Void Chest,Item,D135F2,40,D135F3,5B,Reward
+250,Elixir,The Void Chest,Item,D135F6,40,D135F7,E3,Reward
+251,Ragnarok,The Void Chest,Monster,D135FA,AE,D135FB,16,Reward
+252,Pinwheel,The Void Chest,Item,D135FE,40,D135FF,5B,Reward
+253,Knight,Wind Crystal,Crystal,C0FAB2,50,C0FAB3,0,Reward
+254,Monk,Wind Crystal,Crystal,C0FAB4,50,C0FAB5,1,Reward
+255,Thief,Wind Crystal,Crystal,C0FAB6,50,C0FAB7,2,Reward
+256,WhiteMage,Wind Crystal,Crystal,C0FAB8,50,C0FAB9,9,Reward
+257,BlackMage,Wind Crystal,Crystal,C0FABA,50,C0FABB,0A,Reward
+258,BlueMage,Wind Crystal,Crystal,C0FABC,50,C0FABD,0D,Reward
+259,Mediator,Fire Crystal,Crystal,C0FABE,50,C0FABF,0F,Reward
+260,Geomancer,Fire Crystal,Crystal,C0FAC0,50,C0FAC1,11,Reward
+261,Ninja,Fire Crystal,Crystal,C0FAC2,50,C0FAC3,4,Reward
+262,Hunter,Black Choco Crystals,Crystal,C0FAC4,50,C0FAC5,7,Reward
+263,Bard,Black Choco Crystals,Crystal,C0FAC6,50,C0FAC7,12,Reward
+264,Chemist,Earth Crystal,Crystal,C0FAC8,50,C0FAC9,10,Reward
+265,Dancer,Earth Crystal,Crystal,C0FACA,50,C0FACB,13,Reward
+266,Dragoon,Earth Crystal,Crystal,C0FACC,50,C0FACD,3,Reward
+267,Samurai,Earth Crystal,Crystal,C0FACE,50,C0FACF,5,Reward
+268,Levia,Leviathan,Magic,C0FAD0,20,C0FAD1,55,Reward
+269,Titan,Titan,Magic,C0FAD2,20,C0FAD3,4E,Reward
+270,Crbnkl,Carbuncle,Magic,C0FAD4,20,C0FAD5,51,Reward
+271,Syldra,Syldra,Magic,C0FAD6,20,C0FAD7,52,Reward
+272,Odin,Odin,Magic,C0FAD8,20,C0FAD9,53,Reward
+273,Phenix,Phoenix,Magic,C0FADA,20,C0FADB,54,Reward
+274,Bahmut,Bahamut,Magic,C0FADC,20,C0FADD,56,Reward
+275,Vitality,Life Song from Crescent Town bard,Magic,C0FADE,20,C0FADF,59,Reward
+276,Charm,Temptation Song at Lix,Magic,C0FAE0,20,C0FAE1,5E,Reward
+277,Love,Love Song at Istory,Magic,C0FAE2,20,C0FAE3,5D,Reward
+278,Requiem,Requiem Song at Kelb,Magic,C0FAE4,20,C0FAE5,5C,Reward
+279,Speed,Speed Song at Surgate,Magic,C0FAE6,20,C0FAE7,58,Reward
+280,Magic,Magic Song at Ancient Library,Magic,C0FAE8,20,C0FAE9,5A,Reward
+281,Power,Power Song from Crescent Town,Magic,C0FAEA,20,C0FAEB,57,Reward
+282,Hero,Hero Song from Crescent Town,Magic,C0FAEC,20,C0FAED,5B,Reward
+283,Holy,"Fork Tower, two Magics",Magic,C0FAEE,20,C0FAEF,0F,Reward
+284,Flare,"Fork Tower, two Magics",Magic,C0FAF0,20,C0FAF1,10,Reward
+285,Meteo,Meteo,Magic,C0FAF2,20,C0FAF3,45,Reward
+286,Potion,"5 potions in Wind Shrine, bottom left guy",Item,C0FAF4,40,C0FAF5,E0,Reward
+287,Potion,"8 potions, Pirate after Torna Canal Key acquired",Item,C0FAF6,40,C0FAF7,E0,Reward
+288,Staff of Light,Chancellor at Tycoon,Item,C0FAF8,40,C0FAF9,3C,Reward
+289,Mythril Helm,Magisa & Forza,Item,C0FAFA,40,C0FAFB,8C,Reward
+290,CornaJar,CornaJar at Kelb,Item,C0FAFC,40,C0FAFD,C5,Reward
+291,Ribbon,Ribbon from girl in Rugor,Item,C0FAFE,40,C0FAFF,95,Reward
+292,Mirage Vest,Mirage Vest from Chocobo Tour/Mirage Village,Item,C0FB00,40,C0FB01,AE,Reward
+293,Excalibur,12 Kuzar Events,Item,C0FB02,40,C0FB03,15,Reward
+294,Assassin,12 Kuzar Events,Item,C0FB04,40,C0FB05,0B,Reward
+295,Sasuke,12 Kuzar Events,Item,C0FB06,40,C0FB07,0C,Reward
+296,Holy Lance,12 Kuzar Events,Item,C0FB08,40,C0FB09,1F,Reward
+297,Rune Axe,12 Kuzar Events,Item,C0FB0A,40,C0FB0B,27,Reward
+298,Masamune,12 Kuzar Events,Item,C0FB0C,40,C0FB0D,2F,Reward
+299,Yoichi Bow,12 Kuzar Events,Item,C0FB0E,40,C0FB0F,45,Reward
+300,Flame Whip,12 Kuzar Events,Item,C0FB10,40,C0FB11,4E,Reward
+301,Sage's Staff,12 Kuzar Events,Item,C0FB12,40,C0FB13,3D,Reward
+302,Wizard Rod,12 Kuzar Events,Item,C0FB14,40,C0FB15,37,Reward
+303,Apollo's Harp,12 Kuzar Events,Item,C0FB16,40,C0FB17,4A,Reward
+304,Earth Bell,12 Kuzar Events,Item,C0FB18,40,C0FB19,51,Reward
+305,Shiva,Shiva,Magic,C0FB1A,20,C0FB1B,4B,Reward
+306,Ifrit,Ifrit,Magic,C0FB1C,20,C0FB1D,4D,Reward
+307,TimeMage,Water Crystal,Crystal,C0FB1E,50,C0FB1F,0B,Reward
+308,Summoner,Water Crystal,Crystal,C0FB20,50,C0FB21,0C,Reward
+309,Berserker,Water Crystal,Crystal,C0FB22,50,C0FB23,6,Reward
+310,MysticKnight,Water Crystal,Crystal,C0FB24,50,C0FB25,8,Reward
+311,RedMage,Water Crystal,Crystal,C0FB26,50,C0FB27,0E,Reward
+312,Mimic,GoGo's Crystal,Crystal,C0FB28,50,C0FB29,14,Reward
+313,Potion,Goblin Rare Steal,Item,-,40,D05001,E0,Loot
+314,Leather Cap,Goblin Common Drop,Item,-,40,D05002,89,Loot
+315,Potion,Killer Bee Common Steal,Item,-,40,D05004,E0,Loot
+316,Potion,Nut Eater Common Steal,Item,-,40,D05008,E0,Loot
+317,Potion,Nut Eater Rare Steal,Item,-,40,D05009,E0,Loot
+318,Potion,Nut Eater Common Drop,Item,-,40,D0500A,E0,Loot
+319,Potion,Stray Cat Common Steal,Item,-,40,D0500C,E0,Loot
+320,Potion,Steel Bat Common Steal,Item,-,40,D05010,E0,Loot
+321,Potion,Dearo Common Steal,Item,-,40,D05014,E0,Loot
+322,Potion,Stroper Common Steal,Item,-,40,D05018,E0,Loot
+323,Potion,Stroper Rare Steal,Item,-,40,D05019,E0,Loot
+324,Potion,Black Goblin Common Steal,Item,-,40,D0501C,E0,Loot
+325,Potion,Black Goblin Rare Steal,Item,-,40,D0501D,E0,Loot
+326,Leather Shoes,Black Goblin Common Drop,Item,-,40,D0501E,C0,Loot
+327,Potion,White Snake Common Steal,Item,-,40,D05020,E0,Loot
+328,Elixir,Mold Wind Common Drop,Item,-,40,D05026,E3,Loot
+329,Potion,ManiWizard Common Steal,Item,-,40,D05028,E0,Loot
+330,Potion,ManiWizard Rare Steal,Item,-,40,D05029,E0,Loot
+331,Rod,ManiWizard Common Drop,Item,-,40,D0502A,31,Loot
+332,HiPotion,Magic Pot Common Steal,Item,-,40,D0502C,E1,Loot
+333,Elixir,Magic Pot Common Drop,Item,-,40,D0502E,E3,Loot
+334,Potion,Sucker Common Drop,Item,-,40,D05032,E0,Loot
+335,Potion,Octoraken Common Drop,Item,-,40,D05036,E0,Loot
+336,Soft,Gatlings Common Steal,Item,-,40,D05038,EC,Loot
+337,Soft,Gatlings Common Drop,Item,-,40,D0503A,EC,Loot
+338,Potion,Bighorn Common Steal,Item,-,40,D0503C,E0,Loot
+339,Potion,Bighorn Common Drop,Item,-,40,D0503E,E0,Loot
+340,Potion,Tatu Common Steal,Item,-,40,D05040,E0,Loot
+341,Tent,Tatu Common Drop,Item,-,40,D05042,F0,Loot
+342,Potion,Bander S. Rare Steal,Item,-,40,D05045,E0,Loot
+343,Potion,Bander S. Common Drop,Item,-,40,D05046,E0,Loot
+344,Maiden's Kiss,Galura Common Steal,Item,-,40,D05048,E5,Loot
+345,Maiden's Kiss,Galura Rare Steal,Item,-,40,D05049,E5,Loot
+346,Dagger,Skeleton Common Drop,Item,-,40,D0504E,3,Loot
+347,Potion,Carcurser Common Steal,Item,-,40,D05050,E0,Loot
+348,Potion,Carcurser Rare Steal,Item,-,40,D05051,E0,Loot
+349,Elixir,Carcurser Common Drop,Item,-,40,D05052,E3,Loot
+350,Ether,UndeadRusk Common Steal,Item,-,40,D05054,E2,Loot
+351,Potion,UndeadRusk Rare Steal,Item,-,40,D05055,E0,Loot
+352,Elixir,UndeadRusk Common Drop,Item,-,40,D05056,E3,Loot
+353,Flame Scroll,PsychoHead Common Drop,Item,-,40,D0505A,FC,Loot
+354,Potion,RockGarter Rare Steal,Item,-,40,D0505D,E0,Loot
+355,Potion,Gala Cat Common Steal,Item,-,40,D05060,E0,Loot
+356,Potion,Gala Cat Rare Steal,Item,-,40,D05061,E0,Loot
+357,Soft,Cockatrice Rare Steal,Item,-,40,D05065,EC,Loot
+358,HiPotion,Blocks Common Steal,Item,-,40,D05068,E1,Loot
+359,Glasses,Blocks Rare Steal,Item,-,40,D05069,B4,Loot
+360,Potion,Elf Toad Common Drop,Item,-,40,D0506E,E0,Loot
+361,Potion,IceSoldier Common Steal,Item,-,40,D05070,E0,Loot
+362,Mythril Sword,IceSoldier Rare Steal,Item,-,40,D05071,0F,Loot
+363,RegalCut,IceSoldier Common Drop,Item,-,40,D05072,0E,Loot
+364,Rod,RikaldMage Rare Steal,Item,-,40,D05075,31,Loot
+365,Fire Rod,RikaldMage Common Drop,Item,-,40,D05076,32,Loot
+366,Mythril Knife,Wyvern Rare Steal,Item,-,40,D05079,4,Loot
+367,Potion,Wyvern Rare Drop,Item,-,40,D0507B,E0,Loot
+368,Potion,Padosule Rare Steal,Item,-,40,D0507D,E0,Loot
+369,DarkMatter,Byblos Common Steal,Item,-,40,D05080,EB,Loot
+370,LuckMallet,Byblos Rare Steal,Item,-,40,D05081,ED,Loot
+371,Protect Drink,Byblos Rare Drop,Item,-,40,D05083,F5,Loot
+372,Potion,Aegil Rare Steal,Item,-,40,D05085,E0,Loot
+373,Elixir,Zuu Common Steal,Item,-,40,D05088,E3,Loot
+374,Elixir,Zuu Common Drop,Item,-,40,D0508A,E3,Loot
+375,Potion,Wild Nack Rare Steal,Item,-,40,D0508D,E0,Loot
+376,TurtleShell,GrassTurtle Common Steal,Item,-,40,D05090,E7,Loot
+377,TurtleShell,GrassTurtle Rare Drop,Item,-,40,D05093,E7,Loot
+378,Soft,Silent Bee Common Drop,Item,-,40,D05096,EC,Loot
+379,Mythril Armor,Mithril Drgn Common Steal,Item,-,40,D05098,9D,Loot
+380,Potion,Mithril Drgn Rare Steal,Item,-,40,D05099,E0,Loot
+381,Mythril Glove,Mithril Drgn Common Drop,Item,-,40,D0509A,B6,Loot
+382,HiPotion,Ramuh Common Steal,Item,-,40,D0509C,E1,Loot
+383,HiPotion,Ramuh Rare Steal,Item,-,40,D0509D,E1,Loot
+384,Ramuh,Ramuh Rare Drop,Item,-,40,D0509F,F9,Loot
+385,Eyedrop,Crew Dust Common Steal,Item,-,40,D050A0,E9,Loot
+386,Potion,Crew Dust Rare Steal,Item,-,40,D050A1,E0,Loot
+387,HiPotion,PoItergeist Rare Steal,Item,-,40,D050A5,E1,Loot
+388,Ether,Motor Trap Rare Steal,Item,-,40,D050A9,E2,Loot
+389,Potion,Defeater Rare Steal,Item,-,40,D050AD,E0,Loot
+390,Speed Drink,Defeater Common Drop,Item,-,40,D050AE,F4,Loot
+391,Elixir,Garkimasra Common Steal,Item,-,40,D050B0,E3,Loot
+392,Protect Drink,Garkimasra Rare Steal,Item,-,40,D050B1,F5,Loot
+393,Phoenix Down,Garkimasra Common Drop,Item,-,40,D050B2,E4,Loot
+394,Potion,Sergeant Common Steal,Item,-,40,D050B4,E0,Loot
+395,Potion,Sergeant Rare Steal,Item,-,40,D050B5,E0,Loot
+396,Silver Plate,Sergeant Common Drop,Item,-,40,D050B6,A3,Loot
+397,Gaia Gear,Sorcerer Common Steal,Item,-,40,D050B8,A9,Loot
+398,Mage Masher,Sorcerer Rare Steal,Item,-,40,D050B9,6,Loot
+399,Ether,Sorcerer Common Drop,Item,-,40,D050BA,E2,Loot
+400,Potion,Karnak Rare Steal,Item,-,40,D050BD,E0,Loot
+401,Elixir,Gigas Rare Steal,Item,-,40,D050C1,E3,Loot
+402,Giant Drink,Gigas Rare Drop,Item,-,40,D050C3,F2,Loot
+403,GrnBeret,Page 32 Common Steal,Item,-,40,D050C4,97,Loot
+404,Potion,Page 32 Rare Steal,Item,-,40,D050C5,E0,Loot
+405,Potion,Page 32 Common Drop,Item,-,40,D050C6,E0,Loot
+406,Glasses,Page 64 Common Steal,Item,-,40,D050C8,B4,Loot
+407,Potion,Page 64 Rare Steal,Item,-,40,D050C9,E0,Loot
+408,Phoenix Down,Page 64 Common Drop,Item,-,40,D050CA,E4,Loot
+409,Ether,Page 128 Rare Steal,Item,-,40,D050CD,E2,Loot
+410,Potion,Page 128 Common Drop,Item,-,40,D050CE,E0,Loot
+411,Stealth Suit,Page 256 Common Steal,Item,-,40,D050D0,A4,Loot
+412,HiPotion,Page 256 Rare Steal,Item,-,40,D050D1,E1,Loot
+413,Mythril Shield,Page 256 Common Drop,Item,-,40,D050D2,84,Loot
+414,Phoenix Down,Ifrit Rare Steal,Item,-,40,D050D5,E4,Loot
+415,Flame Scroll,Ifrit Rare Drop,Item,-,40,D050D7,FC,Loot
+416,Potion,Bomb Rare Steal,Item,-,40,D050D9,E0,Loot
+417,Potion,Bomb Common Drop,Item,-,40,D050DA,E0,Loot
+418,Potion,TwinLizard Common Drop,Item,-,40,D050DE,E0,Loot
+419,War Hammer,BioSoldier Common Steal,Item,-,40,D050E0,24,Loot
+420,Battle Axe,BioSoldier Rare Steal,Item,-,40,D050E1,21,Loot
+421,Antidote,BioSoldier Common Drop,Item,-,40,D050E2,E8,Loot
+422,Silver Bow,Crescent Rare Steal,Item,-,40,D050E5,65,Loot
+423,DoomCut,Crescent Common Drop,Item,-,40,D050E6,69,Loot
+424,Speed Drink,BlackFlame Common Steal,Item,-,40,D050E8,F4,Loot
+425,Speed Drink,BlackFlame Common Drop,Item,-,40,D050EA,F4,Loot
+426,Soft,StoneGolem Rare Steal,Item,-,40,D050ED,EC,Loot
+427,HiPotion,StoneGolem Common Drop,Item,-,40,D050EE,E1,Loot
+428,DragonFang,MiniDragon Common Steal,Item,-,40,D050F0,EA,Loot
+429,Ether,Prototype Rare Steal,Item,-,40,D050F5,E2,Loot
+430,DarkMatter,Prototype Rare Drop,Item,-,40,D050F7,EB,Loot
+431,Trident,D.Chimera Common Steal,Item,-,40,D050F8,1A,Loot
+432,Phoenix Down,D.Chimera Common Drop,Item,-,40,D050FA,E4,Loot
+433,Potion,Sand Porky Rare Steal,Item,-,40,D050FD,E0,Loot
+434,Potion,Sand Porky Common Drop,Item,-,40,D050FE,E0,Loot
+435,Antidote,Sand Killer Common Drop,Item,-,40,D05102,E8,Loot
+436,Javelin,Sand Bear Common Steal,Item,-,40,D05104,17,Loot
+437,Antidote,Sand Bear Rare Drop,Item,-,40,D05107,E8,Loot
+438,Bard's Surplice,Ra Mage Rare Steal,Item,-,40,D05109,AA,Loot
+439,Elixir,Ra Mage Common Drop,Item,-,40,D0510A,E3,Loot
+440,Power Drink,LonkaKnght Common Steal,Item,-,40,D0510C,F3,Loot
+441,HiPotion,LonkaKnght Rare Steal,Item,-,40,D0510D,E1,Loot
+442,Mythril Shield,LonkaKnght Common Drop,Item,-,40,D0510E,84,Loot
+443,Soft,StonedMask Rare Steal,Item,-,40,D05111,EC,Loot
+444,Elixir,Whirl Demon Common Steal,Item,-,40,D05114,E3,Loot
+445,Potion,Whirl Demon Rare Steal,Item,-,40,D05115,E0,Loot
+446,Darkness Bow,Whirl Demon Common Drop,Item,-,40,D05116,42,Loot
+447,Lamia's Tiara,Lamia Common Steal,Item,-,40,D05118,99,Loot
+448,Maiden's Kiss,Lamia Rare Steal,Item,-,40,D05119,E5,Loot
+449,HiPotion,ArchaeToad Common Steal,Item,-,40,D0511C,E1,Loot
+450,HiPotion,Hyudora Common Steal,Item,-,40,D05120,E1,Loot
+451,Ether,Hyudora Rare Steal,Item,-,40,D05121,E2,Loot
+452,DragonFang,Hyudora Common Drop,Item,-,40,D05122,EA,Loot
+453,Killer Bow,Hydra Common Steal,Item,-,40,D05124,43,Loot
+454,Phoenix Down,Hydra Rare Drop,Item,-,40,D05127,E4,Loot
+455,Ether,Water Buzz Common Steal,Item,-,40,D05128,E2,Loot
+456,Potion,Torrent Common Steal,Item,-,40,D0512C,E0,Loot
+457,HiPotion,Torrent Rare Steal,Item,-,40,D0512D,E1,Loot
+458,Potion,Torrent Common Drop,Item,-,40,D0512E,E0,Loot
+459,Elixir,Rock Brain Common Steal,Item,-,40,D05130,E3,Loot
+460,Potion,Tarantula Rare Drop,Item,-,40,D05137,E0,Loot
+461,Spear,Jail Bear Common Steal,Item,-,40,D05138,18,Loot
+462,HiPotion,Jail Bear Common Drop,Item,-,40,D0513A,E1,Loot
+463,Phoenix Down,Lunenta Common Steal,Item,-,40,D0513C,E4,Loot
+464,Ether,Lunenta Common Drop,Item,-,40,D0513E,E2,Loot
+465,Potion,Dilure Rare Steal,Item,-,40,D05141,E0,Loot
+466,Potion,Dilure Common Drop,Item,-,40,D05142,E0,Loot
+467,Potion,Faerie Orc Common Steal,Item,-,40,D05144,E0,Loot
+468,Revivify,Faerie Orc Rare Steal,Item,-,40,D05145,E6,Loot
+469,HiPotion,Faerie Orc Common Drop,Item,-,40,D05146,E1,Loot
+470,HiPotion,Devourer Common Steal,Item,-,40,D05148,E1,Loot
+471,Antidote,Mandrake Common Steal,Item,-,40,D0514C,E8,Loot
+472,Eyedrop,Mandrake Rare Steal,Item,-,40,D0514D,E9,Loot
+473,Elixir,Kuzar Common Drop,Item,-,40,D05152,E3,Loot
+474,Soft,Cactus Common Steal,Item,-,40,D05154,EC,Loot
+475,Potion,Cactus Rare Steal,Item,-,40,D05155,E0,Loot
+476,Tent,Sand Crawl Common Steal,Item,-,40,D05158,F0,Loot
+477,Power Drink,Sand Crawl Rare Drop,Item,-,40,D0515B,F3,Loot
+478,Golden Shield,ShieldDrgn Common Steal,Item,-,40,D0515C,85,Loot
+479,Mythril Shield,ShieldDrgn Rare Steal,Item,-,40,D0515D,84,Loot
+480,Golden Shield,ShieldDrgn Common Drop,Item,-,40,D0515E,85,Loot
+481,Revivify,Blood Slime Rare Steal,Item,-,40,D05161,E6,Loot
+482,Revivify,Blood Slime Common Drop,Item,-,40,D05162,E6,Loot
+483,Potion,Acrophese Rare Steal,Item,-,40,D05165,E0,Loot
+484,HiPotion,MooglEater Common Steal,Item,-,40,D05168,E1,Loot
+485,HiPotion,Lopros Rare Steal,Item,-,40,D0516D,E1,Loot
+486,HiPotion,Lopros Common Drop,Item,-,40,D0516E,E1,Loot
+487,Tent,Skull Eater Rare Steal,Item,-,40,D05171,F0,Loot
+488,Elixir,Skull Eater Common Drop,Item,-,40,D05172,E3,Loot
+489,Potion,Aquathone Rare Steal,Item,-,40,D05175,E0,Loot
+490,Antidote,Aquathone Common Drop,Item,-,40,D05176,E8,Loot
+491,Potion,Weresnake Rare Steal,Item,-,40,D05179,E0,Loot
+492,HiPotion,Weresnake Common Drop,Item,-,40,D0517A,E1,Loot
+493,Potion,Conago Rare Steal,Item,-,40,D0517D,E0,Loot
+494,Eyedrop,Conago Common Drop,Item,-,40,D0517E,E9,Loot
+495,Maiden's Kiss,Ridicule Rare Steal,Item,-,40,D05181,E5,Loot
+496,Hero Drink,Ridicule Common Drop,Item,-,40,D05182,F6,Loot
+497,Protect Drink,Andagranda Common Drop,Item,-,40,D05186,F5,Loot
+498,Bard's Surplice,Drippy Common Steal,Item,-,40,D05188,AA,Loot
+499,Mythril Hammer,Drippy Rare Steal,Item,-,40,D05189,22,Loot
+500,Tent,Drippy Common Drop,Item,-,40,D0518A,F0,Loot
+501,HiPotion,Likaon Common Steal,Item,-,40,D0518C,E1,Loot
+502,Revivify,Likaon Common Drop,Item,-,40,D0518E,E6,Loot
+503,Soft,BoneDragon Rare Steal,Item,-,40,D05191,EC,Loot
+504,Ether,BoneDragon Common Drop,Item,-,40,D05192,E2,Loot
+505,Gale Bow,Sting Eagle Common Steal,Item,-,40,D05194,66,Loot
+506,Antidote,Sting Eagle Common Drop,Item,-,40,D05196,E8,Loot
+507,DarkMatter,ZombieDrgn Common Steal,Item,-,40,D05198,EB,Loot
+508,DragonFang,ZombieDrgn Rare Drop,Item,-,40,D0519B,EA,Loot
+509,Soft,Golem Common Steal,Item,-,40,D0519C,EC,Loot
+510,Soft,Golem Rare Steal,Item,-,40,D0519D,EC,Loot
+511,Speed Drink,Neon Rare Steal,Item,-,40,D051A1,F4,Loot
+512,Speed Drink,Neon Common Drop,Item,-,40,D051A2,F4,Loot
+513,HiPotion,Magnetes Common Drop,Item,-,40,D051A6,E1,Loot
+514,Venom Axe,Wall Knight Common Steal,Item,-,40,D051A8,25,Loot
+515,War Hammer,Wall Knight Rare Steal,Item,-,40,D051A9,24,Loot
+516,Wall Ring,Wall Knight Common Drop,Item,-,40,D051AA,CA,Loot
+517,Dream Harp,Traveler Common Steal,Item,-,40,D051AC,48,Loot
+518,Dream Harp,Traveler Common Drop,Item,-,40,D051AE,48,Loot
+519,Potion,Tricker Rare Steal,Item,-,40,D051B1,E0,Loot
+520,HiPotion,Tricker Common Drop,Item,-,40,D051B2,E1,Loot
+521,HiPotion,Gravido Common Steal,Item,-,40,D051B4,E1,Loot
+522,Gaia Gear,Gravido Common Drop,Item,-,40,D051B6,A9,Loot
+523,Partisan,Ziggurat Common Steal,Item,-,40,D051B8,1C,Loot
+524,Giant Drink,Ziggurat Common Drop,Item,-,40,D051BA,F2,Loot
+525,HiPotion,Cure Beast Common Steal,Item,-,40,D051BC,E1,Loot
+526,Elixir,Cure Beast Common Drop,Item,-,40,D051BE,E3,Loot
+527,Potion,Land Turtle Rare Steal,Item,-,40,D051C1,E0,Loot
+528,TurtleShell,Land Turtle Rare Drop,Item,-,40,D051C3,E7,Loot
+529,HiPotion,Bold Mani Common Steal,Item,-,40,D051C4,E1,Loot
+530,Revivify,Bold Mani Common Drop,Item,-,40,D051C6,E6,Loot
+531,Phoenix Down,Shoat Common Steal,Item,-,40,D051C8,E4,Loot
+532,Shoat,Shoat Rare Drop,Item,-,40,D051CB,FA,Loot
+533,Tricorn Hat,MiniMage Common Steal,Item,-,40,D051CC,91,Loot
+534,Tricorn Hat,MiniMage Common Drop,Item,-,40,D051CE,91,Loot
+535,Eyedrop,GajraGajri Rare Steal,Item,-,40,D051D1,E9,Loot
+536,Ether,GajraGajri Common Drop,Item,-,40,D051D2,E2,Loot
+537,HiPotion,Mammon Common Steal,Item,-,40,D051D4,E1,Loot
+538,HiPotion,Mammon Common Drop,Item,-,40,D051D6,E1,Loot
+539,Potion,Imp Rare Steal,Item,-,40,D051D9,E0,Loot
+540,Diamond Armlet,Imp Common Drop,Item,-,40,D051DA,B8,Loot
+541,Antidote,Wyrm Rare Steal,Item,-,40,D051DD,E8,Loot
+542,DragonFang,Wyrm Common Drop,Item,-,40,D051DE,EA,Loot
+543,HiPotion,TwinLizard Common Steal,Item,-,40,D051E0,E1,Loot
+544,Potion,TwinLizard Common Drop,Item,-,40,D051E2,E0,Loot
+545,Eyedrop,Blind Wolf Common Steal,Item,-,40,D051E4,E9,Loot
+546,Eyedrop,Blind Wolf Common Drop,Item,-,40,D051E6,E9,Loot
+547,HiPotion,Arage Common Steal,Item,-,40,D051E8,E1,Loot
+548,Potion,Arage Rare Steal,Item,-,40,D051E9,E0,Loot
+549,Phoenix Down,Arage Common Drop,Item,-,40,D051EA,E4,Loot
+550,Wall Ring,Wall Mage Common Steal,Item,-,40,D051EC,CA,Loot
+551,Ether,Wall Mage Common Drop,Item,-,40,D051EE,E2,Loot
+552,HiPotion,Magic Drgn Common Steal,Item,-,40,D051F0,E1,Loot
+553,Potion,Magic Drgn Rare Steal,Item,-,40,D051F1,E0,Loot
+554,Elixir,Magic Drgn Common Drop,Item,-,40,D051F2,E3,Loot
+555,Judgement Staff,DarkWizard Common Steal,Item,-,40,D051F4,3E,Loot
+556,Venom Rod,DarkWizard Rare Steal,Item,-,40,D051F5,35,Loot
+557,Power Staff,DarkWizard Common Drop,Item,-,40,D051F6,3A,Loot
+558,HiPotion,AdamaGolem Common Steal,Item,-,40,D051F8,E1,Loot
+559,Potion,AdamaGolem Rare Steal,Item,-,40,D051F9,E0,Loot
+560,HiPotion,AdamaGolem Common Drop,Item,-,40,D051FA,E1,Loot
+561,Phoenix Down,BandelKuar Common Steal,Item,-,40,D051FC,E4,Loot
+562,Phoenix Down,BandelKuar Common Drop,Item,-,40,D051FE,E4,Loot
+563,BeastKiller,Motordrive Common Steal,Item,-,40,D05200,5D,Loot
+564,Potion,Motordrive Rare Steal,Item,-,40,D05201,E0,Loot
+565,Hero Drink,Motordrive Common Drop,Item,-,40,D05202,F6,Loot
+566,Cabin,BlueDragon Common Steal,Item,-,40,D05204,F1,Loot
+567,DragonFang,BlueDragon Rare Steal,Item,-,40,D05205,EA,Loot
+568,DragonFang,BlueDragon Common Drop,Item,-,40,D05206,EA,Loot
+569,Flame Ring,Red Dragon Common Steal,Item,-,40,D05208,BD,Loot
+570,HiPotion,Red Dragon Rare Steal,Item,-,40,D05209,E1,Loot
+571,Elixir,Red Dragon Common Drop,Item,-,40,D0520A,E3,Loot
+572,Ether,Yellow Drgn Common Steal,Item,-,40,D0520C,E2,Loot
+573,Thunder Rod,Yellow Drgn Rare Steal,Item,-,40,D0520D,34,Loot
+574,Coral Ring,Yellow Drgn Common Drop,Item,-,40,D0520E,BE,Loot
+575,HiPotion,Sleepy Common Steal,Item,-,40,D05210,E1,Loot
+576,Healing Staff,Sleepy Rare Steal,Item,-,40,D05211,3B,Loot
+577,Leather Cap,Sleepy Common Drop,Item,-,40,D05212,89,Loot
+578,Protect Drink,Treeman Common Steal,Item,-,40,D05214,F5,Loot
+579,Power Drink,Treeman Rare Steal,Item,-,40,D05215,F3,Loot
+580,Speed Drink,Treeman Common Drop,Item,-,40,D05216,F4,Loot
+581,Soft,Hedgehog Rare Steal,Item,-,40,D05219,EC,Loot
+582,Soft,Hedgehog Common Drop,Item,-,40,D0521A,EC,Loot
+583,Antidote,Python Rare Steal,Item,-,40,D0521D,E8,Loot
+584,Eyedrop,Python Common Drop,Item,-,40,D0521E,E9,Loot
+585,HiPotion,Shadow Common Steal,Item,-,40,D05220,E1,Loot
+586,Revivify,Shadow Common Drop,Item,-,40,D05222,E6,Loot
+587,Hero Drink,Elm Gigas Common Steal,Item,-,40,D05224,F6,Loot
+588,Giant Drink,Elm Gigas Common Drop,Item,-,40,D05226,F2,Loot
+589,HiPotion,Pao Common Steal,Item,-,40,D05228,E1,Loot
+590,Potion,Pao Rare Steal,Item,-,40,D05229,E0,Loot
+591,Tent,Pao Rare Drop,Item,-,40,D0522B,F0,Loot
+592,Potion,Radiator Common Steal,Item,-,40,D0522C,E0,Loot
+593,Potion,Radiator Common Drop,Item,-,40,D0522E,E0,Loot
+594,HiPotion,Metamorpha Common Steal,Item,-,40,D05230,E1,Loot
+595,Staff,Metamorpha Rare Steal,Item,-,40,D05231,38,Loot
+596,Staff of Light,Metamorpha Common Drop,Item,-,40,D05232,3C,Loot
+597,BeastKiller,Unknown Common Steal,Item,-,40,D05234,5D,Loot
+598,Antidote,Desertpede Common Steal,Item,-,40,D05238,E8,Loot
+599,Potion,Desertpede Rare Steal,Item,-,40,D05239,E0,Loot
+600,DarkMatter,Desertpede Common Drop,Item,-,40,D0523A,EB,Loot
+601,Potion,Barette Rare Steal,Item,-,40,D0523D,E0,Loot
+602,HiPotion,Barette Common Drop,Item,-,40,D0523E,E1,Loot
+603,Thief's Glove,Sekmet Common Steal,Item,-,40,D05240,B0,Loot
+604,HiPotion,Sekmet Rare Steal,Item,-,40,D05241,E1,Loot
+605,Crystal Armor,Sekmet Common Drop,Item,-,40,D05242,A0,Loot
+606,Thornlet,BlandLamia Common Steal,Item,-,40,D05244,CC,Loot
+607,Maiden's Kiss,BlandLamia Rare Steal,Item,-,40,D05245,E5,Loot
+608,Lamia's Tiara,BlandLamia Common Drop,Item,-,40,D05246,99,Loot
+609,Power Drink,Pyra Layer Rare Steal,Item,-,40,D05249,F3,Loot
+610,Potion,Pyra Layer Common Drop,Item,-,40,D0524A,E0,Loot
+611,Protect Drink,Nile Common Drop,Item,-,40,D0524E,F5,Loot
+612,Phoenix Down,Archaesaur Common Steal,Item,-,40,D05250,E4,Loot
+613,DragonFang,Archaesaur Rare Drop,Item,-,40,D05253,EA,Loot
+614,Elixir,ZephyrZone Common Steal,Item,-,40,D05254,E3,Loot
+615,Potion,ZephyrZone Rare Steal,Item,-,40,D05255,E0,Loot
+616,Elixir,ZephyrZone Common Drop,Item,-,40,D05256,E3,Loot
+617,DarkMatter,ExdethSoul Rare Drop,Item,-,40,D0525B,EB,Loot
+618,HiPotion,Slug Common Steal,Item,-,40,D0525C,E1,Loot
+619,Potion,Slug Rare Steal,Item,-,40,D0525D,E0,Loot
+620,HiPotion,GloomWidow Common Steal,Item,-,40,D05260,E1,Loot
+621,Potion,GloomWidow Rare Steal,Item,-,40,D05261,E0,Loot
+622,DoomCut,Mukare Common Steal,Item,-,40,D05264,69,Loot
+623,Silk robe,Mukare Rare Steal,Item,-,40,D05265,A8,Loot
+624,Lumina Robe,Mukare Common Drop,Item,-,40,D05266,AB,Loot
+625,Ether,Ixecrator Common Steal,Item,-,40,D05268,E2,Loot
+626,Diamond Armlet,Ixecrator Common Drop,Item,-,40,D0526A,B8,Loot
+627,Mirage Vest,Owazoral Common Steal,Item,-,40,D0526C,AE,Loot
+628,HiPotion,Owazoral Rare Steal,Item,-,40,D0526D,E1,Loot
+629,Revivify,Owazoral Common Drop,Item,-,40,D0526E,E6,Loot
+630,Dancing Dagger,ShdwDancer Common Steal,Item,-,40,D05270,6D,Loot
+631,Power Wrist,ShdwDancer Rare Steal,Item,-,40,D05271,BA,Loot
+632,LuckMallet,ShdwDancer Common Drop,Item,-,40,D05272,ED,Loot
+633,Revivify,Cursed One Common Steal,Item,-,40,D05274,E6,Loot
+634,Revivify,Cursed One Common Drop,Item,-,40,D05276,E6,Loot
+635,Ice Shield,Slownin Common Steal,Item,-,40,D05278,CD,Loot
+636,Katana,Slownin Rare Steal,Item,-,40,D05279,29,Loot
+637,Kotetsu,Slownin Common Drop,Item,-,40,D0527A,2B,Loot
+638,Ether,TinyMage Common Steal,Item,-,40,D0527C,E2,Loot
+639,Potion,TinyMage Common Drop,Item,-,40,D0527E,E0,Loot
+640,Healing Staff,Dim Master Common Steal,Item,-,40,D05280,3B,Loot
+641,Potion,Dim Master Rare Steal,Item,-,40,D05281,E0,Loot
+642,HiPotion,Dim Master Common Drop,Item,-,40,D05282,E1,Loot
+643,Thunder Whip,Flare Common Steal,Item,-,40,D05288,4D,Loot
+644,Elixir,Flare Rare Steal,Item,-,40,D05289,E3,Loot
+645,Magus,Flare Common Drop,Item,-,40,D0528A,92,Loot
+646,Flame Shield,DuelKnight Common Steal,Item,-,40,D0528C,C4,Loot
+647,Power Drink,DuelKnight Rare Steal,Item,-,40,D0528D,F3,Loot
+648,Power Drink,DuelKnight Common Drop,Item,-,40,D0528E,F3,Loot
+649,Giant Drink,Ion Rare Steal,Item,-,40,D05291,F2,Loot
+650,Giant Drink,Ion Common Drop,Item,-,40,D05292,F2,Loot
+651,Elven Bow,Berserker Common Steal,Item,-,40,D05294,44,Loot
+652,Speed Drink,Berserker Rare Steal,Item,-,40,D05295,F4,Loot
+653,DoomCut,Berserker Common Drop,Item,-,40,D05296,69,Loot
+654,Angel Ring,Druid Common Steal,Item,-,40,D0529C,BC,Loot
+655,Potion,Druid Rare Steal,Item,-,40,D0529D,E0,Loot
+656,Phoenix Down,Druid Common Drop,Item,-,40,D0529E,E4,Loot
+657,Potion,Iron Dress Rare Steal,Item,-,40,D052A1,E0,Loot
+658,Tent,Iron Dress Common Drop,Item,-,40,D052A2,F0,Loot
+659,DblLance,Statue Common Steal,Item,-,40,D052A4,1E,Loot
+660,HiPotion,Statue Rare Steal,Item,-,40,D052A5,E1,Loot
+661,Soft,Statue Common Drop,Item,-,40,D052A6,EC,Loot
+662,HiPotion,Blizzard Common Steal,Item,-,40,D052A8,E1,Loot
+663,HiPotion,Blizzard Common Drop,Item,-,40,D052AA,E1,Loot
+664,Judgement Staff,Isteritos Common Steal,Item,-,40,D052AC,3E,Loot
+665,Antidote,Isteritos Rare Steal,Item,-,40,D052AD,E8,Loot
+666,DragonFang,Isteritos Common Drop,Item,-,40,D052AE,EA,Loot
+667,Potion,Spizner Rare Steal,Item,-,40,D052B1,E0,Loot
+668,Potion,Spizner Common Drop,Item,-,40,D052B2,E0,Loot
+669,HiPotion,Unknown Common Steal,Item,-,40,D052B4,E1,Loot
+670,Potion,Unknown Rare Steal,Item,-,40,D052B5,E0,Loot
+671,Giant Drink,Unknown Common Drop,Item,-,40,D052B6,F2,Loot
+672,HiPotion,Unknown Common Steal,Item,-,40,D052B8,E1,Loot
+673,Potion,Unknown Rare Steal,Item,-,40,D052B9,E0,Loot
+674,Power Drink,Unknown Common Drop,Item,-,40,D052BA,F3,Loot
+675,HiPotion,Unknown Common Steal,Item,-,40,D052BC,E1,Loot
+676,Potion,Unknown Rare Steal,Item,-,40,D052BD,E0,Loot
+677,Speed Drink,Unknown Common Drop,Item,-,40,D052BE,F4,Loot
+678,HiPotion,Unknown Common Steal,Item,-,40,D052C0,E1,Loot
+679,Potion,Unknown Rare Steal,Item,-,40,D052C1,E0,Loot
+680,Protect Drink,Unknown Common Drop,Item,-,40,D052C2,F5,Loot
+681,Potion,MercuryBat Rare Steal,Item,-,40,D052C5,E0,Loot
+682,HiPotion,MercuryBat Common Drop,Item,-,40,D052C6,E1,Loot
+683,Protect Drink,Coral Common Steal,Item,-,40,D052C8,F5,Loot
+684,Potion,Coral Rare Steal,Item,-,40,D052C9,E0,Loot
+685,Elixir,Tonberi Common Steal,Item,-,40,D052CC,E3,Loot
+686,Plumed Hat,Tonberi Rare Steal,Item,-,40,D052CD,90,Loot
+687,Mirage Vest,Tonberi Common Drop,Item,-,40,D052CE,AE,Loot
+688,HiPotion,Gel Water Common Steal,Item,-,40,D052D0,E1,Loot
+689,Potion,Gel Water Rare Steal,Item,-,40,D052D1,E0,Loot
+690,Speed Drink,Gel Water Common Drop,Item,-,40,D052D2,F4,Loot
+691,Hero Drink,Fall Guard Common Steal,Item,-,40,D052D4,F6,Loot
+692,Bandana,Fall Guard Rare Steal,Item,-,40,D052D5,96,Loot
+693,Kaiser Knuckles,Fall Guard Common Drop,Item,-,40,D052D6,C1,Loot
+694,ManEater,Alcumia Common Steal,Item,-,40,D052D8,6B,Loot
+695,Maiden's Kiss,Alcumia Rare Steal,Item,-,40,D052D9,E5,Loot
+696,Elixir,Alcumia Common Drop,Item,-,40,D052DA,E3,Loot
+697,DragonFang,Red Dragon Common Steal,Item,-,40,D052DC,EA,Loot
+698,Flame Scroll,Red Dragon Rare Steal,Item,-,40,D052DD,FC,Loot
+699,DarkMatter,Red Dragon Common Drop,Item,-,40,D052DE,EB,Loot
+700,DragonFang,Hydra Common Steal,Item,-,40,D052E0,EA,Loot
+701,Thunder Scroll,Hydra Rare Steal,Item,-,40,D052E1,FE,Loot
+702,DarkMatter,Hydra Common Drop,Item,-,40,D052E2,EB,Loot
+703,DragonFang,BoneDragon Common Steal,Item,-,40,D052E4,EA,Loot
+704,Water Scroll,BoneDragon Rare Steal,Item,-,40,D052E5,FD,Loot
+705,DarkMatter,BoneDragon Common Drop,Item,-,40,D052E6,EB,Loot
+706,Flame Shield,Grenade Common Steal,Item,-,40,D052E8,C4,Loot
+707,HiPotion,Grenade Rare Steal,Item,-,40,D052E9,E1,Loot
+708,HiPotion,Grenade Common Drop,Item,-,40,D052EA,E1,Loot
+709,Enhancer,SwrdDancer Common Steal,Item,-,40,D052EC,6E,Loot
+710,Mythril Helm,SwrdDancer Rare Steal,Item,-,40,D052ED,8C,Loot
+711,IceBrand,SwrdDancer Common Drop,Item,-,40,D052EE,58,Loot
+712,Angel Ring,Bardandels Common Steal,Item,-,40,D052F0,BC,Loot
+713,TurtleShell,Bardandels Rare Steal,Item,-,40,D052F1,E7,Loot
+714,Rune Chime,Bardandels Common Drop,Item,-,40,D052F2,52,Loot
+715,Magus,DoomDealer Common Steal,Item,-,40,D052F4,92,Loot
+716,Revivify,DoomDealer Rare Steal,Item,-,40,D052F5,E6,Loot
+717,Phoenix Down,DoomDealer Common Drop,Item,-,40,D052F6,E4,Loot
+718,HiPotion,Anku Heggu Common Steal,Item,-,40,D052F8,E1,Loot
+719,Potion,Anku Heggu Rare Steal,Item,-,40,D052F9,E0,Loot
+720,HiPotion,Anku Heggu Common Drop,Item,-,40,D052FA,E1,Loot
+721,Potion,Ammona Common Steal,Item,-,40,D052FC,E0,Loot
+722,HiPotion,Ammona Rare Steal,Item,-,40,D052FD,E1,Loot
+723,Revivify,Ammona Common Drop,Item,-,40,D052FE,E6,Loot
+724,Defender Sword,Land Crawl Common Steal,Item,-,40,D05300,14,Loot
+725,Ancient Sword,Land Crawl Rare Steal,Item,-,40,D05301,11,Loot
+726,Elixir,Land Crawl Common Drop,Item,-,40,D05302,E3,Loot
+727,Ribbon,Chamcubia Common Steal,Item,-,40,D05304,95,Loot
+728,Wall Ring,Chamcubia Rare Steal,Item,-,40,D05305,CA,Loot
+729,Lamia's Harp,Chamcubia Common Drop,Item,-,40,D05306,49,Loot
+730,Coral Ring,Bella Donna Common Steal,Item,-,40,D05308,BE,Loot
+731,Rainbow Dress,Bella Donna Rare Steal,Item,-,40,D05309,CF,Loot
+732,Wall Ring,Bella Donna Common Drop,Item,-,40,D0530A,CA,Loot
+733,Elf Cape,Cherie Common Steal,Item,-,40,D0530C,B2,Loot
+734,Red Shoes,Cherie Rare Steal,Item,-,40,D0530D,D0,Loot
+735,Running Shoes,Cherie Common Drop,Item,-,40,D0530E,B5,Loot
+736,Elixir,White Flame Common Steal,Item,-,40,D05310,E3,Loot
+737,Eyedrop,White Flame Rare Steal,Item,-,40,D05311,E9,Loot
+738,Ether,White Flame Common Drop,Item,-,40,D05312,E2,Loot
+739,Air Lance,MossFungus Common Steal,Item,-,40,D05314,0A,Loot
+740,HiPotion,MossFungus Rare Steal,Item,-,40,D05315,E1,Loot
+741,Antidote,MossFungus Common Drop,Item,-,40,D05316,E8,Loot
+742,Soft,Orcat Common Steal,Item,-,40,D05318,EC,Loot
+743,DarkMatter,Orcat Rare Steal,Item,-,40,D05319,EB,Loot
+744,Phoenix Down,Orcat Common Drop,Item,-,40,D0531A,E4,Loot
+745,Iron Armor,Iron Giant Common Steal,Item,-,40,D0531C,9C,Loot
+746,Iron Helm,Iron Giant Rare Steal,Item,-,40,D0531D,8B,Loot
+747,Giant Drink,Iron Giant Rare Drop,Item,-,40,D0531F,F2,Loot
+748,Thor Hammer,Death Claw Common Steal,Item,-,40,D05320,28,Loot
+749,Hero Drink,Death Claw Rare Steal,Item,-,40,D05321,F6,Loot
+750,Soft,Death Claw Common Drop,Item,-,40,D05322,EC,Loot
+751,Drain Sword,K.Behemoth Common Steal,Item,-,40,D05324,55,Loot
+752,Phoenix Down,K.Behemoth Rare Steal,Item,-,40,D05325,E4,Loot
+753,DblLance,K.Behemoth Common Drop,Item,-,40,D05326,1E,Loot
+754,Lillith Rod,Farfarerro Common Steal,Item,-,40,D05328,36,Loot
+755,Speed Drink,Farfarerro Rare Steal,Item,-,40,D05329,F4,Loot
+756,Eyedrop,Farfarerro Common Drop,Item,-,40,D0532A,E9,Loot
+757,Bone Mail,Necromancr Common Steal,Item,-,40,D0532C,BF,Loot
+758,Revivify,Necromancr Rare Steal,Item,-,40,D0532D,E6,Loot
+759,Revivify,Necromancr Common Drop,Item,-,40,D0532E,E6,Loot
+760,Forged,Ninja Common Steal,Item,-,40,D05330,2D,Loot
+761,Shuriken,Ninja Rare Steal,Item,-,40,D05331,5A,Loot
+762,Pinwheel,Ninja Common Drop,Item,-,40,D05332,5B,Loot
+763,Power Drink,Great Drgn Common Steal,Item,-,40,D05334,F3,Loot
+764,DragonFang,Great Drgn Rare Steal,Item,-,40,D05335,EA,Loot
+765,DragonFang,Great Drgn Common Drop,Item,-,40,D05336,EA,Loot
+766,Artemis Bow,AvisDragon Common Steal,Item,-,40,D05338,46,Loot
+767,Trident,AvisDragon Rare Steal,Item,-,40,D05339,1A,Loot
+768,DragonFang,AvisDragon Rare Drop,Item,-,40,D0533B,EA,Loot
+769,Aegis Shield,Gorchimera Common Steal,Item,-,40,D0533C,86,Loot
+770,HiPotion,Gorchimera Rare Steal,Item,-,40,D0533D,E1,Loot
+771,Circlet,Gorchimera Common Drop,Item,-,40,D0533E,93,Loot
+772,Ether,LevelCheck Common Steal,Item,-,40,D05340,E2,Loot
+773,Potion,LevelCheck Rare Steal,Item,-,40,D05341,E0,Loot
+774,Elixir,LevelCheck Common Drop,Item,-,40,D05342,E3,Loot
+775,Guardian,Mind Mage Common Steal,Item,-,40,D05344,7,Loot
+776,GrnBeret,Mind Mage Rare Steal,Item,-,40,D05345,97,Loot
+777,White Robe,Mind Mage Common Drop,Item,-,40,D05346,AD,Loot
+778,Cursed Ring,Fury Common Steal,Item,-,40,D05348,B3,Loot
+779,Wall Ring,Fury Rare Steal,Item,-,40,D05349,CA,Loot
+780,Black Robe,Fury Common Drop,Item,-,40,D0534A,AC,Loot
+781,Crystal Shield,Thing Common Steal,Item,-,40,D0534C,88,Loot
+782,Ether,Thing Rare Steal,Item,-,40,D0534D,E2,Loot
+783,Crystal Helm,Thing Common Drop,Item,-,40,D0534E,8F,Loot
+784,Water Scroll,Mover Common Steal,Item,-,40,D05350,FD,Loot
+785,Flame Scroll,Mover Rare Steal,Item,-,40,D05351,FC,Loot
+786,Thunder Scroll,Mover Common Drop,Item,-,40,D05352,FE,Loot
+787,Dragoon Lance,CrysDragon Common Steal,Item,-,40,D05354,20,Loot
+788,Elixir,CrysDragon Rare Steal,Item,-,40,D05355,E3,Loot
+789,Crystal Armor,CrysDragon Common Drop,Item,-,40,D05356,A0,Loot
+790,Flametongue,Achelone Common Steal,Item,-,40,D05358,57,Loot
+791,TurtleShell,Achelone Rare Steal,Item,-,40,D05359,E7,Loot
+792,Elixir,Achelone Common Drop,Item,-,40,D0535A,E3,Loot
+793,Tempest,Bodyguard Common Steal,Item,-,40,D0535C,30,Loot
+794,Cabin,Bodyguard Rare Steal,Item,-,40,D0535D,F1,Loot
+795,Strength,Bodyguard Common Drop,Item,-,40,D0535E,B9,Loot
+796,Genji Shield,Gilgamesh Rare Steal,Item,-,40,D05361,C6,Loot
+797,AntiMagic Bow,Gilgamesh Common Drop,Item,-,40,D05362,67,Loot
+798,Potion,Sahagin Common Steal,Item,-,40,D05364,E0,Loot
+799,Potion,Sahagin Rare Steal,Item,-,40,D05365,E0,Loot
+800,Potion,Sahagin Common Drop,Item,-,40,D05366,E0,Loot
+801,Potion,Th.Anemone Common Drop,Item,-,40,D0536A,E0,Loot
+802,Thunder Scroll,Th.Anemone Rare Drop,Item,-,40,D0536B,FE,Loot
+803,Soft,Sea Avis Common Steal,Item,-,40,D0536C,EC,Loot
+804,Soft,Sea Avis Common Drop,Item,-,40,D0536E,EC,Loot
+805,Trident,Corvette Common Steal,Item,-,40,D05370,1A,Loot
+806,HiPotion,Corvette Common Drop,Item,-,40,D05372,E1,Loot
+807,HiPotion,Armon Common Steal,Item,-,40,D05374,E1,Loot
+808,Antidote,Armon Rare Steal,Item,-,40,D05375,E8,Loot
+809,HiPotion,Armon Common Drop,Item,-,40,D05376,E1,Loot
+810,Potion,SeaScorpio Rare Steal,Item,-,40,D05379,E0,Loot
+811,Potion,SeaScorpio Common Drop,Item,-,40,D0537A,E0,Loot
+812,Glasses,Silvune Common Steal,Item,-,40,D0537C,B4,Loot
+813,Maiden's Kiss,Silvune Rare Steal,Item,-,40,D0537D,E5,Loot
+814,Angel Ring,Silvune Common Drop,Item,-,40,D0537E,BC,Loot
+815,Potion,Gel Fish Rare Steal,Item,-,40,D05381,E0,Loot
+816,HiPotion,Gel Fish Common Drop,Item,-,40,D05382,E1,Loot
+817,Murasume,Giant Bird Common Steal,Item,-,40,D05384,2E,Loot
+818,HiPotion,Giant Bird Rare Steal,Item,-,40,D05385,E1,Loot
+819,Giant Drink,Giant Bird Common Drop,Item,-,40,D05386,F2,Loot
+820,Defender Sword,Sea Devil Common Steal,Item,-,40,D05388,14,Loot
+821,HiPotion,Sea Devil Rare Steal,Item,-,40,D05389,E1,Loot
+822,TurtleShell,Sea Devil Common Drop,Item,-,40,D0538A,E7,Loot
+823,RuneEdge,Stingray Common Steal,Item,-,40,D0538C,56,Loot
+824,DarkMatter,Stingray Rare Steal,Item,-,40,D0538D,EB,Loot
+825,Dragon's Whisker,Stingray Common Drop,Item,-,40,D0538E,4F,Loot
+826,Potion,???? Rare Steal,Item,-,40,D05391,E0,Loot
+827,Potion,???? Common Drop,Item,-,40,D05392,E0,Loot
+828,Soft,Golem Rare Steal,Item,-,40,D05395,EC,Loot
+829,Golem,Golem Rare Drop,Item,-,40,D05397,FB,Loot
+830,Potion,Shiva Rare Steal,Item,-,40,D0539D,E0,Loot
+831,Water Scroll,Shiva Common Drop,Item,-,40,D0539E,FD,Loot
+832,Potion,Ifrit Rare Steal,Item,-,40,D053A1,E0,Loot
+833,Flame Scroll,Ifrit Common Drop,Item,-,40,D053A2,FC,Loot
+834,Potion,Ramuh Rare Steal,Item,-,40,D053A5,E0,Loot
+835,Thunder Scroll,Ramuh Common Drop,Item,-,40,D053A6,FE,Loot
+836,Potion,Gala Cat Rare Steal,Item,-,40,D053A9,E0,Loot
+837,Ether,Gala Cat Common Drop,Item,-,40,D053AA,E2,Loot
+838,Potion,Wyvern Rare Steal,Item,-,40,D053AD,E0,Loot
+839,HiPotion,Wyvern Common Drop,Item,-,40,D053AE,E1,Loot
+840,Potion,Elf Toad Rare Steal,Item,-,40,D053B1,E0,Loot
+841,Maiden's Kiss,Elf Toad Common Drop,Item,-,40,D053B2,E5,Loot
+842,Potion,Crew Dust Rare Steal,Item,-,40,D053B5,E0,Loot
+843,Eyedrop,Crew Dust Common Drop,Item,-,40,D053B6,E9,Loot
+844,Potion,Whirl Demon Rare Steal,Item,-,40,D053B9,E0,Loot
+845,Elixir,Whirl Demon Common Drop,Item,-,40,D053BA,E3,Loot
+846,Potion,ZombieDrgn Rare Steal,Item,-,40,D053BD,E0,Loot
+847,DragonFang,ZombieDrgn Common Drop,Item,-,40,D053BE,EA,Loot
+848,HiPotion,D.Chimera Rare Steal,Item,-,40,D053C1,E1,Loot
+849,Protect Drink,D.Chimera Common Drop,Item,-,40,D053C2,F5,Loot
+850,HiPotion,AdamaGolem Rare Steal,Item,-,40,D053C5,E1,Loot
+851,Soft,AdamaGolem Common Drop,Item,-,40,D053C6,EC,Loot
+852,Diamond Armor,Ziggurat Common Steal,Item,-,40,D053C8,9F,Loot
+853,Power Drink,Ziggurat Rare Steal,Item,-,40,D053C9,F3,Loot
+854,Giant Drink,Ziggurat Rare Drop,Item,-,40,D053CB,F2,Loot
+855,Hero Drink,LonkaKnght Rare Steal,Item,-,40,D053CD,F6,Loot
+856,Flame Scroll,LonkaKnght Common Drop,Item,-,40,D053CE,FC,Loot
+857,Diamond Helm,BioSoldier Common Steal,Item,-,40,D053D0,8E,Loot
+858,Antidote,BioSoldier Rare Steal,Item,-,40,D053D1,E8,Loot
+859,Venom Axe,BioSoldier Common Drop,Item,-,40,D053D2,25,Loot
+860,Eyedrop,Lunenta Rare Steal,Item,-,40,D053D5,E9,Loot
+861,Antidote,Lunenta Common Drop,Item,-,40,D053D6,E8,Loot
+862,Ether,Tote Avis Common Steal,Item,-,40,D053D8,E2,Loot
+863,Avis Killer,Tote Avis Rare Steal,Item,-,40,D053D9,68,Loot
+864,Avis Killer,Tote Avis Common Drop,Item,-,40,D053DA,68,Loot
+865,RisingSun,Belfegor Common Steal,Item,-,40,D053DC,64,Loot
+866,Full Moon,Belfegor Rare Steal,Item,-,40,D053DD,59,Loot
+867,Ice Shield,Belfegor Common Drop,Item,-,40,D053DE,CD,Loot
+868,HiPotion,Imp Common Steal,Item,-,40,D053E0,E1,Loot
+869,Potion,Imp Rare Steal,Item,-,40,D053E1,E0,Loot
+870,HiPotion,Imp Common Drop,Item,-,40,D053E2,E1,Loot
+871,HiPotion,Owazoral Common Steal,Item,-,40,D053E4,E1,Loot
+872,Potion,Owazoral Rare Steal,Item,-,40,D053E5,E0,Loot
+873,Ether,Owazoral Common Drop,Item,-,40,D053E6,E2,Loot
+874,HiPotion,Garkimasra Common Steal,Item,-,40,D053E8,E1,Loot
+875,Potion,Garkimasra Rare Steal,Item,-,40,D053E9,E0,Loot
+876,Elixir,Garkimasra Common Drop,Item,-,40,D053EA,E3,Loot
+877,HiPotion,Gabbldegak Common Steal,Item,-,40,D053EC,E1,Loot
+878,Potion,Gabbldegak Rare Steal,Item,-,40,D053ED,E0,Loot
+879,Phoenix Down,Gabbldegak Common Drop,Item,-,40,D053EE,E4,Loot
+880,HiPotion,Gil Turtle Common Steal,Item,-,40,D053F0,E1,Loot
+881,Potion,Gil Turtle Rare Steal,Item,-,40,D053F1,E0,Loot
+882,OmegaMedl,Omega Rare Drop,Item,-,40,D053F7,F8,Loot
+883,Potion,WingRaptor Rare Steal,Item,-,40,D05001,E0,Loot
+884,Phoenix Down,WingRaptor Rare Drop,Item,-,40,D05003,E4,Loot
+885,Potion,WingRaptor Rare Steal,Item,-,40,D05005,E0,Loot
+886,Phoenix Down,WingRaptor Rare Drop,Item,-,40,D05007,E4,Loot
+887,Potion,Karlabos Rare Steal,Item,-,40,D05009,E0,Loot
+888,Tent,Karlabos Rare Drop,Item,-,40,D0500B,F0,Loot
+889,Giant's Axe,Twin Tania Rare Steal,Item,-,40,D0500D,6A,Loot
+890,Murasume,Twin Tania Common Drop,Item,-,40,D0500E,2E,Loot
+891,Bronze Armor,Siren Rare Drop,Item,-,40,D05013,9B,Loot
+892,Bronze Shield,Siren Rare Drop,Item,-,40,D05017,82,Loot
+893,Power Drink,Forza Rare Drop,Item,-,40,D0501B,F3,Loot
+894,Whip,Magisa Rare Drop,Item,-,40,D0501F,4B,Loot
+895,HiPotion,Galura Common Steal,Item,-,40,D05020,E1,Loot
+896,Potion,Galura Rare Steal,Item,-,40,D05021,E0,Loot
+897,HiPotion,Galura Rare Drop,Item,-,40,D05023,E1,Loot
+898,Flame Scroll,LiquiFlame Rare Drop,Item,-,40,D05027,FC,Loot
+899,Fire Rod,LiquiFlame Rare Drop,Item,-,40,D0502B,32,Loot
+900,Fire Bow,LiquiFlame Rare Drop,Item,-,40,D0502F,3F,Loot
+901,Mythril Sword,Commander Rare Steal,Item,-,40,D05031,0F,Loot
+902,RegalCut,Commander Common Drop,Item,-,40,D05032,0E,Loot
+903,Protect Drink,AdamanTiMi Rare Steal,Item,-,40,D05041,F5,Loot
+904,TurtleShell,AdamanTiMi Rare Drop,Item,-,40,D05043,E7,Loot
+905,Ether,Flamegun Common Steal,Item,-,40,D05044,E2,Loot
+906,Potion,Flamegun Rare Steal,Item,-,40,D05045,E0,Loot
+907,Speed Drink,Flamegun Rare Drop,Item,-,40,D05047,F4,Loot
+908,Ether,Rocket Common Steal,Item,-,40,D05048,E2,Loot
+909,Potion,Rocket Rare Steal,Item,-,40,D05049,E0,Loot
+910,Protect Drink,Rocket Rare Drop,Item,-,40,D0504B,F5,Loot
+911,Wonder Wand,Exdeath Common Steal,Item,-,40,D0504C,60,Loot
+912,Phoenix Down,Exdeath Rare Steal,Item,-,40,D0504D,E4,Loot
+913,Elixir,Sol Cannon Common Steal,Item,-,40,D05050,E3,Loot
+914,Ether,Sol Cannon Rare Steal,Item,-,40,D05051,E2,Loot
+915,DarkMatter,Sol Cannon Rare Drop,Item,-,40,D05053,EB,Loot
+916,Giant Drink,ArchaeAvis Rare Drop,Item,-,40,D05057,F2,Loot
+917,Power Drink,ArchaeAvis Rare Drop,Item,-,40,D0505B,F3,Loot
+918,Speed Drink,ArchaeAvis Rare Drop,Item,-,40,D0505F,F4,Loot
+919,Protect Drink,ArchaeAvis Rare Drop,Item,-,40,D05063,F5,Loot
+920,Hero Drink,ArchaeAvis Rare Drop,Item,-,40,D05067,F6,Loot
+921,Wind Spear,Chim.Brain Common Steal,Item,-,40,D05068,1B,Loot
+922,DragonFang,Chim.Brain Rare Steal,Item,-,40,D05069,EA,Loot
+923,Phoenix Down,Chim.Brain Rare Drop,Item,-,40,D0506B,E4,Loot
+924,Earth Hammer,Titan Common Steal,Item,-,40,D0506C,26,Loot
+925,Potion,Titan Rare Steal,Item,-,40,D0506D,E0,Loot
+926,HiPotion,Titan Rare Drop,Item,-,40,D0506F,E1,Loot
+927,Eyedrop,Puroboros Common Steal,Item,-,40,D05070,E9,Loot
+928,Potion,Puroboros Common Drop,Item,-,40,D05072,E0,Loot
+929,Gaia Gear,Abductor Common Steal,Item,-,40,D05074,A9,Loot
+930,Ether,Abductor Rare Drop,Item,-,40,D05077,E2,Loot
+931,Elixir,Gilgamesh Rare Drop,Item,-,40,D0507B,E3,Loot
+932,Potion,Fishman Common Drop,Item,-,40,D0507E,E0,Loot
+933,Antidote,FlyingKillr Common Drop,Item,-,40,D05082,E8,Loot
+934,HiPotion,Lil Chariot Common Drop,Item,-,40,D05086,E1,Loot
+935,Water Scroll,NeoGalura Common Drop,Item,-,40,D0508A,FD,Loot
+936,Trident,Gilgamesh Common Steal,Item,-,40,D0508C,1A,Loot
+937,Hero Drink,Gilgamesh Rare Steal,Item,-,40,D0508D,F6,Loot
+938,Tricorn Hat,Gilgamesh Rare Drop,Item,-,40,D0508F,91,Loot
+939,Golden Shield,Tyrasaurus Common Steal,Item,-,40,D05090,85,Loot
+940,Elixir,Tyrasaurus Common Drop,Item,-,40,D05092,E3,Loot
+941,Phoenix Down,Shiva Common Steal,Item,-,40,D05094,E4,Loot
+942,HiPotion,Shiva Rare Steal,Item,-,40,D05095,E1,Loot
+943,Ice Rod,Shiva Rare Drop,Item,-,40,D05097,33,Loot
+944,Power Wrist,Abductor Common Steal,Item,-,40,D05098,BA,Loot
+945,HiPotion,Abductor Rare Steal,Item,-,40,D05099,E1,Loot
+946,Potion,Abductor Common Drop,Item,-,40,D0509A,E0,Loot
+947,Elixir,HiryuuPlant Rare Drop,Item,-,40,D0509F,E3,Loot
+948,Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050A2,E4,Loot
+949,Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050A6,E4,Loot
+950,Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050AA,E4,Loot
+951,Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050AE,E4,Loot
+952,Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050B2,E4,Loot
+953,Genji Gloves,Gilgamesh Rare Steal,Item,-,40,D050B5,C9,Loot
+954,Golden Shield,Gilgamesh Rare Drop,Item,-,40,D050B7,85,Loot
+955,GrnBeret,Enkidou Rare Steal,Item,-,40,D050B9,97,Loot
+956,Trident,Enkidou Rare Drop,Item,-,40,D050BB,1A,Loot
+957,Flail,Atmos Common Steal,Item,-,40,D050BC,5E,Loot
+958,Ether,Atmos Rare Steal,Item,-,40,D050BD,E2,Loot
+959,DarkMatter,Atmos Rare Drop,Item,-,40,D050BF,EB,Loot
+960,Elixir,Guardian Common Steal,Item,-,40,D050C0,E3,Loot
+961,Soot,Guardian Common Drop,Item,-,40,D050C2,62,Loot
+962,Elixir,Guardian Common Steal,Item,-,40,D050C4,E3,Loot
+963,Soot,Guardian Common Drop,Item,-,40,D050C6,62,Loot
+964,Elixir,Guardian Common Steal,Item,-,40,D050C8,E3,Loot
+965,Soot,Guardian Common Drop,Item,-,40,D050CA,62,Loot
+966,Elixir,Guardian Common Steal,Item,-,40,D050CC,E3,Loot
+967,Soot,Guardian Common Drop,Item,-,40,D050CE,62,Loot
+968,Giant Drink,Carbunkle Common Steal,Item,-,40,D050D0,F2,Loot
+969,Wall Ring,Carbunkle Rare Steal,Item,-,40,D050D1,CA,Loot
+970,TurtleShell,Carbunkle Common Drop,Item,-,40,D050D2,E7,Loot
+971,Giant Drink,Merugene Common Steal,Item,-,40,D050D4,F2,Loot
+972,Wall Ring,Merugene Rare Steal,Item,-,40,D050D5,CA,Loot
+973,TurtleShell,Merugene Common Drop,Item,-,40,D050D6,E7,Loot
+974,Genji Helm,Gilgamesh Rare Steal,Item,-,40,D050D9,C7,Loot
+975,Excailbur,Gilgamesh Rare Drop,Item,-,40,D050DB,5C,Loot
+976,Judgement Staff,Exdeath Common Steal,Item,-,40,D050DC,3E,Loot
+977,Elixir,Exdeath Rare Steal,Item,-,40,D050DD,E3,Loot
+978,HiPotion,Antlion Rare Steal,Item,-,40,D050E1,E1,Loot
+979,Cabin,Antlion Rare Drop,Item,-,40,D050E3,F1,Loot
+980,HiPotion,Mummy Common Steal,Item,-,40,D050E4,E1,Loot
+981,Potion,Mummy Rare Steal,Item,-,40,D050E5,E0,Loot
+982,Revivify,Mummy Common Drop,Item,-,40,D050E6,E6,Loot
+983,HiPotion,Aspis Common Steal,Item,-,40,D050E8,E1,Loot
+984,Antidote,Aspis Rare Steal,Item,-,40,D050E9,E8,Loot
+985,Antidote,Aspis Common Drop,Item,-,40,D050EA,E8,Loot
+986,Gauntlets,MachinHead Common Steal,Item,-,40,D050EC,C2,Loot
+987,Ether,MachinHead Rare Steal,Item,-,40,D050ED,E2,Loot
+988,Speed Drink,MachinHead Common Drop,Item,-,40,D050EE,F4,Loot
+989,Leather Armor,Merugene Rare Steal,Item,-,40,D050F1,9A,Loot
+990,Maiden's Kiss,Merugene Common Drop,Item,-,40,D050F2,E5,Loot
+991,Leather Cap,Merugene Rare Steal,Item,-,40,D050F5,89,Loot
+992,Maiden's Kiss,Merugene Common Drop,Item,-,40,D050F6,E5,Loot
+993,Leather Shoes,Merugene Rare Steal,Item,-,40,D050F9,C0,Loot
+994,Maiden's Kiss,Merugene Common Drop,Item,-,40,D050FA,E5,Loot
+995,Leather Shield,Merugene Rare Steal,Item,-,40,D050FD,81,Loot
+996,Maiden's Kiss,Merugene Common Drop,Item,-,40,D050FE,E5,Loot
+997,Guard Ring,Odin Common Steal,Item,-,40,D05100,AF,Loot
+998,Flame Shield,Odin Common Drop,Item,-,40,D05102,C4,Loot
+999,Phoenix Down,Gargoyle Common Steal,Item,-,40,D05104,E4,Loot
+1000,Potion,Gargoyle Rare Steal,Item,-,40,D05105,E0,Loot
+1001,HiPotion,Gargoyle Common Drop,Item,-,40,D05106,E1,Loot
+1002,Elixir,Triton Common Steal,Item,-,40,D05108,E3,Loot
+1003,Soft,Triton Rare Steal,Item,-,40,D05109,EC,Loot
+1004,Protect Drink,Triton Common Drop,Item,-,40,D0510A,F5,Loot
+1005,Elixir,Neregeid Common Steal,Item,-,40,D0510C,E3,Loot
+1006,Soft,Neregeid Rare Steal,Item,-,40,D0510D,EC,Loot
+1007,Power Drink,Neregeid Common Drop,Item,-,40,D0510E,F3,Loot
+1008,Elixir,Phobos Common Steal,Item,-,40,D05110,E3,Loot
+1009,Soft,Phobos Rare Steal,Item,-,40,D05111,EC,Loot
+1010,Giant Drink,Phobos Common Drop,Item,-,40,D05112,F2,Loot
+1011,CornaJar,Omniscient Common Steal,Item,-,40,D05114,C5,Loot
+1012,Potion,Omniscient Rare Steal,Item,-,40,D05115,E0,Loot
+1013,Pinwheel,Minotauros Common Steal,Item,-,40,D05118,5B,Loot
+1014,Leather Shoes,Minotauros Rare Steal,Item,-,40,D05119,C0,Loot
+1015,Elixir,Leviathan Rare Steal,Item,-,40,D0511D,E3,Loot
+1016,Wall Ring,Leviathan Rare Drop,Item,-,40,D0511F,CA,Loot
+1017,DarkMatter,Stalker Rare Steal,Item,-,40,D05121,EB,Loot
+1018,Gold Hairpin,Gogo Common Steal,Item,-,40,D05124,94,Loot
+1019,Leather Armor,Gogo Rare Steal,Item,-,40,D05125,9A,Loot
+1020,Tiger Mask,Gogo Common Drop,Item,-,40,D05126,C3,Loot
+1021,DragonFang,Bahamut Common Steal,Item,-,40,D05128,EA,Loot
+1022,DragonFang,Bahamut Rare Steal,Item,-,40,D05129,EA,Loot
+1023,DragonFang,Bahamut Common Drop,Item,-,40,D0512A,EA,Loot
+1024,Dragoon Lance,Jura Avis Common Steal,Item,-,40,D0512C,20,Loot
+1025,TurtleShell,Jura Avis Rare Steal,Item,-,40,D0512D,E7,Loot
+1026,DragonFang,Jura Avis Rare Drop,Item,-,40,D0512F,EA,Loot
+1027,Aegis Shield,Halicarnaso Common Steal,Item,-,40,D05130,86,Loot
+1028,Staff of Light,Halicarnaso Rare Steal,Item,-,40,D05131,3C,Loot
+1029,Elf Cape,Halicarnaso Common Drop,Item,-,40,D05132,B2,Loot
+1030,Hero Drink,Iron Claw Rare Steal,Item,-,40,D05145,F6,Loot
+1031,Glasses,Iron Claw Common Drop,Item,-,40,D05146,B4,Loot
+1032,Potion,Sergeant Rare Steal,Item,-,40,D05149,E0,Loot
+1033,Eyedrop,Sergeant Common Drop,Item,-,40,D0514A,E9,Loot
+1034,Potion,Karnak Rare Steal,Item,-,40,D0514D,E0,Loot
+1035,Potion,Karnak Common Drop,Item,-,40,D0514E,E0,Loot
+1036,Coral Sword,Crayclaw Rare Steal,Item,-,40,D05151,10,Loot
+1037,Ice Bow,Crayclaw Rare Drop,Item,-,40,D05153,40,Loot
+1038,Wall Ring,Calofisteri Common Steal,Item,-,40,D05158,CA,Loot
+1039,Plumed Hat,Calofisteri Rare Steal,Item,-,40,D05159,90,Loot
+1040,DiamndPlt,Calofisteri Common Drop,Item,-,40,D0515A,A5,Loot
+1041,Giant's Gloves,Apocalypse Common Steal,Item,-,40,D0515C,B1,Loot
+1042,Elixir,Apocalypse Rare Steal,Item,-,40,D0515D,E3,Loot
+1043,DarkHood,Apocalypse Common Drop,Item,-,40,D0515E,98,Loot
+1044,Cabin,Catastroph Common Steal,Item,-,40,D05160,F1,Loot
+1045,Elixir,Catastroph Rare Steal,Item,-,40,D05161,E3,Loot
+1046,Soft,Catastroph Rare Drop,Item,-,40,D05163,EC,Loot
+1047,Thief's Glove,Necrofobia Common Steal,Item,-,40,D05164,B0,Loot
+1048,Elixir,Necrofobia Rare Steal,Item,-,40,D05165,E3,Loot
+1049,Lumina Robe,Necrofobia Common Drop,Item,-,40,D05166,AB,Loot
+1050,Flame Shield,Twin Tania Common Steal,Item,-,40,D05168,C4,Loot
+1051,Phoenix Down,Twin Tania Rare Steal,Item,-,40,D05169,E4,Loot
+1052,Tinkerbell,Twin Tania Common Drop,Item,-,40,D0516A,53,Loot
+1053,Ether,Launcher Rare Steal,Item,-,40,D0516D,E2,Loot
+1054,HiPotion,Launcher Rare Drop,Item,-,40,D0516F,E1,Loot
+1055,Ether,Launcher Rare Steal,Item,-,40,D05171,E2,Loot
+1056,HiPotion,Launcher Rare Drop,Item,-,40,D05173,E1,Loot
+1057,Gauntlets,Gilgamesh Common Steal,Item,-,40,D05174,C2,Loot
+1058,HiPotion,Gilgamesh Rare Steal,Item,-,40,D05175,E1,Loot
+1059,Giant Drink,Carbunkle Common Steal,Item,-,40,D05178,F2,Loot
+1060,Wall Ring,Carbunkle Rare Steal,Item,-,40,D05179,CA,Loot
+1061,TurtleShell,Carbunkle Common Drop,Item,-,40,D0517A,E7,Loot
+1062,Revivify,GrandMummy Common Steal,Item,-,40,D0517C,E6,Loot
+1063,HiPotion,GrandMummy Rare Steal,Item,-,40,D0517D,E1,Loot
+1064,HiPotion,GrandMummy Rare Drop,Item,-,40,D0517F,E1,Loot
+1065,Soot,Apanda Common Steal,Item,-,40,D05180,62,Loot
+1066,Soot,Apanda Rare Steal,Item,-,40,D05181,62,Loot
+1067,Soot,Apanda Rare Drop,Item,-,40,D05183,62,Loot
+1068,Revivify,Alte Roite Common Steal,Item,-,40,D05184,E6,Loot
+1069,Potion,Alte Roite Rare Steal,Item,-,40,D05185,E0,Loot
+1070,Healing Staff,Alte Roite Common Drop,Item,-,40,D05186,3B,Loot
+1071,DarkHood,Invisible Common Steal,Item,-,40,D05188,98,Loot
+1072,Stealth Suit,Invisible Rare Steal,Item,-,40,D05189,A4,Loot
+1073,Shuriken,Abductor Common Steal,Item,-,40,D0518C,5A,Loot
+1074,HiPotion,Abductor Rare Steal,Item,-,40,D0518D,E1,Loot
+1075,Gale Bow,Abductor Common Drop,Item,-,40,D0518E,66,Loot
+1076,Soft,BandelKuar Rare Steal,Item,-,40,D05191,EC,Loot
+1077,Elixir,BandelKuar Common Drop,Item,-,40,D05192,E3,Loot
+1078,LuckMallet,LiquiFlame Rare Steal,Item,-,40,D05195,ED,Loot
+1079,Flame Scroll,LiquiFlame Common Drop,Item,-,40,D05196,FC,Loot
+1080,HiPotion,Kuzar Rare Steal,Item,-,40,D05199,E1,Loot
+1081,Phoenix Down,Kuzar Common Drop,Item,-,40,D0519A,E4,Loot
+1082,Guard Ring,Sol Cannon Common Steal,Item,-,40,D0519C,AF,Loot
+1083,Ether,Sol Cannon Rare Steal,Item,-,40,D0519D,E2,Loot
+1084,HiPotion,Sol Cannon Common Drop,Item,-,40,D0519E,E1,Loot
+1085,Elixir,Pantera Common Steal,Item,-,40,D051A0,E3,Loot
+1086,Phoenix Down,Pantera Rare Steal,Item,-,40,D051A1,E4,Loot
+1087,Dragon's Whisker,Shinryuu Common Steal,Item,-,40,D051A4,4F,Loot
+1088,DragonFang,Shinryuu Rare Steal,Item,-,40,D051A5,EA,Loot
+1089,DrgnCrest,Shinryuu Rare Drop,Item,-,40,D051A7,F7,Loot
+1090,Wall Ring,Barrier Common Steal,Item,-,40,D051A8,CA,Loot
+1091,HiPotion,Barrier Rare Steal,Item,-,40,D051A9,E1,Loot
+1092,Dragoon Lance,NeoExdeath Common Steal,Item,-,40,D051AC,20,Loot
+1093,Pinwheel,NeoExdeath Rare Steal,Item,-,40,D051B1,5B,Loot
+1094,Tempest,NeoExdeath Common Steal,Item,-,40,D051B4,30,Loot
+1095,Ragnarok,NeoExdeath Common Steal,Item,-,40,D051B8,16,Loot
+1096,Genji Armor,Gilgamesh Rare Steal,Item,-,40,D051BD,C8,Loot
+1097,Broadsword,Tule Weapon,Item,-,40,D12D41,0D,Shop
+1098,Rod,Tule Weapon,Item,-,40,D12D42,31,Shop
+1099,Staff,Tule Weapon,Item,-,40,D12D43,38,Shop
+1100,Leather Shield,Tule Armor,Item,-,40,D12D4A,81,Shop
+1101,Leather Cap,Tule Armor,Item,-,40,D12D4B,89,Shop
+1102,Leather Armor,Tule Armor,Item,-,40,D12D4C,9A,Shop
+1103,Potion,Tule Inn,Item,-,40,D12D53,E0,Shop
+1104,Tent,Tule Inn,Item,-,40,D12D54,F0,Shop
+1105,Fire,Tule Magic,Magic,-,20,D12D5C,24,Shop
+1106,Ice,Tule Magic,Magic,-,20,D12D5D,25,Shop
+1107,Bolt,Tule Magic,Magic,-,20,D12D5E,26,Shop
+1108,Cure,Tule Magic,Magic,-,20,D12D5F,12,Shop
+1109,Scan,Tule Magic,Magic,-,20,D12D60,13,Shop
+1110,Antdt,Tule Magic,Magic,-,20,D12D61,14,Shop
+1111,Dagger,Carwen Weapon,Item,-,40,D12D65,3,Shop
+1112,RegalCut,Carwen Weapon,Item,-,40,D12D66,0E,Shop
+1113,Rod,Carwen Weapon,Item,-,40,D12D67,31,Shop
+1114,Staff,Carwen Weapon,Item,-,40,D12D68,38,Shop
+1115,Bronze Shield,Carwen Armor,Item,-,40,D12D6E,82,Shop
+1116,Bronze Helm,Carwen Armor,Item,-,40,D12D6F,8A,Shop
+1117,Bronze Armor,Carwen Armor,Item,-,40,D12D70,9B,Shop
+1118,CopperPlt,Carwen Armor,Item,-,40,D12D71,A1,Shop
+1119,Cotton Robe,Carwen Armor,Item,-,40,D12D72,A7,Shop
+1120,Potion,Carwen Inn,Item,-,40,D12D77,E0,Shop
+1121,Antidote,Carwen Inn,Item,-,40,D12D78,E8,Shop
+1122,Eyedrop,Carwen Inn,Item,-,40,D12D79,E9,Shop
+1123,Maiden's Kiss,Carwen Inn,Item,-,40,D12D7A,E5,Shop
+1124,LuckMallet,Carwen Inn,Item,-,40,D12D7B,ED,Shop
+1125,Soft,Carwen Inn,Item,-,40,D12D7C,EC,Shop
+1126,Phoenix Down,Carwen Inn,Item,-,40,D12D7D,E4,Shop
+1127,Tent,Carwen Inn,Item,-,40,D12D7E,F0,Shop
+1128,Fire,Carwen Magic,Magic,-,20,D12D80,24,Shop
+1129,Ice,Carwen Magic,Magic,-,20,D12D81,25,Shop
+1130,Bolt,Carwen Magic,Magic,-,20,D12D82,26,Shop
+1131,Sleep,Carwen Magic,Magic,-,20,D12D83,28,Shop
+1132,Cure,Carwen Magic,Magic,-,20,D12D84,12,Shop
+1133,Antdt,Carwen Magic,Magic,-,20,D12D85,14,Shop
+1134,Mute,Carwen Magic,Magic,-,20,D12D86,15,Shop
+1135,Armor,Carwen Magic,Magic,-,20,D12D87,16,Shop
+1136,Battle Axe,Worus Weapon,Item,-,40,D12D89,21,Shop
+1137,RegalCut,Worus Weapon,Item,-,40,D12D8A,0E,Shop
+1138,Dagger,Worus Weapon,Item,-,40,D12D8B,3,Shop
+1139,Iron Shield,Worus Armor,Item,-,40,D12D92,83,Shop
+1140,Iron Helm,Worus Armor,Item,-,40,D12D93,8B,Shop
+1141,Iron Armor,Worus Armor,Item,-,40,D12D94,9C,Shop
+1142,Training Suit,Worus Armor,Item,-,40,D12D95,A2,Shop
+1143,Cotton Robe,Worus Armor,Item,-,40,D12D96,A7,Shop
+1144,Slow,Worus Magic,Magic,-,20,D12D9B,37,Shop
+1145,Regen,Worus Magic,Magic,-,20,D12D9C,38,Shop
+1146,Void,Worus Magic,Magic,-,20,D12D9D,39,Shop
+1147,Haste,Worus Magic,Magic,-,20,D12D9E,3A,Shop
+1148,Chocob,Worus Magic,Magic,-,20,D12D9F,48,Shop
+1149,Sylph,Worus Magic,Magic,-,20,D12DA0,49,Shop
+1150,Remora,Worus Magic,Magic,-,20,D12DA1,4A,Shop
+1151,Mythril Knife,Karnak Weapon 1,Item,-,40,D12DA4,4,Shop
+1152,Mythril Sword,Karnak Weapon 1,Item,-,40,D12DA5,0F,Shop
+1153,Mythril Hammer,Karnak Weapon 1,Item,-,40,D12DA6,22,Shop
+1154,Fire Rod,Karnak Weapon 1,Item,-,40,D12DA7,32,Shop
+1155,Ice Rod,Karnak Weapon 1,Item,-,40,D12DA8,33,Shop
+1156,Thunder Rod,Karnak Weapon 1,Item,-,40,D12DA9,34,Shop
+1157,Flail,Karnak Weapon 1,Item,-,40,D12DAA,5E,Shop
+1158,Mythril Spear,Karnak Weapon 2,Item,-,40,D12DAD,19,Shop
+1159,Kunai,Karnak Weapon 2,Item,-,40,D12DAE,5,Shop
+1160,Whip,Karnak Weapon 2,Item,-,40,D12DAF,4B,Shop
+1161,Giyaman,Karnak Weapon 2,Item,-,40,D12DB0,50,Shop
+1162,Mythril Shield,Karnak Armor,Item,-,40,D12DB6,84,Shop
+1163,Mythril Helm,Karnak Armor,Item,-,40,D12DB7,8C,Shop
+1164,Plumed Hat,Karnak Armor,Item,-,40,D12DB8,90,Shop
+1165,Mythril Armor,Karnak Armor,Item,-,40,D12DB9,9D,Shop
+1166,Silver Plate,Karnak Armor,Item,-,40,D12DBA,A3,Shop
+1167,Silk robe,Karnak Armor,Item,-,40,D12DBB,A8,Shop
+1168,Mythril Glove,Karnak Armor,Item,-,40,D12DBC,B6,Shop
+1169,Silver Armlet,Karnak Armor,Item,-,40,D12DBD,B7,Shop
+1170,Potion,Common World 1 Inn,Item,-,40,D12DBF,E0,Shop
+1171,Antidote,Common World 1 Inn,Item,-,40,D12DC0,E8,Shop
+1172,Eyedrop,Common World 1 Inn,Item,-,40,D12DC1,E9,Shop
+1173,Maiden's Kiss,Common World 1 Inn,Item,-,40,D12DC2,E5,Shop
+1174,LuckMallet,Common World 1 Inn,Item,-,40,D12DC3,ED,Shop
+1175,Soft,Common World 1 Inn,Item,-,40,D12DC4,EC,Shop
+1176,Phoenix Down,Common World 1 Inn,Item,-,40,D12DC5,E4,Shop
+1177,Tent,Common World 1 Inn,Item,-,40,D12DC6,F0,Shop
+1178,Fire2,Karnak Magic 1,Magic,-,20,D12DC8,2A,Shop
+1179,Ice2,Karnak Magic 1,Magic,-,20,D12DC9,2B,Shop
+1180,Bolt2,Karnak Magic 1,Magic,-,20,D12DCA,2C,Shop
+1181,Venom,Karnak Magic 1,Magic,-,20,D12DCB,27,Shop
+1182,Sleep,Karnak Magic 1,Magic,-,20,D12DCC,28,Shop
+1183,Fire,Karnak Magic 1,Magic,-,20,D12DCD,24,Shop
+1184,Ice,Karnak Magic 1,Magic,-,20,D12DCE,25,Shop
+1185,Bolt,Karnak Magic 1,Magic,-,20,D12DCF,26,Shop
+1186,Cure2,Karnak Magic 2,Magic,-,20,D12DD1,18,Shop
+1187,Life,Karnak Magic 2,Magic,-,20,D12DD2,19,Shop
+1188,Charm,Karnak Magic 2,Magic,-,20,D12DD3,1A,Shop
+1189,Mute,Karnak Magic 2,Magic,-,20,D12DD4,15,Shop
+1190,Armor,Karnak Magic 2,Magic,-,20,D12DD5,16,Shop
+1191,Cure,Karnak Magic 2,Magic,-,20,D12DD6,12,Shop
+1192,Scan,Karnak Magic 2,Magic,-,20,D12DD7,13,Shop
+1193,Antdt,Karnak Magic 2,Magic,-,20,D12DD8,14,Shop
+1194,Demi,Karnak Magic 3,Magic,-,20,D12DDA,3C,Shop
+1195,Stop,Karnak Magic 3,Magic,-,20,D12DDB,3D,Shop
+1196,Haste,Karnak Magic 3,Magic,-,20,D12DDC,3A,Shop
+1197,Void,Karnak Magic 3,Magic,-,20,D12DDD,39,Shop
+1198,Slow,Karnak Magic 3,Magic,-,20,D12DDE,37,Shop
+1199,Regen,Karnak Magic 3,Magic,-,20,D12DDF,38,Shop
+1200,Fire Bow,Crescent Weapon,Item,-,40,D12DE3,3F,Shop
+1201,Ice Bow,Crescent Weapon,Item,-,40,D12DE4,40,Shop
+1202,Thunder Bow,Crescent Weapon,Item,-,40,D12DE5,41,Shop
+1203,Silver Harp,Crescent Weapon,Item,-,40,D12DE6,47,Shop
+1204,Plumed Hat,Crescent Armor,Item,-,40,D12DEC,90,Shop
+1205,Bard's Surplice,Crescent Armor,Item,-,40,D12DED,AA,Shop
+1206,Flame Ring,Istory Rare,Item,-,40,D12DFE,BD,Shop
+1207,Coral Ring,Istory Rare,Item,-,40,D12DFF,BE,Shop
+1208,Angel Ring,Istory Rare,Item,-,40,D12E00,BC,Shop
+1209,Ogre Killer,Jacole Weapon,Item,-,40,D12E19,23,Shop
+1210,Coral Sword,Jacole Weapon,Item,-,40,D12E1A,10,Shop
+1211,Mage Masher,Jacole Weapon,Item,-,40,D12E1B,6,Shop
+1212,Trident,Jacole Weapon,Item,-,40,D12E1C,1A,Shop
+1213,Katana,Jacole Weapon,Item,-,40,D12E1D,29,Shop
+1214,Silver Bow,Jacole Weapon,Item,-,40,D12E1E,65,Shop
+1215,GrnBeret,Jacole Armor,Item,-,40,D12E22,97,Shop
+1216,Stealth Suit,Jacole Armor,Item,-,40,D12E23,A4,Shop
+1217,Bard's Surplice,Jacole Armor,Item,-,40,D12E24,AA,Shop
+1218,Ether,Common World 2 Inn 1,Item,-,40,D12E2B,E2,Shop
+1219,Revivify,Common World 2 Inn 1,Item,-,40,D12E2C,E6,Shop
+1220,Cabin,Common World 2 Inn 1,Item,-,40,D12E2D,F1,Shop
+1221,Giant Drink,Common World 2 Inn 1,Item,-,40,D12E2E,F2,Shop
+1222,Power Drink,Common World 2 Inn 1,Item,-,40,D12E2F,F3,Shop
+1223,Speed Drink,Common World 2 Inn 1,Item,-,40,D12E30,F4,Shop
+1224,Protect Drink,Common World 2 Inn 1,Item,-,40,D12E31,F5,Shop
+1225,Hero Drink,Common World 2 Inn 1,Item,-,40,D12E32,F6,Shop
+1226,Kunai,Lix Guild,Item,-,40,D12E34,5,Shop
+1227,Shuriken,Lix Guild,Item,-,40,D12E35,5A,Shop
+1228,Flame Scroll,Lix Guild,Item,-,40,D12E36,FC,Shop
+1229,Water Scroll,Lix Guild,Item,-,40,D12E37,FD,Shop
+1230,Thunder Scroll,Lix Guild,Item,-,40,D12E38,FE,Shop
+1231,GrnBeret,Lix Armor,Item,-,40,D12E3D,97,Shop
+1232,Stealth Suit,Lix Armor,Item,-,40,D12E3E,A4,Shop
+1233,Heal,Lix Magic,Magic,-,20,D12E46,1D,Shop
+1234,Orialcon,Rugor Weapon,Item,-,40,D12E4F,9,Shop
+1235,War Hammer,Rugor Weapon,Item,-,40,D12E50,24,Shop
+1236,Katana,Rugor Weapon,Item,-,40,D12E51,29,Shop
+1237,Slumber Sword,Rugor Weapon,Item,-,40,D12E52,13,Shop
+1238,Wind Spear,Rugor Weapon,Item,-,40,D12E53,1B,Shop
+1239,Darkness Bow,Rugor Weapon,Item,-,40,D12E54,42,Shop
+1240,Dream Harp,Rugor Weapon,Item,-,40,D12E55,48,Shop
+1241,Chain Whip,Rugor Weapon,Item,-,40,D12E56,4C,Shop
+1242,Golden Shield,Rugor Armor,Item,-,40,D12E58,85,Shop
+1243,Golden Helm,Rugor Armor,Item,-,40,D12E59,8D,Shop
+1244,GrnBeret,Rugor Armor,Item,-,40,D12E5A,97,Shop
+1245,Tricorn Hat,Rugor Armor,Item,-,40,D12E5B,91,Shop
+1246,Golden Armor,Rugor Armor,Item,-,40,D12E5C,9E,Shop
+1247,Stealth Suit,Rugor Armor,Item,-,40,D12E5D,A4,Shop
+1248,Gaia Gear,Rugor Armor,Item,-,40,D12E5E,A9,Shop
+1249,HiPotion,Common World 2 Inn 2,Item,-,40,D12E61,E1,Shop
+1250,Potion,Common World 2 Inn 2,Item,-,40,D12E62,E0,Shop
+1251,Phoenix Down,Common World 2 Inn 2,Item,-,40,D12E63,E4,Shop
+1252,Soft,Common World 2 Inn 2,Item,-,40,D12E64,EC,Shop
+1253,Maiden's Kiss,Common World 2 Inn 2,Item,-,40,D12E65,E5,Shop
+1254,LuckMallet,Common World 2 Inn 2,Item,-,40,D12E66,ED,Shop
+1255,Eyedrop,Common World 2 Inn 2,Item,-,40,D12E67,E9,Shop
+1256,Antidote,Common World 2 Inn 2,Item,-,40,D12E68,E8,Shop
+1257,Orialcon,Bal/Kelb Weapon,Item,-,40,D12E6A,9,Shop
+1258,War Hammer,Bal/Kelb Weapon,Item,-,40,D12E6B,24,Shop
+1259,Katana,Bal/Kelb Weapon,Item,-,40,D12E6C,29,Shop
+1260,Slumber Sword,Bal/Kelb Weapon,Item,-,40,D12E6D,13,Shop
+1261,Wind Spear,Bal/Kelb Weapon,Item,-,40,D12E6E,1B,Shop
+1262,Darkness Bow,Bal/Kelb Weapon,Item,-,40,D12E6F,42,Shop
+1263,Dream Harp,Bal/Kelb Weapon,Item,-,40,D12E70,48,Shop
+1264,Chain Whip,Bal/Kelb Weapon,Item,-,40,D12E71,4C,Shop
+1265,Golden Shield,Bal/Kelb Armor,Item,-,40,D12E73,85,Shop
+1266,Golden Helm,Bal/Kelb Armor,Item,-,40,D12E74,8D,Shop
+1267,GrnBeret,Bal/Kelb Armor,Item,-,40,D12E75,97,Shop
+1268,Tricorn Hat,Bal/Kelb Armor,Item,-,40,D12E76,91,Shop
+1269,Golden Armor,Bal/Kelb Armor,Item,-,40,D12E77,9E,Shop
+1270,Stealth Suit,Bal/Kelb Armor,Item,-,40,D12E78,A4,Shop
+1271,Gaia Gear,Bal/Kelb Armor,Item,-,40,D12E79,A9,Shop
+1272,Gauntlets,Bal/Kelb Armor,Item,-,40,D12E7A,C2,Shop
+1273,Kodachi,Kelb Weapon,Item,-,40,D12E7C,8,Shop
+1274,Killer Bow,Kelb Weapon,Item,-,40,D12E7D,43,Shop
+1275,Venom Rod,Kelb Weapon,Item,-,40,D12E7E,35,Shop
+1276,Shuriken,Kelb Weapon,Item,-,40,D12E7F,5A,Shop
+1277,Flame Scroll,Kelb Weapon,Item,-,40,D12E80,FC,Shop
+1278,Water Scroll,Kelb Weapon,Item,-,40,D12E81,FD,Shop
+1279,Thunder Scroll,Kelb Weapon,Item,-,40,D12E82,FE,Shop
+1280,Bandana,Kelb Armor,Item,-,40,D12E85,96,Shop
+1281,Strength,Kelb Armor,Item,-,40,D12E86,B9,Shop
+1282,Power Wrist,Kelb Armor,Item,-,40,D12E87,BA,Shop
+1283,Image,Common World 2 Magic 1,Magic,-,20,D12E8E,1B,Shop
+1284,Shell,Common World 2 Magic 1,Magic,-,20,D12E8F,1C,Shop
+1285,Heal,Common World 2 Magic 1,Magic,-,20,D12E90,1D,Shop
+1286,Drain,Common World 2 Magic 2,Magic,-,20,D12E97,2D,Shop
+1287,Break,Common World 2 Magic 2,Magic,-,20,D12E98,2E,Shop
+1288,Bio,Common World 2 Magic 2,Magic,-,20,D12E99,2F,Shop
+1289,Comet,Common World 2 Magic 3,Magic,-,20,D12EA0,3F,Shop
+1290,Slow2,Common World 2 Magic 3,Magic,-,20,D12EA1,40,Shop
+1291,Reset,Common World 2 Magic 3,Magic,-,20,D12EA2,41,Shop
+1292,Epee Sword,Surgate Weapon,Item,-,40,D12EA9,12,Shop
+1293,Gungnir,Surgate Weapon,Item,-,40,D12EAA,1D,Shop
+1294,Bizen,Surgate Weapon,Item,-,40,D12EAB,2C,Shop
+1295,Venom Axe,Surgate Weapon,Item,-,40,D12EAC,25,Shop
+1296,Golden Shield,Surgate Armor,Item,-,40,D12EB2,85,Shop
+1297,Golden Helm,Surgate Armor,Item,-,40,D12EB3,8D,Shop
+1298,Bandana,Surgate Armor,Item,-,40,D12EB4,96,Shop
+1299,Tricorn Hat,Surgate Armor,Item,-,40,D12EB5,91,Shop
+1300,Golden Armor,Surgate Armor,Item,-,40,D12EB6,9E,Shop
+1301,Strength,Surgate Armor,Item,-,40,D12EB7,B9,Shop
+1302,Gaia Gear,Surgate Armor,Item,-,40,D12EB8,A9,Shop
+1303,Gauntlets,Surgate Armor,Item,-,40,D12EB9,C2,Shop
+1304,Air Lance,Mua Weapon,Item,-,40,D12EBB,0A,Shop
+1305,Elven Bow,Mua Weapon,Item,-,40,D12EBC,44,Shop
+1306,Diamond Shield,Mua Armor,Item,-,40,D12EC4,87,Shop
+1307,Diamond Helm,Mua Armor,Item,-,40,D12EC5,8E,Shop
+1308,Tiger Mask,Mua Armor,Item,-,40,D12EC6,C3,Shop
+1309,Magus,Mua Armor,Item,-,40,D12EC7,92,Shop
+1310,Diamond Armor,Mua Armor,Item,-,40,D12EC8,9F,Shop
+1311,DiamndPlt,Mua Armor,Item,-,40,D12EC9,A5,Shop
+1312,Lumina Robe,Mua Armor,Item,-,40,D12ECA,AB,Shop
+1313,Diamond Armlet,Mua Armor,Item,-,40,D12ECB,B8,Shop
+1314,Cure3,Mua Magic 1,Magic,-,20,D12ECD,1E,Shop
+1315,Wall,Mua Magic 1,Magic,-,20,D12ECE,1F,Shop
+1316,Bersk,Mua Magic 1,Magic,-,20,D12ECF,20,Shop
+1317,Image,Mua Magic 1,Magic,-,20,D12ED0,1B,Shop
+1318,Shell,Mua Magic 1,Magic,-,20,D12ED1,1C,Shop
+1319,Heal,Mua Magic 1,Magic,-,20,D12ED2,1D,Shop
+1320,Fire3,Mua Magic 2,Magic,-,20,D12ED6,30,Shop
+1321,Ice3,Mua Magic 2,Magic,-,20,D12ED7,31,Shop
+1322,Bolt3,Mua Magic 2,Magic,-,20,D12ED8,32,Shop
+1323,Drain,Mua Magic 2,Magic,-,20,D12ED9,2D,Shop
+1324,Break,Mua Magic 2,Magic,-,20,D12EDA,2E,Shop
+1325,Bio,Mua Magic 2,Magic,-,20,D12EDB,2F,Shop
+1326,Qrter,Mua Magic 3,Magic,-,20,D12EDF,42,Shop
+1327,Hast2,Mua Magic 3,Magic,-,20,D12EE0,43,Shop
+1328,Old,Mua Magic 3,Magic,-,20,D12EE1,44,Shop
+1329,Comet,Mua Magic 3,Magic,-,20,D12EE2,3F,Shop
+1330,Slow2,Mua Magic 3,Magic,-,20,D12EE3,40,Shop
+1331,Reset,Mua Magic 3,Magic,-,20,D12EE4,41,Shop
+1332,Ether,Lix Inn,Item,-,40,D12EFA,E2,Shop
+1333,Potion,Lix Inn,Item,-,40,D12EFB,E0,Shop
+1334,Antidote,Lix Inn,Item,-,40,D12EFC,E8,Shop
+1335,Eyedrop,Lix Inn,Item,-,40,D12EFD,E9,Shop
+1336,LuckMallet,Lix Inn,Item,-,40,D12EFE,ED,Shop
+1337,Maiden's Kiss,Lix Inn,Item,-,40,D12EFF,E5,Shop
+1338,Soft,Lix Inn,Item,-,40,D12F00,EC,Shop
+1339,Tent,Lix Inn,Item,-,40,D12F01,F0,Shop
+1340,Life2,Dwarf Magic,Magic,-,20,D12F03,21,Shop
+1341,Dispel,Dwarf Magic,Magic,-,20,D12F04,23,Shop
+1342,Doom,Dwarf Magic,Magic,-,20,D12F05,34,Shop
+1343,Psych,Dwarf Magic,Magic,-,20,D12F06,35,Shop
+1344,Quick,Dwarf Magic,Magic,-,20,D12F07,46,Shop
+1345,Xzone,Dwarf Magic,Magic,-,20,D12F08,47,Shop
+1346,Earth Hammer,Dwarf Weapon,Item,-,40,D12F0C,26,Shop
+1347,Morning Star,Dwarf Weapon,Item,-,40,D12F0D,5F,Shop
+1348,AntiMagic Bow,Dwarf Weapon,Item,-,40,D12F0E,67,Shop
+1349,Forged,Dwarf Weapon,Item,-,40,D12F0F,2D,Shop
+1350,Crystal Shield,Dwarf Armor,Item,-,40,D12F15,88,Shop
+1351,Crystal Helm,Dwarf Armor,Item,-,40,D12F16,8F,Shop
+1352,DarkHood,Dwarf Armor,Item,-,40,D12F17,98,Shop
+1353,Circlet,Dwarf Armor,Item,-,40,D12F18,93,Shop
+1354,Crystal Armor,Dwarf Armor,Item,-,40,D12F19,A0,Shop
+1355,DarkSuit,Dwarf Armor,Item,-,40,D12F1A,A6,Shop
+1356,Black Robe,Dwarf Armor,Item,-,40,D12F1B,AC,Shop
+1357,White Robe,Dwarf Armor,Item,-,40,D12F1C,AD,Shop
+1358,Flametongue,Mirage Weapon,Item,-,40,D12F27,57,Shop
+1359,IceBrand,Mirage Weapon,Item,-,40,D12F28,58,Shop
+1360,Earth Hammer,Mirage Weapon,Item,-,40,D12F29,26,Shop
+1361,Morning Star,Mirage Weapon,Item,-,40,D12F2A,5F,Shop
+1362,AntiMagic Bow,Mirage Weapon,Item,-,40,D12F2B,67,Shop
+1363,Forged,Mirage Weapon,Item,-,40,D12F2C,2D,Shop
+1364,Partisan,Mirage Weapon,Item,-,40,D12F2D,1C,Shop
+1365,Pinwheel,Mirage Guild,Item,-,40,D12F30,5B,Shop
+1366,Shuriken,Mirage Guild,Item,-,40,D12F31,5A,Shop
+1367,DblLance,Mirage Guild,Item,-,40,D12F32,1E,Shop
+1368,Full Moon,Mirage Guild,Item,-,40,D12F33,59,Shop
+1369,Flame Scroll,Mirage Guild,Item,-,40,D12F34,FC,Shop
+1370,Water Scroll,Mirage Guild,Item,-,40,D12F35,FD,Shop
+1371,Thunder Scroll,Mirage Guild,Item,-,40,D12F36,FE,Shop
+1372,Crystal Shield,Mirage Armor,Item,-,40,D12F39,88,Shop
+1373,Crystal Helm,Mirage Armor,Item,-,40,D12F3A,8F,Shop
+1374,DarkHood,Mirage Armor,Item,-,40,D12F3B,98,Shop
+1375,Circlet,Mirage Armor,Item,-,40,D12F3C,93,Shop
+1376,Crystal Armor,Mirage Armor,Item,-,40,D12F3D,A0,Shop
+1377,DarkSuit,Mirage Armor,Item,-,40,D12F3E,A6,Shop
+1378,Black Robe,Mirage Armor,Item,-,40,D12F3F,AC,Shop
+1379,White Robe,Mirage Armor,Item,-,40,D12F40,AD,Shop
+1380,Running Shoes,Mirage Rare,Item,-,40,D12F42,B5,Shop
+1381,Angel Ring,Mirage Rare,Item,-,40,D12F43,BC,Shop
+1382,Flame Ring,Mirage Rare,Item,-,40,D12F44,BD,Shop
+1383,Coral Ring,Mirage Rare,Item,-,40,D12F45,BE,Shop
+1384,Lamia's Tiara,Mirage Rare,Item,-,40,D12F46,99,Shop
+1385,Angel Gwn,Mirage Rare,Item,-,40,D12F47,BB,Shop
+1386,Life2,Mirage Magic 1,Magic,-,20,D12F4B,21,Shop
+1387,Dispel,Mirage Magic 1,Magic,-,20,D12F4C,23,Shop
+1388,Doom,Mirage Magic 1,Magic,-,20,D12F4D,34,Shop
+1389,Psych,Mirage Magic 1,Magic,-,20,D12F4E,35,Shop
+1390,Quick,Mirage Magic 1,Magic,-,20,D12F4F,46,Shop
+1391,Xzone,Mirage Magic 1,Magic,-,20,D12F50,47,Shop
+1392,Size,Mirage Magic 2,Magic,-,20,D12F54,17,Shop
+1393,Toad,Mirage Magic 2,Magic,-,20,D12F55,29,Shop
+1394,Drag,Mirage Magic 2,Magic,-,20,D12F56,36,Shop
+1395,Float,Mirage Magic 2,Magic,-,20,D12F57,3B,Shop
+1396,Exit,Mirage Magic 2,Magic,-,20,D12F58,3E,Shop
+1397,Chocob,Mirage Magic 2,Magic,-,20,D12F59,48,Shop
+1398,Sylph,Mirage Magic 2,Magic,-,20,D12F5A,49,Shop
+1399,Remora,Mirage Magic 2,Magic,-,20,D12F5B,4A,Shop
+1400,Potion,Mirage Inn 1,Item,-,40,D12F5D,E0,Shop
+1401,HiPotion,Mirage Inn 1,Item,-,40,D12F5E,E1,Shop
+1402,Phoenix Down,Mirage Inn 1,Item,-,40,D12F5F,E4,Shop
+1403,Maiden's Kiss,Mirage Inn 1,Item,-,40,D12F60,E5,Shop
+1404,Antidote,Mirage Inn 1,Item,-,40,D12F61,E8,Shop
+1405,Eyedrop,Mirage Inn 1,Item,-,40,D12F62,E9,Shop
+1406,Soft,Mirage Inn 1,Item,-,40,D12F63,EC,Shop
+1407,LuckMallet,Mirage Inn 1,Item,-,40,D12F64,ED,Shop
+1408,Elixir,Mirage Inn 2,Item,-,40,D12F66,E3,Shop
+1409,Ether,Mirage Inn 2,Item,-,40,D12F67,E2,Shop
+1410,Revivify,Mirage Inn 2,Item,-,40,D12F68,E6,Shop
+1411,Giant Drink,Mirage Inn 2,Item,-,40,D12F69,F2,Shop
+1412,Power Drink,Mirage Inn 2,Item,-,40,D12F6A,F3,Shop
+1413,Speed Drink,Mirage Inn 2,Item,-,40,D12F6B,F4,Shop
+1414,Protect Drink,Mirage Inn 2,Item,-,40,D12F6C,F5,Shop
+1415,Hero Drink,Mirage Inn 2,Item,-,40,D12F6D,F6,Shop
+1416,Mythril Knife,Karnak Weapon (discount),Item,-,40,D12F6F,4,Shop
+1417,Mythril Sword,Karnak Weapon (discount),Item,-,40,D12F70,0F,Shop
+1418,Mythril Hammer,Karnak Weapon (discount),Item,-,40,D12F71,22,Shop
+1419,Fire Rod,Karnak Weapon (discount),Item,-,40,D12F72,32,Shop
+1420,Ice Rod,Karnak Weapon (discount),Item,-,40,D12F73,33,Shop
+1421,Thunder Rod,Karnak Weapon (discount),Item,-,40,D12F74,34,Shop
+1422,Flail,Karnak Weapon (discount),Item,-,40,D12F75,5E,Shop
+1423,Mythril Shield,Karnak Armor (discount),Item,-,40,D12F78,84,Shop
+1424,Mythril Helm,Karnak Armor (discount),Item,-,40,D12F79,8C,Shop
+1425,Mythril Armor,Karnak Armor (discount),Item,-,40,D12F7A,9D,Shop
+1426,Silver Plate,Karnak Armor (discount),Item,-,40,D12F7B,A3,Shop
+1427,Silk robe,Karnak Armor (discount),Item,-,40,D12F7C,A8,Shop
+1428,Mythril Glove,Karnak Armor (discount),Item,-,40,D12F7D,B6,Shop
+1429,Silver Armlet,Karnak Armor (discount),Item,-,40,D12F7E,B7,Shop
