@@ -36,8 +36,11 @@ MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
 
 class Conductor():
-    def __init__(self, random_engine, config_file="local-config.ini"):
+    def __init__(self, random_engine, fjf=False, jobpalettes=False, config_file="local-config.ini"):
         self.RE = random_engine
+        self.fjf = fjf
+        self.jobpalettes = jobpalettes
+
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
         self.conductor_config = self.config['CONDUCTOR']
@@ -54,7 +57,7 @@ class Conductor():
         self.TP = TextParser()                             #Set up Text Parser Utility Object
         
         self.difficulty = random.randint(1,10)
-        crystals = self.get_crystals()
+        crystals = self.get_crystals(fjf)
         self.starting_crystal = crystals[0]
         self.chosen_crystals = crystals[1]
         self.chosen_crystals_names = [x.reward_name for x in self.chosen_crystals]
@@ -62,12 +65,11 @@ class Conductor():
         self.exdeath_patch = ""
         self.odin_location_fix_patch = ""
         self.superbosses_spoiler = ""
-        self.job_color_palettes_patch = ""
         self.code_of_the_void = ""
 
         self.weigh_collectibles()
 
-    def get_crystals(self):
+    def get_crystals(self, fjf=False):
         crystals = self.CM.get_all_of_type(Crystal)
         starting_crystal = self.RE.choice(crystals)
         self.CM.add_to_placement_history(starting_crystal) #don't allow the starting crystal to appear anywhere in game
@@ -81,15 +83,26 @@ class Conductor():
             
         crystals = [x for x in crystals if x != starting_crystal]
 
-        crystal_count = self.RE.randint(int(self.conductor_config['STARTING_CRYSTAL_COUNT']), len(crystals))
-        crystal_count = crystal_count - (self.difficulty // 3) #TODO: bring this to config
+        if not fjf:
+            crystal_count = self.RE.randint(int(self.conductor_config['STARTING_CRYSTAL_COUNT']), len(crystals))
+            crystal_count = crystal_count - (self.difficulty // 3) #TODO: bring this to config
 
-        if crystal_count < int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT']):
-            crystal_count = int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT'])
+
+            if crystal_count < int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT']):
+                crystal_count = int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT'])
+            
+        else:
+            crystal_count = 3
 
         chosen_crystals = self.RE.sample(crystals, crystal_count)
 
+        #this pretends to have placed every job, so it won't try to place any more going forward
+        if fjf:
+            for crystal in [x for x in self.CM.get_all_of_type(Crystal) if x != starting_crystal]:
+                self.CM.add_to_placement_history(crystal)
+
         return (starting_crystal, chosen_crystals)
+
 
     def weigh_collectibles(self):
         for index, value in enumerate(self.CM.collectibles):
@@ -164,6 +177,7 @@ class Conductor():
         exdeath_rewards = {}
         for i in self.RE.sample(exdeath_list, 3):
             exdeath_rewards[i.collectible.reward_name] = i.exdeath_address
+
         self.exdeath_patch = self.TP.run_exdeath_rewards(exdeath_rewards)
 
         return num_placed_key_items
@@ -918,9 +932,15 @@ class Conductor():
         output = output + "\n;================\n"
         output = output + "org $" + self.conductor_config['STARTING_CRYSTAL_ADDRESS']
         output = output + "\ndb $" + self.starting_crystal.patch_id
-        output = output + ", $" + self.starting_crystal.starting_weapon_id
         output = output + ", $" + self.starting_crystal.starting_spell_id
-        output = output + ", $" + self.starting_crystal.starting_ability_id
+        if self.fjf:
+            for crystal in self.chosen_crystals:
+                index = self.RE.randint(0, len(crystal.starting_spell_list)-1)
+                crystal.starting_spell = crystal.starting_spell_list[index]
+                crystal.starting_spell_id = crystal.starting_spell_ids[index]
+
+                output = output + ", $" + crystal.patch_id
+                output = output + ", $" + crystal.starting_spell_id
         output = output + "\n"
         return output
 
@@ -931,6 +951,14 @@ class Conductor():
         output = output + "\nStarting spell:   " + self.starting_crystal.starting_spell
         output = output + "\nStarting ability: " + self.starting_crystal.starting_ability
         output = output + "\n-----***************************-----\n"
+        if self.fjf:
+            output = output + "Four Job Mode:"
+            for crystal in self.chosen_crystals:
+                output = output + "\n" + crystal.reward_name[:crystal.reward_name.find(" ")]
+                if crystal.starting_spell != "":
+                    output = output + " - " + crystal.starting_spell
+            output = output + "\n\n"  
+
         return output
     
 
@@ -1292,7 +1320,7 @@ class Conductor():
                 print(i.description)
         # Patch now comes first, because some functions (randomize_superbosses) now create the spoiler as part of their process
 
-        patch = ""
+        patch = "hirom\n\n"
         patch = patch + self.starting_crystal_patch()
         patch = patch + self.RM.get_patch()
         patch = patch + self.exdeath_patch
