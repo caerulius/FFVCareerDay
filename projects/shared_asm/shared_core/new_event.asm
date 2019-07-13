@@ -307,7 +307,7 @@ elseif !fourjobmode == 1
 
     ; job2
     LDX #$0000
-    LDA $E79F01
+    LDA $E79F02
     AND #$07
     tax
     LDA $C0C9B9,X
@@ -323,7 +323,7 @@ elseif !fourjobmode == 1
 
     ; job3
     LDX #$0000
-    LDA $E79F02
+    LDA $E79F04
     AND #$07
     tax
     LDA $C0C9B9,X
@@ -339,7 +339,7 @@ elseif !fourjobmode == 1
 
     ; job4
     LDX #$0000
-    LDA $E79F03
+    LDA $E79F06
     AND #$07
     tax
     LDA $C0C9B9,X
@@ -380,7 +380,7 @@ elseif !fourjobmode == 1
     rep #$20
     lda #$0000
     sep #$20
-    lda $E79F01
+    lda $E79F02
     rep #$20
     asl
     TAX
@@ -401,7 +401,7 @@ elseif !fourjobmode == 1
     rep #$20
     lda #$0000
     sep #$20
-    lda $E79F02
+    lda $E79F04
     rep #$20
     asl
     TAX
@@ -421,7 +421,7 @@ elseif !fourjobmode == 1
     rep #$20
     lda #$0000
     sep #$20
-    lda $E79F03
+    lda $E79F06
     rep #$20
     asl
     TAX
@@ -443,23 +443,79 @@ elseif !fourjobmode == 1
 
 
     ; ; set starting magic
-    ; LDA $E79F02
-    ; CMP #$FF
-    ; BEQ RandomizedJobSkipMagic
-    ; AND #$07
-    ; tax
-    ; LDA $C0C9B9,X
-    ; pha
-    ; LDA $E79F02
-    ; lsr
-    ; lsr
-    ; lsr
-    ; tax
-    ; pla
-    ; ora $0950,x
-    ; sta $0950,x
+    LDA $E79F01
+    CMP #$FF
+    BEQ RandomizedJobSkipMagic1
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F01
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0950,x
+    sta $0950,x
 
-    ; RandomizedJobSkipMagic:
+    RandomizedJobSkipMagic1:
+    
+    LDA $E79F03
+    CMP #$FF
+    BEQ RandomizedJobSkipMagic2
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F03
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0950,x
+    sta $0950,x
+
+    RandomizedJobSkipMagic2:
+    
+    
+    LDA $E79F05
+    CMP #$FF
+    BEQ RandomizedJobSkipMagic3
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F05
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0950,x
+    sta $0950,x
+
+    RandomizedJobSkipMagic3:
+    
+    
+    LDA $E79F07
+    CMP #$FF
+    BEQ RandomizedJobSkipMagic4
+    AND #$07
+    tax
+    LDA $C0C9B9,X
+    pha
+    LDA $E79F07
+    lsr
+    lsr
+    lsr
+    tax
+    pla
+    ora $0950,x
+    sta $0950,x
+
+    RandomizedJobSkipMagic4:
 
     plx
     pla
