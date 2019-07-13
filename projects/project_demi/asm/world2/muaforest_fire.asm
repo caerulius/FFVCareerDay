@@ -213,17 +213,18 @@ pad $C8DCD2
 org $C8DD49
 
 db $A4, $FE                     ;Set Event Flag 1FE
-db $D0, $81, $A0                ;(Music) 81 A0
+; db $D0, $81, $A0                ;(Music) 81 A0
 db $CD, $13, $01                ;Run event index 0113
+db $B4, $19                     ;Play Background Music As I Feel, You Feel
 db $A5, $FE                     ;Clear Event Flag 1FE
 db $82, $04                     ;Sprite 082 do event: Move Left
 db $82, $24                     ;Sprite 082 do event: face down, right hand raised in
-db $B4, $19                     ;Play Background Music As I Feel, You Feel
+db $A2, $4E
 db $D1, $00, $0E, $01           ;(Timer?) 00 0E 01
 db $A5, $FF                     ;Clear Event Flag 1FF
 
 db $A2, $74                     ;Set Event Flag 074     Event flags for showing branch to enter final area
 db $A5, $C8                     ;Clear Event Flag 1C8   Event flags for showing branch to enter final area
-
+db $FF
 padbyte $00
 pad $C8DD61
