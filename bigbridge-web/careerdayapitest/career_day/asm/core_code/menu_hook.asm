@@ -157,6 +157,7 @@ PHY
 ; due to the index system and ROM data, the game automatically copies the "1 2 3 4 5 6 " twice from ROM, so it's not possible to isolate "1 2 3" for walk speed
 ; therefore, we use vram to block it out, which is only active in the config menu 
 
+
 sep #$20
 lda !configmenucheck ; load config menu id
 CMP #$06 ; if anything else, branch 

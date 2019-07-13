@@ -178,6 +178,11 @@ def add_header(byte_list):
     return FAKE_HEADER + byte_list
 
 def patch_careerday(filename, fjf):
+    if fjf:
+        fjf = 1
+    else:
+        fjf = 0
+        
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
 --define passages=1 --define double_atb=0 --define boss_exp=1 --define fourjobmode={} \
 --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, MAIN_PATCH, filename)
