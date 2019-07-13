@@ -113,7 +113,7 @@ def patch_and_return():
         patch_careerday(filename, data["fjf"])
 
         random.seed(seed)
-        C = Conductor(random, fjf=data["fjf"])
+        C = Conductor(random, fjf=data["fjf"], jobpalettes = data['jobpalette'])
         spoilerandpatch = C.randomize()
 
         spoiler_file_name = "CareerDay-{}-spoiler.txt".format(seed)

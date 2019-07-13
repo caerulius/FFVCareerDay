@@ -37,9 +37,12 @@ MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
 
 class Conductor():
-    def __init__(self, random_engine, fjf=False, config_file="local-config.ini"):
+    def __init__(self, random_engine, fjf=False, jobpalettes=False, config_file="local-config.ini"):
         self.RE = random_engine
         self.fjf = fjf
+        self.jobpalettes = jobpalettes
+
+        print(self.jobpalettes)
 
         self.config = configparser.ConfigParser()
         self.config.read(config_file)

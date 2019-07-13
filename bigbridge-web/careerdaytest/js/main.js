@@ -98,6 +98,7 @@ function apiCall(data){
 	var postData = {
 		"seed": $('#seed').val(),
 		"fjf": $('#fjf').prop("checked"),
+		"jobpalette": $('#jobpalette').prop("checked"),
 		"fileLocation": data.Location
 	}
 	$.post(url, postData, function(data){
