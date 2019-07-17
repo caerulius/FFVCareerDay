@@ -97,6 +97,8 @@ function apiCall(data){
 	var myFormData = new FormData();
 	var postData = {
 		"seed": $('#seed').val(),
+		"fjf": $('#fjf').is(':checked'),
+		"jobpalette": $('#jobpalette').is(':checked'),
 		"fileLocation": data.Location
 	}
 	$.post(url, postData, function(data){

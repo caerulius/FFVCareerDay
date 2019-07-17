@@ -6,6 +6,11 @@ incsrc core_code/init.asm
 incsrc core_code/relocate_conditional_events.asm
 incsrc ../../shared_asm/data_tables/starting_stats.asm
 
+if !fourjobmode == 1
+	incsrc open_world/4_job_lock.asm
+endif
+
+
 ; world 1                                   Destinations:
 incsrc world1/tycoon_meteor_01_mount.asm
 incsrc world1/tycoon_meteor_02_mount.asm
@@ -259,6 +264,7 @@ incsrc open_world/bal_castle_timerguard.asm
 incsrc open_world/phoenix_tower.asm
 incsrc world2/mooglewaterway_encounters.asm
 
+
 ; text tables
 incsrc ../../shared_asm/text_tables/destination_table.asm
 incsrc ../../shared_asm/text_tables/ability_shop_table.asm
@@ -275,6 +281,7 @@ incsrc ../../shared_asm/data_tables/progressive_ability_table.asm
 incsrc ../../shared_asm/data_tables/progressive_magic_table.asm
 incsrc ../../shared_asm/data_tables/magic_ability_crystal_shop_prices.asm
 incsrc ../../shared_asm/data_tables/original_magic_prices.asm
+incsrc ../../shared_asm/data_tables/shop_prices.asm
 incsrc ../../shared_asm/data_tables/exp_table_lv50_modified.asm
 
 incsrc ../../shared_asm/colors/galuf_mimic.asm

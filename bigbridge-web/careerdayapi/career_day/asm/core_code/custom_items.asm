@@ -11,9 +11,35 @@ JML AllowItemWarping
 org !ADDRESS_customitem1
 CustomItem:
 
-; Load in A
+if !fourjobmode == 1
+
+    ; Load in A
+    LDA $7A00,X
+
+	cmp #$EE ; warpshard
+	beq CustomItemTestFourJob
+	cmp #$F0 ; tent
+	beq CustomItemTestFourJob
+	cmp #$F1 ; cabin
+	beq CustomItemTestFourJob
+	bne ContinueCustomItemStart1
+
+	CustomItemTestFourJob:
+	JSL FourJobSubroutineCheck
+	CMP #$01 ; success case
+	BEQ ContinueCustomItemStart1
+	; failure case 
+	JMP ProceedRejectedItemFinish
+	
+	ContinueCustomItemStart1:
+	; proceed as usual if conditions are met
+endif 
+
+
+; Load in A 
 LDA $7A00,X
 ; If specific conditions met, do something else
+
 
 ; Using $EE for custom item 1
 CMP #$EE
@@ -257,6 +283,19 @@ ProceedRejectedItemFinish:
 sep #$20
 ; Load in specifically omegamedl for failed item use
 LDA #$F8
+
+; play sound
+LDA #$6E ; <<<< Change this for the sound effect. Refer to event_data.py in the Event Parser subdir
+STA $1D01
+LDA #$02
+STA $1D00
+LDA #$0F
+STA $1D02
+LDA #$88
+STA $1D03
+JSL $C40004
+
+
 ; Original code and branch
 STA $29E7
 PHX
@@ -294,9 +333,36 @@ JML $C0012B
 
 
 AllowItemWarping:
+
+
+
+
 STA $39
+
+
+; TO DO
+; You hooked in here (the magic warp event switcher), which is perhaps too late into the chain
+; for denying magic from being cast
+; Try hooking into the magic menu earlier when the game
+; is validating stuff like Time Mage ability, sufficient magic
+; then reject there if four job conditions aren't met 
+ 
+if !fourjobmode == 1
+	CMP #$3E
+	BNE ContinueExitSpellFourJob
+	; if it is exit spell, do the check
+	JSL FourJobSubroutineCheck
+	CMP #$01 ; success case
+	BEQ ContinueAllowItemWarping1
+	; failure case defaults 
+    BNE BranchToItemWarpClause2
+    
+	ContinueExitSpellFourJob:
+endif
+
 CMP #$EE ; custom item1 
 BEQ BranchToItemWarpClause
+ContinueAllowItemWarping1:
 LDA $44
 AND #$02
 BEQ BranchToItemWarpClause2

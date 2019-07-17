@@ -65,7 +65,7 @@
 	<section class="main-section">
 		<!--main-section-start-->
 		<div class="container">
-			<h2>Generate Randomized FF5 Rom (v0.73.0)</h2>
+			<h2>Generate Randomized FF5 Rom (v0.74.0)</h2>
 			<input type="file" accept=".smc, .sfc" class="file-browse" id="fileupload"/>
 			<label for="fileupload"><i class="fa fa-upload"></i>  Browse</label>
 			<div class="file-info" id="file-info">Upload a Final Fantasy 5 ROM, Japanese or patched with the RPGe Translation</div><br/>
@@ -81,6 +81,26 @@
 					<h6><button onclick="generate()" disabled="disabled" class="link servicelink big-download" id="generate">Generate</button></h6>
 					<img src="img/spinner.gif" id="spinner" style="display:none" class=""/>
 					<h6><button style="display:none" class="link servicelink big-download" id="download"><i class="fa fa-1x fa-download"></i> Download</button></h6>
+				</div>
+			</div>
+			<hr style="border-top: dashed 6px">
+			<div class="row">
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="fjf">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						Four Job Mode: Start with four jobs and never receive more. All jobs must be represented at all times.
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="jobpalette">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						Randomize job color palettes: Colors of job palettes are randomized among all characters and jobs
+					</label>
 				</div>
 			</div>
 
