@@ -41,10 +41,6 @@ class Conductor():
         self.fjf = fjf
         self.jobpalettes = jobpalettes
 
-        print(fjf)
-        print(jobpalettes)
-        print(type(fjf))
-
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
         self.conductor_config = self.config['CONDUCTOR']
