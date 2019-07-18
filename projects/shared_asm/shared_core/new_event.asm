@@ -312,7 +312,7 @@ elseif !fourjobmode == 1
     tax
     LDA $C0C9B9,X
     pha
-    LDA $E79F01
+    LDA $E79F02
     lsr
     lsr
     lsr
@@ -328,7 +328,7 @@ elseif !fourjobmode == 1
     tax
     LDA $C0C9B9,X
     pha
-    LDA $E79F02
+    LDA $E79F04
     lsr
     lsr
     lsr
@@ -344,7 +344,7 @@ elseif !fourjobmode == 1
     tax
     LDA $C0C9B9,X
     pha
-    LDA $E79F03
+    LDA $E79F06
     lsr
     lsr
     lsr

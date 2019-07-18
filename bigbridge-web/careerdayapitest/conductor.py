@@ -901,7 +901,7 @@ class Conductor():
         
     def randomize_job_color_palettes(self):
         if True: # Future - flag for if all job palettes shuffled (for all chars and jobs)
-            palettes = self.DM.files['job_color_palettes']['byte_string'].to_list()
+            palettes = list(self.DM.files['job_color_palettes']['byte_string'])
             random.shuffle(palettes)
             output_str = "\n\n; JOB COLOR PALETTES \n\norg $D4A3C0\ndb "
             for palette in palettes:
