@@ -42,6 +42,7 @@
 !ADDRESS_keyitems = $F00A00
 !ADDRESS_xycoordhook = $F01900
 !ADDRESS_keyitemlocks = $F01400
+!ADDRESS_menusummonsfix = $F01200
 !ADDRESS_newevent_randomstart = $F01A00
 !ADDRESS_PROJECT_DEMI_DUMMYSPACE = $F01C00
 

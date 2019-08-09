@@ -244,6 +244,7 @@ def run_pivots(df_rewards,df_shops):
     df_rewards_value = df_rewards.copy()
     
     # Average rewards value (1-4)
+
     df_rewards = pd.merge(df_rewards,df_all,left_on="reward",right_on="readable_name")
     df_rewards.pivot_table(index=['check','reward'],values='value',aggfunc='count').to_csv('log_analysis_render/rewards_count.csv')
     df1 = df_rewards.pivot_table(index=['check'],values='value',aggfunc=np.average)

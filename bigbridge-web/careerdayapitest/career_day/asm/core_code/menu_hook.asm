@@ -130,11 +130,24 @@ JML $c0cbc5
 
 
 
+; menu fix for resetting shop hook for $C0 value
+; this allows summon items to properly award
 
+; 0001C7 has the subroutine jumper  
 
+org $c2a033
+JML !ADDRESS_menusummonsfix
 
+org !ADDRESS_menusummonsfix
 
+lda #$00
+sta $7E2802
 
+; original code
+lda $35
+sta $44 
+lda #$01
+JML $c2a039
 
 
 

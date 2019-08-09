@@ -252,10 +252,10 @@ class CollectibleManager():
     def get_by_name(self, name):
         if name == "New":
             return None
-        best_match = None
         for i in self.collectibles:
             if name == i.reward_name:
                 return i
+        # print("DID NOT RETURN A COLLECTIBLE: name: "+str(name))
         return None
 
     def get_by_id_and_type(self, reward_id, reward_type):

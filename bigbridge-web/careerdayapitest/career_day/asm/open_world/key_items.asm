@@ -87,6 +87,9 @@ KeyItemAdamantite:
 LDA #$04
 LDX #$0053
 JSL SetKeyItemBits
+LDA #$01
+LDX #$00AF
+JSL SetKeyItemBits
 
 
 RTL

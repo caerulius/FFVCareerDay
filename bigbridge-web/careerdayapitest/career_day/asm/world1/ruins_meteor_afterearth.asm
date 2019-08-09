@@ -100,7 +100,7 @@ db $03                          ;Player Move Down
 db $80, $12                     ;Sprite 080 do event: face right, standing
 db $81, $12                     ;Sprite 081 do event: face right, standing
 db $83, $12                     ;Sprite 083 do event: face right, standing
-db $A4, $EF                     ;Turn on bit 80 at address 0x7e0a51
+; db $A4, $EF                     ;Turn on bit 80 at address 0x7e0a51. Disabled for world locking
 db $FF                          ;End Event
 
 pad $C8DD84

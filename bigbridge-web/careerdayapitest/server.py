@@ -110,10 +110,17 @@ def patch_and_return():
 
         headers_and_translate(filename, reheader, rpge)
 
-        patch_careerday(filename, data["fjf"])
+        patch_careerday(filename, data["fjf"], data['world_lock'])
 
         random.seed(seed)
-        C = Conductor(random, fjf=data["fjf"], jobpalettes = data['jobpalette'])
+        # We're going to pass in conductor_config into Conductor() object now
+        # Any configuration for new parameters belong here
+        conductor_config = {
+                            'fjf':          data["fjf"], 
+                            'jobpalettes':  data['jobpalette']
+							'world_lock':   data['world_lock']
+                            }
+        C = Conductor(random, conductor_config)
         spoilerandpatch = C.randomize()
 
         spoiler_file_name = "CareerDay-{}-spoiler.txt".format(seed)
@@ -172,20 +179,28 @@ def headers_and_translate(filename, reheader, rpge):
         logging.error("RPGe Patch Missing. Verify rpge.ips file exists in patches directory")
     except Exception as e:
         logging.error("Error applying RPGe Translation Patch")
-        logging.error("Unknown exception...")
+        logging.error("Unknown exception: "+str(e))
 
 def add_header(byte_list):
     return FAKE_HEADER + byte_list
 
-def patch_careerday(filename, fjf):
-    if fjf:
-        fjf = 1
-    else:
-        fjf = 0
+def bool_to_int(passed_bool):
+	if passed_bool:
+		return 1
+	elif passed_bool == False:
+		return 0
+	else:
+		logging.error("Passed argument was not a boolean: "+str(passed_bool))
+	
+def patch_careerday(filename, fjf, world_lock):
+    fjf = bool_to_int(fjf)
+	# world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
+	world_lock = int(world_lock)
+
         
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
---define passages=1 --define double_atb=0 --define boss_exp=1 --define fourjobmode={} \
---fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, MAIN_PATCH, filename)
+--define passages=1 --define double_atb=0 --define boss_exp=1 --define fourjobmode={} --define world_lock={} \
+--fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, world_lock, MAIN_PATCH, filename)
 
     logging.error(command)
     

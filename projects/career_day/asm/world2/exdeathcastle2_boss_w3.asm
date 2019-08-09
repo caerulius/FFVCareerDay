@@ -91,6 +91,7 @@ db $CB, $49, $00                ;Clear Flag 2/3/4/5/49 00
 db $CB, $30, $00                ;Clear Flag 2/3/4/5/30 00
 db $A5, $9A                     ;Clear Event Flag 19A
 db $A2, $CC						; CUSTOM FLAG for final exdeath death phase 1
+db $CA, $DA, $02            ; set address 000AAF bit OFF 02. ENABLE world 3
 db $CA, $73, $02                ;Set Flag 2/3/4/5/73 02
 
 

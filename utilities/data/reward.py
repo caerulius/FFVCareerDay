@@ -25,6 +25,17 @@ class Reward:
         else:
             self.required_key_items = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
                                         self.required_key_items.strip('][').split(',')]
+        if type(self.required_key_items_lock1) == float:
+            self.required_key_items_lock1 = None
+        else:
+            self.required_key_items_lock1 = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
+                                        self.required_key_items_lock1.strip('][').split(',')]
+        if type(self.required_key_items_lock2) == float:
+            self.required_key_items_lock2 = None
+        else:
+            self.required_key_items_lock2 = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
+                                        self.required_key_items_lock2.strip('][').split(',')]
+            
         self.collectible = collectible_manager.get_by_name(self.original_reward)
         self.mib_type = None #keep a byte for the monster in a box type, override the type in the asar_output if exists
         self.randomized = False
@@ -94,10 +105,11 @@ class RewardManager:
         for i in [x for x in self.rewards if str(type(x.collectible)) == "<class 'collectible.KeyItem'>"]:
             output = output + i.short_output + "\n"
         output = output + "-----*********-----\n\n\n"
-
-        output = output +  "-----CHESTS AND EVENTS-----\n"
+        
+        output = output + "-----CHESTS AND EVENTS-----\n"
         for i in [x for x in self.rewards if str(type(x.collectible)) != "<class 'collectible.KeyItem'>"]:
             output = output + i.short_output + "\n"
         output = output + "-----****************-----\n"
+
 
         return output
