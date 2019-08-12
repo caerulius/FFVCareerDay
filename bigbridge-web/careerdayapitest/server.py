@@ -131,7 +131,7 @@ def patch_and_return():
         with open(spoiler_file_name, 'w') as f:
             f.write(spoilerandpatch[0].replace('\n', '\r\n'))
 
-        patch_random(filename, patch_file_name)
+        patch_random(filename, patch_file_name);
 
         file_list = []
         file_list.append(filename)

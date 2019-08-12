@@ -50,7 +50,7 @@ $(document).ready( function() {
     });
 });
 
-var url = "/careerdayapitest/";
+var url = "/careerdayapi/";
 var baseBucketUrl = 'https://s3-us-west-1.amazonaws.com/bigbridgecareerday/';
 var spinnerHtml = "<img src='img/spinner.gif'></img>";
 
@@ -95,10 +95,12 @@ function uploadToS3(file){
 
 function apiCall(data){
 	var myFormData = new FormData();
+
 	var postData = {
 		"seed": $('#seed').val(),
 		"fjf": $('#fjf').is(':checked'),
 		"jobpalette": $('#jobpalette').is(':checked'),
+		"world_lock": $("input:radio[name=world_lock]:checked").val(),
 		"fileLocation": data.Location
 	}
 	$.post(url, postData, function(data){
