@@ -50,7 +50,7 @@ $(document).ready( function() {
     });
 });
 
-var url = "/careerdayapi/";
+var url = "/careerdayapitest/";
 var baseBucketUrl = 'https://s3-us-west-1.amazonaws.com/bigbridgecareerday/';
 var spinnerHtml = "<img src='img/spinner.gif'></img>";
 

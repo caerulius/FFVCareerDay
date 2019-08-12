@@ -117,8 +117,8 @@ def patch_and_return():
         # Any configuration for new parameters belong here
         conductor_config = {
                             'fjf':          data["fjf"], 
-                            'jobpalettes':  data['jobpalette']
-							'world_lock':   data['world_lock']
+                            'jobpalettes':  data['jobpalette'],
+                            'world_lock':   data['world_lock']
                             }
         C = Conductor(random, conductor_config)
         spoilerandpatch = C.randomize()
@@ -185,17 +185,17 @@ def add_header(byte_list):
     return FAKE_HEADER + byte_list
 
 def bool_to_int(passed_bool):
-	if passed_bool:
-		return 1
-	elif passed_bool == False:
-		return 0
-	else:
-		logging.error("Passed argument was not a boolean: "+str(passed_bool))
-	
+    if passed_bool:
+        return 1
+    elif passed_bool == False:
+        return 0
+    else:
+        logging.error("Passed argument was not a boolean: "+str(passed_bool))
+    
 def patch_careerday(filename, fjf, world_lock):
     fjf = bool_to_int(fjf)
-	# world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
-	world_lock = int(world_lock)
+    # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
+    world_lock = int(world_lock)
 
         
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
