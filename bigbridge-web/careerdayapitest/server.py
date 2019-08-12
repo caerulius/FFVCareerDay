@@ -184,16 +184,22 @@ def headers_and_translate(filename, reheader, rpge):
 def add_header(byte_list):
     return FAKE_HEADER + byte_list
 
-def bool_to_int(passed_bool):
-    if passed_bool:
-        return 1
-    elif passed_bool == False:
-        return 0
+def translateBool(boolean):
+    if boolean == "false":
+        return False
+    if boolean == "true":
+        return True
     else:
-        logging.error("Passed argument was not a boolean: "+str(passed_bool))
+        return None
+
+def bool_to_int(boolean):
+    if boolean:
+        return 1
+    else:
+        return 0
     
 def patch_careerday(filename, fjf, world_lock):
-    fjf = bool_to_int(fjf)
+    fjf = bool_to_int(translateBool(fjf))
     # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
     world_lock = int(world_lock)
 
