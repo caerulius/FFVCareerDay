@@ -185,6 +185,8 @@ def add_header(byte_list):
     return FAKE_HEADER + byte_list
 
 def translateBool(boolean):
+    if type(boolean) == bool:
+        return boolean
     if boolean == "false":
         return False
     if boolean == "true":
