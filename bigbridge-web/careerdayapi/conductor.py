@@ -39,7 +39,7 @@ class Conductor():
     def __init__(self, random_engine, fjf=False, jobpalettes=False, config_file="local-config.ini"):
         self.RE = random_engine
         self.fjf = fjf
-        self.jobpalettes = self.translateBool(jobpalettes)
+        self.jobpalettes = jobpalettes
 
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
@@ -1284,14 +1284,6 @@ class Conductor():
             #@ will be used for our newline character, won't otherwise be present, and don't have the problems \n causes
             output = output + self.TP.run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
         return output
-
-    def translateBool(self, boolean):
-        if boolean == "false":
-            return False
-        if boolean == "true":
-            return True
-        else:
-            return None
 
     def randomize(self, random_engine=None):
         if random_engine is None:

@@ -47,7 +47,7 @@ class Conductor():
         else:                           # else take the config passed from server.py and set variables
             self.fjf = self.translateBool(conductor_config['fjf'])
             self.jobpalettes = self.translateBool(conductor_config['jobpalettes'])
-            self.world_lock = conductor_config['world_lock']
+            self.world_lock = int(conductor_config['world_lock'])
 
         # Set up randomizer config
         self.config = configparser.ConfigParser()

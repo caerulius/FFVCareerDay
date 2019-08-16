@@ -70,6 +70,8 @@ def patch_and_return():
         data = request.form.to_dict()
         seed = data["seed"]
         fjf = bool_translate(data["fjf"])
+        jobpalettes = bool_translate(data["jobpalette"])
+
         if seed == "":
             seed = str(random.randint(1000000, 9999999))
         filename = "CareerDay-{}".format(seed)
@@ -114,7 +116,7 @@ def patch_and_return():
         patch_careerday(filename, fjf)
 
         random.seed(seed)
-        C = Conductor(random, fjf=fjf, jobpalettes = data['jobpalette'])
+        C = Conductor(random, fjf=fjf, jobpalettes=jobpalettes)
         spoilerandpatch = C.randomize()
 
         spoiler_file_name = "CareerDay-{}-spoiler.txt".format(seed)
@@ -178,15 +180,10 @@ def headers_and_translate(filename, reheader, rpge):
 def add_header(byte_list):
     return FAKE_HEADER + byte_list
 
-def patch_careerday(filename, fjf):
-    if fjf == "true":
-        fjf = 1
-    else:
-        fjf = 0
-        
+def patch_careerday(filename, fjf):        
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
 --define passages=1 --define double_atb=0 --define boss_exp=1 --define fourjobmode={} \
---fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, MAIN_PATCH, filename)
+--fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, 1 if fjf else 0, MAIN_PATCH, filename)
 
     logging.error(command)
     

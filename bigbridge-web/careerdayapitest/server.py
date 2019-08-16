@@ -117,8 +117,8 @@ def patch_and_return():
         # Any configuration for new parameters belong here
         conductor_config = {
                             'fjf':          data["fjf"], 
-                            'jobpalettes':  data['jobpalette']
-							'world_lock':   data['world_lock']
+                            'jobpalettes':  data['jobpalette'],
+                            'world_lock':   data['world_lock']
                             }
         C = Conductor(random, conductor_config)
         spoilerandpatch = C.randomize()
@@ -131,7 +131,7 @@ def patch_and_return():
         with open(spoiler_file_name, 'w') as f:
             f.write(spoilerandpatch[0].replace('\n', '\r\n'))
 
-        patch_random(filename, patch_file_name)
+        patch_random(filename, patch_file_name);
 
         file_list = []
         file_list.append(filename)
@@ -184,18 +184,26 @@ def headers_and_translate(filename, reheader, rpge):
 def add_header(byte_list):
     return FAKE_HEADER + byte_list
 
-def bool_to_int(passed_bool):
-	if passed_bool:
-		return 1
-	elif passed_bool == False:
-		return 0
-	else:
-		logging.error("Passed argument was not a boolean: "+str(passed_bool))
-	
+def translateBool(boolean):
+    if type(boolean) == bool:
+        return boolean
+    if boolean == "false":
+        return False
+    if boolean == "true":
+        return True
+    else:
+        return None
+
+def bool_to_int(boolean):
+    if boolean:
+        return 1
+    else:
+        return 0
+    
 def patch_careerday(filename, fjf, world_lock):
-    fjf = bool_to_int(fjf)
-	# world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
-	world_lock = int(world_lock)
+    fjf = bool_to_int(translateBool(fjf))
+    # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
+    world_lock = int(world_lock)
 
         
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
