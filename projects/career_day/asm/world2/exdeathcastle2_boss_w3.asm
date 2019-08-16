@@ -30,28 +30,30 @@ db $BD, $24, $FF                ;Start Event Battle 24
 db $B4, $24					;music
 db $72
 
+if !world_lock = 0
+    db $C5, $80 ; Only do this if world lock is fully open (where Exdeath is optional)
+    db $B5, $02
+    db $70
+    db $C5, $50
+    db $B5, $02
+    db $70
+    db $C5, $20
+    db $B5, $02
+    db $70
+    db $C5, $60
+    db $B5, $02
+    db $70
+    db $C5, $F0
+    db $B5, $02
+    db $71
+    db $C8, $A9, $05                ; Text: Phase 1 against final Exdeath weakened!
 
-db $C5, $80
-db $B5, $02
-db $70
-db $C5, $50
-db $B5, $02
-db $70
-db $C5, $20
-db $B5, $02
-db $70
-db $C5, $60
-db $B5, $02
-db $70
-db $C5, $F0
-db $B5, $02
-db $71
-db $C8, $A9, $05                ; Text: Phase 1 against final Exdeath weakened!
+    db $CD, $9C, $03
+endif
 
-db $CD, $9C, $03
+    db $C4, $02                     ;Fade in Speed 06
+    db $75
 
-db $C4, $02                     ;Fade in Speed 06
-db $75
 
 ; CAREERDAY
 ; db $E1, $02, $00, $B7, $89, $00 ;Return from cutscene? 02 00 B7 89 00
@@ -90,8 +92,11 @@ db $CB, $48, $00                ;Clear Flag 2/3/4/5/48 00
 db $CB, $49, $00                ;Clear Flag 2/3/4/5/49 00
 db $CB, $30, $00                ;Clear Flag 2/3/4/5/30 00
 db $A5, $9A                     ;Clear Event Flag 19A
-db $A2, $CC						; CUSTOM FLAG for final exdeath death phase 1
-db $CA, $DA, $02            ; set address 000AAF bit OFF 02. ENABLE world 3
+if !world_lock = 0
+    db $A2, $CC						; CUSTOM FLAG for final exdeath death phase 1. Only do this if world lock is fully open (where Exdeath is optional)
+endif
+
+db $CA, $DA, $02            ; set address 000AAF bit ON 02. ENABLE world 3
 db $CA, $73, $02                ;Set Flag 2/3/4/5/73 02
 
 

@@ -24,7 +24,7 @@ db $AA, $E0                     ;Add Item Potion
 db $AA, $E0                     ;Add Item Potion
 db $AA, $E0                     ;Add Item Potion
 db $CB, $58, $00	            ;Clear Flag 2/3/4/5/58 00 ;removes faris sleeping in tule
-db $A4, $DC                     ;Set Event Flag 1DC
+; db $A4, $DC                     ;Set Event Flag 1DC ; DISABLED in v0.75, appears to only be tied to 4 crystal barriers on world map in world 1
 ; db $A4, $FF                     ;Set Event Flag 1FF *this ordinarily disables enka*
 db $EE                          ;Conditional event flag checks for world 1 (mostly Ronka access)
 

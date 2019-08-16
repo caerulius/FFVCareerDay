@@ -26,6 +26,10 @@ class DataManager():
         self.files['enemies_nonbosses'] = self.files['enemies'][self.files['enemies']['enemy_rank']=='enemy']
         self.files['formations'] = pd.read_csv(self.data_table_path + 'formation_id.csv', dtype=str)
         self.files['monsters_in_boxes'] = pd.read_csv(self.data_table_path + 'monster_in_a_box.csv',dtype=str)
+        self.files['monsters_in_boxes'] = self.files['monsters_in_boxes'][self.files['monsters_in_boxes']['useable_flag']=='y'].reset_index(drop=True)
+        self.files['monsters_in_boxes'] = self.files['monsters_in_boxes'].reset_index()
+        self.files['monsters_in_boxes'].drop('monster_box_id',axis=1,inplace=True)
+        self.files['monsters_in_boxes'].columns = ['monster_box_id'] + self.files['monsters_in_boxes'].columns.tolist()[1:]
         self.files['monsters_in_boxes']['monster_box_id'] = self.files['monsters_in_boxes']['monster_box_id'].astype(int)
         self.files['boss_scaling'] = pd.read_csv(self.data_table_path + 'boss_scaling.csv')
         self.files['enemy_skills'] = pd.read_csv(self.data_table_path + 'enemy_skills.csv',index_col='name').to_dict()['hex']
