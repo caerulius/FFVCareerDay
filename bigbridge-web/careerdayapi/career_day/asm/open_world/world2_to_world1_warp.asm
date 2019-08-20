@@ -46,8 +46,8 @@ db $C5, $80                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
 db $C4, $06
 db $71
-db $E1, $00, $00, $91, $73, $00 ;Return from cutscene? 00 00 9C 96 00
-db $D2, $00, $91, $74, $D8
+db $D2, $00, $B9, $86, $D8
+db $E1, $00, $00, $B8, $85, $00 ;Return from cutscene? 00 00 9C 96 00
 db $14
 
 ; WORLD CONDITIONALS

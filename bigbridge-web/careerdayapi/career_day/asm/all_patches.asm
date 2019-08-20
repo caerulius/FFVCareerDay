@@ -255,7 +255,7 @@ incsrc open_world/world3_to_world2_warp.asm
 incsrc open_world/pyramid_disable.asm
 incsrc open_world/custom_lock_cutscenes.asm
 incsrc open_world/warp_area.asm
-incsrc open_world/debug_key_items.asm
+; incsrc open_world/debug_key_items.asm
 incsrc open_world/exdeath_overwrite.asm
 incsrc core_code/credits.asm
 incsrc open_world/summon_bosses.asm

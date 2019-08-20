@@ -24,6 +24,16 @@ db $B7, $0B							;Add/Remove character 03 (Faris)
 ; add WarpShard
 db $AA, $EE                     ;Add Item Potion
 
+
+; setting up warp locations depending on seed settings for locked worlds
+if !world_lock == 2 ; world lock 2 means only world 2 is locked 
+    db $CB, $DA, $02            ; set address 000AAF bit OFF 02. Disable world 2
+elseif !world_lock == 1; world lock 2 means both worlds 1 and 2 are locked 
+    db $CB, $DA, $02            ; set address 000AAF bit OFF 02. Disable world 3
+    db $CB, $D8, $02            ; set address 000AAF bit OFF 02. Disable world 2
+endif
+
+
 ; world map
 db $A4, $FB            ; set address 000A53 bit ON 08
 
@@ -185,7 +195,7 @@ db $A2, $47            ; set address 000A1C bit ON 80
 db $A2, $46            ; set address 000A1C bit ON 40
 
 ; WARP TO WORLD 2
-db $A4, $EF            ; set address 000A51 bit ON 80
+; db $A4, $EF            ; set address 000A51 bit ON 80. Now disabled for world locking
 
 
 ; EXDEATH CASTLE

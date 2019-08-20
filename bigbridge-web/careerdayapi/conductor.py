@@ -36,15 +36,25 @@ MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
 
 class Conductor():
-    def __init__(self, random_engine, fjf=False, jobpalettes=False, config_file="local-config.ini"):
+    def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
         self.RE = random_engine
-        self.fjf = fjf
-        self.jobpalettes = jobpalettes
+        
+        # Set up conductor config
+        if len(conductor_config) == 0: # if no config was passed in, default False
+            self.fjf = False
+            self.jobpalettes = False
+            self.world_lock = 0
+        else:                           # else take the config passed from server.py and set variables
+            self.fjf = self.translateBool(conductor_config['fjf'])
+            self.jobpalettes = self.translateBool(conductor_config['jobpalettes'])
+            self.world_lock = int(conductor_config['world_lock'])
 
+        # Set up randomizer config
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
         self.conductor_config = self.config['CONDUCTOR']
 
+        # Set up data tables
         self.DM = DataManager()                            #Data manager loads all the csv's into memory and sets them up for processing
         self.CM = CollectibleManager(self.DM)              #Set up collectibles (Includes Items, magic, crystals, and abilities)
         self.RM = RewardManager(self.CM, self.DM)          #Set up rewards (Includes chests and events)
@@ -56,8 +66,9 @@ class Conductor():
         self.MIBM = MonsterInABoxManager(self.DM, self.RE) #Set up monsters in boxes
         self.TP = TextParser()                             #Set up Text Parser Utility Object
         
+        # Misc setup 
         self.difficulty = random.randint(1,10)
-        crystals = self.get_crystals(fjf)
+        crystals = self.get_crystals(self.fjf)
         self.starting_crystal = crystals[0]
         self.chosen_crystals = crystals[1]
         self.chosen_crystals_names = [x.reward_name for x in self.chosen_crystals]
@@ -72,6 +83,11 @@ class Conductor():
     def get_crystals(self, fjf=False):
         crystals = self.CM.get_all_of_type(Crystal)
         starting_crystal = self.RE.choice(crystals)
+        # Reroll if Freelancer
+        while starting_crystal.collectible_name == 'Freelancer':
+            print("Rerolling starting crystal...")
+            starting_crystal = self.RE.choice(crystals)
+        
         self.CM.add_to_placement_history(starting_crystal) #don't allow the starting crystal to appear anywhere in game
         if starting_crystal.starting_spell_list == ['']:
             starting_crystal.starting_spell = "None"
@@ -93,8 +109,16 @@ class Conductor():
             
         else:
             crystal_count = 3
-
         chosen_crystals = self.RE.sample(crystals, crystal_count)
+        
+        # Ensures for fjf that Freelancer is not included
+        # Rerolls until true
+        if fjf:
+            while len([i for i in chosen_crystals if i.collectible_name == 'Freelancer']) >= 1:
+                chosen_crystals = self.RE.sample(crystals, crystal_count)
+                print("Failed on pulling Freelancer, re-rolling crystals for FJ mode")
+                print("New: ",chosen_crystals[0].collectible_name,chosen_crystals[1].collectible_name,chosen_crystals[2].collectible_name)
+                
 
         #this pretends to have placed every job, so it won't try to place any more going forward
         if fjf:
@@ -126,13 +150,31 @@ class Conductor():
             self.AM.update_volume(value)
 
     def randomize_key_items(self):
+        
+        # This conditional code is defining which column in rewards.csv to refer to for item placement 
+        if self.world_lock == 0:  # 0 = base case, no worlds locked, all items placed anywhere
+            set_key_item_level = 'required_key_items'
+        elif self.world_lock == 1: # Lock world 1 behind Adamantite (and world 2 behind Anti-Barrier & Bracelet) 
+            set_key_item_level = 'required_key_items_lock1'
+        elif self.world_lock == 2: # Lock world 2 behind Anti-Barrier & Bracelet
+            set_key_item_level = 'required_key_items_lock2'
+        else:
+            print("Error on world_lock argument. Should be an int among 0, 1 and 2 only.")
         num_placed_key_items = 0
         exdeath_list = []
 
         for _ in range(0, int(self.conductor_config['NUM_KEY_ITEMS'])):
+            global next_key_reward
+            global curr_node
+            global curr_key_item
+            global forbidden_items
+            global next_key_reward_locs
             next_key_reward = self.RE.choice([x for x in self.RM.get_rewards_by_style('key') if x.randomized == False])
-
-            if next_key_reward.required_key_items == None:
+            next_key_reward_locs = next_key_reward.__dict__.get(set_key_item_level)
+            if next_key_reward_locs != next_key_reward_locs: # stupid fix for python returning NaN instead of None
+                next_key_reward_locs = None
+            
+            if next_key_reward_locs == None:
                 next_key_item = self.CM.get_random_collectible(self.RE, monitor_counts=True, of_type=KeyItem)
                 next_key_reward.set_collectible(next_key_item)
                 next_key_reward.randomized = True
@@ -141,7 +183,7 @@ class Conductor():
                 forbidden_items = []
                 nodes_to_visit = []
 
-                nodes_to_visit.extend(next_key_reward.required_key_items) #this gives us a copy of the list so we don't overwrite anything
+                nodes_to_visit.extend(next_key_reward_locs) #this gives us a copy of the list so we don't overwrite anything
 
                 #this will construct us a list of items we're not allowed to place here
                 while len(nodes_to_visit) > 0:
@@ -164,7 +206,7 @@ class Conductor():
                     next_key_reward.set_collectible(next_key_item)
                     if "Tablet" not in next_key_item.reward_name:
                         exdeath_list.append(next_key_reward)
-                    next_key_item.required_by_placement.extend(next_key_reward.required_key_items)
+                    next_key_item.required_by_placement.extend(next_key_reward_locs)
                     self.CM.add_to_placement_history(next_key_item) #add this manually, usually get_random_collectible handles it
                     next_key_reward.randomized = True
                     num_placed_key_items = num_placed_key_items + 1
@@ -901,7 +943,7 @@ class Conductor():
         
     def randomize_job_color_palettes(self):
         if True: # Future - flag for if all job palettes shuffled (for all chars and jobs)
-            palettes = self.DM.files['job_color_palettes']['byte_string'].to_list()
+            palettes = list(self.DM.files['job_color_palettes']['byte_string'])
             random.shuffle(palettes)
             output_str = "\n\n; JOB COLOR PALETTES \n\norg $D4A3C0\ndb "
             for palette in palettes:
@@ -1285,6 +1327,14 @@ class Conductor():
             output = output + self.TP.run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
         return output
 
+    def translateBool(self, boolean):
+        if boolean == "false":
+            return False
+        if boolean == "true":
+            return True
+        else:
+            return None
+
     def randomize(self, random_engine=None):
         if random_engine is None:
             random_engine = self.RE
@@ -1340,6 +1390,22 @@ class Conductor():
 
         return(spoiler, patch)
 
-#c = Conductor(random)
+
+
+####################################
+######## TESTING AREA ##############
+####################################
+        
+#c = Conductor(random, {
+#                        'fjf':False,
+#                        'jobpalettes':False,
+#                        'world_lock':2
+#                      }
+#             )
 #(spoiler, patch) = c.randomize()
-#print(spoiler)
+## print(c.RM.get_spoiler())
+#
+## Debug checking for 3 key items for world locking
+#for i in c.RM.rewards:
+#    if i.collectible.collectible_name == 'Bracelet' or i.collectible.collectible_name == 'Adamantite' or i.collectible.collectible_name == 'Anti Barrier':
+#        print(i.description, i.collectible.collectible_name)

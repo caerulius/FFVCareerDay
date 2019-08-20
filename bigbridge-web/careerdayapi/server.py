@@ -69,9 +69,6 @@ def patch_and_return():
 
         data = request.form.to_dict()
         seed = data["seed"]
-        fjf = bool_translate(data["fjf"])
-        jobpalettes = bool_translate(data["jobpalette"])
-
         if seed == "":
             seed = str(random.randint(1000000, 9999999))
         filename = "CareerDay-{}".format(seed)
@@ -113,10 +110,17 @@ def patch_and_return():
 
         headers_and_translate(filename, reheader, rpge)
 
-        patch_careerday(filename, fjf)
+        patch_careerday(filename, data["fjf"], data['world_lock'])
 
         random.seed(seed)
-        C = Conductor(random, fjf=fjf, jobpalettes=jobpalettes)
+        # We're going to pass in conductor_config into Conductor() object now
+        # Any configuration for new parameters belong here
+        conductor_config = {
+                            'fjf':          data["fjf"], 
+                            'jobpalettes':  data['jobpalette'],
+                            'world_lock':   data['world_lock']
+                            }
+        C = Conductor(random, conductor_config)
         spoilerandpatch = C.randomize()
 
         spoiler_file_name = "CareerDay-{}-spoiler.txt".format(seed)
@@ -127,7 +131,7 @@ def patch_and_return():
         with open(spoiler_file_name, 'w') as f:
             f.write(spoilerandpatch[0].replace('\n', '\r\n'))
 
-        patch_random(filename, patch_file_name)
+        patch_random(filename, patch_file_name);
 
         file_list = []
         file_list.append(filename)
@@ -175,15 +179,36 @@ def headers_and_translate(filename, reheader, rpge):
         logging.error("RPGe Patch Missing. Verify rpge.ips file exists in patches directory")
     except Exception as e:
         logging.error("Error applying RPGe Translation Patch")
-        logging.error("Unknown exception...")
+        logging.error("Unknown exception: "+str(e))
 
 def add_header(byte_list):
     return FAKE_HEADER + byte_list
 
-def patch_careerday(filename, fjf):        
+def translateBool(boolean):
+    if type(boolean) == bool:
+        return boolean
+    if boolean == "false":
+        return False
+    if boolean == "true":
+        return True
+    else:
+        return None
+
+def bool_to_int(boolean):
+    if boolean:
+        return 1
+    else:
+        return 0
+    
+def patch_careerday(filename, fjf, world_lock):
+    fjf = bool_to_int(translateBool(fjf))
+    # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
+    world_lock = int(world_lock)
+
+        
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
---define passages=1 --define double_atb=0 --define boss_exp=1 --define fourjobmode={} \
---fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, 1 if fjf else 0, MAIN_PATCH, filename)
+--define passages=1 --define double_atb=0 --define boss_exp=1 --define fourjobmode={} --define world_lock={} \
+--fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, world_lock, MAIN_PATCH, filename)
 
     logging.error(command)
     
@@ -196,13 +221,5 @@ def patch_random(filename, patchname):
     
     response = subprocess.run(command, shell=True)
 
-def bool_translate(boolean):
-    if boolean == "false":
-        return False
-    if boolean == "true":
-        return True
-    else:
-        return None
-
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port="5001")
+    app.run(host="0.0.0.0", port="5002")

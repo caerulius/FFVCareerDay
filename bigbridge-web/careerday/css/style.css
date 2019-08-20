@@ -998,3 +998,13 @@ border: 2px solid #fff;
 .check-div{
 	margin:15px;
 }
+
+input[type=radio] {
+    width: 25px;
+    height: 25px;
+    margin-right:10px;
+}
+
+.radio-div{
+	margin:15px;
+}

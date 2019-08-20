@@ -83,6 +83,11 @@ class Conductor():
     def get_crystals(self, fjf=False):
         crystals = self.CM.get_all_of_type(Crystal)
         starting_crystal = self.RE.choice(crystals)
+        # Reroll if Freelancer
+        while starting_crystal.collectible_name == 'Freelancer':
+            print("Rerolling starting crystal...")
+            starting_crystal = self.RE.choice(crystals)
+        
         self.CM.add_to_placement_history(starting_crystal) #don't allow the starting crystal to appear anywhere in game
         if starting_crystal.starting_spell_list == ['']:
             starting_crystal.starting_spell = "None"
@@ -104,8 +109,16 @@ class Conductor():
             
         else:
             crystal_count = 3
-
         chosen_crystals = self.RE.sample(crystals, crystal_count)
+        
+        # Ensures for fjf that Freelancer is not included
+        # Rerolls until true
+        if fjf:
+            while len([i for i in chosen_crystals if i.collectible_name == 'Freelancer']) >= 1:
+                chosen_crystals = self.RE.sample(crystals, crystal_count)
+                print("Failed on pulling Freelancer, re-rolling crystals for FJ mode")
+                print("New: ",chosen_crystals[0].collectible_name,chosen_crystals[1].collectible_name,chosen_crystals[2].collectible_name)
+                
 
         #this pretends to have placed every job, so it won't try to place any more going forward
         if fjf:

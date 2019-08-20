@@ -128,11 +128,17 @@ db $7A
 org $CE288C
 db $AD, $E9, $F0, $01
 
+; Disable first mummy in Pyramid
+org $F0599D
+db $FB, $FB
+
 
 ; PYRAMID TOP
 ; change conditional flag to be a custom one 
 org $F04B1D
 db $FD, $78
+
+
 
 ; GARGOYLES
 ; Change each conditional event to have individual flags associated with their respective key items
@@ -377,3 +383,5 @@ pad $CE8A38
 ; Moogle text adjust for shinryuu help text
 org $c975a8
 db $81, $04
+
+

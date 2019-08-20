@@ -65,7 +65,7 @@
 	<section class="main-section">
 		<!--main-section-start-->
 		<div class="container">
-			<h2>Generate Randomized FF5 Rom (v0.74.0)</h2>
+			<h2>Generate Randomized FF5 Rom (v0.75.0)</h2>
 			<input type="file" accept=".smc, .sfc" class="file-browse" id="fileupload"/>
 			<label for="fileupload"><i class="fa fa-upload"></i>  Browse</label>
 			<div class="file-info" id="file-info">Upload a Final Fantasy 5 ROM, Japanese or patched with the RPGe Translation</div><br/>
@@ -90,7 +90,7 @@
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
 					<label>
-						Four Job Mode: Start with four jobs and never receive more. All jobs must be represented at all times.
+						<b>Four Job Mode:</b> Start with four jobs and never receive more. All jobs must be represented at all times.
 					</label>
 				</div>
 			</div>
@@ -99,8 +99,33 @@
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
 					<label>
-						Randomize job color palettes: Colors of job palettes are randomized among all characters and jobs
+						<b>Randomize job color palettes:</b> Colors of job palettes are randomized among all characters and jobs
 					</label>
+				</div>
+			</div>
+
+			<p style="font-size:1.5em;margin-top:10px"><b>World Locking Logic</b></p>
+
+			<div>
+				<div class="pretty p-default p-round radio-div">
+					<input type="radio" name="world_lock" value=0 checked>
+					<div class="state">
+						<label>All worlds open</label>
+					</div>
+				</div>
+
+				<div class="pretty p-default p-round radio-div">
+					<input type="radio" name="world_lock" value=1>
+					<div class="state">
+						<label>Only world 1 available at start (Adamantite unlocks World 2, defeating Exdeath in World 2 unlocks World 3)</label>
+					</div>
+				</div>
+
+				<div class="pretty p-default p-round radio-div">
+					<input type="radio" name="world_lock" value=2>
+					<div class="state">
+						<label>Worlds 1 and 2 available at start (Defeating Exdeath in World 2 unlocks World 3)</label>
+					</div>
 				</div>
 			</div>
 
