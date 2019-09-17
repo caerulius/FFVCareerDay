@@ -68,6 +68,7 @@ def patch_and_return():
         rpge = False
 
         data = request.form.to_dict()
+        logging.error("Request data %s" % (str(data)))
         seed = data["seed"]
         if seed == "":
             seed = str(random.randint(1000000, 9999999))
@@ -118,7 +119,11 @@ def patch_and_return():
         conductor_config = {
                             'fjf':          data["fjf"], 
                             'jobpalettes':  data['jobpalette'],
-                            'world_lock':   data['world_lock']
+                            'world_lock':   data['world_lock'],
+                            'tiering_config':   data['world_lock'],
+                            'tiering_percentage':   data['tiering_percentage'],
+                            'tiering_threshold':   data['tiering_threshold'],
+                            'enforce_all_jobs':   data['enforce_all_jobs']
                             }
         C = Conductor(random, conductor_config)
         spoilerandpatch = C.randomize()

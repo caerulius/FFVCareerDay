@@ -1,0 +1,85 @@
+Thanks for everyone who filled out the feedback form, and if you haven't yet, please do! 
+
+I heard all your feedback about the game being a bit too chaotic/steamrolley in the early game, and I very much agree. So I've developed an (optional by settings) tiering system for locations that should promote much stronger placement for collectibles. 
+
+Two types of tiers when placing a collectible (items, magic, abilities, crystals) at any location:
+	- Location tier - Generally how good the location is
+	- Collectible tier - Generally how good the collectible is 
+
+Placement rules:
+	- The randomizer will place an collectible at a location if it is equal or less than the value, but prioritizes tiers 
+	- The randomizer has a 10% (default 10%, adjustable by settings) chance to break past the ceiling and potentially grab from 2 higher tiers (default 2, adjustable by settings). 
+	
+
+Tiering system for locations:
+1 - World 1 shops
+2 - World 1 dungeons/towns
+3 - World 2 shops
+4 - World 2 dungeons/towns
+5 - Exdeath's Castle in W2
+6 - Tablet Dungeons in W3
+7 - Fork Tower, Rift, Mirage Village
+8 - Void
+9 - Pyramid, Kuzar, Moogle Village
+
+Many event rewards will break past their area tiers. For example, collecting the shards of the Wind Crystal results in Tier 4 rewards (whereas the dungeon itself is Tier 2). 
+
+
+
+
+
+
+Example:
+	Location - Tycoon Castle pot, Tier 2 
+	Here, the randomizer will take any Tier 1 or 2 collectible and place into a pool of options. However, for every collectible that is Tier 3 and Tier 4 (+2), it will roll a 10% chance to include those in the mix. 
+	
+Example: 
+	Location - Mirage Village shops, Tier 7 
+	Here, the floor for anything placed in Mirage Village shops will be tier 7. So generally this means that good things will be placed here, and not lower tier collectibles. The idea is to reward the player with both having World 3 access and the key item. 
+	
+The effect here is that all the chests, event rewards & shops in the game adhere to this tiering system that generally enforces balanced gameplay, but there is still a sporadic chance that an collectible will be placed a bit outside its tier. This is to promote the surprise effect of something showing up a bit earlier than it should. 
+
+
+All collectibles have a large variety of tiers. Some examples:
+	GilToss & Samurai are Tier 9. This means you can find them at a tier 9 location, or possibly at a Tier 7 or Tier 8 location (if it rolls a 10%)
+	Many basic items are tier 1
+	Both Level 3 Black magic and Elemental rods are Tier 3 (Fire2, Ice2, etc.), meaning that they won't often show up in World 1, but they can by chance. Similar happens in World 2 for Level 5 Black Magic. 
+	
+Given the randomizer is attempting to place a good balance of everything, there will be examples where lower & higher tier items appear at locations, but they are controlled within the tier ranges. 
+
+Finally, this will be an optional setting altogether. This setting is primarily designed for World 1 locked seeds, but should promote much more reasonable gameplay, and should make for much better races altogether. The early game will be harder on average, but the mid- and end-game should feel much more rewarding. 
+
+When the next version is released, we'll put out the full list of tiers for locations & collectibles
+
+
+
+
+
+Here's some examples of the (new output format!) tiering in the spoiler log:
+```
+T2 Beginner's House Chest Ether ->                T1 CopperPlt (monster-in-a-box)                   
+T2 Beginner's House Chest 100 ->                  T2 990 gil                                        
+T2 Beginner's House Chest Potion ->               T1 Jump                                           
+T2 Beginner's House Chest Phoenix Down ->         T1 Chocob->Titan->Golem->Odin                     
+T2 Beginner's House Chest Tent ->                 T2 300 gil                                        
+T2 Beginner's House Chest Leather Shoes ->        T2 Silver Armlet                                  
+
+T9 Moogle Village Chest Dancing Dagger ->         T7 Mirage Vest                                    
+T9 Moogle Village Chest 1 ->                      T9 Samurai Job Crystal                            
+T9 Moogle Village Chest Phoenix Down ->           T7 Coral Ring                                     
+T9 Moogle Village Chest Ether ->                  T7 Assassin                                       
+T9 Moogle Village Chest Elf Cape ->               T7 Crystal Armor                                       
+```
+
+```
+Shop: Mirage Inn 2 (Tier 7)
+Shop Type: Ability/Crystal
+Shop Item 1: Elixir            ->  T8 Summon Lv.5                
+Shop Item 2: Ether             ->  T8 Dimen Lv.6                 
+Shop Item 3: Revivify          ->  T8 White Lv.6                 
+Shop Item 4: Giant Drink       ->  T9 Mimic                      
+Shop Item 5: Power Drink       ->     None                       
+Shop Item 6: Speed Drink       ->     None                       
+Shop Item 7: Protect Drink     ->     None                       
+Shop Item 8: Hero Drink        ->     None    
+```

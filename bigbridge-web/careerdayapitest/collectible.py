@@ -14,7 +14,7 @@ class Collectible(ABC):
     six ways.
     """ 
     def __init__(self, reward_id, reward_name, reward_value, related_jobs,
-                 max_count, valid = None):
+                 max_count, tier=None, valid = None):
         #pandas imports a blank field as a float nan. This is the easiest way to none it.
         if type(max_count) is float:
             self.max_count = None
@@ -26,6 +26,10 @@ class Collectible(ABC):
         self.related_jobs = [x.replace('"', '').replace(' ', '')
                               .replace('“', '').replace('”', '')
                              for x in related_jobs]
+        if tier is not None:
+            self.tier = int(tier)
+        else:
+            self.tier = None
         if valid is None:
             self.valid = True
         else:
@@ -59,7 +63,7 @@ class Item(Collectible):
         self.subtype = data_row['subtype']
         related_jobs = data_row['related_jobs'].strip('][').split(',')
         super().__init__(item_id, data_row['readable_name'], int(data_row['value']),
-                         related_jobs, data_row['max_count'], data_row['valid'])
+                         related_jobs, data_row['max_count'], data_row['tier'], data_row['valid'])
 
     @property
     def patch_id(self):
@@ -84,7 +88,7 @@ class Magic(Collectible):
         related_jobs = data_row['related_jobs'].strip('][').split(',')
         self.progression_id = data_row['progression_id']
         super().__init__(magic_id, data_row['readable_name'], int(data_row['value']),
-                         related_jobs, data_row['max_count'], data_row['valid'])
+                         related_jobs, data_row['max_count'], data_row['tier'], data_row['valid'])
 
     @property
     def patch_id(self):
@@ -132,7 +136,7 @@ class Crystal(Collectible):
         self.starting_spell_id = ""
         related_jobs = data_row['related_jobs'].strip('][').split(',')
         super().__init__(crystal_id, data_row['readable_name'], int(data_row['value']),
-                         related_jobs, data_row['max_count'])
+                         related_jobs, data_row['max_count'], data_row['tier'])
 
     @property
     def patch_id(self):
@@ -156,7 +160,7 @@ class Ability(Collectible):
         related_jobs = data_row['related_jobs'].strip('][').split(',')
         self.progression_id = data_row['progression_id']
         super().__init__(ability_id, data_row['readable_name'], int(data_row['value']),
-                         related_jobs, data_row['max_count'], data_row['valid'])
+                         related_jobs, data_row['max_count'], data_row['tier'], data_row['valid'])
 
     @property
     def patch_id(self):
@@ -189,7 +193,7 @@ class Gil(Collectible):
     def __init__(self, gil_id, data_row):
         self.reward_type = data_row['power_byte']
         super().__init__(data_row['number_byte'], str(data_row['readable_amount']) + " gil",
-                         int(data_row['value']), [], data_row['max_count'])
+                         int(data_row['value']), [],data_row['max_count'], tier=data_row['tier'])
 
     @property
     def patch_id(self):
@@ -211,7 +215,7 @@ class KeyItem(Collectible):
     reward_type = '30'
     def __init__(self, keyitem_id, data_row):
         super().__init__(keyitem_id, data_row['readable_name'], 0,
-                         [], 1, data_row['valid'])
+                         [], 1, tier=None, valid=data_row['valid'])
         self.writeable_name = data_row['writeable_name']
         self.text_location = data_row['text_location']
         self.required_by_placement = []
@@ -286,7 +290,11 @@ class CollectibleManager():
                                                                   x.max_count is None or
                                                                   x.max_count < self.placement_history[x])]
 
-    def get_random_collectible(self, random_engine, respect_weight=False, monitor_counts=False, of_type=None, gil_allowed=False, disable_zerozero=False):
+    def get_random_collectible(self, random_engine, respect_weight=False, 
+                               reward_loc_tier=None, monitor_counts=False, 
+                               of_type=None, gil_allowed=False, disable_zerozero=False, 
+                               next_reward=None, tiering_config=False,
+                               tiering_percentage=90, tiering_threshold=2):
         if type(of_type) is str: # this is a literal string definition of a type, so let's cast it first
             if of_type in type_dict.keys():
                 of_type = type_dict[of_type]
@@ -299,19 +307,103 @@ class CollectibleManager():
             working_list = [x for x in self.collectibles if x.valid and type(x) != KeyItem] #this will be a non shop
 
         if gil_allowed and len(self.placed_gil_rewards) < len([x for x in self.collectibles if x.type_str == 'Gil']): #first, place all our gil rewards
-            choice = random.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards])
+            if tiering_config:
+                choice = None
+                tier_adj = 0 # similar to minimum tier below
+                while choice == None:
+                    try:
+                        choice = random_engine.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards and (x.tier - tier_adj) <= int(reward_loc_tier)])
+                    except:
+                        # print("Error on gil choices, skipping.")
+                        tier_adj += 1
+                        pass # continue loop if error above
+            else:
+                choice = random_engine.choice([x for x in self.get_all_of_type(Gil) if x not in self.placed_gil_rewards])
             self.placed_gil_rewards.append(choice)
             return choice
 
         if not gil_allowed:
             working_list = [x for x in working_list if type(x) is not Gil]
-            
+
+#        try:
+#            if next_reward.area == 'Pyramid':
+#                for i in working_list:
+#                    print(i.collectible_name)
+#                breakpoint()
+#        except Exception as e:
+#            print("Error "+str(e))     
+#            
         if monitor_counts is True:
             working_list = [y for y in [x for x in working_list if
                                        (x not in self.placement_history.keys() or
                                         x.max_count is None or
                                         x.max_count < self.placement_history[x])]
                             if y.valid]
+            
+        # working_list_copy1 = working_list[:]
+
+
+        # TIERING
+        # After applying all the above, enforce tiering if applicable
+        debug_flag = False
+        if tiering_config:
+            # Now we empty working_list, and iterate over minimum floors for collectible tiers until the list is populated
+            # With at least one item
+            
+            # Example:
+            # Trying to place on a tier 4 location. 
+            # 90% chance to place collectible Tier _4_ through 4, 10% chance to place collectible Tier _4_ through 6 (4+2)
+            # If nothing is placed, change _4_ to _3_, etc..
+            # continue until not empty 
+         
+    #        try:
+    #            if str(type(next_reward)) == "<class 'shop.Shop'>" and 'Mirage' in next_reward.readable_name and str(of_type) == "(<class 'collectible.Crystal'>, <class 'collectible.Ability'>)":
+    #                debug_flag = True
+    ##                breakpoint()
+    
+    #        except:
+    #            pass
+            if debug_flag:
+                try:
+                    print(next_reward.__dict__)
+                except:
+                    pass
+            if reward_loc_tier is not None:
+                RARE_TIER_PERCENTAGE = 98 # Rare percent chance of pulling from 7+ tiers only. B O N U S
+                tiering_percentage = 90      # Percent chance each draw will strictly adhere to tier. 
+                tiering_threshold = 2        # If tier percentage not applied (i.e, 10% if above is 90%) 
+                                          #   then include the collectible if it is in the tier threshold range 
+                                          #   e.g., location tier 4, collectible tier 6, tier threshold 2
+                                          #   if it passes the 90% test (and is one of the 10%), then 
+                                          #   it will be included because the range becomes 4 <-> 6 
+                working_list_copy = working_list[:]
+                working_list = []        
+                reward_loc_tier = int(reward_loc_tier)
+                minimum_tier = max(reward_loc_tier - 1, 1) #starts at a range of y-1 to y (so, tier 4 location will grab from pool of tier 3s and 4s)
+                try:
+                   while working_list == [] and minimum_tier > 0:
+                        for i in working_list_copy:
+                            percent_flag = random_engine.randint(1,100) > tiering_percentage
+                            rare_percent_flag = random_engine.randint(1,100) > RARE_TIER_PERCENTAGE
+                            if rare_percent_flag:
+                                if i.tier >= 7:
+                                    working_list.append(i)
+                            # If less than, then apply normal case
+                            elif not percent_flag:
+                                if i.tier <= reward_loc_tier and i.tier >= minimum_tier:
+                                    working_list.append(i)
+                                if debug_flag:
+                                    print("Collectible: %s %s reward_loc_tier %s"% (i.collectible_name,i.tier,reward_loc_tier))                  
+                            # If greater than or equal to percentage, add the collectible if it is reward_loc_tier + threshold
+                            else:
+                                if i.tier <= (reward_loc_tier + tiering_threshold) and i.tier >= minimum_tier:
+                                    working_list.append(i)
+                                if debug_flag:
+                                    print("Collectible (bonus): %s %s reward_loc_tier %s"% (i.collectible_name,i.tier,reward_loc_tier))
+                        # decrease minimum_tier for next time, if working_list is still empty
+                        minimum_tier -= 1
+                except Exception as e:
+                    print("EXCEPTION %s" % (e))
 
         #ending up with empty lists and failures too often, need a fallback incase
         #we don't end up with any values. We'll get a list of any of the appropriate type,
@@ -324,10 +416,13 @@ class CollectibleManager():
 
         if disable_zerozero:
             working_list = [x for x in working_list if x.patch_id != '00'] #disable any id of 00, because this ends shops
-
+            
+            
         if respect_weight is False:
             choice = random_engine.choice(working_list)
         else:
+            # Legit I don't think this is doing anything. While debugging, [y.place_weight for y in working_list] always produces an array of 1s, from the hardcode weight=1 from Collectible...
+            # What was the point...?
             choice = random_engine.choices(working_list, [y.place_weight for y in working_list])[0]
 
         if monitor_counts is True:
@@ -335,6 +430,10 @@ class CollectibleManager():
 
         if choice is None:
             print(working_list)
+        if debug_flag and next_reward is not None:
+            breakpoint()
+#            for i in working_list_copy1:
+#                print(i.collectible_name)
 
         return choice
 

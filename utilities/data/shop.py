@@ -7,6 +7,11 @@ class Shop(object):
     def __init__(self, index, collectible_manager, data_manager):
         self.idx = index
         self.generate_from_df(data_manager.files['shops'])
+        
+        # The below capacity penalizes the capacity of high value shops more than others 
+        self.capacity = int(max((int(self.num_items) * int(self.tier) * .5) - round(int(self.tier) ** 1.5),1))
+        self.current_volume = 0
+        
         '''
         self.address
         self.shop_type
@@ -51,19 +56,24 @@ class Shop(object):
     @property
     def short_output(self):
         #these two lists format the None collectibles into strings for easy reading
+        # breakpoint()
         readable_original = [x.shop_name if x is not None else "None" for x in self.original_contents]
         readable_current = [x.shop_name if x is not None else "None" for x in self.contents]
-        output = "Shop: " + self.readable_name + "\n"
-        output = output + "Shop Type: " + self.shop_type + "\n"
-        output = output + "Shop Item 1: " + readable_original[0] + " -> " + readable_current[0] + "\n"
-        output = output + "Shop Item 2: " + readable_original[1] + " -> " + readable_current[1] + "\n"
-        output = output + "Shop Item 3: " + readable_original[2] + " -> " + readable_current[2] + "\n"
-        output = output + "Shop Item 4: " + readable_original[3] + " -> " + readable_current[3] + "\n"
-        output = output + "Shop Item 5: " + readable_original[4] + " -> " + readable_current[4] + "\n"
-        output = output + "Shop Item 6: " + readable_original[5] + " -> " + readable_current[5] + "\n"
-        output = output + "Shop Item 7: " + readable_original[6] + " -> " + readable_current[6] + "\n"
-        output = output + "Shop Item 8: " + readable_original[7] + " -> " + readable_current[7] + "\n"
-        
+        readable_current_tier = ["T"+str(x.tier) if x is not None else "  " for x in self.contents]
+        shops_dict = {'00':'Magic','01':'Item','07':'Ability/Crystal'}
+        output = "Shop: " + self.readable_name + " (Tier " + self.tier + ")" + "\n"
+        try:
+            output = output + "Shop Type: " + shops_dict[self.shop_type] + "\n"
+        except:
+            pass
+        output = output + '{:30}'.format("Shop Item 1: " + readable_original[0]) + '{:5}'.format(" -> ") + '{:30}'.format(readable_current_tier[0] + " " + readable_current[0]) + "\n"
+        output = output + '{:30}'.format("Shop Item 2: " + readable_original[1]) + '{:5}'.format(" -> ") + '{:30}'.format(readable_current_tier[1] + " " + readable_current[1]) + "\n"
+        output = output + '{:30}'.format("Shop Item 3: " + readable_original[2]) + '{:5}'.format(" -> ") + '{:30}'.format(readable_current_tier[2] + " " + readable_current[2]) + "\n"
+        output = output + '{:30}'.format("Shop Item 4: " + readable_original[3]) + '{:5}'.format(" -> ") + '{:30}'.format(readable_current_tier[3] + " " + readable_current[3]) + "\n"
+        output = output + '{:30}'.format("Shop Item 5: " + readable_original[4]) + '{:5}'.format(" -> ") + '{:30}'.format(readable_current_tier[4] + " " + readable_current[4]) + "\n"
+        output = output + '{:30}'.format("Shop Item 6: " + readable_original[5]) + '{:5}'.format(" -> ") + '{:30}'.format(readable_current_tier[5] + " " + readable_current[5]) + "\n"
+        output = output + '{:30}'.format("Shop Item 7: " + readable_original[6]) + '{:5}'.format(" -> ") + '{:30}'.format(readable_current_tier[6] + " " + readable_current[6]) + "\n"
+        output = output + '{:30}'.format("Shop Item 8: " + readable_original[7]) + '{:5}'.format(" -> ") + '{:30}'.format(readable_current_tier[7] + " " + readable_current[7]) + "\n"
         return output
 
     def generate_from_df(self, df):
@@ -76,6 +86,9 @@ class Shop(object):
 
     def new_contents(self, contents):
         self.contents = contents
+    
+    def update_volume(self, value):
+        self.current_volume += value
 
 class ShopManager(object):
     def __init__(self, collectible_manager, data_manager):

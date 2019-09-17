@@ -38,16 +38,27 @@ CRYSTAL_SHOP_TYPE = "07"
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
         self.RE = random_engine
-        
+        print("Config passed in: %s" % (str(conductor_config)))
         # Set up conductor config
         if len(conductor_config) == 0: # if no config was passed in, default False
             self.fjf = False
             self.jobpalettes = False
             self.world_lock = 0
+            self.tiering_config = True
+            self.tiering_percentage = 90
+            self.tiering_threshold = 10
+            self.enforce_all_jobs = True
+            
         else:                           # else take the config passed from server.py and set variables
             self.fjf = self.translateBool(conductor_config['fjf'])
             self.jobpalettes = self.translateBool(conductor_config['jobpalettes'])
             self.world_lock = int(conductor_config['world_lock'])
+            self.tiering_config = self.translateBool(conductor_config['tiering_config'])
+            self.tiering_percentage = int(conductor_config['tiering_percentage'])
+            self.tiering_threshold= int(conductor_config['tiering_threshold'])
+            self.enforce_all_jobs = self.translateBool(conductor_config['enforce_all_jobs'])
+            
+            print("Config assigned: FJF: %s Palettes: %s World_lock: %s Tiering_config: %s Tiering_percentage: %s Tiering_threshold: %s" % (str(self.fjf),str(self.jobpalettes),str(self.world_lock),str(self.tiering_config),str(self.tiering_percentage),str(self.tiering_threshold)))
 
         # Set up randomizer config
         self.config = configparser.ConfigParser()
@@ -84,11 +95,11 @@ class Conductor():
         crystals = self.CM.get_all_of_type(Crystal)
         starting_crystal = self.RE.choice(crystals)
         # Reroll if Freelancer
-        while starting_crystal.collectible_name == 'Freelancer':
+        while starting_crystal.collectible_name == 'Freelancer' or starting_crystal.collectible_name == 'Mimic' or starting_crystal.collectible_name == 'Samurai':
             print("Rerolling starting crystal...")
             starting_crystal = self.RE.choice(crystals)
         
-        self.CM.add_to_placement_history(starting_crystal) #don't allow the starting crystal to appear anywhere in game
+        self.CM.add_to_placement_history(starting_crystal,"No") #don't allow the starting crystal to appear anywhere in game
         if starting_crystal.starting_spell_list == ['']:
             starting_crystal.starting_spell = "None"
             starting_crystal.starting_spell_id = "FF"
@@ -106,6 +117,7 @@ class Conductor():
 
             if crystal_count < int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT']):
                 crystal_count = int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT'])
+                
             
         else:
             crystal_count = 3
@@ -123,7 +135,15 @@ class Conductor():
         #this pretends to have placed every job, so it won't try to place any more going forward
         if fjf:
             for crystal in [x for x in self.CM.get_all_of_type(Crystal) if x != starting_crystal]:
-                self.CM.add_to_placement_history(crystal)
+                self.CM.add_to_placement_history(crystal,"No")
+        else:
+            # this does something similar for regular seeds, where all non-chosen crystals are added to placement history
+            # only if the setting for enforce all jobs is off
+            if not self.enforce_all_jobs:
+                for crystal in [x for x in self.CM.get_all_of_type(Crystal) if x not in chosen_crystals]:
+                    self.CM.add_to_placement_history(crystal,"No")
+
+            
 
         return (starting_crystal, chosen_crystals)
 
@@ -141,13 +161,13 @@ class Conductor():
                     increase_amount = int(self.conductor_config['MAGIC_RELEVANCE_WEIGHT_MODIFIER'])  #much more likely to find these magics
                 value.place_weight = value.place_weight + increase_amount
 
-    def randomize_rewards(self):
-        for _, value in enumerate(self.RM.rewards):
-            to_place = self.CM.get_random_collectible(self.RE, respect_weight=True,
-                                                      monitor_counts=True)
-            value.set_collectible(to_place)
-            value.randomized = True
-            self.AM.update_volume(value)
+#    def randomize_rewards(self):
+#        for _, value in enumerate(self.RM.rewards):
+#            to_place = self.CM.get_random_collectible(self.RE, respect_weight=True,
+#                                                      monitor_counts=True)
+#            value.set_collectible(to_place)
+#            value.randomized = True
+#            self.AM.update_volume(value)
 
     def randomize_key_items(self):
         
@@ -175,8 +195,9 @@ class Conductor():
                 next_key_reward_locs = None
             
             if next_key_reward_locs == None:
-                next_key_item = self.CM.get_random_collectible(self.RE, monitor_counts=True, of_type=KeyItem)
+                next_key_item = self.CM.get_random_collectible(self.RE, monitor_counts=True,next_reward = next_key_reward,tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, of_type=KeyItem)
                 next_key_reward.set_collectible(next_key_item)
+                self.CM.update_placement_rewards(next_key_item, next_key_reward)
                 next_key_reward.randomized = True
                 num_placed_key_items = num_placed_key_items + 1
             else:
@@ -204,10 +225,11 @@ class Conductor():
                 else:
                     next_key_item = self.RE.choice(possible_key_items)
                     next_key_reward.set_collectible(next_key_item)
+                    self.CM.update_placement_rewards(next_key_item, next_key_reward)
                     if "Tablet" not in next_key_item.reward_name:
                         exdeath_list.append(next_key_reward)
                     next_key_item.required_by_placement.extend(next_key_reward_locs)
-                    self.CM.add_to_placement_history(next_key_item) #add this manually, usually get_random_collectible handles it
+                    self.CM.add_to_placement_history(next_key_item,"No") #add this manually, usually get_random_collectible handles it
                     next_key_reward.randomized = True
                     num_placed_key_items = num_placed_key_items + 1
 
@@ -215,6 +237,7 @@ class Conductor():
             key_item_collectible = self.CM.get_of_value_or_lower(self.RE, value=4)
             key_item_reward.set_collectible(key_item_collectible)
             key_item_reward.randomized = True
+            self.CM.update_placement_rewards(key_item_collectible, key_item_reward)
 
         exdeath_rewards = {}
         for i in self.RE.sample(exdeath_list, 3):
@@ -231,71 +254,111 @@ class Conductor():
         if self.conductor_config.getboolean('SHINRYUU_VANILLA'):
             shinryuu_address = self.conductor_config['SHINRYUU_ADDRESS']
             shinryuu_chest = self.RM.get_reward_by_address(shinryuu_address)
+
             mib = self.MIBM.get_mib_by_address(shinryuu_address)
 
-            shinryuu_chest.set_collectible(self.CM.get_random_collectible(self.RE, respect_weight=True, of_type=Item, monitor_counts=True))
+            to_place = self.CM.get_random_collectible(self.RE, respect_weight=True,next_reward = shinryuu_chest,of_type=Item, monitor_counts=True,tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
+            shinryuu_chest.set_collectible(to_place)
+            self.CM.update_placement_rewards(to_place, shinryuu_chest)
             shinryuu_chest.mib_type = mib.monster_chest_data
             shinryuu_chest.randomized = True
             mib.processed = True
             self.AM.update_volume(shinryuu_chest)
-
         while self.AM.any_areas_not_full():
             #print()
-            #print("not full yet")
-            area = self.AM.get_emptiest_area()
+            #print("Area rewards: not full yet")
+            # area = self.AM.get_emptiest_area()
+            area = self.AM.get_random_area()
+
             if area is None:
                 break
-            #print("next area to place in: " + area.area_name)
+            #print("Area rewards: Area: " + area.area_name)
             possibles = [x for x in self.RM.rewards if x.area == area.area_name
                          and x.randomized == False and x.reward_style != 'key']
-            #print("# of reward spot choices: " + str(len(possibles)))
+            #print("Area rewards: # of reward spot choices: " + str(len(possibles)))
 
             next_reward = self.RE.choice(possibles)
+            
+            if next_reward.randomized:
+                print("%s was already randomzed...?" % (next_reward.description))
 
-            #print("checking mib status now")
+            #print("Area rewards: checking mib status now")
+                
             mib = self.MIBM.get_mib_for_area(area)
-            #print(mib)
-            #print("next reward style: " + next_reward.reward_style)
+            #print("Area rewards: next reward style: " + next_reward.reward_style)
 
             if mib is not None and next_reward.reward_style == "chest": #only mibs in chests
-                #print("doing the mib stuff")
-                to_place = self.CM.get_random_collectible(self.RE, respect_weight=True, of_type=Item, monitor_counts=True) #only items in mibs
+                #print("Area rewards: doing the mib stuff")
+                to_place = self.CM.get_random_collectible(self.RE,reward_loc_tier=next_reward.tier,next_reward=next_reward, respect_weight=True, of_type=Item, monitor_counts=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, force_tier = 9) #only items in mibs
                 next_reward.mib_type = mib.monster_chest_data
                 mib.processed = True
                 #print(mib.processed)
                 #print(next_reward.mib_type)
-                #print("\n\n\n")
+                #print("Area rewards: \n\n\n")
             else:
-                #print("we chose: " + next_reward.description)
-                to_place = self.CM.get_random_collectible(self.RE, respect_weight=True, of_type=next_reward.force_type,
-                                                          monitor_counts=True, gil_allowed=next_reward.reward_style == "chest")
-            if type(to_place) == Gil:
-                if next_reward.reward_style != "chest":
-                    print("Gil would have broken here")
-            #print("the item to put there: " + to_place.reward_name)
+                #print("Area rewards: Location to place: " + next_reward.description)
+                
+                # Handle some percentages 
+                
+#                if next_reward.force_type == None:
+#                    # If force_type is blank, we can start toying with percentages 
+#                    random_int = self.RE.randint(1,100)
+#                    if random_int > 1:
+#                        next_reward.force_type = Ability
+#                    else:
+#                        next_reward.force_type = Item                      
+                    
+                
+                to_place = self.CM.get_random_collectible(self.RE,respect_weight=True, reward_loc_tier=next_reward.tier, of_type=next_reward.force_type,
+                                                          monitor_counts=True, gil_allowed=next_reward.reward_style == "chest",next_reward=next_reward, 
+                                                          tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
+                
+            try:
+                if "Phoenix" in next_reward.area:
+                    self.CM.remove_from_placement_history(to_place)
+                    to_place = [x for x in self.CM.get_all_of_type(Item) if x.collectible_name == "Elixir"][0]
+            except Exception as e:
+                print(e)
+                
+            #print("Area rewards: Reward being placed: " + to_place.reward_name)
             next_reward.set_collectible(to_place)
             next_reward.randomized = True
             self.AM.update_volume(next_reward)
+            self.CM.update_placement_rewards(to_place, next_reward)
 
         #print("going into cleanup")
+        
+        non_randomized_list = [i for i in self.RM.rewards if not i.randomized]
+        # print("Cleanup non-randomized rewards %s" % ([i.description for i in non_randomized_list]))
+        
+        for next_reward in non_randomized_list:
+            to_place = self.CM.get_random_collectible(self.RE,respect_weight=True, reward_loc_tier=next_reward.tier, of_type=next_reward.force_type,
+                                                      monitor_counts=True, gil_allowed=next_reward.reward_style == "chest",next_reward=next_reward, 
+                                                      tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
+            next_reward.set_collectible(to_place)
+            next_reward.randomized = True
+            self.AM.update_volume(next_reward)
+            self.CM.update_placement_rewards(to_place, next_reward)
+        
         for i in self.AM.areas:
-            #print("Checking area: " + i.area_name)
+            # print("Cleanup, checking area: " + i.area_name)
             if i.num_placed_checks < i.num_checks:
-                #print("That area wasn't done")
+                print("Cleanup, area %s not finished, %s placed_checks out of %s checks " % (i.area_name,i.num_placed_checks, i.num_checks))
                 for j in [x for x in self.RM.rewards if x.area == i.area_name and x.reward_style != 'key']:
                     #1 spot remaining is the same as greater than or equal to
                     #thus the - 1
                     if i.current_volume >= i.area_capacity - 1:
-                        #print("Area had minimum capacity remaining")
+                        ##print("Area had minimum capacity remaining")
                         to_place = self.CM.get_min_value_collectible(self.RE)
                     else:
-                        #print("Area had some bonus capacity")
+                        ##print("Area had some bonus capacity")
                         remaining = self.capacity - self.current_volume
                         to_place = self.CM.get_of_value_or_lower(random,
                                                                  remaining)
                     j.set_collectible(to_place)
                     j.randomized = True
                     self.AM.update_volume(j)
+                    self.CM.update_placement_rewards(to_place, next_reward)
             
 
     def randomize_shops(self):
@@ -307,18 +370,19 @@ class Conductor():
 
         #print("difficulty: " + str(self.difficulty))
         
-        for index, value in enumerate(self.SM.shops):
+        for index, value in enumerate(self.RE.sample(self.SM.shops,len(self.SM.shops))):
             #don't waste time on invalid shops
             if value.valid is False:
                 continue
 
             #for the discount shops, put a single item in there
+           #  breakpoint()
             if "discount" in value.readable_name:
                 value.num_items = 1
                 value.shop_type = ITEM_SHOP_TYPE
-                value.contents = [self.CM.get_random_collectible(random, respect_weight=True,
-                                                                   monitor_counts=True,
-                                                                   of_type=Item)] + [None] * 7
+                value.contents = [self.CM.get_random_collectible(random, respect_weight=True, reward_loc_tier = value.tier, 
+                                                                   monitor_counts=True, next_reward=next_reward,
+                                                                   of_type=Item, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)] + [None] * 7
                 continue
             
             #manage the probability of the shops
@@ -360,15 +424,17 @@ class Conductor():
                 value.shop_type = ITEM_SHOP_TYPE
                 for i in range(0, value.num_items):
                     while True:
-                        item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
-                                                                       monitor_counts=True,
-                                                                       of_type=Item)
+                        item_to_place = self.CM.get_random_collectible(random, respect_weight=True, reward_loc_tier = value.tier, 
+                                                                       monitor_counts=True, next_reward = value,
+                                                                       of_type=Item, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
                         if item_to_place not in contents:
                             break
 
                     if item_to_place.reward_id in required_items.keys():
                         required_items[item_to_place.reward_id] = required_items[item_to_place.reward_id] + 1
                     contents.append(item_to_place)
+                    value.update_volume(item_to_place.tier)
+                    self.CM.update_placement_rewards(item_to_place, value)
                     
             elif kind == "magic":
                 if value.num_items > 5:
@@ -381,22 +447,29 @@ class Conductor():
                 try:
                     for i in range(0, value.num_items):
                         while True:
-                            item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
-                                                                           monitor_counts=True,
-                                                                           of_type=Magic, disable_zerozero=True)
+                            item_to_place = self.CM.get_random_collectible(random, respect_weight=True, reward_loc_tier = value.tier, 
+                                                                           monitor_counts=True,next_reward = value,
+                                                                           of_type=Magic, disable_zerozero=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
                             if item_to_place not in contents:
                                 break
 
                         contents.append(item_to_place)
-                        
+                        value.update_volume(item_to_place.tier)
+                        self.CM.update_placement_rewards(item_to_place, value)
                 except Exception as e:
                     contents = []
                     value.shop_type = ITEM_SHOP_TYPE
                     for i in range(0, value.num_items):
-                        contents.append(self.CM.get_random_collectible(random, respect_weight=True,
-                                                                       monitor_counts=True,
-                                                                       of_type=Item, disable_zerozero=True))
-                
+                        while True:
+                            item_to_place = self.CM.get_random_collectible(random, respect_weight=True, reward_loc_tier = value.tier, 
+                                                                           monitor_counts=True,next_reward = value,
+                                                                           of_type=Item, disable_zerozero=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
+                            if item_to_place not in contents:
+                                break
+
+                        contents.append(item_to_place)
+                        value.update_volume(item_to_place.tier)      
+                        self.CM.update_placement_rewards(item_to_place, value)
             else:
                 if value.num_items > 4:
                     value.num_items = 4
@@ -408,26 +481,35 @@ class Conductor():
                 try:
                     for i in range(0, value.num_items):
                         while True:
-                            item_to_place = self.CM.get_random_collectible(random, respect_weight=True,
-                                                                           monitor_counts=True,
-                                                                           of_type=(Crystal, Ability))
+                            item_to_place = self.CM.get_random_collectible(random, respect_weight=True, reward_loc_tier = value.tier, 
+                                                                           monitor_counts=True,next_reward = value,
+                                                                           of_type=(Crystal, Ability), tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
                             if item_to_place not in contents:
                                 break
 
                         contents.append(item_to_place)
+                        value.update_volume(item_to_place.tier)
+                        self.CM.update_placement_rewards(item_to_place, value)
                 except Exception as e:
                     contents = []
                     value.shop_type = ITEM_SHOP_TYPE
                     for i in range(0, value.num_items):
-                        contents.append(self.CM.get_random_collectible(random, respect_weight=True,
-                                                                       monitor_counts=True,
-                                                                       of_type=Item, disable_zerozero=True))
+                        while True:
+                            item_to_place = self.CM.get_random_collectible(random, respect_weight=True, reward_loc_tier = value.tier, 
+                                                                           monitor_counts=True,next_reward = value,
+                                                                           of_type=Item, disable_zerozero=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
+                            if item_to_place not in contents:
+                                break
 
+                        contents.append(item_to_place)
+                        value.update_volume(item_to_place.tier)
+                        self.CM.update_placement_rewards(item_to_place, value)
             while(len(contents) < 8):
                 contents.append(None)
                 
             value.contents = contents
 
+            
         '''
         for shop in [x for x in self.SM.shops if x.valid]:
             if shop.num_items == 0:
@@ -444,15 +526,57 @@ class Conductor():
                 #print("guaranteeing " + index)
                 item_to_place = self.CM.get_by_id_and_type(index, ITEM_TYPE)
                 #print(item_to_place.reward_name)
-                item_shops = [x for x in self.SM.shops if x.shop_type == ITEM_SHOP_TYPE and x.valid and x.num_items > 0 and x.num_items < 8]
+                # First attempt to place in tier 1 shop locations (world 1)
+                item_shops = [x for x in self.SM.shops if x.shop_type == ITEM_SHOP_TYPE and x.valid and x.num_items > 0 and x.num_items < 8 and (x.tier == '1' or x.tier == 1)]
+                if item_shops == []:
+                    # if not, use normal method 
+                    item_shops = [x for x in self.SM.shops if x.shop_type == ITEM_SHOP_TYPE and x.valid and x.num_items > 0 and x.num_items < 8]
                 #print("number of item shops: " + str(len(item_shops)))
-                chosen_shop = item_shops[random.choice(range(0, len(item_shops)))]
+                try:
+                    chosen_shop = item_shops[random.choice(range(0, len(item_shops)))]
+                    chosen_shop.contents[slot] = item_to_place
+                    chosen_shop.num_items = chosen_shop.num_items + 1
+                except:
+                    try:
+                        #print("Error on placing %s in shop, skipping..." % (item_to_place.description_name))
+                        pass
+                    except:
+                        #print("Error on placing %s in shop, skipping..." % (item_to_place))
+                        pass
                 slot = chosen_shop.num_items #because of 0 indexing, we want this, not this + 1
                 #print("chosen slot index: " + str(chosen_slot))
 
-                chosen_shop.contents[slot] = item_to_place
-                chosen_shop.num_items = chosen_shop.num_items + 1
                 value = value + 1
+        
+        # finally dedupe shops
+        global shops
+        shops = self.SM.shops
+        
+
+        
+        for index, shop in enumerate(self.SM.shops):
+            contents = shop.contents
+            name_list = []
+            for i in contents:
+                if i is not None:
+                    name_list.append(i)
+            if len(set(name_list)) < len(name_list):
+                # if this condition, we've got duplicates
+                new_contents = []
+                for i in contents:
+                    if i not in new_contents:
+                        new_contents.append(i)
+                while(len(new_contents) < 8):
+                    new_contents.append(None)
+                shop.contents = new_contents
+                # breakpoint()
+                
+            # Finally check each entry for None, if they appear, pop, then re-add
+            
+            new_contents = [i for i in shop.contents if i is not None]
+            while(len(new_contents) < 8):
+                new_contents.append(None)
+            shop.contents = new_contents 
 
     def randomize_bosses(self):
         list_of_randomized_enemies = []
@@ -562,7 +686,6 @@ class Conductor():
         
             # Find original boss's first enemy HP
             new_hp = int(original_boss.enemy_classes[0].num_hp)
-            original_hp = new_hp
         
             # Update random boss hp on FIRST enemy only right now
             random_boss.enemy_classes[0].num_hp = new_hp
@@ -1293,10 +1416,33 @@ class Conductor():
         output_str = output_str + '\n; CODE OF THE VOID: \norg $E77476\n'+code_str+'\norg $F80900\n'+code_str+'\n\n'
 
         
-        self.superbosses_spoiler = self.superbosses_spoiler + "\n ***** CODE OF THE VOID *****\n"+''.join(letters)
+        self.superbosses_spoiler = self.superbosses_spoiler + "\n ***** CODE OF THE VOID *****\n"+''.join(letters)+"\n\n"
             
         return output_str
-
+    def get_collectible_counts(self):
+        # Here for this spoiler, we need to collect from both RM and SM to get accurate data, so we do it here:
+        spoiler = "\n-----COLLECTIBLE COUNTS BY TYPE-----\n"
+        count_dict = {}
+        for i in self.RM.rewards:
+            if type(i.collectible) not in count_dict.keys():
+                count_dict[type(i.collectible)] = 1
+            else:
+                count_dict[type(i.collectible)] = count_dict[type(i.collectible)] + 1
+        
+        for shop in self.SM.shops:
+            for i in shop.contents:
+                if type(i) not in count_dict.keys():
+                    count_dict[type(i)] = 1
+                else:
+                    count_dict[type(i)] = count_dict[type(i)] + 1
+                
+        for key, val in count_dict.items():
+            try:
+                new_str =  '{:12}'.format(str(key.name) + ": ") +  '{:12}'.format(str(val)) + "\n"
+                spoiler = spoiler + new_str
+            except:
+                pass
+        return spoiler + "\n"
     def karnak_escape_patch(self):
         '''
         Random song chosen, outputs asar code
@@ -1328,12 +1474,20 @@ class Conductor():
         return output
 
     def translateBool(self, boolean):
-        if boolean == "false":
+        print("Boolean passed in to translate: %s" % (boolean))
+        if type(boolean) == bool:
+            return boolean
+        if boolean == "false" or boolean == "off" or boolean == "0" or boolean == 0:
             return False
-        if boolean == "true":
+        if boolean == "true" or boolean == "on" or boolean == "1" or boolean == 1:
             return True
         else:
             return None
+        
+    def cleanup_seed(self):
+        non_placed_collectibles = [y for y in [x for x in self.CM.collectibles if x.placed_reward==None] if y.valid]
+        
+        
 
     def randomize(self, random_engine=None):
         if random_engine is None:
@@ -1349,20 +1503,36 @@ class Conductor():
             self.RM.reset_rewards_by_style("key")
             num_placed_key_items = self.randomize_key_items()
 
+
+        print("Randomizing shops...")
+        self.randomize_shops()
+        
+        
+        
+
+
         print("Randomizing rewards...")
         self.randomize_rewards_by_areas()
+      
         for i in self.RM.rewards: #this is a fix for an unsolved bug where some rewards don't get collectibles. it's rare, but it happens
             if i.collectible is None:
                 if i.reward_style != 'key':
-                   i.collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True, gil_allowed=False)
-        print("Randomizing shops...")
-        self.randomize_shops()
+                    i.collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True, gil_allowed=False, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
+
+
         print("Randomizing bosses...")
         self.randomize_bosses()
 
         for i in self.RM.rewards:
             if i.collectible is None:
                 print(i.description)
+                
+
+        print("Running cleanup for guaranteeing collectibles")
+        self.cleanup_seed()
+            
+
+        
         # Patch now comes first, because some functions (randomize_superbosses) now create the spoiler as part of their process
 
         patch = "hirom\n\n"
@@ -1382,11 +1552,13 @@ class Conductor():
 
         spoiler = ""
         spoiler = spoiler + self.starting_crystal_spoiler()
+        spoiler = spoiler + self.get_collectible_counts()                
         spoiler = spoiler + self.RM.get_spoiler()
         spoiler = spoiler + self.SM.get_spoiler()
+        spoiler = spoiler + self.CM.get_spoiler()    
         #spoiler = spoiler + self.EM.get_spoiler()
+        spoiler = spoiler + self.superbosses_spoiler        
         spoiler = spoiler + self.FM.get_spoiler()
-        spoiler = spoiler + self.superbosses_spoiler
 
         return(spoiler, patch)
 
@@ -1395,17 +1567,22 @@ class Conductor():
 ####################################
 ######## TESTING AREA ##############
 ####################################
-        
-#c = Conductor(random, {
-#                        'fjf':False,
-#                        'jobpalettes':False,
-#                        'world_lock':2
-#                      }
-#             )
-#(spoiler, patch) = c.randomize()
-## print(c.RM.get_spoiler())
+
+c = Conductor(random, {
+                        'fjf':False,
+                        'jobpalettes':False,
+                        'world_lock':2,
+                        'tiering_config': True,
+                        'tiering_percentage': 90,
+                        'tiering_threshold': 2,
+                        'enforce_all_jobs': False
+                      }
+             )
+(spoiler, patch) = c.randomize()
+# print(c.RM.get_spoiler())
 #
 ## Debug checking for 3 key items for world locking
 #for i in c.RM.rewards:
 #    if i.collectible.collectible_name == 'Bracelet' or i.collectible.collectible_name == 'Adamantite' or i.collectible.collectible_name == 'Anti Barrier':
 #        print(i.description, i.collectible.collectible_name)
+

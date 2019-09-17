@@ -456,7 +456,7 @@ D04C50,454,y,boss,5,10,D07840,D07842,C501,00,80,06,80,1A,FF,FF,FF,FF,FF,FF,FF,00
 D04C60,455,y,boss,5,11,D07844,D07846,C601,00,80,05,80,1B,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,Titan,Titan, , , , , , , 
 D04C70,456,y,boss,5,12,D07848,D0784A,C701,00,80,05,FC,1C,1C,1C,1C,1C,1C,FF,FF,00,00,08,60,"Puroboros, Puroboros, Puroboros, Puroboros, Puroboros, Puroboros",Puroboros,Puroboros,Puroboros,Puroboros,Puroboros,Puroboros, , 
 D04C80,457,,boss,,13,,,,00,80,01,80,1D,FF,FF,FF,FF,FF,FF,FF,00,00,00,20,Abductor,Abductor, , , , , , , 
-D04C90,458,y,boss,5,14,D07850,D07852,C901,00,80,00,80,1E,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,Gilgamesh,Gilgamesh, , , , , , , 
+D04C90,458,y,boss,4,14,D07850,D07852,C901,00,80,00,80,1E,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,Gilgamesh,Gilgamesh, , , , , , , 
 D04CA0,459,,boss,,15,,,,00,80,01,E0,1F,1F,1F,FF,FF,FF,FF,FF,00,00,C0,20,"Fishman, Fishman, Fishman",Fishman,Fishman,Fishman, , , , , 
 D04CB0,460,,boss,,16,,,,00,80,01,E0,21,21,21,FF,FF,FF,FF,FF,00,00,C0,20,"Lil Chariot, Lil Chariot, Lil Chariot",Lil Chariot,Lil Chariot,Lil Chariot, , , , , 
 D04CC0,461,,boss,,17,,,,00,80,01,80,22,FF,FF,FF,FF,FF,FF,FF,00,00,C0,20,NeoGalura,NeoGalura, , , , , , , 

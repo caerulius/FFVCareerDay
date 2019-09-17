@@ -1,23 +1,23 @@
-crystal_id,shop_id,readable_name,value,related_jobs,max_count,starting_weapon,starting_weapon_id,starting_spell_list,starting_spell_ids,starting_ability,starting_ability_id
-00,89,Knight,1,[“Knight”],1,Knife,02,[],[“FF”],Guard,06
-01,8A,Monk,1,[“Monk”],1,Nothing,01,[],[“FF”],Kick,07
-02,8B,Thief,1,[“Thief”],1,Knife,02,[],[“FF”],Escape,0b
-03,8C,Dragoon,1,[“Dragoon”],1,Knife,02,[],[“FF”],Jump,0d
-04,8D,Ninja,2,[“Ninja”],1,Knife,02,[],[“FF”],Smoke,11
-05,8E,Samurai,2,[“Samurai”],1,Knife,02,[],[“FF”],SwdSlap,13
-06,8F,Berserker,0,[“Berserker”],1,Knife,02,[],[“FF”],None,00
-07,90,Hunter,1,[“Hunter”],1,Knife,02,[],[“FF”],Animals,16
-08,91,MysticKnight,2,[“MysticKnight”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”]","[“00”, “01, “02”]",MgcSwrd Lv. 1,31
-09,92,WhiteMage,1,[“WhiteMage”],1,Staff,38,"[“Cure”, “Scan”, “Antdt”]","[“12”, “13”, “14”]",White Lv. 1,37
-0A,93,BlackMage,1,[“BlackMage”],1,Rod,31,"[“Fire”, “Ice”, “Bolt”]","[“24”, “25, “26”]",Black Lv. 1,3d
-0B,94,TimeMage,1,[“TimeMage”],1,Rod,31,"[“Drag”, “Slow”, “Regen”]","[“36”, “37”, “38”]",Dimen Lv. 1,43
-0C,95,Summoner,2,[“Summoner”],1,Rod,31,"[“Chocob”, “Sylph”, “Remora”]","[“48”, “49”, “4A”]",Summon Lv. 1,48
-0D,96,BlueMage,2,[“BlueMage”],1,Knife,02,"[“Aero”, “GblinPnch”, “Hammer”]","[“8F”, “93” ,”99”]",Blue,4d
-0E,97,RedMage,1,[“RedMage”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”, “Cure”, “Scan”, “Antdt”]","[“24”, “25, “26”, “12”, “13”, “14”]",Red Lv. 1,4b
-0F,98,Mediator,0,[“Mediator”],1,Whip,4B,[],[“FF”],Tame,1d
-10,99,Chemist,2,[“Chemist”],1,Staff,38,[],[“FF”],Combine,20
-11,9A,Geomancer,1,[“Geomancer”],1,Giyaman,50,[],[“FF”],Terrain,23
-12,9B,Bard,1,[“Bard”],1,Knife,02,"[“Power”, “Speed”, “Vitality”]","[“57”, “58”, “59”]",Hide,28
-13,9C,Dancer,1,[“Dancer”],1,Knife,02,[],[“FF”],Flirt,2a
-14,9D,Mimic,2,[“Mimic”],1,Knife,02,[],[“FF”],Mimic,2b
-15,9E,Freelancer,0,[“Freelancer”],1,Knife,02,[],[“FF”],None,00
+crystal_id,shop_id,readable_name,value,related_jobs,max_count,starting_weapon,starting_weapon_id,starting_spell_list,starting_spell_ids,starting_ability,starting_ability_id,tier
+00,89,Knight,1,[“Knight”],1,Knife,02,[],[“FF”],Guard,06,1
+01,8A,Monk,1,[“Monk”],1,Nothing,01,[],[“FF”],Kick,07,1
+02,8B,Thief,1,[“Thief”],1,Knife,02,[],[“FF”],Escape,0b,1
+03,8C,Dragoon,1,[“Dragoon”],1,Knife,02,[],[“FF”],Jump,0d,1
+04,8D,Ninja,2,[“Ninja”],1,Knife,02,[],[“FF”],Smoke,11,3
+05,8E,Samurai,2,[“Samurai”],1,Knife,02,[],[“FF”],SwdSlap,13,9
+06,8F,Berserker,0,[“Berserker”],1,Knife,02,[],[“FF”],None,00,1
+07,90,Hunter,1,[“Hunter”],1,Knife,02,[],[“FF”],Animals,16,1
+08,91,MysticKnight,2,[“MysticKnight”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”]","[“00”, “01, “02”]",MgcSwrd Lv. 1,31,3
+09,92,WhiteMage,1,[“WhiteMage”],1,Staff,38,"[“Cure”, “Scan”, “Antdt”]","[“12”, “13”, “14”]",White Lv. 1,37,1
+0A,93,BlackMage,1,[“BlackMage”],1,Rod,31,"[“Fire”, “Ice”, “Bolt”]","[“24”, “25, “26”]",Black Lv. 1,3d,1
+0B,94,TimeMage,1,[“TimeMage”],1,Rod,31,"[“Drag”, “Slow”, “Regen”]","[“36”, “37”, “38”]",Dimen Lv. 1,43,1
+0C,95,Summoner,2,[“Summoner”],1,Rod,31,"[“Chocob”, “Sylph”, “Remora”]","[“48”, “49”, “4A”]",Summon Lv. 1,48,3
+0D,96,BlueMage,2,[“BlueMage”],1,Knife,02,"[“Aero”, “GblinPnch”, “Hammer”]","[“8F”, “93” ,”99”]",Blue,4d,3
+0E,97,RedMage,1,[“RedMage”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”, “Cure”, “Scan”, “Antdt”]","[“24”, “25, “26”, “12”, “13”, “14”]",Red Lv. 1,4b,1
+0F,98,Mediator,0,[“Mediator”],1,Whip,4B,[],[“FF”],Tame,1d,1
+10,99,Chemist,2,[“Chemist”],1,Staff,38,[],[“FF”],Combine,20,3
+11,9A,Geomancer,1,[“Geomancer”],1,Giyaman,50,[],[“FF”],Terrain,23,3
+12,9B,Bard,1,[“Bard”],1,Knife,02,"[“Power”, “Speed”, “Vitality”]","[“57”, “58”, “59”]",Hide,28,1
+13,9C,Dancer,1,[“Dancer”],1,Knife,02,[],[“FF”],Flirt,2a,1
+14,9D,Mimic,2,[“Mimic”],1,Knife,02,[],[“FF”],Mimic,2b,9
+15,9E,Freelancer,0,[“Freelancer”],1,Knife,02,[],[“FF”],None,00,9
