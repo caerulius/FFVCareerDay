@@ -326,14 +326,24 @@ class CollectibleManager():
 
         if monitor_counts is True:
             # first attempt to place things that are not placed yet
+            
+            ###
+            #
+            # IF YOU WANT TO GO BACK TO THE "OLD WAY" WHERE ITEMS NOT PLACED AREN'T PRIORITIZED
+            # DISABLE THE BELOW 
+            #
+            ###
             working_list_og = working_list[:]
             working_list = [y for y in [x for x in working_list if
                                             x not in self.placement_history.keys()] if y.valid]
             if working_list == [] and 'shop' not in str(type(next_reward)):
-                # if everything was placed, then restart: 
-#                breakpoint()
-#                print("Edge triggered")
                 working_list = working_list_og[:]
+                
+                
+                
+                
+                
+            # RESUME NORMAL 
             working_list = [y for y in [x for x in working_list if
                                        (x not in self.placement_history.keys() or
                                         x.max_count is None or

@@ -7,6 +7,11 @@ class Shop(object):
     def __init__(self, index, collectible_manager, data_manager):
         self.idx = index
         self.generate_from_df(data_manager.files['shops'])
+        
+        # The below capacity penalizes the capacity of high value shops more than others 
+        self.capacity = int(max((int(self.num_items) * int(self.tier) * .5) - round(int(self.tier) ** 1.5),1))
+        self.current_volume = 0
+        
         '''
         self.address
         self.shop_type
@@ -81,6 +86,9 @@ class Shop(object):
 
     def new_contents(self, contents):
         self.contents = contents
+    
+    def update_volume(self, value):
+        self.current_volume += value
 
 class ShopManager(object):
     def __init__(self, collectible_manager, data_manager):

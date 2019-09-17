@@ -35,6 +35,7 @@ class Formation(object):
         self.enemy_list
         '''
         self.assign_enemies(enemy_manager, data_manager, original_flag)
+        self.original_enemy_list = self.enemy_list
         self.enemy_change = ''
 
     @property
@@ -47,8 +48,35 @@ class Formation(object):
     @property
     def short_output(self):
         try:
-            return "Tier: "+str(self.tier)+" Rank: "+str(self.boss_rank) + " Boss: "+str(self.enemy_list)
-        except:
+            split1, split2 = self.enemy_change.split(" > ",1)
+            
+            if self.offset == 'D04C90':
+                split1 = split1.replace("Gilgamesh","Gilgamesh I")    
+            elif self.offset == 'D04D00':
+                split1 = split1.replace("Gilgamesh","Gilgamesh II")
+            elif self.offset == 'D04D40':
+                split1 = split1.replace("Gilgamesh","Gilgamesh III")
+            elif self.offset == 'D04D80':
+                split1 = split1.replace("Gilgamesh","Gilgamesh IV")
+
+
+            if "Gilgamesh (Rank 4)" in split2:
+                split2 = split2.replace("Gilgamesh","Gilgamesh I")
+            elif "Gilgamesh (Rank 5)" in split2:
+                split2 = split2.replace("Gilgamesh","Gilgamesh II")
+            elif "Gilgamesh (Rank 6)" in split2:
+                split2 = split2.replace("Gilgamesh","Gilgamesh III")
+            elif "Gilgamesh (Rank 7)" in split2:
+                split2 = split2.replace("Gilgamesh","Gilgamesh IV")
+            split1 = split1.replace("Hole","Sandworm").replace("Forza","Magisa")
+            split2 = split2.replace("Hole","Sandworm").replace("Forza","Magisa")
+
+            
+           #  split2 = split2.split(" (", 1)[0]
+            
+            return '{:25}'.format("%s" % (split1)) + '{:5}'.format(">") + '{:25}'.format("%s" % (split2)) 
+        except Exception as e:
+            print("Exception %s" % e)
             return ""
 
     def generate_from_df(self, df):

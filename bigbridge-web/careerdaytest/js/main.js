@@ -105,6 +105,10 @@ function apiCall(data){
 		"tiering_percentage": $("#tiering_percentage").val(),
 		"tiering_threshold": $("#tiering_threshold").val(),
 		"enforce_all_jobs": $('#enforce_all_jobs').is(':checked'),
+		"red_color": $("#red_color").val(),
+		"blue_color": $("#blue_color").val(),
+		"green_color": $("#green_color").val(),
+		"exp_mult": $("#exp_mult").val(),
 		"fileLocation": data.Location
 	}
 	$.post(url, postData, function(data){

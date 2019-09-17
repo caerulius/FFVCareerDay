@@ -92,12 +92,22 @@ class AreaManager():
             checks, returns None.
         """
         try:
-            emptiest =  min([x for x in self.areas if x.current_volume < x.area_capacity
+             emptiest =  min([x for x in self.areas if x.current_volume < x.area_capacity
                         and x.num_placed_checks < x.num_checks], \
                         key=lambda item: item.current_volume)
-            return emptiest
+             return emptiest
         except:
             return None
+        
+    def get_random_area(self):
+        try:
+             random_area =  self.random.choice([x for x in self.areas if x.current_volume < x.area_capacity
+                        and x.num_placed_checks < x.num_checks])
+             return random_area
+        except:
+            # print("Broken new area ")
+            return None        
+        
         
     def any_areas_not_full(self):
         """Determines if any areas still have checks yet to be placed

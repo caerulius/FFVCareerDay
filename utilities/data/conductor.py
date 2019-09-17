@@ -40,6 +40,7 @@ class Conductor():
         self.RE = random_engine
         print("Config passed in: %s" % (str(conductor_config)))
         # Set up conductor config
+        self.configs = conductor_config # later so we don't manually define every key like below 
         if len(conductor_config) == 0: # if no config was passed in, default False
             self.fjf = False
             self.jobpalettes = False
@@ -1484,8 +1485,26 @@ class Conductor():
         else:
             return None
         
-    def cleanup_seed(self):
-        non_placed_collectibles = [y for y in [x for x in self.CM.collectibles if x.placed_reward==None] if y.valid]
+#   Unused, but may be necessary one day. The concept here is to iterate through unplaced collectibles and assign them to random rewards
+#    def cleanup_seed(self):
+#        non_placed_collectibles = [y for y in [x for x in self.CM.collectibles if x.placed_reward==None] if y.valid]
+#        
+
+    def parse_configs(self):
+        config = self.configs
+        r_color = int(config['red_color'])
+        g_color = int(config['green_color']) * 32
+        b_color = int(config['blue_color']) * 1024
+        colors = hex(r_color+g_color+b_color).replace("0x","")
+        c1, c2 = colors[0:2], colors[2:4]
+        
+        patch = ";CONFIG SETTINGS\n"
+        patch = patch + ";RGB\norg $C0F343\ndb $%s, $%s" % (c2,c1)
+                
+        reward_dict = {4:"28",3:"28",2:"18",1:"08"}
+        patch = patch + "\n;Reward Mult\norg $C0F342\ndb $%s" % (reward_dict[int(config['exp_mult'])])
+        return patch
+        
         
         
 
@@ -1528,8 +1547,8 @@ class Conductor():
                 print(i.description)
                 
 
-        print("Running cleanup for guaranteeing collectibles")
-        self.cleanup_seed()
+#        print("Running cleanup for guaranteeing collectibles")
+#        self.cleanup_seed()
             
 
         
@@ -1546,9 +1565,11 @@ class Conductor():
         patch = patch + self.FM.get_patch()
         patch = patch + self.karnak_escape_patch()
         patch = patch + self.kuzar_text_patch()
+        patch = patch + self.kuzar_text_patch()
         patch = patch + self.odin_location_fix_patch
         if self.jobpalettes:
             patch = patch + self.randomize_job_color_palettes()
+        patch = patch + self.parse_configs()
 
         spoiler = ""
         spoiler = spoiler + self.starting_crystal_spoiler()
@@ -1575,7 +1596,11 @@ c = Conductor(random, {
                         'tiering_config': True,
                         'tiering_percentage': 90,
                         'tiering_threshold': 2,
-                        'enforce_all_jobs': False
+                        'enforce_all_jobs': False,
+                        'red_color':5,
+                        'blue_color':5,
+                        'green_color':5,
+                        'exp_mult':4
                       }
              )
 (spoiler, patch) = c.randomize()

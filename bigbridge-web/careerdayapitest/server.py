@@ -123,7 +123,11 @@ def patch_and_return():
                             'tiering_config':   data['world_lock'],
                             'tiering_percentage':   data['tiering_percentage'],
                             'tiering_threshold':   data['tiering_threshold'],
-                            'enforce_all_jobs':   data['enforce_all_jobs']
+                            'enforce_all_jobs':   data['enforce_all_jobs'],
+                            'red_color':   data['red_color'],
+                            'green_color':   data['green_color'],
+                            'blue_color':   data['blue_color'],
+                            'exp_mult':   data['exp_mult']
                             }
         C = Conductor(random, conductor_config)
         spoilerandpatch = C.randomize()

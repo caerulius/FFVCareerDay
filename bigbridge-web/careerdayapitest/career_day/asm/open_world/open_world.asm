@@ -343,7 +343,7 @@ lda #$00
 
 ; Chicken Knife max power in battle
 org $C28626
-lda #$7F
+lda #$FF
 nop
 
 ; Brave Blade max power in battle

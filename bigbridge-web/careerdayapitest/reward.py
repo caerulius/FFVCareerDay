@@ -68,6 +68,7 @@ class Reward:
                 setattr(self,index,s.loc[index])
 
     def set_collectible(self, collectible, type_override=None):
+        self.randomized = True
         self.collectible = collectible
 
 class RewardManager:
@@ -110,7 +111,8 @@ class RewardManager:
         output = output + "-----CHESTS AND EVENTS (T = Tier)-----\n"
         for i in [x for x in self.rewards if str(type(x.collectible)) != "<class 'collectible.KeyItem'>"]:
             output = output + i.short_output + "\n"
-        output = output + "-----****************-----\n"
+        output = output + "-----****************-----\n\n"
 
 
+        output = output + "\n\n"
         return output
