@@ -385,3 +385,6 @@ org $c975a8
 db $81, $04
 
 
+; disable GILGA V
+org $CE9A68
+pad $CE9A6F

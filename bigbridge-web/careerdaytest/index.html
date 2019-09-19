@@ -85,6 +85,7 @@
 			</div>
 			<hr style="border-top: dashed 6px">
 			<div class="row">
+			<p style="font-size:1.5em;margin-top:10px"><b>Main Options</b></p>
 			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
 				<input type="checkbox" id="fjf">
 				<div class="state">
@@ -112,7 +113,16 @@
 					</label>
 				</div>
 			</div>
-			
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="place_all_rewards" checked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Place all rewards:</b> Places all unique collectibles (abilities, items, magic) at least once per seed
+					</label>
+				</div>
+			</div>
+			<br><br>
 			<p style="font-size:1.5em;margin-top:10px"><b>World Locking Logic</b></p>
 
 			<div>
@@ -122,7 +132,7 @@
 						<label>Only world 1 available at start (Adamantite unlocks World 2, defeating Exdeath in World 2 unlocks World 3)</label>
 					</div>
 				</div>
-
+				<br>
 				<div class="pretty p-default p-round radio-div">
 					<input type="radio" name="world_lock" value=2>
 					<div class="state">
@@ -137,7 +147,7 @@
 					</div>
 				</div>
 			</div>
-
+			<br>
 			<p style="font-size:1.5em;margin-top:10px"><b>Reward Tiering</b></p>
 			
 			
@@ -159,8 +169,43 @@
 				<input type="number" id="tiering_threshold" value="2" min="1" max="10"  style="width:50px" >
 						<b>Overflow threshold:</b> Number of tiers to pull from, if the above percent chance occurs
 			</div>
-					
-			<p style="font-size:1.5em;margin-top:10px"><b>Configurations</b> (these can all still be changed in-game)</p>
+			<br>		
+			<p style="font-size:1.5em;margin-top:10px"><b>Randomize Loot</b> (enemy steals & drops)</p>
+			<div>
+				<div class="pretty p-default p-round radio-div">
+					<input type="radio" name="randomize_loot" value="none" checked>
+					<div class="state">
+						<label><b>None</b> No loot randomization</label>
+					</div>
+				</div>
+				<br>
+				<div class="pretty p-default p-round radio-div">
+					<input type="radio" name="randomize_loot" value="match">
+					<div class="state">
+						<label><b>Match</b> If enemy has existing loot, replace it with new loot</label>
+					</div>
+				</div>
+				<br>
+				<div class="pretty p-default p-round radio-div">
+					<input type="radio" name="randomize_loot" value="full">
+					<div class="state">
+						<label><b>Full</b> Every loot slot has random loot per enemy </label>
+					</div>
+				</div>
+				<br>
+				<div class="pretty p-default p-round radio-div">
+					<input type="radio" name="randomize_loot" value="variable">
+					<div class="state">
+						<label><b>Variable</b> Variable percent chance of loot</label>
+					</div>
+				</div>
+			</div>
+			<div class="input-div">
+				<input type="number" id="loot_percent" value="25" min="1" max="100"  style="width:50px" >
+					<b>Variable Loot Percent</b> Value 1-100, only applies when Variable selected above
+			</div>
+			<br>
+			<p style="font-size:1.5em;margin-top:10px"><b>Configurations</b></p>
 			<div class="input-div">
 				<input type="number" id="exp_mult" value="4" min="1" max="4"  style="width:50px" >
 					<b>EXP Multiplier</b> Value 1, 2 or 4 (3 defaults to 4)
@@ -177,10 +222,6 @@
 				<input type="number" id="blue_color" value="0" min="0" max="31"  style="width:50px" >
 					<b>Blue menu color</b> Value 0-31
 			</div>
-			
-			
-
-
 				<hr class="pre-contact">
 	</section>
 

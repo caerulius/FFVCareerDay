@@ -229,6 +229,8 @@ class Enemy(object):
         self.update_val('mag_def',self.num_mag_def)
         self.update_val('mag_evade',self.num_mag_evade)
         self.update_val('level',self.num_level)  
+        
+
 
 class EnemyManager(object):
     def __init__(self, data_manager):
@@ -248,6 +250,35 @@ class EnemyManager(object):
         output = output + "\n"
 
         return output
+
+    def get_loot_patch(self):
+        output = "\n;Enemy Loot\n"
+        for enemy in self.enemies:
+#            steal_rare      = hex(int(y.stats_address,base=16) + 29)
+#            drop_common     = hex(int(y.stats_address,base=16) + 30)
+#            drop_rare       = hex(int(y.stats_address,base=16) + 31)
+            output = output +   "; %s" % (enemy.enemy_name) + "\n" +\
+                                "org $%s" % (enemy.drops_address) + "\n" +\
+                                "db $%s, $%s, $%s, $%s" % (enemy.steal_common, enemy.steal_rare, enemy.drop_common, enemy.drop_rare) + "\n"
+        return output
+             
+                
+    def get_loot_spoiler(self):
+        output = "\n-----ENEMY LOOT-----\n"
+        output = output +   '{:16}'.format("Enemy Name") +\
+                            '{:16}'.format("Steal (Common)") +\
+                            '{:16}'.format("Steal (Rare)") +\
+                            '{:16}'.format("Drop (Common)") +\
+                            '{:16}'.format("Drop (Rare)")+"\n"
+        for enemy in self.enemies:
+             output = output +   '{:16}'.format(enemy.enemy_name) +\
+                                 '{:16}'.format(enemy.steal_common_name) +\
+                                 '{:16}'.format(enemy.steal_rare_name) +\
+                                 '{:16}'.format(enemy.drop_common_name) +\
+                                 '{:16}'.format(enemy.drop_rare_name)+"\n"
+             
+                     
+        return output 
 
     def get_spoiler(self):
         output = "-----ENEMIES-----\n"

@@ -251,7 +251,7 @@ class KeyItem(Collectible):
         return self.collectible_name
 
 class CollectibleManager():
-    def __init__(self, data_manager):
+    def __init__(self, data_manager, collectible_config=None):
         items = [Item(x, data_manager.files['items'].loc[x]) for x in data_manager.files['items'].index.values]
         magics = [Magic(x, data_manager.files['magics'].loc[x]) for x in data_manager.files['magics'].index.values]
         crystals = [Crystal(x, data_manager.files['crystals'].loc[x]) for x in data_manager.files['crystals'].index.values]
@@ -263,6 +263,7 @@ class CollectibleManager():
         self.placement_history = {}
         self.placement_rewards = {}
         self.placed_gil_rewards = []
+        self.collectible_config = collectible_config
 
     def get_by_name(self, name):
         if name == "New":
@@ -325,19 +326,13 @@ class CollectibleManager():
             working_list = [x for x in working_list if type(x) is not Gil]
 
         if monitor_counts is True:
-            # first attempt to place things that are not placed yet
-            
-            ###
-            #
-            # IF YOU WANT TO GO BACK TO THE "OLD WAY" WHERE ITEMS NOT PLACED AREN'T PRIORITIZED
-            # DISABLE THE BELOW 
-            #
-            ###
-            working_list_og = working_list[:]
-            working_list = [y for y in [x for x in working_list if
-                                            x not in self.placement_history.keys()] if y.valid]
-            if working_list == [] and 'shop' not in str(type(next_reward)):
-                working_list = working_list_og[:]
+            if self.collectible_config['place_all_rewards']:
+                # first attempt to place things that are not placed yet
+                working_list_og = working_list[:]
+                working_list = [y for y in [x for x in working_list if
+                                                x not in self.placement_history.keys()] if y.valid]
+                if working_list == [] and 'shop' not in str(type(next_reward)):
+                    working_list = working_list_og[:]
                 
                 
                 

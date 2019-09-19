@@ -49,6 +49,12 @@ class Conductor():
             self.tiering_percentage = 90
             self.tiering_threshold = 10
             self.enforce_all_jobs = True
+            self.red_color = 0
+            self.blue_color = 0
+            self.green_color = 0
+            self.exp_mult = 4
+            self.place_all_rewards = True
+            
             
         else:                           # else take the config passed from server.py and set variables
             self.fjf = self.translateBool(conductor_config['fjf'])
@@ -59,7 +65,10 @@ class Conductor():
             self.tiering_threshold= int(conductor_config['tiering_threshold'])
             self.enforce_all_jobs = self.translateBool(conductor_config['enforce_all_jobs'])
             
-            print("Config assigned: FJF: %s Palettes: %s World_lock: %s Tiering_config: %s Tiering_percentage: %s Tiering_threshold: %s" % (str(self.fjf),str(self.jobpalettes),str(self.world_lock),str(self.tiering_config),str(self.tiering_percentage),str(self.tiering_threshold)))
+        # Some configs set up for the managers 
+        collectible_config = {'place_all_rewards':self.translateBool(conductor_config['place_all_rewards'])}
+            
+        print("Config assigned: FJF: %s Palettes: %s World_lock: %s Tiering_config: %s Tiering_percentage: %s Tiering_threshold: %s" % (str(self.fjf),str(self.jobpalettes),str(self.world_lock),str(self.tiering_config),str(self.tiering_percentage),str(self.tiering_threshold)))
 
         # Set up randomizer config
         self.config = configparser.ConfigParser()
@@ -68,7 +77,7 @@ class Conductor():
 
         # Set up data tables
         self.DM = DataManager()                            #Data manager loads all the csv's into memory and sets them up for processing
-        self.CM = CollectibleManager(self.DM)              #Set up collectibles (Includes Items, magic, crystals, and abilities)
+        self.CM = CollectibleManager(self.DM, collectible_config)              #Set up collectibles (Includes Items, magic, crystals, and abilities)
         self.RM = RewardManager(self.CM, self.DM)          #Set up rewards (Includes chests and events)
         self.SM = ShopManager(self.CM, self.DM)            #Set up shops
         self.SPM = ShopPriceManager(self.CM, self.DM)      #Set up shop prices
@@ -1202,7 +1211,7 @@ class Conductor():
             # 3 Immunities
             # 2 Weaknesses
             immunity_start = 3
-            weakness_start = 6
+            weakness_start = 7
             
             random_elements = sorted(list(elemental_map.keys()), key=lambda k: random.random())
             absorbs, immunities, weaknesses = random_elements[:immunity_start], random_elements[immunity_start:weakness_start], random_elements[weakness_start:]
@@ -1223,7 +1232,7 @@ class Conductor():
         def status_afflict_randomize():            
             
             # Hardcoded number of status afflictions for now:
-            num_afflict = 3
+            num_afflict = 1
             
             status_afflict = []
             random_statuses = sorted(list(status_map.keys()), key=lambda k: random.random())
@@ -1420,6 +1429,49 @@ class Conductor():
         self.superbosses_spoiler = self.superbosses_spoiler + "\n ***** CODE OF THE VOID *****\n"+''.join(letters)+"\n\n"
             
         return output_str
+    
+    
+    def randomize_loot(self,loot_percent=25,loot_type='match'):
+        loot_list = ['steal_common','steal_rare','drop_common','drop_rare']
+        ''' 
+        arguments:
+        match = if the original enemy has a non-null loot slot, update it
+        full = every enemy has randomized common/rare steal/drop
+        variable = every enemy has randomized common/rare steal/drop at a specified chance (variable RANDOM_LOOT_PERCENT) per slot 
+        '''
+        
+        try:
+            loot_type = self.configs['randomize_loot'].strip()
+            loot_percent = int(self.configs['loot_percent'])
+        except Exception as e:
+            print("Error on loot type parse: %s" % (e))
+        for enemy in self.EM.enemies:
+            for loot in loot_list:
+                # Choose item:
+                df = self.DM.files['items']
+                df = df[df['valid']=="TRUE"]
+                new_item_id = self.RE.choice(list(df.index))
+                new_item_name = self.DM.files['items']['readable_name'].loc[new_item_id]
+                
+                
+                if loot_type=='match':
+                    if getattr(enemy,loot) != '00':
+                        setattr(enemy,loot,new_item_id)
+                        setattr(enemy,loot+"_name",new_item_name)
+                elif loot_type=='full':
+                    setattr(enemy,loot,new_item_id)
+                    setattr(enemy,loot+"_name",new_item_name)
+                elif loot_type=='variable':
+                    if self.RE.randint(1,100) <= loot_percent: 
+                        setattr(enemy,loot,new_item_id)
+                        setattr(enemy,loot+"_name",new_item_name)
+                    else:
+                        setattr(enemy,loot,'00')
+                        setattr(enemy,loot+"_name"," ")
+                else:
+                    print("Invalid loot randomize argument %s" % (loot_type))
+                    
+                    
     def get_collectible_counts(self):
         # Here for this spoiler, we need to collect from both RM and SM to get accurate data, so we do it here:
         spoiler = "\n-----COLLECTIBLE COUNTS BY TYPE-----\n"
@@ -1496,7 +1548,7 @@ class Conductor():
         g_color = int(config['green_color']) * 32
         b_color = int(config['blue_color']) * 1024
         colors = hex(r_color+g_color+b_color).replace("0x","")
-        c1, c2 = colors[0:2], colors[2:4]
+        c1, c2 = colors[0:2].zfill(2), colors[2:4].zfill(2)
         
         patch = ";CONFIG SETTINGS\n"
         patch = patch + ";RGB\norg $C0F343\ndb $%s, $%s" % (c2,c1)
@@ -1549,8 +1601,9 @@ class Conductor():
 
 #        print("Running cleanup for guaranteeing collectibles")
 #        self.cleanup_seed()
-            
-
+        if self.configs['randomize_loot'].lower() != "none":
+            print("Randomizing loot...")
+            self.randomize_loot()
         
         # Patch now comes first, because some functions (randomize_superbosses) now create the spoiler as part of their process
 
@@ -1567,6 +1620,8 @@ class Conductor():
         patch = patch + self.kuzar_text_patch()
         patch = patch + self.kuzar_text_patch()
         patch = patch + self.odin_location_fix_patch
+        if self.configs['randomize_loot'].lower() != "none":
+            patch = patch + self.EM.get_loot_patch()
         if self.jobpalettes:
             patch = patch + self.randomize_job_color_palettes()
         patch = patch + self.parse_configs()
@@ -1580,6 +1635,8 @@ class Conductor():
         #spoiler = spoiler + self.EM.get_spoiler()
         spoiler = spoiler + self.superbosses_spoiler        
         spoiler = spoiler + self.FM.get_spoiler()
+        if self.configs['randomize_loot'].lower() != "none":
+            spoiler = spoiler + self.EM.get_loot_spoiler()
 
         return(spoiler, patch)
 
@@ -1589,25 +1646,29 @@ class Conductor():
 ######## TESTING AREA ##############
 ####################################
 
-c = Conductor(random, {
-                        'fjf':False,
-                        'jobpalettes':False,
-                        'world_lock':2,
-                        'tiering_config': True,
-                        'tiering_percentage': 90,
-                        'tiering_threshold': 2,
-                        'enforce_all_jobs': False,
-                        'red_color':5,
-                        'blue_color':5,
-                        'green_color':5,
-                        'exp_mult':4
-                      }
-             )
-(spoiler, patch) = c.randomize()
-# print(c.RM.get_spoiler())
-#
-## Debug checking for 3 key items for world locking
-#for i in c.RM.rewards:
-#    if i.collectible.collectible_name == 'Bracelet' or i.collectible.collectible_name == 'Adamantite' or i.collectible.collectible_name == 'Anti Barrier':
-#        print(i.description, i.collectible.collectible_name)
-
+if __name__ == "__main__":
+    c = Conductor(random, {
+                            'fjf':False,
+                            'jobpalettes':False,
+                            'world_lock':2,
+                            'tiering_config': True,
+                            'tiering_percentage': 90,
+                            'tiering_threshold': 2,
+                            'enforce_all_jobs': False,
+                            'red_color':5,
+                            'blue_color':5,
+                            'green_color':5,
+                            'exp_mult':4,
+                            'place_all_rewards': True,
+                            'randomize_loot' : "match",
+                            'loot_percent' : 25
+                          }
+                 )
+    (spoiler, patch) = c.randomize()
+    # print(c.RM.get_spoiler())
+    #
+    ## Debug checking for 3 key items for world locking
+    #for i in c.RM.rewards:
+    #    if i.collectible.collectible_name == 'Bracelet' or i.collectible.collectible_name == 'Adamantite' or i.collectible.collectible_name == 'Anti Barrier':
+    #        print(i.description, i.collectible.collectible_name)
+    

@@ -127,7 +127,10 @@ def patch_and_return():
                             'red_color':   data['red_color'],
                             'green_color':   data['green_color'],
                             'blue_color':   data['blue_color'],
-                            'exp_mult':   data['exp_mult']
+                            'exp_mult':   data['exp_mult'],
+                            'place_all_rewards':   data['place_all_rewards'],
+                            'randomize_loot':   data['randomize_loot'],
+                            'loot_percent':   data['loot_percent']
                             }
         C = Conductor(random, conductor_config)
         spoilerandpatch = C.randomize()

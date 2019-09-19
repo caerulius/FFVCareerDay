@@ -109,6 +109,9 @@ function apiCall(data){
 		"blue_color": $("#blue_color").val(),
 		"green_color": $("#green_color").val(),
 		"exp_mult": $("#exp_mult").val(),
+		"place_all_rewards": $('#place_all_rewards').is(':checked'),
+		"randomize_loot": $("input:radio[name=randomize_loot]:checked").val(),
+		"loot_percent": $("#loot_percent").val(), 
 		"fileLocation": data.Location
 	}
 	$.post(url, postData, function(data){
