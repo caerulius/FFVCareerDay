@@ -96,6 +96,15 @@
 				</div>
 			</div>
 			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="fjf_strict">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Strict Four Job Settings:</b> Disallow random abilities to be placed anywhere. Use with Four Job Mode option above
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
 				<input type="checkbox" id="jobpalette">
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
@@ -105,20 +114,20 @@
 				</div>
 			</div>
 			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
-				<input type="checkbox" id="enforce_all_jobs">
-				<div class="state">
-					<i class="icon fa fa-check check-icon"></i>
-					<label>
-						<b>Enforce all jobs:</b> Guarantee all job crystals appear. Default off, for more difficult seeds
-					</label>
-				</div>
-			</div>
-			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
 				<input type="checkbox" id="place_all_rewards" checked>
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
 					<label>
 						<b>Place all rewards:</b> Places all unique collectibles (abilities, items, magic) at least once per seed
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="enforce_all_jobs">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Enforce all jobs:</b> Guarantee all job crystals appear. Default off, for more difficult seeds. Must be used with "Place all rewards"
 					</label>
 				</div>
 			</div>
@@ -162,11 +171,11 @@
 			</div>
 			
 			<div class="input-div">
-				<input type="number" id="tiering_percentage" value="10" min="1" max="100"  style="width:50px" >
+				<input type="number" id="tiering_percentage" value="5" min="1" max="100"  style="width:50px" >
 					<b>Overflow percent: </b>Percent chance of reward location granting higher tier collectibles
 			</div>
 			<div class="input-div">
-				<input type="number" id="tiering_threshold" value="2" min="1" max="10"  style="width:50px" >
+				<input type="number" id="tiering_threshold" value="1" min="1" max="10"  style="width:50px" >
 						<b>Overflow threshold:</b> Number of tiers to pull from, if the above percent chance occurs
 			</div>
 			<br>		

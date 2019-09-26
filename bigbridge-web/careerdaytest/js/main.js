@@ -99,6 +99,7 @@ function apiCall(data){
 	var postData = {
 		"seed": $('#seed').val(),
 		"fjf": $('#fjf').is(':checked'),
+		"fjf_strict": $('#fjf_strict').is(':checked'),
 		"jobpalette": $('#jobpalette').is(':checked'),
 		"world_lock": $("input:radio[name=world_lock]:checked").val(),
 		"tiering_config": $("#tiering_config").val(),

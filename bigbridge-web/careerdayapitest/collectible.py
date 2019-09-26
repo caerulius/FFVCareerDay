@@ -350,6 +350,7 @@ class CollectibleManager():
         # TIERING
         # After applying all the above, enforce tiering if applicable
         debug_flag = False
+        og_reward_loc_tier = 100
         if tiering_config:
             # Now we empty working_list, and iterate over minimum floors for collectible tiers until the list is populated
             # With at least one item
@@ -375,6 +376,7 @@ class CollectibleManager():
                 working_list_copy = working_list[:]
                 working_list = []        
                 reward_loc_tier = int(reward_loc_tier)
+                og_reward_loc_tier = reward_loc_tier
                 minimum_tier = max(reward_loc_tier - 1, 1) #starts at a range of y-1 to y (so, tier 4 location will grab from pool of tier 3s and 4s)
                 
                 # print("Reward loc tier: %s" % (reward_loc_tier))
@@ -393,6 +395,8 @@ class CollectibleManager():
 #                        print(next_reward.readable_name, reward_loc_tier, current_volume_ratio)
                 
                 try:
+                   if debug_flag:
+                       print("---------------------------------")
                    while working_list == [] and minimum_tier > -1:
                         for i in working_list_copy:
                             percent_flag = random_engine.randint(1,100) > tiering_percentage
@@ -404,15 +408,21 @@ class CollectibleManager():
                             if not percent_flag:
                                 if i.tier <= reward_loc_tier and i.tier >= minimum_tier:
                                     working_list.append(i)
-                                if debug_flag:
-                                    print("Collectible: %s %s reward_loc_tier %s"% (i.collectible_name,i.tier,reward_loc_tier))                  
+                                    if debug_flag:
+                                        print("Added collectible: %s %s reward_loc_tier %s"% (i.collectible_name,i.tier,reward_loc_tier))                  
+                                else:
+                                    if debug_flag:
+                                        print("Not added collectible: %s %s reward_loc_tier %s"% (i.collectible_name,i.tier,reward_loc_tier))                  
                             # If greater than or equal to percentage, add the collectible if it is reward_loc_tier + threshold
-                            # Add back the ratio penalty from before if it was a shop
+                            # Use the og_reward_loc_tier from before if it was a shop
                             else:
-                                if i.tier <= (reward_loc_tier + tiering_threshold + current_volume_ratio) and i.tier >= minimum_tier:
+                                if i.tier <= (og_reward_loc_tier + tiering_threshold) and i.tier >= minimum_tier:
                                     working_list.append(i)
-                                if debug_flag:
-                                    print("Collectible (bonus): %s %s reward_loc_tier %s"% (i.collectible_name,i.tier,reward_loc_tier))
+                                    if debug_flag:
+                                        print("Added collectible (bonus): %s %s reward_loc_tier %s"% (i.collectible_name,i.tier,reward_loc_tier))
+                                else:
+                                    if debug_flag:
+                                        print("Not added collectible (bonus): %s %s reward_loc_tier %s"% (i.collectible_name,i.tier,reward_loc_tier))
                         # decrease minimum_tier for next time, if working_list is still empty
                         if minimum_tier > 5:
                             minimum_tier -= 2
@@ -425,7 +435,9 @@ class CollectibleManager():
         #ending up with empty lists and failures too often, need a fallback incase
         #we don't end up with any values. We'll get a list of any of the appropriate type,
         #but no single placement items
+        empty_trigger = False
         if len(working_list) == 0:
+            empty_trigger = True
             # print("Working list was zero, redoing without logic for type %s..." % (of_type))
             if of_type is not None:
                 working_list = [x for x in self.get_all_of_type(of_type) if x.max_count != 1 and x.valid]
@@ -463,8 +475,11 @@ class CollectibleManager():
         if choice is None:
             print(working_list)
      
-
-
+        try:
+            if choice.tier > og_reward_loc_tier + 5:
+                breakpoint()
+        except:
+            pass
         return choice
 
     def get_min_value_collectible(self, random_engine):

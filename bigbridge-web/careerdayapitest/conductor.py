@@ -43,6 +43,7 @@ class Conductor():
         self.configs = conductor_config # later so we don't manually define every key like below 
         if len(conductor_config) == 0: # if no config was passed in, default False
             self.fjf = False
+            self.fjf_strict = False
             self.jobpalettes = False
             self.world_lock = 0
             self.tiering_config = True
@@ -58,6 +59,7 @@ class Conductor():
             
         else:                           # else take the config passed from server.py and set variables
             self.fjf = self.translateBool(conductor_config['fjf'])
+            self.fjf_strict = self.translateBool(conductor_config['fjf_strict'])
             self.jobpalettes = self.translateBool(conductor_config['jobpalettes'])
             self.world_lock = int(conductor_config['world_lock'])
             self.tiering_config = self.translateBool(conductor_config['tiering_config'])
@@ -146,6 +148,12 @@ class Conductor():
         if fjf:
             for crystal in [x for x in self.CM.get_all_of_type(Crystal) if x != starting_crystal]:
                 self.CM.add_to_placement_history(crystal,"No")
+        if fjf and self.fjf_strict:
+            # For Four Job mode, mark all Abilities as unobtainable 
+            for ability in [x for x in self.CM.get_all_of_type(Ability)]:
+                self.CM.add_to_placement_history(ability,"No")
+                
+                
         else:
             # this does something similar for regular seeds, where all non-chosen crystals are added to placement history
             # only if the setting for enforce all jobs is off
@@ -274,6 +282,9 @@ class Conductor():
             shinryuu_chest.randomized = True
             mib.processed = True
             self.AM.update_volume(shinryuu_chest)
+
+                
+                
         while self.AM.any_areas_not_full():
             #print()
             #print("Area rewards: not full yet")
@@ -1211,7 +1222,7 @@ class Conductor():
             # 3 Immunities
             # 2 Weaknesses
             immunity_start = 3
-            weakness_start = 6
+            weakness_start = 7
             
             random_elements = sorted(list(elemental_map.keys()), key=lambda k: random.random())
             absorbs, immunities, weaknesses = random_elements[:immunity_start], random_elements[immunity_start:weakness_start], random_elements[weakness_start:]
@@ -1232,7 +1243,7 @@ class Conductor():
         def status_afflict_randomize():            
             
             # Hardcoded number of status afflictions for now:
-            num_afflict = 3
+            num_afflict = 1
             
             status_afflict = []
             random_statuses = sorted(list(status_map.keys()), key=lambda k: random.random())
@@ -1648,7 +1659,8 @@ class Conductor():
 
 if __name__ == "__main__":
     c = Conductor(random, {
-                            'fjf':False,
+                            'fjf':True,
+                            'fjf_strict':True,
                             'jobpalettes':False,
                             'world_lock':2,
                             'tiering_config': True,

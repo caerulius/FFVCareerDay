@@ -117,7 +117,8 @@ def patch_and_return():
         # We're going to pass in conductor_config into Conductor() object now
         # Any configuration for new parameters belong here
         conductor_config = {
-                            'fjf':          data["fjf"], 
+                            'fjf':          data["fjf"],
+                            'fjf_strict':   data["fjf_strict"],
                             'jobpalettes':  data['jobpalette'],
                             'world_lock':   data['world_lock'],
                             'tiering_config':   data['world_lock'],

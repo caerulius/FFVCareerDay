@@ -13,10 +13,13 @@ parser.set_defaults(copy_cd_files=False)
 parser.add_argument('--copy_pd_files', dest='copy_pd_files', action='store_true',
                     help = 'Copies project_demi files to projectdemiapitest')
 parser.set_defaults(copy_pd_files=False)
+parser.add_argument('--deploy', dest='deploy', action='store_true',
+                    help = 'Deploys from test subdirs to careerday and careerdayapi, and changes test references')
+parser.set_defaults(deploy=False)
 
 THIS_FILEPATH = os.path.dirname(__file__)
 
-ROOT_PATH = os.path.join(THIS_FILEPATH,os.pardir,os.pardir)
+ROOT_PATH = os.path.abspath(os.path.join(THIS_FILEPATH,os.pardir,os.pardir))
 if ROOT_PATH not in sys.path:
     sys.path.append(ROOT_PATH)
     
@@ -106,6 +109,50 @@ def handle_pd_zip_files():
     os.remove(pd_zip_path)
     os.remove(shared_zip_path)
     
+def replace_data(file_path, string, replace):
+    
+    # Read in the file
+    with open(file_path, 'r') as file :
+      filedata = file.read()
+    
+    # Replace the target string
+    filedata = filedata.replace(string, replace)
+    
+    # Write the file out again
+    with open(file_path, 'w') as file:
+      file.write(filedata)
+      
+      
+def deploy_to_careerday():
+    flag = input("Confirm deploying? Type undercase y to deploy.")
+    if flag == "y":
+        print("Clear out everything in careerday and careerdayapi")
+        cd_path = os.path.join('bigbridge-web','careerday')
+        shutil.rmtree(cd_path)
+        
+        cdapi_path = os.path.join('bigbridge-web','careerdayapi')
+        shutil.rmtree(cdapi_path)
+        
+        print("Copying subdirs over")
+        cdtest_path = os.path.join('bigbridge-web','careerdaytest')
+        cdapitest_path = os.path.join('bigbridge-web','careerdayapitest')
+        
+        shutil.copytree(cdtest_path,cd_path)
+        shutil.copytree(cdapitest_path,cdapi_path)
+        
+        print("Replacing references to careerdaytest/apitest to main processes...")
+        print("Replacing apitest in main.js")
+        replace_data(os.path.join("bigbridge-web","careerday","js","main.js"),"careerdayapitest","careerdayapi")
+        print("Replacing apitest in server.py")
+        replace_data(os.path.join("bigbridge-web","careerdayapi","server.py"),"careerdayapitest","careerdayapi")
+        print("Replacing port 5002 to 5001 in server.py")
+        replace_data(os.path.join("bigbridge-web","careerdayapi","server.py"),"5002","5001")
+
+    
+        input("Finished. Press enter to close.")
+    else:
+        input("NOT deployed. Press enter to close.")
+    
     
 def copy_cd_files():
     move_cd()
@@ -125,3 +172,6 @@ if args.copy_cd_files:
 if args.copy_pd_files:
     print("Starting project demi copy.")
     copy_pd_files()
+if args.deploy:
+    print("Starting deploy.")
+    deploy_to_careerday()

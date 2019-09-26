@@ -52,11 +52,12 @@ class Reward:
         if self.collectible is None:
             return ""
         if str(type(self.collectible)) == "<class 'collectible.KeyItem'>":
-            return f"{self.description} -> {self.collectible.reward_name}"
+            return '{:30}'.format("%s " % (self.description)) + '{:30}'.format("%s" % (self.collectible.reward_name))
         if self.mib_type is None:
-            return f"{self.description} {self.original_reward} -> {self.collectible.reward_name}"
+            # return f"{self.description} {self.original_reward} (T{self.tier}) -> {self.collectible.reward_name} (T{self.collectible.tier})"
+            return  '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s" % (self.collectible.tier, self.collectible.reward_name))
         else:
-            return f"{self.description} {self.original_reward} -> {self.collectible.reward_name} (monster in a box)"
+            return '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s (monster-in-a-box)" % (self.collectible.tier, self.collectible.reward_name))
 
     def generate_from_df(self, df):
         s = df[df['idx']==self.idx].iloc[0]
@@ -67,6 +68,7 @@ class Reward:
                 setattr(self,index,s.loc[index])
 
     def set_collectible(self, collectible, type_override=None):
+        self.randomized = True
         self.collectible = collectible
 
 class RewardManager:
@@ -106,10 +108,11 @@ class RewardManager:
             output = output + i.short_output + "\n"
         output = output + "-----*********-----\n\n\n"
         
-        output = output + "-----CHESTS AND EVENTS-----\n"
+        output = output + "-----CHESTS AND EVENTS (T = Tier)-----\n"
         for i in [x for x in self.rewards if str(type(x.collectible)) != "<class 'collectible.KeyItem'>"]:
             output = output + i.short_output + "\n"
-        output = output + "-----****************-----\n"
+        output = output + "-----****************-----\n\n"
 
 
+        output = output + "\n\n"
         return output

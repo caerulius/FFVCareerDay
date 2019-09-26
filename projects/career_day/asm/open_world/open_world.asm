@@ -243,6 +243,10 @@ db $00, $00, $00
 org $F057B4
 db $FC, $C5
 
+; disable chocobo access to Mirage Village
+org $F057B2
+db $00, $00
+
 ; NORTH MOUNTAIN
 ; conditional event for never interacting with hiryuu at top
 org $F04835

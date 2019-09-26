@@ -251,14 +251,14 @@ if !fourjobmode == 0
     sep #$20
 
     ; set starting magic
-    LDA $E79F02
+    LDA $E79F01
     CMP #$FF
     BEQ RandomizedJobSkipMagic
     AND #$07
     tax
     LDA $C0C9B9,X
     pha
-    LDA $E79F02
+    LDA $E79F01
     lsr
     lsr
     lsr

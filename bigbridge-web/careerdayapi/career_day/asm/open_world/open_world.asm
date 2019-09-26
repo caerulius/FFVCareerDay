@@ -343,7 +343,7 @@ lda #$00
 
 ; Chicken Knife max power in battle
 org $C28626
-lda #$7F
+lda #$FF
 nop
 
 ; Brave Blade max power in battle
@@ -385,3 +385,6 @@ org $c975a8
 db $81, $04
 
 
+; disable GILGA V
+org $CE9A68
+pad $CE9A6F
