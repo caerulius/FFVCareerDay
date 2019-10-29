@@ -392,3 +392,7 @@ db $81, $04
 ; disable GILGA V
 org $CE9A68
 pad $CE9A6F
+
+; open walse meteor tile (cut event short when entering)
+org $C889CB
+db $FF

@@ -191,6 +191,124 @@ def check_completeable(df_key):
 
         
     if "1st Tablet" in obtained_keys and "2nd Tablet" in obtained_keys and "3rd Tablet" in obtained_keys and "4th Tablet" in obtained_keys:
+        completeable_seed_flag = True
+    else:
+        output_str = add_to_output(output_str,"All tablets NOT obtained. Report this seed.")
+        print("All tablets NOT obtained.") # specifically print if this happens
+        completeable_seed_flag = False
+    
+    if len(obtained_keys) >= keys_in_seed:
+        all_keys_obtained_flag = True
+    else:
+        output_str = add_to_output(output_str,"All keys NOT obtained. Report this seed.")
+        all_keys_obtained_flag = False
+        
+    print(output_str) # eventually disable, but for viewing now 
+    return pd.DataFrame(columns=['playthrough_log','all_keys_obtained_flag','completeable_seed_flag','sphere_num','tablets_sphere_num','sphere_zero_keys_num','seed'],
+                           data = [[output_str,all_keys_obtained_flag,completeable_seed_flag,num_sphere,tablets_sphere,sphere_zero_keys,seed]])
+
+
+def check_completeable_spoiler_log(key_list, world_lock):
+    '''
+    Pass in a key_list of KeyItem objects:
+        boss = boss LOCATION guarding the key 
+        key = key reward 
+        
+        (this comes from the spoiler log table from RewardManager's key items after string cleaning)
+        # of rows should equal # of keys in the game 
+        
+    Returns a dataframe with:
+        output_str = spoiler log version of seed playthrough with spheres
+        all_keys_obtained_flag = boolean if all keys were acquired
+        completeable_seed_flag = boolean if all tablets were acquired
+        tablets_sphere_num = how many spheres for all tablets
+        sphere_num = how many spheres for all keys 
+        sphere_zero_keys_num = how many keys were placed in sphere 0
+        seed = seed number
+        
+        Use methods like df['completeable_seed_flag'] to get boolean for y/n completeable
+    '''
+    
+    df_key = pd.DataFrame(columns=['boss','key'])
+    
+    for key in key_list:
+        df_key = df_key.append(pd.DataFrame({'boss':key.description,'key':key.collectible.collectible_name},columns=['boss','key'],index=[0]))
+    
+    
+    def add_to_output(output, add):
+        return output + add + "\n"
+    output_str = ''    
+    
+    df = pd.read_csv('tables/rewards.csv')
+
+    if world_lock == 0:
+        df = df[df['reward_style']=='key'][['description','required_key_items']]
+        df = pd.merge(df,df_key,left_on='description',right_on='boss')[['boss','required_key_items','key']]
+    elif world_lock == 1:
+        df = df[df['reward_style']=='key'][['description','required_key_items_lock1']]
+        df = pd.merge(df,df_key,left_on='description',right_on='boss')[['boss','required_key_items_lock1','key']]
+    elif world_lock == 2:
+        df = df[df['reward_style']=='key'][['description','required_key_items_lock2']]
+        df = pd.merge(df,df_key,left_on='description',right_on='boss')[['boss','required_key_items_lock2','key']]
+    
+    df.columns = ['boss','req','key_reward']
+    df = df.append(pd.DataFrame({'boss':"NeoExdeath",'req':"1st Tablet,2nd Tablet, 3rd Tablet, 4th Tablet",'key_reward':"World Saved"},index=[0]))
+    
+    
+    obtained_keys = []
+    keys_in_seed = df.shape[0] - 1
+    
+    def clean_str(x):
+        return str(x).replace("“","").replace("”","").strip("][").replace("nan","")
+    df['req'] = df['req'].apply(clean_str)
+    
+    # First add all sphere 0 checks to obtained keys
+    #   and mark the dataframe with a new column for obtained keys 
+    [obtained_keys.append(i) for i in df[df['req']=='']['key_reward']]
+    df['obtained'] = df['req'].apply(lambda x: "y" if x == '' else "")
+    sphere_zero_keys = len(obtained_keys)
+    
+    
+    # Decided to build out sphere 0 logging 
+    sphere_zero_string = ''
+    for index, row in df[df['obtained'] == "y"].iterrows():
+        sphere_zero_string = sphere_zero_string + "{:<15}".format("Sphere 0:")+"{:<20}".format(row['key_reward'])+"{:<30}".format(row['boss'])+"\n"
+    
+    output_str = add_to_output(output_str,"Number of sphere zero keys: ("+str(sphere_zero_keys)+")")
+    output_str = add_to_output(output_str,sphere_zero_string[:-1]) # remove last line break
+    # Iterate through dataframe to check all non-obtained reqs with current set of keys
+    #   But cap it at a limit of times to check to not infinitely loop
+    num_sphere = 1               # started it at 1 for convenience
+    num_sphere_limit = 100       # hard cap on how many iterations to do for the loop
+    tablets_sphere = 0              # init as zero, when 4 tablets acquired, mark done
+    
+    while len(df['obtained'][df['obtained'] == "y"]) < keys_in_seed and num_sphere < num_sphere_limit:
+        obtained_keys_temp = obtained_keys[:]
+        for index, row in df[df['obtained']==""].iterrows():
+            row_keys = row['req'].split(",")
+            row_keys = [x.strip() for x in row_keys]
+            check_flag = True
+            for key in row_keys:
+                if key in obtained_keys:
+                    continue
+                else:
+                    check_flag = False
+            if check_flag: # if all the keys were present and the flag wasnt marked, then the REWARD to key items and mark the row as obtained
+                output_str = output_str = add_to_output(output_str,"{:<15}".format("Sphere "+str(num_sphere)+":")+"{:<20}".format(row['key_reward'])+"{:<30}".format(row['boss']+" loc via "+row['req']))
+                df['obtained'].iloc[index] = 'y'
+                obtained_keys_temp.append(row['key_reward'])
+                # Upon getting a new item, perform check for 4 tablets
+                if "1st Tablet" in obtained_keys and "2nd Tablet" in obtained_keys and "3rd Tablet" in obtained_keys and "4th Tablet" in obtained_keys and tablets_sphere == 0:
+                    tablets_sphere = num_sphere
+                    num_sphere_limit = num_sphere
+            else:
+                pass
+        obtained_keys = list(set(obtained_keys + obtained_keys_temp))
+        num_sphere = num_sphere + 1
+
+        
+        
+    if "1st Tablet" in obtained_keys and "2nd Tablet" in obtained_keys and "3rd Tablet" in obtained_keys and "4th Tablet" in obtained_keys:
         output_str = add_to_output(output_str,"All tablets obtained ("+str(tablets_sphere)+" spheres).")
         completeable_seed_flag = True
     else:
@@ -203,12 +321,10 @@ def check_completeable(df_key):
         all_keys_obtained_flag = True
     else:
         output_str = add_to_output(output_str,"All keys NOT obtained.")
+        print("All keys NOT obtained.") # specifically print if this happens
         all_keys_obtained_flag = False
         
-    print(output_str) # eventually disable, but for viewing now 
-    return pd.DataFrame(columns=['playthrough_log','all_keys_obtained_flag','completeable_seed_flag','sphere_num','tablets_sphere_num','sphere_zero_keys_num','seed'],
-                           data = [[output_str,all_keys_obtained_flag,completeable_seed_flag,num_sphere,tablets_sphere,sphere_zero_keys,seed]])
-
+    return output_str, completeable_seed_flag, all_keys_obtained_flag
 
 def process_spoiler_data(num_iterations):
     df_key_master = pd.DataFrame()

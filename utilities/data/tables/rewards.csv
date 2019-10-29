@@ -341,23 +341,23 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 339,C0FBB6,New,Ancient Library,Ifrit,key,7,,,,,83
 340,C0FBB8,New,Walse,Shiva,key,7,,,,,84
 341,C0FBBA,New,Ruined City,Crayclaw,key,7,,,,,85
-342,C0FB8E,New,Exdeath's Castle,Gilgamesh 1,key,7,,[“Anti Barrier”],"[“Adamantite”,“Anti Barrier”]",[“Anti Barrier”],6F
-343,C0FB90,New,Exdeath's Castle,Gilgamesh 2,key,7,,[“Big Bridge Key”],"[“Adamantite”,“Big Bridge Key”]",[“Big Bridge Key”],70
+342,C0FB8E,New,Exdeath's Castle,Gilgamesh 1,key,7,,[“Anti Barrier”],"[“Adamantite”, “Anti Barrier”]",[“Anti Barrier”],6F
+343,C0FB90,New,Exdeath's Castle,Gilgamesh 2,key,7,,[“Big Bridge Key”],"[“Adamantite”, “Big Bridge Key”]",[“Big Bridge Key”],70
 344,C0FB92,New,Moogle Village,Tyrasaurus,key,7,,,[“Adamantite”],,71
 345,C0FB94,New,Bal Castle,Abductor,key,7,,,[“Adamantite”],,72
 346,C0FB96,New,Hiryuu Valley,HiryuuPlant,key,7,,,[“Adamantite”],,73
-347,C0FB98,New,Zeza Fleet,Gilgamesh 3 & Enkidou,key,7,,[“Hiryuu Call”],"[“Adamantite”,“Hiryuu Call”]",[“Hiryuu Call”],74
-348,C0FB9A,New,Barrier Tower,Atmos,key,7,,[“Submarine Key”],"[“Adamantite”,“Submarine Key”]",[“Submarine Key”],75
-349,C0FB9C,New,Mua Forest,Guardians,key,7,,[“Elder Branch”],"[“Adamantite”,“Elder Branch”]",[“Elder Branch”],76
-350,C0FB9E,New,Exdeath's Castle,Carbunkle,key,7,,"[“Anti Barrier”, “Bracelet”]","[“Adamantite”,“Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",77
-351,C0FBA0,New,Exdeath's Castle,Gilgamesh 4,key,7,,"[“Anti Barrier”, “Bracelet”]","[“Adamantite”,“Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",78
-352,C0FBA2,New,Tule,Antlion,key,7,,,"[“Adamantite”,“Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",79
-353,C0FBA4,New,Desert,Merugene,key,7,,,"[“Adamantite”,“Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",7A
-354,C0FBA6,New,Bal Castle,Odin,key,8,,,"[“Adamantite”,“Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",7B
-355,C0FBA8,New,Great Trench,"Triton, Neregeid & Phobos",key,8,,"[“Submarine Key”, “Trench Page”]","[“Adamantite”,“Anti Barrier”, “Bracelet”,“Submarine Key”, “Trench Page”]","[“Anti Barrier”, “Bracelet”,“Submarine Key”, “Trench Page”]",7C
-356,C0FBAA,New,Fork Tower,Omniscient,key,8,,[“Elder Branch”],"[“Adamantite”,“Anti Barrier”, “Bracelet”,“Elder Branch”]","[“Anti Barrier”, “Bracelet”,“Elder Branch”]",7D
-357,C0FBAC,New,Fork Tower,Minotauros,key,8,,[“Elder Branch”],"[“Adamantite”,“Anti Barrier”, “Bracelet”,“Elder Branch”]","[“Anti Barrier”, “Bracelet”,“Elder Branch”]",7E
-358,C0FBAE,New,Istory Falls,Leviathan,key,8,,"[“Submarine Key”, “Falls Page”]","[“Adamantite”,“Anti Barrier”, “Bracelet”,“Submarine Key”, “Falls Page”]","[“Anti Barrier”, “Bracelet”,“Submarine Key”, “Falls Page”]",7F
-359,C0FBB0,New,Solitary Island,Stalker,key,8,,[“Shrine Page”],"[“Adamantite”,“Anti Barrier”, “Bracelet”,“Shrine Page”]","[“Anti Barrier”, “Bracelet”,“Shrine Page”]",80
-360,C0FBB2,New,Walse,GoGo,key,8,,[“Submarine Key”],"[“Adamantite”,“Anti Barrier”, “Bracelet”,“Submarine Key”]","[“Anti Barrier”, “Bracelet”,“Submarine Key”]",81
-361,C0FBB4,New,North Mountain,Bahamut,key,8,,,"[“Adamantite”,“Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",82
+347,C0FB98,New,Zeza Fleet,Gilgamesh 3 & Enkidou,key,7,,[“Hiryuu Call”],"[“Adamantite”, “Hiryuu Call”]",[“Hiryuu Call”],74
+348,C0FB9A,New,Barrier Tower,Atmos,key,7,,[“Submarine Key”],"[“Adamantite”, “Submarine Key”]",[“Submarine Key”],75
+349,C0FB9C,New,Mua Forest,Guardians,key,7,,[“Elder Branch”],"[“Adamantite”, “Elder Branch”]",[“Elder Branch”],76
+350,C0FB9E,New,Exdeath's Castle,Carbunkle,key,7,,"[“Anti Barrier”, “Bracelet”]","[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",77
+351,C0FBA0,New,Exdeath's Castle,Gilgamesh 4,key,7,,"[“Anti Barrier”, “Bracelet”]","[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",78
+352,C0FBA2,New,Tule,Antlion,key,7,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",79
+353,C0FBA4,New,Desert,Merugene,key,7,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",7A
+354,C0FBA6,New,Bal Castle,Odin,key,8,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",7B
+355,C0FBA8,New,Great Trench,"Triton, Neregeid & Phobos",key,8,,"[“Submarine Key”, “Trench Page”]","[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”, “Trench Page”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”, “Trench Page”]",7C
+356,C0FBAA,New,Fork Tower,Omniscient,key,8,,[“Elder Branch”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Elder Branch”]","[“Anti Barrier”, “Bracelet”, “Elder Branch”]",7D
+357,C0FBAC,New,Fork Tower,Minotauros,key,8,,[“Elder Branch”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Elder Branch”]","[“Anti Barrier”, “Bracelet”, “Elder Branch”]",7E
+358,C0FBAE,New,Istory Falls,Leviathan,key,8,,"[“Submarine Key”, “Falls Page”]","[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”, “Falls Page”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”, “Falls Page”]",7F
+359,C0FBB0,New,Solitary Island,Stalker,key,8,,[“Shrine Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Shrine Page”]","[“Anti Barrier”, “Bracelet”, “Shrine Page”]",80
+360,C0FBB2,New,Walse,GoGo,key,8,,[“Submarine Key”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”]",81
+361,C0FBB4,New,North Mountain,Bahamut,key,8,,[“Mirage Radar”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Mirage Radar”]","[“Anti Barrier”, “Bracelet”, “Mirage Radar”]",82

@@ -2,6 +2,7 @@
 import pandas as pd 
 import random
 import operator
+from log_analyzer import check_completeable_spoiler_log
 
 class Reward:
     def __init__(self, index, collectible_manager, data_manager):
@@ -102,10 +103,12 @@ class RewardManager:
 
         return output
 
-    def get_spoiler(self):
+    def get_spoiler(self, world_lock):
+        
         output = "-----KEY ITEMS------\n"
-        for i in [x for x in self.rewards if str(type(x.collectible)) == "<class 'collectible.KeyItem'>"]:
-            output = output + i.short_output + "\n"
+        output_temp, flag1, flag2 = check_completeable_spoiler_log([x for x in self.rewards if str(type(x.collectible)) == "<class 'collectible.KeyItem'>"],world_lock)
+        
+        output = output + output_temp + "\n"
         output = output + "-----*********-----\n\n\n"
         
         output = output + "-----CHESTS AND EVENTS (T = Tier)-----\n"

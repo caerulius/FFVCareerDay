@@ -131,6 +131,7 @@ def patch_and_return():
                             'exp_mult':   data['exp_mult'],
                             'place_all_rewards':   data['place_all_rewards'],
                             'randomize_loot':   data['randomize_loot'],
+                            'portal_boss':   data['portal_boss'],
                             'loot_percent':   data['loot_percent']
                             }
         C = Conductor(random, conductor_config)

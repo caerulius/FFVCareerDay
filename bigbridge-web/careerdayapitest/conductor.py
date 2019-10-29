@@ -2,7 +2,7 @@
 import pandas as pd
 import random
 import operator
-import math
+import math, os
 
 from data_manager import *
 from collectible import *
@@ -14,6 +14,7 @@ from enemy import *
 from formation import *
 from text_parser import *
 from monster_in_a_box import *
+from ai_parser import *
 
 adjust_mult = 6
 RANK_EXP_REWARD = {1:50*adjust_mult,
@@ -226,14 +227,13 @@ class Conductor():
 
                 #this will construct us a list of items we're not allowed to place here
                 while len(nodes_to_visit) > 0:
-                    curr_node = nodes_to_visit.pop()
-                    curr_key_item = self.CM.get_by_name(curr_node)
-                    forbidden_items.append(curr_key_item)
-                    if len(curr_key_item.required_by_placement) != 0:
-                        for i in curr_key_item.required_by_placement:
-                            if i not in forbidden_items and i not in nodes_to_visit:
-                                nodes_to_visit.append(i)
-
+                        curr_node = nodes_to_visit.pop()
+                        curr_key_item = self.CM.get_by_name(curr_node)
+                        forbidden_items.append(curr_key_item)
+                        if len(curr_key_item.required_by_placement) != 0:
+                            for i in curr_key_item.required_by_placement:
+                                if i not in forbidden_items and i not in nodes_to_visit:
+                                    nodes_to_visit.append(i)
 
                 possible_key_items = [x for x in self.CM.get_all_of_type_respect_counts(KeyItem) if x not in forbidden_items]
 
@@ -1110,6 +1110,154 @@ class Conductor():
             output_str = output_str[:-2]
             print(output_str)
             return output_str
+        
+        
+    def set_portal_boss(self,  portal_boss = 'SomberMage'):
+        
+        
+        # This all currently supports 3 enemies, which replace LiquiFlame/Kuzar/SolCannon from Phoenix Tower
+        # with entirely new enemies
+        # It's ASSUMING there's three enemies as part of the process
+        
+        
+        # STEPS TO MAKE NEW BOSSES
+        # You can ignore the section below if you have 3 enemies in the formation 
+        # Look for "UPDATE STEP" in notes below
+        
+        output_str = ''
+        output_str = '\n\n; PORTAL BOSS\n'
+        
+        # Change liquiflame formation to not have opening hide and no ABP
+        output_str = output_str + "\n" + "; Formation changes"
+        output_str = output_str + "\n" + ("org $D04EB0")
+        output_str = output_str + "\n" + ("db $00, $80, $00")
+        
+        # Add 3 bosses for liquiflame, kuzar, solcannon
+        output_str = output_str + "\n" + ("org $D04EB4")
+        output_str = output_str + "\n" + ("db $65, $66, $67")
+        # Change to Exdeath W2 music and Strong Boss fade
+        output_str = output_str + "\n" + ("org $D04EBE")
+        output_str = output_str + "\n" + ("db $28, $21")
+        
+        
+        # set liquidflame spot to AI
+        output_str = output_str + "\n" + ";AI table changes"
+        output_str = output_str + "\n" + ("org $D09ECA")
+        output_str = output_str + "\n" + ("db $E0, $F1")
+        # set kuzar ai
+        output_str = output_str + "\n" + ("db $E0, $F2")
+        # set solcannon ai
+        output_str = output_str + "\n" + ("db $E0, $F3")
+        
+        output_str = output_str + "\n" + ";Formation table changes"
+        # Formation table, which will correspond to battle code $BD, $55, $FF found in the custom event
+        output_str = output_str + "\n" + ("org $D07954")
+        output_str = output_str + "\n" + ("db $EB, $01") # ; use liquiflame formation in free space on lookup table
+        output_str = output_str + "\n" + ("db $EB, $01") # ; duplicate for table sometimes pulling next address
+        # Now pivot on which type of portal boss 
+        
+        df = self.DM.files['portal_bosses']
+        df = df[df['enemy_name'] == self.configs['portal_boss']]
+        
+        enemies = [[x for x in self.EM.enemies if x.idx == '357'][0],
+                   [x for x in self.EM.enemies if x.idx == '358'][0],
+                   [x for x in self.EM.enemies if x.idx == '359'][0]
+                  ]
+        
+        for enemy in enemies:
+            
+            data = df[df['idx']==int(enemy.idx)].iloc[0]
+            for i in data.index:
+                if i == 'enemy_name':
+                    setattr(enemy,i,str(data[i]))
+                if "num_" in i:
+                    setattr(enemy,i,str(data[i]).zfill(2))
+                if i in [  'atk_index',
+                            'elemental_immune',
+                            'status0_immune',
+                            'status1_immune',
+                            'status2_immune',
+                            'elemental_absorb',
+                            'unavoidable_atk',
+                            'elemental_weakness',
+                            'enemy_type',
+                            'special_immune',
+                            'initial_status0',
+                            'initial_status1',
+                            'initial_status2',
+                            'initial_status3',
+                            'steal_common',
+                            'steal_rare',
+                            'drop_common',
+                            'drop_rare']: 
+                    setattr(enemy,i,str(data[i]).zfill(2))
+            enemy.update_all()
+            output_str = output_str + "\n" + (enemy.asar_output)
+
+        # Change AI 
+        if portal_boss == 'SomberMage':
+            
+            ########## 
+            # UPDATE STEP
+            # Custom write AI for each of the forms
+            ##########
+            output_str = output_str + "\n" + ";AI Changes"
+            #LiquiFlame AI
+            
+            data = parse_ai_data('somber_mage.txt')
+            output_str = output_str + "\n" + data
+
+
+            # End of battle dialogue
+            output_str = output_str + "\n" + "org $D0F1D4"
+            output_str = output_str + "\n" + "db $B0, $4F"
+            
+            output_str = output_str + "\n" + "org $E74FB0"
+            output_str = output_str + "\n" + "db $A3, $A3, $A3, $00"
+            ########## 
+            # UPDATE STEP
+            # Change formation x/y coords if necessary. Default is middle
+            ##########
+            output_str = output_str + "\n" + ";Enemy X/Y Coords"
+            # ; Formation coords. Low byte x, High byte y coord
+            output_str = output_str + "\n" + ("org $d09858")
+            output_str = output_str + "\n" + ("db $78, $78, $78, $78, $78, $78, $78, $78") # ; default
+
+            ########## 
+            # UPDATE STEP
+            # Change sprites. The addresses are always the same, but you can grab from enemy_data.csv, the rightmost columns
+            # Then change the 4th byte (and also the $00 or $01 on the 3rd byte) for palette swaps
+            ##########
+            
+            # Change sprites 
+            # ; Cherie sprite
+            output_str = output_str + "\n" + "; Battle sprite changes"
+            output_str = output_str + "\n" + ("org $D4B879")
+            output_str = output_str + "\n" + ("db $31, $27, $01, $68, $51")
+            output_str = output_str + "\n" + ("db $31, $27, $01, $69, $51")
+            output_str = output_str + "\n" + ("db $31, $27, $01, $5f, $51")
+            
+
+            ########## 
+            # UPDATE STEP
+            # Change name of enemy with text_parser2.py, limit of 10 characters
+            ##########            
+            # ; Change LiquiFlame, Kuzar and Sol Cannon name to SOMBERMAGE
+            output_str = output_str + "\n" + ("org $E00E42")
+            output_str = output_str + "\n" + ("db $72, $88, $86, $7B, $7E, $8B, $6C, $7A, $80, $7E")
+            output_str = output_str + "\n" + ("db $72, $88, $86, $7B, $7E, $8B, $6C, $7A, $80, $7E")
+            output_str = output_str + "\n" + ("db $72, $88, $86, $7B, $7E, $8B, $6C, $7A, $80, $7E")
+            
+            ########## 
+            # UPDATE STEP
+            # Change dialogue of enemy before battle
+            ##########            
+
+            output_str = output_str + "\n" + "; Pre-battle dialogue"
+            output_str = output_str + "\n" + "org $E14BF1"
+            output_str = output_str + "\n" + "db $73, $81, $7E, $96, $90, $82, $87, $7D, $96, $82, $8C, $96, $7C, $7A, $85, $85, $82, $87, $80, $A3, $A3, $A3, $96, $82, $8D, $99, $8C, $01, $8D, $82, $86, $7E, $96, $7F, $88, $8B, $96, $8E, $8C, $96, $8D, $88, $96, $7F, $82, $80, $81, $8D, $A3, $00"
+    
+        return output_str
             
 
     def starting_crystal_patch(self):
@@ -1425,7 +1573,6 @@ class Conductor():
         # Finally, create the "CODE OF THE VOID"
         
         # For some reason, couldn't get this to load in from star import from text_parser
-        import os
         text_dict2 = pd.read_csv(self.config['PATHS']['text_table_path'] + self.config['PATHS']['text_table_to_use'], header=None, index_col=1).to_dict()[0]
         #text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_chest.csv'),header=None,index_col=1).to_dict()[0]
         
@@ -1538,14 +1685,18 @@ class Conductor():
         return output
 
     def translateBool(self, boolean):
-        print("Boolean passed in to translate: %s" % (boolean))
+        
         if type(boolean) == bool:
+            print("Argument passed in to translate: %s, returning original as boolean" % (boolean))
             return boolean
         if boolean == "false" or boolean == "off" or boolean == "0" or boolean == 0:
+            print("Argument passed in to translate: %s, returning boolean False" % (boolean))
             return False
         if boolean == "true" or boolean == "on" or boolean == "1" or boolean == 1:
+            print("Argument passed in to translate: %s, returning boolean True" % (boolean))
             return True
         else:
+            print("Argument passed in to translate: %s, returning NONETYPE" % (boolean))
             return None
         
 #   Unused, but may be necessary one day. The concept here is to iterate through unplaced collectibles and assign them to random rewards
@@ -1627,8 +1778,7 @@ class Conductor():
         patch = patch + self.randomize_superbosses() # this comes first, because it updates the contents of EnemyManager. 
         patch = patch + self.EM.get_patch(relevant=True)
         patch = patch + self.FM.get_patch()
-        patch = patch + self.karnak_escape_patch()
-        patch = patch + self.kuzar_text_patch()
+        # patch = patch + self.karnak_escape_patch()
         patch = patch + self.kuzar_text_patch()
         patch = patch + self.odin_location_fix_patch
         if self.configs['randomize_loot'].lower() != "none":
@@ -1636,11 +1786,12 @@ class Conductor():
         if self.jobpalettes:
             patch = patch + self.randomize_job_color_palettes()
         patch = patch + self.parse_configs()
+        patch = patch + self.set_portal_boss()
 
         spoiler = ""
         spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.get_collectible_counts()                
-        spoiler = spoiler + self.RM.get_spoiler()
+        spoiler = spoiler + self.RM.get_spoiler(self.world_lock)
         spoiler = spoiler + self.SM.get_spoiler()
         spoiler = spoiler + self.CM.get_spoiler()    
         #spoiler = spoiler + self.EM.get_spoiler()
@@ -1662,7 +1813,7 @@ if __name__ == "__main__":
                             'fjf':True,
                             'fjf_strict':True,
                             'jobpalettes':False,
-                            'world_lock':2,
+                            'world_lock':1,
                             'tiering_config': True,
                             'tiering_percentage': 90,
                             'tiering_threshold': 2,
@@ -1673,14 +1824,12 @@ if __name__ == "__main__":
                             'exp_mult':4,
                             'place_all_rewards': True,
                             'randomize_loot' : "match",
-                            'loot_percent' : 25
+                            'loot_percent' : 25,
+                            'portal_boss' : 'SomberMage'
                           }
                  )
     (spoiler, patch) = c.randomize()
-    # print(c.RM.get_spoiler())
-    #
-    ## Debug checking for 3 key items for world locking
-    #for i in c.RM.rewards:
-    #    if i.collectible.collectible_name == 'Bracelet' or i.collectible.collectible_name == 'Adamantite' or i.collectible.collectible_name == 'Anti Barrier':
-    #        print(i.description, i.collectible.collectible_name)
-    
+    with open(os.path.join(os.path.pardir,os.path.pardir,'projects','test_asm','r-patch.asm'),'w') as f:
+        f.write(patch)
+    with open(os.path.join(os.path.pardir,os.path.pardir,'projects','test_asm','r-spoiler.txt'),'w') as f:
+        f.write(spoiler)

@@ -110,7 +110,7 @@ db $C4, $06
 db $71
 db $E1, $02, $00, $93, $52, $00 ;Return from cutscene? 00 00 9C 96 00
 db $D2, $02, $93, $51, $D8     ; airship
-db $D2, $02, $AE, $E9, $48     ; bchoco
+; db $D2, $02, $AE, $E9, $48     ; bchoco
 ; WORLD CONDITIONALS
 ; Submarine conditional $EE
 ; db $A4, $F9            ; set address 000A53 bit ON 02

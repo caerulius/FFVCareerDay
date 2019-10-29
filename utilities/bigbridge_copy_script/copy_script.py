@@ -44,6 +44,12 @@ def move_cd():
     data_input_path = glob.glob(os.path.join('utilities','data','tables','*'))
     data_output_path = os.path.join('bigbridge-web','careerdayapitest','tables')
     move_files(data_input_path,data_output_path,('csv'))
+
+    # utilities/data/portal_boss_ai
+    data_input_path = glob.glob(os.path.join('utilities','data','portal_boss_ai','*'))
+    data_output_path = os.path.join('bigbridge-web','careerdayapitest','portal_boss_ai')
+    move_files(data_input_path,data_output_path,('txt'))
+
     
     # utilities/data/tables/text_tables
     data_input_path = glob.glob(os.path.join('utilities','data','tables','text_tables','*'))
