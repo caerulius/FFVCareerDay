@@ -32,5 +32,8 @@ class DataManager():
         self.files['monsters_in_boxes'].columns = ['monster_box_id'] + self.files['monsters_in_boxes'].columns.tolist()[1:]
         self.files['monsters_in_boxes']['monster_box_id'] = self.files['monsters_in_boxes']['monster_box_id'].astype(int)
         self.files['boss_scaling'] = pd.read_csv(self.data_table_path + 'boss_scaling.csv')
+        self.files['portal_bosses'] = pd.read_csv(self.data_table_path + 'portal_bosses.csv')
         self.files['enemy_skills'] = pd.read_csv(self.data_table_path + 'enemy_skills.csv',index_col='name').to_dict()['hex']
         self.files['job_color_palettes'] = pd.read_csv(self.data_table_path + 'job_color_palettes.csv')
+        self.files['boss_color_palettes'] = pd.read_csv(self.data_table_path + 'boss_color_palettes.csv')
+        self.files['hints'] = pd.read_csv(self.data_table_path + 'hint_npc.csv',dtype=str)

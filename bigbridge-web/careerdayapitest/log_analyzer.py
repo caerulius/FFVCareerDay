@@ -246,6 +246,7 @@ def check_completeable_spoiler_log(key_list, world_lock):
         df = pd.merge(df,df_key,left_on='description',right_on='boss')[['boss','required_key_items','key']]
     elif world_lock == 1:
         df = df[df['reward_style']=='key'][['description','required_key_items_lock1']]
+#        breakpoint()
         df = pd.merge(df,df_key,left_on='description',right_on='boss')[['boss','required_key_items_lock1','key']]
     elif world_lock == 2:
         df = df[df['reward_style']=='key'][['description','required_key_items_lock2']]
@@ -282,6 +283,7 @@ def check_completeable_spoiler_log(key_list, world_lock):
     num_sphere_limit = 100       # hard cap on how many iterations to do for the loop
     tablets_sphere = 0              # init as zero, when 4 tablets acquired, mark done
     
+#    breakpoint()
     while len(df['obtained'][df['obtained'] == "y"]) < keys_in_seed and num_sphere < num_sphere_limit:
         obtained_keys_temp = obtained_keys[:]
         for index, row in df[df['obtained']==""].iterrows():
@@ -301,6 +303,8 @@ def check_completeable_spoiler_log(key_list, world_lock):
                 if "1st Tablet" in obtained_keys and "2nd Tablet" in obtained_keys and "3rd Tablet" in obtained_keys and "4th Tablet" in obtained_keys and tablets_sphere == 0:
                     tablets_sphere = num_sphere
                     num_sphere_limit = num_sphere
+#                    obtained_keys_temp.append('World Saved')
+#                    output_str = output_str = add_to_output(output_str,"-- Extra Keys --")
             else:
                 pass
         obtained_keys = list(set(obtained_keys + obtained_keys_temp))
@@ -320,11 +324,11 @@ def check_completeable_spoiler_log(key_list, world_lock):
         output_str = add_to_output(output_str,"All keys obtained.")
         all_keys_obtained_flag = True
     else:
-        output_str = add_to_output(output_str,"All keys NOT obtained.")
-        print("All keys NOT obtained.") # specifically print if this happens
+#        output_str = add_to_output(output_str,"All keys NOT obtained.")
+#        print("All keys NOT obtained.") # specifically print if this happens
         all_keys_obtained_flag = False
         
-    return output_str, completeable_seed_flag, all_keys_obtained_flag
+    return output_str, completeable_seed_flag, all_keys_obtained_flag, df
 
 def process_spoiler_data(num_iterations):
     df_key_master = pd.DataFrame()

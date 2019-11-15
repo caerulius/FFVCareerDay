@@ -183,8 +183,8 @@ class Enemy(object):
         if val > 65535:
             val = 65535
         val_bytes = val.to_bytes(2, 'little') or b'\0' #format our data as little endian bytes
-        val_lo = format(val_bytes[0], '02x') #pass through format with 'x' to get just
-        val_hi = format(val_bytes[1], '02x') #hex value (no '0x')
+        val_lo = format(val_bytes[0], '02x').upper() #pass through format with 'x' to get just
+        val_hi = format(val_bytes[1], '02x').upper() #hex value (no '0x')
 
         if attr == 'exp':
             self.num_exp = val

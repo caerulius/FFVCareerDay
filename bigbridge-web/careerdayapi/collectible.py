@@ -475,11 +475,11 @@ class CollectibleManager():
         if choice is None:
             print(working_list)
      
-        try:
-            if choice.tier > og_reward_loc_tier + 5:
-                breakpoint()
-        except:
-            pass
+#        try:
+#            if choice.tier > og_reward_loc_tier + 5:
+#                breakpoint()
+#        except:
+#            pass
         return choice
 
     def get_min_value_collectible(self, random_engine):

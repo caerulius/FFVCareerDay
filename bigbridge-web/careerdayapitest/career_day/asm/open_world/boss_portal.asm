@@ -42,6 +42,8 @@ db $86, $0A
 db $85, $0A
 db $BD, $55, $07
 db $A4, $A8            ; set address 000A49 bit ON 01
+db $A4, $A9            ; set address 000A49 bit ON 02
+                        ; this will set the battle to be considered complete
 db $FF
 
 

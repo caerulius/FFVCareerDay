@@ -2,6 +2,7 @@
 import pandas as pd 
 import random
 import operator
+from log_analyzer import check_completeable_spoiler_log
 
 class Reward:
     def __init__(self, index, collectible_manager, data_manager):
@@ -35,7 +36,12 @@ class Reward:
         else:
             self.required_key_items_lock2 = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
                                         self.required_key_items_lock2.strip('][').split(',')]
-            
+        try:
+            self.hint_tags = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
+                              self.hint_tags.strip('][').split(',')]
+        except:
+            self.hint_tags = ''
+
         self.collectible = collectible_manager.get_by_name(self.original_reward)
         self.mib_type = None #keep a byte for the monster in a box type, override the type in the asar_output if exists
         self.randomized = False
@@ -102,10 +108,12 @@ class RewardManager:
 
         return output
 
-    def get_spoiler(self):
+    def get_spoiler(self, world_lock):
+        
         output = "-----KEY ITEMS------\n"
-        for i in [x for x in self.rewards if str(type(x.collectible)) == "<class 'collectible.KeyItem'>"]:
-            output = output + i.short_output + "\n"
+        output_temp, flag1, flag2, df = check_completeable_spoiler_log([x for x in self.rewards if str(type(x.collectible)) == "<class 'collectible.KeyItem'>"],world_lock)
+        self.df = df
+        output = output + output_temp + "\n"
         output = output + "-----*********-----\n\n\n"
         
         output = output + "-----CHESTS AND EVENTS (T = Tier)-----\n"

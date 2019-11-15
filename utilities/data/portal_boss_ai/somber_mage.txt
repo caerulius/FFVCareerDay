@@ -2,24 +2,38 @@
     org $D0F1E0
     00 00 00 00: Default:
     FE:          {
-    FD AB AB AB:   {WindSlash}
+    FD F7 03 F0:   {No Interupt for: 2}
+    AB:   {WindSlash}
+    90:            Aero2
+    90:            Aero2
+    94:   {DarkShock}
+    FD BD 9D 9D:   {RainbowWind, Blowfish x2}
+    FD F7 02 F0:   {No Interupt for: 2}
+    23:            Dispel    
+    23:            Dispel
     FD F3 23 F0:   {AOE}
     15:            Mute
-    FD 94 94 94:   {DarkShock}
-    FD BD 9D 9D:   {RainbowWind, Blowfish x2}
     FD F7 09 F0:   {No Interupt for: 9}
     FD F3 23 F0:   {AOE}
     91:            Aero3
-    FD EA EA EA  :   {Hurricane}
-    FD 80 80 80:   {Attack}
+    EA  :   {Hurricane}
+    FD F3 23 F0:   {AOE}
+    80:   {Attack}
     FD F3 23 F0:   {AOE}
     B5:            Spore
     FD BD 9D 9D:   {RainbowWind, Blowfish x2}
     FD F3 23 F0:   {AOE}
     49:   {Sylph}
+    FD F3 0D F0:   {Set Target: Self}
+    3A:            Haste
     FF:          }
     
-    
+    06 00 16 00: React on:  X-Fight
+    FE:          {
+    FD F3 2D 00:   {Set Target: Last Attacker}
+    91:         Aero3
+    FE:          }
+
     07 01 2B 00: React on: NOT Magic - 
     FE:          {
     FD BB AA AA:   {Allure, Nothing, Nothing}
@@ -31,27 +45,42 @@
     org $D0F2E0 
     00 00 00 00: Default:
     FE:          {
-    FD 37 3D 40:   {Slow, Stop, Slow2}
+    FD 40 3D 40:   {Slow2, Stop, Slow2}
+    FD F3 23 F0:   {AOE}
+    80:   {Attack}
+    FD 33 33 33:   {Flare}
+    FD F7 0A F0:   {No Interupt for: 10}
     FD F3 23 F0:   {AOE}
     99:            MagicHammer
     FD F3 23 F0:   {AOE}
     C5:            StomachAcid
     FD 94 94 94:   {DarkShock}
     FD BD 9D 9D:   {RainbowWind, Blowfish x2}
-    FD F7 0C F0:   {No Interupt for: 12}
-    FD 2D 2D 2D  :   {Drain}
-    FD 2D 2D 2D  :   {Drain}
-    FD 2D 2D 2D  :   {Drain}
+    FD F7 02 F0:   {No Interupt for: 2}
+    23:            Dispel    
+    23:            Dispel
+    FD F7 03 F0:   {No Interupt for: 3}
+    2D  :   {Drain}
+    2D  :   {Drain}
+    2D  :   {Drain}
     FD 80 80 80:   {Attack}
     FD B8 B8 B9  :   {ZombiePowder x2, ZombieBreath}
     FD F3 23 F0:   {AOE}
     B5:            Spore
     FD 33 33 33:   {Flare}
+    23:            Dispel
     FD BD 9D 9D:   {RainbowWind, Blowfish x2}
     FD B2 B2 B2:   {Blaster}
+    FD F3 0D F0:   {Set Target: Self}
+    3A:            Haste
     FF:          }
 
-  
+    06 00 16 00: React on:  X-Fight
+    FE:          {
+    FD F3 2D 00:   {Set Target: Last Attacker}
+    91:         Aero3
+    B0:
+    FE:          }
 
     07 00 2B 00: React on: Magic - 
     FE:          {
@@ -66,19 +95,22 @@
     org $D0F3E0
     00 00 00 00: Default:
     FE:          {
-    FD AB AB AB:   {WindSlash}
+    FD F7 02 F0:   {No Interupt for: 4}
+    AB:   {WindSlash}
+    AB:   {WindSlash}
     FD F7 04 F0:   {No Interupt for: 4}
     23:            Dispel
     23:            Dispel
     23:            Dispel
     23:            Dispel
-    FD 94 94 94:   {DarkShock}
-    FD BD 9D 9D:   {RainbowWind, Blowfish x2}
-    FD F7 09 F0:   {No Interupt for: 9}
+    94:   {DarkShock}
+    FD F7 06 F0:   {No Interupt for: 6}
     FD F3 23 F0:   {AOE}
     91:            Aero3
-    FD EA EA EA  :   {Hurricane}
-    FD 80 80 80:   {Attack}
+    EA  :   {Hurricane}
+    FD BD 9D 9D:   {RainbowWind, Blowfish x2}
+    FD F3 23 F0:   {AOE}
+    80:   {Attack}
     FD B8 B8 B9  :   {ZombiePowder x2, ZombieBreath}
     FD F3 23 F0:   {AOE}
     B5:            Spore
@@ -93,7 +125,11 @@
     FD 37 3D 40:   {Slow, Stop, Slow2}
     FF:          }
 
-
+    06 00 16 00: React on:  X-Fight
+    FE:          {
+    FD F3 2D 00:   {Set Target: Last Attacker}
+    D7:         StrongFight
+    FE:          }
     
     07 01 2B 00: React on: NOT Magic - 
     FE:          {

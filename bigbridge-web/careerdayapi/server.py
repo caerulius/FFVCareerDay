@@ -117,10 +117,11 @@ def patch_and_return():
         # We're going to pass in conductor_config into Conductor() object now
         # Any configuration for new parameters belong here
         conductor_config = {
-                            'fjf':          data["fjf"], 
+                            'fjf':          data["fjf"],
+                            'fjf_strict':   data["fjf_strict"],
                             'jobpalettes':  data['jobpalette'],
                             'world_lock':   data['world_lock'],
-                            'tiering_config':   data['tiering_config'],
+                            'tiering_config':   data['world_lock'],
                             'tiering_percentage':   data['tiering_percentage'],
                             'tiering_threshold':   data['tiering_threshold'],
                             'enforce_all_jobs':   data['enforce_all_jobs'],
@@ -130,6 +131,7 @@ def patch_and_return():
                             'exp_mult':   data['exp_mult'],
                             'place_all_rewards':   data['place_all_rewards'],
                             'randomize_loot':   data['randomize_loot'],
+                            'portal_boss':   data['portal_boss'],
                             'loot_percent':   data['loot_percent']
                             }
         C = Conductor(random, conductor_config)

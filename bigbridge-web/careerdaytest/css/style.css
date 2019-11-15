@@ -79,6 +79,15 @@ h3{
 	text-transform:uppercase;
 	font-weight:400;
 }
+h4{
+	font-family: 'Montserrat', sans-serif;
+	color:#222222;
+	font-size:18px;
+	margin:0 0 5px 0;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:400;
+}
 h6{
 	font-size:16px;
 	color:#888888;

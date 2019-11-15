@@ -21,7 +21,7 @@ db $70                          ;Short pause
 db $80, $05                     ;Sprite 080 do event: Bounce
 db $80, $00                     ;Sprite 080 do event: Hold
 db $70                          ;Short pause
-
+db $CA, $74, $00            ; set address 000A62 bit ON 10
 
 
 

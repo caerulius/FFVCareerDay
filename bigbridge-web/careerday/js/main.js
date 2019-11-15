@@ -99,9 +99,10 @@ function apiCall(data){
 	var postData = {
 		"seed": $('#seed').val(),
 		"fjf": $('#fjf').is(':checked'),
+		"fjf_strict": $('#fjf_strict').is(':checked'),
 		"jobpalette": $('#jobpalette').is(':checked'),
 		"world_lock": $("input:radio[name=world_lock]:checked").val(),
-		"tiering_config": $('#tiering_config').is(':checked'),
+		"tiering_config": $("#tiering_config").val(),
 		"tiering_percentage": $("#tiering_percentage").val(),
 		"tiering_threshold": $("#tiering_threshold").val(),
 		"enforce_all_jobs": $('#enforce_all_jobs').is(':checked'),
@@ -112,6 +113,7 @@ function apiCall(data){
 		"place_all_rewards": $('#place_all_rewards').is(':checked'),
 		"randomize_loot": $("input:radio[name=randomize_loot]:checked").val(),
 		"loot_percent": $("#loot_percent").val(), 
+		"portal_boss": $("#portal_boss").val(), 
 		"fileLocation": data.Location
 	}
 	$.post(url, postData, function(data){

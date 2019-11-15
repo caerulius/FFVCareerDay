@@ -424,6 +424,8 @@ db $A4, $7C                     ;Set Event Flag 17C
 ; What is this...?
 db $A2, $BD                     ;Turn on bit 20 at address 0x7e0a2b
 
+; Zokk back in
+db $CA, $77, $00            ; set address 000A62 bit ON 80
 
 ; PYRAMID
 ; allows getting the tablet...?

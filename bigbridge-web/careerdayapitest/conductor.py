@@ -149,7 +149,7 @@ class Conductor():
         if fjf:
             for crystal in [x for x in self.CM.get_all_of_type(Crystal) if x != starting_crystal]:
                 self.CM.add_to_placement_history(crystal,"No")
-        if fjf and self.fjf_strict:
+        if self.fjf_strict:
             # For Four Job mode, mark all Abilities as unobtainable 
             for ability in [x for x in self.CM.get_all_of_type(Ability)]:
                 self.CM.add_to_placement_history(ability,"No")
@@ -385,19 +385,28 @@ class Conductor():
     def randomize_shops(self):
         required_items = {i:0 for i in self.config['REQUIREDITEMS']['item_ids'].split('\n')}
 
-        item_chance = float(self.conductor_config['ITEM_SHOP_CHANCE'])
-        magic_chance = float(self.conductor_config['MAGIC_SHOP_CHANCE'])
-        crystal_chance = float(self.conductor_config['CRYSTAL_SHOP_CHANCE'])
+        if self.fjf_strict:
+            item_chance = float(self.conductor_config['ITEM_SHOP_CHANCE'])
+            magic_chance = float(self.conductor_config['MAGIC_SHOP_CHANCE'])
+            crystal_chance = round(float(self.conductor_config['CRYSTAL_SHOP_CHANCE']) / 2)
+            item_chance = item_chance + crystal_chance
+            magic_chance = magic_chance + crystal_chance
+            crystal_chance = 0
+        else:
+            item_chance = float(self.conductor_config['ITEM_SHOP_CHANCE'])
+            magic_chance = float(self.conductor_config['MAGIC_SHOP_CHANCE'])
+            crystal_chance = float(self.conductor_config['CRYSTAL_SHOP_CHANCE'])            
 
         #print("difficulty: " + str(self.difficulty))
         
         for index, value in enumerate(self.RE.sample(self.SM.shops,len(self.SM.shops))):
+#            if value.readable_name == 'Mirage Armor':
+#                breakpoint()
             #don't waste time on invalid shops
             if value.valid is False:
                 continue
 
             #for the discount shops, put a single item in there
-           #  breakpoint()
             if "discount" in value.readable_name:
                 value.num_items = 1
                 value.shop_type = ITEM_SHOP_TYPE
@@ -409,21 +418,31 @@ class Conductor():
             #manage the probability of the shops
             #each time a shop of one kind is placed
             #each of the other kinds of shops gets more likely
-            if item_chance <= 0:
-                item_chance = item_chance + .05
-                magic_chance = magic_chance - .025
-                crystal_chance = crystal_chance - .025
-            elif magic_chance <= 0:
-                item_chance = item_chance - .025
-                magic_chance = magic_chance + .05
-                crystal_chance = crystal_chance - .025
-            elif crystal_chance <= 0:
-                item_chance = item_chance - .025
-                magic_chance = magic_chance - .025
-                crystal_chance = crystal_chance + .05
+            if self.fjf_strict:
+                if item_chance <= 0:
+                    item_chance = item_chance + .05
+                    magic_chance = magic_chance - .05
+                elif magic_chance <= 0:
+                    item_chance = item_chance - .05
+                    magic_chance = magic_chance + .05
+                kind = random.choices(["item", "magic"],
+                                      [item_chance, magic_chance])[0]
+            else:    
+                if item_chance <= 0:
+                    item_chance = item_chance + .05
+                    magic_chance = magic_chance - .025
+                    crystal_chance = crystal_chance - .025
+                elif magic_chance <= 0:
+                    item_chance = item_chance - .025
+                    magic_chance = magic_chance + .05
+                    crystal_chance = crystal_chance - .025
+                elif crystal_chance <= 0:
+                    item_chance = item_chance - .025
+                    magic_chance = magic_chance - .025
+                    crystal_chance = crystal_chance + .05
             
-            kind = random.choices(["item", "magic", "crystal"],
-                                  [item_chance, magic_chance, crystal_chance])[0]
+                kind = random.choices(["item", "magic", "crystal"],
+                                      [item_chance, magic_chance, crystal_chance])[0]
 
             item_mod = random.choices([  2,  1,  0, -1,  -2],
                                       [.05, .1, .7, .1, .05])[0]
@@ -438,10 +457,13 @@ class Conductor():
             if kind == "item":
                 if value.num_items < 4:
                     value.num_items = 4
-
-                item_chance = item_chance - .1
-                magic_chance = magic_chance + .05
-                crystal_chance = crystal_chance + .05
+                if not self.fjf_strict:
+                    item_chance = item_chance - .1
+                    magic_chance = magic_chance + .05
+                    crystal_chance = crystal_chance + .05
+                else:
+                    item_chance = item_chance - .1
+                    magic_chance = magic_chance + .1                    
                 value.shop_type = ITEM_SHOP_TYPE
                 for i in range(0, value.num_items):
                     while True:
@@ -460,10 +482,13 @@ class Conductor():
             elif kind == "magic":
                 if value.num_items > 5:
                     value.num_items = 5
-
-                item_chance = item_chance + .05
-                magic_chance = magic_chance - .1
-                crystal_chance = crystal_chance + .05
+                if not self.fjf_strict:
+                    item_chance = item_chance + .05
+                    magic_chance = magic_chance - .1
+                    crystal_chance = crystal_chance + .05
+                else:
+                    item_chance = item_chance + .1
+                    magic_chance = magic_chance - .1                    
                 value.shop_type = MAGIC_SHOP_TYPE
                 try:
                     for i in range(0, value.num_items):
@@ -494,10 +519,12 @@ class Conductor():
             else:
                 if value.num_items > 4:
                     value.num_items = 4
-
-                item_chance = item_chance + .05
-                magic_chance = magic_chance + .05
-                crystal_chance = crystal_chance - .1
+                if not self.fjf_strict:
+                    item_chance = item_chance + .05
+                    magic_chance = magic_chance + .05
+                    crystal_chance = crystal_chance - .1
+                else:
+                    pass # this doesn't matter, shouldn't be placing this type on fjf_strict = True
                 value.shop_type = CRYSTAL_SHOP_TYPE #shop type: crystal/ability
                 try:
                     for i in range(0, value.num_items):
@@ -1588,7 +1615,175 @@ class Conductor():
             
         return output_str
     
+    def assign_hints(self):
+        # hint_text will be a list of text strings with hints
+        hint_text = []
+            
+        keys = self.RM.get_rewards_by_style('key')
+        
+        keys_main = []
+        keys_barren = []
+        
+        
+        for i in keys:
+            if i.collectible.name == 'Key Item':
+                keys_main.append(i)
+            else:
+                keys_barren.append(i)
     
+        random.shuffle(keys_main)
+        random.shuffle(keys_barren)
+        
+        keys_hint1 = keys_main[:3]
+        
+        ###########
+        # DIRECT
+        ###########
+        # Pick 3 hints to say "X" item is at "Y" location
+        
+        for key in keys_hint1:
+            hint_str = "They say that %s|holds the %s." % (key.area, key.collectible.collectible_name)
+            hint_text.append(hint_str)
+            
+            
+        ###########
+        # PATH
+        ###########
+    
+        tablets = [x for x in keys if 'Tablet' in x.collectible.collectible_name]
+        # init required_rewards with tablets
+        required_rewards = tablets[:]
+        
+        tablet_reqs = []
+        tablet_keys = []
+        for tablet in tablets:
+    #        breakpoint()
+    #        print(">>>>>>>>>>>:"+tablet.description)
+            # for each tablet, iterate through required keys for that tablet
+            if self.configs['world_lock'] == '0':
+                tablet_reqs = getattr(tablet, 'required_key_items')
+            else:
+                tablet_reqs = getattr(tablet,'required_key_items_lock'+str(self.configs['world_lock']))
+            if tablet_reqs != None:            
+                # now iterate through tablet_reqs and find rewards that correspond. Pop them when done 
+                loop_flag = True
+                while loop_flag:
+                    if tablet_reqs == []:
+                        loop_flag = False
+                        break
+    #                print(tablet_reqs)
+                    # find the reward associated with the latest tablet_req
+                    new_reward = [x for x in keys if x.collectible.collectible_name == tablet_reqs[0]][0]
+                    if new_reward not in required_rewards:
+                        required_rewards.append(new_reward)
+                    # check if this new reward has any reqs of its own, if it does, add to tablet_reqs
+                    if self.configs['world_lock'] == '0':
+                        new_reward_reqs = getattr(tablet, 'required_key_items')
+                    else:
+                        new_reward_reqs = getattr(new_reward,'required_key_items_lock'+str(self.configs['world_lock']))
+                    if new_reward_reqs:
+                        for i in new_reward_reqs:
+                            if i not in tablet_reqs:
+    #                            print("Adding %s to tablet_reqs" % i)
+                                tablet_reqs.append(i)
+                    tablet_reqs = tablet_reqs[1:]
+    #                time.sleep(2)
+            else:
+                continue # if there's no requirements, move on to next 
+                        
+#        for i in required_rewards:
+#            print(i.collectible.collectible_name + " - " + i.description  + " - " +  str(i.required_key_items_lock1))
+        
+        # now choose 5 of them, and add to hints
+        random.shuffle(required_rewards)
+        for key in required_rewards[:5]:
+            hint_str = "They say that %s|is on the path to the Void." % (key.area)
+            hint_text.append(hint_str)
+    
+    
+    
+        
+        
+        ###########
+        # BARREN
+        ###########
+    
+        # Build area list from spreadsheet
+        tags = {}
+        for key in keys:
+            for tag in key.hint_tags:
+                tags[tag] = ''
+    
+        # Get all tags that are present anywhere in the main game            
+        tags_main = []
+        for key in keys_main:
+            for tag in key.hint_tags:
+                tags_main.append(tag)
+        tags_main = list(set(tags_main))
+        
+        # now take all tags, and find out which ones aren't in the tags_main 
+        barren_tags = []
+        for tag in tags:
+            if tag not in tags_main:
+                barren_tags.append(tag)
+                
+        # Then add random ones, depending on how many present
+        if len(barren_tags) < 5:
+            barren_num = len(barren_tags)
+        else:
+            barren_num = 5
+            
+        random.shuffle(barren_tags)
+        barren_tags = random.sample(barren_tags,barren_num)
+        for i in barren_tags:
+            hint_str = "They say that %s areas|hold no keys of value." % i
+            hint_text.append(hint_str)
+            
+        ###########
+        # WORLD
+        ###########
+        
+        # pick 5 random keys_main, which will be a different set of keys from the first 5 hints
+        # make up difference of barren hints 
+        
+        if barren_num < 3:
+            world_num = 3 + (5 - barren_num)
+        else:
+            world_num = 3
+        
+        world_keys = keys_main[-world_num:]
+        
+        for key in world_keys:
+            hint_str = "They say that the %s|is present in World %s." % (key.collectible.collectible_name, key.world)
+            hint_text.append(hint_str)
+        
+        random.shuffle(hint_text)    
+        
+        
+        ###########
+        # DATA
+        ###########
+        
+        hint_data = [hint for hint in self.DM.files['hints']['start']]
+        
+        hint_data_str = []
+        tp = TextParser()
+        for hint in hint_text:
+            hint_data_str.append(tp.run_encrypt_text_string_hints(hint) + ", $00")
+            
+            
+        
+        hint_data = dict(zip(hint_data, hint_data_str))
+        
+        output_str_asar = '\n; Hints\n'
+        for k, v in hint_data.items():
+            output_str_asar = output_str_asar + "org $" + k + "\n" + v + "\n"
+            
+        output_str = '\n\nHINTS: \n\n'
+        for i in hint_text:
+            output_str = output_str + i + "\n"
+        return output_str_asar, output_str
+        
     def randomize_loot(self,loot_percent=25,loot_type='match'):
         loot_list = ['steal_common','steal_rare','drop_common','drop_rare']
         ''' 
@@ -1800,6 +1995,10 @@ class Conductor():
         if self.configs['randomize_loot'].lower() != "none":
             spoiler = spoiler + self.EM.get_loot_spoiler()
 
+        temp_hints_asar, temp_hints = self.assign_hints()
+        patch = patch + temp_hints_asar
+        spoiler = spoiler + temp_hints
+        
         return(spoiler, patch)
 
 
@@ -1808,11 +2007,12 @@ class Conductor():
 ######## TESTING AREA ##############
 ####################################
 
-if __name__ == "__main__":
+if __name__ == "__main__":    
+    random.seed(10006)
     c = Conductor(random, {
-                            'fjf':True,
+                            'fjf':False,
                             'fjf_strict':True,
-                            'jobpalettes':False,
+                            'jobpalettes':True,
                             'world_lock':1,
                             'tiering_config': True,
                             'tiering_percentage': 90,
@@ -1823,7 +2023,7 @@ if __name__ == "__main__":
                             'green_color':5,
                             'exp_mult':4,
                             'place_all_rewards': True,
-                            'randomize_loot' : "match",
+                            'randomize_loot' : "none",
                             'loot_percent' : 25,
                             'portal_boss' : 'SomberMage'
                           }
@@ -1833,3 +2033,14 @@ if __name__ == "__main__":
         f.write(patch)
     with open(os.path.join(os.path.pardir,os.path.pardir,'projects','test_asm','r-spoiler.txt'),'w') as f:
         f.write(spoiler)
+
+    # print(spoiler)
+    
+
+
+
+
+
+
+
+

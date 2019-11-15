@@ -97,6 +97,42 @@ db $F7, $02, $FF, $00, $00, $FE, $C0, $ff, $BD, $01, $FE, $C1, $ff, $BD, $01, $F
 org $F05FCB
 db $FE, $5A, $FF, $00, $00, $FD, $65, $FF, $43, $00, $FE, $F63, $FF, $27, $00, $FD, $F63, $FF, $22, $00
 
+; PORTAL BOSS
+org $F05FDF
+    ; bit A49 $01 = boss fight was triggered
+        ; Corresponds to conditional set FC A8 and event code A4 A8 
+    ; bit A49 $02 = boss fight was ended properly with dialogue final form
+        ; Corresponds to conditional set FC A9 and event code A4 A9 
+        
+    ; if any tablets aren't acquired, reject
+    db $FB, $CA, $FF, $A3, $05
+    db $FB, $CB, $FF, $A3, $05
+    db $FB, $CC, $FF, $A3, $05
+    db $FB, $CD, $FF, $A3, $05
+    
+    
+    ; If boss triggered and fight ended properly
+    db $FC, $A8, $FC, $A9, $FF, $A7, $05 ; <<<<<< CHANGE THIS EVENT
+    ; If boss triggered and fight NOT ended properly
+    db $FC, $A8, $FB, $A9, $FF, $AA, $05 ; <<<<<< CHANGE THIS EVENT
+
+    ; default case
+    db $FF, $00, $00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ; X Y CUSTOM COORDINATES
@@ -122,6 +158,10 @@ db $16, $2C, $7d, $02
 org $CE367C
 db $17, $24, $7a, $00
 db $0E, $1D, $00, $00
+
+; ; Portal Boss
+org $CE3684
+db $08, $0A, $00, $00
 
 
 
@@ -224,6 +264,13 @@ JMP XYCoordinateHookContinueNormalCase
 
 
 
+
+
+
+
+
+
+
 XYCoordinateHookContinueCase5:
 ; ; SHOAT CAVE
 lda !mapid
@@ -242,10 +289,33 @@ STA $23
 JMP XYCoordinateHookContinueNormalCase
 XYCoordinateHookContinueCase6:
 
-; ce34a4
-; ce536e
+; mapid $2101
+; xy $080a
 
-; 01004231
+
+; ; PORTAL BOSS
+lda !mapid
+CMP #$0121
+BNE XYCoordinateHookContinueCase7
+lda !xycoordcheck
+CMP #$0A08
+BNE XYCoordinateHookContinueCase7
+
+; ; IF these match, set up coordinates specifically
+LDA #$1284
+STA $26
+TAX
+LDA #$1288
+STA $23
+JMP XYCoordinateHookContinueNormalCase
+XYCoordinateHookContinueCase7:
+
+
+
+
+
+
+
 
 
 XYCoordinateHookContinueNormalCase:
@@ -279,6 +349,35 @@ clc
 adc #$0004
 tax
 jml !ADDRESS_xycoordhook  ; this will loop until another case is hit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -574,10 +673,28 @@ BNE KeyItemLockingNextCheck13
 
 LDA #$1FCB
 STA $23
-LDA #$1FDD
+LDA #$1FDF
 STA $26
 JMP KeyItemLockingImmediateFinish
 KeyItemLockingNextCheck13:
+
+
+; PORTAL BOSS VALIDATION
+lda !mapid
+CMP #$0121
+BNE KeyItemLockingNextCheck14
+lda !xycoordcheck
+CMP #$0A08
+BNE KeyItemLockingNextCheck14
+
+; HANDLE PORTAL BOSS VALIDATION
+
+LDA #$1FDF
+STA $23
+LDA #$2002
+STA $26
+JMP KeyItemLockingImmediateFinish
+KeyItemLockingNextCheck14:
 
 
 

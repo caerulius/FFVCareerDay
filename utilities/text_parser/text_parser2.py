@@ -26,13 +26,11 @@ data = '''
 
 
 
-
-627a8b7a9bffff668b7a877d897aa3a3
-a301010101029bffff76817a8dff828c
-ff828d9dff627a8b7aa201ffff728886
-7e8d81828780ff7a7b888e8dff667a85
-8e7fa3a3a3a200
-
+767e998585ff898b888d7e7c8dff8d81
+828cff7c7a8c8d857eff908182857eff
+8d817eff01ffff6f8b82877c7e8c8cff
+828cff7a907a92a3ffff638887998dff
+90888b8b92a100
 
 
 
@@ -227,3 +225,5 @@ def generate_keyitems():
     write_text = write_text + run_encrypt(key_item_reward_table)
     with open('../../projects/shared_asm/text_tables/key_item_tables.asm','w') as file:
         file.write(write_text)
+        
+run_decrypt()

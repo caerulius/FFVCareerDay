@@ -36,3 +36,4 @@ class DataManager():
         self.files['enemy_skills'] = pd.read_csv(self.data_table_path + 'enemy_skills.csv',index_col='name').to_dict()['hex']
         self.files['job_color_palettes'] = pd.read_csv(self.data_table_path + 'job_color_palettes.csv')
         self.files['boss_color_palettes'] = pd.read_csv(self.data_table_path + 'boss_color_palettes.csv')
+        self.files['hints'] = pd.read_csv(self.data_table_path + 'hint_npc.csv',dtype=str)

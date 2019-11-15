@@ -114,6 +114,32 @@ class TextParser():
             text_asar = text_asar + " $" + i + ","
         text_asar = text_asar[:-1]
         return text_asar
+    
+    def run_encrypt_text_string_hints(self, x):
+        '''
+        Same as above, but will split out line breaks 
+        '''
+        counter = 0
+        text_list = []
+        while counter < len(x):
+            char = x[counter]
+            if char == "<":
+                left = x.find("<")
+                right = x.find(">")+1
+                new_char = x[left:right]
+                text_list.append(self.text_dict2[new_char])
+                counter = right
+            elif char == "|":
+                text_list.append("01")
+                counter = counter + 1
+            else:    
+                text_list.append(self.text_dict2[char])
+                counter = counter + 1
+        text_asar = 'db'
+        for i in text_list:
+            text_asar = text_asar + " $" + i + ","
+        text_asar = text_asar[:-1]
+        return text_asar
 
 
     def run_exdeath_rewards(self, passed_dict):
@@ -189,3 +215,4 @@ byte_list = [data[i:i+n] for i in range(0, len(data), n)]
 
 TP.run_decrypt(byte_list)
 '''
+
