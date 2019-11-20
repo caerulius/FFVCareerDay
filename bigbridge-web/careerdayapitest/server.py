@@ -11,6 +11,7 @@ import logging
 from flask import Flask
 from flask import request
 from flask import jsonify
+import datetime
 import zipfile
 from conductor import *
 app = Flask(__name__)
@@ -57,12 +58,12 @@ FAKE_HEADER = bytearray.fromhex('''0001 0080 0000 0000 aabb 0400 0000 0000
 0000 0000 0000 0000 0000 0000 0000 0000
 0000 0000 0000 0000 0000 0000 0000 0000''')
 
-logging.basicConfig(filename="error.log", level=logging.ERROR)
+logging.basicConfig(filename="error.log", level=logging.ERROR, format="%(asctime)-15s %(message)s")
 
 @app.route("/careerdayapitest/", methods=['POST'])
 def patch_and_return():
     if request.method == 'POST':
-        
+        logging.error("Begin patch & return process")
         reheader = False
         smc = False
         rpge = False
@@ -134,9 +135,10 @@ def patch_and_return():
                             'portal_boss':   data['portal_boss'],
                             'loot_percent':   data['loot_percent']
                             }
+        logging.error("Begin randomization process")
         C = Conductor(random, conductor_config)
         spoilerandpatch = C.randomize()
-
+        logging.error("End randomization process")
         spoiler_file_name = "CareerDay-{}-spoiler.txt".format(seed)
         patch_file_name = "CareerDay-{}-patch.asm".format(seed)
 
@@ -170,7 +172,7 @@ def patch_and_return():
             os.remove(i)
 
         sys.stdout.flush()
-
+        logging.error("Finish patch & return process")
         return jsonify(s3_filename)
 
 def headers_and_translate(filename, reheader, rpge):

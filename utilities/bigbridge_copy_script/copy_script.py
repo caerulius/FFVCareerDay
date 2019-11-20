@@ -133,13 +133,21 @@ def deploy_to_careerday():
     flag = input("Confirm deploying? Type undercase y to deploy.")
     if flag == "y":
         print("Clear out everything in careerday and careerdayapi")
-        cd_path = os.path.join('bigbridge-web','careerday')
-        shutil.rmtree(cd_path)
-        
-        cdapi_path = os.path.join('bigbridge-web','careerdayapi')
-        shutil.rmtree(cdapi_path)
+        try:
+            cd_path = os.path.join('bigbridge-web','careerday')
+            shutil.rmtree(cd_path)
+            
+            cdapi_path = os.path.join('bigbridge-web','careerdayapi')
+            shutil.rmtree(cdapi_path)
+        except:
+            pass
         
         print("Copying subdirs over")
+        # try:
+            # os.mkdir(cd_path)
+            # os.mkdir(cdapi_path)
+        # except Exception as e:
+            # print("Error %s" % str(e))
         cdtest_path = os.path.join('bigbridge-web','careerdaytest')
         cdapitest_path = os.path.join('bigbridge-web','careerdayapitest')
         
