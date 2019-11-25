@@ -133,11 +133,13 @@ def deploy_to_careerday():
     flag = input("Confirm deploying? Type undercase y to deploy.")
     if flag == "y":
         print("Clear out everything in careerday and careerdayapi")
+        cdapi_path = os.path.join('bigbridge-web','careerdayapi')
+        cd_path = os.path.join('bigbridge-web','careerday')
         try:
-            cd_path = os.path.join('bigbridge-web','careerday')
             shutil.rmtree(cd_path)
-            
-            cdapi_path = os.path.join('bigbridge-web','careerdayapi')
+        except:
+            pass
+        try:
             shutil.rmtree(cdapi_path)
         except:
             pass

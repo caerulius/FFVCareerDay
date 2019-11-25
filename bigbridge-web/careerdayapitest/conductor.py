@@ -80,9 +80,10 @@ class Conductor():
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
         self.conductor_config = self.config['CONDUCTOR']
-
+        logging.error("Init data tables...")
         # Set up data tables
         self.DM = DataManager()                            #Data manager loads all the csv's into memory and sets them up for processing
+        logging.error("Init data managers...")
         self.CM = CollectibleManager(self.DM, collectible_config)              #Set up collectibles (Includes Items, magic, crystals, and abilities)
         self.RM = RewardManager(self.CM, self.DM)          #Set up rewards (Includes chests and events)
         self.SM = ShopManager(self.CM, self.DM)            #Set up shops
@@ -93,6 +94,7 @@ class Conductor():
         self.MIBM = MonsterInABoxManager(self.DM, self.RE) #Set up monsters in boxes
         self.TP = TextParser()                             #Set up Text Parser Utility Object
         
+        logging.error("Init misc setup...")
         # Misc setup 
         self.difficulty = random.randint(1,10)
         crystals = self.get_crystals(self.fjf)
@@ -104,8 +106,9 @@ class Conductor():
         self.odin_location_fix_patch = ""
         self.superbosses_spoiler = ""
         self.code_of_the_void = ""
-
+        logging.error("Init weigh collectibles...")
         self.weigh_collectibles()
+        logging.error("Init finished.")
 
     def get_crystals(self, fjf=False):
         crystals = self.CM.get_all_of_type(Crystal)
@@ -1925,6 +1928,7 @@ class Conductor():
         
 
     def randomize(self, random_engine=None):
+        logging.error("Starting randomization process.")
         if random_engine is None:
             random_engine = self.RE
         
@@ -1970,7 +1974,7 @@ class Conductor():
             self.randomize_loot()
         
         # Patch now comes first, because some functions (randomize_superbosses) now create the spoiler as part of their process
-
+        logging.error("Creating spoiler & asm patch...")
         patch = "hirom\n\n"
         patch = patch + self.starting_crystal_patch()
         patch = patch + self.RM.get_patch()
@@ -2005,7 +2009,7 @@ class Conductor():
         temp_hints_asar, temp_hints = self.assign_hints()
         patch = patch + temp_hints_asar
         spoiler = spoiler + temp_hints
-        
+        logging.error("Finished randomization process.")
         return(spoiler, patch)
 
 

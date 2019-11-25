@@ -83,7 +83,7 @@ db $A5, $FE                     ;Clear Event Flag 1FE
 db $A2, $B0                     ;Set Event Flag 0B0
 db $A3, $B2                     ;Clear Event Flag 0B2
 db $A3, $B1                     ;Clear Event Flag 0B1
-db $A4, $E7                     ;Set Event Flag 1E7
+; db $A4, $E7                     ;Set Event Flag 1E7
 db $C2, $02                     ;Map 02
 
 
