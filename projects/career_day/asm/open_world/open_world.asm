@@ -409,3 +409,14 @@ db $FF, $90, $00, $00, $00
     ; entering the area
 ; org $F04FA3
 ; db $FF, $0C, $03
+
+; Bal castle
+; Disallow leaving from below into cave
+; Fixes world1/2/3 issues
+org $F05A39
+db $FF, $00, $00, $00, $00
+
+; Bard in Crescent
+; fixed reward for all 8 pianos in certain conditionals
+org $CE179C
+db $29, $02

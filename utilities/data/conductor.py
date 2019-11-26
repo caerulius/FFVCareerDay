@@ -1894,7 +1894,9 @@ class Conductor():
             c = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
             #logging.error("collectible there is: " + c.reward_name)
             #@ will be used for our newline character, won't otherwise be present, and don't have the problems \n causes
-            output = output + self.TP.run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
+            kuzar_text = self.TP.run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
+#            breakpoint()
+            output = output + kuzar_text
         return output
 
     def translateBool(self, boolean):
@@ -2027,7 +2029,7 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":    
-    random.seed(10006)
+#    random.seed(10006)
     c = Conductor(random, {
                             'fjf':False,
                             'fjf_strict':True,

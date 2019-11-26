@@ -1,7 +1,7 @@
 APITEST
-tail /root/.forever/qpRS.log -n 50
+tail /root/.forever/hYL7.log -n 50
 API
-tail /root/.forever/MNZY.log -n50
+tail /root/.forever/wIIC.log -n50
 ERROR
 
 cd /var/www/html/careerdayapi/
