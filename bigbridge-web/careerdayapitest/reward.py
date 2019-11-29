@@ -45,6 +45,7 @@ class Reward:
         self.collectible = collectible_manager.get_by_name(self.original_reward)
         self.mib_type = None #keep a byte for the monster in a box type, override the type in the asar_output if exists
         self.randomized = False
+        self.max_world_requirements_flag = False # used for progressive bosses setting
 
     @property
     def asar_output(self):

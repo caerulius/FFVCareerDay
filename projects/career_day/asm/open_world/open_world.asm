@@ -418,5 +418,5 @@ db $FF, $00, $00, $00, $00
 
 ; Bard in Crescent
 ; fixed reward for all 8 pianos in certain conditionals
-org $CE179C
-db $29, $02
+; org $CE179C
+; db $29, $02

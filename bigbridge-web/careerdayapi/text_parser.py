@@ -68,6 +68,8 @@ class TextParser():
     def run_kuzar_encrypt(self, passed_dict):
         return_text = ''
         for x in passed_dict.keys():
+            # limit length of x here to 30 characters. This is so text doesnt overwrite next slot
+            x = x[:31]
             counter = 0
             text_list = []
             while counter < len(x):

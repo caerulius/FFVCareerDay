@@ -20,7 +20,8 @@ from ai_parser import *
 logging.basicConfig(level=logging.ERROR, format="%(asctime)-15s %(message)s")
 
 adjust_mult = 6
-RANK_EXP_REWARD = {1:50*adjust_mult,
+RANK_EXP_REWARD = {0:50*adjust_mult,
+1:75*adjust_mult,
 2:101*adjust_mult,
 3:289*adjust_mult,
 4:655*adjust_mult,
@@ -30,8 +31,13 @@ RANK_EXP_REWARD = {1:50*adjust_mult,
 8:5218*adjust_mult,
 9:7466*adjust_mult,
 10:10289*adjust_mult,
-11:13087*adjust_mult,
-12:15044*adjust_mult}
+11:11894*adjust_mult,
+12:12578*adjust_mult,
+13:14021*adjust_mult,
+14:15369*adjust_mult,
+15:16981*adjust_mult,
+16:18112*adjust_mult,
+17:19207*adjust_mult}
 
 ITEM_TYPE = "40"
 
@@ -58,6 +64,7 @@ class Conductor():
             self.blue_color = 0
             self.green_color = 0
             self.exp_mult = 4
+            self.progressive_bosses = True
             self.place_all_rewards = True
             
             
@@ -70,6 +77,11 @@ class Conductor():
             self.tiering_percentage = int(conductor_config['tiering_percentage'])
             self.tiering_threshold= int(conductor_config['tiering_threshold'])
             self.enforce_all_jobs = self.translateBool(conductor_config['enforce_all_jobs'])
+            self.progressive_bosses = self.translateBool(conductor_config['progressive_bosses'])
+            
+            #only allow progressive bosses if world_lock == 1
+            if self.world_lock != 1:
+                self.progressive_bosses = False
             
         # Some configs set up for the managers 
         collectible_config = {'place_all_rewards':self.translateBool(conductor_config['place_all_rewards'])}
@@ -156,7 +168,7 @@ class Conductor():
             while len([i for i in chosen_crystals if i.collectible_name == 'Freelancer']) >= 1:
                 chosen_crystals = self.RE.sample(crystals, crystal_count)
                 logging.error("Failed on pulling Freelancer, re-rolling crystals for FJ mode")
-                logging.error("New: ",chosen_crystals[0].collectible_name,chosen_crystals[1].collectible_name,chosen_crystals[2].collectible_name)
+#                logging.error("New: ",chosen_crystals[0].collectible_name,chosen_crystals[1].collectible_name,chosen_crystals[2].collectible_name)
                 
 
         #this pretends to have placed every job, so it won't try to place any more going forward
@@ -639,18 +651,50 @@ class Conductor():
             while(len(new_contents) < 8):
                 new_contents.append(None)
             shop.contents = new_contents 
+    def decide_progressive_bosses(self):
+        # galura
+        for x in self.RM.get_rewards_by_style("key"):
+            if int(x.world) == 3: # if world 3, discard
+                pass
+            else:
+                try:
+                    # galura's required key items
+                    req = x.required_key_items_lock2
+                    # where galura's required key items are (where the walse tower key is)
+                    keys = [self.CM.get_by_name(x) for x in req]
+                    req_loc = []
+                    
+                    for reward in c.RM.get_rewards_by_style("key"):
+                        if reward.collectible in keys:
+                            req_loc.append(reward)
+                            # go 1 level down past this
+                            keys2 = [self.CM.get_by_name(x) for x in reward.required_key_items_lock2]
+                            for reward2 in c.RM.get_rewards_by_style("key"):
+                                if reward2.collectible in keys2:
+                                    req_loc.append(reward2)
+                # odin location has walse tower key
+                # now, max world will be an attribute of the original reward object
+                
+                    max_requirements_world = max([x.world for x in req_loc])
+                    world_delta = (int(max_requirements_world) - int(x.world))
+                    if world_delta > 0:
+                        x.max_world_requirements_flag = True
+                        x.world_delta = world_delta
+                        logging.error("Progressive boss adjustment for location reward %s, delta %s" % (x.description,world_delta))
+                except:
+                    pass
+            
 
     def randomize_bosses(self):
+        # First, if the setting for progressive bosses is enabled,process
+        if self.progressive_bosses: #progressive bosses
+            self.decide_progressive_bosses()          
+
         list_of_randomized_enemies = []
 
         # This has to be done twice in order for the enemy classes to NOT be shared objects
         # Very important or else swapping HP becomes very muddy and original hp values on enemies are not preserved
-                        
-        #randomized_boss_list = []
-        #for formation in [x for x in self.FM.formations if x.randomized_boss == 'y']:
-        #for formation in df_boss_formations['event_id'].unique():
-            #randomized_boss_list.append(Formation(formation.idx, self.DM, self.EM))
-            
+                                    
         original_boss_list = []
         for formation in [x for x in self.FM.formations if x.randomized_boss == 'y']:
         #for formation in df_boss_formations['event_id'].unique():
@@ -724,30 +768,41 @@ class Conductor():
             # Document original rank
             prev_rank = random_boss.boss_rank
             # Find new rank & assign
-            new_rank = original_boss.boss_rank    
-            random_boss.boss_rank = new_rank
-            rank_delta = int(new_rank) - int(prev_rank)
-            random_boss.rank_delta = rank_delta
             
-            # Find tier
-            new_tier = math.trunc((int(new_rank)-1)/3) + 1
-            random_boss.tier = new_tier
-
-            rank_adj_flag = int(new_rank) % ((new_tier * 3)-1)
-            if rank_adj_flag == 1:
-                stat_rank_mult = float(self.conductor_config['BOSS_RANK_ADJUST_LOW'])
-            elif rank_adj_flag == 0:
-                stat_rank_mult = float(self.conductor_config['BOSS_RANK_ADJUST_MED'])
-            else:
-                stat_rank_mult = float(self.conductor_config['BOSS_RANK_ADJUST_HIGH'])
-            #logging.error(str(rank_adj_flag)+"   "+str((int(new_rank)))+"  "+str((new_tier * 3)-1))
-            #logging.error(str(stat_rank_mult))
+            new_rank = original_boss.boss_rank
+            
+            progressive_flag = False            
+            if self.progressive_bosses:
+                # if enabled, change the new_rank 
+                
+                # first get the related reward
+                try:
+                    related_reward = [x for x in self.RM.rewards if int(x.idx) == int(original_boss.related_boss_reward)][0]
+                    if related_reward.max_world_requirements_flag == True:
+#                        print(related_reward.description,related_reward.max_world_requirements_flag)
+                        new_rank_og = new_rank
+                        new_rank = min(int(new_rank) + (int(related_reward.world_delta * 10)),40)
+                        progressive_flag = True
+#                        logging.info("Original boss %s Random boss %s new_rank_og %s new_rank %s" % (original_boss.enemy_list,random_boss.enemy_list,new_rank_og,new_rank))
+                except Exception as e:
+#                    print("Error %s " % e)
+                    pass
+                
+                
+#            random_boss.boss_rank = new_rank
+            rank_delta = round((int(new_rank) - int(prev_rank))/3)
+            random_boss.rank_delta = rank_delta
 
             # Document random_boss' previous HP
             prev_hp = random_boss.enemy_classes[0].num_hp
         
             # Find original boss's first enemy HP
             new_hp = int(original_boss.enemy_classes[0].num_hp)
+            if progressive_flag:
+                if int(related_reward.world_delta) == 2 or (int(related_reward.world_delta)==1 and int(related_reward.world)==2):
+                    new_hp = 30000
+                elif int(related_reward.world_delta) == 1:        
+                    new_hp = 15000
         
             # Update random boss hp on FIRST enemy only right now
             random_boss.enemy_classes[0].num_hp = new_hp
@@ -921,14 +976,9 @@ class Conductor():
             else:
                 random_boss.enemy_classes[0].num_hp = new_hp
 
-#            if random_boss.enemy_classes[0].idx == '276':
-#                logging.error("Sol Cannon new HP: "+original_boss.enemy_classes[0].enemy_name+" "+str(random_boss.enemy_classes[0].num_hp))
-#            elif original_boss.enemy_classes[0].idx == '276':
-#                logging.error("Sol Cannon's location HP: "+random_boss.enemy_classes[0].enemy_name+" "+str(random_boss.enemy_classes[0].num_hp))
-
 
             # Get base exp
-            base_exp = RANK_EXP_REWARD[int(new_rank)]
+            base_exp = RANK_EXP_REWARD[round(int(new_rank)/3)]
             
             # Adjust base exp based on multiplier
             # This is INVERTED multiplier
@@ -1000,16 +1050,6 @@ class Conductor():
                 random_boss.enemy_classes[0].num_exp = new_exp
         
         
-########  DEBUG VIEWS FOR EXP 
-#            logging.error("BOSS EXP: "+original_boss.enemy_list+" → "+random_boss.enemy_list+" EXP: "+str(new_exp))
-#            exp_vals = 0
-#            for i in random_boss.enemy_classes:
-#                exp_vals = exp_vals + i.num_exp
-#                logging.error("--------"+i.enemy_name+": "+str(i.num_exp))
-#                
-#            logging.error("-----TOTAL: "+str(exp_vals))
-#            logging.error("****************************")
-
             # STATS / AI
             # Stats - Update stats based on boss_scaling.csv for every enemy
             # AI - create new patch file for AI changes 
@@ -1039,12 +1079,11 @@ class Conductor():
             og_text = "; --------------------------\n; Original boss {} rank {} -> Randomized boss {} rank {}\n; HP: {} -> {}\n".format(random_boss.enemy_list, str(prev_rank),original_boss.enemy_list,str(new_rank),str(prev_hp),str(new_hp))
             text_str = og_text
             write_flag = False
-            #import pdb
-            #pdb.set_trace()
             for enemy in random_boss.enemy_classes:
                 list_of_randomized_enemies.append(enemy) #maintain a list of only the enemies we've actually randomized
                 text_str = text_str + '; ENEMY: '+enemy.enemy_name+'\n'
-                df_temp = self.DM.files['boss_scaling'][(self.DM.files['boss_scaling']['idx']==int(enemy.idx)) & (self.DM.files['boss_scaling']['tier']==new_tier)]
+#                breakpoint()
+                df_temp = self.DM.files['boss_scaling'][(self.DM.files['boss_scaling']['idx']==int(enemy.idx)) & (self.DM.files['boss_scaling']['boss_rank']==int(new_rank))]
                 
                 # STATS
                 for col in ['num_gauge_time','num_phys_power','num_phys_mult','num_evade','num_phys_def','num_mag_power','num_mag_def','num_mag_evade','num_mp']:
@@ -1092,37 +1131,15 @@ class Conductor():
                     trigger_dict = dict(zip(list_of_hp_addresses,list_of_hp_vals))
 
                     text_str = text_str + write_hpai(trigger_dict)
-                enemy.rank_mult = stat_rank_mult
-                enemy.apply_rank_mult() 
-                enemy.ai_patch_text = text_str
-            #if not write_flag:
-            #    text_str = og_text
-            #with open('../../projects/test_asm/boss_hp_ai.asm','a') as file:
-            #    file.write(text_str)                    
+#                enemy.rank_mult = stat_rank_mult
+                enemy.update_all() 
+                enemy.ai_patch_text = text_str                  
 
             # Final presentation & updating
             
-            enemy_change = random_boss.enemy_classes[0].enemy_name + " (Rank "+prev_rank+") > " + original_boss.enemy_classes[0].enemy_name+" (Rank "+new_rank+")"
+            enemy_change = "%s (Rank %s)  > %s (Rank %s)" % (random_boss.enemy_classes[0].enemy_name, prev_rank, original_boss.enemy_classes[0].enemy_name, new_rank)
             random_boss.enemy_change = enemy_change
-            
-            '''
-            # For log file
-            with open('rando_output/'+datetime_now+'_boss_swap_log.txt','a') as file:
-                file.write(enemy_change+"\n")
-                file.write("HP of first enemy in formations: "+str(prev_hp)+ " > " + str(original_hp)+"\n")
-                for enemy in random_boss.enemy_classes:
-                    file.write(str(enemy.enemy_name)+" HP: "+str(enemy.num_hp)+"\n")
-                file.write("Base EXP: "+str(base_exp)+" > Adjusted EXP: "+str(new_exp)+"\n")
-                file.write("Rank delta: "+str(rank_delta)+"   Stat multiplier: "+str(rank_mult)+"\n")
-                file.write("-------------"+"\n")
-            
-            
-    
-            with open('rando_output/'+datetime_now+'_boss_swap.asm','a') as file:
-                for i in randomized_boss_list:
-                    file.write(i.retrieve_asar()+"\n")
-                    file.write(";---------\n")
-            '''
+
 
         self.EM.relevant_enemies = list_of_randomized_enemies
         
@@ -1674,7 +1691,7 @@ class Conductor():
     #        breakpoint()
     #        logging.error(">>>>>>>>>>>:"+tablet.description)
             # for each tablet, iterate through required keys for that tablet
-            if self.configs['world_lock'] == '0':
+            if self.configs['world_lock'] == 0:
                 tablet_reqs = getattr(tablet, 'required_key_items')
             else:
                 tablet_reqs = getattr(tablet,'required_key_items_lock'+str(self.configs['world_lock']))
@@ -1691,7 +1708,7 @@ class Conductor():
                     if new_reward not in required_rewards:
                         required_rewards.append(new_reward)
                     # check if this new reward has any reqs of its own, if it does, add to tablet_reqs
-                    if self.configs['world_lock'] == '0':
+                    if self.configs['world_lock'] == 0:
                         new_reward_reqs = getattr(tablet, 'required_key_items')
                     else:
                         new_reward_reqs = getattr(new_reward,'required_key_items_lock'+str(self.configs['world_lock']))
@@ -2029,7 +2046,7 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":    
-#    random.seed(10006)
+#    random.seed(10009)
     c = Conductor(random, {
                             'fjf':False,
                             'fjf_strict':True,
@@ -2046,6 +2063,7 @@ if __name__ == "__main__":
                             'place_all_rewards': True,
                             'randomize_loot' : "none",
                             'loot_percent' : 25,
+                            'progressive_bosses' : True,
                             'portal_boss' : 'SomberMage'
                           }
                  )

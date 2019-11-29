@@ -11,6 +11,7 @@ db $A2, $3D					;Set Event Flag 03D
 db $A2, $AB					;Set Event Flag 0AB ; first king tycoon
 db $A2, $AE					;Set Event Flag 0AE	; second king tycoon
 db $A4, $00					;Set Event Flag 100 ; third king tycoon
+db $01
 db $FF						;End event
 
 padbyte $00

@@ -26,13 +26,13 @@ db $A2, $B1						;Set Event Flag 0B1
 ; This is for setting ruined city rising already upon finishing base discovery
 ; db $A5, $FE						;Clear Event Flag 1FE
 db $A4, $E6						;Set Event Flag 1E6
-; db $A4, $E7            ; set address 000A50 bit ON 80
 
 ; Setting 'talk to cid to go to tycoon meteor'
 db $A2, $46						;Set Event Flag 046
 
-; Set Earth meteor spawn
+; Set Earth meteor spawn, remove city access
 db $A4, $E7            ; set address 000A50 bit ON 80
+db $A4, $E6            ; set address 000A50 bit ON 40
 
 
 

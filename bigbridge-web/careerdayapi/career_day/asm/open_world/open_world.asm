@@ -19,6 +19,10 @@ db $FB, $FB
 org $F05752
 db $FB, $FB
 
+; Disable all NPCs except 1 zokk
+org $CE63F0
+pad $CE640C
+
 ; RIFT
 ; Stop Omega from moving
 org $CE992B
@@ -396,3 +400,23 @@ pad $CE9A6F
 ; open walse meteor tile (cut event short when entering)
 org $C889CB
 db $FF
+
+; King Tycoon in ruined city area, spawn once
+org $F04FC8
+db $FF, $00, $00
+org $F04FDD
+db $FF, $90, $00, $00, $00
+    ; entering the area
+; org $F04FA3
+; db $FF, $0C, $03
+
+; Bal castle
+; Disallow leaving from below into cave
+; Fixes world1/2/3 issues
+org $F05A39
+db $FF, $00, $00, $00, $00
+
+; Bard in Crescent
+; fixed reward for all 8 pianos in certain conditionals
+org $CE179C
+db $29, $02
