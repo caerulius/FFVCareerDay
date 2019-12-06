@@ -652,6 +652,7 @@ class Conductor():
                 new_contents.append(None)
             shop.contents = new_contents 
     def decide_progressive_bosses(self):
+        logging.error("Progressive bosses flag enabled. Deciding progressive bosses")
         # galura
         for x in self.RM.get_rewards_by_style("key"):
             if int(x.world) == 3: # if world 3, discard
@@ -664,12 +665,12 @@ class Conductor():
                     keys = [self.CM.get_by_name(x) for x in req]
                     req_loc = []
                     
-                    for reward in c.RM.get_rewards_by_style("key"):
+                    for reward in self.RM.get_rewards_by_style("key"):
                         if reward.collectible in keys:
                             req_loc.append(reward)
                             # go 1 level down past this
                             keys2 = [self.CM.get_by_name(x) for x in reward.required_key_items_lock2]
-                            for reward2 in c.RM.get_rewards_by_style("key"):
+                            for reward2 in self.RM.get_rewards_by_style("key"):
                                 if reward2.collectible in keys2:
                                     req_loc.append(reward2)
                 # odin location has walse tower key
@@ -681,8 +682,9 @@ class Conductor():
                         x.max_world_requirements_flag = True
                         x.world_delta = world_delta
                         logging.error("Progressive boss adjustment for location reward %s, delta %s" % (x.description,world_delta))
-                except:
+                except Exception as e:
                     pass
+#                    print("Error %s" % e)
             
 
     def randomize_bosses(self):
@@ -1138,6 +1140,8 @@ class Conductor():
             # Final presentation & updating
             
             enemy_change = "%s (Rank %s)  > %s (Rank %s)" % (random_boss.enemy_classes[0].enemy_name, prev_rank, original_boss.enemy_classes[0].enemy_name, new_rank)
+
+            random_boss.random_boss_rank = new_rank
             random_boss.enemy_change = enemy_change
 
 
@@ -1817,7 +1821,7 @@ class Conductor():
         output_str = '\n\nHINTS: \n\n'
         for i in hint_text:
             output_str = output_str + i + "\n"
-        return output_str_asar, output_str
+        return output_str_asar, output_str.replace("|"," ")
         
     def randomize_loot(self,loot_percent=25,loot_type='match'):
         loot_list = ['steal_common','steal_rare','drop_common','drop_rare']
@@ -1921,10 +1925,10 @@ class Conductor():
         if type(boolean) == bool:
             logging.error("Argument passed in to translate: %s, returning original as boolean" % (boolean))
             return boolean
-        if boolean == "false" or boolean == "off" or boolean == "0" or boolean == 0:
+        if boolean == "false" or boolean == "False" or boolean == "off" or boolean == "0" or boolean == 0:
             logging.error("Argument passed in to translate: %s, returning boolean False" % (boolean))
             return False
-        if boolean == "true" or boolean == "on" or boolean == "1" or boolean == 1:
+        if boolean == "true" or boolean == "True" or boolean == "on" or boolean == "1" or boolean == 1:
             logging.error("Argument passed in to translate: %s, returning boolean True" % (boolean))
             return True
         else:
@@ -1948,7 +1952,11 @@ class Conductor():
         patch = patch + ";RGB\norg $C0F343\ndb $%s, $%s" % (c2,c1)
                 
         reward_dict = {4:"28",3:"28",2:"18",1:"08"}
-        patch = patch + "\n;Reward Mult\norg $C0F342\ndb $%s" % (reward_dict[int(config['exp_mult'])])
+        try:
+            reward_val = reward_dict[int(config['exp_mult'])]
+        except:
+            reward_val = reward_dict[4]
+        patch = patch + "\n;Reward Mult\norg $C0F342\ndb $%s" % (reward_val)
         return patch
         
         
@@ -2051,7 +2059,7 @@ if __name__ == "__main__":
                             'fjf':False,
                             'fjf_strict':True,
                             'jobpalettes':True,
-                            'world_lock':1,
+                            'world_lock':"1",
                             'tiering_config': True,
                             'tiering_percentage': 90,
                             'tiering_threshold': 2,
@@ -2063,7 +2071,7 @@ if __name__ == "__main__":
                             'place_all_rewards': True,
                             'randomize_loot' : "none",
                             'loot_percent' : 25,
-                            'progressive_bosses' : True,
+                            'progressive_bosses' : "True",
                             'portal_boss' : 'SomberMage'
                           }
                  )

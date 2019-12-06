@@ -70,11 +70,14 @@ class Formation(object):
                 split2 = split2.replace("Gilgamesh","Gilgamesh IV")
             split1 = split1.replace("Hole","Sandworm").replace("Forza","Magisa")
             split2 = split2.replace("Hole","Sandworm").replace("Forza","Magisa")
-
             
-           #  split2 = split2.split(" (", 1)[0]
+            split1_boss = split1.split(" (")[0].strip()
+            split1_rank = split1.split(" (")[1].replace(")","").strip()
+            split2_boss = split2.split(" (")[0].strip()
+            split2_rank = split2.split(" (")[1].replace(")","").strip()
             
-            return '{:25}'.format("%s" % (split1)) + '{:5}'.format(">") + '{:25}'.format("%s" % (split2)) 
+            
+            return '{:10}'.format("%s" % (split1_rank)) + '{:25}'.format("%s" % (split1_boss)) + '{:5}'.format(">")  + '{:10}'.format("%s" % (split2_rank)) + '{:25}'.format("%s" % (split2_boss)) 
         except Exception as e:
             print("Exception %s" % e)
             return ""
@@ -158,8 +161,20 @@ class FormationManager(object):
 
     def get_spoiler(self):
         output = "-----FORMATIONS-----\n"
-        for i in [x for x in self.formations if x.randomized_boss == 'y']:
+        output = output+ "-- List in order of bosses where they appear in power ranking--\n  (WingRaptor appears at X location)\n"
+        boss_list = [x for x in self.formations if x.randomized_boss == 'y']
+        boss_list.sort(key=lambda x: int(x.boss_rank), reverse=False)
+
+        for i in boss_list:
             output = output + i.short_output + "\n"
+            
+        output = output+ "\n-- List in order of bosses where they appear in location ranking --\n  (At WingRaptor location, X boss appears)\n"
+#        breakpoint()
+        boss_list.sort(key=lambda x: int(x.random_boss_rank), reverse=False)
+
+        for i in boss_list:
+            output = output + i.short_output + "\n"
+
         output = output + "-----**********-----\n"
 
         return output

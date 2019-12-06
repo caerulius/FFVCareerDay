@@ -126,6 +126,7 @@ def patch_and_return():
                             'tiering_percentage':   data['tiering_percentage'],
                             'tiering_threshold':   data['tiering_threshold'],
                             'enforce_all_jobs':   data['enforce_all_jobs'],
+                            'progressive_bosses':   data['progressive_bosses'],
                             'red_color':   data['red_color'],
                             'green_color':   data['green_color'],
                             'blue_color':   data['blue_color'],
@@ -151,7 +152,7 @@ def patch_and_return():
 
         file_list = []
         file_list.append(filename)
-        file_list.append(patch_file_name)
+#        file_list.append(patch_file_name) #removed patch file for zip to players
         file_list.append(spoiler_file_name)
 
         zip_file_name = "{}.zip".format(filename[:-4])
