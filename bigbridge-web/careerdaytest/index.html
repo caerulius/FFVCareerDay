@@ -182,11 +182,13 @@
 			</div>
 			
 			<div class="input-div">
-				<input type="number" id="tiering_percentage" value="5" min="1" max="100"  style="width:50px" >
+				<input type="number" id="tiering_percentage" value="5" style="width:50px" 
+				onblur="javascript: if (this.value < 0 || this.value > 100) this.value = 5">
 					<b>Overflow percent: </b>Percent chance of reward location granting higher tier collectibles
 			</div>
 			<div class="input-div">
-				<input type="number" id="tiering_threshold" value="1" min="1" max="10"  style="width:50px" >
+				<input type="number" id="tiering_threshold" value="1" min="1" max="10"  style="width:50px" 
+				onblur="javascript: if (this.value < 1 || this.value > 10) this.value = 1">
 						<b>Overflow threshold:</b> Number of tiers to pull from, if the above percent chance occurs
 			</div>
 			<br>		
@@ -221,25 +223,30 @@
 				</div>
 			</div>
 			<div class="input-div">
-				<input type="number" id="loot_percent" value="25" min="1" max="100"  style="width:50px" >
+				<input type="number" id="loot_percent" value="25"  style="width:50px" 
+				onblur="javascript: if (this.value < 0 || this.value > 100) this.value = 25">
 					<b>Variable Loot Percent</b> Value 1-100, only applies when Variable selected above
 			</div>
 			<br>
 			<p style="font-size:1.5em;margin-top:10px"><b>Configurations</b></p>
 			<div class="input-div">
-				<input type="number" id="exp_mult" value="4" min="1" max="4"  style="width:50px" >
+				<input type="number" id="exp_mult" value="4" style="width:50px" 
+				onblur="javascript: if (this.value < 1 || this.value > 4) this.value = 4">
 					<b>EXP Multiplier</b> Value 1, 2 or 4 (3 defaults to 4)
 			</div>
 			<div class="input-div">
-				<input type="number" id="red_color" value="0" min="0" max="31"  style="width:50px" >
+				<input type="number" id="red_color" value="0" style="width:50px"
+				onblur="javascript: if (this.value < 0 || this.value > 31) this.value = 0">
 					<b>Red menu color</b> Value 0-31
 			</div>
 			<div class="input-div">
-				<input type="number" id="green_color" value="0" min="0" max="31"  style="width:50px" >
+				<input type="number" id="green_color" value="0" style="width:50px"
+				onblur="javascript: if (this.value < 0 || this.value > 31) this.value = 0">
 					<b>Green menu color</b> Value 0-31
 			</div>
 			<div class="input-div">
-				<input type="number" id="blue_color" value="0" min="0" max="31"  style="width:50px" >
+				<input type="number" id="blue_color" value="0" style="width:50px"
+				onblur="javascript: if (this.value < 0 || this.value > 31) this.value = 0">
 					<b>Blue menu color</b> Value 0-31
 			</div>
 

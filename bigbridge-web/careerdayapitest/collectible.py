@@ -6,6 +6,9 @@ from abc import ABC, abstractmethod
 from collections import OrderedDict
 import math
 from progression_translation import *
+import logging
+
+logging.basicConfig(level=logging.ERROR, format="%(asctime)-15s %(message)s")
 
 class Collectible(ABC):
     """A single something, retreived from a chest, event, or shop.
@@ -252,18 +255,34 @@ class KeyItem(Collectible):
 
 class CollectibleManager():
     def __init__(self, data_manager, collectible_config=None):
+        logging.error("Collectible Manager enter Init")
+        logging.error("CM: Initializing Items")
         items = [Item(x, data_manager.files['items'].loc[x]) for x in data_manager.files['items'].index.values]
+        logging.error("CM: Items Initialized")
+        logging.error("CM: Initializing Magics")
         magics = [Magic(x, data_manager.files['magics'].loc[x]) for x in data_manager.files['magics'].index.values]
+        logging.error("CM: Magics Initialized")
+        logging.error("CM: Initializing Crystals")
         crystals = [Crystal(x, data_manager.files['crystals'].loc[x]) for x in data_manager.files['crystals'].index.values]
+        logging.error("CM: Crystals Initialized")
+        logging.error("CM: Initializing Abilities")
         abilities = [Ability(x, data_manager.files['abilities'].loc[x]) for x in data_manager.files['abilities'].index.values]
+        logging.error("CM: Abilities Initialized")
+        logging.error("CM: Initializing Gil")
         gil = [Gil(x, data_manager.files['gil'].loc[x]) for x in data_manager.files['gil'].index.values]
+        logging.error("CM: Gil Initialized")
+        logging.error("CM: Initializing Key Items")
         key_items = [KeyItem(x, data_manager.files['key_items'].loc[x]) for x in data_manager.files['key_items'].index.values]
+        logging.error("CM: Key Items Initialized")
+        logging.error("CM: Initializing Internal Properties")
         self.collectibles = items + magics + crystals + abilities + gil + key_items
         self.collectibles = [x for x in self.collectibles if x.valid]
         self.placement_history = {}
         self.placement_rewards = {}
         self.placed_gil_rewards = []
         self.collectible_config = collectible_config
+        logging.error("CM: Internal Properties Initialized")
+        logging.error("Collectible Manager exit Init")
 
     def get_by_name(self, name):
         if name == "New":
