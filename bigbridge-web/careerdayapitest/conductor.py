@@ -66,6 +66,7 @@ class Conductor():
             self.exp_mult = 4
             self.progressive_bosses = True
             self.place_all_rewards = True
+            self.progressive_rewards = False
             
             
         else:                           # else take the config passed from server.py and set variables
@@ -78,13 +79,16 @@ class Conductor():
             self.tiering_threshold= int(conductor_config['tiering_threshold'])
             self.enforce_all_jobs = self.translateBool(conductor_config['enforce_all_jobs'])
             self.progressive_bosses = self.translateBool(conductor_config['progressive_bosses'])
+            self.progressive_rewards = self.translateBool(conductor_config['progressive_rewards'])
             
             #only allow progressive bosses if world_lock == 1
             if self.world_lock != 1:
                 self.progressive_bosses = False
             
         # Some configs set up for the managers 
-        collectible_config = {'place_all_rewards':self.translateBool(conductor_config['place_all_rewards'])}
+        collectible_config = {'place_all_rewards':self.translateBool(conductor_config['place_all_rewards']),
+                              'progressive_rewards':self.translateBool(conductor_config['progressive_rewards'])
+                              }
             
         logging.error("Config assigned: FJF: %s Palettes: %s World_lock: %s Tiering_config: %s Tiering_percentage: %s Tiering_threshold: %s" % (str(self.fjf),str(self.jobpalettes),str(self.world_lock),str(self.tiering_config),str(self.tiering_percentage),str(self.tiering_threshold)))
 
@@ -1690,7 +1694,6 @@ class Conductor():
         required_rewards = tablets[:]
         
         tablet_reqs = []
-        tablet_keys = []
         for tablet in tablets:
     #        breakpoint()
     #        logging.error(">>>>>>>>>>>:"+tablet.description)
@@ -1785,10 +1788,7 @@ class Conductor():
         # pick 5 random keys_main, which will be a different set of keys from the first 5 hints
         # make up difference of barren hints 
         
-        if barren_num < 3:
-            world_num = 3 + (5 - barren_num)
-        else:
-            world_num = 3
+        world_num = 15 - len(hint_text)
         
         world_keys = keys_main[-world_num:]
         
@@ -1796,7 +1796,7 @@ class Conductor():
             hint_str = "They say that the %s|is present in World %s." % (key.collectible.collectible_name, key.world)
             hint_text.append(hint_str)
         
-        random.shuffle(hint_text)    
+        random.shuffle(hint_text) 
         
         
         ###########
@@ -2054,10 +2054,10 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":    
-#    random.seed(10009)
+    random.seed(10009)
     c = Conductor(random, {
                             'fjf':False,
-                            'fjf_strict':True,
+                            'fjf_strict':False,
                             'jobpalettes':True,
                             'world_lock':"1",
                             'tiering_config': True,
@@ -2072,7 +2072,8 @@ if __name__ == "__main__":
                             'randomize_loot' : "none",
                             'loot_percent' : 25,
                             'progressive_bosses' : "True",
-                            'portal_boss' : 'SomberMage'
+                            'portal_boss' : 'SomberMage',
+                            'progressive_rewards' : False
                           }
                  )
     (spoiler, patch) = c.randomize()

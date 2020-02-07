@@ -112,7 +112,7 @@ def patch_and_return():
 
         headers_and_translate(filename, reheader, rpge)
 
-        patch_careerday(filename, data["fjf"], data['world_lock'])
+        patch_careerday(filename, data["fjf"], data['world_lock'], data['progressive_rewards'])
 
         random.seed(seed)
         # We're going to pass in conductor_config into Conductor() object now
@@ -127,6 +127,7 @@ def patch_and_return():
                             'tiering_threshold':   data['tiering_threshold'],
                             'enforce_all_jobs':   data['enforce_all_jobs'],
                             'progressive_bosses':   data['progressive_bosses'],
+                            'progressive_rewards':   data['progressive_rewards'],
                             'red_color':   data['red_color'],
                             'green_color':   data['green_color'],
                             'blue_color':   data['blue_color'],
@@ -217,15 +218,21 @@ def bool_to_int(boolean):
     else:
         return 0
     
-def patch_careerday(filename, fjf, world_lock):
+def patch_careerday(filename, fjf, world_lock, progressive_rewards):
     fjf = bool_to_int(translateBool(fjf))
     # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
     world_lock = int(world_lock)
 
-        
-    command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
---define passages=1 --define double_atb=0 --define boss_exp=1 --define fourjobmode={} --define world_lock={} \
---fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, world_lock, MAIN_PATCH, filename)
+    if progressive_rewards == "true":
+        logging.error("Progressive rewards on")
+        command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
+        --define passages=1 --define double_atb=0 --define progressive=1 --define boss_exp=1 --define fourjobmode={} --define world_lock={} \
+        --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, world_lock, MAIN_PATCH, filename)
+    else:
+        logging.error("Progressive rewards off")
+        command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
+        --define passages=1 --define double_atb=0 --define progressive=0 --define boss_exp=1 --define fourjobmode={} --define world_lock={} \
+        --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, world_lock, MAIN_PATCH, filename)
 
     logging.error(command)
     

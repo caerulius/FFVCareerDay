@@ -36,6 +36,14 @@ db $E1, $00, $00, $B8, $85, $00 ;Return from cutscene? 00 00 9C 96 00
 ; OG CORRECT WARPS
 db $75                          ;Long pause
 db $EC                          ;Set starting randomizer job
+
+; TESTING!!!!
+; db $B4, $22                     ; CUSTOM MUSIC
+; db $75
+; db $75
+; db $75
+; db $B4, $36                     ; CUSTOM MUSIC
+
 db $FF                          ;End Event
 
 padbyte $00

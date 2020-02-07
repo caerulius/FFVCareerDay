@@ -52,9 +52,11 @@ WorldMapHook:
 
 sep #$20
 
-; swap speed if input == B:
-JSL SpeedHookGeneric
-STA !speedvalue
+if !speedrun = 0
+    ; swap speed if input == B:
+    JSL SpeedHookGeneric
+    STA !speedvalue
+endif
 
 LDA !encounterswitch
 AND #$80

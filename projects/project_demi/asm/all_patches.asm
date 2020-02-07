@@ -174,7 +174,7 @@ incsrc core_code/utility.asm
 incsrc ../../shared_asm/shared_core/reward_manager.asm
 incsrc ../../shared_asm/shared_core/new_event.asm
 incsrc ../../shared_asm/shared_core/encounter_toggle.asm
-incsrc ../../shared_asm/shared_core/walk_speed.asm
+; incsrc ../../shared_asm/shared_core/walk_speed.asm
 incsrc ../../shared_asm/shared_core/chest_magicreward.asm
 incsrc ../../shared_asm/shared_core/shop_hook.asm
 incsrc ../../shared_asm/shared_core/battle_hook.asm

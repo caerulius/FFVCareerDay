@@ -45,6 +45,15 @@
 !ADDRESS_menusummonsfix = $F01200
 !ADDRESS_newevent_randomstart = $F01A00
 !ADDRESS_PROJECT_DEMI_DUMMYSPACE = $F01C00
+!ADDRESS_music_instrument_song_indices = $FC0000
+!ADDRESS_music_song_pointers = $FC1000
+!ADDRESS_music_instrument_pointers = $FC1B00
+!ADDRESS_music_loop_sample_length = $FC1D00
+!ADDRESS_music_sample_rate = $FC1E00
+!ADDRESS_music_asdr = $FC1F00
+!ADDRESS_music_custom_song_data = $FC2000
+!ADDRESS_music_custom_sample_data = $FD0000
+
 
 !RELOCATE_conditional_events = $F04000
 !RELOCATE_conditional_events_le = $00, $40, $F0

@@ -36,6 +36,8 @@ JML $c00e74
 IntermediateBranchToMagicReward:
 if !vanillarewards = 1
 	JML $C00E67
+elseif !progressive = 0
+	JML $C00E67
 else	
 	phy
 	phx
@@ -230,72 +232,79 @@ org !ADDRESS_progressiverewards
 ;################
 BranchToAbilityReward:
 ; starts in 8 bit A
-stz !progabilityentry
-stz !progabilityentry2
-lda !rewardid
-sta !nonmagicrewardindex
-rep #$20
-asl a
-asl a
-asl a
-sta !progabilityentry
-lda #$0000 ;loop counter
-sep #$20
+if !progressive = 0
+    lda !rewardid
+    sta !currentability
+    sta !nonmagicrewardindex
+    JMP AbilityExitProgression
+else
+    stz !progabilityentry
+    stz !progabilityentry2
+    lda !rewardid
+    sta !nonmagicrewardindex
+    rep #$20
+    asl a
+    asl a
+    asl a
+    sta !progabilityentry
+    lda #$0000 ;loop counter
+    sep #$20
 
-sta !loopcounter
+    sta !loopcounter
 
-AbilityProgressionLoop:
-lda !loopcounter
+    AbilityProgressionLoop:
+    lda !loopcounter
 
-; if our index is 8, we already have everything in that progression, exit early
-cmp #$08
-beq AbilityGetLastAndExit
+    ; if our index is 8, we already have everything in that progression, exit early
+    cmp #$08
+    beq AbilityGetLastAndExit
 
-; if the current progression value is $#FF, no more progression is defined, exit early
-ldx !progabilityentry
-; tax
-lda !progabilitytable, x ;load the current ability to check
-sta !magicrewardindex
-sta !currentability
-cmp #$FF
-beq AbilityGetLastAndExit
+    ; if the current progression value is $#FF, no more progression is defined, exit early
+    ldx !progabilityentry
+    ; tax
+    lda !progabilitytable, x ;load the current ability to check
+    sta !magicrewardindex
+    sta !currentability
+    cmp #$FF
+    beq AbilityGetLastAndExit
 
-;divide by 8 to get the byte we want to reference and store in y
-lsr a
-lsr a
-lsr a
-tay
+    ;divide by 8 to get the byte we want to reference and store in y
+    lsr a
+    lsr a
+    lsr a
+    tay
 
-;retrieve the current ability again and test it against #$07 to 
-;know which bit we're referring to
-lda !currentability
-and #$07
-tax
+    ;retrieve the current ability again and test it against #$07 to 
+    ;know which bit we're referring to
+    lda !currentability
+    and #$07
+    tax
 
-;load the byte storing the relevant ability info. And it vs
-;the correct bit.
-lda !unlockedability,y
-and $C0C9B9,x
+    ;load the byte storing the relevant ability info. And it vs
+    ;the correct bit.
+    lda !unlockedability,y
+    and $C0C9B9,x
 
-;if the result isn't 0, we have that ability already, so loop again
-bne AbilityProgressionReloop
+    ;if the result isn't 0, we have that ability already, so loop again
+    bne AbilityProgressionReloop
 
-;otherwise, we don't have that ability, so load the value back into a and exit, also clean up our stack
-lda !currentability
-jmp AbilityExitProgression
+    ;otherwise, we don't have that ability, so load the value back into a and exit, also clean up our stack
+    lda !currentability
+    jmp AbilityExitProgression
 
-AbilityProgressionReloop:
-inc !progabilityentry
-inc !loopcounter
-jmp AbilityProgressionLoop
+    AbilityProgressionReloop:
+    inc !progabilityentry
+    inc !loopcounter
+    jmp AbilityProgressionLoop
 
-AbilityGetLastAndExit: ;get last result, which should be valid, and exit with that in a
-ldx !progabilityentry
-; tax 
-dex
-lda !progabilitytable, x
-sta !currentability
-jmp AbilityExitProgression
+    AbilityGetLastAndExit: ;get last result, which should be valid, and exit with that in a
+    ldx !progabilityentry
+    ; tax 
+    dex
+    lda !progabilitytable, x
+    sta !currentability
+    jmp AbilityExitProgression
+endif
 
 AbilityExitProgression:
 pha

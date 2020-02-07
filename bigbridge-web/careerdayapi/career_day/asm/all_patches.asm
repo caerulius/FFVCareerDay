@@ -288,3 +288,9 @@ incsrc ../../shared_asm/data_tables/shop_prices.asm
 incsrc ../../shared_asm/data_tables/exp_table_lv50_modified.asm
 
 incsrc ../../shared_asm/colors/galuf_mimic.asm
+
+; music
+
+; incsrc music/music_data.asm
+; incsrc music/music_patch.asm
+; incsrc music/music_switch.asm

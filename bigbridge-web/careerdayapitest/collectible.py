@@ -92,16 +92,21 @@ class Item(Collectible):
 class Magic(Collectible):
     reward_type = '20'
     name = "Magic"
-    def __init__(self, magic_id, data_row):
+    def __init__(self, magic_id, data_row, collectible_config):
         self.type = data_row['type']
         related_jobs = data_row['related_jobs'].strip('][').split(',')
         self.progression_id = data_row['progression_id']
+        self.magic_id = magic_id
+        self.collectible_config = collectible_config
         super().__init__(magic_id, data_row['readable_name'], int(data_row['value']),
                          related_jobs, data_row['max_count'], data_row['tier'], data_row['valid'])
 
     @property
     def patch_id(self):
-        return self.progression_id
+        if self.collectible_config['progressive_rewards']:
+            return self.progression_id
+        else:
+            return self.magic_id
 
     '''
     @property
@@ -111,8 +116,11 @@ class Magic(Collectible):
     
     @property
     def reward_name(self):
-        if self.progression_id in progression_magic:
-            return progression_magic[self.progression_id]
+        if self.collectible_config['progressive_rewards']:
+            if self.progression_id in progression_magic:
+                return progression_magic[self.progression_id]
+            else:
+                return self.collectible_name
         else:
             return self.collectible_name
 
@@ -144,6 +152,7 @@ class Crystal(Collectible):
         self.starting_ability_id = data_row['starting_ability_id']
         self.starting_spell = ""
         self.starting_spell_id = ""
+
         related_jobs = data_row['related_jobs'].strip('][').split(',')
         super().__init__(crystal_id, data_row['readable_name'], int(data_row['value']),
                          related_jobs, data_row['max_count'], data_row['tier'])
@@ -167,15 +176,20 @@ class Crystal(Collectible):
 class Ability(Collectible):
     reward_type = '60'
     name = "Ability"
-    def __init__(self, ability_id, data_row):
+    def __init__(self, ability_id, data_row,collectible_config):
         related_jobs = data_row['related_jobs'].strip('][').split(',')
         self.progression_id = data_row['progression_id']
+        self.ability_id = ability_id
+        self.collectible_config = collectible_config
         super().__init__(ability_id, data_row['readable_name'], int(data_row['value']),
                          related_jobs, data_row['max_count'], data_row['tier'], data_row['valid'])
 
     @property
     def patch_id(self):
-        return self.progression_id
+        if self.collectible_config['progressive_rewards']:
+            return self.progression_id
+        else:
+            return self.ability_id
 
     '''
     @property
@@ -185,8 +199,11 @@ class Ability(Collectible):
 
     @property
     def reward_name(self):
-        if self.progression_id in progression_abilities:
-            return progression_abilities[self.progression_id]
+        if self.collectible_config['progressive_rewards']:
+            if self.progression_id in progression_magic:
+                return progression_magic[self.progression_id]
+            else:
+                return self.collectible_name
         else:
             return self.collectible_name
 
@@ -255,18 +272,20 @@ class KeyItem(Collectible):
 
 class CollectibleManager():
     def __init__(self, data_manager, collectible_config=None):
+        self.collectible_config = collectible_config
+        
         logging.error("Collectible Manager enter Init")
         logging.error("CM: Initializing Items")
         items = [Item(x, data_manager.files['items'].loc[x]) for x in data_manager.files['items'].index.values]
         logging.error("CM: Items Initialized")
         logging.error("CM: Initializing Magics")
-        magics = [Magic(x, data_manager.files['magics'].loc[x]) for x in data_manager.files['magics'].index.values]
+        magics = [Magic(x, data_manager.files['magics'].loc[x],self.collectible_config) for x in data_manager.files['magics'].index.values]
         logging.error("CM: Magics Initialized")
         logging.error("CM: Initializing Crystals")
         crystals = [Crystal(x, data_manager.files['crystals'].loc[x]) for x in data_manager.files['crystals'].index.values]
         logging.error("CM: Crystals Initialized")
         logging.error("CM: Initializing Abilities")
-        abilities = [Ability(x, data_manager.files['abilities'].loc[x]) for x in data_manager.files['abilities'].index.values]
+        abilities = [Ability(x, data_manager.files['abilities'].loc[x],self.collectible_config) for x in data_manager.files['abilities'].index.values]
         logging.error("CM: Abilities Initialized")
         logging.error("CM: Initializing Gil")
         gil = [Gil(x, data_manager.files['gil'].loc[x]) for x in data_manager.files['gil'].index.values]
@@ -280,7 +299,6 @@ class CollectibleManager():
         self.placement_history = {}
         self.placement_rewards = {}
         self.placed_gil_rewards = []
-        self.collectible_config = collectible_config
         logging.error("CM: Internal Properties Initialized")
         logging.error("Collectible Manager exit Init")
 

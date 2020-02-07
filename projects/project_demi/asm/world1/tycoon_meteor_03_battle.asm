@@ -36,10 +36,11 @@ db $C8, $07, $00                ;Display Message/Text/Dialogue 07 00
 db $7A                          ;Naming Character
 db $E3, $7A, $00, $66, $15, $00 ;Inter-map cutscene? 7A 00 66 15 00
 db $09                          ;Player Show
+db $04, $04, $01
 db $12                          ;Player pose: face right, standing
 db $87, $09                     ;Sprite 087 do event: Show
 db $87, $20                     ;Sprite 087 do event: face down, left hand raised out
-db $D3, $84, $27, $15           ;Sprite 84 set map position 27, 15
+db $D3, $84, $25, $14           ;Sprite 84 set map position 27, 15
 db $84, $09                     ;Sprite 084 do event: Show
 db $84, $26                     ;Sprite 084 do event: face up, right hand raised out
 db $C3, $0F                     ;Fade in Speed 0F

@@ -109,7 +109,12 @@ JMP FinishRewardEvent
 
 
 EventRewardMagic: ; give magic
-JSL BranchToMagicReward
+if !progressive = 0
+	lda $12
+    sta $16a3
+else
+    JSL BranchToMagicReward
+endif
 jsr $C9A5
 JMP FinishRewardEvent
 
