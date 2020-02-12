@@ -15,6 +15,7 @@ from enemy import *
 from formation import *
 from text_parser import *
 from monster_in_a_box import *
+from item_randomization import *
 from ai_parser import *
 
 logging.basicConfig(level=logging.ERROR, format="%(asctime)-15s %(message)s")
@@ -67,6 +68,7 @@ class Conductor():
             self.progressive_bosses = True
             self.place_all_rewards = True
             self.progressive_rewards = False
+            self.item_randomization = False
             
             
         else:                           # else take the config passed from server.py and set variables
@@ -80,6 +82,7 @@ class Conductor():
             self.enforce_all_jobs = self.translateBool(conductor_config['enforce_all_jobs'])
             self.progressive_bosses = self.translateBool(conductor_config['progressive_bosses'])
             self.progressive_rewards = self.translateBool(conductor_config['progressive_rewards'])
+            self.item_randomization = self.translateBool(conductor_config['item_randomization'])
             
             #only allow progressive bosses if world_lock == 1
             if self.world_lock != 1:
@@ -87,7 +90,8 @@ class Conductor():
             
         # Some configs set up for the managers 
         collectible_config = {'place_all_rewards':self.translateBool(conductor_config['place_all_rewards']),
-                              'progressive_rewards':self.translateBool(conductor_config['progressive_rewards'])
+                              'progressive_rewards':self.translateBool(conductor_config['progressive_rewards']),
+                              'item_randomization':self.translateBool(conductor_config['item_randomization'])
                               }
             
         logging.error("Config assigned: FJF: %s Palettes: %s World_lock: %s Tiering_config: %s Tiering_percentage: %s Tiering_threshold: %s" % (str(self.fjf),str(self.jobpalettes),str(self.world_lock),str(self.tiering_config),str(self.tiering_percentage),str(self.tiering_threshold)))
@@ -117,6 +121,15 @@ class Conductor():
         self.MIBM = MonsterInABoxManager(self.DM, self.RE) #Set up monsters in boxes
         logging.error("Init TextParser...")
         self.TP = TextParser()                             #Set up Text Parser Utility Object
+
+        if self.item_randomization:
+            logging.error("Init WeaponManager...")
+            self.WM = WeaponManager(self.DM, self.RE)      #Set up Weapon Manager
+            # remove the following from the pool of weapons:
+            for _ in range(3):
+                self.CM.add_to_placement_history(self.CM.get_by_name("Brave Blade"),"No")
+                self.CM.add_to_placement_history(self.CM.get_by_name("Chicken Knife"),"No")
+                self.CM.add_to_placement_history(self.CM.get_by_name("Excailbur"),"No")
         
         logging.error("Init misc setup...")
         # Misc setup 
@@ -1864,6 +1877,11 @@ class Conductor():
                     logging.error("Invalid loot randomize argument %s" % (loot_type))
                     
                     
+    def randomize_weapons(self):
+        logging.error("Beginning weapon randomization...")
+        self.WM.randomize()
+        logging.error("Finished weapon randomization")
+                    
     def get_collectible_counts(self):
         # Here for this spoiler, we need to collect from both RM and SM to get accurate data, so we do it here:
         spoiler = "\n-----COLLECTIBLE COUNTS BY TYPE-----\n"
@@ -2000,7 +2018,11 @@ class Conductor():
         for i in self.RM.rewards:
             if i.collectible is None:
                 logging.error(i.description)
-                
+        
+        
+        if self.item_randomization:
+            logging.error("Randomizing weapons...")
+            self.randomize_weapons()
 
 #        logging.error("Running cleanup for guaranteeing collectibles")
 #        self.cleanup_seed()
@@ -2026,6 +2048,8 @@ class Conductor():
             patch = patch + self.EM.get_loot_patch()
         if self.jobpalettes:
             patch = patch + self.randomize_job_color_palettes()
+        if self.item_randomization:
+            patch = patch + self.WM.get_patch
         patch = patch + self.parse_configs()
         patch = patch + self.set_portal_boss()
 
@@ -2038,6 +2062,9 @@ class Conductor():
         #spoiler = spoiler + self.EM.get_spoiler()
         spoiler = spoiler + self.superbosses_spoiler        
         spoiler = spoiler + self.FM.get_spoiler()
+        if self.item_randomization:
+            spoiler = spoiler + self.WM.get_spoiler
+
         if self.configs['randomize_loot'].lower() != "none":
             spoiler = spoiler + self.EM.get_loot_spoiler()
 
@@ -2054,7 +2081,7 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":    
-    random.seed(10009)
+#    random.seed(10009)
     c = Conductor(random, {
                             'fjf':False,
                             'fjf_strict':False,
@@ -2073,7 +2100,8 @@ if __name__ == "__main__":
                             'loot_percent' : 25,
                             'progressive_bosses' : "True",
                             'portal_boss' : 'SomberMage',
-                            'progressive_rewards' : False
+                            'progressive_rewards' : False,
+                            'item_randomization' : True
                           }
                  )
     (spoiler, patch) = c.randomize()

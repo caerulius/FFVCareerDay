@@ -4,6 +4,7 @@ import os
 GUI_FLAG = False
 # LOCAL PY VERSION
 
+THIS_FILEPATH = os.path.dirname(__file__)
     
 if GUI_FLAG:
     text_dict_chest = pd.read_csv('tables/text_tables/text_table_chest.csv', header=None,index_col=0).to_dict()[1]
@@ -13,12 +14,12 @@ if GUI_FLAG:
 
     key_item_table = pd.read_csv('tables/text_tables/' + 'key_item_text.csv',header=None,index_col=0).to_dict()[1]
 else:
-    text_dict_chest = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_chest.csv'),header=None,index_col=0).to_dict()[1]
-    text_dict_chest2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_chest.csv'),header=None,index_col=1).to_dict()[0]
-    text_dict_shop = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_shop.csv'),header=None,index_col=0).to_dict()[1]
-    text_dict_shop2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_shop.csv'),header=None,index_col=1).to_dict()[0]
+    text_dict_chest = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','text_table_chest.csv')),header=None,index_col=0).to_dict()[1]
+    text_dict_chest2 = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','text_table_chest.csv')),header=None,index_col=1).to_dict()[0]
+    text_dict_shop = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','text_table_shop.csv')),header=None,index_col=0).to_dict()[1]
+    text_dict_shop2 = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','text_table_shop.csv')),header=None,index_col=1).to_dict()[0]
 
-    key_item_table = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','key_item_text.csv'),header=None,index_col=0).to_dict()[1]
+    key_item_table = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','key_item_text.csv')),header=None,index_col=0).to_dict()[1]
 
 
 def init_table(tabletype):

@@ -1,0 +1,126 @@
+Start of Textbox items (24 bytes):
+E75860
+
+Start of Menu items:
+    9 bytes, including 1st byte for possible "Icon" (sword, harp, etc)
+D11380
+
+
+
+
+Weapons/Armor:
+Values that range from 00 to 7F are for weapons   D10000 
+Values that range from 80 to DF are for armor     D10600 
+Values that range from E0 to FF are for useables  D10A80
+
+byte0:
+    allowable targets
+    40 - all enemies
+    10 - 1 enemy
+byte1:
+    08 - shield
+    04 - helmet
+    02 - armor
+    01 - accessory
+    80 - none
+    70 - harps
+    40 - breakable rods
+    
+    many weapons are 00. 
+    
+byte2:
+    Attack type (animation?)
+
+byte3:
+    Left nibble:
+        10 - Unknown
+        40 - Cannot be thrown
+    Right nibble, weapon type:
+        0 Bells, throwing weapons, dummy weapons
+        1 
+        2 Knives
+        3 Ninja knives
+        4 Swords
+        5 Knight Swords, Man Eater
+        6 Spears
+        7 Axes
+        8 Hammers
+        9 Katanas
+        A Rods
+        B Staves
+        C 
+        D Bows
+        E Harps, exotic weapons
+        F Whips
+        
+byte4:
+    If 80 set, then use stats up, else element up
+        80 Stats up ->
+        40 Wind         Strength
+        20 Earth        Speed
+        10 Holy         Vitality
+        08 Poison       Magic Power
+        04 Lightning    \
+        02 Ice           > Stat bonuses
+        01 Fire         /
+    Default case is 80
+    
+    04,02,01Stat bonuses
+    0 +1
+    1 +2
+    2 +3
+    3 +1/-1 (not used)
+    4 -1 (use inverted stat selection) (not used)
+    5 +5/-5 (Giant Gloves)
+    6 -5 (use inverted stat selection)
+    7 +5
+
+
+byte6, byte11, byte12:
+    For action on hit, set bit 08 on byte6
+    Then % chance on byte 11
+    Then action ID on byte 12
+    
+    
+    
+    
+    
+    
+    
+    
+    
+Weapon naming convention:
+    - If there's an elemental boost:
+        Fire        Heat
+        Ice         Cold
+        Wind        Aerial
+        Lightning   Zap
+        Poison      Venom
+        Earth       Terra
+        Holy        Sacred
+    - If there's an action:
+        Name it based on the action (e.g., <Swrd>Fire3, <Rod>GuardOff)
+    - If bonus or none, delineate with + or -:
+        'Strong'    ['strength']
+        'Agile'     ['speed']
+        'Tank'      ['vitality']
+        'Witch'     ['magic power']
+        'Agile'     ['strength', 'speed']
+        'Tough'     ['strength', 'vitality']
+        'Raw'       ['strength', 'magic power']
+        'Fleet'     ['speed', 'vitality']
+        'Skill'     ['speed', 'magic power']
+        'Heart'     ['vitality', 'magic power']
+        'Vigor'     ['strength', 'speed', 'vitality']
+        'Adept'     ['strength', 'speed', 'magic power']
+        'Fierce'    ['strength', 'vitality', 'magic power']
+        'Sorcer'    ['speed', 'vitality', 'magic power']
+        'Omni'      ['strength', 'speed', 'vitality', 'magic power']
+
+
+    
+    
+If you set byte6 to 02
+then set byte12 to an ID from:
+    1.9 Attack Command (on codes txt)
+You can assign commands to weapon actions

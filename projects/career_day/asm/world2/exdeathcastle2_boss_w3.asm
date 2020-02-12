@@ -47,9 +47,8 @@ if !world_lock = 0
     db $B5, $02
     db $71
     db $C8, $A9, $05                ; Text: Phase 1 against final Exdeath weakened!
-
-    db $CD, $9C, $03
 endif
+    db $CD, $9C, $03
 
     db $C4, $02                     ;Fade in Speed 06
     db $75

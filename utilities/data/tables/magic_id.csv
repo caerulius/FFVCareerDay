@@ -1,126 +1,126 @@
-magic_id,readable_name,type,value,max_count,valid,related_jobs,progression_id,tier
-00,Fire,Sword,2,1,TRUE,[“MysticKnight”],00,1
-01,Ice,Sword,2,1,TRUE,[“MysticKnight”],01,1
-02,Bolt,Sword,2,1,TRUE,[“MysticKnight”],02,1
-03,Venom,Sword,2,1,TRUE,[“MysticKnight”],03,1
-04,Mute,Sword,2,1,TRUE,[“MysticKnight”],04,1
-05,Sleep,Sword,2,1,TRUE,[“MysticKnight”],05,1
-06,Fire2,Sword,2,1,TRUE,[“MysticKnight”],00,2
-07,Ice2,Sword,2,1,TRUE,[“MysticKnight”],01,2
-08,Bolt2,Sword,2,1,TRUE,[“MysticKnight”],02,2
-09,Drain,Sword,3,1,TRUE,[“MysticKnight”],03,2
-0A,Break,Sword,3,1,TRUE,[“MysticKnight”],03,3
-0B,Bio,Sword,3,1,TRUE,[“MysticKnight”],05,3
-0C,Fire3,Sword,3,1,TRUE,[“MysticKnight”],00,4
-0D,Ice3,Sword,3,1,TRUE,[“MysticKnight”],01,4
-0E,Bolt3,Sword,3,1,TRUE,[“MysticKnight”],02,4
-0F,Holy,Sword,3,1,TRUE,[“MysticKnight”],04,7
-10,Flare,Sword,3,1,TRUE,[“MysticKnight”],05,7
-11,Psych,Sword,3,1,TRUE,[“MysticKnight”],04,3
-12,Cure,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",06,1
-13,Scan,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",0A,1
-14,Antdt,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",09,1
-15,Mute,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",08,1
-16,Armor,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",07,1
-17,Size,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",08,1
-18,Cure2,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",06,2
-19,Life,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",0B,2
-1A,Charm,White,2,1,TRUE,"[“WhiteMage”, “RedMage”]",0A,2
-1B,Image,White,2,1,TRUE,[“WhiteMage”],09,2
-1C,Shell,White,2,1,TRUE,[“WhiteMage”],07,2
-1D,Heal,White,2,1,TRUE,[“WhiteMage”],09,3
-1E,Cure3,White,2,1,TRUE,[“WhiteMage”],06,4
-1F,Wall,White,2,1,TRUE,[“WhiteMage”],07,3
-20,Bersk,White,2,1,TRUE,[“WhiteMage”],08,3
-21,Life2,White,2,1,TRUE,[“WhiteMage”],0B,4
-22,Holy,White,2,1,TRUE,[“WhiteMage”],0A,7
-23,Dispel,White,2,1,TRUE,[“WhiteMage”],07,3
-24,Fire,Black,2,1,TRUE,"[“BlackMage”, “RedMage”]",0C,1
-25,Ice,Black,2,1,TRUE,"[“BlackMage”, “RedMage”]",0D,1
-26,Bolt,Black,2,1,TRUE,"[“BlackMage”, “RedMage”]",0E,1
-27,Venom,Black,2,1,TRUE,"[“BlackMage”, “RedMage”]",0F,1
-28,Sleep,Black,2,1,TRUE,"[“BlackMage”, “RedMage”]",10,1
-29,Toad,Black,2,1,TRUE,"[“BlackMage”, “RedMage”]",11,1
-2A,Fire2,Black,2,1,TRUE,"[“BlackMage”, “RedMage”]",0C,2
-2B,Ice2,Black,2,1,TRUE,"[“BlackMage”, “RedMage”]",0D,2
-2C,Bolt2,Black,2,1,TRUE,"[“BlackMage”, “RedMage”]",0E,2
-2D,Drain,Black,2,1,TRUE,[“BlackMage”],0F,2
-2E,Break,Black,2,1,TRUE,[“BlackMage”],0F,3
-2F,Bio,Black,2,1,TRUE,[“BlackMage”],11,3
-30,Fire3,Black,2,1,TRUE,[“BlackMage”],0C,4
-31,Ice3,Black,2,1,TRUE,[“BlackMage”],0D,4
-32,Bolt3,Black,2,1,TRUE,[“BlackMage”],0E,4
-33,Flare,Black,2,1,TRUE,[“BlackMage”],11,7
-34,Doom,Black,2,1,TRUE,[“BlackMage”],10,5
-35,Psych,Black,2,1,TRUE,[“BlackMage”],10,3
-36,Drag,Time,2,1,FALSE,[“TimeMage”],FF,1
-37,Slow,Time,2,1,TRUE,[“TimeMage”],12,1
-38,Regen,Time,2,1,TRUE,[“TimeMage”],13,1
-39,Void,Time,2,1,TRUE,[“TimeMage”],14,1
-3A,Haste,Time,2,1,TRUE,[“TimeMage”],15,1
-3B,Float,Time,2,1,TRUE,[“TimeMage”],13,1
-3C,Demi,Time,2,1,TRUE,[“TimeMage”],14,1
-3D,Stop,Time,2,1,TRUE,[“TimeMage”],12,2
-3E,Exit,Time,2,1,TRUE,[“TimeMage”],15,2
-3F,Comet,Time,2,1,TRUE,[“TimeMage”],16,3
-40,Slow2,Time,2,1,TRUE,[“TimeMage”],12,3
-41,Reset,Time,2,1,TRUE,[“TimeMage”],13,1
-42,Qrter,Time,2,1,TRUE,[“TimeMage”],14,4
-43,Hast2,Time,2,1,TRUE,[“TimeMage”],15,4
-44,Old,Time,2,1,TRUE,[“TimeMage”],14,3
-45,Meteo,Time,2,1,TRUE,[“TimeMage”],16,7
-46,Quick,Time,2,1,TRUE,[“TimeMage”],15,7
-47,Xzone,Time,2,1,TRUE,[“TimeMage”],13,4
-48,Chocob,Esper,2,1,TRUE,[“Summoner”],17,1
-49,Sylph,Esper,2,1,TRUE,[“Summoner”],18,1
-4A,Remora,Esper,2,1,TRUE,[“Summoner”],19,1
-4B,Shiva,Esper,2,1,TRUE,[“Summoner”],1A,2
-4C,Ramuh,Esper,2,1,TRUE,[“Summoner”],1A,2
-4D,Ifrit,Esper,2,1,TRUE,[“Summoner”],1A,2
-4E,Titan,Esper,2,1,TRUE,[“Summoner”],17,4
-4F,Golem,Esper,2,1,TRUE,[“Summoner”],17,5
-50,Shoat,Esper,2,1,TRUE,[“Summoner”],19,4
-51,Crbnkl,Esper,2,1,TRUE,[“Summoner”],18,5
-52,Syldra,Esper,2,1,TRUE,[“Summoner”],18,6
-53,Odin,Esper,2,1,TRUE,[“Summoner”],17,7
-54,Phenix,Esper,2,1,TRUE,[“Summoner”],18,8
-55,Levia,Esper,2,1,TRUE,[“Summoner”],19,8
-56,Bahmut,Esper,2,1,TRUE,[“Summoner”],1A,8
-57,Power,Song,2,1,TRUE,[“Bard”],1B,1
-58,Speed,Song,2,1,TRUE,[“Bard”],1C,1
-59,Vitality,Song,2,1,TRUE,[“Bard”],1B,1
-5A,Magic,Song,2,1,TRUE,[“Bard”],1D,1
-5B,Hero,Song,2,1,TRUE,[“Bard”],1E,4
-5C,Requiem,Song,2,1,TRUE,[“Bard”],1C,1
-5D,Love,Song,2,1,TRUE,[“Bard”],1D,1
-5E,Charm,Song,2,1,TRUE,[“Bard”],1E,1
-82,Condemn,Blue,2,1,TRUE,[“BlueMage”],22,1
-83,Roulette,Blue,2,1,TRUE,[“BlueMage”],22,1
-84,AquaRake,Blue,2,1,TRUE,[“BlueMage”],22,2
-85,L5 Doom,Blue,2,1,TRUE,[“BlueMage”],1F,6
-86,L4 Qrter,Blue,2,1,TRUE,[“BlueMage”],1F,6
-87,L2 Old,Blue,2,1,TRUE,[“BlueMage”],1F,4
-88,L3 Flare,Blue,2,1,TRUE,[“BlueMage”],1F,4
-89,FrogSong,Blue,2,1,TRUE,[“BlueMage”],21,1
-8A,TinySong,Blue,2,1,TRUE,[“BlueMage”],21,1
-8B,Flash,Blue,2,1,TRUE,[“BlueMage”],24,1
-8C,Time Slip,Blue,2,1,TRUE,[“BlueMage”],24,1
-8D,MoonFlut,Blue,2,1,TRUE,[“BlueMage”],21,1
-8E,DethClaw,Blue,2,1,TRUE,[“BlueMage”],24,2
-8F,Aero,Blue,2,1,TRUE,[“BlueMage”],20,1
-90,Aero 2,Blue,2,1,TRUE,[“BlueMage”],20,2
-91,Aero 3,Blue,2,1,TRUE,[“BlueMage”],20,5
-92,Emission,Blue,2,1,TRUE,[“BlueMage”],26,2
-93,GblinPnch,Blue,2,1,TRUE,[“BlueMage”],26,1
-94,DrkShock,Blue,2,1,TRUE,[“BlueMage”],25,4
-95,GuardOff,Blue,2,1,TRUE,[“BlueMage”],23,3
-96,Fusion,Blue,2,1,TRUE,[“BlueMage”],25,2
-97,MindBlst,Blue,2,1,TRUE,[“BlueMage”],27,5
-98,Vampire,Blue,2,1,TRUE,[“BlueMage”],27,1
-99,Hammer,Blue,2,1,TRUE,[“BlueMage”],23,1
-9A,MgthyGrd,Blue,2,1,TRUE,[“BlueMage”],23,7
-9B,Exploder,Blue,2,1,TRUE,[“BlueMage”],25,2
-9C,????,Blue,2,1,TRUE,[“BlueMage”],25,1
-9D,Blowfish,Blue,2,1,TRUE,[“BlueMage”],26,5
-9E,WhiteWind,Blue,2,1,TRUE,[“BlueMage”],27,5
-9F,Missile,Blue,2,1,TRUE,[“BlueMage”],26,2
+magic_id,readable_name,type,value,max_count,valid,item_randomization_valid,related_jobs,progression_id,tier
+0,Fire,Sword,2,1,TRUE,FALSE,[“MysticKnight”],0,1
+1,Ice,Sword,2,1,TRUE,FALSE,[“MysticKnight”],1,1
+2,Bolt,Sword,2,1,TRUE,FALSE,[“MysticKnight”],2,1
+3,Venom,Sword,2,1,TRUE,FALSE,[“MysticKnight”],3,1
+4,Mute,Sword,2,1,TRUE,FALSE,[“MysticKnight”],4,1
+5,Sleep,Sword,2,1,TRUE,FALSE,[“MysticKnight”],5,1
+6,Fire2,Sword,2,1,TRUE,FALSE,[“MysticKnight”],0,2
+7,Ice2,Sword,2,1,TRUE,FALSE,[“MysticKnight”],1,2
+8,Bolt2,Sword,2,1,TRUE,FALSE,[“MysticKnight”],2,2
+9,Drain,Sword,3,1,TRUE,FALSE,[“MysticKnight”],3,2
+0A,Break,Sword,3,1,TRUE,FALSE,[“MysticKnight”],3,3
+0B,Bio,Sword,3,1,TRUE,FALSE,[“MysticKnight”],5,3
+0C,Fire3,Sword,3,1,TRUE,FALSE,[“MysticKnight”],0,4
+0D,Ice3,Sword,3,1,TRUE,FALSE,[“MysticKnight”],1,4
+0E,Bolt3,Sword,3,1,TRUE,FALSE,[“MysticKnight”],2,4
+0F,Holy,Sword,3,1,TRUE,FALSE,[“MysticKnight”],4,7
+10,Flare,Sword,3,1,TRUE,FALSE,[“MysticKnight”],5,7
+11,Psych,Sword,3,1,TRUE,FALSE,[“MysticKnight”],4,3
+12,Cure,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",6,1
+13,Scan,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",0A,1
+14,Antdt,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",9,1
+15,Mute,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",8,1
+16,Armor,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",7,1
+17,Size,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",8,1
+18,Cure2,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",6,2
+19,Life,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",0B,2
+1A,Charm,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",0A,2
+1B,Image,White,2,1,TRUE,TRUE,[“WhiteMage”],9,2
+1C,Shell,White,2,1,TRUE,TRUE,[“WhiteMage”],7,2
+1D,Heal,White,2,1,TRUE,TRUE,[“WhiteMage”],9,3
+1E,Cure3,White,2,1,TRUE,TRUE,[“WhiteMage”],6,4
+1F,Wall,White,2,1,TRUE,TRUE,[“WhiteMage”],7,3
+20,Bersk,White,2,1,TRUE,TRUE,[“WhiteMage”],8,3
+21,Life2,White,2,1,TRUE,TRUE,[“WhiteMage”],0B,4
+22,Holy,White,2,1,TRUE,TRUE,[“WhiteMage”],0A,7
+23,Dispel,White,2,1,TRUE,TRUE,[“WhiteMage”],7,3
+24,Fire,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0C,1
+25,Ice,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0D,1
+26,Bolt,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0E,1
+27,Venom,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0F,1
+28,Sleep,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",10,1
+29,Toad,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",11,1
+2A,Fire2,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0C,2
+2B,Ice2,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0D,2
+2C,Bolt2,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0E,2
+2D,Drain,Black,2,1,TRUE,TRUE,[“BlackMage”],0F,2
+2E,Break,Black,2,1,TRUE,TRUE,[“BlackMage”],0F,3
+2F,Bio,Black,2,1,TRUE,TRUE,[“BlackMage”],11,3
+30,Fire3,Black,2,1,TRUE,TRUE,[“BlackMage”],0C,4
+31,Ice3,Black,2,1,TRUE,TRUE,[“BlackMage”],0D,4
+32,Bolt3,Black,2,1,TRUE,TRUE,[“BlackMage”],0E,4
+33,Flare,Black,2,1,TRUE,TRUE,[“BlackMage”],11,7
+34,Doom,Black,2,1,TRUE,TRUE,[“BlackMage”],10,5
+35,Psych,Black,2,1,TRUE,TRUE,[“BlackMage”],10,3
+36,Drag,Time,2,1,FALSE,FALSE,[“TimeMage”],FF,1
+37,Slow,Time,2,1,TRUE,TRUE,[“TimeMage”],12,1
+38,Regen,Time,2,1,TRUE,TRUE,[“TimeMage”],13,1
+39,Void,Time,2,1,TRUE,FALSE,[“TimeMage”],14,1
+3A,Haste,Time,2,1,TRUE,TRUE,[“TimeMage”],15,1
+3B,Float,Time,2,1,TRUE,TRUE,[“TimeMage”],13,1
+3C,Demi,Time,2,1,TRUE,TRUE,[“TimeMage”],14,1
+3D,Stop,Time,2,1,TRUE,TRUE,[“TimeMage”],12,2
+3E,Exit,Time,2,1,TRUE,FALSE,[“TimeMage”],15,2
+3F,Comet,Time,2,1,TRUE,TRUE,[“TimeMage”],16,3
+40,Slow2,Time,2,1,TRUE,TRUE,[“TimeMage”],12,3
+41,Reset,Time,2,1,TRUE,FALSE,[“TimeMage”],13,1
+42,Qrter,Time,2,1,TRUE,TRUE,[“TimeMage”],14,4
+43,Hast2,Time,2,1,TRUE,TRUE,[“TimeMage”],15,4
+44,Old,Time,2,1,TRUE,TRUE,[“TimeMage”],14,3
+45,Meteo,Time,2,1,TRUE,TRUE,[“TimeMage”],16,7
+46,Quick,Time,2,1,TRUE,FALSE,[“TimeMage”],15,7
+47,Xzone,Time,2,1,TRUE,TRUE,[“TimeMage”],13,4
+48,Chocob,Esper,2,1,TRUE,FALSE,[“Summoner”],17,1
+49,Sylph,Esper,2,1,TRUE,FALSE,[“Summoner”],18,1
+4A,Remora,Esper,2,1,TRUE,FALSE,[“Summoner”],19,1
+4B,Shiva,Esper,2,1,TRUE,FALSE,[“Summoner”],1A,2
+4C,Ramuh,Esper,2,1,TRUE,FALSE,[“Summoner”],1A,2
+4D,Ifrit,Esper,2,1,TRUE,FALSE,[“Summoner”],1A,2
+4E,Titan,Esper,2,1,TRUE,FALSE,[“Summoner”],17,4
+4F,Golem,Esper,2,1,TRUE,FALSE,[“Summoner”],17,5
+50,Shoat,Esper,2,1,TRUE,FALSE,[“Summoner”],19,4
+51,Crbnkl,Esper,2,1,TRUE,FALSE,[“Summoner”],18,5
+52,Syldra,Esper,2,1,TRUE,FALSE,[“Summoner”],18,6
+53,Odin,Esper,2,1,TRUE,FALSE,[“Summoner”],17,7
+54,Phenix,Esper,2,1,TRUE,FALSE,[“Summoner”],18,8
+55,Levia,Esper,2,1,TRUE,FALSE,[“Summoner”],19,8
+56,Bahmut,Esper,2,1,TRUE,FALSE,[“Summoner”],1A,8
+57,Power,Song,2,1,TRUE,FALSE,[“Bard”],1B,1
+58,Speed,Song,2,1,TRUE,FALSE,[“Bard”],1C,1
+59,Vitality,Song,2,1,TRUE,FALSE,[“Bard”],1B,1
+5A,Magic,Song,2,1,TRUE,FALSE,[“Bard”],1D,1
+5B,Hero,Song,2,1,TRUE,FALSE,[“Bard”],1E,4
+5C,Requiem,Song,2,1,TRUE,FALSE,[“Bard”],1C,1
+5D,Love,Song,2,1,TRUE,FALSE,[“Bard”],1D,1
+5E,Charm,Song,2,1,TRUE,FALSE,[“Bard”],1E,1
+82,Condemn,Blue,2,1,TRUE,TRUE,[“BlueMage”],22,1
+83,Roulette,Blue,2,1,TRUE,TRUE,[“BlueMage”],22,1
+84,AquaRake,Blue,2,1,TRUE,TRUE,[“BlueMage”],22,2
+85,L5 Doom,Blue,2,1,TRUE,TRUE,[“BlueMage”],1F,6
+86,L4 Qrter,Blue,2,1,TRUE,TRUE,[“BlueMage”],1F,6
+87,L2 Old,Blue,2,1,TRUE,TRUE,[“BlueMage”],1F,4
+88,L3 Flare,Blue,2,1,TRUE,TRUE,[“BlueMage”],1F,4
+89,FrogSong,Blue,2,1,TRUE,TRUE,[“BlueMage”],21,1
+8A,TinySong,Blue,2,1,TRUE,TRUE,[“BlueMage”],21,1
+8B,Flash,Blue,2,1,TRUE,TRUE,[“BlueMage”],24,1
+8C,Time Slip,Blue,2,1,TRUE,TRUE,[“BlueMage”],24,1
+8D,MoonFlut,Blue,2,1,TRUE,TRUE,[“BlueMage”],21,1
+8E,DethClaw,Blue,2,1,TRUE,TRUE,[“BlueMage”],24,2
+8F,Aero,Blue,2,1,TRUE,TRUE,[“BlueMage”],20,1
+90,Aero 2,Blue,2,1,TRUE,TRUE,[“BlueMage”],20,2
+91,Aero 3,Blue,2,1,TRUE,TRUE,[“BlueMage”],20,5
+92,Emission,Blue,2,1,TRUE,TRUE,[“BlueMage”],26,2
+93,GblinPnch,Blue,2,1,TRUE,TRUE,[“BlueMage”],26,1
+94,DrkShock,Blue,2,1,TRUE,TRUE,[“BlueMage”],25,4
+95,GuardOff,Blue,2,1,TRUE,TRUE,[“BlueMage”],23,3
+96,Fusion,Blue,2,1,TRUE,TRUE,[“BlueMage”],25,2
+97,MindBlst,Blue,2,1,TRUE,TRUE,[“BlueMage”],27,5
+98,Vampire,Blue,2,1,TRUE,TRUE,[“BlueMage”],27,1
+99,Hammer,Blue,2,1,TRUE,TRUE,[“BlueMage”],23,1
+9A,MgthyGrd,Blue,2,1,TRUE,TRUE,[“BlueMage”],23,7
+9B,Exploder,Blue,2,1,TRUE,TRUE,[“BlueMage”],25,2
+9C,????,Blue,2,1,TRUE,TRUE,[“BlueMage”],25,1
+9D,Blowfish,Blue,2,1,TRUE,TRUE,[“BlueMage”],26,5
+9E,WhiteWind,Blue,2,1,TRUE,TRUE,[“BlueMage”],27,5
+9F,Missile,Blue,2,1,TRUE,TRUE,[“BlueMage”],26,2
