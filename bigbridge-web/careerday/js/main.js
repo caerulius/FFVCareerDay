@@ -102,7 +102,7 @@ function apiCall(data){
 		"fjf_strict": $('#fjf_strict').is(':checked'),
 		"jobpalette": $('#jobpalette').is(':checked'),
 		"world_lock": $("input:radio[name=world_lock]:checked").val(),
-		"tiering_config": $("#tiering_config").val(),
+		"tiering_config": $("#tiering_config").is(':checked'),
 		"tiering_percentage": $("#tiering_percentage").val(),
 		"tiering_threshold": $("#tiering_threshold").val(),
 		"enforce_all_jobs": $('#enforce_all_jobs').is(':checked'),

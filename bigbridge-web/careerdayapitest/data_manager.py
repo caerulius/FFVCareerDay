@@ -42,5 +42,5 @@ class DataManager():
         self.files['weapon_randomization'] = self.files['weapon_randomization'][self.files['weapon_randomization']['type']=='weapon']
         self.files['magic_item_randomization'] = pd.read_csv(self.data_table_path + 'magic_id.csv',index_col='magic_id')
         self.files['magic_item_randomization'] = self.files['magic_item_randomization'][self.files['magic_item_randomization']['item_randomization_valid']==True]
-        
+        self.files['custom_weapons'] =  pd.read_csv(self.data_table_path + 'custom_weapons_v2.csv',index_col='index')
         

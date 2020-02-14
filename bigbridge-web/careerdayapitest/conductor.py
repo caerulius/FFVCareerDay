@@ -69,6 +69,7 @@ class Conductor():
             self.place_all_rewards = True
             self.progressive_rewards = False
             self.item_randomization = False
+            self.item_randomization_percent = 100
             
             
         else:                           # else take the config passed from server.py and set variables
@@ -83,6 +84,7 @@ class Conductor():
             self.progressive_bosses = self.translateBool(conductor_config['progressive_bosses'])
             self.progressive_rewards = self.translateBool(conductor_config['progressive_rewards'])
             self.item_randomization = self.translateBool(conductor_config['item_randomization'])
+            self.item_randomization_percent = int(conductor_config['item_randomization_percent'])
             
             #only allow progressive bosses if world_lock == 1
             if self.world_lock != 1:
@@ -124,7 +126,7 @@ class Conductor():
 
         if self.item_randomization:
             logging.error("Init WeaponManager...")
-            self.WM = WeaponManager(self.DM, self.RE)      #Set up Weapon Manager
+            self.WM = WeaponManager(self.DM, self.RE, self.item_randomization_percent)      #Set up Weapon Manager
             # remove the following from the pool of weapons:
             for _ in range(3):
                 self.CM.add_to_placement_history(self.CM.get_by_name("Brave Blade"),"No")
@@ -1880,7 +1882,14 @@ class Conductor():
     def randomize_weapons(self):
         logging.error("Beginning weapon randomization...")
         self.WM.randomize()
-        logging.error("Finished weapon randomization")
+        if len(self.WM.banned_items) > 0:
+            for _ in range(3):
+                for weapon in self.WM.banned_items:
+                    try:
+                        self.CM.add_to_placement_history(self.CM.get_by_name(weapon['readable_name']),"No")
+                    except:
+                        logging.error("Error on placement history %s" % weapon['readable_name'])
+
                     
     def get_collectible_counts(self):
         # Here for this spoiler, we need to collect from both RM and SM to get accurate data, so we do it here:
@@ -2081,7 +2090,7 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":    
-#    random.seed(10009)
+    random.seed(10009)
     c = Conductor(random, {
                             'fjf':False,
                             'fjf_strict':False,
@@ -2101,7 +2110,8 @@ if __name__ == "__main__":
                             'progressive_bosses' : "True",
                             'portal_boss' : 'SomberMage',
                             'progressive_rewards' : False,
-                            'item_randomization' : True
+                            'item_randomization' : True,
+                            'item_randomization_percent' : 100
                           }
                  )
     (spoiler, patch) = c.randomize()

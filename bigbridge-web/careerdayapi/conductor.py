@@ -74,6 +74,7 @@ class Conductor():
             self.fjf_strict = self.translateBool(conductor_config['fjf_strict'])
             self.jobpalettes = self.translateBool(conductor_config['jobpalettes'])
             self.world_lock = int(conductor_config['world_lock'])
+            logging.error(conductor_config['tiering_config'])
             self.tiering_config = self.translateBool(conductor_config['tiering_config'])
             self.tiering_percentage = int(conductor_config['tiering_percentage'])
             self.tiering_threshold= int(conductor_config['tiering_threshold'])
@@ -1698,7 +1699,7 @@ class Conductor():
     #        breakpoint()
     #        logging.error(">>>>>>>>>>>:"+tablet.description)
             # for each tablet, iterate through required keys for that tablet
-            if self.configs['world_lock'] == 0:
+            if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
                 tablet_reqs = getattr(tablet, 'required_key_items')
             else:
                 tablet_reqs = getattr(tablet,'required_key_items_lock'+str(self.configs['world_lock']))
@@ -1715,7 +1716,7 @@ class Conductor():
                     if new_reward not in required_rewards:
                         required_rewards.append(new_reward)
                     # check if this new reward has any reqs of its own, if it does, add to tablet_reqs
-                    if self.configs['world_lock'] == 0:
+                    if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
                         new_reward_reqs = getattr(tablet, 'required_key_items')
                     else:
                         new_reward_reqs = getattr(new_reward,'required_key_items_lock'+str(self.configs['world_lock']))

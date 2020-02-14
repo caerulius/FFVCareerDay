@@ -122,7 +122,7 @@ def patch_and_return():
                             'fjf_strict':   data["fjf_strict"],
                             'jobpalettes':  data['jobpalette'],
                             'world_lock':   data['world_lock'],
-                            'tiering_config':   data['world_lock'],
+                            'tiering_config':   data['tiering_config'],
                             'tiering_percentage':   data['tiering_percentage'],
                             'tiering_threshold':   data['tiering_threshold'],
                             'enforce_all_jobs':   data['enforce_all_jobs'],

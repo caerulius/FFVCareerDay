@@ -151,15 +151,6 @@
 					</label>
 				</div>
 			</div>
-			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
-				<input type="checkbox" id="item_randomization">
-				<div class="state">
-					<i class="icon fa fa-check check-icon"></i>
-					<label>
-						<b>Randomized weapons:</b> Weapons will be randomized for stats/abilities/magic and more. Refer to the Weapon Randomization page on the wiki for more details
-					</label> 
-				</div> 
-			</div>
 			<br><br>
 			<p style="font-size:1.5em;margin-top:10px"><b>World Locking Logic</b></p>
 
@@ -244,6 +235,23 @@
 				<input type="number" id="loot_percent" value="25"  style="width:50px" 
 				onblur="javascript: if (this.value < 0 || this.value > 100) this.value = 25">
 					<b>Variable Loot Percent</b> Value 1-100, only applies when Variable selected above
+			</div>
+			<br>
+			<p style="font-size:1.5em;margin-top:10px"><b>Randomized weapons</b></p>
+
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="item_randomization">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Randomized weapons:</b> Weapons will be randomized for stats/abilities/magic and more. Refer to the Weapon Randomization page on the wiki for more details
+					</label> 
+				</div> 
+			</div>
+			<div class="input-div">
+				<input type="number" id="item_randomization_percent" value="100" style="width:50px" 
+				onblur="javascript: if (this.value < 0 || this.value > 100) this.value = 100">
+					<b>Overflow percent: </b>Percentage of weapons randomized
 			</div>
 			<br>
 			<p style="font-size:1.5em;margin-top:10px"><b>Configurations</b></p>
