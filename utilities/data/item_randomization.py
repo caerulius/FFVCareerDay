@@ -556,7 +556,7 @@ class WeaponManager(ABC):
             df_temp = df[(df['tier'] >= og_weapon_tier - tier_adj) & (df['tier'] <= og_weapon_tier + tier_adj)]
             choices = list(df_temp.index)
             try:
-                choice = random.choice(choices)
+                choice = self.re.choice(choices)
                 weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
 #                logging.error(weapon_name_clean)
 #                if weapon_name_clean == 'Elements':
@@ -579,7 +579,7 @@ class WeaponManager(ABC):
                         return df.loc[choice], True # True = pass_flag for valid replacement
                     else:
                         # reroll, try again
-                        choice = random.choice(choices)
+                        choice = self.re.choice(choices)
                         weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
                     iter_num += 1
                 
@@ -594,7 +594,7 @@ class WeaponManager(ABC):
                         return df.loc[choice], True # True = pass_flag for valid replacement
                     else:
                         # reroll, try again
-                        choice = random.choice(choices)
+                        choice = self.re.choice(choices)
                         weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
                     iter_num += 1
                 tier_adj += 1        

@@ -37,3 +37,10 @@ class DataManager():
         self.files['job_color_palettes'] = pd.read_csv(self.data_table_path + 'job_color_palettes.csv')
         self.files['boss_color_palettes'] = pd.read_csv(self.data_table_path + 'boss_color_palettes.csv')
         self.files['hints'] = pd.read_csv(self.data_table_path + 'hint_npc.csv',dtype=str)
+        self.files['weapon_randomization'] = pd.read_csv(self.data_table_path + 'weapon_randomization_id.csv')
+        self.files['weapon_randomization'] = self.files['weapon_randomization'][self.files['weapon_randomization']['valid']==True]
+        self.files['weapon_randomization'] = self.files['weapon_randomization'][self.files['weapon_randomization']['type']=='weapon']
+        self.files['magic_item_randomization'] = pd.read_csv(self.data_table_path + 'magic_id.csv',index_col='magic_id')
+        self.files['magic_item_randomization'] = self.files['magic_item_randomization'][self.files['magic_item_randomization']['item_randomization_valid']==True]
+        self.files['custom_weapons'] =  pd.read_csv(self.data_table_path + 'custom_weapons_v2.csv',index_col='index')
+        

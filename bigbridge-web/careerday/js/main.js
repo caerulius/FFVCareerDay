@@ -108,6 +108,8 @@ function apiCall(data){
 		"enforce_all_jobs": $('#enforce_all_jobs').is(':checked'),
 		"progressive_bosses": $('#progressive_bosses').is(':checked'),
         "progressive_rewards": $('#progressive_rewards').is(':checked'),
+        "item_randomization": $('#item_randomization').is(':checked'),
+        "item_randomization_percent": $("#item_randomization_percent").val(), 
 		"red_color": $("#red_color").val(),
 		"blue_color": $("#blue_color").val(),
 		"green_color": $("#green_color").val(),

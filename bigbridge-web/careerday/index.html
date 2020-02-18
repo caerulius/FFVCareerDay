@@ -67,7 +67,7 @@
 		<div class="container">
 			<h4>Looking for help with this randomizer? Check out our <a href = "https://www.bigbridge.studio/cdwiki/doku.php">Career Day wiki!</a></h4>
 			<br>
-			<h2>Generate Randomized FF5 Rom (v0.80)</h2>
+			<h2>Generate Randomized FF5 Rom (v0.81)</h2>
 			<input type="file" accept=".smc, .sfc" class="file-browse" id="fileupload"/>
 			<label for="fileupload"><i class="fa fa-upload"></i>  Browse</label>
 			<div class="file-info" id="file-info">Upload a Final Fantasy 5 ROM, Japanese or patched with the RPGe Translation</div><br/>
@@ -200,6 +200,23 @@
 				onblur="javascript: if (this.value < 1 || this.value > 10) this.value = 1">
 						<b>Overflow threshold:</b> Number of tiers to pull from, if the above percent chance occurs
 			</div>
+			<br>
+			<p style="font-size:1.5em;margin-top:10px"><b>Randomized weapons</b></p>
+
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" id="item_randomization">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Randomized weapons:</b> Weapons will be randomized for stats/abilities/magic and more. Refer to Weapon Randomization page on the FFVCD wiki
+					</label> 
+				</div> 
+			</div>
+			<div class="input-div">
+				<input type="number" id="item_randomization_percent" value="100" style="width:50px" 
+				onblur="javascript: if (this.value < 0 || this.value > 100) this.value = 100">
+					<b>Weapon randomization percent: </b>Percentage of weapons randomized. Set this lower than 100 to leave weapons in the base game untouched
+			</div>
 			<br>		
 			<p style="font-size:1.5em;margin-top:10px"><b>Randomize Loot</b> (enemy steals & drops)</p>
 			<div>
@@ -236,6 +253,7 @@
 				onblur="javascript: if (this.value < 0 || this.value > 100) this.value = 25">
 					<b>Variable Loot Percent</b> Value 1-100, only applies when Variable selected above
 			</div>
+
 			<br>
 			<p style="font-size:1.5em;margin-top:10px"><b>Configurations</b></p>
 			<div class="input-div">

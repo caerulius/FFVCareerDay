@@ -132,10 +132,11 @@ class Conductor():
                 self.CM.add_to_placement_history(self.CM.get_by_name("Brave Blade"),"No")
                 self.CM.add_to_placement_history(self.CM.get_by_name("Chicken Knife"),"No")
                 self.CM.add_to_placement_history(self.CM.get_by_name("Excailbur"),"No")
+                self.CM.add_to_placement_history(self.CM.get_by_name("Soot"),"No")
         
         logging.error("Init misc setup...")
         # Misc setup 
-        self.difficulty = random.randint(1,10)
+        self.difficulty = self.RE.randint(1,10)
         crystals = self.get_crystals(self.fjf)
         self.starting_crystal = crystals[0]
         self.chosen_crystals = crystals[1]
@@ -470,7 +471,7 @@ class Conductor():
                 elif magic_chance <= 0:
                     item_chance = item_chance - .05
                     magic_chance = magic_chance + .05
-                kind = random.choices(["item", "magic"],
+                kind = self.RE.choices(["item", "magic"],
                                       [item_chance, magic_chance])[0]
             else:    
                 if item_chance <= 0:
@@ -486,10 +487,10 @@ class Conductor():
                     magic_chance = magic_chance - .025
                     crystal_chance = crystal_chance + .05
             
-                kind = random.choices(["item", "magic", "crystal"],
+                kind = self.RE.choices(["item", "magic", "crystal"],
                                       [item_chance, magic_chance, crystal_chance])[0]
 
-            item_mod = random.choices([  2,  1,  0, -1,  -2],
+            item_mod = self.RE.choices([  2,  1,  0, -1,  -2],
                                       [.05, .1, .7, .1, .05])[0]
             value.num_items = value.num_items + item_mod
             if value.num_items > 8:
@@ -626,7 +627,7 @@ class Conductor():
                     item_shops = [x for x in self.SM.shops if x.shop_type == ITEM_SHOP_TYPE and x.valid and x.num_items > 0 and x.num_items < 8]
                 #logging.error("number of item shops: " + str(len(item_shops)))
                 try:
-                    chosen_shop = item_shops[random.choice(range(0, len(item_shops)))]
+                    chosen_shop = item_shops[self.RE.choice(range(0, len(item_shops)))]
                     chosen_shop.contents[slot] = item_to_place
                     chosen_shop.num_items = chosen_shop.num_items + 1
                 except:
@@ -1169,7 +1170,7 @@ class Conductor():
     def randomize_job_color_palettes(self):
         if True: # Future - flag for if all job palettes shuffled (for all chars and jobs)
             palettes = list(self.DM.files['job_color_palettes']['byte_string'])
-            random.shuffle(palettes)
+            self.RE.shuffle(palettes)
             output_str = "\n\n; JOB COLOR PALETTES \n\norg $D4A3C0\ndb "
             for palette in palettes:
                 palette_asar = ["$"+palette[z:z+2]+", " for z in range(0,len(palette),2)]
@@ -1184,7 +1185,7 @@ class Conductor():
                 palettes_df = self.DM.files['job_color_palettes']
                 palettes_df = palettes_df[palettes_df['char']==character]
                 palettes = palettes_df['byte_string'].to_list()
-                random.shuffle(palettes)
+                self.RE.shuffle(palettes)
                 for palette in palettes:
                     palette_asar = ["$"+palette[z:z+2]+", " for z in range(0,len(palette),2)]
                     output_str = output_str + ''.join(palette_asar)
@@ -1453,7 +1454,7 @@ class Conductor():
             immunity_start = 3
             weakness_start = 7
             
-            random_elements = sorted(list(elemental_map.keys()), key=lambda k: random.random())
+            random_elements = sorted(list(elemental_map.keys()), key=lambda k: self.RE.random())
             absorbs, immunities, weaknesses = random_elements[:immunity_start], random_elements[immunity_start:weakness_start], random_elements[weakness_start:]
             
             
@@ -1475,9 +1476,9 @@ class Conductor():
             num_afflict = 1
             
             status_afflict = []
-            random_statuses = sorted(list(status_map.keys()), key=lambda k: random.random())
+            random_statuses = sorted(list(status_map.keys()), key=lambda k: self.RE.random())
             while num_afflict > 0:
-                i = random.choice(random_statuses)
+                i = self.RE.choice(random_statuses)
                 random_statuses.remove(i)
                 if i not in ['image1','image2','haste','stop','regen','shell','armor','wall','invul']:
                     status_afflict.append(i)
@@ -1541,7 +1542,7 @@ class Conductor():
             ######################################
             
             # Choose a random type
-            random_type = random.choice(list(creature_map.keys()))
+            random_type = self.RE.choice(list(creature_map.keys()))
             # If it's not heavy, make it heavy too
             if random_type != 'heavy':
                 random_enemy.enemy_type = add_hex(creature_map[random_type],'20') # heavy + random type
@@ -1558,7 +1559,7 @@ class Conductor():
             # Randomize levels and stats 
             # A few stats will have a random int from -10 to 10 applied
             for stat in ['num_phys_power','num_phys_def','num_evade','num_mag_power','num_mag_def','num_level']:
-                new_stat = str(round(int(getattr(random_enemy,stat)) + random.randint(-10,10)))
+                new_stat = str(round(int(getattr(random_enemy,stat)) + self.RE.randint(-10,10)))
                 setattr(random_enemy,stat,new_stat)
                 self.superbosses_spoiler = self.superbosses_spoiler + "Stat "+stat+" changed to "+new_stat+"\n"
             
@@ -1599,17 +1600,17 @@ class Conductor():
                 ai_single = ['D0C52F','D0C53B','D0C546','D0C547','D0C54A','D0C54B','D0C52E']
                 ai_status = ['D0C530','D0C53A','D0C53C','D0C53E','D0C548','D0C54C']
             for ai in ai_aoe:
-                random_skill_hex = random.choice(aoe_skills)
+                random_skill_hex = self.RE.choice(aoe_skills)
                 random_skill_name = skill_name_dict[random_skill_hex]
                 aoe_skill_names.append(random_skill_name)
                 output_str = output_str + '; New AOE skill: '+random_skill_name+'\norg $'+ai+'\ndb $'+random_skill_hex+'\n'
             for ai in ai_single:
-                random_skill_hex = random.choice(single_target_skills)
+                random_skill_hex = self.RE.choice(single_target_skills)
                 random_skill_name = skill_name_dict[random_skill_hex]
                 single_skill_names.append(random_skill_name)
                 output_str = output_str + '; New single target skill: '+random_skill_name+'\norg $'+ai+'\ndb $'+random_skill_hex+'\n'
             for ai in ai_status:
-                random_skill_hex = random.choice(status_skills)
+                random_skill_hex = self.RE.choice(status_skills)
                 random_skill_name = skill_name_dict[random_skill_hex]
                 status_skill_names.append(random_skill_name)
                 output_str = output_str + '; New status skill: '+random_skill_name+'\norg $'+ai+'\ndb $'+random_skill_hex+'\n'
@@ -1657,7 +1658,7 @@ class Conductor():
         text_dict2 = pd.read_csv(self.config['PATHS']['text_table_path'] + self.config['PATHS']['text_table_to_use'], header=None, index_col=1).to_dict()[0]
         #text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_chest.csv'),header=None,index_col=1).to_dict()[0]
         
-        letters = random.sample('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',6)
+        letters = self.RE.sample('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',6)
         code_str = 'db '
         for letter in letters:
             code_str = code_str + "$" +str(text_dict2[letter]) + ", "
@@ -1685,8 +1686,8 @@ class Conductor():
             else:
                 keys_barren.append(i)
     
-        random.shuffle(keys_main)
-        random.shuffle(keys_barren)
+        self.RE.shuffle(keys_main)
+        self.RE.shuffle(keys_barren)
         
         keys_hint1 = keys_main[:3]
         
@@ -1713,7 +1714,7 @@ class Conductor():
     #        breakpoint()
     #        logging.error(">>>>>>>>>>>:"+tablet.description)
             # for each tablet, iterate through required keys for that tablet
-            if self.configs['world_lock'] == 0:
+            if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
                 tablet_reqs = getattr(tablet, 'required_key_items')
             else:
                 tablet_reqs = getattr(tablet,'required_key_items_lock'+str(self.configs['world_lock']))
@@ -1730,7 +1731,7 @@ class Conductor():
                     if new_reward not in required_rewards:
                         required_rewards.append(new_reward)
                     # check if this new reward has any reqs of its own, if it does, add to tablet_reqs
-                    if self.configs['world_lock'] == 0:
+                    if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
                         new_reward_reqs = getattr(tablet, 'required_key_items')
                     else:
                         new_reward_reqs = getattr(new_reward,'required_key_items_lock'+str(self.configs['world_lock']))
@@ -1748,7 +1749,7 @@ class Conductor():
 #            logging.error(i.collectible.collectible_name + " - " + i.description  + " - " +  str(i.required_key_items_lock1))
         
         # now choose 5 of them, and add to hints
-        random.shuffle(required_rewards)
+        self.RE.shuffle(required_rewards)
         for key in required_rewards[:5]:
             hint_str = "They say that %s|is on the path to the Void." % (key.area)
             hint_text.append(hint_str)
@@ -1790,8 +1791,8 @@ class Conductor():
         else:
             barren_num = 5
             
-        random.shuffle(barren_tags)
-        barren_tags = random.sample(barren_tags,barren_num)
+        self.RE.shuffle(barren_tags)
+        barren_tags = self.RE.sample(barren_tags,barren_num)
         for i in barren_tags:
             hint_str = "They say that %s areas|hold no keys of value." % i
             hint_text.append(hint_str)
@@ -1811,7 +1812,7 @@ class Conductor():
             hint_str = "They say that the %s|is present in World %s." % (key.collectible.collectible_name, key.world)
             hint_text.append(hint_str)
         
-        random.shuffle(hint_text) 
+        self.RE.shuffle(hint_text) 
         
         
         ###########
@@ -1925,7 +1926,7 @@ class Conductor():
                  '1F','20','21','22','23','24','25','26','27','28',
                  '2B','2C','2D','2E','2F','30','31','32','33','3D',
                  '3F','40','41','42','43','44']
-        song = random.choice(songs)
+        song = self.RE.choice(songs)
         return ';Karnak escape song\norg $C8796D\ndb $'+song+"\n"
     
 
@@ -1936,15 +1937,31 @@ class Conductor():
         output = ";=====================\n"
         output = output + ";Kuzar Reward Text Fix\n"
         output = output + ";=====================\n"
+        
+        randomized_weapons_ids = [i.data_dict['item_id'] for i in self.WM.weapons]
 
         for i in range(0, len(kuzar_reward_addresses)):
+#            logging.error(i)
             #logging.error("working on address: " + kuzar_reward_addresses[i])
-            c = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
-            #logging.error("collectible there is: " + c.reward_name)
-            #@ will be used for our newline character, won't otherwise be present, and don't have the problems \n causes
-            kuzar_text = self.TP.run_kuzar_encrypt({c.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
-#            breakpoint()
-            output = output + kuzar_text
+            data = self.RM.get_reward_by_address(kuzar_reward_addresses[i]).collectible
+#            logging.error("Kuzar start: %s" % (data.reward_name))
+            try:
+                if data.type == 'weapon' and data.reward_id in randomized_weapons_ids:
+                    matched_weapon = [x for x in self.WM.weapons if data.reward_id == x.data_dict['item_id']][0]
+#                    logging.error("Kuzar weapon name swap: %s -> %s" % (data.reward_name, matched_weapon.text_textbox))
+                    kuzar_text = self.TP.run_kuzar_encrypt({matched_weapon.text_textbox: kuzar_text_addresses[i]})
+                    output = output + kuzar_text
+                else:
+                    kuzar_text = self.TP.run_kuzar_encrypt({data.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
+#                    logging.error("Kuzar normal: %s" % (data.reward_name))
+                    output = output + kuzar_text
+
+            except:
+                #logging.error("collectible there is: " + c.reward_name)
+                #@ will be used for our newline character, won't otherwise be present, and don't have the problems \n causes
+                kuzar_text = self.TP.run_kuzar_encrypt({data.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
+#                logging.error("Kuzar normal: %s" % (data.reward_name))
+                output = output + kuzar_text
         return output
 
     def translateBool(self, boolean):
@@ -2090,7 +2107,7 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":    
-    random.seed(10009)
+#    random.seed(10009)
     c = Conductor(random, {
                             'fjf':False,
                             'fjf_strict':False,

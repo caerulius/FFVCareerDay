@@ -128,6 +128,8 @@ def patch_and_return():
                             'enforce_all_jobs':   data['enforce_all_jobs'],
                             'progressive_bosses':   data['progressive_bosses'],
                             'progressive_rewards':   data['progressive_rewards'],
+                            'item_randomization':   data['item_randomization'],
+                            'item_randomization_percent':   data['item_randomization_percent'],
                             'red_color':   data['red_color'],
                             'green_color':   data['green_color'],
                             'blue_color':   data['blue_color'],

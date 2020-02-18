@@ -1,8 +1,7 @@
-index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,magic_type,killer_type,ability,ability_id,adjustment_type,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,byte9,byte10,byte11,byte12,
+index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,magic_type,killer_type,ability,ability_id,adjustment_type,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,byte9,byte10,byte11,byte12,"'=""|""&E2&""|""&C2&""|""&D2&""|""&F2&""|""&IFERROR(VLOOKUP(P2,Sheet2.$A:$B,2,0),""-"")&""|""&IF(P2=V2,VLOOKUP(V2,Sheet2.$E$1:$F$7,2,0),""-"")&""|"""
 0,<Knif>Cure,Cure Knife,6,knife,1,12,White,,,,spell,F8,80,02,88,16,0C,78,06,32,00,64,12,|knife|Cure Knife|6|1|Magic Power +1|-|
-1,<Knif>Scan,Scan Knife,9,knife,1,13,White,,,,spell,F8,80,02,88,16,0C,78,09,32,00,64,13,|knife|Scan Knife|9|1|Magic Power +1|-|
 2,<Knif>Antdt,Antdt Knife,12,knife,1,14,White,,,,spell,F8,80,02,88,16,0C,78,0C,32,00,64,14,|knife|Antdt Knife|12|1|Magic Power +1|-|
-3,<Knif>Mute,Mute Knife,15,knife,1,15,White,,,,spell,F8,80,02,88,16,0C,78,0F,32,00,64,15,|knife|Mute Knife|15|1|Magic Power +1|-|
+3,<Knif>Mute,Mute Knife,15,10,1,15,White,,,,spell,F8,80,02,88,16,0C,78,0F,32,00,64,15,|10|Mute Knife|15|1|Magic Power +1|-|
 4,<Knif>Armor,Armor Knife,18,knife,1,16,White,,,,spell,F8,80,02,88,16,0C,78,12,32,00,64,16,|knife|Armor Knife|18|1|Magic Power +1|-|
 5,<Knif>Size,Size Knife,21,knife,1,17,White,,,,spell,F8,80,02,88,16,0C,78,15,32,00,64,17,|knife|Size Knife|21|1|Magic Power +1|-|
 6,<Knif>Cure2,Cure2 Knife,24,knife,2,18,White,,,,spell,F8,80,02,89,16,0C,78,18,32,00,64,18,|knife|Cure2 Knife|24|2|Magic Power +2|-|
@@ -14,8 +13,8 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 12,<Knif>Cure3,Cure3 Knife,42,knife,4,1E,White,,,,spell,F8,80,02,8A,16,0C,78,2A,32,00,64,1E,|knife|Cure3 Knife|42|4|Magic Power +3|-|
 13,<Knif>Wall,Wall Knife,45,knife,3,1F,White,,,,spell,F8,80,02,8A,16,0C,78,2D,32,00,64,1F,|knife|Wall Knife|45|3|Magic Power +3|-|
 14,<Knif>Bersk,Bersk Knife,48,knife,3,20,White,,,,spell,F8,80,02,8A,16,0C,78,30,32,00,64,20,|knife|Bersk Knife|48|3|Magic Power +3|-|
-15,<Knif>Life2,Life2 Knife,51,knife,4,21,White,,,,spell,F8,80,02,10,16,0C,78,33,32,10,64,21,|knife|Life2 Knife|51|4|-|-|
-16,<Knif>Holy,Holy Knife,54,knife,7,22,White,,,,spell,F8,80,02,10,16,0C,78,36,32,10,21,22,|knife|Holy Knife|54|7|-|-|
+15,<Knif>Life2,Life2 Knife,51,knife,4,21,White,,,,spell,F8,80,02,10,16,0C,78,33,32,10,64,21,|knife|Life2 Knife|51|4|-|Holy|
+16,<Knif>Holy,Holy Knife,54,knife,7,22,White,,,,spell,F8,80,02,10,16,0C,78,36,32,10,21,22,|knife|Holy Knife|54|7|-|Holy|
 17,<Knif>Dispel,Dispel Knife,57,knife,3,23,White,,,,spell,F8,80,02,8F,16,0C,78,39,32,00,64,23,|knife|Dispel Knife|57|3|Magic Power +5|-|
 18,<Knif>Fire,Fire Knife,37,knife,1,24,Black,,,,spell,F8,80,02,01,16,0C,78,25,32,01,21,24,|knife|Fire Knife|37|1|-|Fire|
 19,<Knif>Ice,Ice Knife,37,knife,1,25,Black,,,,spell,F8,80,02,02,16,0C,78,25,32,02,21,25,|knife|Ice Knife|37|1|-|Ice|
@@ -79,7 +78,6 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 77,<Knif>WhiteWin,WhiteWind Knife,71,knife,5,9E,Blue,,,,spell,F8,80,02,40,16,0C,78,47,32,40,64,9E,|knife|WhiteWind Knife|71|5|-|Wind|
 78,<Knif>Missile,Missile Knife,36,knife,2,9F,Blue,,,,spell,F8,80,02,92,16,0C,78,24,32,00,21,9F,|knife|Missile Knife|36|2|Vitality +3|-|
 79,<Swrd>Cure,Cure Sword,7,sword,1,12,White,,,,spell,F8,80,04,88,55,0C,78,07,31,00,64,12,|sword|Cure Sword|7|1|Magic Power +1|-|
-80,<Swrd>Scan,Scan Sword,10,sword,1,13,White,,,,spell,F8,80,04,88,55,0C,78,0A,31,00,64,13,|sword|Scan Sword|10|1|Magic Power +1|-|
 81,<Swrd>Antdt,Antdt Sword,13,sword,1,14,White,,,,spell,F8,80,04,88,55,0C,78,0D,31,00,64,14,|sword|Antdt Sword|13|1|Magic Power +1|-|
 82,<Swrd>Mute,Mute Sword,16,sword,1,15,White,,,,spell,F8,80,04,88,55,0C,78,10,31,00,64,15,|sword|Mute Sword|16|1|Magic Power +1|-|
 83,<Swrd>Armor,Armor Sword,19,sword,1,16,White,,,,spell,F8,80,04,88,55,0C,78,13,31,00,64,16,|sword|Armor Sword|19|1|Magic Power +1|-|
@@ -158,7 +156,6 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 156,<Swrd>WhiteWin,WhiteWind Sword,72,sword,5,9E,Blue,,,,spell,F8,80,04,40,55,0C,78,48,31,40,64,9E,|sword|WhiteWind Sword|72|5|-|Wind|
 157,<Swrd>Missile,Missile Sword,37,sword,2,9F,Blue,,,,spell,F8,80,04,92,55,0C,78,25,31,00,21,9F,|sword|Missile Sword|37|2|Vitality +3|-|
 158,<Swrd>Cure,Cure Knightsword,14,knightsword,1,12,White,,,,spell,F8,80,05,88,55,0C,78,0E,31,00,64,12,|knightsword|Cure Knightsword|14|1|Magic Power +1|-|
-159,<Swrd>Scan,Scan Knightsword,17,knightsword,1,13,White,,,,spell,F8,80,05,88,55,0C,78,11,31,00,64,13,|knightsword|Scan Knightsword|17|1|Magic Power +1|-|
 160,<Swrd>Antdt,Antdt Knightsword,20,knightsword,1,14,White,,,,spell,F8,80,05,88,55,0C,78,14,31,00,64,14,|knightsword|Antdt Knightsword|20|1|Magic Power +1|-|
 161,<Swrd>Mute,Mute Knightsword,23,knightsword,1,15,White,,,,spell,F8,80,05,88,55,0C,78,17,31,00,64,15,|knightsword|Mute Knightsword|23|1|Magic Power +1|-|
 162,<Swrd>Armor,Armor Knightsword,26,knightsword,1,16,White,,,,spell,F8,80,05,88,55,0C,78,1A,31,00,64,16,|knightsword|Armor Knightsword|26|1|Magic Power +1|-|
@@ -237,7 +234,6 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 235,<Swrd>WhiteWin,WhiteWind Knightsword,79,knightsword,5,9E,Blue,,,,spell,F8,80,05,40,55,0C,78,4F,31,40,64,9E,|knightsword|WhiteWind Knightsword|79|5|-|Wind|
 236,<Swrd>Missile,Missile Knightsword,44,knightsword,2,9F,Blue,,,,spell,F8,80,05,92,55,0C,78,2C,31,00,21,9F,|knightsword|Missile Knightsword|44|2|Vitality +3|-|
 237,<Axe>Cure,Cure Axe,20,axe,1,12,White,,,,spell,F8,80,07,D8,59,08,78,14,34,64,64,12,"|axe|Cure Axe|20|1|Magic Power, Strength, Vitality +1|-|"
-238,<Axe>Scan,Scan Axe,23,axe,1,13,White,,,,spell,F8,80,07,D8,59,08,78,17,34,64,64,13,"|axe|Scan Axe|23|1|Magic Power, Strength, Vitality +1|-|"
 239,<Axe>Antdt,Antdt Axe,26,axe,1,14,White,,,,spell,F8,80,07,D8,59,08,78,1A,34,64,64,14,"|axe|Antdt Axe|26|1|Magic Power, Strength, Vitality +1|-|"
 240,<Axe>Mute,Mute Axe,29,axe,1,15,White,,,,spell,F8,80,07,D8,59,08,78,1D,34,64,64,15,"|axe|Mute Axe|29|1|Magic Power, Strength, Vitality +1|-|"
 241,<Axe>Armor,Armor Axe,32,axe,1,16,White,,,,spell,F8,80,07,D8,59,08,78,20,34,64,64,16,"|axe|Armor Axe|32|1|Magic Power, Strength, Vitality +1|-|"
@@ -316,7 +312,6 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 314,<Axe>WhiteWin,WhiteWind Axe,85,axe,5,9E,Blue,,,,spell,F8,80,07,DA,59,08,78,55,34,64,64,9E,"|axe|WhiteWind Axe|85|5|Magic Power, Strength, Vitality +3|-|"
 315,<Axe>Missile,Missile Axe,50,axe,2,9F,Blue,,,,spell,F8,80,07,D9,59,08,78,32,34,64,21,9F,"|axe|Missile Axe|50|2|Magic Power, Strength, Vitality +2|-|"
 316,<Katn>Cure,Cure Katana,12,katana,1,12,White,,,,spell,F8,80,09,B8,5a,08,78,0C,37,0c,64,12,"|katana|Cure Katana|12|1|Agility, Magic Power, Vitality +1|-|"
-317,<Katn>Scan,Scan Katana,15,katana,1,13,White,,,,spell,F8,80,09,B8,5a,08,78,0F,37,0c,64,13,"|katana|Scan Katana|15|1|Agility, Magic Power, Vitality +1|-|"
 318,<Katn>Antdt,Antdt Katana,18,katana,1,14,White,,,,spell,F8,80,09,B8,5a,08,78,12,37,0c,64,14,"|katana|Antdt Katana|18|1|Agility, Magic Power, Vitality +1|-|"
 319,<Katn>Mute,Mute Katana,21,katana,1,15,White,,,,spell,F8,80,09,B8,5a,08,78,15,37,0c,64,15,"|katana|Mute Katana|21|1|Agility, Magic Power, Vitality +1|-|"
 320,<Katn>Armor,Armor Katana,24,katana,1,16,White,,,,spell,F8,80,09,B8,5a,08,78,18,37,0c,64,16,"|katana|Armor Katana|24|1|Agility, Magic Power, Vitality +1|-|"
@@ -413,7 +408,6 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 411,<Rod>Doom,Doom Rod,107,rod,5,34,Black,,,,spell,F8,04,4a,88,23,08,B4,6B,3B,64,21,34,|rod|Doom Rod|107|5|Magic Power +1|-|
 412,<Rod>Psych,Psych Rod,94,rod,3,35,Black,,,,spell,F8,04,4a,88,23,08,B5,5E,3B,64,21,35,|rod|Psych Rod|94|3|Magic Power +1|-|
 413,<Staf>Cure,Cure Staff,3,staff,1,12,White,,,,spell,38,80,4b,88,40,08,12,03,34,64,64,12,|staff|Cure Staff|3|1|Magic Power +1|-|
-414,<Staf>Scan,Scan Staff,6,staff,1,13,White,,,,spell,38,80,4b,88,40,08,13,06,34,64,64,13,|staff|Scan Staff|6|1|Magic Power +1|-|
 415,<Staf>Antdt,Antdt Staff,9,staff,1,14,White,,,,spell,38,80,4b,88,40,08,14,09,34,64,64,14,|staff|Antdt Staff|9|1|Magic Power +1|-|
 416,<Staf>Mute,Mute Staff,12,staff,1,15,White,,,,spell,38,80,4b,88,40,08,15,0C,34,64,64,15,|staff|Mute Staff|12|1|Magic Power +1|-|
 417,<Staf>Armor,Armor Staff,15,staff,1,16,White,,,,spell,38,80,4b,88,40,08,16,0F,34,64,64,16,|staff|Armor Staff|15|1|Magic Power +1|-|
@@ -430,7 +424,6 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 428,<Staf>Life2,Life2 Staff,48,staff,4,21,White,,,,spell,38,80,4b,8F,40,08,21,30,34,64,64,21,|staff|Life2 Staff|48|4|Magic Power +5|-|
 429,<Staf>Dispel,Dispel Staff,54,staff,3,23,White,,,,spell,38,80,4b,8F,40,08,23,36,34,64,64,23,|staff|Dispel Staff|54|3|Magic Power +5|-|
 430,<Harp>Cure,Cure Harp,5,harp,1,12,White,,,,spell,F8,20,4e,B8,9b,08,78,05,7f,00,64,12,"|harp|Cure Harp|5|1|Agility, Magic Power, Vitality +1|-|"
-431,<Harp>Scan,Scan Harp,8,harp,1,13,White,,,,spell,F8,20,4e,B8,9b,08,78,08,7f,00,64,13,"|harp|Scan Harp|8|1|Agility, Magic Power, Vitality +1|-|"
 432,<Harp>Antdt,Antdt Harp,11,harp,1,14,White,,,,spell,F8,20,4e,B8,9b,08,78,0B,7f,00,64,14,"|harp|Antdt Harp|11|1|Agility, Magic Power, Vitality +1|-|"
 433,<Harp>Mute,Mute Harp,14,harp,1,15,White,,,,spell,F8,20,4e,B8,9b,08,78,0E,7f,00,64,15,"|harp|Mute Harp|14|1|Agility, Magic Power, Vitality +1|-|"
 434,<Harp>Armor,Armor Harp,17,harp,1,16,White,,,,spell,F8,20,4e,B8,9b,08,78,11,7f,00,64,16,"|harp|Armor Harp|17|1|Agility, Magic Power, Vitality +1|-|"
@@ -445,71 +438,70 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 443,<Harp>Wall,Wall Harp,44,harp,3,1F,White,,,,spell,F8,20,4e,BA,9b,08,78,2C,7f,00,64,1F,"|harp|Wall Harp|44|3|Agility, Magic Power, Vitality +3|-|"
 444,<Harp>Bersk,Bersk Harp,47,harp,3,20,White,,,,spell,F8,20,4e,B8,9b,08,78,2F,7f,00,64,20,"|harp|Bersk Harp|47|3|Agility, Magic Power, Vitality +1|-|"
 445,<Harp>Life2,Life2 Harp,50,harp,4,21,White,,,,spell,F8,20,4e,BF,9b,08,78,32,7f,00,64,21,"|harp|Life2 Harp|50|4|Agility, Magic Power, Vitality +5|-|"
-446,<Harp>Holy,Holy Harp,53,harp,7,22,White,,,,spell,F8,20,4e,BF,9b,08,78,35,7f,00,21,22,"|harp|Holy Harp|53|7|Agility, Magic Power, Vitality +5|-|"
+446,<Harp>Holy,Holy Harp,53,harp,7,22,White,,,,spell,F8,20,4e,BF,9b,08,78,35,7f,00,64,22,"|harp|Holy Harp|53|7|Agility, Magic Power, Vitality +5|-|"
 447,<Harp>Dispel,Dispel Harp,56,harp,3,23,White,,,,spell,F8,20,4e,BF,9b,08,78,38,7f,00,64,23,"|harp|Dispel Harp|56|3|Agility, Magic Power, Vitality +5|-|"
-448,<Harp>Fire,Fire Harp,36,harp,1,24,Black,,,,spell,F8,20,4e,B8,9b,08,78,24,7f,00,21,24,"|harp|Fire Harp|36|1|Agility, Magic Power, Vitality +1|-|"
-449,<Harp>Ice,Ice Harp,36,harp,1,25,Black,,,,spell,F8,20,4e,B8,9b,08,78,24,7f,00,21,25,"|harp|Ice Harp|36|1|Agility, Magic Power, Vitality +1|-|"
-450,<Harp>Bolt,Bolt Harp,36,harp,1,26,Black,,,,spell,F8,20,4e,B8,9b,08,78,24,7f,00,21,26,"|harp|Bolt Harp|36|1|Agility, Magic Power, Vitality +1|-|"
-451,<Harp>Venom,Venom Harp,48,harp,1,27,Black,,,,spell,F8,20,4e,B8,9b,08,78,30,7f,00,21,27,"|harp|Venom Harp|48|1|Agility, Magic Power, Vitality +1|-|"
-452,<Harp>Sleep,Sleep Harp,49,harp,1,28,Black,,,,spell,F8,20,4e,B8,9b,08,78,31,7f,00,21,28,"|harp|Sleep Harp|49|1|Agility, Magic Power, Vitality +1|-|"
-453,<Harp>Toad,Toad Harp,51,harp,1,29,Black,,,,spell,F8,20,4e,B8,9b,08,78,33,7f,00,21,29,"|harp|Toad Harp|51|1|Agility, Magic Power, Vitality +1|-|"
-454,<Harp>Fire2,Fire2 Harp,57,harp,2,2A,Black,,,,spell,F8,20,4e,B9,9b,08,78,39,7f,00,21,2A,"|harp|Fire2 Harp|57|2|Agility, Magic Power, Vitality +2|-|"
-455,<Harp>Ice2,Ice2 Harp,57,harp,2,2B,Black,,,,spell,F8,20,4e,B9,9b,08,78,39,7f,00,21,2B,"|harp|Ice2 Harp|57|2|Agility, Magic Power, Vitality +2|-|"
-456,<Harp>Bolt2,Bolt2 Harp,57,harp,2,2C,Black,,,,spell,F8,20,4e,B9,9b,08,78,39,7f,00,21,2C,"|harp|Bolt2 Harp|57|2|Agility, Magic Power, Vitality +2|-|"
-457,<Harp>Drain,Drain Harp,65,harp,2,2D,Black,,,,spell,F8,20,4e,B9,9b,08,78,41,7f,00,21,2D,"|harp|Drain Harp|65|2|Agility, Magic Power, Vitality +2|-|"
-458,<Harp>Break,Break Harp,72,harp,3,2E,Black,,,,spell,F8,20,4e,B9,9b,08,78,48,7f,00,21,2E,"|harp|Break Harp|72|3|Agility, Magic Power, Vitality +2|-|"
-459,<Harp>Bio,Bio Harp,72,harp,3,2F,Black,,,,spell,F8,20,4e,BA,9b,08,78,48,7f,00,21,2F,"|harp|Bio Harp|72|3|Agility, Magic Power, Vitality +3|-|"
-460,<Harp>Fire3,Fire3 Harp,81,harp,4,30,Black,,,,spell,F8,20,4e,BF,9b,08,78,51,7f,00,21,30,"|harp|Fire3 Harp|81|4|Agility, Magic Power, Vitality +5|-|"
-461,<Harp>Ice3,Ice3 Harp,81,harp,4,31,Black,,,,spell,F8,20,4e,BF,9b,08,78,51,7f,00,21,31,"|harp|Ice3 Harp|81|4|Agility, Magic Power, Vitality +5|-|"
-462,<Harp>Bolt3,Bolt3 Harp,81,harp,4,32,Black,,,,spell,F8,20,4e,BF,9b,08,78,51,7f,00,21,32,"|harp|Bolt3 Harp|81|4|Agility, Magic Power, Vitality +5|-|"
-463,<Harp>Flare,Flare Harp,112,harp,7,33,Black,,,,spell,F8,20,4e,BF,9b,08,78,70,7f,00,21,33,"|harp|Flare Harp|112|7|Agility, Magic Power, Vitality +5|-|"
-464,<Harp>Doom,Doom Harp,107,harp,5,34,Black,,,,spell,F8,20,4e,BF,9b,08,78,6B,7f,00,21,34,"|harp|Doom Harp|107|5|Agility, Magic Power, Vitality +5|-|"
-465,<Harp>Psych,Psych Harp,94,harp,3,35,Black,,,,spell,F8,20,4e,BF,9b,08,78,5E,7f,00,21,35,"|harp|Psych Harp|94|3|Agility, Magic Power, Vitality +5|-|"
-466,<Harp>Slow,Slow Harp,51,harp,1,37,Time,,,,spell,F8,20,4e,B0,9b,08,78,33,7f,00,21,37,"|harp|Slow Harp|51|1|Agility, Vitality +1|-|"
+448,<Harp>Fire,Fire Harp,36,harp,1,24,Black,,,,spell,F8,20,4e,B8,9b,08,78,24,7f,00,64,24,"|harp|Fire Harp|36|1|Agility, Magic Power, Vitality +1|-|"
+449,<Harp>Ice,Ice Harp,36,harp,1,25,Black,,,,spell,F8,20,4e,B8,9b,08,78,24,7f,00,64,25,"|harp|Ice Harp|36|1|Agility, Magic Power, Vitality +1|-|"
+450,<Harp>Bolt,Bolt Harp,36,harp,1,26,Black,,,,spell,F8,20,4e,B8,9b,08,78,24,7f,00,64,26,"|harp|Bolt Harp|36|1|Agility, Magic Power, Vitality +1|-|"
+451,<Harp>Venom,Venom Harp,48,harp,1,27,Black,,,,spell,F8,20,4e,B8,9b,08,78,30,7f,00,64,27,"|harp|Venom Harp|48|1|Agility, Magic Power, Vitality +1|-|"
+452,<Harp>Sleep,Sleep Harp,49,harp,1,28,Black,,,,spell,F8,20,4e,B8,9b,08,78,31,7f,00,64,28,"|harp|Sleep Harp|49|1|Agility, Magic Power, Vitality +1|-|"
+453,<Harp>Toad,Toad Harp,51,harp,1,29,Black,,,,spell,F8,20,4e,B8,9b,08,78,33,7f,00,64,29,"|harp|Toad Harp|51|1|Agility, Magic Power, Vitality +1|-|"
+454,<Harp>Fire2,Fire2 Harp,57,harp,2,2A,Black,,,,spell,F8,20,4e,B9,9b,08,78,39,7f,00,64,2A,"|harp|Fire2 Harp|57|2|Agility, Magic Power, Vitality +2|-|"
+455,<Harp>Ice2,Ice2 Harp,57,harp,2,2B,Black,,,,spell,F8,20,4e,B9,9b,08,78,39,7f,00,64,2B,"|harp|Ice2 Harp|57|2|Agility, Magic Power, Vitality +2|-|"
+456,<Harp>Bolt2,Bolt2 Harp,57,harp,2,2C,Black,,,,spell,F8,20,4e,B9,9b,08,78,39,7f,00,64,2C,"|harp|Bolt2 Harp|57|2|Agility, Magic Power, Vitality +2|-|"
+457,<Harp>Drain,Drain Harp,65,harp,2,2D,Black,,,,spell,F8,20,4e,B9,9b,08,78,41,7f,00,64,2D,"|harp|Drain Harp|65|2|Agility, Magic Power, Vitality +2|-|"
+458,<Harp>Break,Break Harp,72,harp,3,2E,Black,,,,spell,F8,20,4e,B9,9b,08,78,48,7f,00,64,2E,"|harp|Break Harp|72|3|Agility, Magic Power, Vitality +2|-|"
+459,<Harp>Bio,Bio Harp,72,harp,3,2F,Black,,,,spell,F8,20,4e,BA,9b,08,78,48,7f,00,64,2F,"|harp|Bio Harp|72|3|Agility, Magic Power, Vitality +3|-|"
+460,<Harp>Fire3,Fire3 Harp,81,harp,4,30,Black,,,,spell,F8,20,4e,BF,9b,08,78,51,7f,00,64,30,"|harp|Fire3 Harp|81|4|Agility, Magic Power, Vitality +5|-|"
+461,<Harp>Ice3,Ice3 Harp,81,harp,4,31,Black,,,,spell,F8,20,4e,BF,9b,08,78,51,7f,00,64,31,"|harp|Ice3 Harp|81|4|Agility, Magic Power, Vitality +5|-|"
+462,<Harp>Bolt3,Bolt3 Harp,81,harp,4,32,Black,,,,spell,F8,20,4e,BF,9b,08,78,51,7f,00,64,32,"|harp|Bolt3 Harp|81|4|Agility, Magic Power, Vitality +5|-|"
+463,<Harp>Flare,Flare Harp,112,harp,7,33,Black,,,,spell,F8,20,4e,BF,9b,08,78,70,7f,00,64,33,"|harp|Flare Harp|112|7|Agility, Magic Power, Vitality +5|-|"
+464,<Harp>Doom,Doom Harp,107,harp,5,34,Black,,,,spell,F8,20,4e,BF,9b,08,78,6B,7f,00,64,34,"|harp|Doom Harp|107|5|Agility, Magic Power, Vitality +5|-|"
+465,<Harp>Psych,Psych Harp,94,harp,3,35,Black,,,,spell,F8,20,4e,BF,9b,08,78,5E,7f,00,64,35,"|harp|Psych Harp|94|3|Agility, Magic Power, Vitality +5|-|"
+466,<Harp>Slow,Slow Harp,51,harp,1,37,Time,,,,spell,F8,20,4e,B0,9b,08,78,33,7f,00,64,37,"|harp|Slow Harp|51|1|Agility, Vitality +1|-|"
 467,<Harp>Regen,Regen Harp,55,harp,1,38,Time,,,,spell,F8,20,4e,B0,9b,08,78,37,7f,00,64,38,"|harp|Regen Harp|55|1|Agility, Vitality +1|-|"
 468,<Harp>Haste,Haste Harp,58,harp,1,3A,Time,,,,spell,F8,20,4e,B0,9b,08,78,3A,7f,00,64,3A,"|harp|Haste Harp|58|1|Agility, Vitality +1|-|"
 469,<Harp>Float,Float Harp,59,harp,1,3B,Time,,,,spell,F8,20,4e,B0,9b,08,78,3B,7f,00,64,3B,"|harp|Float Harp|59|1|Agility, Vitality +1|-|"
-470,<Harp>Demi,Demi Harp,64,harp,1,3C,Time,,,,spell,F8,20,4e,B1,9b,08,78,40,7f,00,21,3C,"|harp|Demi Harp|64|1|Agility, Vitality +2|-|"
-471,<Harp>Stop,Stop Harp,72,harp,2,3D,Time,,,,spell,F8,20,4e,B1,9b,08,78,48,7f,00,21,3D,"|harp|Stop Harp|72|2|Agility, Vitality +2|-|"
-472,<Harp>Comet,Comet Harp,94,harp,3,3F,Time,,,,spell,F8,20,4e,B1,9b,08,78,5E,7f,00,21,3F,"|harp|Comet Harp|94|3|Agility, Vitality +2|-|"
-473,<Harp>Slow2,Slow2 Harp,83,harp,3,40,Time,,,,spell,F8,20,4e,B2,9b,08,78,53,7f,00,21,40,"|harp|Slow2 Harp|83|3|Agility, Vitality +3|-|"
-474,<Harp>Qrter,Qrter Harp,99,harp,4,42,Time,,,,spell,F8,20,4e,B2,9b,08,78,63,7f,00,21,42,"|harp|Qrter Harp|99|4|Agility, Vitality +3|-|"
+470,<Harp>Demi,Demi Harp,64,harp,1,3C,Time,,,,spell,F8,20,4e,B1,9b,08,78,40,7f,00,64,3C,"|harp|Demi Harp|64|1|Agility, Vitality +2|-|"
+471,<Harp>Stop,Stop Harp,72,harp,2,3D,Time,,,,spell,F8,20,4e,B1,9b,08,78,48,7f,00,64,3D,"|harp|Stop Harp|72|2|Agility, Vitality +2|-|"
+472,<Harp>Comet,Comet Harp,94,harp,3,3F,Time,,,,spell,F8,20,4e,B1,9b,08,78,5E,7f,00,64,3F,"|harp|Comet Harp|94|3|Agility, Vitality +2|-|"
+473,<Harp>Slow2,Slow2 Harp,83,harp,3,40,Time,,,,spell,F8,20,4e,B2,9b,08,78,53,7f,00,64,40,"|harp|Slow2 Harp|83|3|Agility, Vitality +3|-|"
+474,<Harp>Qrter,Qrter Harp,99,harp,4,42,Time,,,,spell,F8,20,4e,B2,9b,08,78,63,7f,00,64,42,"|harp|Qrter Harp|99|4|Agility, Vitality +3|-|"
 475,<Harp>Hast2,Hast2 Harp,96,harp,4,43,Time,,,,spell,F8,20,4e,B7,9b,08,78,60,7f,00,64,43,"|harp|Hast2 Harp|96|4|Agility, Vitality +5|-|"
-476,<Harp>Old,Old Harp,101,harp,3,44,Time,,,,spell,F8,20,4e,B9,9b,08,78,65,7f,00,21,44,"|harp|Old Harp|101|3|Agility, Magic Power, Vitality +2|-|"
-477,<Harp>Meteo,Meteo Harp,112,harp,7,45,Time,,,,spell,F8,20,4e,BA,9b,08,78,70,7f,00,21,45,"|harp|Meteo Harp|112|7|Agility, Magic Power, Vitality +3|-|"
-478,<Harp>Xzone,Xzone Harp,107,harp,4,47,Time,,,,spell,F8,20,4e,BA,9b,08,78,6B,7f,00,21,47,"|harp|Xzone Harp|107|4|Agility, Magic Power, Vitality +3|-|"
-479,<Harp>Condemn,Condemn Harp,36,harp,4,82,Blue,,,,spell,F8,20,4e,BA,9b,08,78,24,7f,00,21,82,"|harp|Condemn Harp|36|4|Agility, Magic Power, Vitality +3|-|"
-480,<Harp>Roulette,Roulette Harp,14,harp,1,83,Blue,,,,spell,F8,20,4e,B8,9b,08,78,0E,7f,00,21,83,"|harp|Roulette Harp|14|1|Agility, Magic Power, Vitality +1|-|"
-481,<Harp>AquaRake,AquaRake Harp,49,harp,2,84,Blue,,,,spell,F8,20,4e,B8,9b,08,78,31,7f,00,21,84,"|harp|AquaRake Harp|49|2|Agility, Magic Power, Vitality +1|-|"
+476,<Harp>Old,Old Harp,101,harp,3,44,Time,,,,spell,F8,20,4e,B9,9b,08,78,65,7f,00,64,44,"|harp|Old Harp|101|3|Agility, Magic Power, Vitality +2|-|"
+477,<Harp>Meteo,Meteo Harp,112,harp,7,45,Time,,,,spell,F8,20,4e,BA,9b,08,78,70,7f,00,64,45,"|harp|Meteo Harp|112|7|Agility, Magic Power, Vitality +3|-|"
+478,<Harp>Xzone,Xzone Harp,107,harp,4,47,Time,,,,spell,F8,20,4e,BA,9b,08,78,6B,7f,00,64,47,"|harp|Xzone Harp|107|4|Agility, Magic Power, Vitality +3|-|"
+479,<Harp>Condemn,Condemn Harp,36,harp,4,82,Blue,,,,spell,F8,20,4e,BA,9b,08,78,24,7f,00,64,82,"|harp|Condemn Harp|36|4|Agility, Magic Power, Vitality +3|-|"
+480,<Harp>Roulette,Roulette Harp,14,harp,1,83,Blue,,,,spell,F8,20,4e,B8,9b,08,78,0E,7f,00,64,83,"|harp|Roulette Harp|14|1|Agility, Magic Power, Vitality +1|-|"
+481,<Harp>AquaRake,AquaRake Harp,49,harp,2,84,Blue,,,,spell,F8,20,4e,B8,9b,08,78,31,7f,00,64,84,"|harp|AquaRake Harp|49|2|Agility, Magic Power, Vitality +1|-|"
 482,<Harp>L5 Doom,L5 Doom Harp,86,harp,6,85,Blue,,,,spell,F8,20,4e,B9,9b,08,78,56,7f,00,64,85,"|harp|L5 Doom Harp|86|6|Agility, Magic Power, Vitality +2|-|"
 483,<Harp>L4 Qrter,L4 Qrter Harp,67,harp,4,86,Blue,,,,spell,F8,20,4e,B9,9b,08,78,43,7f,00,64,86,"|harp|L4 Qrter Harp|67|4|Agility, Magic Power, Vitality +2|-|"
 484,<Harp>L2 Old,L2 Old Harp,67,harp,6,87,Blue,,,,spell,F8,20,4e,B9,9b,08,78,43,7f,00,64,87,"|harp|L2 Old Harp|67|6|Agility, Magic Power, Vitality +2|-|"
 485,<Harp>L3 Flare,L3 Flare Harp,67,harp,4,88,Blue,,,,spell,F8,20,4e,B8,9b,08,78,43,7f,00,64,88,"|harp|L3 Flare Harp|67|4|Agility, Magic Power, Vitality +1|-|"
-486,<Harp>FrogSong,FrogSong Harp,24,harp,1,89,Blue,,,,spell,F8,20,4e,B8,9b,08,78,18,7f,00,21,89,"|harp|FrogSong Harp|24|1|Agility, Magic Power, Vitality +1|-|"
-487,<Harp>TinySong,TinySong Harp,25,harp,1,8A,Blue,,,,spell,F8,20,4e,B8,9b,08,78,19,7f,00,21,8A,"|harp|TinySong Harp|25|1|Agility, Magic Power, Vitality +1|-|"
-488,<Harp>Flash,Flash Harp,19,harp,1,8B,Blue,,,,spell,F8,20,4e,B8,9b,08,78,13,7f,00,21,8B,"|harp|Flash Harp|19|1|Agility, Magic Power, Vitality +1|-|"
-489,<Harp>Time Sli,Time Slip Harp,18,harp,1,8C,Blue,,,,spell,F8,20,4e,B8,9b,08,78,12,7f,00,21,8C,"|harp|Time Slip Harp|18|1|Agility, Magic Power, Vitality +1|-|"
-490,<Harp>MoonFlut,MoonFlut Harp,19,harp,1,8D,Blue,,,,spell,F8,20,4e,B8,9b,08,78,13,7f,00,21,8D,"|harp|MoonFlut Harp|19|1|Agility, Magic Power, Vitality +1|-|"
-491,<Harp>DethClaw,DethClaw Harp,41,harp,2,8E,Blue,,,,spell,F8,20,4e,BA,9b,08,78,29,7f,00,21,8E,"|harp|DethClaw Harp|41|2|Agility, Magic Power, Vitality +3|-|"
-492,<Harp>Aero,Aero Harp,36,harp,1,8F,Blue,,,,spell,F8,20,4e,B9,9b,08,78,24,7f,00,21,8F,"|harp|Aero Harp|36|1|Agility, Magic Power, Vitality +2|-|"
-493,<Harp>Aero 2,Aero 2 Harp,57,harp,2,90,Blue,,,,spell,F8,20,4e,BA,9b,08,78,39,7f,00,21,90,"|harp|Aero 2 Harp|57|2|Agility, Magic Power, Vitality +3|-|"
-494,<Harp>Aero 3,Aero 3 Harp,81,harp,5,91,Blue,,,,spell,F8,20,4e,BF,9b,08,78,51,7f,00,21,91,"|harp|Aero 3 Harp|81|5|Agility, Magic Power, Vitality +5|-|"
-495,<Harp>Emission,Emission Harp,46,harp,2,92,Blue,,,,spell,F8,20,4e,B9,9b,08,78,2E,7f,00,21,92,"|harp|Emission Harp|46|2|Agility, Magic Power, Vitality +2|-|"
-496,<Harp>GblinPnc,GblinPnch Harp,11,harp,1,93,Blue,,,,spell,F8,20,4e,BA,9b,08,78,0B,7f,00,21,93,"|harp|GblinPnch Harp|11|1|Agility, Magic Power, Vitality +3|-|"
-497,<Harp>DrkShock,DrkShock Harp,79,harp,4,94,Blue,,,,spell,F8,20,4e,BA,9b,08,78,4F,7f,00,21,94,"|harp|DrkShock Harp|79|4|Agility, Magic Power, Vitality +3|-|"
-498,<Harp>GuardOff,GuardOff Harp,68,harp,3,95,Blue,,,,spell,F8,20,4e,BA,9b,08,78,44,7f,00,21,95,"|harp|GuardOff Harp|68|3|Agility, Magic Power, Vitality +3|-|"
-499,<Harp>Fusion,Fusion Harp,31,harp,2,96,Blue,,,,spell,F8,20,4e,BA,9b,08,78,1F,7f,00,21,96,"|harp|Fusion Harp|31|2|Agility, Magic Power, Vitality +3|-|"
-500,<Harp>MindBlst,MindBlst Harp,89,harp,5,97,Blue,,,,spell,F8,20,4e,BA,9b,08,78,59,7f,00,21,97,"|harp|MindBlst Harp|89|5|Agility, Magic Power, Vitality +3|-|"
-501,<Harp>Vampire,Vampire Harp,15,harp,1,98,Blue,,,,spell,F8,20,4e,BA,9b,08,78,0F,7f,00,21,98,"|harp|Vampire Harp|15|1|Agility, Magic Power, Vitality +3|-|"
-502,<Harp>Hammer,Hammer Harp,23,harp,1,99,Blue,,,,spell,F8,20,4e,BA,9b,08,78,17,7f,00,21,99,"|harp|Hammer Harp|23|1|Agility, Magic Power, Vitality +3|-|"
+486,<Harp>FrogSong,FrogSong Harp,24,harp,1,89,Blue,,,,spell,F8,20,4e,B8,9b,08,78,18,7f,00,64,89,"|harp|FrogSong Harp|24|1|Agility, Magic Power, Vitality +1|-|"
+487,<Harp>TinySong,TinySong Harp,25,harp,1,8A,Blue,,,,spell,F8,20,4e,B8,9b,08,78,19,7f,00,64,8A,"|harp|TinySong Harp|25|1|Agility, Magic Power, Vitality +1|-|"
+488,<Harp>Flash,Flash Harp,19,harp,1,8B,Blue,,,,spell,F8,20,4e,B8,9b,08,78,13,7f,00,64,8B,"|harp|Flash Harp|19|1|Agility, Magic Power, Vitality +1|-|"
+489,<Harp>Time Sli,Time Slip Harp,18,harp,1,8C,Blue,,,,spell,F8,20,4e,B8,9b,08,78,12,7f,00,64,8C,"|harp|Time Slip Harp|18|1|Agility, Magic Power, Vitality +1|-|"
+490,<Harp>MoonFlut,MoonFlut Harp,19,harp,1,8D,Blue,,,,spell,F8,20,4e,B8,9b,08,78,13,7f,00,64,8D,"|harp|MoonFlut Harp|19|1|Agility, Magic Power, Vitality +1|-|"
+491,<Harp>DethClaw,DethClaw Harp,41,harp,2,8E,Blue,,,,spell,F8,20,4e,BA,9b,08,78,29,7f,00,64,8E,"|harp|DethClaw Harp|41|2|Agility, Magic Power, Vitality +3|-|"
+492,<Harp>Aero,Aero Harp,36,harp,1,8F,Blue,,,,spell,F8,20,4e,B9,9b,08,78,24,7f,00,64,8F,"|harp|Aero Harp|36|1|Agility, Magic Power, Vitality +2|-|"
+493,<Harp>Aero 2,Aero 2 Harp,57,harp,2,90,Blue,,,,spell,F8,20,4e,BA,9b,08,78,39,7f,00,64,90,"|harp|Aero 2 Harp|57|2|Agility, Magic Power, Vitality +3|-|"
+494,<Harp>Aero 3,Aero 3 Harp,81,harp,5,91,Blue,,,,spell,F8,20,4e,BF,9b,08,78,51,7f,00,64,91,"|harp|Aero 3 Harp|81|5|Agility, Magic Power, Vitality +5|-|"
+495,<Harp>Emission,Emission Harp,46,harp,2,92,Blue,,,,spell,F8,20,4e,B9,9b,08,78,2E,7f,00,64,92,"|harp|Emission Harp|46|2|Agility, Magic Power, Vitality +2|-|"
+496,<Harp>GblinPnc,GblinPnch Harp,11,harp,1,93,Blue,,,,spell,F8,20,4e,BA,9b,08,78,0B,7f,00,64,93,"|harp|GblinPnch Harp|11|1|Agility, Magic Power, Vitality +3|-|"
+497,<Harp>DrkShock,DrkShock Harp,79,harp,4,94,Blue,,,,spell,F8,20,4e,BA,9b,08,78,4F,7f,00,64,94,"|harp|DrkShock Harp|79|4|Agility, Magic Power, Vitality +3|-|"
+498,<Harp>GuardOff,GuardOff Harp,68,harp,3,95,Blue,,,,spell,F8,20,4e,BA,9b,08,78,44,7f,00,64,95,"|harp|GuardOff Harp|68|3|Agility, Magic Power, Vitality +3|-|"
+499,<Harp>Fusion,Fusion Harp,31,harp,2,96,Blue,,,,spell,F8,20,4e,BA,9b,08,78,1F,7f,00,64,96,"|harp|Fusion Harp|31|2|Agility, Magic Power, Vitality +3|-|"
+500,<Harp>MindBlst,MindBlst Harp,89,harp,5,97,Blue,,,,spell,F8,20,4e,BA,9b,08,78,59,7f,00,64,97,"|harp|MindBlst Harp|89|5|Agility, Magic Power, Vitality +3|-|"
+501,<Harp>Vampire,Vampire Harp,15,harp,1,98,Blue,,,,spell,F8,20,4e,BA,9b,08,78,0F,7f,00,64,98,"|harp|Vampire Harp|15|1|Agility, Magic Power, Vitality +3|-|"
+502,<Harp>Hammer,Hammer Harp,23,harp,1,99,Blue,,,,spell,F8,20,4e,BA,9b,08,78,17,7f,00,64,99,"|harp|Hammer Harp|23|1|Agility, Magic Power, Vitality +3|-|"
 503,<Harp>MgthyGrd,MgthyGrd Harp,104,harp,7,9A,Blue,,,,spell,F8,20,4e,BA,9b,08,78,68,7f,00,64,9A,"|harp|MgthyGrd Harp|104|7|Agility, Magic Power, Vitality +3|-|"
-504,<Harp>Exploder,Exploder Harp,34,harp,2,9B,Blue,,,,spell,F8,20,4e,BA,9b,08,78,22,7f,00,21,9B,"|harp|Exploder Harp|34|2|Agility, Magic Power, Vitality +3|-|"
-505,<Harp>????,???? Harp,18,harp,1,9C,Blue,,,,spell,F8,20,4e,BF,9b,08,78,12,7f,00,21,9C,"|harp|???? Harp|18|1|Agility, Magic Power, Vitality +5|-|"
-506,<Harp>Blowfish,Blowfish Harp,61,harp,5,9D,Blue,,,,spell,F8,20,4e,BA,9b,08,78,3D,7f,00,21,9D,"|harp|Blowfish Harp|61|5|Agility, Magic Power, Vitality +3|-|"
+504,<Harp>Exploder,Exploder Harp,34,harp,2,9B,Blue,,,,spell,F8,20,4e,BA,9b,08,78,22,7f,00,64,9B,"|harp|Exploder Harp|34|2|Agility, Magic Power, Vitality +3|-|"
+505,<Harp>????,???? Harp,18,harp,1,9C,Blue,,,,spell,F8,20,4e,BF,9b,08,78,12,7f,00,64,9C,"|harp|???? Harp|18|1|Agility, Magic Power, Vitality +5|-|"
+506,<Harp>Blowfish,Blowfish Harp,61,harp,5,9D,Blue,,,,spell,F8,20,4e,BA,9b,08,78,3D,7f,00,64,9D,"|harp|Blowfish Harp|61|5|Agility, Magic Power, Vitality +3|-|"
 507,<Harp>WhiteWin,WhiteWind Harp,70,harp,5,9E,Blue,,,,spell,F8,20,4e,BA,9b,08,78,46,7f,00,64,9E,"|harp|WhiteWind Harp|70|5|Agility, Magic Power, Vitality +3|-|"
-508,<Harp>Missile,Missile Harp,35,harp,2,9F,Blue,,,,spell,F8,20,4e,BA,9b,08,78,23,7f,00,21,9F,"|harp|Missile Harp|35|2|Agility, Magic Power, Vitality +3|-|"
+508,<Harp>Missile,Missile Harp,35,harp,2,9F,Blue,,,,spell,F8,20,4e,BA,9b,08,78,23,7f,00,64,9F,"|harp|Missile Harp|35|2|Agility, Magic Power, Vitality +3|-|"
 509,<Misc>Cure,Cure Flail,10,flail,1,12,White,,,,spell,F8,80,5e,B8,23,08,78,0A,38,64,64,12,"|flail|Cure Flail|10|1|Agility, Magic Power, Vitality +1|-|"
-510,<Misc>Scan,Scan Flail,13,flail,1,13,White,,,,spell,F8,80,5e,B8,23,08,78,0D,38,64,64,13,"|flail|Scan Flail|13|1|Agility, Magic Power, Vitality +1|-|"
 511,<Misc>Antdt,Antdt Flail,16,flail,1,14,White,,,,spell,F8,80,5e,B8,23,08,78,10,38,64,64,14,"|flail|Antdt Flail|16|1|Agility, Magic Power, Vitality +1|-|"
 512,<Misc>Mute,Mute Flail,19,flail,1,15,White,,,,spell,F8,80,5e,B8,23,08,78,13,38,64,64,15,"|flail|Mute Flail|19|1|Agility, Magic Power, Vitality +1|-|"
 513,<Misc>Armor,Armor Flail,22,flail,1,16,White,,,,spell,F8,80,5e,B8,23,08,78,16,38,64,64,16,"|flail|Armor Flail|22|1|Agility, Magic Power, Vitality +1|-|"

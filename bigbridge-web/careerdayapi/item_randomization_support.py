@@ -452,6 +452,150 @@ def set_bit(byte,bit_to_set):
     temp_bin = temp_bin[:bit_to_set] + "1" + temp_bin[bit_to_set+1:]
     return hex(int(temp_bin,base=2)).replace("0x","").zfill(2)
 
+
+def generate_v1_table():
+    
+    df_magic = pd.read_csv('tables/magic_id.csv')
+    df_magic = df_magic[df_magic['item_randomization_valid']==True]
+    
+    
+    #### SPELL WEAPONS
+    
+    new_weapons = {}
+    new_index = 0
+    for k, v in weapon_type_dict.items():
+    #    print("Processing %s..." % v['clean_name'])
+        if k == 'rod':
+            df_magic_dict = df_magic[(df_magic['type']=='Black') | ((df_magic['readable_name']=='Holy') & (df_magic['readable_name']=='White'))].to_dict()
+            for index in df_magic_dict['magic_id'].keys():
+                weapon_name_menu = v['text_icon'] + df_magic_dict['readable_name'][index][:8]
+                weapon_name_textbox = df_magic_dict['readable_name'][index] + " "+ v['clean_name']
+                weapon_name_textbox = weapon_name_textbox[:24]
+                weapon_str =  int(df_magic_dict['randomization_power'][index] + v['bonus'])
+                data_str = ''.join(v['bytemap'].values())
+                new_weapons[new_index] = {'adjustment_type':'spell','weapon_type':k,'weapon_name_textbox':weapon_name_textbox,'weapon_name_menu':weapon_name_menu,'weapon_str':weapon_str,'tier':df_magic_dict['tier'][index],'magic_id':df_magic_dict['magic_id'][index],'magic_type':df_magic_dict['type'][index]}
+                for byte in v['bytemap']:
+                    new_weapons[new_index][byte] = v['bytemap'][byte]
+                new_index += 1
+        elif k == 'staff':
+            df_magic_dict = df_magic[(df_magic['type']=='White') & (df_magic['readable_name']!='Holy')].to_dict()
+#            breakpoint()
+            for index in df_magic_dict['magic_id'].keys():
+                weapon_name_menu = v['text_icon'] + df_magic_dict['readable_name'][index][:8]
+                weapon_name_textbox = df_magic_dict['readable_name'][index] + " "+ v['clean_name']
+                weapon_name_textbox = weapon_name_textbox[:24]
+                weapon_str =  int(df_magic_dict['randomization_power'][index] + v['bonus'])
+                data_str = ''.join(v['bytemap'].values())
+                new_weapons[new_index] = {'adjustment_type':'spell','weapon_type':k,'weapon_name_textbox':weapon_name_textbox,'weapon_name_menu':weapon_name_menu,'weapon_str':weapon_str,'tier':df_magic_dict['tier'][index],'magic_id':df_magic_dict['magic_id'][index],'magic_type':df_magic_dict['type'][index]}
+                for byte in v['bytemap']:
+                    new_weapons[new_index][byte] = v['bytemap'][byte]
+                new_index += 1
+        elif k in ['whip','spear','bow','bell']:
+            pass
+        else:
+            df_magic_dict = df_magic.to_dict()
+            for index in df_magic_dict['magic_id'].keys():
+                weapon_name_menu = v['text_icon'] + df_magic_dict['readable_name'][index][:8]
+                weapon_name_textbox = df_magic_dict['readable_name'][index] + " "+ k.title()
+                weapon_name_textbox = weapon_name_textbox[:24]
+                weapon_str =  int(df_magic_dict['randomization_power'][index] + v['bonus'])
+                data_str = ''.join(v['bytemap'].values())
+                new_weapons[new_index] = {'adjustment_type':'spell','weapon_type':k,'weapon_name_textbox':weapon_name_textbox,'weapon_name_menu':weapon_name_menu,'weapon_str':weapon_str,'tier':df_magic_dict['tier'][index],'magic_id':df_magic_dict['magic_id'][index],'magic_type':df_magic_dict['type'][index]}
+                for byte in v['bytemap']:
+                    new_weapons[new_index][byte] = v['bytemap'][byte]
+                new_index += 1
+            
+    df = pd.DataFrame(new_weapons).T
+    
+    #### KILLER WEAPONS (BOWS,SPEARS,WHIPS)
+    new_index = 0
+    new_weapons = {}
+    for weapon_list in weapon_killer:
+        weapon = list(weapon_list.keys())[0]
+        killer_order = list(weapon_list.values())[0]
+        killer_order.reverse()
+        weap_dict = weapon_type_dict[weapon]
+        power_num = 15
+        killer_len = len(killer_order)
+    
+        for killer in range(killer_len):
+            next_killer = killer_order.pop()
+    #        print("Killer weapon %s killer %s %s" % (weapon,next_killer, killer_order))
+            weapon_name_menu = weap_dict['text_icon'] + (next_killer+"Klr")[:8]
+            weapon_name_textbox = next_killer + " Killer "+ weap_dict['clean_name']
+            weapon_name_textbox = weapon_name_textbox[:24]
+            weapon_str =  int(power_num + weap_dict['bonus'])
+            data_str = ''.join(weap_dict['bytemap'].values())
+            new_weapons[new_index] = {'adjustment_type':'killer','weapon_type':weapon,'weapon_name_textbox':weapon_name_textbox,'weapon_name_menu':weapon_name_menu,
+                                      'weapon_str':weapon_str,'tier':int(round(power_num/12)),'killer_type':next_killer}
+            
+            for byte in weap_dict['bytemap']:
+                new_weapons[new_index][byte] = weap_dict['bytemap'][byte]
+            power_num += 12
+            new_index += 1
+    
+    df2 = pd.DataFrame(new_weapons).T
+    df = df.append(df2)
+    
+    #### ABILITY WEAPONS (BELLS)
+    new_index = 0
+    new_weapons = {}
+    for ability in list(ability_dict.keys()):
+        weap_dict = weapon_type_dict['bell']
+        power_num = ability_dict_power[ability]
+        weapon_name_menu = weap_dict['text_icon'] + ability[:8]
+        weapon_name_textbox = ability + " "+ weap_dict['clean_name']
+        weapon_name_textbox = weapon_name_textbox[:24]
+        weapon_str =  int(power_num + weap_dict['bonus'])
+        data_str = ''.join(weap_dict['bytemap'].values())
+        new_weapons[new_index] = {'adjustment_type':'ability','weapon_type':'bell','weapon_name_textbox':weapon_name_textbox,'weapon_name_menu':weapon_name_menu,
+                                  'weapon_str':weapon_str,'tier':int(round(power_num/12)),'ability_id':ability_dict[ability],'ability':ability}
+        for byte in weap_dict['bytemap']:
+            new_weapons[new_index][byte] = weap_dict['bytemap'][byte]
+            
+        new_index += 1
+
+    df3 = pd.DataFrame(new_weapons).T
+    df = df.append(df3)
+    
+    
+    #### ELEMENTAL (EVERY WEAPON)
+    new_index = 0
+    new_weapons = {}
+    for weapon in list(weapon_type_dict.keys()):
+        weap_dict = weapon_type_dict[weapon]
+        power_num = 76
+        weapon_name_menu = weap_dict['text_icon'] + "Elements"[:8]
+        weapon_name_textbox = "Elements" + " " + weap_dict['clean_name']
+        weapon_name_textbox = weapon_name_textbox[:24]
+        weapon_str =  int(power_num + weap_dict['bonus'])
+        data_str = ''.join(weap_dict['bytemap'].values())
+        new_weapons[new_index] = {'adjustment_type':'elemental','weapon_type':weapon,'weapon_name_textbox':weapon_name_textbox,'weapon_name_menu':weapon_name_menu,
+                                  'weapon_str':weapon_str,'tier':int(round(power_num/12))}
+        for byte in weap_dict['bytemap']:
+            new_weapons[new_index][byte] = weap_dict['bytemap'][byte]
+
+
+        new_index += 1
+    
+    df4 = pd.DataFrame(new_weapons).T
+    df = df.append(df4)
+    df = df[['weapon_name_menu','weapon_name_textbox','weapon_str','weapon_type','tier','magic_id','magic_type','killer_type','ability','ability_id','adjustment_type','byte1','byte2','byte3','byte4','byte5','byte6','byte7','byte8','byte9','byte10','byte11','byte12']]
+    df.reset_index(inplace=True)
+    df.drop('index',axis=1,inplace=True)
+    df.reset_index(inplace=True)
+    
+    df.to_csv("tables/custom_weapons_v1.csv",index=None)
+    
+    
+    
+    
+    
+    
+#generate_v1_table()
+    
+    
+
 class Weapon(ABC):
     type = 'weapon'
     
@@ -473,7 +617,7 @@ class Weapon(ABC):
 
         self.text_textbox = choice['weapon_name_textbox']
         self.text_menu = choice['weapon_name_menu']
-        self.weapon_power = choice['weapon_str']
+        self.weapon_power = i2b(choice['weapon_str'])
 
         
 
@@ -505,14 +649,13 @@ class Weapon(ABC):
 
     
 class WeaponManager(ABC):
-    def __init__(self, data_manager, re=None, percent_randomization=100):
+    def __init__(self, data_manager, re=None):
         global magic_dict
 #        breakpoint()
         magic_dict = data_manager.files['magic_item_randomization'].reset_index()[['magic_id','readable_name','tier']].set_index('magic_id').to_dict()
         self.df_weapon = data_manager.files['weapon_randomization']
         self.df_custom_weapons = data_manager.files['custom_weapons']
-        self.history = {}
-        self.percent_randomization = percent_randomization
+        self.history = []
         self.banned_items = []
         if re == None:
             self.re = random.Random()
@@ -522,8 +665,6 @@ class WeaponManager(ABC):
     def randomize(self):
         self.weapons = []
         indices = list(self.df_weapon.index)
-        new_len = int(len(indices) * self.percent_randomization *.01)
-        indices = indices[:new_len]
         random.shuffle(indices)
         for i in indices:
             new_weapon = Weapon(self.df_weapon.loc[i],self.re)
@@ -546,62 +687,40 @@ class WeaponManager(ABC):
         og_weapon_type = og_weapon['subtype']
         og_weapon_tier = og_weapon['tier']
         og_weapon_name = og_weapon['readable_name']
-#        print(og_weapon_name)
+        print(og_weapon_name)
         
         df = self.df_custom_weapons[(self.df_custom_weapons['weapon_type']==og_weapon_type)]
         
-        tier_adj = 1
+        tier_adj = 0
         while tier_adj < 10:
             pass_flag = True
             df_temp = df[(df['tier'] >= og_weapon_tier - tier_adj) & (df['tier'] <= og_weapon_tier + tier_adj)]
             choices = list(df_temp.index)
             try:
-                choice = self.re.choice(choices)
-                weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
-#                logging.error(weapon_name_clean)
-#                if weapon_name_clean == 'Elements':
-#                    breakpoint()
-                
+                choice = random.choice(choices)
             except:
-#                print("  Error on drawing choice for %s, increasing tier_adj" % og_weapon_name)
+                print("  Error on drawing choice for %s, increasing tier_adj" % og_weapon_name)
                 tier_adj += 1
                 pass_flag = False
                 continue
                 
             if pass_flag:
-                
-                # first see if it can reroll based on the modification name only (Aero 2, Mantra)
                 iter_num = 0
                 while iter_num < 10:
-                    if weapon_name_clean not in self.history.values():
-                        self.history[choice] = weapon_name_clean
-#                        logging.error("ROUND 1 >>>>>>"+df.loc[choice]['weapon_name_textbox'])
-                        return df.loc[choice], True # True = pass_flag for valid replacement
-                    else:
-                        # reroll, try again
-                        choice = self.re.choice(choices)
-                        weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
-                    iter_num += 1
-                
-
-                # if not, perform for pure duplicates
-                iter_num = 0
-                while iter_num < 10:
-
                     if choice not in self.history:
-                        self.history[choice] = weapon_name_clean
-#                        logging.error("ROUND 2 >>>>>>"+df.loc[choice]['weapon_name_textbox'])
+                        self.history.append(choice)
+                        print(">>>>>>"+df.loc[choice]['weapon_name_textbox'])
                         return df.loc[choice], True # True = pass_flag for valid replacement
-                    else:
-                        # reroll, try again
-                        choice = self.re.choice(choices)
-                        weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
                     iter_num += 1
-                tier_adj += 1        
+                else:
+                    tier_adj += 1
+        
+        
+        
         
         # if made it past 10 tier_adj, call out error and give pure random
 
-#        print("Error, exceeded 10 tiers. Adding to items to remove")
+        print("Error, exceeded 10 tiers. Adding to items to remove")
         return 0, False
 
             
@@ -626,3 +745,11 @@ class WeaponManager(ABC):
             output_str = output_str + x.spoiler
         output_str = output_str + '\n'
         return output_str
+
+
+
+
+
+dm = DataManager()
+wm = WeaponManager(dm,re=None)
+wm.randomize()

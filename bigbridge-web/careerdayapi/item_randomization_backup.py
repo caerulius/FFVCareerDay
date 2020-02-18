@@ -4,7 +4,6 @@ import pandas as pd
 import random
 from abc import ABC, abstractmethod
 from collections import OrderedDict
-from data_manager import DataManager
 import math
 import logging
 
@@ -13,14 +12,9 @@ new_path = os.path.abspath(os.path.join(os.pardir))
 if new_path not in sys.path:
     sys.path.append(new_path)
     sys.path.append(os.path.join(new_path,'text_parser'))
-new_path = os.path.abspath(os.path.join(os.pardir,os.pardir))
-if new_path not in sys.path:
-    sys.path.append(new_path)
-    
 import text_parser2 as tp
 
 logging.basicConfig(level=logging.ERROR, format="%(asctime)-15s %(message)s")
-
 
 
 '''
@@ -107,6 +101,7 @@ stat_boost_power_dict = {
 
 '''
 ability_dict = {'Guard':'06',
+                'Kick':'07',
                 'BuildUp':'08',
                 'Mantra':'09',
                 'Escape':'0A',
@@ -114,6 +109,7 @@ ability_dict = {'Guard':'06',
                 'Capture':'0C',
                 'Jump':'0D',
                 'DrgnSwd':'0E',
+                'Smoke':'0F',
                 'Image':'10',
                 'GilToss':'13',
                 'Slash':'14',
@@ -127,27 +123,6 @@ ability_dict = {'Guard':'06',
                 'Tame':'1B'                
                 }
 
-ability_dict_power = {'Guard':12,
-                'BuildUp':25,
-                'Mantra':19,
-                'Escape':7,
-                'Steal':23,
-                'Capture':55,
-                'Jump':43,
-                'DrgnSwd':66,
-                'Image':34,
-                'GilToss':92,
-                'Slash':87,
-                'Animals':37,
-                'X-Fight':105,
-                'Conjure':77,
-                'Terrain':9,
-                'Analyze':7,
-                'Dance':49,
-                'Flirt':13,
-                'Tame':36                
-                }
-
 enemy_type_dict = {'Zomb':7,
                    'Toad':6,
                    'Beast':5,
@@ -155,14 +130,7 @@ enemy_type_dict = {'Zomb':7,
                    'Drgn':3,
                    'Heavy':2,
                    'Desrt':1,
-                   'Human':0,
-                   'Omni':9}
-
-weapon_killer = [{'bow':['Toad','Zomb','Desrt','Beast','Drgn','Human','Avis','Heavy','Omni']},
-                        {'spear':['Toad','Human','Avis','Desrt','Beast','Zomb','Drgn','Heavy','Omni']},
-                        {'whip':['Toad','Human','Drgn','Avis','Desrt','Zomb','Beast','Heavy','Omni']},
-
-                ]
+                   'Human':0}
 
 weapon_type_dict = {'knife' :
                         {'bytemap':{'byte1' : '00',
@@ -178,8 +146,7 @@ weapon_type_dict = {'knife' :
                         'byte11' : '00',
                         'byte12' : '00'},
                         'clean_name':'Knife',
-                        'text_icon':'<Knif>',
-                        'bonus':3},
+                        'text_icon':'<Knif>'},
                     
                     'sword' : 
                          {'bytemap':{'byte1' : '00',
@@ -195,8 +162,7 @@ weapon_type_dict = {'knife' :
                         'byte11' : '00',
                         'byte12' : '00'},
                         'clean_name':'Sword',
-                        'text_icon':'<Swrd>',
-                        'bonus':4},
+                        'text_icon':'<Swrd>'},
                          
                     'knightsword' : 
                          {'bytemap':{'byte1' : '00',
@@ -212,8 +178,7 @@ weapon_type_dict = {'knife' :
                         'byte11' : '00',
                         'byte12' : '00'},
                         'clean_name':'KSword',
-                        'text_icon':'<Swrd>',
-                        'bonus':11},
+                        'text_icon':'<Swrd>'},
     
                     'spear' : 
                          {'bytemap':
@@ -233,8 +198,7 @@ weapon_type_dict = {'knife' :
 
                         },
                         'clean_name':'Spear',
-                        'text_icon':'<Sper>',
-                        'bonus':13},
+                        'text_icon':'<Sper>'},
 
                     'axe' : 
                          {'bytemap':
@@ -254,8 +218,7 @@ weapon_type_dict = {'knife' :
 
                         },
                         'clean_name':'Axe',
-                        'text_icon':'<Axe>',
-                        'bonus':17},
+                        'text_icon':'<Axe>'},
 
                     'katana' : 
                          {'bytemap':
@@ -275,8 +238,7 @@ weapon_type_dict = {'knife' :
 
                         },
                         'clean_name':'Katana',
-                        'text_icon':'<Katn>',
-                        'bonus':9},
+                        'text_icon':'<Katn>'},
 
                     'rod' : 
                          {'bytemap':
@@ -296,8 +258,7 @@ weapon_type_dict = {'knife' :
 
                         },
                         'clean_name':'Rod',
-                        'text_icon':'<Rod>',
-                        'bonus':2},
+                        'text_icon':'<Rod>'},
 
                     'staff' : 
                          {'bytemap':
@@ -317,8 +278,7 @@ weapon_type_dict = {'knife' :
 
                         },
                         'clean_name':'Staff',
-                        'text_icon':'<Staf>',
-                        'bonus':0},
+                        'text_icon':'<Staf>'},
 
                     'bow' : 
                          {'bytemap':
@@ -337,8 +297,7 @@ weapon_type_dict = {'knife' :
                         'byte12' : '00'
                         },
                         'clean_name':'Bow',
-                        'text_icon':'<Bow>',
-                        'bonus':10},
+                        'text_icon':'<Bow>'},
 
                     'harp' : 
                          {'bytemap':
@@ -358,8 +317,7 @@ weapon_type_dict = {'knife' :
 
                         },
                         'clean_name':'Harp',
-                        'text_icon':'<Harp>',
-                        'bonus':2},
+                        'text_icon':'<Harp>'},
 
                     'whip' : 
                          {'bytemap':
@@ -379,8 +337,7 @@ weapon_type_dict = {'knife' :
 
                         },
                         'clean_name':'Whip',
-                        'text_icon':'<Whip>',
-                        'bonus':12},
+                        'text_icon':'<Whip>'},
 
                     'bell' : 
                          {'bytemap':
@@ -400,8 +357,7 @@ weapon_type_dict = {'knife' :
 
                         },
                         'clean_name':'Bell',
-                        'text_icon':'<Bell>',
-                        'bonus':5},
+                        'text_icon':'<Bell>'},
 
                     'flail' : 
                          {'bytemap':
@@ -421,8 +377,7 @@ weapon_type_dict = {'knife' :
 
                         },
                         'clean_name':'Flail',
-                        'text_icon':'<Misc>',
-                        'bonus':7},
+                        'text_icon':'<Misc>'},
 
 
 
@@ -458,23 +413,215 @@ class Weapon(ABC):
     def __init__(self, row,re):
         self.re = re
         self.data_dict = dict(row)
-        self.weapon_type = self.data_dict['subtype']
+        for k, v in self.data_dict.items():
+            if "byte" in k and k != "byte_data":
+                self.data_dict[k] = str(v).zfill(2)
+                
+        weapon_type = self.data_dict['subtype']
+        self.weapon_type = weapon_type
+        self.bytemap = weapon_type_dict[weapon_type]['bytemap'].copy()
+        self.clean_name = weapon_type_dict[weapon_type]['clean_name']
+        self.text_icon = weapon_type_dict[weapon_type]['text_icon']
         self.adjustments = {}
-        self.bytemap = {}
         
         
-    def set_replacement(self, choice):
-#        breakpoint()
-        pass
+    ## adjustments
+    
         
-        bytemap = ['byte1','byte2','byte3','byte4','byte5','byte6','byte7','byte8','byte9','byte10','byte11','byte12']
-        for b in bytemap:
-            self.bytemap[b] = str(choice[b]).zfill(2)
+        
+    def adjustment_elemental_boost(self):
+        elements = list(set(self.re.choices(list(boost_dict.keys()),k=self.re.randint(1,1))))
+#        print(str(elements))
+        self.elem_byte = '00'
+        for e in elements:
+            self.elem_byte = i2b(b2i(self.elem_byte) + b2i(boost_dict[e]))
+        self.elem_byte = self.elem_byte.zfill(2)
+        self.bytemap['byte4'] = self.elem_byte
+        self.adjustments['elemental_boost'] = elements
+        
+    def adjustment_stat_boost(self):
+        stat_boost = list(set(self.re.choices(list(stat_dict.keys()),k=self.re.randint(1,4))))
+        stat_boost_power = self.re.choice(['00','01','02','07','00','01','02','07','00','01','02'])
 
-        self.text_textbox = choice['weapon_name_textbox']
-        self.text_menu = choice['weapon_name_menu']
-        self.weapon_power = choice['weapon_str']
+#        print(str("%s : %s" % (stat_boost,stat_boost_power_dict[stat_boost_power])))
+        self.stat_boost_byte = '80'
+        for e in stat_boost:
+            self.stat_boost_byte = i2b(b2i(self.stat_boost_byte) + b2i(stat_dict[e]))
+            
+        self.stat_boost_byte = i2b(b2i(self.stat_boost_byte) + b2i(stat_boost_power))
+            
+        self.stat_boost_byte = self.stat_boost_byte.zfill(2)
+        self.bytemap['byte4'] = self.stat_boost_byte
+        self.adjustments['stat_boost'] = stat_boost
+        self.adjustments['stat_boost_power'] = stat_boost_power_dict[stat_boost_power]
 
+
+    def adjustment_killer(self):
+#        self.bytemap['byte6'] = set_bit(self.bytemap['byte6'],6)
+        chosen_type = self.re.choice(list(enemy_type_dict))
+        self.bytemap['byte9'] = '72'
+        self.bytemap['byte10'] = set_bit('00',enemy_type_dict[chosen_type])
+        self.bytemap['byte11'] = '00'
+        self.bytemap['byte12'] = '00'
+        self.adjustments['killer_action_id'] = enemy_type_dict[chosen_type]
+        self.adjustments['killer_action'] = chosen_type
+        
+    def adjustment_ability_action(self):
+#        self.bytemap['byte6'] = set_bit(self.bytemap['byte6'],6)
+        self.bytemap['byte6'] = '02'
+        self.bytemap['byte11'] = '64'
+        chosen_action = self.re.choice(list(ability_dict.keys()))
+        self.bytemap['byte12'] = ability_dict[chosen_action]
+        self.adjustments['ability_action_id'] = ability_dict[chosen_action]
+        self.adjustments['ability_action'] = chosen_action
+        
+    def adjustment_spell_action(self):
+        # allow action on hit, set to 33%
+        new_byte = set_bit(self.bytemap['byte6'],4)
+#        print("New byte: %s %s" % (self.bytemap['byte6'], new_byte))
+        self.bytemap['byte6'] = (new_byte).zfill(2)
+        self.bytemap['byte11'] = '00'
+                
+        # choose spell action based off of the original item tier
+        valid_magic_list = []
+        iter_num = 0
+        while len(valid_magic_list) < 1:
+            valid_magic_list = [i for i in magic_dict['tier'] if (magic_dict['tier'][i] <= self.data_dict['tier'] - iter_num and magic_dict['tier'][i] >= self.data_dict['tier'] - iter_num - 2)]
+#            print(self.data_dict['tier'], [magic_dict['readable_name'][i] for i in valid_magic_list])
+            iter_num -= 1
+        
+        
+        if self.weapon_type == 'rod':
+            # Rods will only get valid black magic & Holy, and
+            # can be broken for 100% accuracy
+            black_magic = ['24','25','26','27','28','29','2A','2B','2C','2D','2E','2F','30','31','32','33','34','35','22']
+            valid_magic_list = [i for i in valid_magic_list if i in black_magic]
+            chosen_spell = self.re.choice(valid_magic_list)
+
+            self.bytemap['byte1'] = 'F8' # F8 is target all enemies, target 1 enemy, target 1 ally, target all allies
+            self.bytemap['byte7'] = chosen_spell # byte7 is the action ID
+            new_byte = set_bit(self.bytemap['byte7'],0)
+#            print(new_byte)
+            self.bytemap['byte7'] = new_byte # this makes it breakable
+
+            
+
+        elif self.weapon_type == 'staff':
+            # Staves will only get valid white magic (less Holy), and
+            # can be used indefinitely 
+            white_magic = ['12','13','14','15','16','17','18','19','1A','1B','1C','1D','1E','1F','20','21','23']
+            valid_magic_list = [i for i in valid_magic_list if i in white_magic]
+            if len(valid_magic_list) > 0:
+                chosen_spell = self.re.choice(valid_magic_list)
+            else:
+                chosen_spell = self.re.choice(white_magic)
+
+            self.bytemap['byte1'] = '38' # 38 is target 1 enemy or ally
+            self.bytemap['byte7'] = chosen_spell # byte7 is the action ID
+
+        else:
+            chosen_spell = self.re.choice(valid_magic_list)
+
+#        print(str("%s : %s" % (chosen_spell,magic_dict['readable_name'][chosen_spell])))
+        self.bytemap['byte12'] = chosen_spell.zfill(2)
+
+
+        always_hit_ids = ['12','13','14','15','16','17','18','19','1A','1B','1C','1D','1E','1F','20','21','23','38','3A','3B','43','9A','9E','85','86','87','88']
+        if chosen_spell in always_hit_ids:
+            # 100%
+            self.bytemap['byte11'] = '64'
+        else:
+            # 33%
+            self.bytemap['byte11'] = '21' # '21'
+
+
+        self.adjustments['spell_action_id'] = chosen_spell
+        self.adjustments['spell_action'] = magic_dict['readable_name'][chosen_spell]        
+        
+
+        
+        
+    def set_weapon_str(self):
+        str_int = max(int(self.data_dict['byte8'],base=16) + self.re.randint(-5,5),1)
+#        str_int = 1
+        self.weapon_power = str_int
+        self.bytemap['byte8'] = i2b(str_int).zfill(2)
+    
+    
+    def create_name(self):
+        # name_dict
+        
+        # 
+        adjustments = list(self.adjustments.keys())
+#        print(adjustments)
+
+        if 'spell_action' in adjustments:
+            text_clean_name = self.adjustments['spell_action']
+            self.text_textbox = text_clean_name + " " + self.weapon_type.title()
+            self.text_menu = self.text_icon + text_clean_name
+#            print("%s %s" % (self.text_textbox, self.text_menu))
+            
+        elif 'ability_action' in adjustments:
+            text_clean_name = self.adjustments['ability_action']
+            self.text_textbox = text_clean_name + " " + self.weapon_type.title()
+            self.text_menu = self.text_icon + text_clean_name
+#            print("%s %s" % (self.text_textbox, self.text_menu))
+
+
+        elif 'elemental_boost' in adjustments:
+            text_clean_name = boost_text_map[self.adjustments['elemental_boost'][0]]
+            self.text_textbox = text_clean_name + " " + self.weapon_type.title()
+            self.text_menu = self.text_icon + text_clean_name
+#            print("%s %s" % (self.text_textbox, self.text_menu))
+            
+        elif 'killer_action' in adjustments:
+            text_clean_name = self.adjustments['killer_action'] 
+            self.text_textbox = text_clean_name + " Killer " + self.weapon_type.title()
+            self.text_menu = self.text_icon + text_clean_name + "Klr"
+#            print("%s %s" % (self.text_textbox, self.text_menu))
+            
+            
+        elif 'stat_boost' in adjustments:
+            temp_boost = sorted(self.adjustments['stat_boost'])
+            for k, v in stat_dict2.items():
+                if temp_boost == sorted(v):
+                    stat_boost_name = k
+                    break
+            text_clean_name = stat_boost_name + self.adjustments['stat_boost_power']
+#            print(text_clean_name)
+            self.text_textbox = text_clean_name + " " + self.weapon_type.title()
+            self.text_menu = self.text_icon + text_clean_name
+#            print("%s %s" % (self.text_textbox, self.text_menu))
+
+            
+
+        
+    def randomize_contents(self):
+        randint = self.re.randint(0,100)
+        randint2 = self.re.randint(0,100)
+#        self.adjustment_ability_action()   
+        
+        if randint <= 30:
+            self.adjustment_spell_action()
+            if randint2 <= 20:
+                self.adjustment_stat_boost()
+            elif randint2 <= 40:
+                self.adjustment_elemental_boost()
+        elif randint <= 40 and self.weapon_type not in ['staff','rod']:
+            self.adjustment_ability_action()   
+            if randint2 <= 20:
+                self.adjustment_stat_boost()
+            elif randint2 <= 40:
+                self.adjustment_elemental_boost()            
+        elif randint <= 65:
+            self.adjustment_stat_boost()
+        elif randint <= 75:
+            self.adjustment_killer()
+        else:
+            self.adjustment_elemental_boost()
+        self.set_weapon_str()
+        self.weapon_layout = {self.weapon_type:self.adjustments}
+        self.create_name()
         
 
     @property
@@ -505,106 +652,35 @@ class Weapon(ABC):
 
     
 class WeaponManager(ABC):
-    def __init__(self, data_manager, re=None, percent_randomization=100):
+    def __init__(self, data_manager, re=None):
         global magic_dict
 #        breakpoint()
         magic_dict = data_manager.files['magic_item_randomization'].reset_index()[['magic_id','readable_name','tier']].set_index('magic_id').to_dict()
         self.df_weapon = data_manager.files['weapon_randomization']
-        self.df_custom_weapons = data_manager.files['custom_weapons']
-        self.history = {}
-        self.percent_randomization = percent_randomization
-        self.banned_items = []
+        self.history = []
         if re == None:
-            self.re = random.Random()
+            self.re = Random()
         else:
             self.re = re
         
     def randomize(self):
         self.weapons = []
-        indices = list(self.df_weapon.index)
-        new_len = int(len(indices) * self.percent_randomization *.01)
-        indices = indices[:new_len]
-        random.shuffle(indices)
-        for i in indices:
-            new_weapon = Weapon(self.df_weapon.loc[i],self.re)
-            choice, pass_flag = self.find_replacement(self.df_weapon.loc[i])
+        for i, r in self.df_weapon.iterrows():
+            x = Weapon(self.df_weapon.loc[i],self.re)
+            x.randomize_contents()
             
-            if pass_flag:
-                new_weapon.set_replacement(choice)
-                self.weapons.append(new_weapon)
-                
-            else:
-                # if pass_flag is False, then a valid replacement wasn't found
-                # in this case, the original item needs to be REMOVED from the 
-                # pool of items in the game, since it is not randomized
-                
-                self.banned_items.append(self.df_weapon.loc[i])
-                
-                
-            
-    def find_replacement(self,og_weapon):
-        og_weapon_type = og_weapon['subtype']
-        og_weapon_tier = og_weapon['tier']
-        og_weapon_name = og_weapon['readable_name']
-#        print(og_weapon_name)
-        
-        df = self.df_custom_weapons[(self.df_custom_weapons['weapon_type']==og_weapon_type)]
-        
-        tier_adj = 1
-        while tier_adj < 10:
-            pass_flag = True
-            df_temp = df[(df['tier'] >= og_weapon_tier - tier_adj) & (df['tier'] <= og_weapon_tier + tier_adj)]
-            choices = list(df_temp.index)
-            try:
-                choice = self.re.choice(choices)
-                weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
-#                logging.error(weapon_name_clean)
-#                if weapon_name_clean == 'Elements':
-#                    breakpoint()
-                
-            except:
-#                print("  Error on drawing choice for %s, increasing tier_adj" % og_weapon_name)
-                tier_adj += 1
-                pass_flag = False
-                continue
-                
-            if pass_flag:
-                
-                # first see if it can reroll based on the modification name only (Aero 2, Mantra)
-                iter_num = 0
-                while iter_num < 10:
-                    if weapon_name_clean not in self.history.values():
-                        self.history[choice] = weapon_name_clean
-#                        logging.error("ROUND 1 >>>>>>"+df.loc[choice]['weapon_name_textbox'])
-                        return df.loc[choice], True # True = pass_flag for valid replacement
-                    else:
-                        # reroll, try again
-                        choice = self.re.choice(choices)
-                        weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
-                    iter_num += 1
-                
-
-                # if not, perform for pure duplicates
-                iter_num = 0
-                while iter_num < 10:
-
-                    if choice not in self.history:
-                        self.history[choice] = weapon_name_clean
-#                        logging.error("ROUND 2 >>>>>>"+df.loc[choice]['weapon_name_textbox'])
-                        return df.loc[choice], True # True = pass_flag for valid replacement
-                    else:
-                        # reroll, try again
-                        choice = self.re.choice(choices)
-                        weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
-                    iter_num += 1
-                tier_adj += 1        
-        
-        # if made it past 10 tier_adj, call out error and give pure random
-
-#        print("Error, exceeded 10 tiers. Adding to items to remove")
-        return 0, False
+            num = 0
+            while x.weapon_layout in self.history and num < 100:
+                logging.error("Rerolling %s, due to duplicate layout" % x.weapon_layout)
+                x = Weapon(self.df_weapon.loc[i],self.re)
+                x.randomize_contents()
+                num += 1
+            if num >= 99:
+                logging.error(" >>>> 100 threshold <<<< ")
+            self.history.append(x.weapon_layout)
 
             
+            self.weapons.append(x)
             
     def write_asar_output(self):
         with open(os.path.join(os.path.pardir,os.path.pardir,'projects','test_asm','r-patch_weapons.asm'),'w') as f:
@@ -626,3 +702,22 @@ class WeaponManager(ABC):
             output_str = output_str + x.spoiler
         output_str = output_str + '\n'
         return output_str
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
