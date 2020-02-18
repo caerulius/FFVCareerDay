@@ -155,7 +155,7 @@ def patch_and_return():
 
         file_list = []
         file_list.append(filename)
-#        file_list.append(patch_file_name) #removed patch file for zip to players
+#       file_list.append(patch_file_name) #removed patch file for zip to players
         file_list.append(spoiler_file_name)
 
         zip_file_name = "{}.zip".format(filename[:-4])
