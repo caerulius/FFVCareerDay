@@ -87,12 +87,12 @@
 				</div>
 			</div>
 			<div class="row" id="settingstringdefault">
-				<p>Current setting string. Click to copy to your clipboard and save settings for later or share, or <a onclick="showCustomSettingString()">apply a custom setting string</a></p>
+				<p>Current setting string. Click to copy to your clipboard and save settings for later or share, or <a style="cursor:pointer" onclick="showCustomSettingString()">apply a custom setting string</a></p>
 				<input type="text" id="settingstring" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');"> <!-- shoutouts to the SMRPG randomizer for the easy copy to clipboard code -->
 				<label for="settingstring" class="d-none"></label>
 			</div>
 			<div class="row" id="settingstringcustom" style="display:none">
-				<p>Input a setting string here to apply those settings, or <a onclick="showDefaultSettingString()">view your current setting string.</a></p>
+				<p>Input a setting string here to apply those settings, or <a style="cursor:pointer" onclick="showDefaultSettingString()">view your current setting string.</a></p>
 				<div class="row">
 					<input type="text" id="settingstringcustom_input" class="form-control form-control-lg text-center col-sm-7"> <!-- shoutouts to the SMRPG randomizer for the easy copy to clipboard code -->
 					<button class="col-sm-1 settinglink servicelink settingsapply" onclick="applyCustomSettingString()">Apply</button>

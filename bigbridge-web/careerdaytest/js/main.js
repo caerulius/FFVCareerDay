@@ -241,37 +241,61 @@ function applyCustomSettingString(){
 			$( "#progressive_rewards" ).prop( "checked", true );
 		}
 		if(val.length == 2 && val.charAt(0) == "W"){
-			console.log("here");
-			$('input:radio[name=world_lock]').val([val.charAt(1)]);
+			if(val.charAt(1) == "0" || val.charAt(1) == "1" || val.charAt(1) == "2"){
+				$('input:radio[name=world_lock]').val([val.charAt(1)]);
+			}
 		}
 		if(val.charAt(0) == "T"){
 			$( "#tiering_config" ).prop( "checked", true );
 			vals = val.slice(1).split("|");
-			$("#tiering_percentage").val(vals[0]);
-			$("#tiering_threshold").val(vals[1]);
+			percent = parseInt(vals[0]);
+			threshold = parseInt(vals[1]);
+
+			if(!isNaN(percent) && percent >= 0 && percent <= 100){
+				$("#tiering_percentage").val(percent);
+			}
+			if(!isNaN(threshold) && threshold >= 1 && threshold <= 10){
+				$("#tiering_threshold").val(threshold);
+			}
 		}
 		if(val.charAt(0) == "I"){
 			$( "#item_randomization" ).prop( "checked", true );
-			$("#item_randomization_percent").val(val.slice(1));
+			percent = parseInt(val.slice(1));
+			if(!isNaN(percent) && percent >= 0 && percent <= 100){
+				$("#item_randomization_percent").val(percent);	
+			}
 		}
 		if(val.startsWith("RGB")){
 			vals = val.slice(3).split("|")
-			$("#red_color").val(vals[0]);
-			$("#green_color").val(vals[1]);
-			$("#blue_color").val(vals[2]);
+			red = parseInt(vals[0]);
+			green = parseInt(vals[1]);
+			blue = parseInt(vals[2]);
+			if(!isNaN(red) && red >= 0 && red <= 31){
+				$("#red_color").val(red);
+			}
+			if(!isNaN(green) && green >= 0 && green <= 31){
+				$("#green_color").val(green);	
+			}
+			if(!isNaN(blue) && blue >= 0 && blue <= 31){
+				$("#blue_color").val(blue);
+			}
 		}
 		if(val.charAt(0) == "X"){
-			$("#exp_mult").val(val.slice(1));
+			xp = parseInt(val.slice(1));
+			if(!isNaN(xp) && (xp == 1 || xp == 2 || xp == 4)){
+				$("#exp_mult").val(xp);
+			}
 		}
 		if(val == "AR"){
 			$( "#place_all_rewards" ).prop( "checked", true );
 		}
 		if(val.charAt(0) == "L"){
-			console.log(val);
 			vals = val.slice(1).split("|");
-			console.log(vals);
 			$('input:radio[name=randomize_loot]').val([vals[0]]);
-			$("#loot_percent").val(vals[1]);
+			percent = parseInt(vals[1]);
+			if(!isNaN(percent) && percent >= 0 && percent <= 100){
+				$("#loot_percent").val(vals[1]);
+			}
 		}
 		if(val == "pb"){
 			$("#portal_boss").val(val.slice(2));
@@ -280,7 +304,7 @@ function applyCustomSettingString(){
 }
 
 function clearSettings(){
-	$( "#fjf" ).prop( "checked", false );
+	$( "#fjf" ).prop( "checked", false );	
 	$( "#fjf_strict" ).prop( "checked", false );
 	$( "#jobpalette" ).prop( "checked", false );
 	$( "#enforce_all_jobs" ).prop( "checked", false );
@@ -290,7 +314,7 @@ function clearSettings(){
 	$( "#item_randomization" ).prop( "checked", false );
 	$( "#tiering_config" ).prop( "checked", false );
 
-	$('input:radio[name=world_lock]').val([0]);
+	$('input:radio[name=world_lock]').val([1]);
 	$("#tiering_percentage").val(5);
 	$("#tiering_threshold").val(1);
 	$("#item_randomization_percent").val(100);
