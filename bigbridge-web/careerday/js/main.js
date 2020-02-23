@@ -48,9 +48,26 @@ $(document).ready( function() {
     		$("#generate").attr('disabled', 'disabled');
     	}
     });
+
+    $(".option").change(function(){
+    	$("#settingstring").val(getSettingString());
+    })
+
+	$("#settingstring").val(getSettingString());
+
+	$("#settingstring").click(function(){
+		$("#settingstring").notify(
+		  "Copied!", 
+		  { position:"top center",
+		    className: "success",
+		    autoHideDelay: 1500,
+		    showDuration: 150,
+		    hideDuration: 50 }
+		);
+	});
 });
 
-var url = "/careerdayapi/";
+var url = "/careerdayapitest/";
 var baseBucketUrl = 'https://s3-us-west-1.amazonaws.com/bigbridgecareerday/';
 var spinnerHtml = "<img src='img/spinner.gif'></img>";
 
@@ -140,4 +157,171 @@ function downloadFile(filePath){
 
 	$("#download").hide();
 	$("#generate").show();
+}
+
+function getSettingString(){
+	var seedString = "";
+	if($('#fjf').is(':checked')){
+		seedString = seedString + " 4";
+	}
+	if($('#fjf_strict').is(':checked')){
+		seedString = seedString + " a";
+	}
+	if($('#jobpalette').is(':checked')){
+		seedString = seedString + " P";
+	}
+	if($("input:radio[name=world_lock]:checked").val() == 1){
+		seedString = seedString + " W1";
+	}
+	if($("input:radio[name=world_lock]:checked").val() == 2){
+		seedString = seedString + " W2";
+	}
+	if($("input:radio[name=world_lock]:checked").val() == 0){
+		seedString = seedString + " W0";
+	}
+	if($("#tiering_config").is(':checked')){
+		seedString = seedString + " T" + $("#tiering_percentage").val() + "|" + $("#tiering_threshold").val();
+	}
+	if($('#enforce_all_jobs').is(':checked')){
+		seedString = seedString + " A";
+	}
+	if($('#progressive_bosses').is(':checked')){
+		seedString = seedString + " PB";
+	}
+	if($('#progressive_rewards').is(':checked')){
+		seedString = seedString + " PR";
+	}
+	if($('#item_randomization').is(':checked')){
+		seedString = seedString + " I" + $("#item_randomization_percent").val();
+	}
+	seedString = seedString + " RGB" + $("#red_color").val() + "|" + $("#blue_color").val() + "|" + $("#green_color").val();
+	seedString = seedString + " X" + $("#exp_mult").val();
+	if($('#place_all_rewards').is(':checked')){
+		seedString = seedString + " AR";
+	}
+	seedString = seedString + " L" + $("input:radio[name=randomize_loot]:checked").val();
+	if($("input:radio[name=randomize_loot]:checked").val() == "variable"){
+		seedString = seedString + "|" + $("#loot_percent").val();
+	}
+	seedString = seedString + " pb" + $("#portal_boss").val()
+
+	return seedString.slice(1);
+}
+
+function showCustomSettingString(){
+	$("#settingstringdefault").hide();
+	$("#settingstringcustom").show();
+}
+
+function showDefaultSettingString(){
+	$("#settingstringdefault").show();
+	$("#settingstringcustom").hide();
+}
+
+function applyCustomSettingString(){
+	clearSettings();
+	settingString = $("#settingstringcustom_input").val();
+	settingString.split(" ").forEach(function(val){
+		if(val == "4"){
+			$( "#fjf" ).prop( "checked", true );
+		}
+		if(val == "a"){
+			$( "#fjf_strict" ).prop( "checked", true );
+		}
+		if(val == "P"){
+			$( "#jobpalette" ).prop( "checked", true );
+		}
+		if(val == "A"){
+			$( "#enforce_all_jobs" ).prop( "checked", true );
+		}
+		if(val == "PB"){
+			$( "#progressive_bosses" ).prop( "checked", true );
+		}
+		if(val == "PR"){
+			$( "#progressive_rewards" ).prop( "checked", true );
+		}
+		if(val.length == 2 && val.charAt(0) == "W"){
+			if(val.charAt(1) == "0" || val.charAt(1) == "1" || val.charAt(1) == "2"){
+				$('input:radio[name=world_lock]').val([val.charAt(1)]);
+			}
+		}
+		if(val.charAt(0) == "T"){
+			$( "#tiering_config" ).prop( "checked", true );
+			vals = val.slice(1).split("|");
+			percent = parseInt(vals[0]);
+			threshold = parseInt(vals[1]);
+
+			if(!isNaN(percent) && percent >= 0 && percent <= 100){
+				$("#tiering_percentage").val(percent);
+			}
+			if(!isNaN(threshold) && threshold >= 1 && threshold <= 10){
+				$("#tiering_threshold").val(threshold);
+			}
+		}
+		if(val.charAt(0) == "I"){
+			$( "#item_randomization" ).prop( "checked", true );
+			percent = parseInt(val.slice(1));
+			if(!isNaN(percent) && percent >= 0 && percent <= 100){
+				$("#item_randomization_percent").val(percent);	
+			}
+		}
+		if(val.startsWith("RGB")){
+			vals = val.slice(3).split("|")
+			red = parseInt(vals[0]);
+			green = parseInt(vals[1]);
+			blue = parseInt(vals[2]);
+			if(!isNaN(red) && red >= 0 && red <= 31){
+				$("#red_color").val(red);
+			}
+			if(!isNaN(green) && green >= 0 && green <= 31){
+				$("#green_color").val(green);	
+			}
+			if(!isNaN(blue) && blue >= 0 && blue <= 31){
+				$("#blue_color").val(blue);
+			}
+		}
+		if(val.charAt(0) == "X"){
+			xp = parseInt(val.slice(1));
+			if(!isNaN(xp) && (xp == 1 || xp == 2 || xp == 4)){
+				$("#exp_mult").val(xp);
+			}
+		}
+		if(val == "AR"){
+			$( "#place_all_rewards" ).prop( "checked", true );
+		}
+		if(val.charAt(0) == "L"){
+			vals = val.slice(1).split("|");
+			$('input:radio[name=randomize_loot]').val([vals[0]]);
+			percent = parseInt(vals[1]);
+			if(!isNaN(percent) && percent >= 0 && percent <= 100){
+				$("#loot_percent").val(vals[1]);
+			}
+		}
+		if(val == "pb"){
+			$("#portal_boss").val(val.slice(2));
+		}
+	});
+}
+
+function clearSettings(){
+	$( "#fjf" ).prop( "checked", false );	
+	$( "#fjf_strict" ).prop( "checked", false );
+	$( "#jobpalette" ).prop( "checked", false );
+	$( "#enforce_all_jobs" ).prop( "checked", false );
+	$( "#progressive_bosses" ).prop( "checked", false );
+	$( "#progressive_rewards" ).prop( "checked", false );
+	$( "#place_all_rewards" ).prop( "checked", false );
+	$( "#item_randomization" ).prop( "checked", false );
+	$( "#tiering_config" ).prop( "checked", false );
+
+	$('input:radio[name=world_lock]').val([1]);
+	$("#tiering_percentage").val(5);
+	$("#tiering_threshold").val(1);
+	$("#item_randomization_percent").val(100);
+	$("#loot_percent").val("");
+	$("#exp_mult").val(4);
+	$("#red_color").val(0);
+	$("#green_color").val(0);
+	$("#blue_color").val(0);
+	$("#portal_boss").val("SomberMage");
 }
