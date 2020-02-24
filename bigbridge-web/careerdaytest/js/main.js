@@ -134,7 +134,8 @@ function apiCall(data){
 		"place_all_rewards": $('#place_all_rewards').is(':checked'),
 		"randomize_loot": $("input:radio[name=randomize_loot]:checked").val(),
 		"loot_percent": $("#loot_percent").val(), 
-		"portal_boss": $("#portal_boss").val(), 
+		"portal_boss": $("#portal_boss").val(),
+		"setting_string": getSettingString(),
 		"fileLocation": data.Location
 	}
 	$.post(url, postData, function(data){

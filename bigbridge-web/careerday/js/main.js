@@ -67,7 +67,7 @@ $(document).ready( function() {
 	});
 });
 
-var url = "/careerdayapitest/";
+var url = "/careerdayapi/";
 var baseBucketUrl = 'https://s3-us-west-1.amazonaws.com/bigbridgecareerday/';
 var spinnerHtml = "<img src='img/spinner.gif'></img>";
 

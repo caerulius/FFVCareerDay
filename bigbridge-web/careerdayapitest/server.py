@@ -137,7 +137,9 @@ def patch_and_return():
                             'place_all_rewards':   data['place_all_rewards'],
                             'randomize_loot':   data['randomize_loot'],
                             'portal_boss':   data['portal_boss'],
-                            'loot_percent':   data['loot_percent']
+                            'loot_percent':   data['loot_percent'],
+                            'setting_string':   data['setting_string'],
+                            'seed':   seed
                             }
         logging.error("Begin randomization process")
         C = Conductor(random, conductor_config)
