@@ -45,6 +45,7 @@ ITEM_TYPE = "40"
 ITEM_SHOP_TYPE = "01"
 MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
+VERSION = "FFV CareerDay v0.81"
 
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
@@ -52,6 +53,7 @@ class Conductor():
         logging.error("Config passed in: %s" % (str(conductor_config)))
         # Set up conductor config
         self.configs = conductor_config # later so we don't manually define every key like below 
+        logging.error(self.configs)
         if len(conductor_config) == 0: # if no config was passed in, default False
             self.fjf = False
             self.fjf_strict = False
@@ -70,6 +72,8 @@ class Conductor():
             self.progressive_rewards = False
             self.item_randomization = False
             self.item_randomization_percent = 100
+            self.setting_string = None
+            self.seed = None
             
             
         else:                           # else take the config passed from server.py and set variables
@@ -85,6 +89,8 @@ class Conductor():
             self.progressive_rewards = self.translateBool(conductor_config['progressive_rewards'])
             self.item_randomization = self.translateBool(conductor_config['item_randomization'])
             self.item_randomization_percent = int(conductor_config['item_randomization_percent'])
+            self.setting_string = conductor_config['setting_string']
+            self.seed = conductor_config['seed']
             
             #only allow progressive bosses if world_lock == 1
             if self.world_lock != 1:
@@ -1340,6 +1346,16 @@ class Conductor():
             output_str = output_str + "\n" + "db $73, $81, $7E, $96, $90, $82, $87, $7D, $96, $82, $8C, $96, $7C, $7A, $85, $85, $82, $87, $80, $A3, $A3, $A3, $96, $82, $8D, $99, $8C, $01, $8D, $82, $86, $7E, $96, $7F, $88, $8B, $96, $8E, $8C, $96, $8D, $88, $96, $7F, $82, $80, $81, $8D, $A3, $00"
     
         return output_str
+
+    def spoiler_intro(self):
+        logging.error(self.seed)
+        logging.error(self.setting_string)
+        output = ""
+        output = output + VERSION
+        output = output + "\nSeed: " + self.seed
+        output = output + "\nSetting String: " + self.setting_string + "\n\n"
+
+        return output
             
 
     def starting_crystal_patch(self):
@@ -1941,7 +1957,7 @@ class Conductor():
         try:
             randomized_weapons_ids = [i.data_dict['item_id'] for i in self.WM.weapons]
         except:
-            pass
+            logging.error("no weapon manager")
 
         for i in range(0, len(kuzar_reward_addresses)):
 #            logging.error(i)
@@ -2083,6 +2099,10 @@ class Conductor():
         patch = patch + self.set_portal_boss()
 
         spoiler = ""
+        logging.error(self.seed)
+        logging.error(self.setting_string)
+        if self.seed is not None and self.setting_string is not None:
+            spoiler = spoiler + self.spoiler_intro()
         spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.get_collectible_counts()                
         spoiler = spoiler + self.RM.get_spoiler(self.world_lock)
