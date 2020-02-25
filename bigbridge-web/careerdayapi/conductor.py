@@ -1348,8 +1348,6 @@ class Conductor():
         return output_str
 
     def spoiler_intro(self):
-        logging.error(self.seed)
-        logging.error(self.setting_string)
         output = ""
         output = output + VERSION
         output = output + "\nSeed: " + self.seed
@@ -2099,8 +2097,6 @@ class Conductor():
         patch = patch + self.set_portal_boss()
 
         spoiler = ""
-        logging.error(self.seed)
-        logging.error(self.setting_string)
         if self.seed is not None and self.setting_string is not None:
             spoiler = spoiler + self.spoiler_intro()
         spoiler = spoiler + self.starting_crystal_spoiler()
