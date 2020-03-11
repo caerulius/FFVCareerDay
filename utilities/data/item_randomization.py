@@ -448,9 +448,21 @@ def set_bit(byte,bit_to_set):
     returns a byte with specific int index bit set
     '''
     temp_bin = bin(int(byte,base=16)).replace("0b","").zfill(8)
-#    breakpoint()
     temp_bin = temp_bin[:bit_to_set] + "1" + temp_bin[bit_to_set+1:]
     return hex(int(temp_bin,base=2)).replace("0x","").zfill(2)
+
+def rewrite_shop_costs(choice, original):
+    output_str = '\n;Price: %s -> %s\norg $%s\ndb ' % (original.readable_name, choice.weapon_name_menu, original.shop_addr)
+    new_shop_price = str(choice.shop_price)
+    b1, b2 = int(new_shop_price[0:2]), new_shop_price[2:]
+    
+    b1 = i2b(b1)
+    
+    b2 = "0" + str(len(b2))
+
+    output_str = output_str + "$%s, $%s\n" % (b2,b1)
+    return output_str
+    
 
 class Weapon(ABC):
     type = 'weapon'
@@ -464,7 +476,6 @@ class Weapon(ABC):
         
         
     def set_replacement(self, choice):
-#        breakpoint()
         pass
         
         bytemap = ['byte1','byte2','byte3','byte4','byte5','byte6','byte7','byte8','byte9','byte10','byte11','byte12']
@@ -507,7 +518,6 @@ class Weapon(ABC):
 class WeaponManager(ABC):
     def __init__(self, data_manager, re=None, percent_randomization=100):
         global magic_dict
-#        breakpoint()
         magic_dict = data_manager.files['magic_item_randomization'].reset_index()[['magic_id','readable_name','tier']].set_index('magic_id').to_dict()
         self.df_weapon = data_manager.files['weapon_randomization']
         self.df_custom_weapons = data_manager.files['custom_weapons']
@@ -521,15 +531,20 @@ class WeaponManager(ABC):
         
     def randomize(self):
         self.weapons = []
+        weapon_patch = ''
+        
         indices = list(self.df_weapon.index)
         new_len = int(len(indices) * self.percent_randomization *.01)
         indices = indices[:new_len]
-        random.shuffle(indices)
+        self.re.shuffle(indices)
         for i in indices:
             new_weapon = Weapon(self.df_weapon.loc[i],self.re)
             choice, pass_flag = self.find_replacement(self.df_weapon.loc[i])
             
+            
             if pass_flag:
+                # now rewrite shop costs
+                weapon_patch = weapon_patch + rewrite_shop_costs(choice, self.df_weapon.loc[i])
                 new_weapon.set_replacement(choice)
                 self.weapons.append(new_weapon)
                 
@@ -540,20 +555,23 @@ class WeaponManager(ABC):
                 
                 self.banned_items.append(self.df_weapon.loc[i])
                 
-                
+        return weapon_patch
             
     def find_replacement(self,og_weapon):
         og_weapon_type = og_weapon['subtype']
         og_weapon_tier = og_weapon['tier']
         og_weapon_name = og_weapon['readable_name']
-#        print(og_weapon_name)
         
         df = self.df_custom_weapons[(self.df_custom_weapons['weapon_type']==og_weapon_type)]
         
         tier_adj = 1
         while tier_adj < 10:
             pass_flag = True
-            df_temp = df[(df['tier'] >= og_weapon_tier - tier_adj) & (df['tier'] <= og_weapon_tier + tier_adj)]
+            if og_weapon_type in ['whip','bow','spear']:
+                # for killer weapons, strictly try to find a replacement at equal or less the value only
+                df_temp = df[(df['tier'] <= og_weapon_tier) & (df['tier'] >= (og_weapon_tier - tier_adj))]
+            else:
+                df_temp = df[(df['tier'] <= og_weapon_tier + round(tier_adj/2)) & (df['tier'] >= (og_weapon_tier - tier_adj))]
             choices = list(df_temp.index)
             try:
                 choice = self.re.choice(choices)
@@ -621,7 +639,7 @@ class WeaponManager(ABC):
     
     @property
     def get_spoiler(self):
-        output_str = '\n *** Weapon Randomization ***\n'
+        output_str = '\n-----WEAPON RANODMIZATION-----\n'
         for x in self.weapons:
             output_str = output_str + x.spoiler
         output_str = output_str + '\n'

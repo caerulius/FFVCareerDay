@@ -68,7 +68,7 @@
 		<div class="container">
 			<h4>Looking for help with this randomizer? Check out our <a href = "https://www.bigbridge.studio/cdwiki/doku.php">Career Day wiki!</a></h4>
 			<br>
-			<h2>Generate Randomized FF5 Rom (v0.81)</h2>
+			<h2>Generate Randomized FF5 Rom (v0.82)</h2>
 			<input type="file" accept=".smc, .sfc" class="file-browse" id="fileupload"/>
 			<label for="fileupload"><i class="fa fa-upload"></i>  Browse</label>
 			<div class="file-info" id="file-info">Upload a Final Fantasy 5 ROM, Japanese or patched with the RPGe Translation</div><br/>
@@ -100,15 +100,7 @@
 			<hr style="border-top: dashed 6px">
 			<div class="row">
 			<p style="font-size:1.5em;margin-top:10px"><b>Main Options</b></p>
-			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
-				<input type="checkbox" class="option" id="fjf">
-				<div class="state">
-					<i class="icon fa fa-check check-icon"></i>
-					<label>
-						<b>Four Job Mode:</b> Start with four jobs and never receive more. All jobs must be represented at all times in the party
-					</label>
-				</div>
-			</div>
+
 			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
 				<input type="checkbox" class="option" id="fjf_strict">
 				<div class="state">
@@ -155,11 +147,20 @@
 				</div>
 			</div>
 			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
-				<input type="checkbox" class="option" id="progressive_rewards" checked>
+				<input type="checkbox" class="option" id="progressive_rewards" unchecked>
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
 					<label>
 						<b>Progressive rewards:</b> Magic & abilities will be collected in progressive order (e.g., Bolt before Bolt2, Bolt2 before Bolt3). Does not apply to shops
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="remove_ned" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Remove NeoExdeath:</b> Removes NeoExdeath from boss pool, shuffles his location among the other bosses, and replaces his fight with a free Goblin fight
 					</label>
 				</div>
 			</div>
@@ -267,11 +268,158 @@
 			</div>
 
 			<br>
+			<p style="font-size:1.5em;margin-top:10px"><b>Four Job Settings</b></p>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="fjf">
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Four Job Mode:</b> Start with four jobs and never receive more. All jobs must be represented at all times in the party
+					</label>
+				</div>
+			</div>
+			<p style="font-size:1em;margin-top:10px"><b>Choose which Jobs appear for the seed in Four Job Mode</b></p>
+			<div class="pretty p-default p-round select-div">
+				<select class="option" id="job_1">
+					<option value="Random">Random
+					<option value="Knight">Knight
+					<option value="Monk">Monk
+					<option value="Thief">Thief
+					<option value="Dragoon">Dragoon
+					<option value="Ninja">Ninja
+					<option value="Samurai">Samurai
+					<option value="Berserker">Berserker
+					<option value="Hunter">Hunter
+					<option value="MysticKnight">MysticKnight
+					<option value="WhiteMage">WhiteMage
+					<option value="BlackMage">BlackMage
+					<option value="TimeMage">TimeMage
+					<option value="Summoner">Summoner
+					<option value="BlueMage">BlueMage
+					<option value="RedMage">RedMage
+					<option value="Mediator">Mediator
+					<option value="Chemist">Chemist
+					<option value="Geomancer">Geomancer
+					<option value="Bard">Bard
+					<option value="Dancer">Dancer
+					<option value="Mimic">Mimic
+					<option value="Freelancer">Freelancer
+				</select>
+			</div>	
+			<div class="pretty p-default p-round select-div">
+				<select class="option" id="job_2">
+					<option value="Random">Random
+					<option value="Knight">Knight
+					<option value="Monk">Monk
+					<option value="Thief">Thief
+					<option value="Dragoon">Dragoon
+					<option value="Ninja">Ninja
+					<option value="Samurai">Samurai
+					<option value="Berserker">Berserker
+					<option value="Hunter">Hunter
+					<option value="MysticKnight">MysticKnight
+					<option value="WhiteMage">WhiteMage
+					<option value="BlackMage">BlackMage
+					<option value="TimeMage">TimeMage
+					<option value="Summoner">Summoner
+					<option value="BlueMage">BlueMage
+					<option value="RedMage">RedMage
+					<option value="Mediator">Mediator
+					<option value="Chemist">Chemist
+					<option value="Geomancer">Geomancer
+					<option value="Bard">Bard
+					<option value="Dancer">Dancer
+					<option value="Mimic">Mimic
+					<option value="Freelancer">Freelancer
+				</select>
+			</div>	
+			<div class="pretty p-default p-round select-div">
+				<select class="option" id="job_3">
+					<option value="Random">Random
+					<option value="Knight">Knight
+					<option value="Monk">Monk
+					<option value="Thief">Thief
+					<option value="Dragoon">Dragoon
+					<option value="Ninja">Ninja
+					<option value="Samurai">Samurai
+					<option value="Berserker">Berserker
+					<option value="Hunter">Hunter
+					<option value="MysticKnight">MysticKnight
+					<option value="WhiteMage">WhiteMage
+					<option value="BlackMage">BlackMage
+					<option value="TimeMage">TimeMage
+					<option value="Summoner">Summoner
+					<option value="BlueMage">BlueMage
+					<option value="RedMage">RedMage
+					<option value="Mediator">Mediator
+					<option value="Chemist">Chemist
+					<option value="Geomancer">Geomancer
+					<option value="Bard">Bard
+					<option value="Dancer">Dancer
+					<option value="Mimic">Mimic
+					<option value="Freelancer">Freelancer
+				</select>
+			</div>
+			<div class="pretty p-default p-round select-div">
+				<select class="option" id="job_4">
+					<option value="Random">Random
+					<option value="Knight">Knight
+					<option value="Monk">Monk
+					<option value="Thief">Thief
+					<option value="Dragoon">Dragoon
+					<option value="Ninja">Ninja
+					<option value="Samurai">Samurai
+					<option value="Berserker">Berserker
+					<option value="Hunter">Hunter
+					<option value="MysticKnight">MysticKnight
+					<option value="WhiteMage">WhiteMage
+					<option value="BlackMage">BlackMage
+					<option value="TimeMage">TimeMage
+					<option value="Summoner">Summoner
+					<option value="BlueMage">BlueMage
+					<option value="RedMage">RedMage
+					<option value="Mediator">Mediator
+					<option value="Chemist">Chemist
+					<option value="Geomancer">Geomancer
+					<option value="Bard">Bard
+					<option value="Dancer">Dancer
+					<option value="Mimic">Mimic
+					<option value="Freelancer">Freelancer
+				</select>
+			</div>		
+
+			<br>
+			<p style="font-size:1.5em;margin-top:10px"><b>Chaos Settings</b></p>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="default_abilities" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Randomize Default Abilities:</b> Randomize the four ability slots on each Job's default (when switching to a Job)
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="learning_abilities" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Randomize Learning Abilities:</b> Randomize the ability slots on each Job when earning Job levels. Shuffled among all jobs' learnable abilities
+					</label>
+				</div>
+			</div>
+
+			<br>
 			<p style="font-size:1.5em;margin-top:10px"><b>Configurations</b></p>
 			<div class="input-div">
 				<input type="number" class="option" id="exp_mult" value="4" style="width:50px" 
 				onblur="javascript: if (this.value < 1 || this.value > 4) this.value = 4">
 					<b>EXP Multiplier</b> Value 1, 2 or 4 (3 defaults to 4)
+			</div>
+			<div class="input-div">
+				<input type="number" class="option" id="battle_speed" value="3" style="width:50px"
+				onblur="javascript: if (this.value < 1 || this.value > 6) this.value = 3">
+					<b>Battle speed</b> Value 1-6
 			</div>
 			<div class="input-div">
 				<input type="number" class="option" id="red_color" value="0" style="width:50px"
@@ -288,6 +436,83 @@
 				onblur="javascript: if (this.value < 0 || this.value > 31) this.value = 0">
 					<b>Blue menu color</b> Value 0-31
 			</div>
+			<div class="input-div">
+				<input type="text" class="option" id="lenna_name" value="Lenna" style="width:100px"
+				onblur="javascript: if (this.value.length > 6) this.value = 'Lenna'">
+					<b>Lenna's name</b> (Alphanumeric only, 6 characters max)
+			</div>
+			<div class="input-div">
+				<input type="text" class="option" id="galuf_name" value="Galuf" style="width:100px"
+				onblur="javascript: if (this.value.length > 6) this.value = 'Galuf'">
+					<b>Galuf's name</b> (Alphanumeric only, 6 characters max)
+			</div>
+			<div class="input-div">
+				<input type="text" class="option" id="cara_name" value="Cara" style="width:100px"
+				onblur="javascript: if (this.value.length > 6) this.value = 'Cara'">
+					<b>Cara's name</b> (Alphanumeric only, 6 characters max)
+			</div>
+			<div class="input-div">
+				<input type="text" class="option" id="faris_name" value="Faris" style="width:100px"
+				onblur="javascript: if (this.value.length > 6) this.value = 'Faris'">
+					<b>Faris's name</b> (Alphanumeric only, 6 characters max)
+			</div>
+
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="abbreviated" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Skip intro tutorial:</b> Remove dialog with Choco at the beginning of a seed
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="grantkeyitems" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Grant Key Items:</b> Grants all Key Items at the beginning of a seed
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="starting_cara" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Start with Cara:</b> Start with Cara instead of Galuf
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="music_randomization" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Randomize Music:</b> All music tracks are shuffled. HIGHLY experimental, some areas may softlock. Testing appreciated
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="everysteprandomencounter" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Every step encounters:</b> When encounters are turned on, every step yields an encounter.
+					</label>
+				</div>
+			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="free_shops" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Free shops:</b> All shops are free!
+					</label>
+				</div>
+			</div>
+
+
 
 			<br>
 			<p style="font-size:1.5em;margin-top:10px"><b>Portal Boss</b></p>

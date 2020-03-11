@@ -437,7 +437,7 @@ D04B20,435,y,standard,10,52,324,D07824,D07826,BE01,84,64,00,80,20,FF,FF,FF,FF,FF
 D04B30,436,,standard,,53,,,,,84,64,00,80,23,FF,FF,FF,FF,FF,FF,FF,00,00,C0,20,Wild Nack,Wild Nack, , , , , , , 
 D04B40,437,,standard,,54,,,,,84,64,00,80,3C,FF,FF,FF,FF,FF,FF,FF,00,00,C0,20,MiniDragon,MiniDragon, , , , , , , 
 D04B50,438,,standard,,6E,,,,,00,64,64,80,69,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,Magnetes,Magnetes, , , , , , , 
-D04B60,439,,boss,,00,,D07800,D07802,B601,00,80,00,C0,50,50,FF,FF,FF,FF,FF,FF,00,00,C0,20,"Goblin, Goblin",Goblin,Goblin, , , , , , 
+D04B60,439,ned,boss,50,00,,D078E8,D078EA,B601,00,80,00,C0,50,50,FF,FF,FF,FF,FF,FF,00,00,C0,20,"Goblin, Goblin",Goblin,Goblin, , , , , , 
 D04B70,440,y,boss,01,01,325,D07804,D07806,B701,00,80,05,80,00,01,FF,FF,FF,FF,FF,FF,10,00,08,20,"WingRaptor, WingRaptor",WingRaptor,WingRaptor, , , , , , 
 D04B80,441,y,boss,02,02,326,D07808,D0780A,B801,00,80,05,80,02,FF,FF,FF,FF,FF,FF,FF,00,00,08,20,Karlabos,Karlabos, , , , , , , 
 D04B90,442,y,boss,03,03,327,D0780C,D0780E,B901,00,80,05,80,04,05,FF,FF,FF,FF,FF,FF,10,00,08,20,"Siren, Siren",Siren,Siren, , , , , , 

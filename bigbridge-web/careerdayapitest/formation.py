@@ -149,32 +149,55 @@ class FormationManager(object):
     def __init__(self, data_manager, enemy_manager):
         self.formations = [Formation(x, data_manager, enemy_manager) for x in range(1, NUM_FORMATIONS)]
 
-    def get_patch(self):
+    def get_patch(self,remove_ned_flag):
         output = ";=========="
         output = output + "\n;formations"
         output = output + "\n;==========\n"
-        for i in [x for x in self.formations if x.randomized_boss == 'y']:
+        if remove_ned_flag:
+            formation_list = [i for i in self.formations if i.randomized_boss == 'y' or i.randomized_boss == 'ned']
+        else:
+            formation_list = [i for i in self.formations if i.randomized_boss == 'y']
+        for i in formation_list:
             output = output + i.asar_output + "\n"
         output = output + "\n"
 
         return output
 
-    def get_spoiler(self):
+    def get_spoiler(self,remove_ned_flag):
         output = "-----FORMATIONS-----\n"
         output = output+ "-- List in order of bosses where they appear in power ranking--\n  (WingRaptor appears at X location)\n"
-        boss_list = [x for x in self.formations if x.randomized_boss == 'y']
+
+        if remove_ned_flag:
+            boss_list = [x for x in self.formations if x.randomized_boss == 'y' or x.randomized_boss == 'ned']
+
+        else:
+            boss_list = [x for x in self.formations if x.randomized_boss == 'y']
         boss_list.sort(key=lambda x: int(x.boss_rank), reverse=False)
 
         for i in boss_list:
             output = output + i.short_output + "\n"
             
         output = output+ "\n-- List in order of bosses where they appear in location ranking --\n  (At WingRaptor location, X boss appears)\n"
-#        breakpoint()
         boss_list.sort(key=lambda x: int(x.random_boss_rank), reverse=False)
 
         for i in boss_list:
             output = output + i.short_output + "\n"
+        
+        if remove_ned_flag:
+            output = output.replace("Goblin              ","NeoExdeath (Goblins)")
+            
+        output = output + "\n -- Boss HP/EXP Details --\n"
+            
+        if remove_ned_flag:
+            formation_list = [i for i in self.formations if i.randomized_boss == 'y' or i.randomized_boss == 'ned']
+        else:
+            formation_list = [i for i in self.formations if i.randomized_boss == 'y']
+        for i in formation_list:
+            output = output +  i.enemy_change + '\n'
+            for e in i.enemy_classes:
+                output = output + "{:20}".format("    %s" % e.enemy_name) + "{:10}".format(" HP: %s" % e.num_hp) + "{:10}".format(" EXP: %s" % e.num_exp) + '\n'
 
-        output = output + "-----**********-----\n"
+        output = output + "\n-----**********-----\n"
 
+        
         return output

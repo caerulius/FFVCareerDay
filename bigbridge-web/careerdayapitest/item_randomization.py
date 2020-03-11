@@ -621,7 +621,7 @@ class WeaponManager(ABC):
     
     @property
     def get_spoiler(self):
-        output_str = '\n *** Weapon Randomization ***\n'
+        output_str = '\n-----WEAPON RANODMIZATION-----\n'
         for x in self.weapons:
             output_str = output_str + x.spoiler
         output_str = output_str + '\n'

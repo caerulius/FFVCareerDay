@@ -97,7 +97,7 @@ class TextParser():
 
         return return_text
 
-    def run_encrypt_text_string(self, x):
+    def run_encrypt_text_string_old(self, x):
         counter = 0
         text_list = []
         while counter < len(x):
@@ -116,6 +116,41 @@ class TextParser():
             text_asar = text_asar + " $" + i + ","
         text_asar = text_asar[:-1]
         return text_asar
+    
+    def run_encrypt_text_string(self,x,verbose=False,ff_fill=None):
+        if verbose:
+            print("\n")
+            print(";"+str(x))
+        return_text = ''
+        counter = 0
+        text_list = []
+        while counter < len(x):
+            char = x[counter]
+            if char == "<":
+                left = x.find("<")
+                right = x.find(">")+1
+                new_char = x[left:right]
+                text_list.append(self.text_dict2[new_char])
+                counter = right
+            else:    
+                text_list.append(self.text_dict2[char])
+                counter = counter + 1
+        text_asar = 'db'
+        if ff_fill != None:
+            new_len = ff_fill - len(text_list)
+            for _ in range(new_len):
+                text_list.append("FF")
+        for i in text_list:
+            text_asar = text_asar + " $" + i + ","
+        text_asar = text_asar[:-1]
+        if verbose:
+            print(text_asar)
+            return_text = return_text + text_asar + "\n"
+        else:
+            return_text = return_text + text_asar
+        if verbose:
+            print("\n")
+        return return_text
     
     def run_encrypt_text_string_hints(self, x):
         '''

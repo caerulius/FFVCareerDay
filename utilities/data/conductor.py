@@ -17,6 +17,7 @@ from text_parser import *
 from monster_in_a_box import *
 from item_randomization import *
 from ai_parser import *
+from misc_features import *
 
 logging.basicConfig(level=logging.ERROR, format="%(asctime)-15s %(message)s")
 
@@ -40,12 +41,17 @@ RANK_EXP_REWARD = {0:50*adjust_mult,
 16:18112*adjust_mult,
 17:19207*adjust_mult}
 
+def b2i(byte):
+    return int(byte,base=16)
+def i2b(integer):
+    return hex(integer).replace("0x","").upper()
+
 ITEM_TYPE = "40"
 
 ITEM_SHOP_TYPE = "01"
 MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
-VERSION = "FFV CareerDay v0.81"
+VERSION = "FFV CareerDay v0.82"
 
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
@@ -62,6 +68,7 @@ class Conductor():
             self.tiering_percentage = 90
             self.tiering_threshold = 10
             self.enforce_all_jobs = True
+            self.battle_speed = 3
             self.red_color = 0
             self.blue_color = 0
             self.green_color = 0
@@ -72,7 +79,20 @@ class Conductor():
             self.item_randomization = False
             self.item_randomization_percent = 100
             self.setting_string = None
+            self.learning_abilities = False
+            self.default_abilities = False
+            self.job_1 = "Random"
+            self.job_2 = "Random"
+            self.job_3 = "Random"
+            self.job_4 = "Random"
+            self.lenna_name = 'Lenna'
+            self.galuf_name = 'Galuf'
+            self.cara_name = 'Krile'
+            self.faris_name = 'Faris'
+            self.music_randomization = True
+            self.free_shops = False
             self.seed = None
+            self.remove_ned = True
             
             
         else:                           # else take the config passed from server.py and set variables
@@ -88,7 +108,21 @@ class Conductor():
             self.progressive_rewards = self.translateBool(conductor_config['progressive_rewards'])
             self.item_randomization = self.translateBool(conductor_config['item_randomization'])
             self.item_randomization_percent = int(conductor_config['item_randomization_percent'])
+            self.default_abilities = self.translateBool(conductor_config['default_abilities'])
+            self.learning_abilities = self.translateBool(conductor_config['learning_abilities'])
             self.setting_string = conductor_config['setting_string']
+            self.job_1 = conductor_config['job_1']
+            self.job_2 = conductor_config['job_2']
+            self.job_3 = conductor_config['job_3']
+            self.job_4 = conductor_config['job_4']
+            self.lenna_name = conductor_config['lenna_name']
+            self.galuf_name = conductor_config['galuf_name']
+            self.cara_name = conductor_config['cara_name']
+            self.faris_name = conductor_config['faris_name']
+            self.music_randomization = self.translateBool(conductor_config['music_randomization'])
+            self.free_shops = self.translateBool(conductor_config['free_shops'])
+            self.remove_ned = self.translateBool(conductor_config['remove_ned'])
+
             self.seed = conductor_config['seed']
             
             #only allow progressive bosses if world_lock == 1
@@ -142,7 +176,7 @@ class Conductor():
         logging.error("Init misc setup...")
         # Misc setup 
         self.difficulty = self.RE.randint(1,10)
-        crystals = self.get_crystals(self.fjf)
+        crystals = self.get_crystals()
         self.starting_crystal = crystals[0]
         self.chosen_crystals = crystals[1]
         self.chosen_crystals_names = [x.reward_name for x in self.chosen_crystals]
@@ -155,14 +189,25 @@ class Conductor():
         self.weigh_collectibles()
         logging.error("Init finished.")
 
-    def get_crystals(self, fjf=False):
+    def get_crystals(self):
         crystals = self.CM.get_all_of_type(Crystal)
-        starting_crystal = self.RE.choice(crystals)
-        # Reroll if Freelancer
-        while starting_crystal.collectible_name == 'Freelancer' or starting_crystal.collectible_name == 'Mimic' or starting_crystal.collectible_name == 'Samurai':
-            logging.error("Rerolling starting crystal...")
+        if self.fjf and self.job_1 != 'Random':
+            logging.error("First job assigned %s" % self.job_1)
+            starting_crystal = [i for i in crystals if i.collectible_name == self.job_1][0]
+        elif self.fjf and self.job_1 == 'Random':
+            logging.error("First job random, ensuring others chosen are not in pool")
+#            breakpoint()
+            temp_crystals = [i for i in crystals if i.collectible_name not in [self.job_2,self.job_3,self.job_4]]
+            starting_crystal = self.RE.choice(temp_crystals)
+            
+        else:
             starting_crystal = self.RE.choice(crystals)
-        
+            
+            # Reroll if Freelancer
+            while starting_crystal.collectible_name == 'Freelancer' or starting_crystal.collectible_name == 'Mimic' or starting_crystal.collectible_name == 'Samurai':
+                logging.error("Rerolling starting crystal...")
+                starting_crystal = self.RE.choice(crystals)
+            
         self.CM.add_to_placement_history(starting_crystal,"No") #don't allow the starting crystal to appear anywhere in game
         if starting_crystal.starting_spell_list == ['']:
             starting_crystal.starting_spell = "None"
@@ -171,33 +216,80 @@ class Conductor():
             index = self.RE.randint(0, len(starting_crystal.starting_spell_list)-1)
             starting_crystal.starting_spell = starting_crystal.starting_spell_list[index]
             starting_crystal.starting_spell_id = starting_crystal.starting_spell_ids[index]
-            
-        crystals = [x for x in crystals if x != starting_crystal]
 
-        if not fjf:
-            crystal_count = self.RE.randint(int(self.conductor_config['STARTING_CRYSTAL_COUNT']), len(crystals))
-            crystal_count = crystal_count - (self.difficulty // 3) #TODO: bring this to config
-
-
-            if crystal_count < int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT']):
-                crystal_count = int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT'])
-                
-            
-        else:
-            crystal_count = 3
-        chosen_crystals = self.RE.sample(crystals, crystal_count)
         
-        # Ensures for fjf that Freelancer is not included
-        # Rerolls until true
-        if fjf:
-            while len([i for i in chosen_crystals if i.collectible_name == 'Freelancer']) >= 1:
-                chosen_crystals = self.RE.sample(crystals, crystal_count)
-                logging.error("Failed on pulling Freelancer, re-rolling crystals for FJ mode")
-#                logging.error("New: ",chosen_crystals[0].collectible_name,chosen_crystals[1].collectible_name,chosen_crystals[2].collectible_name)
+            
+        if self.fjf and any([self.job_2 != 'Random', self.job_3 != 'Random', self.job_4 != 'Random']):
+
+            logging.error("Assigning 4 jobs manually: next jobs assigned %s, %s, %s" % (self.job_2,self.job_3,self.job_4))
+            crystals = [x for x in crystals if x != starting_crystal and x.collectible_name != "Freelancer"]
+            self.RE.shuffle(crystals)
+#            breakpoint()
+            
+            
+            if self.job_2 != "Random":
+                try:
+                    job_2 = [i for i in crystals if i.collectible_name == self.job_2][0]
+                except:
+                    logging.error("Failure on job_2, choosing random")
+                    job_2 = crystals.pop()
+                crystals = [i for i in crystals if i != job_2]
+            else:
+                job_2 = crystals.pop()
+                logging.error("Job_2 assigned %s" % (job_2.collectible_name))
+
+
+
+            if self.job_3 != "Random":
+                try:
+                    job_3 = [i for i in crystals if i.collectible_name == self.job_3][0]
+                except:
+                    logging.error("Failure on job_3, choosing random")
+                    job_3 = crystals.pop()
+                crystals = [i for i in crystals if i != job_3]
+            else:
+                job_3 = crystals.pop()
+                logging.error("Job_3 assigned %s" % (job_3.collectible_name))
                 
+                
+            if self.job_4 != "Random":
+                try:
+                    job_4 = [i for i in crystals if i.collectible_name == self.job_4][0]
+                except:
+                    logging.error("Failure on job_4, choosing random")
+                    job_4 = crystals.pop()
+            else:
+                job_4 = crystals.pop()
+                logging.error("Job_4 assigned %s" % (job_4.collectible_name))
+
+            
+            chosen_crystals = [job_2,job_3,job_4]
+        else:
+            crystals = [x for x in crystals if x != starting_crystal]
+            if not self.fjf:
+                crystal_count = self.RE.randint(int(self.conductor_config['STARTING_CRYSTAL_COUNT']), len(crystals))
+                crystal_count = crystal_count - (self.difficulty // 3) #TODO: bring this to config
+    
+    
+                if crystal_count < int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT']):
+                    crystal_count = int(self.conductor_config['MINIMUM_ALLOWABLE_CRYSTAL_COUNT'])
+                    
+                
+            else:
+                crystal_count = 3
+            chosen_crystals = self.RE.sample(crystals, crystal_count)
+            
+            # Ensures for fjf that Freelancer is not included
+            # Rerolls until true
+            if self.fjf:
+                while len([i for i in chosen_crystals if i.collectible_name == 'Freelancer']) >= 1:
+                    chosen_crystals = self.RE.sample(crystals, crystal_count)
+                    logging.error("Failed on pulling Freelancer, re-rolling crystals for FJ mode")
+    #                logging.error("New: ",chosen_crystals[0].collectible_name,chosen_crystals[1].collectible_name,chosen_crystals[2].collectible_name)
+
 
         #this pretends to have placed every job, so it won't try to place any more going forward
-        if fjf:
+        if self.fjf:
             for crystal in [x for x in self.CM.get_all_of_type(Crystal) if x != starting_crystal]:
                 self.CM.add_to_placement_history(crystal,"No")
         if self.fjf_strict:
@@ -654,6 +746,7 @@ class Conductor():
 
         
         for index, shop in enumerate(self.SM.shops):
+            shop.sort_contents()
             contents = shop.contents
             name_list = []
             for i in contents:
@@ -723,10 +816,14 @@ class Conductor():
         # Very important or else swapping HP becomes very muddy and original hp values on enemies are not preserved
                                     
         original_boss_list = []
-        for formation in [x for x in self.FM.formations if x.randomized_boss == 'y']:
+        if self.remove_ned:
+            formation_list = [x for x in self.FM.formations if x.randomized_boss == 'y' or x.randomized_boss == 'ned']
+        else:
+            formation_list = [x for x in self.FM.formations if x.randomized_boss == 'y']
+        for formation in formation_list:
         #for formation in df_boss_formations['event_id'].unique():
             original_boss_list.append(Formation(formation.idx, self.DM, self.EM, original_flag=True))
-            
+
         # Very explicit definitions
         # Randomized boss list will be updated
         # Original boss list will be referenced for what boss location & stats to change to, 
@@ -748,10 +845,10 @@ class Conductor():
         banned_at_odin = self.config['BANNEDATODIN']['boss_names'].split('\n')
     
 
-        for random_boss in [x for x in self.FM.formations if x.randomized_boss == 'y']:
+        for random_boss in formation_list:
             # First pick a random original boss
             original_boss = original_boss_list.pop()
-
+            
             #this is specifically an unworkable situation
             #this will just cycle gogo/stalker to the end and get a new boss
             while (original_boss.enemy_1_name == "Odin" and random_boss.enemy_1_name in banned_at_odin):
@@ -874,7 +971,7 @@ class Conductor():
             
             # CLAUSE FOR ENEMIES WITH 2x BOSS AS SEPARATE ENEMIES
             # GARGOYLES, GILGA/ENKIDOU, 
-            if original_formation_id in ['2D','1F']:
+            if original_formation_id in ['2D','1F','00']:
                 new_hp = new_hp * 2
                 
             # CLAUSE FOR ENEMIES WITH 3x BOSS AS SEPARATE ENEMIES
@@ -1171,6 +1268,8 @@ class Conductor():
 
 
         self.EM.relevant_enemies = list_of_randomized_enemies
+        
+
         
     def randomize_job_color_palettes(self):
         if True: # Future - flag for if all job palettes shuffled (for all chars and jobs)
@@ -1504,7 +1603,7 @@ class Conductor():
         # as part of the Conductor.randomize() method with the enemy spoiler patch
         #####################################    
         output_str = ''
-        self.superbosses_spoiler = self.superbosses_spoiler + '\n--------------- SUPERBOSSES: --------------- \n'
+        self.superbosses_spoiler = self.superbosses_spoiler + '\n-----SUPERBOSSES:-----\n'
         for random_enemy in [OMEGA,SHINRYUU]:
             ######################################
             # Elemental Absorb/Immune/Weakness
@@ -1679,7 +1778,7 @@ class Conductor():
         output_str = output_str + '\n; CODE OF THE VOID: \norg $E77476\n'+code_str+'\norg $F80900\n'+code_str+'\n\n'
 
         
-        self.superbosses_spoiler = self.superbosses_spoiler + "\n ***** CODE OF THE VOID *****\n"+''.join(letters)+"\n\n"
+        self.superbosses_spoiler = self.superbosses_spoiler + "\-----CODE OF THE VOID-----\n"+''.join(letters)+"\n\n"
             
         return output_str
     
@@ -1847,7 +1946,7 @@ class Conductor():
         for k, v in hint_data.items():
             output_str_asar = output_str_asar + "org $" + k + "\n" + v + "\n"
             
-        output_str = '\n\nHINTS: \n\n'
+        output_str = '\n\n-----HINTS-----\n\n'
         for i in hint_text:
             output_str = output_str + i + "\n"
         return output_str_asar, output_str.replace("|"," ")
@@ -1895,7 +1994,7 @@ class Conductor():
                     
     def randomize_weapons(self):
         logging.error("Beginning weapon randomization...")
-        self.WM.randomize()
+        weapon_shop_price_patch = self.WM.randomize()
         if len(self.WM.banned_items) > 0:
             for _ in range(3):
                 for weapon in self.WM.banned_items:
@@ -1903,6 +2002,7 @@ class Conductor():
                         self.CM.add_to_placement_history(self.CM.get_by_name(weapon['readable_name']),"No")
                     except:
                         logging.error("Error on placement history %s" % weapon['readable_name'])
+        return weapon_shop_price_patch
 
                     
     def get_collectible_counts(self):
@@ -1980,6 +2080,20 @@ class Conductor():
                 output = output + kuzar_text
         return output
 
+
+    def name_characters(self):
+        asar_str = '; Character Names\n'
+        asar_str = asar_str + 'org $C0BEC9\n'
+        asar_str = asar_str + self.TP.run_encrypt_text_string(self.lenna_name,ff_fill=8)
+        asar_str = asar_str +'\norg $C0BED1\n'
+        asar_str = asar_str + self.TP.run_encrypt_text_string(self.galuf_name,ff_fill=8)
+        asar_str = asar_str +'\norg $C0BED9\n'
+        asar_str = asar_str + self.TP.run_encrypt_text_string(self.faris_name,ff_fill=8)
+        asar_str = asar_str +'\norg $C0BEE1\n'
+        asar_str = asar_str + self.TP.run_encrypt_text_string(self.cara_name,ff_fill=8)
+        
+        return asar_str
+        
     def translateBool(self, boolean):
         
         if type(boolean) == bool:
@@ -2000,11 +2114,18 @@ class Conductor():
 #        non_placed_collectibles = [y for y in [x for x in self.CM.collectibles if x.placed_reward==None] if y.valid]
 #        
 
+    def spoiler_settings(self):
+        output_str = '\n-----SETTINGS-----\n'
+        for k, v in self.configs.items():
+            output_str = output_str + '{:30}'.format(str(k)) + '{:30}'.format(str(v)) + "\n"
+        return output_str + "\n"
+
     def parse_configs(self):
         config = self.configs
         r_color = int(config['red_color'])
         g_color = int(config['green_color']) * 32
         b_color = int(config['blue_color']) * 1024
+        
         colors = hex(r_color+g_color+b_color).replace("0x","")
         c1, c2 = colors[0:2].zfill(2), colors[2:4].zfill(2)
         
@@ -2016,6 +2137,13 @@ class Conductor():
             reward_val = reward_dict[int(config['exp_mult'])]
         except:
             reward_val = reward_dict[4]
+            
+        battle_speed = int(config['battle_speed'])
+        if battle_speed > 0 and battle_speed < 7: # validation
+            battle_speed = "0" + str(battle_speed-1)
+            reward_val = i2b(b2i(reward_val ) + b2i(battle_speed))
+        
+        
         patch = patch + "\n;Reward Mult\norg $C0F342\ndb $%s" % (reward_val)
         return patch
         
@@ -2064,7 +2192,7 @@ class Conductor():
         
         if self.item_randomization:
             logging.error("Randomizing weapons...")
-            self.randomize_weapons()
+            weapon_shop_price_patch = self.randomize_weapons()
 
 #        logging.error("Running cleanup for guaranteeing collectibles")
 #        self.cleanup_seed()
@@ -2082,9 +2210,10 @@ class Conductor():
         patch = patch + self.SPM.get_patch()
         patch = patch + self.randomize_superbosses() # this comes first, because it updates the contents of EnemyManager. 
         patch = patch + self.EM.get_patch(relevant=True)
-        patch = patch + self.FM.get_patch()
+        patch = patch + self.FM.get_patch(self.remove_ned)
         # patch = patch + self.karnak_escape_patch()
         patch = patch + self.kuzar_text_patch()
+        patch = patch + self.name_characters()
         patch = patch + self.odin_location_fix_patch
         if self.configs['randomize_loot'].lower() != "none":
             patch = patch + self.EM.get_loot_patch()
@@ -2092,12 +2221,26 @@ class Conductor():
             patch = patch + self.randomize_job_color_palettes()
         if self.item_randomization:
             patch = patch + self.WM.get_patch
+            patch = patch + weapon_shop_price_patch 
+        if self.default_abilities:
+            default_patch, default_spoiler = randomize_default_abilities(self.RE)
+            patch = patch + default_patch
+        if self.learning_abilities:
+            learning_patch, learning_spoiler = randomize_learning_abilities(self.RE)
+            patch = patch + learning_patch
+        if self.music_randomization:
+            logging.error("Shuffling music...")
+            patch = patch + shuffle_music()
+            
+        if self.free_shops:
+            patch = patch + free_shop_prices()
         patch = patch + self.parse_configs()
         patch = patch + self.set_portal_boss()
 
-        spoiler = ""
+        spoiler = "CAREER DAY SPOILER LOG\n"
         if self.seed is not None and self.setting_string is not None:
             spoiler = spoiler + self.spoiler_intro()
+        spoiler = spoiler + self.spoiler_settings()
         spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.get_collectible_counts()                
         spoiler = spoiler + self.RM.get_spoiler(self.world_lock)
@@ -2105,13 +2248,16 @@ class Conductor():
         spoiler = spoiler + self.CM.get_spoiler()    
         #spoiler = spoiler + self.EM.get_spoiler()
         spoiler = spoiler + self.superbosses_spoiler        
-        spoiler = spoiler + self.FM.get_spoiler()
+        spoiler = spoiler + self.FM.get_spoiler(self.remove_ned)
         if self.item_randomization:
             spoiler = spoiler + self.WM.get_spoiler
 
         if self.configs['randomize_loot'].lower() != "none":
             spoiler = spoiler + self.EM.get_loot_spoiler()
-
+        if self.default_abilities:
+            spoiler = spoiler + default_spoiler
+        if self.default_abilities:
+            spoiler = spoiler + learning_spoiler
         temp_hints_asar, temp_hints = self.assign_hints()
         patch = patch + temp_hints_asar
         spoiler = spoiler + temp_hints
@@ -2124,8 +2270,10 @@ class Conductor():
 ######## TESTING AREA ##############
 ####################################
 
-if __name__ == "__main__":    
-#    random.seed(10009)
+if __name__ == "__main__":   
+#    SEED_NUM = 903378
+    SEED_NUM = random.randint(1,1000000)
+    random.seed(SEED_NUM)
     c = Conductor(random, {
                             'fjf':False,
                             'fjf_strict':False,
@@ -2135,6 +2283,7 @@ if __name__ == "__main__":
                             'tiering_percentage': 90,
                             'tiering_threshold': 2,
                             'enforce_all_jobs': False,
+                            'battle_speed':3,
                             'red_color':5,
                             'blue_color':5,
                             'green_color':5,
@@ -2146,7 +2295,23 @@ if __name__ == "__main__":
                             'portal_boss' : 'SomberMage',
                             'progressive_rewards' : False,
                             'item_randomization' : True,
-                            'item_randomization_percent' : 100
+                            'item_randomization_percent' : 100,
+                            'default_abilities': True,
+                            'learning_abilities': True,
+                            'setting_string': None,
+                            'job_1':'Knight',
+                            'job_2':'Berserker',
+                            'job_3':'Random',
+                            'job_4':'Summoner',
+                            'lenna_name':'Lenna',
+                            'galuf_name':'Galuf',
+                            'cara_name':'Krile',
+                            'faris_name':'Ziliat',
+                            'music_randomization': False,
+                            'free_shops':False,
+                            'battle_speed':3,
+                            'remove_ned':True,
+                            'seed': SEED_NUM
                           }
                  )
     (spoiler, patch) = c.randomize()

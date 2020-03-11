@@ -458,6 +458,135 @@ db $CB, $97, $03                ;Clear Flag 2/3/4/5/97 03
 
 
 ; tutorial section
-incsrc tutorial_event.asm
+if !abbreviated = 0
+    incsrc tutorial_event.asm
+endif
+
+if !grantkeyitems = 1
+    ; db $A4, $B0
+    ; db $A4, $B1
+    ; db $A4, $B2
+    ; db $A4, $B3
+    ; db $A4, $B4
+    ; db $A4, $B5
+    ; db $A4, $B6
+    ; db $A4, $B7
+    ; ; db $A4, $B8
+    ; db $A4, $B9
+    ; db $A4, $BA
+    ; db $A4, $BB
+    ; db $A4, $BC
+    ; ;db $A4, $BD
+    ; ;db $A4, $BE
+    ; db $A4, $BF
+    ; ;db $A4, $C0
+    ; db $A4, $C1
+    ; db $A4, $C2
+    ; ;db $A4, $C3
+    ; ;db $A4, $C4
+    ; db $A4, $C5
+    ; ;db $A4, $C6
+    ; ;db $A4, $C7
+    ; ;db $A4, $C8
+    ; ;db $A4, $C9
+    ; db $A4, $CA
+    ; db $A4, $CB
+    ; db $A4, $CC
+    ; db $A4, $CD
+    ; ;db $A4, $CE
+    ; db $A4, $CF
+    
+    ; db $DE, $60
+    ; db $DE, $61
+    ; db $DE, $62
+    ; db $DE, $63
+    ; db $DE, $64
+    ; db $DE, $65
+    ; db $DE, $66
+    ; db $DE, $67
+    ; db $DE, $68
+    ; db $DE, $69
+    ; db $DE, $6A
+    ; db $DE, $6B
+    ; db $DE, $6C
+    ; db $DE, $6D
+    ; db $DE, $6E
+    ; db $DE, $6F
+    ; db $DE, $70
+    ; db $DE, $71
+    ; db $DE, $72
+    ; db $DE, $73
+    ; db $DE, $74
+    ; db $DE, $75
+    ; db $DE, $76
+    ; db $DE, $77
+    ; db $DE, $78
+    ; db $DE, $79
+    ; db $DE, $7A
+    ; db $DE, $7B
+    ; db $DE, $7C
+    ; db $DE, $7D
+    ; db $DE, $7E
+    ; db $DE, $7F
+    ; db $DE, $80
+    ; db $DE, $81
+    ; db $DE, $82
+    ; db $DE, $83
+    ; db $DE, $84
+    ; db $DE, $85
+
+
+    db $A2, $1D            ; set address 000A17 bit ON 20
+    db $A2, $1C            ; set address 000A17 bit ON 10
+    db $A2, $3B            ; set address 000A1B bit ON 08
+    db $A3, $5E            ; set address 000A1F bit OFF 40
+    db $A2, $71            ; set address 000A22 bit ON 02
+    db $A2, $83            ; set address 000A24 bit ON 08
+    db $A2, $8E            ; set address 000A25 bit ON 40
+    db $A2, $93            ; set address 000A26 bit ON 08
+    db $A2, $91            ; set address 000A26 bit ON 02
+    db $A4, $29            ; set address 000A39 bit ON 02
+    db $A4, $28            ; set address 000A39 bit ON 01
+    db $A4, $45            ; set address 000A3C bit ON 20
+    db $A4, $B7            ; set address 000A4A bit ON 80
+    db $A4, $B6            ; set address 000A4A bit ON 40
+    db $A4, $B5            ; set address 000A4A bit ON 20
+    db $A4, $B4            ; set address 000A4A bit ON 10
+    db $A4, $B3            ; set address 000A4A bit ON 08
+    db $A4, $B2            ; set address 000A4A bit ON 04
+    db $A4, $B1            ; set address 000A4A bit ON 02
+    db $A4, $B0            ; set address 000A4A bit ON 01
+    db $A4, $BF            ; set address 000A4B bit ON 80
+    db $A4, $BC            ; set address 000A4B bit ON 10
+    db $A4, $BB            ; set address 000A4B bit ON 08
+    db $A4, $BA            ; set address 000A4B bit ON 04
+    db $A4, $B9            ; set address 000A4B bit ON 02
+    db $A4, $C5            ; set address 000A4C bit ON 20
+    db $A4, $C2            ; set address 000A4C bit ON 04
+    db $A4, $C1            ; set address 000A4C bit ON 02
+    db $A4, $CF            ; set address 000A4D bit ON 80
+    db $A4, $CD            ; set address 000A4D bit ON 20
+    db $A4, $CC            ; set address 000A4D bit ON 10
+    db $A4, $CB            ; set address 000A4D bit ON 08
+    db $A4, $CA            ; set address 000A4D bit ON 04
+    db $A4, $FA            ; set address 000A53 bit ON 04
+    db $CB, $9E, $00            ; set address 000A67 bit OFF 40
+    db $CB, $9D, $00            ; set address 000A67 bit OFF 20
+    db $CB, $9C, $00            ; set address 000A67 bit OFF 10
+    db $CB, $99, $00            ; set address 000A67 bit OFF 02
+    db $CB, $98, $00            ; set address 000A67 bit OFF 01
+    db $CA, $A0, $00            ; set address 000A68 bit ON 01
+    db $CB, $96, $01            ; set address 000A86 bit OFF 40
+    db $CB, $95, $01            ; set address 000A86 bit OFF 20
+    db $CB, $94, $01            ; set address 000A86 bit OFF 10
+    db $CB, $93, $01            ; set address 000A86 bit OFF 08
+    db $CB, $92, $01            ; set address 000A86 bit OFF 04
+    db $CB, $91, $01            ; set address 000A86 bit OFF 02
+    db $CB, $90, $01            ; set address 000A86 bit OFF 01
+
+    db $CA, $D8, $02            ; set address 000AAF bit ON 02. ENABLE world 1
+    db $CA, $D9, $02            ; set address 000AAF bit ON 02. ENABLE world 2
+    db $CA, $DA, $02            ; set address 000AAF bit ON 02. ENABLE world 3
+endif 
 
 db $14

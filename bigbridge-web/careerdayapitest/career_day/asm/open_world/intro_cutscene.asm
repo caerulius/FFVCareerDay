@@ -44,6 +44,11 @@ db $EC                          ;Set starting randomizer job
 ; db $75
 ; db $B4, $36                     ; CUSTOM MUSIC
 
+if !starting_cara = 1
+    db $B7, $8A							;Add/Remove character 02 (Galuf)
+    db $B7, $0C							;Add/Remove character 02 (Galuf)
+endif
+
 db $FF                          ;End Event
 
 padbyte $00
