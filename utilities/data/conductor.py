@@ -2233,7 +2233,9 @@ class Conductor():
             patch = patch + shuffle_music()
             
         if self.free_shops:
+            logging.error("Free shops...")
             patch = patch + free_shop_prices()
+            
         patch = patch + self.parse_configs()
         patch = patch + self.set_portal_boss()
 

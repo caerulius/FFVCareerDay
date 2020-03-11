@@ -1994,7 +1994,7 @@ class Conductor():
                     
     def randomize_weapons(self):
         logging.error("Beginning weapon randomization...")
-        self.WM.randomize()
+        weapon_shop_price_patch = self.WM.randomize()
         if len(self.WM.banned_items) > 0:
             for _ in range(3):
                 for weapon in self.WM.banned_items:
@@ -2002,6 +2002,7 @@ class Conductor():
                         self.CM.add_to_placement_history(self.CM.get_by_name(weapon['readable_name']),"No")
                     except:
                         logging.error("Error on placement history %s" % weapon['readable_name'])
+        return weapon_shop_price_patch
 
                     
     def get_collectible_counts(self):
@@ -2191,7 +2192,7 @@ class Conductor():
         
         if self.item_randomization:
             logging.error("Randomizing weapons...")
-            self.randomize_weapons()
+            weapon_shop_price_patch = self.randomize_weapons()
 
 #        logging.error("Running cleanup for guaranteeing collectibles")
 #        self.cleanup_seed()
@@ -2220,6 +2221,7 @@ class Conductor():
             patch = patch + self.randomize_job_color_palettes()
         if self.item_randomization:
             patch = patch + self.WM.get_patch
+            patch = patch + weapon_shop_price_patch 
         if self.default_abilities:
             default_patch, default_spoiler = randomize_default_abilities(self.RE)
             patch = patch + default_patch
@@ -2269,8 +2271,8 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    SEED_NUM = 767565
-#    SEED_NUM = random.randint(1,1000000)
+#    SEED_NUM = 903378
+    SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {
                             'fjf':False,

@@ -86,17 +86,20 @@
 					<h6><button style="display:none" class="link servicelink big-download" id="download"><i class="fa fa-1x fa-download"></i> Download</button></h6>
 				</div>
 			</div>
+			
 			<div class="row" id="settingstringdefault">
-				<p>Current setting string. Click to copy to your clipboard and save settings for later or share, or <a style="cursor:pointer" onclick="showCustomSettingString()">apply a custom setting string</a></p>
+				<p>Current setting string (check end of this page for more defaults!). Click to copy to your clipboard and save settings for later or share, or <a style="cursor:pointer" onclick="showCustomSettingString()">apply a custom setting string</a></p>
 				<input type="text" id="settingstring" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');"> <!-- shoutouts to the SMRPG randomizer for the easy copy to clipboard code -->
 				<label for="settingstring" class="d-none"></label>
 			</div>
+
 			<div class="row" id="settingstringcustom" style="display:none">
 				<p>Input a setting string here to apply those settings, or <a style="cursor:pointer" onclick="showDefaultSettingString()">view your current setting string.</a></p>
 				<input type="text" id="settingstringcustom_input" class="form-control form-control-lg text-center"> <!-- shoutouts to the SMRPG randomizer for the easy copy to clipboard code -->
 				<button class="settinglink servicelink settingsapply" onclick="applyCustomSettingString()">Apply</button>
 				<label for="customSettingString" class="d-none"></label>
 			</div>
+
 			<hr style="border-top: dashed 6px">
 			<div class="row">
 			<p style="font-size:1.5em;margin-top:10px"><b>Main Options</b></p>
@@ -475,12 +478,13 @@
 					</label>
 				</div>
 			</div>
+			<p></p>
 			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
 				<input type="checkbox" class="option" id="starting_cara" unchecked>
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
 					<label>
-						<b>Start with Cara:</b> Start with Cara instead of Galuf
+						<b>Start with Cara:</b> Start with Cara instead of Galuf                   
 					</label>
 				</div>
 			</div>
@@ -522,6 +526,54 @@
 					<option value="SomberMage">SomberMage
 				</select>
 			</div>			
+
+
+			<hr style="border-top: dashed 6px">
+			<div class="row">
+			<p style="font-size:1.5em;margin-top:10px"><b>Preset Settings</b></p>
+
+			<div class="row" id="settingstringpreset1">
+				<p>Standard locked worlds</p>
+				<input type="text" id="settingstringpresetval1" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');">
+				<label for="settingstringpresetval1" class="d-none"></label>
+			</div>
+			<p></p>
+			<div class="row" id="settingstringpreset2">
+				<p>Standard open worlds</p>
+				<input type="text" id="settingstringpresetval2" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');">
+				<label for="settingstringpresetval2" class="d-none"></label>
+			</div>
+			<p></p>
+			<div class="row" id="settingstringpreset3">
+				<p>Standard locked worlds with weapon randomization</p>
+				<input type="text" id="settingstringpresetval3" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');">
+				<label for="settingstringpresetval3" class="d-none"></label>
+			</div>
+			<p></p>
+			<div class="row" id="settingstringpreset4">
+				<p>Standard open worlds with weapon randomization</p>
+				<input type="text" id="settingstringpresetval4" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');">
+				<label for="settingstringpresetval4" class="d-none"></label>
+			</div>
+			<p></p>
+			<div class="row" id="settingstringpreset5">
+				<p>Four job mode, with locked worlds</p>
+				<input type="text" id="settingstringpresetval5" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');">
+				<label for="settingstringpresetval5" class="d-none"></label>
+			</div>
+			<p></p>
+			<div class="row" id="settingstringpreset6">
+				<p>Four job mode, with open worlds</p>
+				<input type="text" id="settingstringpresetval6" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');">
+				<label for="settingstringpresetval6" class="d-none"></label>
+			</div>
+			<p></p>
+			<div class="row" id="settingstringpreset7">
+				<p>Pure chaos, open world</p>
+				<input type="text" id="settingstringpresetval7" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');">
+				<label for="settingstringpresetval7" class="d-none"></label>
+			</div>
+			<p></p>
 
 				<hr class="pre-contact">
 	</section>

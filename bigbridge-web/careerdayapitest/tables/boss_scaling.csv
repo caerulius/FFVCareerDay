@@ -4323,7 +4323,7 @@ idx,enemy_name,enemy_rank,tier,loc_name,boss_rank,num_gauge_time,num_phys_power,
 266,LiquiFlame,boss,4,Neo Exdeath,50,63,132,14,23,0,67,67,0,65535,d0b395,[19],[Flare],[],[]
 267,LiquiFlame,boss,4,Neo Exdeath,50,63,132,10,67,0,44,34,0,65535,D0B3AF,[9],[Fire3],[],[]
 268,Commander,boss,4,Neo Exdeath,50,37,138,11,23,0,23,0,0,65535,d0b3ca,[],[],[],[]
-269,Sandworm,boss,4,Neo Exdeath,50,74,182,16,0,0,1,23,23,65535,d0b3d5,"[6,7,8]","[Fight,Qrtr,EarthShaker]",[],[]
+269,Sandworm,boss,4,Neo Exdeath,50,74,182,16,0,0,1,23,23,65535,d0b3d5,"[6,7,8]","[Fight,Quarter,EarthShaker]",[],[]
 270,Hole,boss,4,Neo Exdeath,50,1,58,17,0,0,1,23,23,65535,d0b3F1,[12],[Quarter],[],[]
 271,Hole,boss,4,Neo Exdeath,50,144,16,2,0,0,1,23,23,65535,d0b3Ff,[],[],[],[]
 272,AdamanTiMi,boss,4,Neo Exdeath,50,43,156,30,0,58,0,10,113,65535,d0b41a,[],[],[],[]
