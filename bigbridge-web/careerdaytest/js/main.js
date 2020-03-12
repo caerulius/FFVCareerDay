@@ -71,7 +71,7 @@ $(document).ready( function() {
 	$("#settingstringpresetval3").val("W1 T5|1 PB I100 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // locked weapon rando
 	$("#settingstringpresetval4").val("W0 T5|1 I100 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // open weapon rando 
 	$("#settingstringpresetval5").val("4 J1Random J2Random J3Random J4Random a W1 T5|1 PB RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // locked worlds fjf
-	$("#settingstringpresetval6").val("4 J1Random J2Random J3Random J4Random a W1 T5|1 PB RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // open fjf
+	$("#settingstringpresetval6").val("4 J1Random J2Random J3Random J4Random a W0 T5|1 PB RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // open fjf
 	$("#settingstringpresetval7").val("P W0 T5|1 A I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CDA CLA pbSomberMage"); // pure chaos
 
 	$("#settingstringpresetval1").click(function(){

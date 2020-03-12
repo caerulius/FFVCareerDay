@@ -47,8 +47,8 @@ if !world_lock = 0
     db $B5, $02
     db $71
     db $C8, $A9, $05                ; Text: Phase 1 against final Exdeath weakened!
-endif
     db $CD, $9C, $03
+endif
 
     db $C4, $02                     ;Fade in Speed 06
     db $75
@@ -99,7 +99,7 @@ db $CA, $DA, $02            ; set address 000AAF bit ON 02. ENABLE world 3
 db $CA, $73, $02                ;Set Flag 2/3/4/5/73 02
 
 
-
+db $CB, $7F, $00            ; set address 000A63 bit OFF 80. remove exdeath & crystals
 
 
 ; tycoon chancellor & guard already set. by the time you get to w3, force this 

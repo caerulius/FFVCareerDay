@@ -1,112 +1,112 @@
-item_id,readable_name,valid,type,subtype,value,max_count,tier,textbox_addr,textmenu_addr,data_addr
-00,<blank>,FALSE,dummy,dummy,0,0,0,E75860,D11380,D10000
-01,Empty,FALSE,dummy,dummy,0,0,0,E75878,D11389,D1000C
-02,Knife,TRUE,weapon,knife,1,3,1,E75890,D11392,D10018
-03,Dagger,TRUE,weapon,knife,2,3,2,E758A8,D1139B,D10024
-04,Mythril Knife,TRUE,weapon,knife,2,3,2,E758C0,D113A4,D10030
-05,Kunai,TRUE,weapon,knife,3,3,3,E758D8,D113AD,D1003C
-06,Mage Masher,TRUE,weapon,knife,3,3,3,E758F0,D113B6,D10048
-07,Guardian,TRUE,weapon,knife,4,3,4,E75908,D113BF,D10054
-08,Kodachi,TRUE,weapon,knife,5,3,5,E75920,D113C8,D10060
-09,Orialcon,TRUE,weapon,knife,5,3,5,E75938,D113D1,D1006C
-0A,Air Lance,TRUE,weapon,knife,6,3,6,E75950,D113DA,D10078
-0B,Assassin,TRUE,weapon,knife,7,1,7,E75968,D113E3,D10084
-0C,Sasuke,TRUE,weapon,knife,7,1,7,E75980,D113EC,D10090
-0D,Broadsword,TRUE,weapon,sword,1,3,1,E75998,D113F5,D1009C
-0E,RegalCut,TRUE,weapon,sword,1,3,1,E759B0,D113FE,D100A8
-0F,Mythril Sword,TRUE,weapon,sword,2,3,2,E759C8,D11407,D100B4
-10,Coral Sword,TRUE,weapon,sword,3,3,3,E759E0,D11410,D100C0
-11,Ancient Sword,TRUE,weapon,sword,3,3,3,E759F8,D11419,D100CC
-12,Epee Sword,TRUE,weapon,sword,4,3,4,E75A10,D11422,D100D8
-13,Slumber Sword,TRUE,weapon,sword,4,3,4,E75A28,D1142B,D100E4
-14,Defender Sword,TRUE,weapon,knightsword,6,3,6,E75A40,D11434,D100F0
-15,Excalibur,TRUE,weapon,knightsword,7,1,7,E75A58,D1143D,D100FC
-16,Ragnarok,TRUE,weapon,knightsword,8,1,8,E75A70,D11446,D10108
-17,Javelin,TRUE,weapon,spear,1,3,1,E75A88,D1144F,D10114
-18,Spear,TRUE,weapon,spear,2,3,2,E75AA0,D11458,D10120
-19,Mythril Spear,TRUE,weapon,spear,2,3,2,E75AB8,D11461,D1012C
-1A,Trident,TRUE,weapon,spear,3,3,3,E75AD0,D1146A,D10138
-1B,Wind Spear,TRUE,weapon,spear,4,3,4,E75AE8,D11473,D10144
-1C,Partisan,TRUE,weapon,spear,4,3,4,E75B00,D1147C,D10150
-1D,Gungnir,TRUE,weapon,spear,5,3,5,E75B18,D11485,D1015C
-1E,DblLance,TRUE,weapon,spear,4,3,4,E75B30,D1148E,D10168
-1F,Holy Lance,TRUE,weapon,spear,7,1,7,E75B48,D11497,D10174
-20,Dragoon Lance,TRUE,weapon,spear,8,1,8,E75B60,D114A0,D10180
-21,Battle Axe,TRUE,weapon,axe,1,3,1,E75B78,D114A9,D1018C
-22,Mythril Hammer,TRUE,weapon,axe,2,3,2,E75B90,D114B2,D10198
-23,Ogre Killer,TRUE,weapon,axe,2,3,2,E75BA8,D114BB,D101A4
-24,War Hammer,TRUE,weapon,axe,3,3,3,E75BC0,D114C4,D101B0
-25,Venom Axe,TRUE,weapon,axe,3,3,3,E75BD8,D114CD,D101BC
-26,Earth Hammer,TRUE,weapon,axe,7,3,7,E75BF0,D114D6,D101C8
-27,Rune Axe,TRUE,weapon,axe,7,3,7,E75C08,D114DF,D101D4
-28,Thor Hammer,TRUE,weapon,axe,7,1,7,E75C20,D114E8,D101E0
-29,Katana,TRUE,weapon,katana,1,3,1,E75C38,D114F1,D101EC
-2A,Air Blade,TRUE,weapon,katana,2,3,2,E75C50,D114FA,D101F8
-2B,Kotetsu,TRUE,weapon,katana,3,3,3,E75C68,D11503,D10204
-2C,Bizen,TRUE,weapon,katana,4,3,4,E75C80,D1150C,D10210
-2D,Forged,TRUE,weapon,katana,4,3,4,E75C98,D11515,D1021C
-2E,Murasume,TRUE,weapon,katana,6,1,6,E75CB0,D1151E,D10228
-2F,Masamune,TRUE,weapon,katana,7,1,7,E75CC8,D11527,D10234
-30,Tempest,TRUE,weapon,katana,7,1,7,E75CE0,D11530,D10240
-31,Rod,TRUE,weapon,rod,1,3,1,E75CF8,D11539,D1024C
-32,Fire Rod,TRUE,weapon,rod,3,3,3,E75D10,D11542,D10258
-33,Ice Rod,TRUE,weapon,rod,3,3,3,E75D28,D1154B,D10264
-34,Thunder Rod,TRUE,weapon,rod,3,3,3,E75D40,D11554,D10270
-35,Venom Rod,TRUE,weapon,rod,3,3,3,E75D58,D1155D,D1027C
-36,Lillith Rod,TRUE,weapon,rod,4,3,4,E75D70,D11566,D10288
-37,Wizard Rod,TRUE,weapon,rod,4,3,4,E75D88,D1156F,D10294
-38,Staff,TRUE,weapon,staff,1,3,1,E75DA0,D11578,D102A0
-39,Mythril Staff,TRUE,weapon,staff,2,3,2,E75DB8,D11581,D102AC
-3A,Power Staff,TRUE,weapon,staff,3,3,3,E75DD0,D1158A,D102B8
-3B,Healing Staff,TRUE,weapon,staff,3,3,3,E75DE8,D11593,D102C4
-3C,Staff of Light,TRUE,weapon,staff,5,3,5,E75E00,D1159C,D102D0
-3D,Sage's Staff,TRUE,weapon,staff,7,3,7,E75E18,D115A5,D102DC
-3E,Judgement Staff,TRUE,weapon,staff,7,1,7,E75E30,D115AE,D102E8
-3F,Fire Bow,TRUE,weapon,bow,2,3,2,E75E48,D115B7,D102F4
-40,Ice Bow,TRUE,weapon,bow,2,3,2,E75E60,D115C0,D10300
-41,Thunder Bow,TRUE,weapon,bow,2,3,2,E75E78,D115C9,D1030C
-42,Darkness Bow,TRUE,weapon,bow,2,3,2,E75E90,D115D2,D10318
-43,Killer Bow,TRUE,weapon,bow,2,3,2,E75EA8,D115DB,D10324
-44,Elven Bow,TRUE,weapon,bow,3,3,3,E75EC0,D115E4,D10330
-45,Yoichi Bow,TRUE,weapon,bow,4,1,4,E75ED8,D115ED,D1033C
-46,Artemis Bow,TRUE,weapon,bow,4,1,4,E75EF0,D115F6,D10348
-47,Silver Harp,TRUE,weapon,harp,1,3,1,E75F08,D115FF,D10354
-48,Dream Harp,TRUE,weapon,harp,2,3,2,E75F20,D11608,D10360
-49,Lamia's Harp,TRUE,weapon,harp,3,3,3,E75F38,D11611,D1036C
-4A,Apollo's Harp,TRUE,weapon,harp,7,1,7,E75F50,D1161A,D10378
-4B,Whip,TRUE,weapon,whip,1,3,1,E75F68,D11623,D10384
-4C,Chain Whip,TRUE,weapon,whip,2,3,2,E75F80,D1162C,D10390
-4D,Thunder Whip,TRUE,weapon,whip,3,3,3,E75F98,D11635,D1039C
-4E,Flame Whip,TRUE,weapon,whip,4,3,4,E75FB0,D1163E,D103A8
-4F,Dragon's Whisker,TRUE,weapon,whip,7,1,7,E75FC8,D11647,D103B4
-50,Giyaman,TRUE,weapon,bell,1,3,1,E75FE0,D11650,D103C0
-51,Earth Bell,TRUE,weapon,bell,2,3,2,E75FF8,D11659,D103CC
-52,Rune Chime,TRUE,weapon,bell,3,1,3,E76010,D11662,D103D8
-53,Tinkerbell,TRUE,weapon,bell,7,1,7,E76028,D1166B,D103E4
-54,Sabre (*Dummy),FALSE,dummy,dummy,0,0,0,E76040,D11674,D103F0
-55,Drain Sword,TRUE,weapon,sword,3,3,3,E76058,D1167D,D103FC
-56,RuneEdge,TRUE,weapon,sword,5,3,5,E76070,D11686,D10408
-57,Flametongue,TRUE,weapon,sword,5,3,5,E76088,D1168F,D10414
-58,IceBrand,TRUE,weapon,sword,5,3,5,E760A0,D11698,D10420
-59,Full Moon,TRUE,weapon,flail,4,3,4,E760B8,D116A1,D1042C
-5A,Shuriken,TRUE,item,throw,3,3,3,E760D0,D116AA,D10438
-5B,Pinwheel,TRUE,item,throw,5,3,5,E760E8,D116B3,D10444
-5C,Excailbur,FALSE,item,throw,1,1,1,E76100,D116BC,D10450
-5D,BeastKiller,TRUE,weapon,whip,5,3,5,E76118,D116C5,D1045C
-5E,Flail,TRUE,weapon,flail,2,3,2,E76130,D116CE,D10468
-5F,Morning Star,TRUE,weapon,flail,3,3,3,E76148,D116D7,D10474
-60,Wonder Wand,TRUE,weapon,rod,5,1,5,E76160,D116E0,D10480
-61,Brave Blade,FALSE,weapon,sword,8,1,8,E76178,D116E9,D1048C
-62,Soot,FALSE,weapon,flail,1,3,1,E76190,D116F2,D10498
-63,Chicken Knife,FALSE,weapon,knife,8,1,8,E761A8,D116FB,D104A4
-64,RisingSun,TRUE,weapon,flail,3,3,3,E761C0,D11704,D104B0
-65,Silver Bow,TRUE,weapon,bow,3,3,3,E761D8,D1170D,D104BC
-66,Gale Bow,TRUE,weapon,bow,3,3,3,E761F0,D11716,D104C8
-67,AntiMagic Bow,TRUE,weapon,bow,4,3,4,E76208,D1171F,D104D4
-68,Avis Killer,TRUE,weapon,bow,4,3,4,E76220,D11728,D104E0
-69,DoomCut,TRUE,weapon,axe,5,3,5,E76238,D11731,D104EC
-6A,Giant's Axe,TRUE,weapon,axe,5,3,5,E76250,D1173A,D104F8
-6B,ManEater,TRUE,weapon,knife,6,3,6,E76268,D11743,D10504
-6C,Thief Knife,TRUE,weapon,knife,3,1,3,E76280,D1174C,D10510
-6D,Dancing Dagger,TRUE,weapon,knife,4,1,4,E76298,D11755,D1051C
-6E,Enhancer,TRUE,weapon,sword,5,3,5,E762B0,D1175E,D10528
+item_id,readable_name,valid,type,subtype,value,max_count,tier,textbox_addr,textmenu_addr,data_addr,shop_addr
+00,<blank>,FALSE,dummy,dummy,0,0,0,E75860,D11380,D10000,D12A00
+01,Empty,FALSE,dummy,dummy,0,0,0,E75878,D11389,D1000C,D12A02
+02,Knife,TRUE,weapon,knife,1,3,1,E75890,D11392,D10018,D12A04
+03,Dagger,TRUE,weapon,knife,2,3,2,E758A8,D1139B,D10024,D12A06
+04,Mythril Knife,TRUE,weapon,knife,2,3,2,E758C0,D113A4,D10030,D12A08
+05,Kunai,TRUE,weapon,knife,3,3,3,E758D8,D113AD,D1003C,D12A0A
+06,Mage Masher,TRUE,weapon,knife,3,3,3,E758F0,D113B6,D10048,D12A0C
+07,Guardian,TRUE,weapon,knife,4,3,4,E75908,D113BF,D10054,D12A0E
+08,Kodachi,TRUE,weapon,knife,5,3,5,E75920,D113C8,D10060,D12A10
+09,Orialcon,TRUE,weapon,knife,5,3,5,E75938,D113D1,D1006C,D12A12
+0A,Air Lance,TRUE,weapon,knife,6,3,6,E75950,D113DA,D10078,D12A14
+0B,Assassin,TRUE,weapon,knife,7,1,7,E75968,D113E3,D10084,D12A16
+0C,Sasuke,TRUE,weapon,knife,7,1,7,E75980,D113EC,D10090,D12A18
+0D,Broadsword,TRUE,weapon,sword,1,3,1,E75998,D113F5,D1009C,D12A1A
+0E,RegalCut,TRUE,weapon,sword,1,3,1,E759B0,D113FE,D100A8,D12A1C
+0F,Mythril Sword,TRUE,weapon,sword,2,3,2,E759C8,D11407,D100B4,D12A1E
+10,Coral Sword,TRUE,weapon,sword,3,3,3,E759E0,D11410,D100C0,D12A20
+11,Ancient Sword,TRUE,weapon,sword,3,3,3,E759F8,D11419,D100CC,D12A22
+12,Epee Sword,TRUE,weapon,sword,4,3,4,E75A10,D11422,D100D8,D12A24
+13,Slumber Sword,TRUE,weapon,sword,4,3,4,E75A28,D1142B,D100E4,D12A26
+14,Defender Sword,TRUE,weapon,knightsword,6,3,6,E75A40,D11434,D100F0,D12A28
+15,Excalibur,TRUE,weapon,knightsword,7,1,7,E75A58,D1143D,D100FC,D12A2A
+16,Ragnarok,TRUE,weapon,knightsword,8,1,8,E75A70,D11446,D10108,D12A2C
+17,Javelin,TRUE,weapon,spear,1,3,1,E75A88,D1144F,D10114,D12A2E
+18,Spear,TRUE,weapon,spear,2,3,2,E75AA0,D11458,D10120,D12A30
+19,Mythril Spear,TRUE,weapon,spear,2,3,2,E75AB8,D11461,D1012C,D12A32
+1A,Trident,TRUE,weapon,spear,3,3,3,E75AD0,D1146A,D10138,D12A34
+1B,Wind Spear,TRUE,weapon,spear,4,3,4,E75AE8,D11473,D10144,D12A36
+1C,Partisan,TRUE,weapon,spear,4,3,4,E75B00,D1147C,D10150,D12A38
+1D,Gungnir,TRUE,weapon,spear,5,3,5,E75B18,D11485,D1015C,D12A3A
+1E,DblLance,TRUE,weapon,spear,4,3,4,E75B30,D1148E,D10168,D12A3C
+1F,Holy Lance,TRUE,weapon,spear,7,1,7,E75B48,D11497,D10174,D12A3E
+20,Dragoon Lance,TRUE,weapon,spear,8,1,8,E75B60,D114A0,D10180,D12A40
+21,Battle Axe,TRUE,weapon,axe,1,3,1,E75B78,D114A9,D1018C,D12A42
+22,Mythril Hammer,TRUE,weapon,axe,2,3,2,E75B90,D114B2,D10198,D12A44
+23,Ogre Killer,TRUE,weapon,axe,2,3,2,E75BA8,D114BB,D101A4,D12A46
+24,War Hammer,TRUE,weapon,axe,3,3,3,E75BC0,D114C4,D101B0,D12A48
+25,Venom Axe,TRUE,weapon,axe,3,3,3,E75BD8,D114CD,D101BC,D12A4A
+26,Earth Hammer,TRUE,weapon,axe,7,3,7,E75BF0,D114D6,D101C8,D12A4C
+27,Rune Axe,TRUE,weapon,axe,7,3,7,E75C08,D114DF,D101D4,D12A4E
+28,Thor Hammer,TRUE,weapon,axe,7,1,7,E75C20,D114E8,D101E0,D12A50
+29,Katana,TRUE,weapon,katana,1,3,1,E75C38,D114F1,D101EC,D12A52
+2A,Air Blade,TRUE,weapon,katana,2,3,2,E75C50,D114FA,D101F8,D12A54
+2B,Kotetsu,TRUE,weapon,katana,3,3,3,E75C68,D11503,D10204,D12A56
+2C,Bizen,TRUE,weapon,katana,4,3,4,E75C80,D1150C,D10210,D12A58
+2D,Forged,TRUE,weapon,katana,4,3,4,E75C98,D11515,D1021C,D12A5A
+2E,Murasame,TRUE,weapon,katana,6,1,6,E75CB0,D1151E,D10228,D12A5C
+2F,Masamune,TRUE,weapon,katana,7,1,7,E75CC8,D11527,D10234,D12A5E
+30,Tempest,TRUE,weapon,katana,7,1,7,E75CE0,D11530,D10240,D12A60
+31,Rod,TRUE,weapon,rod,1,3,1,E75CF8,D11539,D1024C,D12A62
+32,Fire Rod,TRUE,weapon,rod,3,3,3,E75D10,D11542,D10258,D12A64
+33,Ice Rod,TRUE,weapon,rod,3,3,3,E75D28,D1154B,D10264,D12A66
+34,Thunder Rod,TRUE,weapon,rod,3,3,3,E75D40,D11554,D10270,D12A68
+35,Venom Rod,TRUE,weapon,rod,3,3,3,E75D58,D1155D,D1027C,D12A6A
+36,Lillith Rod,TRUE,weapon,rod,4,3,4,E75D70,D11566,D10288,D12A6C
+37,Wizard Rod,TRUE,weapon,rod,4,3,4,E75D88,D1156F,D10294,D12A6E
+38,Staff,TRUE,weapon,staff,1,3,1,E75DA0,D11578,D102A0,D12A70
+39,Mythril Staff,TRUE,weapon,staff,2,3,2,E75DB8,D11581,D102AC,D12A72
+3A,Power Staff,TRUE,weapon,staff,3,3,3,E75DD0,D1158A,D102B8,D12A74
+3B,Healing Staff,TRUE,weapon,staff,3,3,3,E75DE8,D11593,D102C4,D12A76
+3C,Staff of Light,TRUE,weapon,staff,5,3,5,E75E00,D1159C,D102D0,D12A78
+3D,Sage's Staff,TRUE,weapon,staff,7,3,7,E75E18,D115A5,D102DC,D12A7A
+3E,Judgement Staff,TRUE,weapon,staff,7,1,7,E75E30,D115AE,D102E8,D12A7C
+3F,Fire Bow,TRUE,weapon,bow,2,3,2,E75E48,D115B7,D102F4,D12A7E
+40,Ice Bow,TRUE,weapon,bow,2,3,2,E75E60,D115C0,D10300,D12A80
+41,Thunder Bow,TRUE,weapon,bow,2,3,2,E75E78,D115C9,D1030C,D12A82
+42,Darkness Bow,TRUE,weapon,bow,2,3,3,E75E90,D115D2,D10318,D12A84
+43,Killer Bow,TRUE,weapon,bow,2,3,3,E75EA8,D115DB,D10324,D12A86
+44,Elven Bow,TRUE,weapon,bow,3,3,3,E75EC0,D115E4,D10330,D12A88
+45,Yoichi Bow,TRUE,weapon,bow,4,1,7,E75ED8,D115ED,D1033C,D12A8A
+46,Artemis Bow,TRUE,weapon,bow,4,1,8,E75EF0,D115F6,D10348,D12A8C
+47,Silver Harp,TRUE,weapon,harp,1,3,1,E75F08,D115FF,D10354,D12A8E
+48,Dream Harp,TRUE,weapon,harp,2,3,2,E75F20,D11608,D10360,D12A90
+49,Lamia's Harp,TRUE,weapon,harp,3,3,3,E75F38,D11611,D1036C,D12A92
+4A,Apollo's Harp,TRUE,weapon,harp,7,1,7,E75F50,D1161A,D10378,D12A94
+4B,Whip,TRUE,weapon,whip,1,3,1,E75F68,D11623,D10384,D12A96
+4C,Chain Whip,TRUE,weapon,whip,2,3,2,E75F80,D1162C,D10390,D12A98
+4D,Thunder Whip,TRUE,weapon,whip,3,3,3,E75F98,D11635,D1039C,D12A9A
+4E,Flame Whip,TRUE,weapon,whip,4,3,7,E75FB0,D1163E,D103A8,D12A9C
+4F,Dragon's Whisker,TRUE,weapon,whip,7,1,7,E75FC8,D11647,D103B4,D12A9E
+50,Giyaman,TRUE,weapon,bell,1,3,1,E75FE0,D11650,D103C0,D12AA0
+51,Earth Bell,TRUE,weapon,bell,2,3,2,E75FF8,D11659,D103CC,D12AA2
+52,Rune Chime,TRUE,weapon,bell,3,1,3,E76010,D11662,D103D8,D12AA4
+53,Tinkerbell,TRUE,weapon,bell,7,1,7,E76028,D1166B,D103E4,D12AA6
+54,Sabre (*Dummy),FALSE,dummy,dummy,0,0,0,E76040,D11674,D103F0,D12AA8
+55,Drain Sword,TRUE,weapon,sword,3,3,3,E76058,D1167D,D103FC,D12AAA
+56,RuneEdge,TRUE,weapon,sword,5,3,5,E76070,D11686,D10408,D12AAC
+57,Flametongue,TRUE,weapon,sword,5,3,5,E76088,D1168F,D10414,D12AAE
+58,IceBrand,TRUE,weapon,sword,5,3,5,E760A0,D11698,D10420,D12AB0
+59,Full Moon,TRUE,weapon,flail,4,3,4,E760B8,D116A1,D1042C,D12AB2
+5A,Shuriken,TRUE,item,throw,3,3,3,E760D0,D116AA,D10438,D12AB4
+5B,Pinwheel,TRUE,item,throw,5,3,5,E760E8,D116B3,D10444,D12AB6
+5C,Excailbur,FALSE,item,throw,1,1,1,E76100,D116BC,D10450,D12AB8
+5D,BeastKiller,TRUE,weapon,whip,5,3,5,E76118,D116C5,D1045C,D12ABA
+5E,Flail,TRUE,weapon,flail,2,3,2,E76130,D116CE,D10468,D12ABC
+5F,Morning Star,TRUE,weapon,flail,3,3,3,E76148,D116D7,D10474,D12ABE
+60,Wonder Wand,TRUE,weapon,rod,5,1,5,E76160,D116E0,D10480,D12AC0
+61,Brave Blade,FALSE,weapon,sword,8,1,8,E76178,D116E9,D1048C,D12AC2
+62,Soot,FALSE,weapon,flail,1,3,1,E76190,D116F2,D10498,D12AC4
+63,Chicken Knife,FALSE,weapon,knife,8,1,8,E761A8,D116FB,D104A4,D12AC6
+64,RisingSun,TRUE,weapon,flail,3,3,3,E761C0,D11704,D104B0,D12AC8
+65,Silver Bow,TRUE,weapon,bow,3,3,3,E761D8,D1170D,D104BC,D12ACA
+66,Gale Bow,TRUE,weapon,bow,3,3,3,E761F0,D11716,D104C8,D12ACC
+67,AntiMagic Bow,TRUE,weapon,bow,4,3,4,E76208,D1171F,D104D4,D12ACE
+68,Avis Killer,TRUE,weapon,bow,4,3,4,E76220,D11728,D104E0,D12AD0
+69,DoomCut,TRUE,weapon,axe,5,3,5,E76238,D11731,D104EC,D12AD2
+6A,Giant's Axe,TRUE,weapon,axe,5,3,5,E76250,D1173A,D104F8,D12AD4
+6B,ManEater,TRUE,weapon,knife,6,3,6,E76268,D11743,D10504,D12AD6
+6C,Thief Knife,TRUE,weapon,knife,3,1,3,E76280,D1174C,D10510,D12AD8
+6D,Dancing Dagger,TRUE,weapon,knife,4,1,4,E76298,D11755,D1051C,D12ADA
+6E,Enhancer,TRUE,weapon,sword,5,3,5,E762B0,D1175E,D10528,D12ADC

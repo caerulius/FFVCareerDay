@@ -420,3 +420,33 @@ db $FF, $00, $00, $00, $00
 ; fixed reward for all 8 pianos in certain conditionals
 ; org $CE179C
 ; db $29, $02
+
+; Create crystal icon for text
+org $D1FBB0
+db $e7, $10, $d3, $38, $a9, $7c, $d5, $7c, $d5, $7c, $a9, $7c, $d3, $38, $e7, $10
+
+; Fix GILGAMESH fights to have numbers
+org $E00B85
+db $54
+
+org $E00BB7
+db $55
+
+org $E00C1B
+db $56
+
+org $E00C75
+db $57
+
+org $E00DFB
+db $57
+
+; Give GUARDIANS a name
+org $E00C30
+db $66, $8E, $7A, $8B, $7D, $82, $7A, $87
+org $E00C3A
+db $66, $8E, $7A, $8B, $7D, $82, $7A, $87
+org $E00C44
+db $66, $8E, $7A, $8B, $7D, $82, $7A, $87
+org $E00C4E
+db $66, $8E, $7A, $8B, $7D, $82, $7A, $87

@@ -1,16 +1,29 @@
-; change conditionals for meteors
-; walse
-org $F04803
-db $FF, $A7, $00, $00, $00
-; karnak
-org $F04819
-db $FF, $A7, $00, $00, $00
+; move necrophobe sprite elsewhere and update
+org $ce9a76
+db $C9, $01, $17, $2d, $22, $3c, $03
 
-; reference event at meteors
-org $C83515
-db $A0, $2B, $F8
+; event reference 01C9 used here
+; change to allow all directions
+org $CE1623
+db $FC, $FB
+; Disable dancer in Jacohl
+org $ce7737
+db $C8
+; Disable Purple warp guy in Tule
+org $CE0ADD
+db $FC, $FB
 
-org $F82BA0
+
+; Interact with NPC in final Void area
+org $C9FBD3
+db $F0, $C7, $04              ;Conditional yes/no dialogue at 04B7
+db $CD, $0E, $04                ;Run event index 0408
+db $FF                          ;End Event
+db $FF                          ;End Event
+pad $C9FC2C
+
+
+org $c954a8
 db $C5, $E0                     ;<unknown>
 db $B5, $02                     ;Play Sound Effect Void, Image
 db $71
@@ -27,6 +40,30 @@ db $03
 db $C3, $03
 db $75
 db $FF
+pad $C954CB
+
+; text
+org $E25BFF
+;A powerful enemy calls... Proceed?
+db $60, $96, $89, $88, $90, $7E, $8B, $7F, $8E, $85, $96, $7E, $87, $7E, $86, $92, $96, $7C, $7A, $85, $85, $8C, $A3, $A3, $A3, $01, $6F, $8B, $88, $7C, $7E, $7E, $7D, $A2, $00
+
+
+; C83515
+; C84454
+
+; conditional event A7, 00 should be freed now that the warps aren't using it
+            ; ; change conditionals for meteors
+            ; ; walse
+            ; org $F04803
+            ; db $FF, $A7, $00, $00, $00
+            ; ; karnak
+            ; org $F04819
+            ; db $FF, $A7, $00, $00, $00
+
+            ; ; reference event at meteors
+            ; org $C83515
+            ; db $A0, $2B, $F8
+
 
 ; talk to Exdeath Event
 org $F82BD0

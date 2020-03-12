@@ -2230,10 +2230,12 @@ class Conductor():
             patch = patch + learning_patch
         if self.music_randomization:
             logging.error("Shuffling music...")
-            patch = patch + shuffle_music()
+            patch = patch + shuffle_music2()
             
         if self.free_shops:
+            logging.error("Free shops...")
             patch = patch + free_shop_prices()
+            
         patch = patch + self.parse_configs()
         patch = patch + self.set_portal_boss()
 
@@ -2307,7 +2309,7 @@ if __name__ == "__main__":
                             'galuf_name':'Galuf',
                             'cara_name':'Krile',
                             'faris_name':'Ziliat',
-                            'music_randomization': False,
+                            'music_randomization': True,
                             'free_shops':False,
                             'battle_speed':3,
                             'remove_ned':True,

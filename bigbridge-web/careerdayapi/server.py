@@ -112,7 +112,7 @@ def patch_and_return():
 
         headers_and_translate(filename, reheader, rpge)
 
-        patch_careerday(filename, data["fjf"], data['world_lock'], data['progressive_rewards'])
+        patch_careerday(filename, data)
 
         random.seed(seed)
         # We're going to pass in conductor_config into Conductor() object now
@@ -122,14 +122,25 @@ def patch_and_return():
                             'fjf_strict':   data["fjf_strict"],
                             'jobpalettes':  data['jobpalette'],
                             'world_lock':   data['world_lock'],
+                            'job_1':   data['job_1'],
+                            'job_2':   data['job_2'],
+                            'job_3':   data['job_3'],
+                            'job_4':   data['job_4'],
+                            'lenna_name':   data['lenna_name'],
+                            'galuf_name':   data['galuf_name'],
+                            'cara_name':   data['cara_name'],
+                            'faris_name':   data['faris_name'],
+                            'starting_cara':   data['starting_cara'],
                             'tiering_config':   data['tiering_config'],
                             'tiering_percentage':   data['tiering_percentage'],
                             'tiering_threshold':   data['tiering_threshold'],
                             'enforce_all_jobs':   data['enforce_all_jobs'],
+                            'everysteprandomencounter' : data['everysteprandomencounter'],
                             'progressive_bosses':   data['progressive_bosses'],
                             'progressive_rewards':   data['progressive_rewards'],
                             'item_randomization':   data['item_randomization'],
                             'item_randomization_percent':   data['item_randomization_percent'],
+                            'battle_speed':   data['battle_speed'],
                             'red_color':   data['red_color'],
                             'green_color':   data['green_color'],
                             'blue_color':   data['blue_color'],
@@ -138,7 +149,14 @@ def patch_and_return():
                             'randomize_loot':   data['randomize_loot'],
                             'portal_boss':   data['portal_boss'],
                             'loot_percent':   data['loot_percent'],
+                            'grantkeyitems':   data['grantkeyitems'],
+                            'abbreviated':   data['abbreviated'],
+                            'default_abilities':   data['default_abilities'],
+                            'learning_abilities':   data['learning_abilities'],
                             'setting_string':   data['setting_string'],
+                            'music_randomization':   data['music_randomization'],
+                            'remove_ned':   data['remove_ned'],
+                            'free_shops':   data['free_shops'],
                             'seed':   seed
                             }
         logging.error("Begin randomization process")
@@ -223,21 +241,20 @@ def bool_to_int(boolean):
     else:
         return 0
     
-def patch_careerday(filename, fjf, world_lock, progressive_rewards):
-    fjf = bool_to_int(translateBool(fjf))
+def patch_careerday(filename, data):
+    fjf = bool_to_int(translateBool(data['fjf']))
+    progressive_rewards = bool_to_int(translateBool(data['progressive_rewards']))
+    abbreviated = bool_to_int(translateBool(data['abbreviated']))
+    grantkeyitems = bool_to_int(translateBool(data['grantkeyitems']))
+    starting_cara = bool_to_int(translateBool(data['starting_cara']))
+    everysteprandomencounter = bool_to_int(translateBool(data['everysteprandomencounter']))
     # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
-    world_lock = int(world_lock)
-
-    if progressive_rewards == "true":
-        logging.error("Progressive rewards on")
-        command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
-        --define passages=1 --define double_atb=0 --define progressive=1 --define boss_exp=1 --define fourjobmode={} --define world_lock={} \
-        --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, world_lock, MAIN_PATCH, filename)
-    else:
-        logging.error("Progressive rewards off")
-        command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
-        --define passages=1 --define double_atb=0 --define progressive=0 --define boss_exp=1 --define fourjobmode={} --define world_lock={} \
-        --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH, fjf, world_lock, MAIN_PATCH, filename)
+    world_lock = int(data['world_lock'])
+    
+    command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
+    --define passages=1 --define double_atb=0 --define progressive={} --define abbreviated={} --define grantkeyitems={} --define boss_exp=1 \
+    --define fourjobmode={} --define world_lock={} --define starting_cara={} --define everysteprandomencounter={}\
+    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, fjf, world_lock, starting_cara, everysteprandomencounter, MAIN_PATCH, filename)
 
     logging.error(command)
     

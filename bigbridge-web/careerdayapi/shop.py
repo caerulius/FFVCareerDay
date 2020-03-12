@@ -53,6 +53,29 @@ class Shop(object):
 
         return output
 
+    def sort_contents(self):
+        contents = [i for i in self.contents if i is not None]
+        none_len = len(self.contents) - len(contents)
+        self.contents = sorted(contents, key=lambda x: x.reward_id) 
+#        if self.shop_type == '00':
+#            self.contents = sorted(contents, key=lambda x: x.magic_id) 
+#        elif self.shop_type == '01':
+#            self.contents = sorted(contents, key=lambda x: x.reward_id) 
+#        elif self.shop_type == '07':
+#            try:
+#                self.contents = sorted(contents, key=lambda x: x.ability_id)
+#            except:
+#                breakpoint()
+##        elif self.shop_type == '07':
+##            self.contents = sorted(contents, key=lambda x: x.ability_id)
+#            
+#        else:
+#            breakpoint()
+#            pass
+        for _ in range(none_len):
+            self.contents.append(None)
+
+
     @property
     def short_output(self):
         #these two lists format the None collectibles into strings for easy reading

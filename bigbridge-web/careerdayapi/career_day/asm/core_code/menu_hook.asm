@@ -18,20 +18,27 @@ AND #$80
 BPL EncountersOn
 
 ; Code executes if encounters are off
-LDA $00
 rep #$20
-BEQ Finish
+LDA #$0000
+CLC
+BEQ Finish2
 
 ; standard code for when encounters are on 
 EncountersOn:
 rep #$20
-LDA $16A8
+if !everysteprandomencounter = 1
+    LDA #$FFFF
+else
+    LDA $16A8
+endif
 BEQ Finish
 
 
 Finish:
 CLC
 ADC $c0cb09,x
+
+Finish2:
 
 JML $C0CABA
 
@@ -70,6 +77,9 @@ JML $c0cbc5
 
 WorldMapReturnEnc:
 rep #$20
+if !everysteprandomencounter = 1
+    LDA #$FFFF
+endif
 sta $16a8
 lda $06
 sep #$20
