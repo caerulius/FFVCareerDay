@@ -1,2 +1,0 @@
-cp ROM/ffv.sfc ROM/ffv_hacks_patch.sfc
-"FFV Hacking\CT_Hacking\asar_local\asar.exe" --define testing=0 --define allkeysunlocked=0 --fix-checksum=off "FFV Hacking\CT_Hacking\FFVCareerDay\projects\career_day\asm\all_patches.asm" "ROM\ffv_hacks_patch.sfc"

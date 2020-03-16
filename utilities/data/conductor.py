@@ -73,7 +73,8 @@ class Conductor():
             self.blue_color = 0
             self.green_color = 0
             self.exp_mult = 4
-            self.progressive_bosses = True
+#            self.progressive_bosses = True
+            self.progressive_bosses = False
             self.place_all_rewards = True
             self.progressive_rewards = False
             self.item_randomization = False
@@ -104,7 +105,8 @@ class Conductor():
             self.tiering_percentage = int(conductor_config['tiering_percentage'])
             self.tiering_threshold= int(conductor_config['tiering_threshold'])
             self.enforce_all_jobs = self.translateBool(conductor_config['enforce_all_jobs'])
-            self.progressive_bosses = self.translateBool(conductor_config['progressive_bosses'])
+#            self.progressive_bosses = self.translateBool(conductor_config['progressive_bosses'])
+            self.progressive_bosses = False
             self.progressive_rewards = self.translateBool(conductor_config['progressive_rewards'])
             self.item_randomization = self.translateBool(conductor_config['item_randomization'])
             self.item_randomization_percent = int(conductor_config['item_randomization_percent'])
@@ -783,6 +785,8 @@ class Conductor():
                     keys = [self.CM.get_by_name(x) for x in req]
                     req_loc = []
                     
+                    
+#                    breakpoint()
                     for reward in self.RM.get_rewards_by_style("key"):
                         if reward.collectible in keys:
                             req_loc.append(reward)
@@ -848,6 +852,8 @@ class Conductor():
         for random_boss in formation_list:
             # First pick a random original boss
             original_boss = original_boss_list.pop()
+#            if "Goblin" in original_boss.enemy_list:
+#                breakpoint()
             
             #this is specifically an unworkable situation
             #this will just cycle gogo/stalker to the end and get a new boss
@@ -2119,6 +2125,14 @@ class Conductor():
         for k, v in self.configs.items():
             output_str = output_str + '{:30}'.format(str(k)) + '{:30}'.format(str(v)) + "\n"
         return output_str + "\n"
+    
+    def fix_random_ned(self):
+        asar_str = '; Fix 2nd NED slot\n'
+        d = [x for x in self.FM.formations if x.event_lookup_loc1 == 'D078E8'][0]
+        asar_str = asar_str + "org $D078A0\ndb $%s, $%s\n\n" % (d.event_formation_reference[0:2],d.event_formation_reference[2:4])
+        return asar_str 
+        
+        
 
     def parse_configs(self):
         config = self.configs
@@ -2235,6 +2249,9 @@ class Conductor():
         if self.free_shops:
             logging.error("Free shops...")
             patch = patch + free_shop_prices()
+        if self.remove_ned:
+            patch = patch + self.fix_random_ned()            
+
             
         patch = patch + self.parse_configs()
         patch = patch + self.set_portal_boss()
@@ -2273,13 +2290,13 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-#    SEED_NUM = 903378
+#    SEED_NUM = 4175834
     SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {
-                            'fjf':False,
-                            'fjf_strict':False,
-                            'jobpalettes':True,
+                            'fjf':True,
+                            'fjf_strict':True,
+                            'jobpalettes':False,
                             'world_lock':"1",
                             'tiering_config': True,
                             'tiering_percentage': 90,
@@ -2293,18 +2310,18 @@ if __name__ == "__main__":
                             'place_all_rewards': True,
                             'randomize_loot' : "none",
                             'loot_percent' : 25,
-                            'progressive_bosses' : "True",
+#                            'progressive_bosses' : False,
                             'portal_boss' : 'SomberMage',
                             'progressive_rewards' : False,
                             'item_randomization' : True,
-                            'item_randomization_percent' : 100,
-                            'default_abilities': True,
-                            'learning_abilities': True,
+                            'item_randomization_percent' : 50,
+                            'default_abilities': False,
+                            'learning_abilities': False,
                             'setting_string': None,
-                            'job_1':'Knight',
-                            'job_2':'Berserker',
+                            'job_1':'Random',
+                            'job_2':'Random',
                             'job_3':'Random',
-                            'job_4':'Summoner',
+                            'job_4':'Random',
                             'lenna_name':'Lenna',
                             'galuf_name':'Galuf',
                             'cara_name':'Krile',
@@ -2312,6 +2329,7 @@ if __name__ == "__main__":
                             'music_randomization': True,
                             'free_shops':False,
                             'battle_speed':3,
+                            'starting_cara':True,
                             'remove_ned':True,
                             'seed': SEED_NUM
                           }
