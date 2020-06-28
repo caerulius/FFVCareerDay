@@ -51,7 +51,7 @@ ITEM_TYPE = "40"
 ITEM_SHOP_TYPE = "01"
 MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
-VERSION = "FFV CareerDay v0.82"
+VERSION = "FFV CareerDay v0.83"
 
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
@@ -1830,7 +1830,7 @@ class Conductor():
         tablet_reqs = []
         for tablet in tablets:
     #        breakpoint()
-    #        logging.error(">>>>>>>>>>>:"+tablet.description)
+            logging.error(">>>>>>>>>>>:"+tablet.description)
             # for each tablet, iterate through required keys for that tablet
             if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
                 tablet_reqs = getattr(tablet, 'required_key_items')
@@ -1839,11 +1839,13 @@ class Conductor():
             if tablet_reqs != None:            
                 # now iterate through tablet_reqs and find rewards that correspond. Pop them when done 
                 loop_flag = True
-                while loop_flag:
+                iter_num = 0
+                while loop_flag and iter_num < 50:
+                    iter_num += 1
                     if tablet_reqs == []:
                         loop_flag = False
                         break
-    #                logging.error(tablet_reqs)
+                    logging.error(tablet_reqs)
                     # find the reward associated with the latest tablet_req
                     new_reward = [x for x in keys if x.collectible.collectible_name == tablet_reqs[0]][0]
                     if new_reward not in required_rewards:
@@ -2128,7 +2130,7 @@ class Conductor():
     
     def fix_random_ned(self):
         asar_str = '; Fix 2nd NED slot\n'
-        d = [x for x in c.FM.formations if x.event_lookup_loc1 == 'D078E8'][0]
+        d = [x for x in self.FM.formations if x.event_lookup_loc1 == 'D078E8'][0]
         asar_str = asar_str + "org $D078A0\ndb $%s, $%s\n\n" % (d.event_formation_reference[0:2],d.event_formation_reference[2:4])
         return asar_str 
         
@@ -2136,12 +2138,25 @@ class Conductor():
 
     def parse_configs(self):
         config = self.configs
+
         r_color = int(config['red_color'])
         g_color = int(config['green_color']) * 32
         b_color = int(config['blue_color']) * 1024
-        
+
+#        breakpoint()        
         colors = hex(r_color+g_color+b_color).replace("0x","")
-        c1, c2 = colors[0:2].zfill(2), colors[2:4].zfill(2)
+        print(colors)
+        
+        if len(colors) == 0:
+            colors = "0000"
+        elif len(colors) == 1:
+            colors = "000" + colors 
+        elif len(colors) == 2:
+            colors = "00" + colors 
+        elif len(colors) == 3:
+            colors = "0" + colors 
+        c1 = colors[0:2]
+        c2 = colors[2:4]
         
         patch = ";CONFIG SETTINGS\n"
         patch = patch + ";RGB\norg $C0F343\ndb $%s, $%s" % (c2,c1)
@@ -2159,6 +2174,7 @@ class Conductor():
         
         
         patch = patch + "\n;Reward Mult\norg $C0F342\ndb $%s" % (reward_val)
+        print(patch)
         return patch
         
         
@@ -2290,22 +2306,22 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-#    SEED_NUM = 4175834
-    SEED_NUM = random.randint(1,1000000)
+    SEED_NUM = 325633
+#    SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {
                             'fjf':True,
                             'fjf_strict':True,
                             'jobpalettes':False,
-                            'world_lock':"1",
+                            'world_lock':0,
                             'tiering_config': True,
                             'tiering_percentage': 90,
                             'tiering_threshold': 2,
                             'enforce_all_jobs': False,
                             'battle_speed':3,
-                            'red_color':5,
-                            'blue_color':5,
-                            'green_color':5,
+                            'red_color':31,
+                            'blue_color':0,
+                            'green_color':31,
                             'exp_mult':4,
                             'place_all_rewards': True,
                             'randomize_loot' : "none",
@@ -2326,7 +2342,7 @@ if __name__ == "__main__":
                             'galuf_name':'Galuf',
                             'cara_name':'Krile',
                             'faris_name':'Ziliat',
-                            'music_randomization': True,
+                            'music_randomization': False,
                             'free_shops':False,
                             'battle_speed':3,
                             'starting_cara':True,
