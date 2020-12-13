@@ -123,7 +123,7 @@ org $F05FDF
 
 ; new code area for conditional checking. EACH X/Y CHECKER HAS A CORRESPONDING OUTPUT HERE
 ; org $D8FFA8
-org $F06002
+org $F06004
 
 ; Simple example, does not allow for directional confirm for something like a door
 ; db !keyitemarea, $FF, $4C, $00, $FF, $F0, $00
@@ -750,9 +750,9 @@ CMP #$110C
 BNE KeyItemLockingNextCheck15
 
 ; HANDLE STEAMSHIP CATAPULT
-LDA #$2002
+LDA #$2004
 STA $23
-LDA #$2007
+LDA #$2009
 STA $26
 JMP KeyItemLockingImmediateFinish
 

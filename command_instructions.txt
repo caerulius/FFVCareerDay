@@ -1,9 +1,0 @@
-APITEST
-tail /root/.forever/hYL7.log -n 50
-API
-tail /root/.forever/wIIC.log -n50
-ERROR
-
-cd /var/www/html/careerdayapi/
-cd /var/www/html/careerdayapitest/
-tail -50 error.log

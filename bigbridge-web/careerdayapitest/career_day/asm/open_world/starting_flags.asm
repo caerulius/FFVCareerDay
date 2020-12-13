@@ -456,6 +456,10 @@ db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
 db $A4, $9F                     ;Set Event Flag 19F
 db $CB, $97, $03                ;Clear Flag 2/3/4/5/97 03
 
+; PORTAL BOSS
+; Spawn fire
+db $CA, $57, $01
+
 if !free_tablets = 4
     db $DE, $90				; set up reward
     db $DE, $91				; set up reward
