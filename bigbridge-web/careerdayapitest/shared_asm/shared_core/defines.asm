@@ -22,7 +22,7 @@
 !ADDRESS_menuhook = $F00500
 !ADDRESS_NEWEVENT_jobsetting = $F00F00
 !ADDRESS_NEWEVENT_namevalidation = $F00C80
-!ADDRESS_NPC_LOCKS = $F01A00
+!ADDRESS_NPC_LOCKS = $F01B00
 !ADDRESS_NEWEVENT_conditionalvehicles = $F01100
 !ADDRESS_NEWEVENT_conditionaleventflags = $F01180
 !ADDRESS_NEWEVENT_conditionalrifttablet = $F01800
@@ -43,7 +43,7 @@
 !ADDRESS_xycoordhook = $F01900
 !ADDRESS_keyitemlocks = $F01400
 !ADDRESS_menusummonsfix = $F01200
-!ADDRESS_newevent_randomstart = $F01A00
+!ADDRESS_newevent_randomstart = $F01B80
 !ADDRESS_PROJECT_DEMI_DUMMYSPACE = $F01C00
 !ADDRESS_music_instrument_song_indices = $FC0000
 !ADDRESS_music_song_pointers = $FC1000

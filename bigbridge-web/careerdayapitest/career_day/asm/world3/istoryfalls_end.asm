@@ -90,7 +90,6 @@ db $B4, $29                     ;Play Background Music Fanfare 1 (short)
 db $E4, $C9                     ;Unknown
 db $48                          ;Player pose: garbage
 db $0F                          ;<Unknown>
-db $A2, $93                     ;Turn on bit 08 at address 0x7e0a26
 db $A4, $54                     ;Turn on bit 10 at address 0x7e0a3e 
 db $CB, $7F, $02                ;Turn off bit 80 at address  0x7e0aa3
 ; db $A4, $CA                     ;Turn on bit 04 at address 0x7e0a4d (key item)

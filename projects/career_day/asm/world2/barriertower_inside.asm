@@ -26,7 +26,7 @@ db $83, $01                     ;Sprite 083 do event: Move Up
 db $83, $01                     ;Sprite 083 do event: Move Up
 db $81, $3E                     ;Sprite 081 do event: face up, both arms raised in
 db $81, $30                     ;Sprite 081 do event: face left, head lowered
-db $C8, $7A, $05                ;Display Message/Text/Dialogue 7A 05
+; db $C8, $7A, $05                ;Display Message/Text/Dialogue 7A 05
 db $81, $24                     ;Sprite 081 do event: face down, right hand raised in
 db $CE, $06, $02                ;Play next 02 bytes 06 times
 db $83, $04                     ;Sprite 083 do event: Move Left

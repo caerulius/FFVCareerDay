@@ -456,6 +456,25 @@ db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
 db $A4, $9F                     ;Set Event Flag 19F
 db $CB, $97, $03                ;Clear Flag 2/3/4/5/97 03
 
+if !free_tablets = 4
+    db $DE, $90				; set up reward
+    db $DE, $91				; set up reward
+    db $DE, $92				; set up reward
+    db $DE, $93				; set up reward
+endif
+if !free_tablets = 3
+    db $DE, $90				; set up reward
+    db $DE, $91				; set up reward
+    db $DE, $92				; set up reward
+endif
+if !free_tablets = 2
+    db $DE, $90				; set up reward
+    db $DE, $91				; set up reward
+endif
+if !free_tablets = 1
+    db $DE, $90				; set up reward
+endif
+
 
 ; tutorial section
 if !abbreviated = 0

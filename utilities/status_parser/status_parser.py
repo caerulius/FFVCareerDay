@@ -92,11 +92,11 @@ maps = { 'elemental_immune' : {
 # Otherwise this data goes straight into the enemy_data or portal_bosses csv
 
 somber_mage_1 = {
-        'elemental_immune' :        ['water'],
+        'elemental_immune' :        [''],
         'status1_weakness' :        [''],
-        'status2_weakness' :        ['mute','aging'],
-        'status3_weakness' :        [''],
-        'elemental_absorb' :        ['wind'],
+        'status2_weakness' :        ['paralyze'],
+        'status3_weakness' :        ['slow'],
+        'elemental_absorb' :        ['water'],
         'blank':                    [''],
         'elemental_weakness' :      [''],
         'creature_type' :           ['human','heavy']
@@ -104,24 +104,24 @@ somber_mage_1 = {
 
 somber_mage_2 = {
         'elemental_immune' :        [''],
-        'status1_weakness' :        [''],
-        'status2_weakness' :        [''],
-        'status3_weakness' :        ['slow'],
-        'elemental_absorb' :        ['wind','water'],
+        'status1_weakness' :        ['poison'],
+        'status2_weakness' :        ['aging'],
+        'status3_weakness' :        [''],
+        'elemental_absorb' :        ['water'],
         'blank':                    [''],
-        'elemental_weakness' :      ['holy'],
-        'creature_type' :           ['undead','heavy']
+        'elemental_weakness' :      [''],
+        'creature_type' :           ['human','heavy']
         }
 
 somber_mage_3 = {
         'elemental_immune' :        [''],
         'status1_weakness' :        [''],
-        'status2_weakness' :        [''],
-        'status3_weakness' :        ['slow'],
-        'elemental_absorb' :        ['wind','water'],
+        'status2_weakness' :        ['sleep'],
+        'status3_weakness' :        [''],
+        'elemental_absorb' :        ['water'],
         'blank':                    [''],
         'elemental_weakness' :      [''],
-        'creature_type' :           ['human','heavy']
+        'creature_type' :           ['heavy']
         }
 
 

@@ -19,4 +19,4 @@ db $FF                          ;End Event
 
 
 org $F04BF3
-db $FD, $31, $FE, $2F
+db $FD, $31, $FC, $DB

@@ -24,7 +24,7 @@ db $CD, $E4, $00                ;Run event index 00E4
 db $10
 db $C5                          ;<unknown>
 db $BE, $00                     ;Rumble effect of 00 magnitude
-db $CB, $C0, $02                ;Clear Flag 2/3/4/5/C0 02
+; db $CB, $C0, $02                ;Clear Flag 2/3/4/5/C0 02. Commenting this out to allow Kelgar to remain
 db $A5, $FE                     ;Clear Event Flag 1FE
 db $7D                          ;<Unknown>
 db $B4, $12                     ;Play Background Music Exdeath's Castle

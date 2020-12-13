@@ -390,8 +390,17 @@ LDA $0AF1
 AND #$0F
 CMP #$05
 BEQ AirshipSlowDownApplyNormalNotAirship ; if $55, ignore
+; now check if in world 3 underwater and adjust accordingly
+LDA $0AD4
+CMP #$04
+BNE AirshipSlowDownApplyNormalNotAirship1
+LDA #$08
+STA !speedvalue
+JMP AirshipSlowDownApplyNormalNotAirshipFinish
+AirshipSlowDownApplyNormalNotAirship1:
 LDA #$20
 STA !speedvalue
+AirshipSlowDownApplyNormalNotAirshipFinish:
 JMP AirshipSlowDownFinish
 AirshipSlowDownApplyNormalNotAirship:
 LDA #$08

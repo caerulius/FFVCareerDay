@@ -1898,7 +1898,7 @@ idx,enemy_name,enemy_rank,tier,loc_name,boss_rank,num_gauge_time,num_phys_power,
 303,Atmos,boss,3,Stalker,35,49,14,11,0,20,116,28,28,14385,d0b7de,[],[],[],[]
 303,Atmos,boss,3,Odin,36,49,15,11,0,20,118,29,29,14690,d0b7de,[],[],[],[]
 303,Atmos,boss,3,"Triton, Neregeid & Phobos",37,50,15,12,0,21,121,30,30,14994,d0b7de,[],[],[],[]
-303,Atmos,boss,3,Omniscient,38,51,15,12,0,21,123,30,30,15299,d0b7de,[],[],[],[]
+303,Atmos,boss,3,Omniscient,38,51,15,12,0,21,123,30,30,15299,d0b7de,"[117,118,121,122]","[Specialty,Specialty,Specialty,Specialty]",[],[]
 303,Atmos,boss,3,Minotauros,39,52,16,12,0,22,126,31,31,15603,d0b7de,[],[],[],[]
 303,Atmos,boss,3,Leviathan,40,52,16,12,0,22,128,31,31,15908,d0b7de,[],[],[],[]
 303,Atmos,boss,3,GoGo,41,53,16,12,0,23,130,32,32,16212,d0b7de,[],[],[],[]

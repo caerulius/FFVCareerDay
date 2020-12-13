@@ -16,6 +16,7 @@ db $71
 db $DE, $69 ; custom reward
 db $DF
 db $A2, $48							;Set Event Flag 048
+db $A3, $49							;Set Event Flag 049. Unsets adamantium get as a flag
 
 ; CAREERDAY
 ; This is setting automatically upgrading the ship

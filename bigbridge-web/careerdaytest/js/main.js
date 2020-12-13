@@ -66,13 +66,13 @@ $(document).ready( function() {
 		);
 	});
 
-	$("#settingstringpresetval1").val("W1 T5|1 PB RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // locked
-	$("#settingstringpresetval2").val("W0 T5|1 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // open
-	$("#settingstringpresetval3").val("W1 T5|1 PB I100 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // locked weapon rando
-	$("#settingstringpresetval4").val("W0 T5|1 I100 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // open weapon rando 
-	$("#settingstringpresetval5").val("4 J1Random J2Random J3Random J4Random a W1 T5|1 PB RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // locked worlds fjf
-	$("#settingstringpresetval6").val("4 J1Random J2Random J3Random J4Random a W0 T5|1 PB RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbSomberMage"); // open fjf
-	$("#settingstringpresetval7").val("P W0 T5|1 A I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CDA CLA pbSomberMage"); // pure chaos
+	$("#settingstringpresetval1").val("W1 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRainSenshi"); // locked
+	$("#settingstringpresetval2").val("W0 T5|1 TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRainSenshi"); // open
+	$("#settingstringpresetval3").val("W1 T5|1 PB I100 TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRainSenshi"); // locked weapon rando
+	$("#settingstringpresetval4").val("W0 T5|1 I100 TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRainSenshi"); // open weapon rando 
+	$("#settingstringpresetval5").val("4 J1Random J2Random J3Random J4Random a W1 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRainSenshi"); // locked worlds fjf
+	$("#settingstringpresetval6").val("4 J1Random J2Random J3Random J4Random a W0 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRainSenshi"); // open fjf
+	$("#settingstringpresetval7").val("P W0 T5|1 A I100 TBLT0 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CDA CLA pbRainSenshi"); // pure chaos
 
 	$("#settingstringpresetval1").click(function(){
 		$("#settingstringpresetval1").notify(
@@ -232,6 +232,7 @@ function apiCall(data){
 		"blue_color": $("#blue_color").val(),
 		"green_color": $("#green_color").val(),
 		"exp_mult": $("#exp_mult").val(),
+        "free_tablets": $("#free_tablets").val(),
 		"place_all_rewards": $('#place_all_rewards').is(':checked'),
 		"randomize_loot": $("input:radio[name=randomize_loot]:checked").val(),
 		"loot_percent": $("#loot_percent").val(), 
@@ -300,6 +301,7 @@ function getSettingString(){
 	if($('#item_randomization').is(':checked')){
 		seedString = seedString + " I" + $("#item_randomization_percent").val();
 	}
+	seedString = seedString + " TBLT" + $("#free_tablets").val();
 	seedString = seedString + " RGB" + $("#red_color").val() + "|" + $("#blue_color").val() + "|" + $("#green_color").val();
 	seedString = seedString + " X" + $("#exp_mult").val();
 	seedString = seedString + " BS" + $("#battle_speed").val();
@@ -427,6 +429,12 @@ function applyCustomSettingString(){
 				$('input:radio[name=world_lock]').val([val.charAt(1)]);
 			}
 		}
+		else if(val.charAt(0) == "TBLT"){
+			xp = parseInt(val.slice(1));
+			if(!isNaN(xp) && (xp == 0 || xp == 1 || xp == 2 || xp == 3 || xp == 4)){
+				$("#free_tablets").val(xp);
+			}
+		}
 		else if(val.charAt(0) == "T"){
 			$( "#tiering_config" ).prop( "checked", true );
 			vals = val.slice(1).split("|");
@@ -545,7 +553,8 @@ function clearSettings(){
 	$("#red_color").val(0);
 	$("#green_color").val(0);
 	$("#blue_color").val(0);
-	$("#portal_boss").val("SomberMage");
+    $("#free_tablets").val(0);
+	$("#portal_boss").val("RainSenshi");
 	$('#job_1').val("Random");
 	$('#job_2').val("Random");
 	$('#job_3').val("Random");

@@ -18,8 +18,8 @@ if !fourjobmode == 1
 
 	cmp #$EE ; warpshard
 	beq CustomItemTestFourJob
-	cmp #$3E ; Exit spell
-	beq CustomItemTestFourJob
+	; cmp #$3E ; Exit spell
+	; beq CustomItemTestFourJob
 	cmp #$F0 ; tent
 	beq CustomItemTestFourJob
 	cmp #$F1 ; cabin
@@ -46,8 +46,8 @@ LDA $7A00,X
 ; Using $EE for custom item 1
 CMP #$EE
 BEQ CustomItemEvent1
-CMP #$3E
-BEQ CustomItemEvent1
+; CMP #$3E
+; BEQ CustomItemEvent1
 ; if no condition met
 BNE ProceedRegularItem
 
@@ -317,8 +317,9 @@ LDA $0139
 ; This would be corresponding to similar events like CustomItemEvent1 above 
 CMP #$EE
 BEQ UseableItemEE
-CMP #$3E ; do the same for Exit spell
-BEQ UseableItemEE
+; EDIT - Commented the below, was old code for the Exit spell. 
+; CMP #$3E ; do the same for Exit spell. 
+; BEQ UseableItemEE
 BNE PreReturnToItemChecking
 UseableItemEE:
 LDX #$003A ; Removes unused pyramid cutscene from w3 where party discovers quicksand stopped
@@ -368,8 +369,8 @@ endif
 
 CMP #$EE ; custom item1 
 BEQ BranchToItemWarpClause
-CMP #$3E ; Exit spell
-BEQ BranchToItemWarpClause
+; CMP #$3E ; Exit spell
+; BEQ BranchToItemWarpClause
 ContinueAllowItemWarping1:
 LDA $44
 AND #$02

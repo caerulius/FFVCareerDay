@@ -41,3 +41,12 @@ db $FF							;End event
 
 padbyte $00
 pad $C8BB91
+
+
+; change conditional event in catapult to move 
+org $F04AD4
+db $f7, $02, $fe, $b2, $f6, $ff, $aa, $00
+db $f7, $02, $fd, $44, $f6, $ff, $9a, $00
+; nuke cid/mid from engine room
+org $CE5DC2
+pad $CE5DFA

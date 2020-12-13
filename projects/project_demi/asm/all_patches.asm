@@ -1,6 +1,7 @@
 hirom
 ; init
 incsrc ../../shared_asm/shared_core/defines.asm
+incsrc ../../shared_asm/shared_core/walk_speed.asm
 incsrc core_code/init.asm
 incsrc ../../shared_asm/data_tables/starting_stats.asm
 

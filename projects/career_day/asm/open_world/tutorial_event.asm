@@ -36,7 +36,7 @@ db $70                          ;Very short pause
 db $80, $05                     ;Sprite 080 do event: Bounce
 db $80, $00                     ;Sprite 080 do event: Hold
 db $71                          ;Short pause
-db $C8, $A3, $01                ;Display Message/Text/Dialogue B1 00
+; db $C8, $A3, $01                ;Display Message/Text/Dialogue B1 00
 
 ; ; TESTING MUSIC ONLY
 ; db $B4, $30

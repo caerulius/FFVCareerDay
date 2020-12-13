@@ -7,7 +7,7 @@ hirom
 org $C8C71D
 
 db $C8, $AB, $84                ;Display Message/Text/Dialogue AB 84
-db $02
+db $04
 db $FF                          ;End Event
 
 pad $C8C7DE
