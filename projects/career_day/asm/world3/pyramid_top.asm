@@ -36,7 +36,7 @@ db $03                          ;Player Move Down
 db $A5, $FE                     ;Clear Event Flag 1FE
 db $A4, $F3                     ;Turn on bit 08 at address 0x7e0a52
 db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
-db $A2, $83                     ;Turn on bit 08 at address 0x7e0a24
+; db $A2, $83                     ;Turn on bit 08 at address 0x7e0a24
 db $A2, $78			; new custom flag for pyramid tablet
 db $CC, $27                  ;Custom destination flag 27
 db $FF                          ;End Event

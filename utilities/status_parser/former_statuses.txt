@@ -1,0 +1,106 @@
+### SOMBERMAGE
+
+enemy_1 = {
+        'elemental_immune' :        ['water'],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        ['mute','aging'],
+        'status3_weakness' :        [''],
+        'elemental_absorb' :        ['wind'],
+        'blank':                    [''],
+        'elemental_weakness' :      [''],
+        'creature_type' :           ['human','heavy']
+        }
+
+enemy_2 = {
+        'elemental_immune' :        [''],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        [''],
+        'status3_weakness' :        ['slow'],
+        'elemental_absorb' :        ['wind','water'],
+        'blank':                    [''],
+        'elemental_weakness' :      ['holy'],
+        'creature_type' :           ['undead','heavy']
+        }
+
+enemy_3 = {
+        'elemental_immune' :        [''],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        [''],
+        'status3_weakness' :        ['slow'],
+        'elemental_absorb' :        ['wind','water'],
+        'blank':                    [''],
+        'elemental_weakness' :      [''],
+        'creature_type' :           ['human','heavy']
+        }
+        
+### RAINSENSHI        
+
+enemy_1 = {
+        'elemental_immune' :        [''],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        ['paralyze'],
+        'status3_weakness' :        ['slow'],
+        'elemental_absorb' :        ['water'],
+        'blank':                    [''],
+        'elemental_weakness' :      [''],
+        'creature_type' :           ['human','heavy']
+        }
+
+enemy_2 = {
+        'elemental_immune' :        [''],
+        'status1_weakness' :        ['poison'],
+        'status2_weakness' :        ['aging'],
+        'status3_weakness' :        [''],
+        'elemental_absorb' :        ['water'],
+        'blank':                    [''],
+        'elemental_weakness' :      [''],
+        'creature_type' :           ['human','heavy']
+        }
+
+enemy_3 = {
+        'elemental_immune' :        [''],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        ['sleep'],
+        'status3_weakness' :        [''],
+        'elemental_absorb' :        ['water'],
+        'blank':                    [''],
+        'elemental_weakness' :      [''],
+        'creature_type' :           ['heavy']
+        }
+
+
+
+### DRAGONCLAN
+
+enemy_1 = {
+        'elemental_immune' :        ['earth'],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        [''],
+        'status3_weakness' :        ['regen','haste','shell','armor','wall'],
+        'elemental_absorb' :        ['wind'],
+        'blank':                    [''],
+        'elemental_weakness' :      ['poison'],
+        'creature_type' :           ['dragon', 'heavy']
+        }
+
+enemy_2 = {        
+        'elemental_immune' :        ['ice'],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        ['mute','berserk'],
+        'status3_weakness' :        ['regen','haste','slow','shell','armor','wall'],
+        'elemental_absorb' :        ['lightning'],
+        'blank':                    [''],
+        'elemental_weakness' :      [''],
+        'creature_type' :           ['dragon', 'heavy']
+        }
+
+enemy_3 = {
+        'elemental_immune' :        ['fire'],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        [''],
+        'status3_weakness' :        ['regen','haste','shell','armor','wall'],
+        'elemental_absorb' :        ['earth'],
+        'blank':                    [''],
+        'elemental_weakness' :      [''],
+        'creature_type' :           ['dragon', 'heavy']
+        }

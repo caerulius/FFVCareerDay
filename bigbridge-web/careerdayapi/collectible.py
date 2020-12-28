@@ -414,7 +414,10 @@ class CollectibleManager():
                 working_list = []        
                 reward_loc_tier = int(reward_loc_tier)
                 og_reward_loc_tier = reward_loc_tier
-                minimum_tier = max(reward_loc_tier - 1, 1) #starts at a range of y-1 to y (so, tier 4 location will grab from pool of tier 3s and 4s)
+                if 'shop' in str(type(next_reward)):
+                    minimum_tier = max(reward_loc_tier - 2, 1) #starts at a range of y-2 to y (so, tier 4 location will grab from pool of tier 2s, 3s and 4s)
+                else:
+                    minimum_tier = max(reward_loc_tier - 1, 1) #starts at a range of y-1 to y (so, tier 4 location will grab from pool of tier 3s and 4s)
                 
                 # print("Reward loc tier: %s" % (reward_loc_tier))
                 # Apply a penalty to reward_loc_tier IF the capacity has been met. Only valid for shops for now. 

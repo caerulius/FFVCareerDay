@@ -53,12 +53,12 @@ db $02                          ;Player Move Right
 db $C3, $02                     ;Fade in Speed 08
 db $73                          ;Long pause
 ; CAREERDAY
-db $A2, $81                     ;Set Event Flag 081
+; db $A2, $81                     ;Set Event Flag 081
 ; db $CA, $99, $03                ;Set Flag 2/3/4/5/99 03
 ; db $CA, $5D, $02                ;Set Flag 2/3/4/5/5D 02
 ; db $CA, $5E, $02                ;Set Flag 2/3/4/5/5E 02
 ; db $CA, $0C, $00                ;Set Flag 2/3/4/5/0C 00
-; db $A4, $F6                     ;Set Event Flag 1F6
+db $A4, $9B                     ;Set Event Flag 1F6
 ; db $B7, $09                     ;Add/Remove character 09
 ; db $A8, $7F                     ;Adjust Character HP by 7F
 ; db $BB, $01, $80                ;Set Character Lenna  Curable status to Wounded

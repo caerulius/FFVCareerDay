@@ -119,7 +119,18 @@ org $F05FDF
     ; default case
     db $FF, $00, $00
 
+; STEAMSHIP CATAPULT LOCK
 
+; new code area for conditional checking. EACH X/Y CHECKER HAS A CORRESPONDING OUTPUT HERE
+; org $D8FFA8
+org $F06004
+
+; Simple example, does not allow for directional confirm for something like a door
+; db !keyitemarea, $FF, $4C, $00, $FF, $F0, $00
+
+; Complex example, checks each direction first and nulls event, but if it's the matching direction, proceed with conditionals for checking key item flag then running event 
+
+db $F7, $00, $FF, $65, $03
 
 
 
@@ -165,6 +176,24 @@ db $08, $0A, $00, $00
 
 
 
+
+
+; ; World map steamship
+org $CE3688
+db $54, $4F, $00, $11
+
+; I decided to make a custom solution by making a new table entirely for offsets here
+; the above $00, $11 places data in an entirely new blank area (0x1100 times 2 offset from F04000)
+; puts data at $F06200 
+
+org $F06200
+; this puts the actual conditional code location
+; as opposed to above, this is not times 2. So, direct from F04000
+db $20, $22, $23, $22
+
+; this is conditional code
+org $F06220
+db $FF, $6C, $00
 
 
 
@@ -260,16 +289,8 @@ STA $26
 TAX
 LDA #$127C
 STA $23
+
 JMP XYCoordinateHookContinueNormalCase
-
-
-
-
-
-
-
-
-
 
 XYCoordinateHookContinueCase5:
 ; ; SHOAT CAVE
@@ -309,6 +330,29 @@ LDA #$1288
 STA $23
 JMP XYCoordinateHookContinueNormalCase
 XYCoordinateHookContinueCase7:
+
+; ; STEAMSHIP WORLD MAP
+lda !mapid
+CMP #$0000
+BNE XYCoordinateHookContinueCase8
+lda !xycoordcheck
+CMP #$4F54
+BNE XYCoordinateHookContinueCase8
+
+; then do a event flag check 
+lda $0A1A
+and #$0001
+BNE XYCoordinateHookContinueNormalCase
+
+
+; ; IF these match, set up coordinates specifically
+LDA #$1288
+STA $26
+TAX
+LDA #$128C
+STA $23
+JMP XYCoordinateHookContinueNormalCase
+XYCoordinateHookContinueCase8:
 
 
 
@@ -403,9 +447,9 @@ STA $26
 
 
 
-; STEAMSHIP ACCESS
+; WORLD MAP STEAMSHIP ACCESS
 lda !mapid
-CMP #$00D2
+CMP #$009C
 BNE KeyItemLockingNextCheck1
 lda !xycoordcheck
 CMP #$110C
@@ -697,8 +741,22 @@ JMP KeyItemLockingImmediateFinish
 KeyItemLockingNextCheck14:
 
 
+; STEAMSHIP CATAPULT ACCESS
+lda !mapid
+CMP #$00D2
+BNE KeyItemLockingNextCheck15
+lda !xycoordcheck
+CMP #$110C
+BNE KeyItemLockingNextCheck15
 
+; HANDLE STEAMSHIP CATAPULT
+LDA #$2004
+STA $23
+LDA #$2009
+STA $26
+JMP KeyItemLockingImmediateFinish
 
+KeyItemLockingNextCheck15:
 
 
 

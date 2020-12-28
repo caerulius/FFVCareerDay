@@ -86,7 +86,7 @@ db $DB                          ;Restore Player status
 db $03                          ;Player Move Down
 db $B4, $24                     ;Play Background Music The Book of Sealings
 db $A5, $FE                     ;Clear Event Flag 1FE
-db $A2, $8E                     ;Turn on bit 40 at address 0x7e0a25
+; db $A2, $8E                     ;Turn on bit 40 at address 0x7e0a25
 db $A4, $53                     ;Turn on bit 08 at address 0x7e0a3e
 db $CB, $43, $02                ;Turn off bit 08 at address  0x7e0a9c
 db $CB, $5A, $02                ;Turn off bit 04 at address  0x7e0a9f

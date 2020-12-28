@@ -526,3 +526,12 @@ db $FF, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00
 ; force karnak npc to always give hint
 org $CE12AB
 db $01
+
+
+; fix merugune spot's event flag for clearing the fight
+org $f0562D
+db $FB, $9B
+
+org $f05634
+db $FB, $9B
+

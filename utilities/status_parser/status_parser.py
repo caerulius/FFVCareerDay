@@ -91,37 +91,48 @@ maps = { 'elemental_immune' : {
 # Blank is there for the intentionally blank "CAN'T EVADE" byte that falls in the middle
 # Otherwise this data goes straight into the enemy_data or portal_bosses csv
 
-somber_mage_1 = {
-        'elemental_immune' :        [''],
+
+        # 'elemental_immune' :        [''],
+        # 'status1_weakness' :        [''],
+        # 'status2_weakness' :        [''],
+        # 'status3_weakness' :        [''],
+        # 'elemental_absorb' :        [''],
+        # 'blank':                    [''],
+        # 'elemental_weakness' :      [''],
+        # 'creature_type' :           ['']
+        
+        
+enemy_1 = {
+        'elemental_immune' :        ['earth'],
         'status1_weakness' :        [''],
-        'status2_weakness' :        ['paralyze'],
-        'status3_weakness' :        ['slow'],
-        'elemental_absorb' :        ['water'],
+        'status2_weakness' :        [''],
+        'status3_weakness' :        ['regen','haste','shell','armor','wall'],
+        'elemental_absorb' :        ['wind'],
         'blank':                    [''],
-        'elemental_weakness' :      [''],
-        'creature_type' :           ['human','heavy']
+        'elemental_weakness' :      ['poison'],
+        'creature_type' :           ['dragon', 'heavy']
         }
 
-somber_mage_2 = {
-        'elemental_immune' :        [''],
-        'status1_weakness' :        ['poison'],
-        'status2_weakness' :        ['aging'],
-        'status3_weakness' :        [''],
-        'elemental_absorb' :        ['water'],
+enemy_2 = {        
+        'elemental_immune' :        ['ice'],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        ['mute','berserk'],
+        'status3_weakness' :        ['regen','haste','slow','shell','armor','wall'],
+        'elemental_absorb' :        ['lightning'],
         'blank':                    [''],
         'elemental_weakness' :      [''],
-        'creature_type' :           ['human','heavy']
+        'creature_type' :           ['dragon', 'heavy']
         }
 
-somber_mage_3 = {
-        'elemental_immune' :        [''],
+enemy_3 = {
+        'elemental_immune' :        ['fire'],
         'status1_weakness' :        [''],
-        'status2_weakness' :        ['sleep'],
-        'status3_weakness' :        [''],
-        'elemental_absorb' :        ['water'],
+        'status2_weakness' :        [''],
+        'status3_weakness' :        ['regen','haste','shell','armor','wall'],
+        'elemental_absorb' :        ['earth'],
         'blank':                    [''],
         'elemental_weakness' :      [''],
-        'creature_type' :           ['heavy']
+        'creature_type' :           ['dragon', 'heavy']
         }
 
 
@@ -144,14 +155,16 @@ def process_stats(enemy):
             string_add = hex(255 - int(string_add,base=16)).replace("0x","").upper()
                 
             
-            
+        string_add = str(string_add)
+        if len(string_add) == 1:
+            string_add = "0" + string_add
         byte_string = byte_string + string_add + " "
     
     return byte_string.strip()
 
-print(process_stats(somber_mage_1))
-print(process_stats(somber_mage_2))
-print(process_stats(somber_mage_3))
+print(process_stats(enemy_1))
+print(process_stats(enemy_2))
+print(process_stats(enemy_3))
 
 
 

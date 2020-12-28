@@ -16,6 +16,8 @@ def parse_ai_data(filename):
     
     output = ''
     for d in data:
+        if ";" in d:
+            continue
         if ":" in d:
             d2 = d.split(":")[0].strip()
             dcomment = d.split(":")[1].strip()

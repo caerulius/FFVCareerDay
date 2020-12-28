@@ -114,7 +114,23 @@ def patch_and_return():
 
         patch_careerday(filename, data)
 
-        random.seed(seed)
+        spoiler_log_flag = data["spoiler_log"]
+        if type(spoiler_log_flag) != bool:
+            spoiler_log_flag = translateBool(spoiler_log_flag)
+        
+        if spoiler_log_flag:
+            spoiler_log_flag = False
+        else:
+            spoiler_log_flag = True
+        
+        if spoiler_log_flag:
+            print("Spoiler log enabled")
+            random.seed(seed)
+        else:
+            print("Spoiler log disabled")
+            random.seed(seed)
+            random.seed(random.randint(0,1000000))
+            
         # We're going to pass in conductor_config into Conductor() object now
         # Any configuration for new parameters belong here
         conductor_config = {
@@ -145,6 +161,7 @@ def patch_and_return():
                             'green_color':   data['green_color'],
                             'blue_color':   data['blue_color'],
                             'exp_mult':   data['exp_mult'],
+                            'free_tablets':   data['free_tablets'],
                             'place_all_rewards':   data['place_all_rewards'],
                             'randomize_loot':   data['randomize_loot'],
                             'portal_boss':   data['portal_boss'],
@@ -177,7 +194,9 @@ def patch_and_return():
         file_list.append(filename)
 #       file_list.append(patch_file_name) #removed patch file for zip to players
         os.remove(patch_file_name)
-        file_list.append(spoiler_file_name)
+        
+        if spoiler_log_flag:
+            file_list.append(spoiler_file_name)
 
         zip_file_name = "{}.zip".format(filename[:-4])
 
@@ -246,15 +265,16 @@ def patch_careerday(filename, data):
     progressive_rewards = bool_to_int(translateBool(data['progressive_rewards']))
     abbreviated = bool_to_int(translateBool(data['abbreviated']))
     grantkeyitems = bool_to_int(translateBool(data['grantkeyitems']))
+    free_tablets = int(data['free_tablets'])
     starting_cara = bool_to_int(translateBool(data['starting_cara']))
     everysteprandomencounter = bool_to_int(translateBool(data['everysteprandomencounter']))
     # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
     world_lock = int(data['world_lock'])
     
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
-    --define passages=1 --define double_atb=0 --define progressive={} --define abbreviated={} --define grantkeyitems={} --define boss_exp=1 \
+    --define passages=1 --define double_atb=0 --define progressive={} --define abbreviated={} --define grantkeyitems={} --define boss_exp=1 --define free_tablets={} \
     --define fourjobmode={} --define world_lock={} --define starting_cara={} --define everysteprandomencounter={}\
-    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, fjf, world_lock, starting_cara, everysteprandomencounter, MAIN_PATCH, filename)
+    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, world_lock, starting_cara, everysteprandomencounter, MAIN_PATCH, filename)
 
     logging.error(command)
     

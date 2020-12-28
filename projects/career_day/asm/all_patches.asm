@@ -286,7 +286,9 @@ incsrc ../../shared_asm/data_tables/progressive_magic_table.asm
 incsrc ../../shared_asm/data_tables/magic_ability_crystal_shop_prices.asm
 incsrc ../../shared_asm/data_tables/original_magic_prices.asm
 incsrc ../../shared_asm/data_tables/shop_prices.asm
-incsrc ../../shared_asm/data_tables/exp_table_lv50_modified.asm
+if !explv50 = 1
+    incsrc ../../shared_asm/data_tables/exp_table_lv50_modified.asm
+endif
 
 incsrc ../../shared_asm/colors/galuf_mimic.asm
 

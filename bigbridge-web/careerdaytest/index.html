@@ -86,7 +86,17 @@
 					<h6><button style="display:none" class="link servicelink big-download" id="download"><i class="fa fa-1x fa-download"></i> Download</button></h6>
 				</div>
 			</div>
-			
+			<div class="row">
+                <div class="pretty p-curve p-smooth p-bigger p-icon check-div col-sm-5 col-sm-push-4" style="margin-left:30px">
+                    <input type="checkbox" class="option" id="spoiler_log" unchecked>
+                    <div class="state">
+                        <i class="icon fa fa-check check-icon"></i>
+                        <label>
+                            <b>Do not generate spoiler log</b>
+                        </label>
+                    </div>
+                </div>
+            </div>
 			<div class="row" id="settingstringdefault">
 				<p>Current setting string (check end of this page for more defaults!). Click to copy to your clipboard and save settings for later or share, or <a style="cursor:pointer" onclick="showCustomSettingString()">apply a custom setting string</a></p>
 				<input type="text" id="settingstring" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');"> <!-- shoutouts to the SMRPG randomizer for the easy copy to clipboard code -->
@@ -500,7 +510,7 @@
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
 					<label>
-						<b>Randomize Music:</b> All music tracks are shuffled. Experimental, some areas may softlock. Testing appreciated
+						<b>Randomize Music:</b> All music tracks are shuffled (Note: generally stable, though some areas may crash so save often)
 					</label>
 				</div>
 			</div>
@@ -522,14 +532,25 @@
 					</label>
 				</div>
 			</div>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="explv50" checked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Accelerate Lv50+ EXP</b> Party levels past Lv50 are gained very fast
+					</label>
+				</div>
+			</div>
 
 
 
 			<br>
 			<p style="font-size:1.5em;margin-top:10px"><b>Portal Boss</b></p>
-			<p> One Portal Boss will appear per seed. Choose which boss will appear. Leave this default if unsure.</p>
+			<p> One Portal Boss will appear per seed. These are custom endgame bosses to rival Neo Exdeath to achieve the ending. Leave this default if unsure.</p>
 			<div class="pretty p-default p-round select-div">
 				<select class="option" id="portal_boss">
+                    <option value="Random">Random
+                    <option value="DragonClan">DragonClan
                     <option value="RainSenshi">RainSenshi
 					<option value="SomberMage">SomberMage
 				</select>
@@ -540,7 +561,7 @@
 			<div class="row">
 			<p style="font-size:1.5em;margin-top:10px"><b>Preset Settings</b></p>
 			<div class="row" id="settingstringpreset1">
-				<p>Standard locked worlds</p>
+				<p>Standard race preset</p>
 				<input type="text" id="settingstringpresetval1" class="form-control form-control-lg text-center" readonly="" onclick="$(this).select(); document.execCommand('copy');">
 				<label for="settingstringpresetval1" class="d-none"></label>
 			</div>

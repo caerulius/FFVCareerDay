@@ -1,3 +1,5 @@
+from ai_parser import *
+
 NUM_ENEMIES = 368
 STAT_HEX_MAP = {
         'gauge_time' : '00',
@@ -290,3 +292,340 @@ class EnemyManager(object):
         output = output + "-----*******-----\n"
 
         return output
+    
+    def set_portal_boss(self, df_portal, portal_boss_str, output_str):
+        
+        # This all currently supports 3 enemies, which replace LiquiFlame/Kuzar/SolCannon from Phoenix Tower
+        # with entirely new enemies
+        # It's ASSUMING there's three enemies as part of the process
+        
+        
+        # STEPS TO MAKE NEW BOSSES
+        # You can ignore the section below if you have 3 enemies in the formation 
+        # Look for "UPDATE STEP" in notes below
+        
+        
+        df = df_portal
+        
+        df = df[df['enemy_name'] == portal_boss_str]
+        
+        enemies = [[x for x in self.enemies if x.idx == '357'][0],
+                   [x for x in self.enemies if x.idx == '358'][0],
+                   [x for x in self.enemies if x.idx == '359'][0]
+                  ]
+        
+        self.relevant_enemies = self.relevant_enemies + enemies
+        
+        for enemy in enemies:
+            data = df[df['idx']==int(enemy.idx)].iloc[0]
+            for i in data.index:
+                if i == 'enemy_name':
+                    setattr(enemy,i,str(data[i]))
+                if "num_" in i:
+                    setattr(enemy,i,str(data[i]).zfill(2))
+                if i in [  'atk_index',
+                            'elemental_immune',
+                            'status0_immune',
+                            'status1_immune',
+                            'status2_immune',
+                            'elemental_absorb',
+                            'unavoidable_atk',
+                            'elemental_weakness',
+                            'enemy_type',
+                            'special_immune',
+                            'initial_status0',
+                            'initial_status1',
+                            'initial_status2',
+                            'initial_status3',
+                            'steal_common',
+                            'steal_rare',
+                            'drop_common',
+                            'drop_rare']: 
+                    setattr(enemy,i,str(data[i]).zfill(2))
+            enemy.update_all()
+            output_str = output_str + "\n" + (enemy.asar_output)
+
+        # Change AI 
+        if portal_boss_str == 'SomberMage':
+
+            output_str = ''
+            output_str = '\n\n; PORTAL BOSS\n'
+            
+            # Change liquiflame formation to not have opening hide and no ABP. Last byte shows who's unhidden
+            output_str = output_str + "\n" + "; Formation changes"
+            output_str = output_str + "\n" + ("org $D04EB0")
+            output_str = output_str + "\n" + ("db $00, $80, $00, $80")
+            
+            # Add 3 bosses for liquiflame, kuzar, solcannon
+            output_str = output_str + "\n" + ("org $D04EB4")
+            output_str = output_str + "\n" + ("db $65, $66, $67")
+            # Change to Exdeath W2 music and Strong Boss fade
+            output_str = output_str + "\n" + ("org $D04EBE")
+            output_str = output_str + "\n" + ("db $28, $21")
+            
+            
+            # set liquidflame spot to AI
+            output_str = output_str + "\n" + ";AI table changes"
+            output_str = output_str + "\n" + ("org $D09ECA")
+            output_str = output_str + "\n" + ("db $E0, $F1")
+            # set kuzar ai
+            output_str = output_str + "\n" + ("db $E0, $F2")
+            # set solcannon ai
+            output_str = output_str + "\n" + ("db $E0, $F3")
+            
+            output_str = output_str + "\n" + ";Formation table changes"
+            # Formation table, which will correspond to battle code $BD, $55, $FF found in the custom event
+            output_str = output_str + "\n" + ("org $D07954")
+            output_str = output_str + "\n" + ("db $EB, $01") # ; use liquiflame formation in free space on lookup table
+            output_str = output_str + "\n" + ("db $EB, $01") # ; duplicate for table sometimes pulling next address
+            # Now pivot on which type of portal boss 
+
+            ########## 
+            # UPDATE STEP
+            # Custom write AI for each of the forms
+            ##########
+            output_str = output_str + "\n" + ";AI Changes"
+            #LiquiFlame AI
+            
+            data = parse_ai_data('somber_mage.txt')
+            output_str = output_str + "\n" + data
+
+
+            # End of battle dialogue
+            output_str = output_str + "\n" + "org $D0F1D4"
+            output_str = output_str + "\n" + "db $B0, $4F"
+            
+            output_str = output_str + "\n" + "org $E74FB0"
+            output_str = output_str + "\n" + "db $A3, $A3, $A3, $00"
+            ########## 
+            # UPDATE STEP
+            # Change formation x/y coords if necessary. Default is middle
+            ##########
+            output_str = output_str + "\n" + ";Enemy X/Y Coords"
+            # ; Formation coords. Low byte x, High byte y coord
+            output_str = output_str + "\n" + ("org $d09858")
+            output_str = output_str + "\n" + ("db $78, $78, $78, $78, $78, $78, $78, $78") # ; default
+
+            ########## 
+            # UPDATE STEP
+            # Change sprites. The addresses are always the same, but you can grab from enemy_data.csv, the rightmost columns
+            # Then change the 4th byte (and also the $00 or $01 on the 3rd byte) for palette swaps
+            ##########
+            
+            # Change sprites 
+            # ; Cherie sprite
+            output_str = output_str + "\n" + "; Battle sprite changes"
+            output_str = output_str + "\n" + ("org $D4B879")
+            output_str = output_str + "\n" + ("db $31, $27, $01, $68, $51")
+            output_str = output_str + "\n" + ("db $31, $27, $01, $69, $51")
+            output_str = output_str + "\n" + ("db $31, $27, $01, $5f, $51")
+            
+
+            ########## 
+            # UPDATE STEP
+            # Change name of enemy with text_parser2.py, limit of 10 characters
+            ##########            
+            # ; Change LiquiFlame, Kuzar and Sol Cannon name to SOMBERMAGE
+            output_str = output_str + "\n" + ("org $E00E42")
+            output_str = output_str + "\n" + ("db $72, $88, $86, $7B, $7E, $8B, $6C, $7A, $80, $7E")
+            output_str = output_str + "\n" + ("db $72, $88, $86, $7B, $7E, $8B, $6C, $7A, $80, $7E")
+            output_str = output_str + "\n" + ("db $72, $88, $86, $7B, $7E, $8B, $6C, $7A, $80, $7E")
+            
+            ########## 
+            # UPDATE STEP
+            # Change dialogue of enemy before battle
+            ##########            
+
+            output_str = output_str + "\n" + "; Pre-battle dialogue"
+            output_str = output_str + "\n" + "org $E14BF1"
+            output_str = output_str + "\n" + "db $73, $81, $7E, $96, $90, $82, $87, $7D, $96, $82, $8C, $96, $7C, $7A, $85, $85, $82, $87, $80, $A3, $A3, $A3, $96, $82, $8D, $99, $8C, $01, $8D, $82, $86, $7E, $96, $7F, $88, $8B, $96, $8E, $8C, $96, $8D, $88, $96, $7F, $82, $80, $81, $8D, $A3, $00"
+
+
+        if portal_boss_str == 'RainSenshi':
+            output_str = ''
+            output_str = '\n\n; PORTAL BOSS\n'
+            
+            # Change liquiflame formation to not have opening hide and no ABP. Last byte shows who's unhidden
+            output_str = output_str + "\n" + "; Formation changes"
+            output_str = output_str + "\n" + ("org $D04EB0")
+            output_str = output_str + "\n" + ("db $00, $80, $00, $80")
+            
+            # Add 3 bosses for liquiflame, kuzar, solcannon
+            output_str = output_str + "\n" + ("org $D04EB4")
+            output_str = output_str + "\n" + ("db $65, $66, $67")
+            # Change to Exdeath W2 music and Strong Boss fade
+            output_str = output_str + "\n" + ("org $D04EBE")
+            output_str = output_str + "\n" + ("db $28, $21")
+            
+            
+            # set liquidflame spot to AI
+            output_str = output_str + "\n" + ";AI table changes"
+            output_str = output_str + "\n" + ("org $D09ECA")
+            output_str = output_str + "\n" + ("db $E0, $F1")
+            # set kuzar ai
+            output_str = output_str + "\n" + ("db $E0, $F2")
+            # set solcannon ai
+            output_str = output_str + "\n" + ("db $E0, $F3")
+            
+            output_str = output_str + "\n" + ";Formation table changes"
+            # Formation table, which will correspond to battle code $BD, $55, $FF found in the custom event
+            output_str = output_str + "\n" + ("org $D07954")
+            output_str = output_str + "\n" + ("db $EB, $01") # ; use liquiflame formation in free space on lookup table
+            output_str = output_str + "\n" + ("db $EB, $01") # ; duplicate for table sometimes pulling next address
+            # Now pivot on which type of portal boss 
+            ########## 
+            # UPDATE STEP
+            # Custom write AI for each of the forms
+            ##########
+            output_str = output_str + "\n" + ";AI Changes"
+            #LiquiFlame AI
+            
+            data = parse_ai_data('rain_senshi.txt')
+            output_str = output_str + "\n" + data
+
+
+            # End of battle dialogue
+            output_str = output_str + "\n" + "org $D0F1D4"
+            output_str = output_str + "\n" + "db $B0, $4F"
+            
+            output_str = output_str + "\n" + "org $E74FB0"
+            output_str = output_str + "\n" + "db $A3, $A3, $A3, $00"
+            ########## 
+            # UPDATE STEP
+            # Change formation x/y coords if necessary. Default is middle
+            ##########
+            output_str = output_str + "\n" + ";Enemy X/Y Coords"
+            # ; Formation coords. Low byte x, High byte y coord for each position
+            output_str = output_str + "\n" + ("org $d09858")
+            output_str = output_str + "\n" + ("db $28, $B3, $BD, $00, $00, $00, $00, $00") # ; default
+
+            ########## 
+            # UPDATE STEP
+            # Change sprites. The addresses are always the same, but you can grab from enemy_data.csv, the rightmost columns
+            # Then change the 4th byte (and also the $00 or $01 on the 3rd byte) for palette swaps
+            ##########
+            
+
+            # Change sprites 
+            output_str = output_str + "\n" + "; Battle sprite changes"
+            output_str = output_str + "\n" + ("org $D4B879")
+            output_str = output_str + "\n" + ("db $2C, $FF, $01, $5D, $4B")
+            output_str = output_str + "\n" + ("db $2C, $FF, $01, $4F, $4B")
+            output_str = output_str + "\n" + ("db $86, $D3, $01, $3B, $12")
+
+
+            ########## 
+            # UPDATE STEP
+            # Change name of enemy with text_parser2.py, limit of 10 characters
+            ##########            
+            # ; Change LiquiFlame, Kuzar and Sol Cannon name to name of enemy
+            output_str = output_str + "\n" + ("org $E00E42")
+            output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
+            output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
+            output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
+            
+            ########## 
+            # UPDATE STEP
+            # Change dialogue of enemy before battle
+            ##########            
+
+            output_str = output_str + "\n" + "; Pre-battle dialogue"
+            output_str = output_str + "\n" + "org $E14BF1"
+            output_str = output_str + "\n" + "db $63, $8B, $7A, $90, $96, $92, $88, $8E, $8B, $96, $85, $7A, $8C, $8D, $96, $7B, $8B, $7E, $7A, $8D, $81, $01, $7A, $8C, $96, $8D, $81, $7E, $96, $8D, $82, $7D, $7A, $85, $96, $90, $7A, $8F, $7E, $96, $7A, $89, $89, $8B, $88, $7A, $7C, $81, $7E, $8C, $A3, $00"
+        if portal_boss_str == 'DragonClan':
+            
+            
+            output_str = ''
+            output_str = '\n\n; PORTAL BOSS\n'
+            
+            # Change liquiflame formation to not have opening hide and no ABP. Last byte shows who's unhidden
+            output_str = output_str + "\n" + "; Formation changes"
+            output_str = output_str + "\n" + ("org $D04EB0")
+            output_str = output_str + "\n" + ("db $00, $80, $00, $E0")
+            
+            # Add 3 bosses for liquiflame, kuzar, solcannon
+            output_str = output_str + "\n" + ("org $D04EB4")
+            output_str = output_str + "\n" + ("db $65, $66, $67")
+            # Change to Exdeath W2 music and Strong Boss fade
+            output_str = output_str + "\n" + ("org $D04EBC")
+            output_str = output_str + "\n" + ("db $1B, $00, $28, $21")
+            
+            
+            # set liquidflame spot to AI
+            output_str = output_str + "\n" + ";AI table changes"
+            output_str = output_str + "\n" + ("org $D09ECA")
+            output_str = output_str + "\n" + ("db $E0, $F1")
+            # set kuzar ai
+            output_str = output_str + "\n" + ("db $E0, $F2")
+            # set solcannon ai
+            output_str = output_str + "\n" + ("db $E0, $F3")
+            
+            output_str = output_str + "\n" + ";Formation table changes"
+            # Formation table, which will correspond to battle code $BD, $55, $FF found in the custom event
+            output_str = output_str + "\n" + ("org $D07954")
+            output_str = output_str + "\n" + ("db $EB, $01") # ; use liquiflame formation in free space on lookup table
+            output_str = output_str + "\n" + ("db $EB, $01") # ; duplicate for table sometimes pulling next address
+            # Now pivot on which type of portal boss 
+            ########## 
+            # UPDATE STEP
+            # Custom write AI for each of the forms
+            ##########
+            output_str = output_str + "\n" + ";AI Changes"
+            #LiquiFlame AI
+            
+            data = parse_ai_data('dragon_clan.txt')
+            output_str = output_str + "\n" + data
+
+
+            # End of battle dialogue
+            output_str = output_str + "\n" + "org $D0F1D4"
+            output_str = output_str + "\n" + "db $B0, $4F"
+            
+            output_str = output_str + "\n" + "org $E74FB0"
+            output_str = output_str + "\n" + "db $A3, $A3, $A3, $00"
+            ########## 
+            # UPDATE STEP
+            # Change formation x/y coords if necessary. Default is middle
+            ##########
+            output_str = output_str + "\n" + ";Enemy X/Y Coords"
+            # ; Formation coords. Low byte x, High byte y coord
+            output_str = output_str + "\n" + ("org $d09858")
+            output_str = output_str + "\n" + ("db $70, $2B, $CB, $78, $78, $78, $78, $78") # ; default
+
+            ########## 
+            # UPDATE STEP
+            # Change sprites. The addresses are always the same, but you can grab from enemy_data.csv, the rightmost columns
+            # Then change the 4th byte (and also the $00 or $01 on the 3rd byte) for palette swaps
+            ##########
+            
+
+            # Change sprites 
+            output_str = output_str + "\n" + "; Battle sprite changes"
+            output_str = output_str + "\n" + ("org $D4B879")
+            output_str = output_str + "\n" + ("db $26, $6F, $C0, $BA, $12")
+            output_str = output_str + "\n" + ("db $1A, $45, $80, $04, $0A") # 16, 06
+            output_str = output_str + "\n" + ("db $27, $4F, $80, $48, $13")
+
+
+
+            ########## 
+            # UPDATE STEP
+            # Change name of enemy with text_parser2.py, limit of 10 characters
+            ##########            
+            # ; Change LiquiFlame, Kuzar and Sol Cannon name to name of enemy
+            output_str = output_str + "\n" + ("org $E00E42")
+            output_str = output_str + "\n" + ("db $75, $7E, $85, $88, $7C, $82, $8D, $92, $00, $00")
+            output_str = output_str + "\n" + ("db $73, $88, $8B, $8A, $8E, $7E, $00, $00, $00, $00")
+            output_str = output_str + "\n" + ("db $65, $88, $8B, $7C, $7E, $00, $00, $00, $00, $00")
+            
+            ########## 
+            # UPDATE STEP
+            # Change dialogue of enemy before battle
+            ##########            
+
+            output_str = output_str + "\n" + "; Pre-battle dialogue"
+            output_str = output_str + "\n" + "org $E14BF1"
+            output_str = output_str + "\n" + "db $76, $81, $7A, $8D, $96, $81, $7A, $8F, $7E, $96, $92, $88, $8E, $96, $85, $7E, $7A, $8B, $87, $7E, $7D, $96, $7A, $7B, $88, $8E, $8D, $96, $8D, $81, $7E, $01, $85, $7A, $90, $8C, $96, $88, $7F, $96, $89, $81, $92, $8C, $82, $7C, $8C, $96, $8D, $88, $96, $89, $8B, $7E, $89, $7A, $8B, $7E, $96, $92, $88, $8E, $01, $7F, $88, $8B, $96, $8D, $81, $82, $8C, $96, $7B, $7A, $8D, $8D, $85, $7E, $A2, $96, $62, $88, $86, $7E, $A1, $00"
+
+
+        return output_str

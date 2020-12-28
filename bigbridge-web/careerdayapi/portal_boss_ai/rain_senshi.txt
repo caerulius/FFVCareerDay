@@ -2,9 +2,6 @@
     org $D0F1E0
     00 00 00 00: Default:
     FE:          {
-    FD F7 02 F0:   {No Interupt for: 2}
-    80:   Attack
-    80:   Attack
     52:   {Syldra}
     FD F7 02 F0:   {No Interupt for: 2}
     80:   Attack
@@ -53,7 +50,7 @@
     FE:          {
     FD F7 04 F0:   {No Interupt for: 4}
     FD 80 80 42:   {Specialty, Specialty, Quarter}
-
+    FE:          }    
 
     0F 00 00 00 FE FD F2 82 40 EE FF: {this is for unhiding form 2 upon death}   
 
@@ -105,7 +102,7 @@
     FE:          {
     FD F7 04 F0:   {No Interupt for: 4}
     FD 80 80 42:   {Specialty, Specialty, Quarter}
-
+    FE:          }
     
     0F 00 00 00 FE FD F2 82 20 EE FF: {this is for unhiding form 3 upon death}
     
@@ -186,7 +183,7 @@
     FE:          {
     FD F7 04 F0:   {No Interupt for: 4}
     FD 80 80 42:   {Specialty, Specialty, Quarter}
-
+    FE:          }
     
     
      ; react on death

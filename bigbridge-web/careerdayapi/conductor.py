@@ -51,7 +51,7 @@ ITEM_TYPE = "40"
 ITEM_SHOP_TYPE = "01"
 MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
-VERSION = "FFV CareerDay v0.83"
+VERSION = "FFV CareerDay v0.98"
 
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
@@ -94,6 +94,7 @@ class Conductor():
             self.free_shops = False
             self.seed = None
             self.remove_ned = True
+            self.free_tablets = 0
             
             
         else:                           # else take the config passed from server.py and set variables
@@ -124,6 +125,7 @@ class Conductor():
             self.music_randomization = self.translateBool(conductor_config['music_randomization'])
             self.free_shops = self.translateBool(conductor_config['free_shops'])
             self.remove_ned = self.translateBool(conductor_config['remove_ned'])
+            self.free_tablets = int(conductor_config['free_tablets'])
 
             self.seed = conductor_config['seed']
             
@@ -205,10 +207,9 @@ class Conductor():
         else:
             starting_crystal = self.RE.choice(crystals)
             
-            # Reroll if Freelancer
-            while starting_crystal.collectible_name == 'Freelancer' or starting_crystal.collectible_name == 'Mimic' or starting_crystal.collectible_name == 'Samurai':
-                logging.error("Rerolling starting crystal...")
-                starting_crystal = self.RE.choice(crystals)
+            # while starting_crystal.collectible_name == 'Mimic' or starting_crystal.collectible_name == 'Samurai':
+            #     logging.error("Rerolling starting crystal...")
+            #     starting_crystal = self.RE.choice(crystals)
             
         self.CM.add_to_placement_history(starting_crystal,"No") #don't allow the starting crystal to appear anywhere in game
         if starting_crystal.starting_spell_list == ['']:
@@ -224,7 +225,8 @@ class Conductor():
         if self.fjf and any([self.job_2 != 'Random', self.job_3 != 'Random', self.job_4 != 'Random']):
 
             logging.error("Assigning 4 jobs manually: next jobs assigned %s, %s, %s" % (self.job_2,self.job_3,self.job_4))
-            crystals = [x for x in crystals if x != starting_crystal and x.collectible_name != "Freelancer"]
+            # crystals = [x for x in crystals if x != starting_crystal and x.collectible_name != "Freelancer"]
+            crystals = [x for x in crystals if x != starting_crystal]
             self.RE.shuffle(crystals)
 #            breakpoint()
             
@@ -283,11 +285,11 @@ class Conductor():
             
             # Ensures for fjf that Freelancer is not included
             # Rerolls until true
-            if self.fjf:
-                while len([i for i in chosen_crystals if i.collectible_name == 'Freelancer']) >= 1:
-                    chosen_crystals = self.RE.sample(crystals, crystal_count)
-                    logging.error("Failed on pulling Freelancer, re-rolling crystals for FJ mode")
-    #                logging.error("New: ",chosen_crystals[0].collectible_name,chosen_crystals[1].collectible_name,chosen_crystals[2].collectible_name)
+    #         if self.fjf:
+    #             while len([i for i in chosen_crystals if i.collectible_name == 'Freelancer']) >= 1:
+    #                 chosen_crystals = self.RE.sample(crystals, crystal_count)
+    #                 logging.error("Failed on pulling Freelancer, re-rolling crystals for FJ mode")
+    # #                logging.error("New: ",chosen_crystals[0].collectible_name,chosen_crystals[1].collectible_name,chosen_crystals[2].collectible_name)
 
 
         #this pretends to have placed every job, so it won't try to place any more going forward
@@ -347,7 +349,24 @@ class Conductor():
         num_placed_key_items = 0
         exdeath_list = []
 
-        for _ in range(0, int(self.conductor_config['NUM_KEY_ITEMS'])):
+        
+        # breakpoint()
+        
+        # handle granting tablets immediately per config:
+        if self.free_tablets > 0:
+            tablets = [i for i in self.CM.get_all_of_type(KeyItem) if "Tablet" in i.collectible_name][:self.free_tablets]
+            logging.error("Handling %s number of free tablets" % len(tablets))
+            for idx, tablet in enumerate(tablets):
+                custom_reward = {'idx': 361 + idx, 'address': 'FFFFFF', 'original_reward': 'Null', 'area': 'Free Tablet %s' % (idx + 1), 'description': 'Free Tablet %s' % (idx + 1), 'reward_style': 'event', 'tier': '0', 'force_type': '', 'required_key_items': '', 'required_key_items_lock1': '', 'required_key_items_lock2': '', 'exdeath_address': '', 'hint_tags': '', 'world': ''}
+                null_reward = Reward(361 + idx,self.CM,self.DM, custom_reward)
+                self.CM.update_placement_rewards(tablet, null_reward)
+                self.CM.add_to_placement_history(tablet,null_reward)
+                
+            
+        
+        
+        
+        for _ in range(0, int(self.conductor_config['NUM_KEY_ITEMS']) - self.free_tablets):
             global next_key_reward
             global curr_node
             global curr_key_item
@@ -360,6 +379,7 @@ class Conductor():
             
             if next_key_reward_locs == None:
                 next_key_item = self.CM.get_random_collectible(self.RE, monitor_counts=True,next_reward = next_key_reward,tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, of_type=KeyItem)
+                # logging.error("LOGGING %s " % next_key_item.collectible_name)
                 next_key_reward.set_collectible(next_key_item)
                 self.CM.update_placement_rewards(next_key_item, next_key_reward)
                 next_key_reward.randomized = True
@@ -1304,7 +1324,7 @@ class Conductor():
             return output_str
         
         
-    def set_portal_boss(self,  portal_boss = 'SomberMage'):
+    def set_portal_boss(self):
         
         
         # This all currently supports 3 enemies, which replace LiquiFlame/Kuzar/SolCannon from Phoenix Tower
@@ -1387,7 +1407,7 @@ class Conductor():
             output_str = output_str + "\n" + (enemy.asar_output)
 
         # Change AI 
-        if portal_boss == 'SomberMage':
+        if self.configs['portal_boss'] == 'SomberMage':
             
             ########## 
             # UPDATE STEP
@@ -1448,13 +1468,76 @@ class Conductor():
             output_str = output_str + "\n" + "; Pre-battle dialogue"
             output_str = output_str + "\n" + "org $E14BF1"
             output_str = output_str + "\n" + "db $73, $81, $7E, $96, $90, $82, $87, $7D, $96, $82, $8C, $96, $7C, $7A, $85, $85, $82, $87, $80, $A3, $A3, $A3, $96, $82, $8D, $99, $8C, $01, $8D, $82, $86, $7E, $96, $7F, $88, $8B, $96, $8E, $8C, $96, $8D, $88, $96, $7F, $82, $80, $81, $8D, $A3, $00"
-    
+
+
+        if self.configs['portal_boss'] == 'RainSenshi':
+            
+            ########## 
+            # UPDATE STEP
+            # Custom write AI for each of the forms
+            ##########
+            output_str = output_str + "\n" + ";AI Changes"
+            #LiquiFlame AI
+            
+            data = parse_ai_data('rain_senshi.txt')
+            output_str = output_str + "\n" + data
+
+
+            # End of battle dialogue
+            output_str = output_str + "\n" + "org $D0F1D4"
+            output_str = output_str + "\n" + "db $B0, $4F"
+            
+            output_str = output_str + "\n" + "org $E74FB0"
+            output_str = output_str + "\n" + "db $A3, $A3, $A3, $00"
+            ########## 
+            # UPDATE STEP
+            # Change formation x/y coords if necessary. Default is middle
+            ##########
+            output_str = output_str + "\n" + ";Enemy X/Y Coords"
+            # ; Formation coords. Low byte x, High byte y coord
+            output_str = output_str + "\n" + ("org $d09858")
+            output_str = output_str + "\n" + ("db $78, $78, $78, $78, $78, $78, $78, $78") # ; default
+
+            ########## 
+            # UPDATE STEP
+            # Change sprites. The addresses are always the same, but you can grab from enemy_data.csv, the rightmost columns
+            # Then change the 4th byte (and also the $00 or $01 on the 3rd byte) for palette swaps
+            ##########
+            
+
+            # Change sprites 
+            output_str = output_str + "\n" + "; Battle sprite changes"
+            output_str = output_str + "\n" + ("org $D4B879")
+            output_str = output_str + "\n" + ("db $2C, $FF, $01, $5D, $4B")
+            output_str = output_str + "\n" + ("db $2C, $FF, $01, $4F, $4B")
+            output_str = output_str + "\n" + ("db $86, $D3, $01, $3B, $12")
+
+
+            ########## 
+            # UPDATE STEP
+            # Change name of enemy with text_parser2.py, limit of 10 characters
+            ##########            
+            # ; Change LiquiFlame, Kuzar and Sol Cannon name to name of enemy
+            output_str = output_str + "\n" + ("org $E00E42")
+            output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
+            output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
+            output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
+            
+            ########## 
+            # UPDATE STEP
+            # Change dialogue of enemy before battle
+            ##########            
+
+            output_str = output_str + "\n" + "; Pre-battle dialogue"
+            output_str = output_str + "\n" + "org $E14BF1"
+            output_str = output_str + "\n" + "db $63, $8B, $7A, $90, $96, $92, $88, $8E, $8B, $96, $85, $7A, $8C, $8D, $96, $7B, $8B, $7E, $7A, $8D, $81, $01, $7A, $8C, $96, $8D, $81, $7E, $96, $8D, $82, $7D, $7A, $85, $96, $90, $7A, $8F, $7E, $96, $7A, $89, $89, $8B, $88, $7A, $7C, $81, $7E, $8C, $A3, $00"
+
         return output_str
 
     def spoiler_intro(self):
         output = ""
         output = output + VERSION
-        output = output + "\nSeed: " + self.seed
+        output = output + "\nSeed: " + str(self.seed)
         output = output + "\nSetting String: " + self.setting_string + "\n\n"
 
         return output
@@ -1803,7 +1886,7 @@ class Conductor():
                 keys_main.append(i)
             else:
                 keys_barren.append(i)
-    
+
         self.RE.shuffle(keys_main)
         self.RE.shuffle(keys_barren)
         
@@ -1902,7 +1985,7 @@ class Conductor():
         # now take all tags, and find out which ones aren't in the tags_main 
         barren_tags = []
         for tag in tags:
-            if tag not in tags_main:
+            if tag not in tags_main and tag != 'forest':
                 barren_tags.append(tag)
                 
         # Then add random ones, depending on how many present
@@ -1970,8 +2053,13 @@ class Conductor():
         
         try:
             loot_type = self.configs['randomize_loot'].strip()
-            loot_percent = int(self.configs['loot_percent'])
+            loot_percent = self.configs['loot_percent']
+            try:
+                loot_percent = int(loot_percent)
+            except:
+                loot_percent = 25 # defaults to 25
         except Exception as e:
+            loot_percent = 25 # defaults to 25
             logging.error("Error on loot type parse: %s" % (e))
         for enemy in self.EM.enemies:
             for loot in loot_list:
@@ -2076,7 +2164,12 @@ class Conductor():
                     kuzar_text = self.TP.run_kuzar_encrypt({matched_weapon.text_textbox: kuzar_text_addresses[i]})
                     output = output + kuzar_text
                 else:
-                    kuzar_text = self.TP.run_kuzar_encrypt({data.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
+
+                    temp_reward_name = data.reward_name.replace('->', '@').replace(' Progressive', '@')
+                    if 'magic_id' in data.__dict__.keys():
+                        temp_reward_name = "%s %s Magic" % (temp_reward_name, data.type)
+                    
+                    kuzar_text = self.TP.run_kuzar_encrypt({temp_reward_name: kuzar_text_addresses[i]})
 #                    logging.error("Kuzar normal: %s" % (data.reward_name))
                     output = output + kuzar_text
 
@@ -2145,7 +2238,7 @@ class Conductor():
 
 #        breakpoint()        
         colors = hex(r_color+g_color+b_color).replace("0x","")
-        print(colors)
+        # print(colors)
         
         if len(colors) == 0:
             colors = "0000"
@@ -2174,7 +2267,7 @@ class Conductor():
         
         
         patch = patch + "\n;Reward Mult\norg $C0F342\ndb $%s" % (reward_val)
-        print(patch)
+#        print(patch)
         return patch
         
         
@@ -2189,7 +2282,7 @@ class Conductor():
         logging.error("Randomizing key items...")
         num_placed_key_items = self.randomize_key_items()
         #logging.error(num_placed_key_items)
-        while num_placed_key_items < int(self.conductor_config['NUM_KEY_ITEMS']):
+        while num_placed_key_items < (int(self.conductor_config['NUM_KEY_ITEMS']) - self.free_tablets):
             #logging.error("didn't place them all, retrying")
             self.CM.reset_all_of_type(KeyItem)
             self.RM.reset_rewards_by_style("key")
@@ -2278,7 +2371,7 @@ class Conductor():
         spoiler = spoiler + self.spoiler_settings()
         spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.get_collectible_counts()                
-        spoiler = spoiler + self.RM.get_spoiler(self.world_lock)
+        spoiler = spoiler + self.RM.get_spoiler(self.world_lock, self.free_tablets)
         spoiler = spoiler + self.SM.get_spoiler()
         spoiler = spoiler + self.CM.get_spoiler()    
         #spoiler = spoiler + self.EM.get_spoiler()
@@ -2291,7 +2384,7 @@ class Conductor():
             spoiler = spoiler + self.EM.get_loot_spoiler()
         if self.default_abilities:
             spoiler = spoiler + default_spoiler
-        if self.default_abilities:
+        if self.learning_abilities:
             spoiler = spoiler + learning_spoiler
         temp_hints_asar, temp_hints = self.assign_hints()
         patch = patch + temp_hints_asar
@@ -2306,49 +2399,52 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    SEED_NUM = 325633
-#    SEED_NUM = random.randint(1,1000000)
+    # SEED_NUM = 315358
+    SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
-    c = Conductor(random, {
-                            'fjf':True,
-                            'fjf_strict':True,
-                            'jobpalettes':False,
-                            'world_lock':0,
-                            'tiering_config': True,
-                            'tiering_percentage': 90,
-                            'tiering_threshold': 2,
-                            'enforce_all_jobs': False,
-                            'battle_speed':3,
-                            'red_color':31,
-                            'blue_color':0,
-                            'green_color':31,
-                            'exp_mult':4,
-                            'place_all_rewards': True,
-                            'randomize_loot' : "none",
-                            'loot_percent' : 25,
-#                            'progressive_bosses' : False,
-                            'portal_boss' : 'SomberMage',
-                            'progressive_rewards' : False,
-                            'item_randomization' : True,
-                            'item_randomization_percent' : 50,
-                            'default_abilities': False,
-                            'learning_abilities': False,
-                            'setting_string': None,
-                            'job_1':'Random',
-                            'job_2':'Random',
-                            'job_3':'Random',
-                            'job_4':'Random',
-                            'lenna_name':'Lenna',
-                            'galuf_name':'Galuf',
-                            'cara_name':'Krile',
-                            'faris_name':'Ziliat',
-                            'music_randomization': False,
-                            'free_shops':False,
-                            'battle_speed':3,
-                            'starting_cara':True,
-                            'remove_ned':True,
-                            'seed': SEED_NUM
-                          }
+    c = Conductor(random, {'seed': SEED_NUM, 
+                           'fjf': 'true', 
+                           'fjf_strict': 'true', 
+                           'job_1': 'Random', 
+                           'job_2': 'Random', 
+                           'job_3': 'Random', 
+                           'job_4': 'Random', 
+                           'lenna_name': 'Lenna', 
+                           'galuf_name': 'Galuf', 
+                           'cara_name': 'Cara',
+                           'faris_name': 'Faris', 
+                           'starting_cara': 'false',
+                           'remove_ned': 'false',
+                           'everysteprandomencounter': 'true', 
+                           'free_shops': 'false', 
+                           'music_randomization': 'false', 
+                           'world_lock': '1',
+                           'tiering_config': 'true', 
+                           'tiering_percentage': '5', 
+                           'tiering_threshold': '1', 
+                           'enforce_all_jobs': 'false',
+                           'progressive_bosses': 'false', 
+                           'progressive_rewards': 'false', 
+                           'item_randomization': 'true', 
+                           'abbreviated': 'true', 
+                           'grantkeyitems': 'false', 
+                           'default_abilities': 'false', 
+                           'learning_abilities': 'false', 
+                           'free_tablets' : '0',
+                           'item_randomization_percent': '33', 
+                           'battle_speed': '3',
+                           'red_color': '0', 
+                           'blue_color': '0', 
+                           'green_color': '0', 
+                           'exp_mult': '4', 
+                           'place_all_rewards': 'true', 
+                           'randomize_loot': 'match', 
+                           'loot_percent': '25', 
+                           'portal_boss': 'RainSenshi', 
+                           'setting_string': 'P W1 T5|1 A PR I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CA RND AB CDA pbSomberMage', 
+                           'fileLocation': 'https://bigbridgecareerday.s3.amazonaws.com/careerdayuploads/1593387118413-Final%20Fantasy%20V%20%28J%29.smc',
+                           'jobpalettes':'true'}
+
                  )
     (spoiler, patch) = c.randomize()
     with open(os.path.join(os.path.pardir,os.path.pardir,'projects','test_asm','r-patch.asm'),'w') as f:

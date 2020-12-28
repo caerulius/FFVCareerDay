@@ -44,6 +44,8 @@ db $D2, $01, $4D, $6F, $D8 ; airship ???
 db $A3, $79            ; set address 000A23 bit OFF 02
 ; Submarine deactivated
 db $A5, $F9            ; set address 000A53 bit OFF 02
+; Lonka de-access
+db $A5, $FA            ; set address 000A53 bit OFF 04
 
 db $EE
 db $14

@@ -5,9 +5,13 @@ import operator
 from log_analyzer import check_completeable_spoiler_log
 
 class Reward:
-    def __init__(self, index, collectible_manager, data_manager):
+    def __init__(self, index, collectible_manager, data_manager, null_tablet_override = None):
         self.idx = index
-        self.generate_from_df(data_manager.files['rewards'])
+        if not null_tablet_override:
+            self.generate_from_df(data_manager.files['rewards'])
+        else:
+            for k, v in null_tablet_override.items():
+                setattr(self,k,v)
         '''
         self.address (address of two byte value, id definition)
         self.type (crystal, esper, magic, etc)
@@ -109,9 +113,11 @@ class RewardManager:
 
         return output
 
-    def get_spoiler(self, world_lock):
+    def get_spoiler(self, world_lock, free_tablets):
         
         output = "-----KEY ITEMS------\n"
+        if free_tablets > 0:
+            output += 'FREE TABLETS: %s\n' % free_tablets
         output_temp, flag1, flag2, df = check_completeable_spoiler_log([x for x in self.rewards if str(type(x.collectible)) == "<class 'collectible.KeyItem'>"],world_lock)
         self.df = df
         output = output + output_temp + "\n"

@@ -247,6 +247,7 @@ incsrc open_world/key_items.asm
 incsrc open_world/key_item_locks.asm
 incsrc open_world/npc_locks.asm
 incsrc open_world/open_world.asm
+incsrc open_world/default_airship_down.asm
 incsrc open_world/intro_cutscene.asm
 incsrc open_world/tutorial_beginner_house.asm
 incsrc open_world/world1_to_world2_warp.asm
@@ -260,7 +261,7 @@ incsrc open_world/exdeath_overwrite.asm
 incsrc core_code/credits.asm
 incsrc open_world/summon_bosses.asm
 incsrc open_world/gargoyles_restructure.asm
-incsrc open_world/bal_castle_timerguard.asm
+; incsrc open_world/bal_castle_timerguard.asm
 incsrc open_world/phoenix_tower.asm
 incsrc open_world/custom_enemies.asm
 incsrc open_world/boss_portal.asm

@@ -450,3 +450,88 @@ org $E00C44
 db $66, $8E, $7A, $8B, $7D, $82, $7A, $87
 org $E00C4E
 db $66, $8E, $7A, $8B, $7D, $82, $7A, $87
+
+; Disable Jacohl NPC from using Portal Boss event
+org $ce7688
+db $b3
+
+
+
+; put underwater crags near zeza fleet
+; dont ask me how I did this
+; it involved 
+; breakpoint write 7F22B1
+; finding 7f763E reference
+; copy and pasting data to find it in C7F0F7 area
+; then changing 04 (underwater tile) -> 19 (crag)
+
+org $C7F0F7
+db $0B
+org $C7F0D0
+db $0B
+org $C7F0AB
+db $0B
+org $C7F082
+db $0B
+
+
+
+; hardcode write rewards for free tablets
+org $C0FBD0
+db $30, $1A
+db $30, $1B
+db $30, $1C
+db $30, $1D
+
+; odin borrowed from bal_castle_timerguard
+org $CE22A0
+db $FD, $D5, $FF, $A6, $00, $FF, $C9, $00, $F0
+
+
+
+
+; steamship world map
+org $C71569
+db $05, $52, $73, $43, $43 
+org $C715D5
+db $05, $73, $43, $43, $43, $87, $87, $50, $51, $99
+
+; change steamship exit to always be outside karnak
+org $F04E19
+db $6E, $00
+
+; change old steamship -> catapult warp event 
+org $c93fb5
+db $c8, $ad, $84, $04, $ff
+pad $c93FC3
+
+; event text for above
+org $E25116
+db $63, $88, $88, $8B, $96, $85, $88, $7C, $84, $7E, $7D, $A3, $01, $75, $82, $8C, $82, $8D, $96, $88, $8E, $8D, $8C, $82, $7D, $7E, $96, $6A, $7A, $8B, $87, $7A, $84, $96, $7F, $88, $8B, $96, $72, $8D, $7E, $7A, $86, $8C, $81, $82, $89, $A3, $00
+
+; disable steamship spawning via event
+org $c878c0
+db $00, $00, $00, $00, $00
+
+
+; disable all conditional events at steamship
+org $F04BD0
+db $FF, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00, $00
+
+
+
+
+
+
+; force karnak npc to always give hint
+org $CE12AB
+db $01
+
+
+; fix merugune spot's event flag for clearing the fight
+org $f0562D
+db $FB, $9B
+
+org $f05634
+db $FB, $9B
+
