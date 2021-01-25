@@ -479,7 +479,7 @@ class EnemyManager(object):
             ##########
             output_str = output_str + "\n" + ";AI Changes"
             #LiquiFlame AI
-            
+
             data = parse_ai_data('rain_senshi.txt')
             output_str = output_str + "\n" + data
 
@@ -487,7 +487,7 @@ class EnemyManager(object):
             # End of battle dialogue
             output_str = output_str + "\n" + "org $D0F1D4"
             output_str = output_str + "\n" + "db $B0, $4F"
-            
+
             output_str = output_str + "\n" + "org $E74FB0"
             output_str = output_str + "\n" + "db $A3, $A3, $A3, $00"
             ########## 
@@ -495,16 +495,16 @@ class EnemyManager(object):
             # Change formation x/y coords if necessary. Default is middle
             ##########
             output_str = output_str + "\n" + ";Enemy X/Y Coords"
-            # ; Formation coords. Low byte x, High byte y coord for each position
+            # ; Formation coords. Low byte x, High byte y coord
             output_str = output_str + "\n" + ("org $d09858")
-            output_str = output_str + "\n" + ("db $28, $B3, $BD, $00, $00, $00, $00, $00") # ; default
+            output_str = output_str + "\n" + ("db $78, $78, $78, $78, $78, $78, $78, $78") # ; default
 
             ########## 
             # UPDATE STEP
             # Change sprites. The addresses are always the same, but you can grab from enemy_data.csv, the rightmost columns
             # Then change the 4th byte (and also the $00 or $01 on the 3rd byte) for palette swaps
             ##########
-            
+
 
             # Change sprites 
             output_str = output_str + "\n" + "; Battle sprite changes"
@@ -523,7 +523,7 @@ class EnemyManager(object):
             output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
             output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
             output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
-            
+
             ########## 
             # UPDATE STEP
             # Change dialogue of enemy before battle

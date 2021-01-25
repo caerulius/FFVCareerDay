@@ -68,7 +68,7 @@
 		<div class="container">
 			<h4>Looking for help with this randomizer? Check out our <a href = "https://www.bigbridge.studio/cdwiki/doku.php">Career Day wiki!</a></h4>
 			<br>
-			<h2>Generate Randomized FF5 Rom (v0.98)</h2>
+			<h2>Generate Randomized FF5 Rom (v0.995)</h2>
 			<input type="file" accept=".smc, .sfc" class="file-browse" id="fileupload"/>
 			<label for="fileupload"><i class="fa fa-upload"></i>  Browse</label>
 			<div class="file-info" id="file-info">Upload a Final Fantasy 5 ROM, Japanese or patched with the RPGe Translation</div><br/>
@@ -510,7 +510,7 @@
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
 					<label>
-						<b>Randomize Music:</b> All music tracks are shuffled. Experimental, some areas may softlock. Testing appreciated
+						<b>Randomize Music:</b> All music tracks are shuffled (Note: generally stable, though some areas may crash so save often)
 					</label>
 				</div>
 			</div>
@@ -531,15 +531,26 @@
 						<b>Free shops:</b> All shops are free!
 					</label>
 				</div>
+			</div><p>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="explv50" checked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Accelerate Lv50+ EXP</b> Party levels past Lv50 are gained very fast
+					</label>
+				</div>
 			</div>
 
 
 
 			<br>
 			<p style="font-size:1.5em;margin-top:10px"><b>Portal Boss</b></p>
-			<p> One Portal Boss will appear per seed. Choose which boss will appear. Leave this default if unsure.</p>
+			<p> One Portal Boss will appear per seed. These are custom endgame bosses to rival Neo Exdeath to achieve the ending. Leave this default if unsure.</p>
 			<div class="pretty p-default p-round select-div">
 				<select class="option" id="portal_boss">
+                    <option value="Random">Random
+                    <option value="DragonClan">DragonClan
                     <option value="RainSenshi">RainSenshi
 					<option value="SomberMage">SomberMage
 				</select>

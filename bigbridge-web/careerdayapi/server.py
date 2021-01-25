@@ -268,13 +268,14 @@ def patch_careerday(filename, data):
     free_tablets = int(data['free_tablets'])
     starting_cara = bool_to_int(translateBool(data['starting_cara']))
     everysteprandomencounter = bool_to_int(translateBool(data['everysteprandomencounter']))
+    explv50 = bool_to_int(translateBool(data['everysteprandomencounter']))
     # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
     world_lock = int(data['world_lock'])
     
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
     --define passages=1 --define double_atb=0 --define progressive={} --define abbreviated={} --define grantkeyitems={} --define boss_exp=1 --define free_tablets={} \
-    --define fourjobmode={} --define world_lock={} --define starting_cara={} --define everysteprandomencounter={}\
-    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, world_lock, starting_cara, everysteprandomencounter, MAIN_PATCH, filename)
+    --define fourjobmode={} --define world_lock={} --define starting_cara={} --define everysteprandomencounter={} --define explv50={}\
+    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, world_lock, starting_cara, everysteprandomencounter, explv50, MAIN_PATCH, filename)
 
     logging.error(command)
     

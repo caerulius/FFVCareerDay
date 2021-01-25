@@ -1,0 +1,16 @@
+playthrough_log,all_keys_obtained_flag,completeable_seed_flag,sphere_num,tablets_sphere_num,sphere_zero_keys_num,seed
+"Number of sphere zero keys: (7)
+Sphere 0:	Bracelet	 (WingRaptor loc)
+Sphere 0:	1st Tablet	 (AdamanTiMi loc)
+Sphere 0:	Pyramid Page	 (Titan loc)
+Sphere 0:	Anti Barrier	 (HiryuuPlant loc)
+Sphere 0:	Shrine Page	 (Antlion loc)
+Sphere 0:	Moogle Suit	 (Merugene loc)
+Sphere 0:	2nd Tablet	 (Bahamut loc)
+Sphere 1:	Hiryuu Call	 (Gilgamesh 1 loc via Anti Barrier)
+Sphere 1:	3rd Tablet	 (Gilgamesh 3 & Enkidou loc via Hiryuu Call)
+Sphere 1:	Falls Page	 (Carbunkle loc via Anti Barrier, Bracelet)
+Sphere 1:	Ifrit's Fire	 (Stalker loc via Shrine Page)
+All tablets NOT obtained.
+All keys NOT obtained.
+",False,False,100,0,7,5075197

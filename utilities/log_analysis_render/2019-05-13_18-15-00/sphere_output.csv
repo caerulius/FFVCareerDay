@@ -1,0 +1,24 @@
+playthrough_log,all_keys_obtained_flag,completeable_seed_flag,sphere_num,tablets_sphere_num,sphere_zero_keys_num,seed
+"Number of sphere zero keys: (8)
+Sphere 0:	Sandworm Bait	 (AdamanTiMi loc)
+Sphere 0:	Steamship Key	 (Chim.Brain loc)
+Sphere 0:	Bracelet	 (Titan loc)
+Sphere 0:	Shrine Page	 (Tyrasaurus loc)
+Sphere 0:	Canal Key	 (Abductor loc)
+Sphere 0:	Adamantite	 (Antlion loc)
+Sphere 0:	4th Tablet	 (Ifrit loc)
+Sphere 0:	Elder Branch	 (Crayclaw loc)
+Sphere 1:	2nd Tablet	 (LiquiFlame loc via Steamship Key)
+Sphere 1:	Pyramid Page	 (Sol Cannon loc via Adamantite)
+Sphere 1:	3rd Tablet	 (ArchaeAvis loc via Adamantite)
+Sphere 1:	Submarine Key	 (Guardians loc via Elder Branch)
+Sphere 1:	Anti Barrier	 (Omniscient loc via Elder Branch)
+Sphere 1:	Falls Page	 (GoGo loc via Submarine Key)
+Sphere 2:	Moogle Suit	 (Atmos loc via Submarine Key)
+Sphere 2:	Ifrit's Fire	 (Carbunkle loc via Anti Barrier, Bracelet)
+Sphere 2:	Hiryuu Call	 (Gilgamesh 4 loc via Anti Barrier, Bracelet)
+Sphere 2:	1st Tablet	 (Leviathan loc via Submarine Key, Falls Page)
+Sphere 3:	Walse Tower Key	 (Gilgamesh 3 & Enkidou loc via Hiryuu Call)
+All tablets obtained (2 spheres).
+All keys NOT obtained.
+",False,True,100,2,8,823193

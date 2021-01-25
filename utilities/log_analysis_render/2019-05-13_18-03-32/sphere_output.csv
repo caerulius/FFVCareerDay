@@ -1,0 +1,20 @@
+playthrough_log,all_keys_obtained_flag,completeable_seed_flag,sphere_num,tablets_sphere_num,sphere_zero_keys_num,seed
+"Number of sphere zero keys: (8)
+Sphere 0:	Pyramid Page	 (WingRaptor loc)
+Sphere 0:	Big Bridge Key	 (Karlabos loc)
+Sphere 0:	Canal Key	 (Siren loc)
+Sphere 0:	2nd Tablet	 (Puroboros loc)
+Sphere 0:	1st Tablet	 (Abductor loc)
+Sphere 0:	Adamantite	 (Antlion loc)
+Sphere 0:	Elder Branch	 (Shiva loc)
+Sphere 0:	Sandworm Bait	 (Crayclaw loc)
+Sphere 1:	Submarine Key	 (Sol Cannon loc via Adamantite)
+Sphere 1:	Anti Barrier	 (ArchaeAvis loc via Adamantite)
+Sphere 1:	4th Tablet	 (Atmos loc via Submarine Key)
+Sphere 1:	Moogle Suit	 (Guardians loc via Elder Branch)
+Sphere 1:	Falls Page	 (Omniscient loc via Elder Branch)
+Sphere 1:	Trench Page	 (Leviathan loc via Submarine Key, Falls Page)
+Sphere 1:	Shrine Page	 (GoGo loc via Submarine Key)
+All tablets NOT obtained.
+All keys NOT obtained.
+",False,False,100,0,8,599972

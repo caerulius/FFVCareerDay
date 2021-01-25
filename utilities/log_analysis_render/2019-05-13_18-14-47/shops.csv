@@ -1,0 +1,449 @@
+shop_name,shop_type,item,seed
+Tule Weapon,07,Black Lv.5,6074317
+Tule Weapon,07,MysticKnight,6074317
+Tule Weapon,07,White Lv.6,6074317
+Tule Weapon,07,None,6074317
+Tule Weapon,07,None,6074317
+Tule Weapon,07,None,6074317
+Tule Weapon,07,None,6074317
+Tule Weapon,07,None,6074317
+Tule Armor,01,Giant's Gloves,6074317
+Tule Armor,01,Flame Ring,6074317
+Tule Armor,01,Elf Cape,6074317
+Tule Armor,01,Epee Sword,6074317
+Tule Armor,01,Eyedrop,6074317
+Tule Armor,01,None,6074317
+Tule Armor,01,None,6074317
+Tule Armor,01,None,6074317
+Tule Inn,01,Rune Axe,6074317
+Tule Inn,01,Mythril Sword,6074317
+Tule Inn,01,Ether,6074317
+Tule Inn,01,White Robe,6074317
+Tule Inn,01,None,6074317
+Tule Inn,01,None,6074317
+Tule Inn,01,None,6074317
+Tule Inn,01,None,6074317
+Tule Magic,01,Coral Sword,6074317
+Tule Magic,01,Spear,6074317
+Tule Magic,01,Mythril Knife,6074317
+Tule Magic,01,Bone Mail,6074317
+Tule Magic,01,None,6074317
+Tule Magic,01,None,6074317
+Tule Magic,01,None,6074317
+Tule Magic,01,None,6074317
+Carwen Weapon,01,Spear,6074317
+Carwen Weapon,01,Silver Harp,6074317
+Carwen Weapon,01,Venom Rod,6074317
+Carwen Weapon,01,Diamond Armor,6074317
+Carwen Weapon,01,Eyedrop,6074317
+Carwen Weapon,01,Cabin,6074317
+Carwen Weapon,01,None,6074317
+Carwen Weapon,01,None,6074317
+Carwen Armor,01,TurtleShell,6074317
+Carwen Armor,01,Dagger,6074317
+Carwen Armor,01,Ice Bow,6074317
+Carwen Armor,01,Golden Armor,6074317
+Carwen Armor,01,Elixir,6074317
+Carwen Armor,01,LuckMallet,6074317
+Carwen Armor,01,None,6074317
+Carwen Armor,01,None,6074317
+Carwen Inn,00,Hero,6074317
+Carwen Inn,00,Flash,6074317
+Carwen Inn,00,Emission,6074317
+Carwen Inn,00,Sylph,6074317
+Carwen Inn,00,DethClaw,6074317
+Carwen Inn,00,None,6074317
+Carwen Inn,00,None,6074317
+Carwen Inn,00,None,6074317
+Carwen Magic,07,Cover,6074317
+Carwen Magic,07,Summon Lv.5,6074317
+Carwen Magic,07,Equip Armors,6074317
+Carwen Magic,07,BlueMage,6074317
+Carwen Magic,07,None,6074317
+Carwen Magic,07,None,6074317
+Carwen Magic,07,None,6074317
+Carwen Magic,07,None,6074317
+Worus Weapon,01,Silver Harp,6074317
+Worus Weapon,01,Mythril Glove,6074317
+Worus Weapon,01,Fire Bow,6074317
+Worus Weapon,01,Bizen,6074317
+Worus Weapon,01,None,6074317
+Worus Weapon,01,None,6074317
+Worus Weapon,01,None,6074317
+Worus Weapon,01,None,6074317
+Worus Armor,00,MgthyGrd,6074317
+Worus Armor,00,Slow2,6074317
+Worus Armor,00,Toad,6074317
+Worus Armor,00,Flare,6074317
+Worus Armor,00,L2 Old,6074317
+Worus Armor,00,None,6074317
+Worus Armor,00,None,6074317
+Worus Armor,00,None,6074317
+Worus Magic,00,Ice,6074317
+Worus Magic,00,Size,6074317
+Worus Magic,00,Qrter,6074317
+Worus Magic,00,Armor,6074317
+Worus Magic,00,Hammer,6074317
+Worus Magic,00,None,6074317
+Worus Magic,00,None,6074317
+Worus Magic,00,None,6074317
+Karnak Weapon 1,00,Hast2,6074317
+Karnak Weapon 1,00,Shiva,6074317
+Karnak Weapon 1,00,Bahmut,6074317
+Karnak Weapon 1,00,GuardOff,6074317
+Karnak Weapon 1,00,Drain,6074317
+Karnak Weapon 1,00,None,6074317
+Karnak Weapon 1,00,None,6074317
+Karnak Weapon 1,00,None,6074317
+Karnak Weapon 2,01,Bizen,6074317
+Karnak Weapon 2,01,Silver Bow,6074317
+Karnak Weapon 2,01,Flail,6074317
+Karnak Weapon 2,01,CopperPlt,6074317
+Karnak Weapon 2,01,Iron Helm,6074317
+Karnak Weapon 2,01,Soft,6074317
+Karnak Weapon 2,01,None,6074317
+Karnak Weapon 2,01,None,6074317
+Karnak Armor,00,Magic,6074317
+Karnak Armor,00,Missile,6074317
+Karnak Armor,00,Phenix,6074317
+Karnak Armor,00,Venom,6074317
+Karnak Armor,00,DrkShock,6074317
+Karnak Armor,00,None,6074317
+Karnak Armor,00,None,6074317
+Karnak Armor,00,None,6074317
+Common World 1 Inn,07,Observe,6074317
+Common World 1 Inn,07,Capture,6074317
+Common World 1 Inn,07,2-Handed,6074317
+Common World 1 Inn,07,Slash,6074317
+Common World 1 Inn,07,None,6074317
+Common World 1 Inn,07,None,6074317
+Common World 1 Inn,07,None,6074317
+Common World 1 Inn,07,None,6074317
+Karnak Magic 1,07,Counter,6074317
+Karnak Magic 1,07,Flirt,6074317
+Karnak Magic 1,07,Equip Axes,6074317
+Karnak Magic 1,07,White Lv.5,6074317
+Karnak Magic 1,07,None,6074317
+Karnak Magic 1,07,None,6074317
+Karnak Magic 1,07,None,6074317
+Karnak Magic 1,07,None,6074317
+Karnak Magic 2,07,SwdSlap,6074317
+Karnak Magic 2,07,BuildUp,6074317
+Karnak Magic 2,07,Dimen Lv.4,6074317
+Karnak Magic 2,07,Summon Lv.1,6074317
+Karnak Magic 2,07,None,6074317
+Karnak Magic 2,07,None,6074317
+Karnak Magic 2,07,None,6074317
+Karnak Magic 2,07,None,6074317
+Karnak Magic 3,01,RegalCut,6074317
+Karnak Magic 3,01,Tricorn Hat,6074317
+Karnak Magic 3,01,Cotton Robe,6074317
+Karnak Magic 3,01,Flame Shield,6074317
+Karnak Magic 3,01,Ice Shield,6074317
+Karnak Magic 3,01,Orialcon,6074317
+Karnak Magic 3,01,Maiden's Kiss,6074317
+Karnak Magic 3,01,Tent,6074317
+Crescent Weapon,00,Venom,6074317
+Crescent Weapon,00,Meteo,6074317
+Crescent Weapon,00,Mute,6074317
+Crescent Weapon,00,L3 Flare,6074317
+Crescent Weapon,00,None,6074317
+Crescent Weapon,00,None,6074317
+Crescent Weapon,00,None,6074317
+Crescent Weapon,00,None,6074317
+Crescent Armor,01,Ether,6074317
+Crescent Armor,01,Training Suit,6074317
+Crescent Armor,01,Mythril Armor,6074317
+Crescent Armor,01,Running Shoes,6074317
+Crescent Armor,01,LuckMallet,6074317
+Crescent Armor,01,None,6074317
+Crescent Armor,01,None,6074317
+Crescent Armor,01,None,6074317
+Istory Relic,00,Dispel,6074317
+Istory Relic,00,TinySong,6074317
+Istory Relic,00,Fire2,6074317
+Istory Relic,00,None,6074317
+Istory Relic,00,None,6074317
+Istory Relic,00,None,6074317
+Istory Relic,00,None,6074317
+Istory Relic,00,None,6074317
+Jacole Weapon,07,Smoke,6074317
+Jacole Weapon,07,White Lv.4,6074317
+Jacole Weapon,07,RedMage,6074317
+Jacole Weapon,07,Equip Harps,6074317
+Jacole Weapon,07,None,6074317
+Jacole Weapon,07,None,6074317
+Jacole Weapon,07,None,6074317
+Jacole Weapon,07,None,6074317
+Jacole Armor,00,Shell,6074317
+Jacole Armor,00,Syldra,6074317
+Jacole Armor,00,Love,6074317
+Jacole Armor,00,None,6074317
+Jacole Armor,00,None,6074317
+Jacole Armor,00,None,6074317
+Jacole Armor,00,None,6074317
+Jacole Armor,00,None,6074317
+Common World 2 Inn 1,01,Artemis Bow,6074317
+Common World 2 Inn 1,01,Potion,6074317
+Common World 2 Inn 1,01,Avis Killer,6074317
+Common World 2 Inn 1,01,DoomCut,6074317
+Common World 2 Inn 1,01,Genji Shield,6074317
+Common World 2 Inn 1,01,DiamndPlt,6074317
+Common World 2 Inn 1,01,Guard Ring,6074317
+Common World 2 Inn 1,01,Genji Armor,6074317
+Lix Guild,00,Cure2,6074317
+Lix Guild,00,Image,6074317
+Lix Guild,00,Exploder,6074317
+Lix Guild,00,AquaRake,6074317
+Lix Guild,00,Bolt3,6074317
+Lix Guild,00,None,6074317
+Lix Guild,00,None,6074317
+Lix Guild,00,None,6074317
+Lix Armor,07,Black Lv.6,6074317
+Lix Armor,07,None,6074317
+Lix Armor,07,None,6074317
+Lix Armor,07,None,6074317
+Lix Armor,07,None,6074317
+Lix Armor,07,None,6074317
+Lix Armor,07,None,6074317
+Lix Armor,07,None,6074317
+Lix Magic,00,Speed,6074317
+Lix Magic,00,None,6074317
+Lix Magic,00,None,6074317
+Lix Magic,00,None,6074317
+Lix Magic,00,None,6074317
+Lix Magic,00,None,6074317
+Lix Magic,00,None,6074317
+Lix Magic,00,None,6074317
+Rugor Weapon,00,Requiem,6074317
+Rugor Weapon,00,Crbnkl,6074317
+Rugor Weapon,00,Shoat,6074317
+Rugor Weapon,00,Aero,6074317
+Rugor Weapon,00,Chocob,6074317
+Rugor Weapon,00,None,6074317
+Rugor Weapon,00,None,6074317
+Rugor Weapon,00,None,6074317
+Rugor Armor,01,Killer Bow,6074317
+Rugor Armor,01,Bard's Surplice,6074317
+Rugor Armor,01,Slumber Sword,6074317
+Rugor Armor,01,Thunder Rod,6074317
+Rugor Armor,01,Golden Armor,6074317
+Rugor Armor,01,Air Lance,6074317
+Rugor Armor,01,Coronet,6074317
+Rugor Armor,01,Revivify,6074317
+Common World 2 Inn 2,07,Hunter,6074317
+Common World 2 Inn 2,07,Terrain,6074317
+Common World 2 Inn 2,07,Black Lv.2,6074317
+Common World 2 Inn 2,07,MgcSwrd Lv.2,6074317
+Common World 2 Inn 2,07,None,6074317
+Common World 2 Inn 2,07,None,6074317
+Common World 2 Inn 2,07,None,6074317
+Common World 2 Inn 2,07,None,6074317
+Bal/Kelb Weapon,00,Bolt,6074317
+Bal/Kelb Weapon,00,Odin,6074317
+Bal/Kelb Weapon,00,Haste,6074317
+Bal/Kelb Weapon,00,Aero 3,6074317
+Bal/Kelb Weapon,00,Ice2,6074317
+Bal/Kelb Weapon,00,None,6074317
+Bal/Kelb Weapon,00,None,6074317
+Bal/Kelb Weapon,00,None,6074317
+Bal/Kelb Armor,07,Equip Katana,6074317
+Bal/Kelb Armor,07,Caution,6074317
+Bal/Kelb Armor,07,Throw,6074317
+Bal/Kelb Armor,07,Summon Lv.3,6074317
+Bal/Kelb Armor,07,None,6074317
+Bal/Kelb Armor,07,None,6074317
+Bal/Kelb Armor,07,None,6074317
+Bal/Kelb Armor,07,None,6074317
+Kelb Weapon,01,Leather Armor,6074317
+Kelb Weapon,01,Fire Bow,6074317
+Kelb Weapon,01,Rune Axe,6074317
+Kelb Weapon,01,White Robe,6074317
+Kelb Weapon,01,Broadsword,6074317
+Kelb Weapon,01,Gungnir,6074317
+Kelb Weapon,01,AntiMagic Bow,6074317
+Kelb Weapon,01,Eyedrop,6074317
+Kelb Armor,00,MindBlst,6074317
+Kelb Armor,00,Regen,6074317
+Kelb Armor,00,Fire,6074317
+Kelb Armor,00,None,6074317
+Kelb Armor,00,None,6074317
+Kelb Armor,00,None,6074317
+Kelb Armor,00,None,6074317
+Kelb Armor,00,None,6074317
+Common World 2 Magic 1,07,Knight,6074317
+Common World 2 Magic 1,07,Sing,6074317
+Common World 2 Magic 1,07,Berserk,6074317
+Common World 2 Magic 1,07,Pray,6074317
+Common World 2 Magic 1,07,None,6074317
+Common World 2 Magic 1,07,None,6074317
+Common World 2 Magic 1,07,None,6074317
+Common World 2 Magic 1,07,None,6074317
+Common World 2 Magic 2,07,Black Lv.3,6074317
+Common World 2 Magic 2,07,TimeMage,6074317
+Common World 2 Magic 2,07,Equip Rods,6074317
+Common World 2 Magic 2,07,None,6074317
+Common World 2 Magic 2,07,None,6074317
+Common World 2 Magic 2,07,None,6074317
+Common World 2 Magic 2,07,None,6074317
+Common World 2 Magic 2,07,None,6074317
+Common World 2 Magic 3,01,Mythril Helm,6074317
+Common World 2 Magic 3,01,Crystal Armor,6074317
+Common World 2 Magic 3,01,Circlet,6074317
+Common World 2 Magic 3,01,Giant Drink,6074317
+Common World 2 Magic 3,01,Potion,6074317
+Common World 2 Magic 3,01,Maiden's Kiss,6074317
+Common World 2 Magic 3,01,Revivify,6074317
+Common World 2 Magic 3,01,Antidote,6074317
+Surgate Weapon,01,Soot,6074317
+Surgate Weapon,01,Sage's Staff,6074317
+Surgate Weapon,01,Maiden's Kiss,6074317
+Surgate Weapon,01,Rune Chime,6074317
+Surgate Weapon,01,HiPotion,6074317
+Surgate Weapon,01,Soft,6074317
+Surgate Weapon,01,Cabin,6074317
+Surgate Weapon,01,None,6074317
+Surgate Armor,07,Image,6074317
+Surgate Armor,07,Analyze,6074317
+Surgate Armor,07,MP +10%,6074317
+Surgate Armor,07,Red Lv.1,6074317
+Surgate Armor,07,None,6074317
+Surgate Armor,07,None,6074317
+Surgate Armor,07,None,6074317
+Surgate Armor,07,None,6074317
+Mua Weapon,01,Ribbon,6074317
+Mua Weapon,01,Knife,6074317
+Mua Weapon,01,Crystal Helm,6074317
+Mua Weapon,01,Holy Lance,6074317
+Mua Weapon,01,HiPotion,6074317
+Mua Weapon,01,Revivify,6074317
+Mua Weapon,01,None,6074317
+Mua Weapon,01,None,6074317
+Mua Armor,07,Equip Whips,6074317
+Mua Armor,07,Bard,6074317
+Mua Armor,07,Dimen Lv.2,6074317
+Mua Armor,07,Equip Ribbon,6074317
+Mua Armor,07,None,6074317
+Mua Armor,07,None,6074317
+Mua Armor,07,None,6074317
+Mua Armor,07,None,6074317
+Mua Magic 1,07,Steal,6074317
+Mua Magic 1,07,White Lv.3,6074317
+Mua Magic 1,07,X-Magic,6074317
+Mua Magic 1,07,Conjure,6074317
+Mua Magic 1,07,None,6074317
+Mua Magic 1,07,None,6074317
+Mua Magic 1,07,None,6074317
+Mua Magic 1,07,None,6074317
+Mua Magic 2,00,Bolt2,6074317
+Mua Magic 2,00,Antdt,6074317
+Mua Magic 2,00,Power,6074317
+Mua Magic 2,00,Psych,6074317
+Mua Magic 2,00,Doom,6074317
+Mua Magic 2,00,None,6074317
+Mua Magic 2,00,None,6074317
+Mua Magic 2,00,None,6074317
+Mua Magic 3,00,Cure,6074317
+Mua Magic 3,00,Charm,6074317
+Mua Magic 3,00,Blowfish,6074317
+Mua Magic 3,00,Titan,6074317
+Mua Magic 3,00,Quick,6074317
+Mua Magic 3,00,None,6074317
+Mua Magic 3,00,None,6074317
+Mua Magic 3,00,None,6074317
+Lix Inn,07,Medicine,6074317
+Lix Inn,07,Dimen Lv.1,6074317
+Lix Inn,07,Jump,6074317
+Lix Inn,07,X-Fight,6074317
+Lix Inn,07,None,6074317
+Lix Inn,07,None,6074317
+Lix Inn,07,None,6074317
+Lix Inn,07,None,6074317
+Dwarf Magic,01,Elixir,6074317
+Dwarf Magic,01,Coral Sword,6074317
+Dwarf Magic,01,CopperPlt,6074317
+Dwarf Magic,01,Power Staff,6074317
+Dwarf Magic,01,Power Drink,6074317
+Dwarf Magic,01,Antidote,6074317
+Dwarf Magic,01,Coronet,6074317
+Dwarf Magic,01,Phoenix Down,6074317
+Dwarf Weapon,01,Elf Cape,6074317
+Dwarf Weapon,01,Guardian,6074317
+Dwarf Weapon,01,Shuriken,6074317
+Dwarf Weapon,01,HiPotion,6074317
+Dwarf Weapon,01,Phoenix Down,6074317
+Dwarf Weapon,01,TurtleShell,6074317
+Dwarf Weapon,01,TurtleShell,6074317
+Dwarf Weapon,01,None,6074317
+Dwarf Armor,07,Mimic,6074317
+Dwarf Armor,07,Berserker,6074317
+Dwarf Armor,07,Geomancer,6074317
+Dwarf Armor,07,Thief,6074317
+Dwarf Armor,07,None,6074317
+Dwarf Armor,07,None,6074317
+Dwarf Armor,07,None,6074317
+Dwarf Armor,07,None,6074317
+Mirage Weapon,00,Break,6074317
+Mirage Weapon,00,Demi,6074317
+Mirage Weapon,00,Cure3,6074317
+Mirage Weapon,00,Fire2,6074317
+Mirage Weapon,00,Heal,6074317
+Mirage Weapon,00,None,6074317
+Mirage Weapon,00,None,6074317
+Mirage Weapon,00,None,6074317
+Mirage Guild,01,Elixir,6074317
+Mirage Guild,01,DarkMatter,6074317
+Mirage Guild,01,Guard Ring,6074317
+Mirage Guild,01,DarkHood,6074317
+Mirage Guild,01,Silk robe,6074317
+Mirage Guild,01,Tiger Mask,6074317
+Mirage Guild,01,CopperPlt,6074317
+Mirage Guild,01,Tent,6074317
+Mirage Armor,01,Coral Sword,6074317
+Mirage Armor,01,Silver Bow,6074317
+Mirage Armor,01,Air Lance,6074317
+Mirage Armor,01,Angel Ring,6074317
+Mirage Armor,01,Orialcon,6074317
+Mirage Armor,01,Antidote,6074317
+Mirage Armor,01,LuckMallet,6074317
+Mirage Armor,01,Tent,6074317
+Mirage Relic,01,Mirage Vest,6074317
+Mirage Relic,01,Strength,6074317
+Mirage Relic,01,Cursed Shield,6074317
+Mirage Relic,01,Gauntlets,6074317
+Mirage Relic,01,Mythril Staff,6074317
+Mirage Relic,01,Sage's Staff,6074317
+Mirage Relic,01,Phoenix Down,6074317
+Mirage Relic,01,Cabin,6074317
+Mirage Magic 1,01,Dragoon Lance,6074317
+Mirage Magic 1,01,Elf Cape,6074317
+Mirage Magic 1,01,Chain Whip,6074317
+Mirage Magic 1,01,DragonFang,6074317
+Mirage Magic 1,01,Water Scroll,6074317
+Mirage Magic 1,01,Defender Sword,6074317
+Mirage Magic 1,01,Ether,6074317
+Mirage Magic 1,01,Soft,6074317
+Mirage Magic 2,07,DmgFloor,6074317
+Mirage Magic 2,07,Control,6074317
+Mirage Magic 2,07,Dimen Lv.3,6074317
+Mirage Magic 2,07,Combine,6074317
+Mirage Magic 2,07,None,6074317
+Mirage Magic 2,07,None,6074317
+Mirage Magic 2,07,None,6074317
+Mirage Magic 2,07,None,6074317
+Mirage Inn 1,07,Dragoon,6074317
+Mirage Inn 1,07,Dance,6074317
+Mirage Inn 1,07,Black Lv.1,6074317
+Mirage Inn 1,07,Chemist,6074317
+Mirage Inn 1,07,None,6074317
+Mirage Inn 1,07,None,6074317
+Mirage Inn 1,07,None,6074317
+Mirage Inn 1,07,None,6074317
+Mirage Inn 2,01,Ice Bow,6074317
+Mirage Inn 2,01,Yoichi Bow,6074317
+Mirage Inn 2,01,Mythril Armor,6074317
+Mirage Inn 2,01,Fire Bow,6074317
+Mirage Inn 2,01,Mage Masher,6074317
+Mirage Inn 2,01,Potion,6074317
+Mirage Inn 2,01,None,6074317
+Mirage Inn 2,01,None,6074317

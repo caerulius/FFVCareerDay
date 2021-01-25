@@ -1,0 +1,24 @@
+playthrough_log,all_keys_obtained_flag,completeable_seed_flag,sphere_num,tablets_sphere_num,sphere_zero_keys_num,seed
+"Number of sphere zero keys: (10)
+Sphere 0:	Trench Page	 (WingRaptor loc)
+Sphere 0:	Anti Barrier	 (Karlabos loc)
+Sphere 0:	Pyramid Page	 (Magisa & Forza loc)
+Sphere 0:	Falls Page	 (Titan loc)
+Sphere 0:	4th Tablet	 (Tyrasaurus loc)
+Sphere 0:	Ifrit's Fire	 (Abductor loc)
+Sphere 0:	Hiryuu Call	 (HiryuuPlant loc)
+Sphere 0:	Moogle Suit	 (Merugene loc)
+Sphere 0:	Steamship Key	 (Bahamut loc)
+Sphere 0:	Submarine Key	 (Shiva loc)
+Sphere 1:	Adamantite	 (Byblos loc via Ifrit's Fire)
+Sphere 1:	Bracelet	 (LiquiFlame loc via Steamship Key)
+Sphere 1:	3rd Tablet	 (Sergeant & DeathClaw loc via Steamship Key)
+Sphere 1:	Big Bridge Key	 (Sol Cannon loc via Adamantite)
+Sphere 1:	Shrine Page	 (Gilgamesh 1 loc via Anti Barrier)
+Sphere 1:	Canal Key	 (Gilgamesh 2 loc via Big Bridge Key)
+Sphere 1:	Sandworm Bait	 (Atmos loc via Submarine Key)
+Sphere 1:	Walse Tower Key	 (Leviathan loc via Submarine Key, Falls Page)
+Sphere 2:	2nd Tablet	 (Galura loc via Walse Tower Key)
+All tablets NOT obtained.
+All keys NOT obtained.
+",False,False,100,0,10,9455428

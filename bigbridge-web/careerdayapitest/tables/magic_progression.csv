@@ -20,7 +20,7 @@ index,byte1,byte2,byte3,byte4,name
 12,37,3D,40,FF,Slow/Stop/Slow2 Time Magic
 13,38,3B,41,47,Regen/Float/Reset/Xzone Time Magic
 14,39,3C,42,44,Void/Demi/Qrter/Old Time Magic
-15,3A,3E,43,46,Haste/Exit/Hast2/Quick Time Magic
+15,3E,43,46,FF,Haste/Hast2/Quick Time Magic
 16,3F,45,FF,FF,Comet/Meteo Time Magic
 17,48,4E,4F,53,Chocob/Titan/Golem/Odin Summon Magic
 18,49,51,54,52,Sylph/Crbnkl/Phenix/Syldra Summon Magic

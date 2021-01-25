@@ -535,3 +535,34 @@ db $FB, $9B
 org $f05634
 db $FB, $9B
 
+
+
+
+; change excalibur fake to excalipoor
+org $E76100
+db $64, $91, $7C, $7A, $94, $89, $88, $8B
+org $D116BD
+db $64, $91, $7C, $7A, $94, $89, $88, $8B
+
+
+
+;;; seed hash system
+; change byte for when to start hash string on new game
+org $C3B577
+db $09
+
+; set new text string to E73400
+org $C0FA3D
+db $00, $34
+
+; initialize text for non buggy title screen if hash isnt made
+org $E73400
+db $00
+
+; put hash on butz creation 
+org $C0FA23
+db $00, $34, $10, $34
+
+
+
+

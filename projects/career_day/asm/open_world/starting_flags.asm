@@ -429,7 +429,7 @@ db $CA, $77, $00            ; set address 000A62 bit ON 80
 
 ; PYRAMID
 ; allows getting the tablet...?
-; db $CA, $08, $00            ; set address 000A55 bit ON 01
+db $CA, $08, $00            ; set address 000A55 bit ON 01
 db $A5, $F3                     ;Turn off bit 08 at address 0x7e0a52
 
 
@@ -441,7 +441,7 @@ db $A2, $5C                     ;Turn on bit 10 at address 0x7e0a1f (this is for
 
 ; MELUSINE 
 db $A4, $F3                     ;Turn on bit 08 at address 0x7e0a52
-db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
+; db $CB, $08, $00                ;Turn off bit 01 at address  0x7e0a55
 ; db $A2, $83                     ;Turn on bit 08 at address 0x7e0a24 (THIS IS TABLET 1 FOR KUZAR, NOT KEY ITEM, ACTUAL TABLET)
 
 ; SECOND TABLET → FORK TOWER

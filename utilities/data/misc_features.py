@@ -32,7 +32,6 @@ def randomize_default_abilities(RE=random):
                     'Flirt':'29',
                     'Tame':'1B',   
                     'Item':'02',
-                    'Defend':'04',
                     'Fight':'05',
                     'Kick':'07',
                     'Steal':'0B',

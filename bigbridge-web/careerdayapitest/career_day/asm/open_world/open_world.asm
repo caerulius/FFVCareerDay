@@ -528,10 +528,45 @@ org $CE12AB
 db $01
 
 
-; fix merugune spot's event flag for clearing the fight
-org $f0562D
-db $FB, $9B
+; THIS was once used for Merugene, but now that the fight has moved entirely, no longer necessary
+; ; fix merugune spot's event flag for clearing the fight
+; org $f0562D
+; db $FB, $9B
 
-org $f05634
-db $FB, $9B
+; org $f05634
+; db $FB, $9B
+
+; INSTEAD, deleting entirely from world map checks
+; simply overwrite the entry in the table with another duplicate 
+org $CE2890
+db $CE, $C8, $FC, $01, $CE, $C8, $FC, $01
+
+
+; change excalibur fake to excalipoor
+org $E76100
+db $64, $91, $7C, $7A, $94, $89, $88, $8B
+org $D116BD
+db $64, $91, $7C, $7A, $94, $89, $88, $8B
+
+
+
+;;; seed hash system
+; change byte for when to start hash string on new game
+org $C3B577
+db $09
+
+; set new text string to E73400
+org $C0FA3D
+db $00, $34
+
+; initialize text for non buggy title screen if hash isnt made
+org $E73400
+db $00
+
+; put hash on butz creation 
+org $C0FA23
+db $00, $34, $10, $34
+
+
+
 

@@ -1,0 +1,928 @@
+check,reward,mib,reward_value,seed
+Wind Crystal Knight,Gungnir,,4050.0,9678878
+Wind Crystal BlueMage,Bard Job Crystal,,0.0,9678878
+Wind Crystal BlackMage,Mythril Hammer,,525.0,9678878
+Wind Crystal WhiteMage,Killer Bow,,2500.0,9678878
+Wind Crystal Monk,Silver Plate,,300.0,9678878
+Wind Crystal Thief,HP +X%,,0.0,9678878
+Fire Crystal Mediator,Partisan,,5100.0,9678878
+Fire Crystal Geomancer,Air Blade,,50.0,9678878
+Fire Crystal Ninja,Comet->Meteo,,0.0,9678878
+Black Choco Crystals Bard,Coral Sword,,1400.0,9678878
+Black Choco Crystals Hunter,Golem,,0.0,9678878
+Earth Crystal Samurai,Thornlet,,10000.0,9678878
+Earth Crystal Dragoon,Remora->Shoat->Levia,,0.0,9678878
+Earth Crystal Chemist,Rod,,100.0,9678878
+Earth Crystal Dancer,Healing Staff,,450.0,9678878
+Leviathan Esper Levia,GbnPnch->Emision->Missle->Blwfsh,,0.0,9678878
+Titan Titan,L4Qrter->L3Flare->L2Old->L5Doom,,0.0,9678878
+Carbuncle Crbnkl,BlackMage Job Crystal,,0.0,9678878
+Syldra Syldra,Kotetsu,,5900.0,9678878
+Odin Odin,FrogSong->TinySong->MoonFlut,,0.0,9678878
+Phoenix Phenix,Bronze Helm,,125.0,9678878
+Bahamut Bahmut,Fire Sword Magic Progressive,,0.0,9678878
+Life (or Strength) Song from Crescent Town bard Vitality,DarkHood,,3250.0,9678878
+Temptation Song at Lix Charm,Drink,,0.0,9678878
+Love Song at Istory Love,Iron Armor,,250.0,9678878
+Requiem Song at Kelb Requiem,Dimen Ability Progressive,,0.0,9678878
+Speed Song at Surgate Speed,Antdt->Image->Heal,,0.0,9678878
+Magic Song at Ancient Library Magic,Glasses,,125.0,9678878
+Power Song from Crescent Town Power,Bard's Surplice,,500.0,9678878
+Hero Song from Crescent Town Hero,Mimic Job Crystal,,0.0,9678878
+"Fork Tower, two Magics Holy",Genji Gloves,,7500.0,9678878
+"Fork Tower, two Magics Flare",Equip Spears,,0.0,9678878
+Meteo Meteo,Venom->Drain->Break,,0.0,9678878
+"5 potions in Wind Shrine, bottom left guy Potion",Fire Black Magic Progressive,,0.0,9678878
+"8 potions, Pirate after Torna Canal Key acquired Potion",Chicken Knife,,12500.0,9678878
+Chancellor at Tycoon Healing Staff,Healing Staff,,450.0,9678878
+Magisa & Forza Mythril Helm,Drain Sword,,8000.0,9678878
+CornaJar at Kelb CornaJar,Slumber Sword,,2800.0,9678878
+Ribbon from girl in Rugor Ribbon,DarkSuit,,4500.0,9678878
+Mirage Vest from Chocobo Tour/Mirage Village Mirage Vest,Dancing Dagger,,2900.0,9678878
+12 Kuzar Events Assassin,Guard Ring,,15000.0,9678878
+12 Kuzar Events Apollo's Harp,Counter,,0.0,9678878
+12 Kuzar Events Excalibur,Silver Bow,,750.0,9678878
+12 Kuzar Events Flame Whip,Air Blade,,50.0,9678878
+12 Kuzar Events Earth Bell,Shiva->Ramuh->Ifrit->Bahmut,,0.0,9678878
+12 Kuzar Events Holy Lance,Epee Sword,,4200.0,9678878
+12 Kuzar Events Masamune,Black Ability Progressive,,0.0,9678878
+12 Kuzar Events Wizard Rod,Samurai Job Crystal,,0.0,9678878
+12 Kuzar Events Rune Axe,Ice Black Magic Progressive,,0.0,9678878
+12 Kuzar Events Sage's Staff,CornaJar,,5000.0,9678878
+12 Kuzar Events Sasuke,Venom->Drain->Break,,0.0,9678878
+12 Kuzar Events Yoichi Bow,Assassin,,10000.0,9678878
+Shiva Shiva,Aegis Shield,,2250.0,9678878
+Ifrit Ifrit,Diamond Armlet,,2000.0,9678878
+Water Crystal Samurai,Running Shoes,,25000.0,9678878
+Water Crystal Berserker,MgcSword Ability Progressive,,0.0,9678878
+Water Crystal MysticKnight,Hunter Job Crystal,,0.0,9678878
+Water Crystal TimeMage,Thunder Rod,,375.0,9678878
+Water Crystal Summoner,Ice Black Magic Progressive,,0.0,9678878
+Brave Blade Brave Blade,Medicine,,0.0,9678878
+Chicken Knife Chicken Knife,Equip Katana,,0.0,9678878
+Tycoon Castle Cabin Cabin,Leather Cap,,25.0,9678878
+Walse Tower Chest GoGo,GrnBeret,,1250.0,9678878
+Pyramid Top Pyramid Tablet,Ice Black Magic Progressive,,0.0,9678878
+Toad Event Toad,Observe,,0.0,9678878
+Aegis Shield Chest Aegis Shield,Venom Axe,,4800.0,9678878
+Lone Wolf Barrel Cabin,Cabin,,300.0,9678878
+Lone Wolf Chest Thunder Whip,Thunder Whip,,1100.0,9678878
+Moat Item Epee,Mirage Vest,,5000.0,9678878
+Shop Backdoor Lamia Harp,Void->Demi->Qrter->Old,,0.0,9678878
+Top of the Falls Magic Lamp,Giant's Axe,,20000.0,9678878
+Wind Shrine Chest Broadsword,Cabin,,300.0,9678878
+Beginner's House Chest Ether,Control,,0.0,9678878
+Beginner's House Chest 100,Flame Whip,,10000.0,9678878
+Beginner's House Chest Potion,8000 gil,,8000.0,9678878
+Beginner's House Chest Phoenix Down,Crystal Shield,,4500.0,9678878
+Beginner's House Chest Tent,Sing,,0.0,9678878
+Beginner's House Chest Leather Shoes,Bone Mail,,15000.0,9678878
+Pirate's Cave Chest Leather Cap,Scan->Charm->Holy,,0.0,9678878
+Pirate's Cave Chest Tent,Combine,,0.0,9678878
+Pirate's Cave Chest Ether,Fire Black Magic Progressive,,0.0,9678878
+Pirate's Cave Chest 300,1000 gil,,1000.0,9678878
+Wind Shrine Chest Tent,BlueMage Job Crystal,,0.0,9678878
+Wind Shrine Chest Leather Cap,Slow->Stop->Slow2,,0.0,9678878
+Wind Shrine Chest Staff,Slash,,0.0,9678878
+Tule Barrel 150,Rune Chime,MIB,10000.0,9678878
+Tule Box Leather Shoes,5000 gil,,5000.0,9678878
+Tule Barrel Potion,Cotton Robe,,150.0,9678878
+Tule Box Tent,Silver Harp,,400.0,9678878
+Tule Bush Phoenix Down,Angel Gwn,,1500.0,9678878
+Ship Graveyard Chest Flail,Flame Ring,,25000.0,9678878
+Ship Graveyard Chest Phoenix Down,Equip Axes,,0.0,9678878
+Ship Graveyard Chest Tent,100 gil,,100.0,9678878
+Ship Graveyard Box 990,Knight Job Crystal,,0.0,9678878
+Ship Graveyard Chest Potion,Shiva->Ramuh->Ifrit->Bahmut,,0.0,9678878
+Ship Graveyard Chest Antidote,100 gil,,100.0,9678878
+Carwen Barrel Antidote,????->Fusion->Exploder->DrkShock,,0.0,9678878
+Carwen Box Ice Rod,20000 gil,,20000.0,9678878
+Carwen Pot 1000,Ice Sword Magic Progressive,,0.0,9678878
+North Mountain Chest Soft,Venom->Drain->Break Sword,,0.0,9678878
+North Mountain Chest Phoenix Down,Trident,,1350.0,9678878
+Walse Town Pot Glasses,Mage Masher,,450.0,9678878
+Tycoon Castle Pot Hi-Potion,Sleep->Bio->Flare Sword,,0.0,9678878
+Tycoon Castle Pot Ether,Regen->Float->Reset->Xzone,,0.0,9678878
+Tycoon Castle Barrel Elixir,Tame,,0.0,9678878
+Tycoon Castle Barrel Phoenix Down,150 gil,,150.0,9678878
+Tycoon Castle Barrel Cabin,Caution,,0.0,9678878
+Tycoon Castle Pot Elixir,Diamond Shield,,3000.0,9678878
+Tycoon Castle Pot Phoenix Down,9000 gil,,9000.0,9678878
+Tycoon Castle Pot Maiden's Kiss,Mythril Armor,,350.0,9678878
+Tycoon Castle Chest Shuriken,Shuriken,,1250.0,9678878
+Tycoon Castle Chest Giyaman,Armor->Shell->Wall->Dispel,,0.0,9678878
+Tycoon Castle Chest Katana,Red1->Red2->Red3->X-Magic,,0.0,9678878
+Walse Castle Chest Elf Cape,1000 gil,,1000.0,9678878
+Walse Castle Pot 1000,Crystal Armor,,6000.0,9678878
+Walse Castle Pot Drag,CopperPlt,,175.0,9678878
+Walse Castle Box 490,Vampire->MindBlst->WhiteWind,,0.0,9678878
+Walse Castle Barrel Tent,Mythril Armor,,350.0,9678878
+Walse Castle Barrel Phoenix Down,Geomancer Job Crystal,,0.0,9678878
+Walse Tower Chest Silk robe,Silk robe,,250.0,9678878
+Walse Tower Chest Maiden's Kiss,RuneEdge,,9500.0,9678878
+Walse Tower Chest Silver Armlet,FrogSong->TinySong->MoonFlut,,0.0,9678878
+Walse Tower Chest Ether,MgcSword Ability Progressive,,0.0,9678878
+Tycoon Meteor Chest Phoenix Down,Ice Sword Magic Progressive,,0.0,9678878
+Karnak Castle Chest Gungnir,Dream Harp,MIB,800.0,9678878
+Karnak Castle Chest Thunder Scroll,DiamndPlt,MIB,3000.0,9678878
+Karnak Castle Chest 2000,Broadsword,MIB,140.0,9678878
+Karnak Castle Chest Elixir,Crystal Armor,MIB,6000.0,9678878
+Karnak Castle Chest Ribbon,Defender Sword,MIB,5500.0,9678878
+Karnak Castle Chest Shuriken,Genji Armor,MIB,15000.0,9678878
+Karnak Castle Chest Elf Cape,DblLance,MIB,5400.0,9678878
+Karnak Castle Chest Guardian,DarkSuit,MIB,4500.0,9678878
+Karnak Town Barrel Fire Rod,LuckMallet,,25.0,9678878
+Steamship Chest Cabin,12000 gil,,12000.0,9678878
+Steamship Chest Phoenix Down,2500 gil,,2500.0,9678878
+Steamship Chest Elixir,150 gil,,150.0,9678878
+Steamship Chest GrnBeret,L4Qrter->L3Flare->L2Old->L5Doom,,0.0,9678878
+Steamship Chest Thief's Glove,10000 gil,,10000.0,9678878
+Ancient Library Chest Ether,Summon Ability Progressive,,0.0,9678878
+Ancient Library Chest Phoenix Down,Life->Life2,,0.0,9678878
+Ancient Library Chest Stealth Suit,Fire Sword Magic Progressive,,0.0,9678878
+Jacole Cave Chest Shuriken,2000 gil,,2000.0,9678878
+Jacole Cave Chest Tent,5000 gil,,5000.0,9678878
+Ruined City Chest Shuriken,Regen->Float->Reset->Xzone,,0.0,9678878
+Ruined City Chest Size,Strength,,2250.0,9678878
+Flying Lonka Ruins Chest Golden Armor,Yoichi Bow,,10000.0,9678878
+Flying Lonka Ruins Chest Elixir,Ice Sword Magic Progressive,,0.0,9678878
+Flying Lonka Ruins Chest Phoenix Down,Black Ability Progressive,,0.0,9678878
+Flying Lonka Ruins Chest Golden Shield,Toad->Bio->Flare,,0.0,9678878
+Steamship Chest Mythril Glove,Crystal Armor,,6000.0,9678878
+Steamship Chest Full Moon,Ancient Sword,,2100.0,9678878
+Flying Lonka Ruins Chest Hi-Potion,Flirt,,0.0,9678878
+Flying Lonka Ruins Chest 5000,Rainbow Dress,,2900.0,9678878
+Flying Lonka Ruins Chest Shuriken,Brave Blade,,15000.0,9678878
+Flying Lonka Ruins Chest Ancient Sword,2500 gil,,2500.0,9678878
+Flying Lonka Ruins Chest Full Moon,Circlet,,2250.0,9678878
+Flying Lonka Ruins Chest Power Wrist,Evade,,0.0,9678878
+Flying Lonka Ruins Chest Ether,Terrain,,0.0,9678878
+Flying Lonka Ruins Chest Cabin,300 gil,,300.0,9678878
+Exdeath's Castle Chest Ether,Regen->Float->Reset->Xzone,,0.0,9678878
+Exdeath's Castle Chest Diamond Shield,2000 gil,,2000.0,9678878
+Exdeath's Castle Chest Ice Shield,4900 gil,,4900.0,9678878
+Exdeath's Castle Chest Elixir,5000 gil,,5000.0,9678878
+Exdeath's Castle Chest Gale Bow,Venom->Drain->Break,,0.0,9678878
+Exdeath's Castle Chest IceBrand,Elixir,,25000.0,9678878
+Exdeath's Castle Chest Kotetsu,Black Ability Progressive,,0.0,9678878
+Exdeath's Castle Chest 9900,Blue,,0.0,9678878
+Exdeath's Castle Chest 8000,DarkSuit,,4500.0,9678878
+Exdeath's Castle Chest DblLance,Mediator Job Crystal,,0.0,9678878
+Exdeath's Castle Chest Partisan,Coral Ring,,25000.0,9678878
+Exdeath's Castle Chest Pinwheel,MysticKnight Job Crystal,,0.0,9678878
+Moogle Cave Chest 4400,????->Fusion->Exploder->DrkShock,,0.0,9678878
+Moogle Cave Chest Phoenix Down,Ribbon,,17500.0,9678878
+Moogle Village Chest Cabin,Trident,,1350.0,9678878
+Moogle Village Chest Dancing Dagger,9500 gil,,9500.0,9678878
+Moogle Village Chest 1,????->Fusion->Exploder->DrkShock,,0.0,9678878
+Moogle Village Chest 10000,Tinkerbell,,750.0,9678878
+Moogle Village Chest Phoenix Down,9900 gil,,9900.0,9678878
+Moogle Village Chest Ether,Jump,,0.0,9678878
+Moogle Village Chest Elf Cape,Golden Armor,,2000.0,9678878
+Bal Castle Chest Angel Gwn,MgcSword Ability Progressive,,0.0,9678878
+Bal Castle Chest Hero Drink,Hero Drink,,55.0,9678878
+Bal Castle Chest Exit,Staff of Light,,1350.0,9678878
+Hiryuu Valley Skull Bone Mail,Broadsword,,140.0,9678878
+Hiryuu Valley Chest 5000,Masamune,,10000.0,9678878
+Hiryuu Valley Chest Cabin,Ragnarok,,15000.0,9678878
+Hiryuu Valley Chest 7000,Coral Sword,,1400.0,9678878
+Hiryuu Valley Chest Coronet,Cursed Ring,,2500.0,9678878
+Hiryuu Valley Chest Air Blade,8000 gil,,8000.0,9678878
+Hiryuu Valley Chest Phoenix Down,490 gil,,490.0,9678878
+Surgate Castle Chest 5000,10000 gil,,10000.0,9678878
+Surgate Castle Chest Float,9000 gil,,9000.0,9678878
+Barrier Tower Chest Drain Sword,IceBrand,,5500.0,9678878
+Barrier Tower Chest 9000,Katana,MIB,2900.0,9678878
+Barrier Tower Chest 18000,Flame Scroll,,100.0,9678878
+Barrier Tower Chest Gold Hairpin,Elixir,MIB,25000.0,9678878
+Mua Town Barrel Guardian,Thor Hammer,,15000.0,9678878
+Mua Forest Chest 2500,Preemptive,,0.0,9678878
+Mua Forest Chest Ether,Ether,,750.0,9678878
+Mua Forest Chest 4900,Vampire->MindBlst->WhiteWind,,0.0,9678878
+Mua Forest Chest Phoenix Down,White Robe,,4000.0,9678878
+Mua Forest Chest 9500,2000 gil,,2000.0,9678878
+Mua Forest Chest Soot,Sylph->Crbnkl->Phenix->Syldra,,0.0,9678878
+Mua Forest Chest Flametongue,9000 gil,,9000.0,9678878
+Mua Forest Chest Cabin,Earth Hammer,,6400.0,9678878
+Mua Forest Chest Giant Drink,Tempest,,15000.0,9678878
+Mua Forest Chest Elixir,Elixir,,25000.0,9678878
+Mua Forest Chest Morning Star,1000 gil,,1000.0,9678878
+Solitary Island Chest Ether,Diamond Armor,MIB,4000.0,9678878
+Solitary Island Chest DragonFang,5000 gil,,5000.0,9678878
+Pyramid Chest Elixir,Armor->Shell->Wall->Dispel,,0.0,9678878
+Pyramid Chest Black Robe,Full Moon,,550.0,9678878
+Pyramid Chest Thornlet,Mage Masher,,450.0,9678878
+Pyramid Chest DarkMatter,Whip,MIB,550.0,9678878
+Pyramid Chest Crystal Armor,IceBrand,MIB,5500.0,9678878
+Pyramid Chest Cursed Ring,Thunder Bow,,1250.0,9678878
+Pyramid Chest Ice Shield,Mythril Armor,MIB,350.0,9678878
+Pyramid Chest Flame Shield,Enhancer,MIB,10000.0,9678878
+Pyramid Chest White Robe,Flame Ring,,25000.0,9678878
+Pyramid Chest DarkSuit,Thunder Scroll,MIB,100.0,9678878
+Pyramid Chest 9000,SwdSlap,,0.0,9678878
+Pyramid Chest 8000,Stealth Suit,MIB,1500.0,9678878
+Pyramid Chest Earth Hammer,War Hammer,,3200.0,9678878
+Pyramid Chest 10000,Air Blade,MIB,50.0,9678878
+Pyramid Chest Cabin,Cursed Shield,MIB,5000.0,9678878
+Pyramid Chest 12000,DarkSuit,MIB,4500.0,9678878
+Pyramid Chest Guard Ring,Void->Demi->Qrter->Old,,0.0,9678878
+Pyramid Chest Ribbon,Staff,,100.0,9678878
+Pyramid Chest Gold Hairpin,Bandana,MIB,1750.0,9678878
+Solitary Island Chest 12000,Katana,,2900.0,9678878
+Solitary Island Chest Hi-Potion,Crystal Armor,,6000.0,9678878
+Solitary Island Chest Protect Drink,Summoner Job Crystal,,0.0,9678878
+Solitary Island Chest BeastKiller,Killer Bow,,2500.0,9678878
+Solitary Island Chest RisingSun,Rod,,100.0,9678878
+Solitary Island Chest Guard Ring,Staff of Light,,1350.0,9678878
+Solitary Island Chest Crystal Helm,Dimen Ability Progressive,,0.0,9678878
+Solitary Island Chest 9000,Remora->Shoat->Levia,,0.0,9678878
+Solitary Island Chest Elixir,Leather Armor,MIB,40.0,9678878
+Solitary Island Chest DarkMatter,Ramuh,,0.0,9678878
+Solitary Island Chest Circlet,Dbl Grip,,0.0,9678878
+Fork Tower L. Chest Ether,18000 gil,,18000.0,9678878
+Fork Tower L. Chest Wonder Wand,12000 gil,,12000.0,9678878
+Fork Tower R. Chest Hi-Potion,Throw,,0.0,9678878
+Fork Tower R. Chest Defender Sword,CopperPlt,,175.0,9678878
+Great Trench Chest Water Scroll,Bard's Surplice,,500.0,9678878
+Great Trench Chest Flame Ring,990 gil,,990.0,9678878
+Great Trench Chest DragonFang,Sleep->Bio->Flare Sword,,0.0,9678878
+Great Trench Chest Ether,Mantra,,0.0,9678878
+Great Trench Chest Phoenix Down,25000 gil,,25000.0,9678878
+Great Trench Chest Kaiser Knuckles,Mythril Armor,,350.0,9678878
+Istory Falls Chest Ether,15000 gil,,15000.0,9678878
+Istory Falls Chest TurtleShell,Revivify,,75.0,9678878
+Istory Falls Chest Air Lance,Slow->Stop->Slow2,,0.0,9678878
+Istory Falls Chest Giant Drink,Haste->Exit->Hast2->Quick,,0.0,9678878
+Istory Falls Chest RuneEdge,Angel Ring,,25000.0,9678878
+Istory Falls Chest Guard Ring,Mythril Shield,,295.0,9678878
+Istory Falls Chest Wall Ring,Tricorn Hat,,750.0,9678878
+Istory Falls Chest Phoenix Down,Power->Vitality Song,,0.0,9678878
+Istory Falls Chest Enhancer,L4Qrter->L3Flare->L2Old->L5Doom,,0.0,9678878
+Istory Falls Chest 12000,Smoke,,0.0,9678878
+Istory Falls Chest Artemis Bow,Artemis Bow,,15000.0,9678878
+Istory Falls Chest Pinwheel,Pinwheel,,12500.0,9678878
+Istory Falls Chest Aegis Shield,Analyze,,0.0,9678878
+Istory Falls Chest Giant's Axe,Silver Harp,,400.0,9678878
+Phoenix Tower Pot 5000,Leather Cap,,25.0,9678878
+Phoenix Tower Pot Phoenix Down,Cursed Shield,MIB,5000.0,9678878
+Phoenix Tower Pot 10000,Potion,,20.0,9678878
+Phoenix Tower Pot 15000,Maiden's Kiss,MIB,30.0,9678878
+Phoenix Tower Pot 20000,Whip,MIB,550.0,9678878
+Phoenix Tower Pot Avis Killer,Mythril Staff,,250.0,9678878
+Phoenix Tower Pot 25000,Ether,MIB,750.0,9678878
+Mirage Village Barrel Thief Knife,12000 gil,,12000.0,9678878
+Rift (Ruins) Chest Ether,Elixir,,25000.0,9678878
+Rift (Ruins) Chest Cabin,Image,,0.0,9678878
+Rift (Ruins) Chest Elixir,Murasume,,10000.0,9678878
+Rift (Ruins) Chest DarkMatter,Knife,,75.0,9678878
+Rift (Ruins) Chest Drain Sword,4400 gil,,4400.0,9678878
+Rift (Forest) Chest DragonFang,4400 gil,,4400.0,9678878
+Rift (Forest) Chest Ribbon,Ice Shield,,20000.0,9678878
+Rift (Forest) Chest Enhancer,Mimic,,0.0,9678878
+Rift (Forest) Chest Lillith Rod,2000 gil,,2000.0,9678878
+Rift (Cave) Chest Angel Ring,10000 gil,,10000.0,9678878
+Rift (Cave) Chest Coral Ring,Tiger Mask,,2500.0,9678878
+Rift (Castle) Chest Thor Hammer,Ninja Job Crystal,,0.0,9678878
+Rift (Castle) Chest Running Shoes,15000 gil,,15000.0,9678878
+Rift (Castle) Chest Red Shoes,Flash->Time Slip->DethClaw,,0.0,9678878
+Rift (Castle) Chest Rainbow Dress,9000 gil,,9000.0,9678878
+Rift (Castle) Chest ManEater,4900 gil,,4900.0,9678878
+The Void Chest Pinwheel,Equip Rods,,0.0,9678878
+The Void Chest Elixir,Aero Blue Magic Progressive,,0.0,9678878
+The Void Chest Ragnarok,Holy Lance,MIB,10000.0,9678878
+Karlabos New,Running Shoes,,25000.0,9678878
+Siren New,AntiMagic Bow,,5000.0,9678878
+Magisa & Forza New,Angel Ring,,25000.0,9678878
+Galura New,Crystal Armor,,6000.0,9678878
+Sergeant & DeathClaw New,Enhancer,,10000.0,9678878
+Chim.Brain New,Running Shoes,,25000.0,9678878
+Puroboros New,DoomCut,,2950.0,9678878
+Gilgamesh 1 New,Earth Hammer,,6400.0,9678878
+Tyrasaurus New,Ribbon,,17500.0,9678878
+Abductor New,Running Shoes,,25000.0,9678878
+HiryuuPlant New,Wizard Rod,,10000.0,9678878
+Gilgamesh 3 & Enkidou New,Assassin,,10000.0,9678878
+Carbunkle New,Sasuke,,10000.0,9678878
+Antlion New,Excailbur,,5000.0,9678878
+Merugene New,Sasuke,,10000.0,9678878
+Omniscient New,Dragon's Whisker,,2200.0,9678878
+Minotauros New,DarkSuit,,4500.0,9678878
+GoGo New,25000 gil,,25000.0,9678878
+Wind Crystal Knight,Image,,0.0,5846407
+Wind Crystal BlueMage,Speed->Requiem Song,,0.0,5846407
+Wind Crystal BlackMage,Forged,,7400.0,5846407
+Wind Crystal WhiteMage,Silver Armlet,,250.0,5846407
+Wind Crystal Monk,Remora->Shoat->Levia,,0.0,5846407
+Wind Crystal Thief,Golden Helm,,1750.0,5846407
+Fire Crystal Mediator,????->Fusion->Exploder->DrkShock,,0.0,5846407
+Fire Crystal Geomancer,Bard's Surplice,,500.0,5846407
+Fire Crystal Ninja,Charm->Hero@Song,,0.0,5846407
+Black Choco Crystals Bard,Comet->Meteo,,0.0,5846407
+Black Choco Crystals Hunter,Healing Staff,,450.0,5846407
+Earth Crystal Samurai,Ice Shield,,20000.0,5846407
+Earth Crystal Dragoon,Slow->Stop->Slow2,,0.0,5846407
+Earth Crystal Chemist,Comet->Meteo,,0.0,5846407
+Earth Crystal Dancer,Mythril Staff,,250.0,5846407
+Leviathan Esper Levia,Genji Armor,,15000.0,5846407
+Titan Titan,DarkHood,,3250.0,5846407
+Carbuncle Crbnkl,War Hammer,,3200.0,5846407
+Syldra Syldra,Summon Ability Progressive,,0.0,5846407
+Odin Odin,Orialcon,,1700.0,5846407
+Phoenix Phenix,Fire Black Magic Progressive,,0.0,5846407
+Bahamut Bahmut,Ice Black Magic Progressive,,0.0,5846407
+Life (or Strength) Song from Crescent Town bard Vitality,ManEater,,12500.0,5846407
+Temptation Song at Lix Charm,Monk Job Crystal,,0.0,5846407
+Love Song at Istory Love,Sylph->Crbnkl->Phenix->Syldra,,0.0,5846407
+Requiem Song at Kelb Requiem,Dragon's Whisker,,2200.0,5846407
+Speed Song at Surgate Speed,Venom->Drain->Break Sword,,0.0,5846407
+Magic Song at Ancient Library Magic,Equip Harps,,0.0,5846407
+Power Song from Crescent Town Power,Armor->Shell->Wall->Dispel,,0.0,5846407
+Hero Song from Crescent Town Hero,Power->Vitality Song,,0.0,5846407
+"Fork Tower, two Magics Holy",Armor->Shell->Wall->Dispel,,0.0,5846407
+"Fork Tower, two Magics Flare",Flash->Time Slip->DethClaw,,0.0,5846407
+Meteo Meteo,Leather Armor,,40.0,5846407
+"5 potions in Wind Shrine, bottom left guy Potion",Wind Spear,,2700.0,5846407
+"8 potions, Pirate after Torna Canal Key acquired Potion",Rune Chime,,10000.0,5846407
+Chancellor at Tycoon Healing Staff,Healing Staff,,450.0,5846407
+Magisa & Forza Mythril Helm,Agility,,,5846407
+CornaJar at Kelb CornaJar,Plumed Hat,,175.0,5846407
+Ribbon from girl in Rugor Ribbon,Black Ability Progressive,,0.0,5846407
+Mirage Vest from Chocobo Tour/Mirage Village Mirage Vest,Brawl,,0.0,5846407
+12 Kuzar Events Assassin,Bandana,,1750.0,5846407
+12 Kuzar Events Apollo's Harp,Mute->Psych->Holy Sword,,0.0,5846407
+12 Kuzar Events Excalibur,Vampire->MindBlst->WhiteWind,,0.0,5846407
+12 Kuzar Events Flame Whip,Thornlet,,10000.0,5846407
+12 Kuzar Events Earth Bell,RisingSun,,5500.0,5846407
+12 Kuzar Events Holy Lance,Toad->Bio->Flare,,0.0,5846407
+12 Kuzar Events Masamune,Dimen Ability Progressive,,0.0,5846407
+12 Kuzar Events Wizard Rod,Pinwheel,,12500.0,5846407
+12 Kuzar Events Rune Axe,Crystal Shield,,4500.0,5846407
+12 Kuzar Events Sage's Staff,Giant's Axe,,20000.0,5846407
+12 Kuzar Events Sasuke,DrgnCrest,,0.0,5846407
+12 Kuzar Events Yoichi Bow,Knife,,75.0,5846407
+Shiva Shiva,Flame Ring,,25000.0,5846407
+Ifrit Ifrit,Shiva->Ramuh->Ifrit->Bahmut,,0.0,5846407
+Water Crystal Samurai,Venom->Drain->Break,,0.0,5846407
+Water Crystal Berserker,Lamia's Tiara,,1250.0,5846407
+Water Crystal MysticKnight,Ogre Killer,,1600.0,5846407
+Water Crystal TimeMage,Black Ability Progressive,,0.0,5846407
+Water Crystal Summoner,L4Qrter->L3Flare->L2Old->L5Doom,,0.0,5846407
+Brave Blade Brave Blade,Brave Blade,,15000.0,5846407
+Chicken Knife Chicken Knife,Chicken Knife,,12500.0,5846407
+Tycoon Castle Cabin Cabin,Red1->Red2->Red3->X-Magic,,0.0,5846407
+Walse Tower Chest GoGo,Regen->Float->Reset->Xzone,,0.0,5846407
+Pyramid Top Pyramid Tablet,Remora->Shoat->Levia,,0.0,5846407
+Toad Event Toad,IceBrand,,5500.0,5846407
+Aegis Shield Chest Aegis Shield,HP +X%,,0.0,5846407
+Lone Wolf Barrel Cabin,Partisan,,5100.0,5846407
+Lone Wolf Chest Thunder Whip,Yoichi Bow,,10000.0,5846407
+Moat Item Epee,Morning Star,,3900.0,5846407
+Shop Backdoor Lamia Harp,Lillith Rod,,1500.0,5846407
+Top of the Falls Magic Lamp,Mythril Shield,,295.0,5846407
+Wind Shrine Chest Broadsword,8000 gil,,8000.0,5846407
+Beginner's House Chest Ether,490 gil,,490.0,5846407
+Beginner's House Chest 100,Haste->Exit->Hast2->Quick,,0.0,5846407
+Beginner's House Chest Potion,Gale Bow,,4250.0,5846407
+Beginner's House Chest Phoenix Down,9500 gil,,9500.0,5846407
+Beginner's House Chest Tent,Diamond Shield,,3000.0,5846407
+Beginner's House Chest Leather Shoes,Full Moon,,550.0,5846407
+Pirate's Cave Chest Leather Cap,Flash->Time Slip->DethClaw,,0.0,5846407
+Pirate's Cave Chest Tent,Phoenix Down,,500.0,5846407
+Pirate's Cave Chest Ether,MgcSword Ability Progressive,,0.0,5846407
+Pirate's Cave Chest 300,8000 gil,,8000.0,5846407
+Wind Shrine Chest Tent,1000 gil,,1000.0,5846407
+Wind Shrine Chest Leather Cap,Fire Rod,,375.0,5846407
+Wind Shrine Chest Staff,Sleep->Bio->Flare Sword,,0.0,5846407
+Tule Barrel 150,Air Blade,MIB,50.0,5846407
+Tule Box Leather Shoes,Lamia's Harp,,1600.0,5846407
+Tule Barrel Potion,9500 gil,,9500.0,5846407
+Tule Box Tent,Eyedrop,,10.0,5846407
+Tule Bush Phoenix Down,Scan->Charm->Holy,,0.0,5846407
+Ship Graveyard Chest Flail,White Ability Progressive,,0.0,5846407
+Ship Graveyard Chest Phoenix Down,150 gil,,150.0,5846407
+Ship Graveyard Chest Tent,Observe,,0.0,5846407
+Ship Graveyard Box 990,20000 gil,,20000.0,5846407
+Ship Graveyard Chest Potion,Iron Helm,,175.0,5846407
+Ship Graveyard Chest Antidote,Leather Shoes,,35.0,5846407
+Carwen Barrel Antidote,Control,,0.0,5846407
+Carwen Box Ice Rod,100 gil,,100.0,5846407
+Carwen Pot 1000,DrgnCrest,,0.0,5846407
+North Mountain Chest Soft,9000 gil,,9000.0,5846407
+North Mountain Chest Phoenix Down,Flash->Time Slip->DethClaw,,0.0,5846407
+Walse Town Pot Glasses,Potion,,20.0,5846407
+Tycoon Castle Pot Hi-Potion,10000 gil,,10000.0,5846407
+Tycoon Castle Pot Ether,Bronze Shield,,145.0,5846407
+Tycoon Castle Barrel Elixir,Genji Helm,,12500.0,5846407
+Tycoon Castle Barrel Phoenix Down,Phoenix Down,,500.0,5846407
+Tycoon Castle Barrel Cabin,2500 gil,,2500.0,5846407
+Tycoon Castle Pot Elixir,BeastKiller,,7500.0,5846407
+Tycoon Castle Pot Phoenix Down,Chocob->Titan->Golem->Odin,,0.0,5846407
+Tycoon Castle Pot Maiden's Kiss,Barrier,,0.0,5846407
+Tycoon Castle Chest Shuriken,2000 gil,,2000.0,5846407
+Tycoon Castle Chest Giyaman,490 gil,,490.0,5846407
+Tycoon Castle Chest Katana,RegalCut,,240.0,5846407
+Walse Castle Chest Elf Cape,5000 gil,,5000.0,5846407
+Walse Castle Pot 1000,SwdSlap,,0.0,5846407
+Walse Castle Pot Drag,Fire Rod,,375.0,5846407
+Walse Castle Box 490,BlueMage Job Crystal,,0.0,5846407
+Walse Castle Barrel Tent,100 gil,,100.0,5846407
+Walse Castle Barrel Phoenix Down,4900 gil,,4900.0,5846407
+Walse Tower Chest Silk robe,Sasuke,,10000.0,5846407
+Walse Tower Chest Maiden's Kiss,Ribbon,,17500.0,5846407
+Walse Tower Chest Silver Armlet,Equip Ribbon,,0.0,5846407
+Walse Tower Chest Ether,Guard Ring,,15000.0,5846407
+Tycoon Meteor Chest Phoenix Down,2000 gil,,2000.0,5846407
+Karnak Castle Chest Gungnir,GrnBeret,,1250.0,5846407
+Karnak Castle Chest Thunder Scroll,Diamond Shield,,3000.0,5846407
+Karnak Castle Chest 2000,Revivify,MIB,75.0,5846407
+Karnak Castle Chest Elixir,Power Drink,MIB,55.0,5846407
+Karnak Castle Chest Ribbon,Javelin,MIB,50.0,5846407
+Karnak Castle Chest Shuriken,DarkMatter,MIB,25000.0,5846407
+Karnak Castle Chest Elf Cape,Tricorn Hat,MIB,750.0,5846407
+Karnak Castle Chest Guardian,Crystal Shield,,4500.0,5846407
+Karnak Town Barrel Fire Rod,Sleep->Psych->Doom,,0.0,5846407
+Steamship Chest Cabin,Leather Cap,,25.0,5846407
+Steamship Chest Phoenix Down,Wonder Wand,,5000.0,5846407
+Steamship Chest Elixir,Revive,,0.0,5846407
+Steamship Chest GrnBeret,Slumber Sword,,2800.0,5846407
+Steamship Chest Thief's Glove,5000 gil,,5000.0,5846407
+Ancient Library Chest Ether,1000 gil,,1000.0,5846407
+Ancient Library Chest Phoenix Down,Sylph->Crbnkl->Phenix->Syldra,,0.0,5846407
+Ancient Library Chest Stealth Suit,Golden Shield,,1500.0,5846407
+Jacole Cave Chest Shuriken,1000 gil,,1000.0,5846407
+Jacole Cave Chest Tent,2000 gil,,2000.0,5846407
+Ruined City Chest Shuriken,9000 gil,,9000.0,5846407
+Ruined City Chest Size,White Robe,,4000.0,5846407
+Flying Lonka Ruins Chest Golden Armor,Earth Bell,,4500.0,5846407
+Flying Lonka Ruins Chest Elixir,Mage Masher,,450.0,5846407
+Flying Lonka Ruins Chest Phoenix Down,Mage Masher,,450.0,5846407
+Flying Lonka Ruins Chest Golden Shield,Combine,,0.0,5846407
+Steamship Chest Mythril Glove,Killer Bow,,2500.0,5846407
+Steamship Chest Full Moon,CopperPlt,,175.0,5846407
+Flying Lonka Ruins Chest Hi-Potion,10000 gil,,10000.0,5846407
+Flying Lonka Ruins Chest 5000,Medicine,,0.0,5846407
+Flying Lonka Ruins Chest Shuriken,Steal,,0.0,5846407
+Flying Lonka Ruins Chest Ancient Sword,Kotetsu,,5900.0,5846407
+Flying Lonka Ruins Chest Full Moon,Silver Bow,,750.0,5846407
+Flying Lonka Ruins Chest Power Wrist,Dimen Ability Progressive,,0.0,5846407
+Flying Lonka Ruins Chest Ether,RisingSun,,5500.0,5846407
+Flying Lonka Ruins Chest Cabin,Slumber Sword,,2800.0,5846407
+Exdeath's Castle Chest Ether,DblLance,,5400.0,5846407
+Exdeath's Castle Chest Diamond Shield,Enhancer,,10000.0,5846407
+Exdeath's Castle Chest Ice Shield,Gold Hairpin,,15000.0,5846407
+Exdeath's Castle Chest Elixir,9000 gil,,9000.0,5846407
+Exdeath's Castle Chest Gale Bow,Cursed Shield,,5000.0,5846407
+Exdeath's Castle Chest IceBrand,RuneEdge,,9500.0,5846407
+Exdeath's Castle Chest Kotetsu,8000 gil,,8000.0,5846407
+Exdeath's Castle Chest 9900,Whip,,550.0,5846407
+Exdeath's Castle Chest 8000,Ice Shield,,20000.0,5846407
+Exdeath's Castle Chest DblLance,Counter,,0.0,5846407
+Exdeath's Castle Chest Partisan,Golden Helm,,1750.0,5846407
+Exdeath's Castle Chest Pinwheel,RisingSun,,5500.0,5846407
+Moogle Cave Chest 4400,Condemn->Roulette->AquaRake,,0.0,5846407
+Moogle Cave Chest Phoenix Down,Berserk,,0.0,5846407
+Moogle Village Chest Cabin,18000 gil,,18000.0,5846407
+Moogle Village Chest Dancing Dagger,Bizen,,4400.0,5846407
+Moogle Village Chest 1,Slow->Stop->Slow2,,0.0,5846407
+Moogle Village Chest 10000,Vampire->MindBlst->WhiteWind,,0.0,5846407
+Moogle Village Chest Phoenix Down,Armor->Shell->Wall->Dispel,,0.0,5846407
+Moogle Village Chest Ether,Kick,,0.0,5846407
+Moogle Village Chest Elf Cape,990 gil,,990.0,5846407
+Bal Castle Chest Angel Gwn,Equip Bows,,0.0,5846407
+Bal Castle Chest Hero Drink,Hero Drink,,55.0,5846407
+Bal Castle Chest Exit,Brave Blade,,15000.0,5846407
+Hiryuu Valley Skull Bone Mail,FrogSong->TinySong->MoonFlut,,0.0,5846407
+Hiryuu Valley Chest 5000,Regen->Float->Reset->Xzone,,0.0,5846407
+Hiryuu Valley Chest Cabin,Avis Killer,,10000.0,5846407
+Hiryuu Valley Chest 7000,Haste->Exit->Hast2->Quick,,0.0,5846407
+Hiryuu Valley Chest Coronet,Black Ability Progressive,,0.0,5846407
+Hiryuu Valley Chest Air Blade,Aegis Shield,,2250.0,5846407
+Hiryuu Valley Chest Phoenix Down,12000 gil,,12000.0,5846407
+Surgate Castle Chest 5000,Animals->Aim->X-Fight,,0.0,5846407
+Surgate Castle Chest Float,15000 gil,,15000.0,5846407
+Barrier Tower Chest Drain Sword,Kunai,MIB,300.0,5846407
+Barrier Tower Chest 9000,Mythril Shield,MIB,295.0,5846407
+Barrier Tower Chest 18000,Thunder Rod,,375.0,5846407
+Barrier Tower Chest Gold Hairpin,Thunder Bow,,1250.0,5846407
+Mua Town Barrel Guardian,10000 gil,,10000.0,5846407
+Mua Forest Chest 2500,Mythril Glove,,300.0,5846407
+Mua Forest Chest Ether,Mythril Shield,,295.0,5846407
+Mua Forest Chest 4900,Potion,,20.0,5846407
+Mua Forest Chest Phoenix Down,Dancer Job Crystal,,0.0,5846407
+Mua Forest Chest 9500,Coral Ring,,25000.0,5846407
+Mua Forest Chest Soot,5000 gil,,5000.0,5846407
+Mua Forest Chest Flametongue,GbnPnch->Emision->Missle->Blwfsh,,0.0,5846407
+Mua Forest Chest Cabin,Freelancer Job Crystal,,0.0,5846407
+Mua Forest Chest Giant Drink,Shiva->Ramuh->Ifrit->Bahmut,,0.0,5846407
+Mua Forest Chest Elixir,Mute->Size->Bersk,,0.0,5846407
+Mua Forest Chest Morning Star,Charm->Hero@Song,,0.0,5846407
+Solitary Island Chest Ether,Crystal Shield,,4500.0,5846407
+Solitary Island Chest DragonFang,25000 gil,,25000.0,5846407
+Pyramid Chest Elixir,Elixir,,25000.0,5846407
+Pyramid Chest Black Robe,DragonFang,,2500.0,5846407
+Pyramid Chest Thornlet,Mirage Vest,MIB,5000.0,5846407
+Pyramid Chest DarkMatter,Ancient Sword,MIB,2100.0,5846407
+Pyramid Chest Crystal Armor,Magus,,1500.0,5846407
+Pyramid Chest Cursed Ring,2500 gil,,2500.0,5846407
+Pyramid Chest Ice Shield,Potion,MIB,20.0,5846407
+Pyramid Chest Flame Shield,Golden Armor,,2000.0,5846407
+Pyramid Chest White Robe,Avis Killer,,10000.0,5846407
+Pyramid Chest DarkSuit,Power Wrist,,1250.0,5846407
+Pyramid Chest 9000,Magic Lamp,MIB,5000.0,5846407
+Pyramid Chest 8000,Defender Sword,,5500.0,5846407
+Pyramid Chest Earth Hammer,Cabin,,300.0,5846407
+Pyramid Chest 10000,Ice Shield,MIB,20000.0,5846407
+Pyramid Chest Cabin,Red Shoes,MIB,4900.0,5846407
+Pyramid Chest 12000,Crystal Helm,MIB,5250.0,5846407
+Pyramid Chest Guard Ring,Angel Gwn,,1500.0,5846407
+Pyramid Chest Ribbon,Guardian,MIB,1300.0,5846407
+Pyramid Chest Gold Hairpin,Silk robe,MIB,250.0,5846407
+Solitary Island Chest 12000,10000 gil,,10000.0,5846407
+Solitary Island Chest Hi-Potion,Summon Ability Progressive,,0.0,5846407
+Solitary Island Chest Protect Drink,Mute->Psych->Holy Sword,,0.0,5846407
+Solitary Island Chest BeastKiller,Murasume,MIB,10000.0,5846407
+Solitary Island Chest RisingSun,Sage's Staff,,10000.0,5846407
+Solitary Island Chest Guard Ring,Protect Drink,MIB,55.0,5846407
+Solitary Island Chest Crystal Helm,Aero Blue Magic Progressive,,0.0,5846407
+Solitary Island Chest 9000,GbnPnch->Emision->Missle->Blwfsh,,0.0,5846407
+Solitary Island Chest Elixir,2-Handed,,0.0,5846407
+Solitary Island Chest DarkMatter,Ragnarok,,15000.0,5846407
+Solitary Island Chest Circlet,300 gil,,300.0,5846407
+Fork Tower L. Chest Ether,Bolt Black Magic Progressive,,0.0,5846407
+Fork Tower L. Chest Wonder Wand,2000 gil,,2000.0,5846407
+Fork Tower R. Chest Hi-Potion,4400 gil,,4400.0,5846407
+Fork Tower R. Chest Defender Sword,25000 gil,,25000.0,5846407
+Great Trench Chest Water Scroll,Eyedrop,,10.0,5846407
+Great Trench Chest Flame Ring,Ice Rod,,375.0,5846407
+Great Trench Chest DragonFang,12000 gil,,12000.0,5846407
+Great Trench Chest Ether,Genji Gloves,,7500.0,5846407
+Great Trench Chest Phoenix Down,2000 gil,,2000.0,5846407
+Great Trench Chest Kaiser Knuckles,9000 gil,,9000.0,5846407
+Istory Falls Chest Ether,Defender Sword,,5500.0,5846407
+Istory Falls Chest TurtleShell,FrogSong->TinySong->MoonFlut,,0.0,5846407
+Istory Falls Chest Air Lance,Kunai,,300.0,5846407
+Istory Falls Chest Giant Drink,Giant Drink,,55.0,5846407
+Istory Falls Chest RuneEdge,CopperPlt,,175.0,5846407
+Istory Falls Chest Guard Ring,Ice Black Magic Progressive,,0.0,5846407
+Istory Falls Chest Wall Ring,Wall Ring,,10000.0,5846407
+Istory Falls Chest Phoenix Down,Maiden's Kiss,,30.0,5846407
+Istory Falls Chest Enhancer,Antdt->Image->Heal,,0.0,5846407
+Istory Falls Chest 12000,Void->Demi->Qrter->Old,,0.0,5846407
+Istory Falls Chest Artemis Bow,Broadsword,,140.0,5846407
+Istory Falls Chest Pinwheel,GuardOff->Hammer->MghtyGrd,,0.0,5846407
+Istory Falls Chest Aegis Shield,Sing,,0.0,5846407
+Istory Falls Chest Giant's Axe,L4Qrter->L3Flare->L2Old->L5Doom,,0.0,5846407
+Phoenix Tower Pot 5000,Mythril Armor,,350.0,5846407
+Phoenix Tower Pot Phoenix Down,Javelin,MIB,50.0,5846407
+Phoenix Tower Pot 10000,Circlet,,2250.0,5846407
+Phoenix Tower Pot 15000,Dancing Dagger,,2900.0,5846407
+Phoenix Tower Pot 20000,Bone Mail,MIB,15000.0,5846407
+Phoenix Tower Pot Avis Killer,Flame Scroll,MIB,100.0,5846407
+Phoenix Tower Pot 25000,Circlet,MIB,2250.0,5846407
+Mirage Village Barrel Thief Knife,9900 gil,,9900.0,5846407
+Rift (Ruins) Chest Ether,Shuriken,,1250.0,5846407
+Rift (Ruins) Chest Cabin,Venom->Drain->Break,,0.0,5846407
+Rift (Ruins) Chest Elixir,Venom->Drain->Break,,0.0,5846407
+Rift (Ruins) Chest DarkMatter,Bronze Shield,,145.0,5846407
+Rift (Ruins) Chest Drain Sword,10000 gil,,10000.0,5846407
+Rift (Forest) Chest DragonFang,300 gil,,300.0,5846407
+Rift (Forest) Chest Ribbon,Equip Armors,,0.0,5846407
+Rift (Forest) Chest Enhancer,Life->Life2,,0.0,5846407
+Rift (Forest) Chest Lillith Rod,Analyze,,0.0,5846407
+Rift (Cave) Chest Angel Ring,Slow->Stop->Slow2,,0.0,5846407
+Rift (Cave) Chest Coral Ring,Genji Shield,,10000.0,5846407
+Rift (Castle) Chest Thor Hammer,Plumed Hat,,175.0,5846407
+Rift (Castle) Chest Running Shoes,Mantra,,0.0,5846407
+Rift (Castle) Chest Red Shoes,Golden Armor,,2000.0,5846407
+Rift (Castle) Chest Rainbow Dress,Condemn->Roulette->AquaRake,,0.0,5846407
+Rift (Castle) Chest ManEater,Staff,,100.0,5846407
+The Void Chest Pinwheel,Golem,,0.0,5846407
+The Void Chest Elixir,Cover,,0.0,5846407
+The Void Chest Ragnarok,Tinkerbell,MIB,750.0,5846407
+Byblos New,Genji Shield,,10000.0,5846407
+Sandworm New,Enhancer,,10000.0,5846407
+AdamanTiMi New,Genji Gloves,,7500.0,5846407
+Sol Cannon New,Excalibur,,10000.0,5846407
+ArchaeAvis New,DoomCut,,2950.0,5846407
+Titan New,Excalibur,,10000.0,5846407
+Gilgamesh 2 New,Excalibur,,10000.0,5846407
+HiryuuPlant New,Genji Shield,,10000.0,5846407
+Gilgamesh 3 & Enkidou New,Gold Hairpin,,15000.0,5846407
+Atmos New,DblLance,,5400.0,5846407
+Gilgamesh 4 New,Excailbur,,5000.0,5846407
+Antlion New,Sasuke,,10000.0,5846407
+"Triton, Neregeid & Phobos New",Enhancer,,10000.0,5846407
+Leviathan New,Enhancer,,10000.0,5846407
+Stalker New,Murasume,,10000.0,5846407
+GoGo New,Masamune,,10000.0,5846407
+Ifrit New,Elf Cape,,2000.0,5846407
+Crayclaw New,Flame Ring,,25000.0,5846407
+Wind Crystal Knight,Cursed Ring,,2500.0,2991773
+Wind Crystal BlueMage,Ice Rod,,375.0,2991773
+Wind Crystal BlackMage,Void->Demi->Qrter->Old,,0.0,2991773
+Wind Crystal WhiteMage,MgcSword Ability Progressive,,0.0,2991773
+Wind Crystal Monk,Kodachi,,2550.0,2991773
+Wind Crystal Thief,Black Ability Progressive,,0.0,2991773
+Fire Crystal Mediator,Bizen,,4400.0,2991773
+Fire Crystal Geomancer,Cover,,0.0,2991773
+Fire Crystal Ninja,Chocob->Titan->Golem->Odin,,0.0,2991773
+Black Choco Crystals Bard,Elven Bow,,3750.0,2991773
+Black Choco Crystals Hunter,Freelancer Job Crystal,,0.0,2991773
+Earth Crystal Samurai,Mute->Psych->Holy Sword,,0.0,2991773
+Earth Crystal Dragoon,Crystal Helm,,5250.0,2991773
+Earth Crystal Chemist,Comet->Meteo,,0.0,2991773
+Earth Crystal Dancer,Silk robe,,250.0,2991773
+Leviathan Esper Levia,Remora->Shoat->Levia,,0.0,2991773
+Titan Titan,Silver Harp,,400.0,2991773
+Carbuncle Crbnkl,Power Drink,,55.0,2991773
+Syldra Syldra,Ice Black Magic Progressive,,0.0,2991773
+Odin Odin,Silver Armlet,,250.0,2991773
+Phoenix Phenix,Cotton Robe,,150.0,2991773
+Bahamut Bahmut,Thunder Scroll,,100.0,2991773
+Life (or Strength) Song from Crescent Town bard Vitality,Mythril Helm,,275.0,2991773
+Temptation Song at Lix Charm,Genji Shield,,10000.0,2991773
+Love Song at Istory Love,Summon Ability Progressive,,0.0,2991773
+Requiem Song at Kelb Requiem,Revivify,,75.0,2991773
+Speed Song at Surgate Speed,Antidote,,15.0,2991773
+Magic Song at Ancient Library Magic,IceBrand,,5500.0,2991773
+Power Song from Crescent Town Power,Flash->Time Slip->DethClaw,,0.0,2991773
+Hero Song from Crescent Town Hero,Preemptive,,0.0,2991773
+"Fork Tower, two Magics Holy",Diamond Helm,,3500.0,2991773
+"Fork Tower, two Magics Flare",Dragoon Lance,,15000.0,2991773
+Meteo Meteo,Glasses,,125.0,2991773
+"5 potions in Wind Shrine, bottom left guy Potion",DmgFloor,,0.0,2991773
+"8 potions, Pirate after Torna Canal Key acquired Potion",Haste->Exit->Hast2->Quick,,0.0,2991773
+Chancellor at Tycoon Healing Staff,Mythril Staff,,250.0,2991773
+Magisa & Forza Mythril Helm,Leather Shoes,,35.0,2991773
+CornaJar at Kelb CornaJar,Thief's Glove,,1500.0,2991773
+Ribbon from girl in Rugor Ribbon,Toad->Bio->Flare,,0.0,2991773
+Mirage Vest from Chocobo Tour/Mirage Village Mirage Vest,Crystal Armor,,6000.0,2991773
+12 Kuzar Events Assassin,Leather Cap,,25.0,2991773
+12 Kuzar Events Apollo's Harp,Cursed Ring,,2500.0,2991773
+12 Kuzar Events Excalibur,Genji Armor,,15000.0,2991773
+12 Kuzar Events Flame Whip,????->Fusion->Exploder->DrkShock,,0.0,2991773
+12 Kuzar Events Earth Bell,Silver Plate,,300.0,2991773
+12 Kuzar Events Holy Lance,Venom->Drain->Break,,0.0,2991773
+12 Kuzar Events Masamune,Tricorn Hat,,750.0,2991773
+12 Kuzar Events Wizard Rod,Shiva->Ramuh->Ifrit->Bahmut,,0.0,2991773
+12 Kuzar Events Rune Axe,Regen->Float->Reset->Xzone,,0.0,2991773
+12 Kuzar Events Sage's Staff,Bolt Black Magic Progressive,,0.0,2991773
+12 Kuzar Events Sasuke,????->Fusion->Exploder->DrkShock,,0.0,2991773
+12 Kuzar Events Yoichi Bow,GrnBeret,,1250.0,2991773
+Shiva Shiva,Red1->Red2->Red3->X-Magic,,0.0,2991773
+Ifrit Ifrit,Coral Ring,,25000.0,2991773
+Water Crystal Samurai,Earth Hammer,,6400.0,2991773
+Water Crystal Berserker,Ice Shield,,20000.0,2991773
+Water Crystal MysticKnight,Chocob->Titan->Golem->Odin,,0.0,2991773
+Water Crystal TimeMage,Kotetsu,,5900.0,2991773
+Water Crystal Summoner,Antdt->Image->Heal,,0.0,2991773
+Brave Blade Brave Blade,Vampire->MindBlst->WhiteWind,,0.0,2991773
+Chicken Knife Chicken Knife,Ice Sword Magic Progressive,,0.0,2991773
+Tycoon Castle Cabin Cabin,Guard Ring,,15000.0,2991773
+Walse Tower Chest GoGo,SwdSlap,,0.0,2991773
+Pyramid Top Pyramid Tablet,Mantra,,0.0,2991773
+Toad Event Toad,Sylph->Crbnkl->Phenix->Syldra,,0.0,2991773
+Aegis Shield Chest Aegis Shield,Rainbow Dress,,2900.0,2991773
+Lone Wolf Barrel Cabin,Dancing Dagger,,2900.0,2991773
+Lone Wolf Chest Thunder Whip,Armor->Shell->Wall->Dispel,,0.0,2991773
+Moat Item Epee,Bolt Sword Magic Progressive,,0.0,2991773
+Shop Backdoor Lamia Harp,Epee Sword,,4200.0,2991773
+Top of the Falls Magic Lamp,Magic Lamp,,5000.0,2991773
+Wind Shrine Chest Broadsword,GbnPnch->Emision->Missle->Blwfsh,,0.0,2991773
+Beginner's House Chest Ether,Giant Drink,,55.0,2991773
+Beginner's House Chest 100,Mythril Hammer,,525.0,2991773
+Beginner's House Chest Potion,20000 gil,,20000.0,2991773
+Beginner's House Chest Phoenix Down,Antdt->Image->Heal,,0.0,2991773
+Beginner's House Chest Tent,9000 gil,,9000.0,2991773
+Beginner's House Chest Leather Shoes,1000 gil,,1000.0,2991773
+Pirate's Cave Chest Leather Cap,Dancer Job Crystal,,0.0,2991773
+Pirate's Cave Chest Tent,Sleep->Bio->Flare Sword,,0.0,2991773
+Pirate's Cave Chest Ether,10000 gil,,10000.0,2991773
+Pirate's Cave Chest 300,Sleep->Psych->Doom,,0.0,2991773
+Wind Shrine Chest Tent,1000 gil,,1000.0,2991773
+Wind Shrine Chest Leather Cap,Staff,,100.0,2991773
+Wind Shrine Chest Staff,Haste->Exit->Hast2->Quick,,0.0,2991773
+Tule Barrel 150,Dragoon Job Crystal,,0.0,2991773
+Tule Box Leather Shoes,OmegaMedl,,0.0,2991773
+Tule Barrel Potion,Thunder Bow,,1250.0,2991773
+Tule Box Tent,Bolt Black Magic Progressive,,0.0,2991773
+Tule Bush Phoenix Down,Thunder Bow,MIB,1250.0,2991773
+Ship Graveyard Chest Flail,Aero Blue Magic Progressive,,0.0,2991773
+Ship Graveyard Chest Phoenix Down,4900 gil,,4900.0,2991773
+Ship Graveyard Chest Tent,Assassin,,10000.0,2991773
+Ship Graveyard Box 990,Thunder Whip,,1100.0,2991773
+Ship Graveyard Chest Potion,990 gil,,990.0,2991773
+Ship Graveyard Chest Antidote,5000 gil,,5000.0,2991773
+Carwen Barrel Antidote,300 gil,,300.0,2991773
+Carwen Box Ice Rod,Mute->Size->Bersk,,0.0,2991773
+Carwen Pot 1000,HP +X%,,0.0,2991773
+North Mountain Chest Soft,Berserker Job Crystal,,0.0,2991773
+North Mountain Chest Phoenix Down,GbnPnch->Emision->Missle->Blwfsh,,0.0,2991773
+Walse Town Pot Glasses,Bronze Armor,,200.0,2991773
+Tycoon Castle Pot Hi-Potion,DrgnCrest,,0.0,2991773
+Tycoon Castle Pot Ether,MgcSword Ability Progressive,,0.0,2991773
+Tycoon Castle Barrel Elixir,Elixir,,25000.0,2991773
+Tycoon Castle Barrel Phoenix Down,Giant's Gloves,,2500.0,2991773
+Tycoon Castle Barrel Cabin,Iron Armor,,250.0,2991773
+Tycoon Castle Pot Elixir,Mythril Knife,,225.0,2991773
+Tycoon Castle Pot Phoenix Down,5000 gil,,5000.0,2991773
+Tycoon Castle Pot Maiden's Kiss,5000 gil,,5000.0,2991773
+Tycoon Castle Chest Shuriken,Shuriken,,1250.0,2991773
+Tycoon Castle Chest Giyaman,Scan->Charm->Holy,,0.0,2991773
+Tycoon Castle Chest Katana,Guardian,,1300.0,2991773
+Walse Castle Chest Elf Cape,Leather Cap,,25.0,2991773
+Walse Castle Pot 1000,9000 gil,,9000.0,2991773
+Walse Castle Pot Drag,Geomancer Job Crystal,,0.0,2991773
+Walse Castle Box 490,Golden Armor,,2000.0,2991773
+Walse Castle Barrel Tent,Armor->Shell->Wall->Dispel,,0.0,2991773
+Walse Castle Barrel Phoenix Down,MysticKnight Job Crystal,,0.0,2991773
+Walse Tower Chest Silk robe,Partisan,,5100.0,2991773
+Walse Tower Chest Maiden's Kiss,Flametongue,,5000.0,2991773
+Walse Tower Chest Silver Armlet,Sleep->Psych->Doom,,0.0,2991773
+Walse Tower Chest Ether,9900 gil,,9900.0,2991773
+Tycoon Meteor Chest Phoenix Down,Silver Harp,,400.0,2991773
+Karnak Castle Chest Gungnir,RuneEdge,,9500.0,2991773
+Karnak Castle Chest Thunder Scroll,Mythril Helm,MIB,275.0,2991773
+Karnak Castle Chest 2000,Stealth Suit,MIB,1500.0,2991773
+Karnak Castle Chest Elixir,Soft,MIB,75.0,2991773
+Karnak Castle Chest Ribbon,Diamond Helm,MIB,3500.0,2991773
+Karnak Castle Chest Shuriken,CopperPlt,MIB,175.0,2991773
+Karnak Castle Chest Elf Cape,Bard's Surplice,MIB,500.0,2991773
+Karnak Castle Chest Guardian,Tiger Mask,MIB,2500.0,2991773
+Karnak Town Barrel Fire Rod,DrgnSwd,,0.0,2991773
+Steamship Chest Cabin,1000 gil,,1000.0,2991773
+Steamship Chest Phoenix Down,Power Staff,,900.0,2991773
+Steamship Chest Elixir,12000 gil,,12000.0,2991773
+Steamship Chest GrnBeret,Drain Sword,,8000.0,2991773
+Steamship Chest Thief's Glove,RisingSun,,5500.0,2991773
+Ancient Library Chest Ether,20000 gil,,20000.0,2991773
+Ancient Library Chest Phoenix Down,490 gil,,490.0,2991773
+Ancient Library Chest Stealth Suit,Angel Gwn,,1500.0,2991773
+Jacole Cave Chest Shuriken,9000 gil,,9000.0,2991773
+Jacole Cave Chest Tent,9500 gil,,9500.0,2991773
+Ruined City Chest Shuriken,Sleep->Bio->Flare Sword,,0.0,2991773
+Ruined City Chest Size,10000 gil,,10000.0,2991773
+Flying Lonka Ruins Chest Golden Armor,Void->Demi->Qrter->Old,,0.0,2991773
+Flying Lonka Ruins Chest Elixir,Barrier,,0.0,2991773
+Flying Lonka Ruins Chest Phoenix Down,Observe,,0.0,2991773
+Flying Lonka Ruins Chest Golden Shield,Crystal Armor,,6000.0,2991773
+Steamship Chest Mythril Glove,Tame,,0.0,2991773
+Steamship Chest Full Moon,2500 gil,,2500.0,2991773
+Flying Lonka Ruins Chest Hi-Potion,Mythril Knife,,225.0,2991773
+Flying Lonka Ruins Chest 5000,White Ability Progressive,,0.0,2991773
+Flying Lonka Ruins Chest Shuriken,Comet->Meteo,,0.0,2991773
+Flying Lonka Ruins Chest Ancient Sword,100 gil,,100.0,2991773
+Flying Lonka Ruins Chest Full Moon,Flash->Time Slip->DethClaw,,0.0,2991773
+Flying Lonka Ruins Chest Power Wrist,Fire Sword Magic Progressive,,0.0,2991773
+Flying Lonka Ruins Chest Ether,Ether,,750.0,2991773
+Flying Lonka Ruins Chest Cabin,Bolt Sword Magic Progressive,,0.0,2991773
+Exdeath's Castle Chest Ether,Charm->Hero@Song,,0.0,2991773
+Exdeath's Castle Chest Diamond Shield,15000 gil,,15000.0,2991773
+Exdeath's Castle Chest Ice Shield,Diamond Armor,,4000.0,2991773
+Exdeath's Castle Chest Elixir,Shiva->Ramuh->Ifrit->Bahmut,,0.0,2991773
+Exdeath's Castle Chest Gale Bow,Fire Sword Magic Progressive,,0.0,2991773
+Exdeath's Castle Chest IceBrand,Leather Shoes,,35.0,2991773
+Exdeath's Castle Chest Kotetsu,Aero Blue Magic Progressive,,0.0,2991773
+Exdeath's Castle Chest 9900,Cure White Magic Progressive,,0.0,2991773
+Exdeath's Castle Chest 8000,Thief Knife,,3400.0,2991773
+Exdeath's Castle Chest DblLance,2000 gil,,2000.0,2991773
+Exdeath's Castle Chest Partisan,Black Ability Progressive,,0.0,2991773
+Exdeath's Castle Chest Pinwheel,Elixir,,25000.0,2991773
+Moogle Cave Chest 4400,Equip Rods,,0.0,2991773
+Moogle Cave Chest Phoenix Down,Equip Armors,,0.0,2991773
+Moogle Village Chest Cabin,12000 gil,,12000.0,2991773
+Moogle Village Chest Dancing Dagger,Equip Ribbon,,0.0,2991773
+Moogle Village Chest 1,Thunder Scroll,,100.0,2991773
+Moogle Village Chest 10000,IceBrand,,5500.0,2991773
+Moogle Village Chest Phoenix Down,Hide,,0.0,2991773
+Moogle Village Chest Ether,Magic->Love@Song,,0.0,2991773
+Moogle Village Chest Elf Cape,Sleep->Bio->Flare Sword,,0.0,2991773
+Bal Castle Chest Angel Gwn,100 gil,,100.0,2991773
+Bal Castle Chest Hero Drink,490 gil,,490.0,2991773
+Bal Castle Chest Exit,Kotetsu,,5900.0,2991773
+Hiryuu Valley Skull Bone Mail,4900 gil,,4900.0,2991773
+Hiryuu Valley Chest 5000,Agility,,,2991773
+Hiryuu Valley Chest Cabin,Tent,,125.0,2991773
+Hiryuu Valley Chest 7000,Ice Black Magic Progressive,,0.0,2991773
+Hiryuu Valley Chest Coronet,8000 gil,,8000.0,2991773
+Hiryuu Valley Chest Air Blade,Giant Drink,,55.0,2991773
+Hiryuu Valley Chest Phoenix Down,Void->Demi->Qrter->Old,,0.0,2991773
+Surgate Castle Chest 5000,Bronze Helm,,125.0,2991773
+Surgate Castle Chest Float,Plumed Hat,,175.0,2991773
+Barrier Tower Chest Drain Sword,Air Lance,MIB,3400.0,2991773
+Barrier Tower Chest 9000,Flash->Time Slip->DethClaw,,0.0,2991773
+Barrier Tower Chest 18000,Chicken Knife,MIB,12500.0,2991773
+Barrier Tower Chest Gold Hairpin,Eyedrop,,10.0,2991773
+Mua Town Barrel Guardian,Thunder Rod,,375.0,2991773
+Mua Forest Chest 2500,Brave Blade,,15000.0,2991773
+Mua Forest Chest Ether,Monk Job Crystal,,0.0,2991773
+Mua Forest Chest 4900,Shiva->Ramuh->Ifrit->Bahmut,,0.0,2991773
+Mua Forest Chest Phoenix Down,12000 gil,,12000.0,2991773
+Mua Forest Chest 9500,300 gil,,300.0,2991773
+Mua Forest Chest Soot,Soot,,50.0,2991773
+Mua Forest Chest Flametongue,Revivify,,75.0,2991773
+Mua Forest Chest Cabin,Sylph->Crbnkl->Phenix->Syldra,,0.0,2991773
+Mua Forest Chest Giant Drink,Giant Drink,,55.0,2991773
+Mua Forest Chest Elixir,1000 gil,,1000.0,2991773
+Mua Forest Chest Morning Star,8000 gil,,8000.0,2991773
+Solitary Island Chest Ether,Partisan,,5100.0,2991773
+Solitary Island Chest DragonFang,Mimic Job Crystal,,0.0,2991773
+Pyramid Chest Elixir,Elixir,,25000.0,2991773
+Pyramid Chest Black Robe,Darkness Bow,,1900.0,2991773
+Pyramid Chest Thornlet,Fire Bow,MIB,1250.0,2991773
+Pyramid Chest DarkMatter,Black Robe,,4000.0,2991773
+Pyramid Chest Crystal Armor,Glasses,MIB,125.0,2991773
+Pyramid Chest Cursed Ring,Avis Killer,,10000.0,2991773
+Pyramid Chest Ice Shield,Antidote,,15.0,2991773
+Pyramid Chest Flame Shield,Ramuh,MIB,0.0,2991773
+Pyramid Chest White Robe,DiamndPlt,MIB,3000.0,2991773
+Pyramid Chest DarkSuit,Venom Rod,MIB,750.0,2991773
+Pyramid Chest 9000,Dimen Ability Progressive,,0.0,2991773
+Pyramid Chest 8000,Maiden's Kiss,MIB,30.0,2991773
+Pyramid Chest Earth Hammer,Elixir,,25000.0,2991773
+Pyramid Chest 10000,5000 gil,,5000.0,2991773
+Pyramid Chest Cabin,Diamond Armor,MIB,4000.0,2991773
+Pyramid Chest 12000,Ice Bow,MIB,1250.0,2991773
+Pyramid Chest Guard Ring,MP +X%,,0.0,2991773
+Pyramid Chest Ribbon,Gauntlets,MIB,1500.0,2991773
+Pyramid Chest Gold Hairpin,Morning Star,,3900.0,2991773
+Solitary Island Chest 12000,Earth Hammer,,6400.0,2991773
+Solitary Island Chest Hi-Potion,Sylph->Crbnkl->Phenix->Syldra,,0.0,2991773
+Solitary Island Chest Protect Drink,Fire Black Magic Progressive,,0.0,2991773
+Solitary Island Chest BeastKiller,????->Fusion->Exploder->DrkShock,,0.0,2991773
+Solitary Island Chest RisingSun,Pinwheel,,12500.0,2991773
+Solitary Island Chest Guard Ring,Wall Ring,,10000.0,2991773
+Solitary Island Chest Crystal Helm,Wonder Wand,,5000.0,2991773
+Solitary Island Chest 9000,Speed Drink,MIB,55.0,2991773
+Solitary Island Chest Elixir,DarkMatter,,25000.0,2991773
+Solitary Island Chest DarkMatter,Coral Sword,,1400.0,2991773
+Solitary Island Chest Circlet,DragonFang,MIB,2500.0,2991773
+Fork Tower L. Chest Ether,MP +X%,,0.0,2991773
+Fork Tower L. Chest Wonder Wand,8000 gil,,8000.0,2991773
+Fork Tower R. Chest Hi-Potion,9000 gil,,9000.0,2991773
+Fork Tower R. Chest Defender Sword,MgcSword Ability Progressive,,0.0,2991773
+Great Trench Chest Water Scroll,Sasuke,,10000.0,2991773
+Great Trench Chest Flame Ring,Void->Demi->Qrter->Old,,0.0,2991773
+Great Trench Chest DragonFang,Bard Job Crystal,,0.0,2991773
+Great Trench Chest Ether,Cure White Magic Progressive,,0.0,2991773
+Great Trench Chest Phoenix Down,Yoichi Bow,,10000.0,2991773
+Great Trench Chest Kaiser Knuckles,Equip Swords,,0.0,2991773
+Istory Falls Chest Ether,10000 gil,,10000.0,2991773
+Istory Falls Chest TurtleShell,Ether,,750.0,2991773
+Istory Falls Chest Air Lance,Mediator Job Crystal,,0.0,2991773
+Istory Falls Chest Giant Drink,IceBrand,,5500.0,2991773
+Istory Falls Chest RuneEdge,Equip Bows,,0.0,2991773
+Istory Falls Chest Guard Ring,Slow->Stop->Slow2,,0.0,2991773
+Istory Falls Chest Wall Ring,RegalCut,,240.0,2991773
+Istory Falls Chest Phoenix Down,Elf Cape,,2000.0,2991773
+Istory Falls Chest Enhancer,Dimen Ability Progressive,,0.0,2991773
+Istory Falls Chest 12000,Thunder Scroll,,100.0,2991773
+Istory Falls Chest Artemis Bow,GuardOff->Hammer->MghtyGrd,,0.0,2991773
+Istory Falls Chest Pinwheel,4400 gil,,4400.0,2991773
+Istory Falls Chest Aegis Shield,Training Suit,,225.0,2991773
+Istory Falls Chest Giant's Axe,Chemist Job Crystal,,0.0,2991773
+Phoenix Tower Pot 5000,Broadsword,MIB,140.0,2991773
+Phoenix Tower Pot Phoenix Down,Thunder Scroll,MIB,100.0,2991773
+Phoenix Tower Pot 10000,Plumed Hat,,175.0,2991773
+Phoenix Tower Pot 15000,Dagger,MIB,150.0,2991773
+Phoenix Tower Pot 20000,Maiden's Kiss,,30.0,2991773
+Phoenix Tower Pot Avis Killer,Cotton Robe,,150.0,2991773
+Phoenix Tower Pot 25000,Cabin,MIB,300.0,2991773
+Mirage Village Barrel Thief Knife,Bandana,,1750.0,2991773
+Rift (Ruins) Chest Ether,RedMage Job Crystal,,0.0,2991773
+Rift (Ruins) Chest Cabin,Aegis Shield,,2250.0,2991773
+Rift (Ruins) Chest Elixir,990 gil,,990.0,2991773
+Rift (Ruins) Chest DarkMatter,Mythril Sword,,440.0,2991773
+Rift (Ruins) Chest Drain Sword,Drain Sword,,8000.0,2991773
+Rift (Forest) Chest DragonFang,2000 gil,,2000.0,2991773
+Rift (Forest) Chest Ribbon,FrogSong->TinySong->MoonFlut,,0.0,2991773
+Rift (Forest) Chest Enhancer,Rod,,100.0,2991773
+Rift (Forest) Chest Lillith Rod,Antidote,,15.0,2991773
+Rift (Cave) Chest Angel Ring,5000 gil,,5000.0,2991773
+Rift (Cave) Chest Coral Ring,Crystal Shield,,4500.0,2991773
+Rift (Castle) Chest Thor Hammer,Equip Spears,,0.0,2991773
+Rift (Castle) Chest Running Shoes,8000 gil,,8000.0,2991773
+Rift (Castle) Chest Red Shoes,Jump,,0.0,2991773
+Rift (Castle) Chest Rainbow Dress,18000 gil,,18000.0,2991773
+Rift (Castle) Chest ManEater,Summon Ability Progressive,,0.0,2991773
+The Void Chest Pinwheel,Thunder Whip,,1100.0,2991773
+The Void Chest Elixir,HP +X%,,0.0,2991773
+The Void Chest Ragnarok,Diamond Armlet,MIB,2000.0,2991773
+WingRaptor New,Rune Axe,,10000.0,2991773
+Siren New,Coral Ring,,25000.0,2991773
+Sergeant & DeathClaw New,Holy Lance,,10000.0,2991773
+Sandworm New,Masamune,,10000.0,2991773
+ArchaeAvis New,Avis Killer,,10000.0,2991773
+Titan New,Yoichi Bow,,10000.0,2991773
+Abductor New,Excalibur,,10000.0,2991773
+HiryuuPlant New,Murasume,,10000.0,2991773
+Gilgamesh 3 & Enkidou New,Tinkerbell,,750.0,2991773
+Atmos New,Earth Hammer,,6400.0,2991773
+Carbunkle New,Mirage Vest,,5000.0,2991773
+Gilgamesh 4 New,Sasuke,,10000.0,2991773
+Antlion New,Defender Sword,,5500.0,2991773
+Merugene New,Murasume,,10000.0,2991773
+Omniscient New,Excalibur,,10000.0,2991773
+Leviathan New,Excailbur,,5000.0,2991773
+Stalker New,Thor Hammer,,15000.0,2991773
+Shiva New,Murasume,,10000.0,2991773

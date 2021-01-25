@@ -50,7 +50,7 @@ ITEM_TYPE = "40"
 ITEM_SHOP_TYPE = "01"
 MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
-VERSION = "FFV CareerDay v0.98"
+VERSION = "FFV CareerDay v0.995"
 
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
@@ -1329,6 +1329,7 @@ class Conductor():
             portal_boss_str = random.choice(['DragonClan','RainSenshi','SomberMage'])
         else:
             portal_boss_str =  self.configs['portal_boss']
+        self.portal_boss_str = portal_boss_str
             
         output_str = self.EM.set_portal_boss(self.DM.files['portal_bosses'],portal_boss_str, output_str)
         return output_str
@@ -1675,6 +1676,7 @@ class Conductor():
         hint_text = []
             
         keys = self.RM.get_rewards_by_style('key')
+        keys = [i for i in keys if i.description != 'WingRaptor']
         
         keys_main = []
         keys_barren = []
@@ -1712,7 +1714,7 @@ class Conductor():
         tablet_reqs = []
         for tablet in tablets:
     #        breakpoint()
-            logging.error(">>>>>>>>>>>:"+tablet.description)
+            # logging.error(">>>>>>>>>>>:"+tablet.description)
             # for each tablet, iterate through required keys for that tablet
             if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
                 tablet_reqs = getattr(tablet, 'required_key_items')
@@ -1727,23 +1729,27 @@ class Conductor():
                     if tablet_reqs == []:
                         loop_flag = False
                         break
-                    logging.error(tablet_reqs)
+                    if type(tablet_reqs) == str:
+                        tablet_reqs = [tablet_reqs]
+                    # logging.error(tablet_reqs)
                     # find the reward associated with the latest tablet_req
-                    new_reward = [x for x in keys if x.collectible.collectible_name == tablet_reqs[0]][0]
-                    if new_reward not in required_rewards:
-                        required_rewards.append(new_reward)
-                    # check if this new reward has any reqs of its own, if it does, add to tablet_reqs
-                    if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
-                        new_reward_reqs = getattr(tablet, 'required_key_items')
-                    else:
-                        new_reward_reqs = getattr(new_reward,'required_key_items_lock'+str(self.configs['world_lock']))
-                    if new_reward_reqs:
-                        for i in new_reward_reqs:
-                            if i not in tablet_reqs:
-    #                            logging.error("Adding %s to tablet_reqs" % i)
-                                tablet_reqs.append(i)
-                    tablet_reqs = tablet_reqs[1:]
-    #                time.sleep(2)
+                    new_rewards = [x for x in keys if x.collectible.collectible_name == tablet_reqs[0]]                       
+                    if new_rewards:
+                        new_reward = new_rewards[0]
+                        if new_reward not in required_rewards:
+                            required_rewards.append(new_reward)
+                        # check if this new reward has any reqs of its own, if it does, add to tablet_reqs
+                        if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
+                            new_reward_reqs = getattr(tablet, 'required_key_items')
+                        else:
+                            new_reward_reqs = getattr(new_reward,'required_key_items_lock'+str(self.configs['world_lock']))
+                        if new_reward_reqs:
+                            for i in new_reward_reqs:
+                                if i not in tablet_reqs:
+        #                            logging.error("Adding %s to tablet_reqs" % i)
+                                    tablet_reqs.append(i)
+                        tablet_reqs = tablet_reqs[1:]
+        #                time.sleep(2)
             else:
                 continue # if there's no requirements, move on to next 
                         
@@ -1949,7 +1955,7 @@ class Conductor():
         try:
             randomized_weapons_ids = [i.data_dict['item_id'] for i in self.WM.weapons]
         except:
-            logging.error("no weapon manager")
+            logging.error("No weapon manager, skipping...")
 
         for i in range(0, len(kuzar_reward_addresses)):
 #            logging.error(i)
@@ -1978,6 +1984,7 @@ class Conductor():
                 kuzar_text = self.TP.run_kuzar_encrypt({data.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
 #                logging.error("Kuzar normal: %s" % (data.reward_name))
                 output = output + kuzar_text
+
         return output
 
 
@@ -1997,16 +2004,16 @@ class Conductor():
     def translateBool(self, boolean):
         
         if type(boolean) == bool:
-            logging.error("Argument passed in to translate: %s, returning original as boolean" % (boolean))
+            # logging.error("Argument passed in to translate: %s, returning original as boolean" % (boolean))
             return boolean
         if boolean == "false" or boolean == "False" or boolean == "off" or boolean == "0" or boolean == 0:
-            logging.error("Argument passed in to translate: %s, returning boolean False" % (boolean))
+            # logging.error("Argument passed in to translate: %s, returning boolean False" % (boolean))
             return False
         if boolean == "true" or boolean == "True" or boolean == "on" or boolean == "1" or boolean == 1:
-            logging.error("Argument passed in to translate: %s, returning boolean True" % (boolean))
+            # logging.error("Argument passed in to translate: %s, returning boolean True" % (boolean))
             return True
         else:
-            logging.error("Argument passed in to translate: %s, returning NONETYPE" % (boolean))
+            # logging.error("Argument passed in to translate: %s, returning NONETYPE" % (boolean))
             return None
         
 #   Unused, but may be necessary one day. The concept here is to iterate through unplaced collectibles and assign them to random rewards
@@ -2017,6 +2024,8 @@ class Conductor():
     def spoiler_settings(self):
         output_str = '\n-----SETTINGS-----\n'
         for k, v in self.configs.items():
+            if k == 'portal_boss' and v == "Random":
+                v = "%s (%s)" % (v, self.portal_boss_str)
             output_str = output_str + '{:30}'.format(str(k)) + '{:30}'.format(str(v)) + "\n"
         return output_str + "\n"
     
@@ -2070,7 +2079,57 @@ class Conductor():
         return patch
         
         
+    
+    def create_hash(self):
+        choices = {"BB":"Crystal",
+                    "BC":"Key",
+                    "BF":"Hammer",
+                    "C0":"Tent",
+                    "C1":"Ribbon",
+                    "C2":"Drink",
+                    "C3":"Suit",
+                    "C4":"Song",
+                    "C6":"Shuriken",
+                    "C8":"Scroll",
+                    "CA":"Claw",
+                    "CC":"Glove",
+                    "E3":"Sword",
+                    "E4":"White",
+                    "E5":"Black",
+                    "E6":"Dimension",
+                    "E7":"Knife",
+                    "E8":"Spear",
+                    "E9":"Axe",
+                    "EA":"Katana",
+                    "EB":"Rod",
+                    "EC":"Staff",
+                    "ED":"Bow",
+                    "EE":"Harp",
+                    "EF":"Whip",
+                    "F0":"Bell",
+                    "F1":"Shield",
+                    "F2":"Helmet",
+                    "F3":"Armor",
+                    "F4":"Ring",}
         
+        choice_list = choices.keys()
+        chosen = [random.choice(list(choice_list)) for i in range(0,5)]
+        
+        patch = '\n;HASH CODE\norg $E73400\ndb $67, $7A, $8C, $81, $CF, $96'
+        spoiler = 'HASH CODE: '
+        for c in chosen:
+            spoiler += "%s " % choices[c]
+            patch += ", $%s, $96" % c
+            
+            
+        patch += ', $00\n\n'
+        spoiler += '\n'
+        return spoiler, patch        
+        
+        
+        
+        
+    
 
     def randomize(self, random_engine=None):
         logging.error("Starting randomization process.")
@@ -2140,8 +2199,6 @@ class Conductor():
         patch = patch + self.odin_location_fix_patch
         if self.configs['randomize_loot'].lower() != "none":
             patch = patch + self.EM.get_loot_patch()
-        if self.jobpalettes:
-            patch = patch + self.randomize_job_color_palettes()
         if self.item_randomization:
             patch = patch + self.WM.get_patch
             patch = patch + weapon_shop_price_patch 
@@ -2167,6 +2224,13 @@ class Conductor():
         spoiler = "CAREER DAY SPOILER LOG\n"
         if self.seed is not None and self.setting_string is not None:
             spoiler = spoiler + self.spoiler_intro()
+
+        logging.error("Creating hash...")
+        temp_hash, temp_hash_patch = self.create_hash()
+        patch += temp_hash_patch
+        spoiler = spoiler + temp_hash
+        
+        logging.error("Retreiving spoiler data")
         spoiler = spoiler + self.spoiler_settings()
         spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.get_collectible_counts()                
@@ -2188,6 +2252,13 @@ class Conductor():
         temp_hints_asar, temp_hints = self.assign_hints()
         patch = patch + temp_hints_asar
         spoiler = spoiler + temp_hints
+        
+        if self.jobpalettes:
+            patch = patch + self.randomize_job_color_palettes()
+
+        
+        
+        
         logging.error("Finished randomization process.")
         return(spoiler, patch)
 
@@ -2198,8 +2269,8 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    SEED_NUM = 315358
-    # SEED_NUM = random.randint(1,1000000)
+    # SEED_NUM = 1605
+    SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {'seed': SEED_NUM, 
                            'fjf': 'true', 
@@ -2230,7 +2301,7 @@ if __name__ == "__main__":
                            'default_abilities': 'false', 
                            'learning_abilities': 'false', 
                            'free_tablets' : '0',
-                           'item_randomization_percent': '33', 
+                           'item_randomization_percent': '100', 
                            'battle_speed': '3',
                            'red_color': '0', 
                            'blue_color': '0', 
@@ -2239,7 +2310,7 @@ if __name__ == "__main__":
                            'place_all_rewards': 'true', 
                            'randomize_loot': 'match', 
                            'loot_percent': '25', 
-                           'portal_boss': 'DragonClan', 
+                           'portal_boss': 'Random', 
                            'setting_string': 'P W1 T5|1 A PR I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CA RND AB CDA pbSomberMage', 
                            'fileLocation': 'https://bigbridgecareerday.s3.amazonaws.com/careerdayuploads/1593387118413-Final%20Fantasy%20V%20%28J%29.smc',
                            'jobpalettes':'true'}

@@ -11,7 +11,7 @@ item_id,readable_name,valid,type,subtype,value,max_count,tier,related_jobs
 09,Orialcon,TRUE,weapon,knife,5,3,5,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
 0A,Air Lance,TRUE,weapon,knife,6,3,6,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
 0B,Assassin,TRUE,weapon,knife,7,1,7,"[""Knight"", ""Thief"", ""Dragoon"", ""Ninja"", ""Samurai"", ""Berserker"", ""Hunter"", ""MysticKnight"", ""BlackMage"", ""TimeMage"", ""Summoner"", ""Blue Mage"", ""Red Mage"", ""Mediator"", ""Chemist"", ""Geomancer"", ""Bard"", ""Dancer"", ""Mimic""]"
-0C,Sasuke,TRUE,weapon,knife,7,1,7,[“Ninja”]
+0C,Hardened Dagger,TRUE,weapon,knife,7,1,7,[“Ninja”]
 0D,Broadsword,TRUE,weapon,sword,1,3,1,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
 0E,RegalCut,TRUE,weapon,sword,1,3,1,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
 0F,Mythril Sword,TRUE,weapon,sword,2,3,2,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"

@@ -11,7 +11,7 @@ idx,address,shop_type,id,content_name,price,resell_byte,price_byte,int_price,res
 10,D12A12,03,09,Orialcon,0222,02,22,3400,HALF,,,,,,
 11,D12A14,03,0A,Air Lance,0244,02,44,6800,HALF,,,,,,
 12,D12A16,03,0B,Assassin,0402,04,02,20000,HALF,,,,,,
-13,D12A18,03,0C,Sasuke,0402,04,02,20000,HALF,,,,,,
+13,D12A18,03,0C,Hardened,0402,04,02,20000,HALF,,,,,,
 14,D12A1A,03,0D,Broadsword,011C,01,1C,280,HALF,,,,,,
 15,D12A1C,03,0E,RegalCut,0130,01,30,480,HALF,,,,,,
 16,D12A1E,03,0F,Mythril Sword,0158,01,58,880,HALF,,,,,,

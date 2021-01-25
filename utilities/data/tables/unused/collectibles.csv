@@ -293,7 +293,7 @@ id,readable_name,readable_location,type,type_address,type_data,item_address,item
 292,Mirage Vest,Mirage Vest from Chocobo Tour/Mirage Village,Item,C0FB00,40,C0FB01,AE,Reward
 293,Excalibur,12 Kuzar Events,Item,C0FB02,40,C0FB03,15,Reward
 294,Assassin,12 Kuzar Events,Item,C0FB04,40,C0FB05,0B,Reward
-295,Sasuke,12 Kuzar Events,Item,C0FB06,40,C0FB07,0C,Reward
+295,Hardened Dagger,12 Kuzar Events,Item,C0FB06,40,C0FB07,0C,Reward
 296,Holy Lance,12 Kuzar Events,Item,C0FB08,40,C0FB09,1F,Reward
 297,Rune Axe,12 Kuzar Events,Item,C0FB0A,40,C0FB0B,27,Reward
 298,Masamune,12 Kuzar Events,Item,C0FB0C,40,C0FB0D,2F,Reward

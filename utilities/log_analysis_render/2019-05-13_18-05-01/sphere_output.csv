@@ -1,0 +1,23 @@
+playthrough_log,all_keys_obtained_flag,completeable_seed_flag,sphere_num,tablets_sphere_num,sphere_zero_keys_num,seed
+"Number of sphere zero keys: (9)
+Sphere 0:	Anti Barrier	 (Karlabos loc)
+Sphere 0:	Bracelet	 (Siren loc)
+Sphere 0:	Canal Key	 (AdamanTiMi loc)
+Sphere 0:	Elder Branch	 (Titan loc)
+Sphere 0:	Ifrit's Fire	 (Abductor loc)
+Sphere 0:	Steamship Key	 (Merugene loc)
+Sphere 0:	4th Tablet	 (Odin loc)
+Sphere 0:	2nd Tablet	 (Bahamut loc)
+Sphere 0:	Submarine Key	 (Ifrit loc)
+Sphere 1:	Moogle Suit	 (Sergeant & DeathClaw loc via Steamship Key)
+Sphere 1:	Adamantite	 (Gilgamesh 1 loc via Anti Barrier)
+Sphere 1:	Pyramid Page	 (Atmos loc via Submarine Key)
+Sphere 1:	Hiryuu Call	 (Guardians loc via Elder Branch)
+Sphere 1:	Shrine Page	 (Carbunkle loc via Anti Barrier, Bracelet)
+Sphere 1:	Falls Page	 (Gilgamesh 4 loc via Anti Barrier, Bracelet)
+Sphere 1:	Sandworm Bait	 (Stalker loc via Shrine Page)
+Sphere 2:	Walse Tower Key	 (Sol Cannon loc via Adamantite)
+Sphere 2:	3rd Tablet	 (ArchaeAvis loc via Adamantite)
+All tablets NOT obtained.
+All keys NOT obtained.
+",False,False,100,0,9,9247417

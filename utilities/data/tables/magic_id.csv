@@ -61,7 +61,7 @@ magic_id,readable_name,type,value,max_count,valid,item_randomization_valid,relat
 3B,Float,Time,2,1,TRUE,TRUE,[“TimeMage”],13,1,57
 3C,Demi,Time,2,1,TRUE,TRUE,[“TimeMage”],14,1,62
 3D,Stop,Time,2,1,TRUE,TRUE,[“TimeMage”],12,2,70
-3E,Exit,Time,2,1,TRUE,FALSE,[“TimeMage”],15,2,
+3E,Exit,Time,2,1,FALSE,FALSE,[“TimeMage”],15,2,
 3F,Comet,Time,2,1,TRUE,TRUE,[“TimeMage”],16,3,92
 40,Slow2,Time,2,1,TRUE,TRUE,[“TimeMage”],12,3,81
 41,Reset,Time,2,1,TRUE,FALSE,[“TimeMage”],13,1,

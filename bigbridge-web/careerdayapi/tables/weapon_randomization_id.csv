@@ -11,7 +11,7 @@ item_id,readable_name,valid,type,subtype,value,max_count,tier,textbox_addr,textm
 09,Orialcon,TRUE,weapon,knife,5,3,5,E75938,D113D1,D1006C,D12A12
 0A,Air Lance,TRUE,weapon,knife,6,3,6,E75950,D113DA,D10078,D12A14
 0B,Assassin,TRUE,weapon,knife,7,1,7,E75968,D113E3,D10084,D12A16
-0C,Sasuke,TRUE,weapon,knife,7,1,7,E75980,D113EC,D10090,D12A18
+0C,Hardened,TRUE,weapon,knife,7,1,7,E75980,D113EC,D10090,D12A18
 0D,Broadsword,TRUE,weapon,sword,1,3,1,E75998,D113F5,D1009C,D12A1A
 0E,RegalCut,TRUE,weapon,sword,1,3,1,E759B0,D113FE,D100A8,D12A1C
 0F,Mythril Sword,TRUE,weapon,sword,2,3,2,E759C8,D11407,D100B4,D12A1E

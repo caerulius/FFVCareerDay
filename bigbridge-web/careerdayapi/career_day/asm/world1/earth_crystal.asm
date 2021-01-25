@@ -116,7 +116,7 @@ db $CA, $33, $01                ;Set Flag 2/3/4/5/33 01
 db $CA, $34, $01                ;Set Flag 2/3/4/5/34 01
 db $CA, $F8, $00                ;Set Flag 2/3/4/5/F8 00
 
-db $A3, $B8                     ;Clear Event Flag 0B8
+; db $A3, $B8                     ;Clear Event Flag 0B8
 
 ; CAREERDAY
 ; Remove event flag disabling free access back to Lonka

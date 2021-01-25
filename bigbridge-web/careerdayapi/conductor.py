@@ -16,7 +16,6 @@ from formation import *
 from text_parser import *
 from monster_in_a_box import *
 from item_randomization import *
-from ai_parser import *
 from misc_features import *
 
 logging.basicConfig(level=logging.ERROR, format="%(asctime)-15s %(message)s")
@@ -51,7 +50,7 @@ ITEM_TYPE = "40"
 ITEM_SHOP_TYPE = "01"
 MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
-VERSION = "FFV CareerDay v0.98"
+VERSION = "FFV CareerDay v0.995"
 
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
@@ -475,7 +474,8 @@ class Conductor():
 
             if mib is not None and next_reward.reward_style == "chest": #only mibs in chests
                 #logging.error("Area rewards: doing the mib stuff")
-                to_place = self.CM.get_random_collectible(self.RE,reward_loc_tier=next_reward.tier,next_reward=next_reward, respect_weight=True, of_type=Item, monitor_counts=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, force_tier = 9) #only items in mibs
+                chosen_tier = random.choice([5,6,7,8,9])
+                to_place = self.CM.get_random_collectible(self.RE,reward_loc_tier=next_reward.tier,next_reward=next_reward, respect_weight=True, of_type=Item, monitor_counts=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, force_tier = chosen_tier) #only items in mibs
                 next_reward.mib_type = mib.monster_chest_data
                 mib.processed = True
                 #logging.error(mib.processed)
@@ -1324,214 +1324,14 @@ class Conductor():
             return output_str
         
         
-    def set_portal_boss(self):
-        
-        
-        # This all currently supports 3 enemies, which replace LiquiFlame/Kuzar/SolCannon from Phoenix Tower
-        # with entirely new enemies
-        # It's ASSUMING there's three enemies as part of the process
-        
-        
-        # STEPS TO MAKE NEW BOSSES
-        # You can ignore the section below if you have 3 enemies in the formation 
-        # Look for "UPDATE STEP" in notes below
-        
-        output_str = ''
-        output_str = '\n\n; PORTAL BOSS\n'
-        
-        # Change liquiflame formation to not have opening hide and no ABP
-        output_str = output_str + "\n" + "; Formation changes"
-        output_str = output_str + "\n" + ("org $D04EB0")
-        output_str = output_str + "\n" + ("db $00, $80, $00")
-        
-        # Add 3 bosses for liquiflame, kuzar, solcannon
-        output_str = output_str + "\n" + ("org $D04EB4")
-        output_str = output_str + "\n" + ("db $65, $66, $67")
-        # Change to Exdeath W2 music and Strong Boss fade
-        output_str = output_str + "\n" + ("org $D04EBE")
-        output_str = output_str + "\n" + ("db $28, $21")
-        
-        
-        # set liquidflame spot to AI
-        output_str = output_str + "\n" + ";AI table changes"
-        output_str = output_str + "\n" + ("org $D09ECA")
-        output_str = output_str + "\n" + ("db $E0, $F1")
-        # set kuzar ai
-        output_str = output_str + "\n" + ("db $E0, $F2")
-        # set solcannon ai
-        output_str = output_str + "\n" + ("db $E0, $F3")
-        
-        output_str = output_str + "\n" + ";Formation table changes"
-        # Formation table, which will correspond to battle code $BD, $55, $FF found in the custom event
-        output_str = output_str + "\n" + ("org $D07954")
-        output_str = output_str + "\n" + ("db $EB, $01") # ; use liquiflame formation in free space on lookup table
-        output_str = output_str + "\n" + ("db $EB, $01") # ; duplicate for table sometimes pulling next address
-        # Now pivot on which type of portal boss 
-        
-        df = self.DM.files['portal_bosses']
-        df = df[df['enemy_name'] == self.configs['portal_boss']]
-        
-        enemies = [[x for x in self.EM.enemies if x.idx == '357'][0],
-                   [x for x in self.EM.enemies if x.idx == '358'][0],
-                   [x for x in self.EM.enemies if x.idx == '359'][0]
-                  ]
-        
-        for enemy in enemies:
+    def set_portal_boss(self, output_str):
+        if self.configs['portal_boss'] == "Random":
+            portal_boss_str = random.choice(['DragonClan','RainSenshi','SomberMage'])
+        else:
+            portal_boss_str =  self.configs['portal_boss']
+        self.portal_boss_str = portal_boss_str
             
-            data = df[df['idx']==int(enemy.idx)].iloc[0]
-            for i in data.index:
-                if i == 'enemy_name':
-                    setattr(enemy,i,str(data[i]))
-                if "num_" in i:
-                    setattr(enemy,i,str(data[i]).zfill(2))
-                if i in [  'atk_index',
-                            'elemental_immune',
-                            'status0_immune',
-                            'status1_immune',
-                            'status2_immune',
-                            'elemental_absorb',
-                            'unavoidable_atk',
-                            'elemental_weakness',
-                            'enemy_type',
-                            'special_immune',
-                            'initial_status0',
-                            'initial_status1',
-                            'initial_status2',
-                            'initial_status3',
-                            'steal_common',
-                            'steal_rare',
-                            'drop_common',
-                            'drop_rare']: 
-                    setattr(enemy,i,str(data[i]).zfill(2))
-            enemy.update_all()
-            output_str = output_str + "\n" + (enemy.asar_output)
-
-        # Change AI 
-        if self.configs['portal_boss'] == 'SomberMage':
-            
-            ########## 
-            # UPDATE STEP
-            # Custom write AI for each of the forms
-            ##########
-            output_str = output_str + "\n" + ";AI Changes"
-            #LiquiFlame AI
-            
-            data = parse_ai_data('somber_mage.txt')
-            output_str = output_str + "\n" + data
-
-
-            # End of battle dialogue
-            output_str = output_str + "\n" + "org $D0F1D4"
-            output_str = output_str + "\n" + "db $B0, $4F"
-            
-            output_str = output_str + "\n" + "org $E74FB0"
-            output_str = output_str + "\n" + "db $A3, $A3, $A3, $00"
-            ########## 
-            # UPDATE STEP
-            # Change formation x/y coords if necessary. Default is middle
-            ##########
-            output_str = output_str + "\n" + ";Enemy X/Y Coords"
-            # ; Formation coords. Low byte x, High byte y coord
-            output_str = output_str + "\n" + ("org $d09858")
-            output_str = output_str + "\n" + ("db $78, $78, $78, $78, $78, $78, $78, $78") # ; default
-
-            ########## 
-            # UPDATE STEP
-            # Change sprites. The addresses are always the same, but you can grab from enemy_data.csv, the rightmost columns
-            # Then change the 4th byte (and also the $00 or $01 on the 3rd byte) for palette swaps
-            ##########
-            
-            # Change sprites 
-            # ; Cherie sprite
-            output_str = output_str + "\n" + "; Battle sprite changes"
-            output_str = output_str + "\n" + ("org $D4B879")
-            output_str = output_str + "\n" + ("db $31, $27, $01, $68, $51")
-            output_str = output_str + "\n" + ("db $31, $27, $01, $69, $51")
-            output_str = output_str + "\n" + ("db $31, $27, $01, $5f, $51")
-            
-
-            ########## 
-            # UPDATE STEP
-            # Change name of enemy with text_parser2.py, limit of 10 characters
-            ##########            
-            # ; Change LiquiFlame, Kuzar and Sol Cannon name to SOMBERMAGE
-            output_str = output_str + "\n" + ("org $E00E42")
-            output_str = output_str + "\n" + ("db $72, $88, $86, $7B, $7E, $8B, $6C, $7A, $80, $7E")
-            output_str = output_str + "\n" + ("db $72, $88, $86, $7B, $7E, $8B, $6C, $7A, $80, $7E")
-            output_str = output_str + "\n" + ("db $72, $88, $86, $7B, $7E, $8B, $6C, $7A, $80, $7E")
-            
-            ########## 
-            # UPDATE STEP
-            # Change dialogue of enemy before battle
-            ##########            
-
-            output_str = output_str + "\n" + "; Pre-battle dialogue"
-            output_str = output_str + "\n" + "org $E14BF1"
-            output_str = output_str + "\n" + "db $73, $81, $7E, $96, $90, $82, $87, $7D, $96, $82, $8C, $96, $7C, $7A, $85, $85, $82, $87, $80, $A3, $A3, $A3, $96, $82, $8D, $99, $8C, $01, $8D, $82, $86, $7E, $96, $7F, $88, $8B, $96, $8E, $8C, $96, $8D, $88, $96, $7F, $82, $80, $81, $8D, $A3, $00"
-
-
-        if self.configs['portal_boss'] == 'RainSenshi':
-            
-            ########## 
-            # UPDATE STEP
-            # Custom write AI for each of the forms
-            ##########
-            output_str = output_str + "\n" + ";AI Changes"
-            #LiquiFlame AI
-            
-            data = parse_ai_data('rain_senshi.txt')
-            output_str = output_str + "\n" + data
-
-
-            # End of battle dialogue
-            output_str = output_str + "\n" + "org $D0F1D4"
-            output_str = output_str + "\n" + "db $B0, $4F"
-            
-            output_str = output_str + "\n" + "org $E74FB0"
-            output_str = output_str + "\n" + "db $A3, $A3, $A3, $00"
-            ########## 
-            # UPDATE STEP
-            # Change formation x/y coords if necessary. Default is middle
-            ##########
-            output_str = output_str + "\n" + ";Enemy X/Y Coords"
-            # ; Formation coords. Low byte x, High byte y coord
-            output_str = output_str + "\n" + ("org $d09858")
-            output_str = output_str + "\n" + ("db $78, $78, $78, $78, $78, $78, $78, $78") # ; default
-
-            ########## 
-            # UPDATE STEP
-            # Change sprites. The addresses are always the same, but you can grab from enemy_data.csv, the rightmost columns
-            # Then change the 4th byte (and also the $00 or $01 on the 3rd byte) for palette swaps
-            ##########
-            
-
-            # Change sprites 
-            output_str = output_str + "\n" + "; Battle sprite changes"
-            output_str = output_str + "\n" + ("org $D4B879")
-            output_str = output_str + "\n" + ("db $2C, $FF, $01, $5D, $4B")
-            output_str = output_str + "\n" + ("db $2C, $FF, $01, $4F, $4B")
-            output_str = output_str + "\n" + ("db $86, $D3, $01, $3B, $12")
-
-
-            ########## 
-            # UPDATE STEP
-            # Change name of enemy with text_parser2.py, limit of 10 characters
-            ##########            
-            # ; Change LiquiFlame, Kuzar and Sol Cannon name to name of enemy
-            output_str = output_str + "\n" + ("org $E00E42")
-            output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
-            output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
-            output_str = output_str + "\n" + ("db $71, $7A, $82, $87, $72, $7E, $87, $8C, $81, $82")
-            
-            ########## 
-            # UPDATE STEP
-            # Change dialogue of enemy before battle
-            ##########            
-
-            output_str = output_str + "\n" + "; Pre-battle dialogue"
-            output_str = output_str + "\n" + "org $E14BF1"
-            output_str = output_str + "\n" + "db $63, $8B, $7A, $90, $96, $92, $88, $8E, $8B, $96, $85, $7A, $8C, $8D, $96, $7B, $8B, $7E, $7A, $8D, $81, $01, $7A, $8C, $96, $8D, $81, $7E, $96, $8D, $82, $7D, $7A, $85, $96, $90, $7A, $8F, $7E, $96, $7A, $89, $89, $8B, $88, $7A, $7C, $81, $7E, $8C, $A3, $00"
-
+        output_str = self.EM.set_portal_boss(self.DM.files['portal_bosses'],portal_boss_str, output_str)
         return output_str
 
     def spoiler_intro(self):
@@ -2179,6 +1979,7 @@ class Conductor():
                 kuzar_text = self.TP.run_kuzar_encrypt({data.reward_name.replace('->', '@').replace(' Progressive', '@'): kuzar_text_addresses[i]})
 #                logging.error("Kuzar normal: %s" % (data.reward_name))
                 output = output + kuzar_text
+
         return output
 
 
@@ -2218,6 +2019,8 @@ class Conductor():
     def spoiler_settings(self):
         output_str = '\n-----SETTINGS-----\n'
         for k, v in self.configs.items():
+            if k == 'portal_boss' and v == "Random":
+                v = "%s (%s)" % (v, self.portal_boss_str)
             output_str = output_str + '{:30}'.format(str(k)) + '{:30}'.format(str(v)) + "\n"
         return output_str + "\n"
     
@@ -2271,7 +2074,57 @@ class Conductor():
         return patch
         
         
+    
+    def create_hash(self):
+        choices = {"BB":"Crys",
+                    "BC":"Key",
+                    "BF":"Hammer",
+                    "C0":"Tent",
+                    "C1":"Ribbon",
+                    "C2":"Dronk",
+                    "C3":"Suit",
+                    "C4":"Song",
+                    "C6":"Shuriken",
+                    "C8":"Scroll",
+                    "CA":"Claw",
+                    "CC":"Glove",
+                    "E3":"Sword",
+                    "E4":"White",
+                    "E5":"Black",
+                    "E6":"Dimension",
+                    "E7":"Knife",
+                    "E8":"Spear",
+                    "E9":"Axe",
+                    "EA":"Katana",
+                    "EB":"Rod",
+                    "EC":"Staff",
+                    "ED":"Bow",
+                    "EE":"Harp",
+                    "EF":"Whip",
+                    "F0":"Bell",
+                    "F1":"Shield",
+                    "F2":"Helmet",
+                    "F3":"Armor",
+                    "F4":"Ring",}
         
+        choice_list = choices.keys()
+        chosen = [random.choice(list(choice_list)) for i in range(0,5)]
+        
+        patch = '\n;HASH CODE\norg $E73400\ndb $67, $7A, $8C, $81, $CF, $96'
+        spoiler = 'HASH CODE: '
+        for c in chosen:
+            spoiler += "%s " % choices[c]
+            patch += ", $%s, $96" % c
+            
+            
+        patch += ', $00\n\n'
+        spoiler += '\n'
+        return spoiler, patch        
+        
+        
+        
+        
+    
 
     def randomize(self, random_engine=None):
         logging.error("Starting randomization process.")
@@ -2332,6 +2185,7 @@ class Conductor():
         patch = patch + self.SM.get_patch()
         patch = patch + self.SPM.get_patch()
         patch = patch + self.randomize_superbosses() # this comes first, because it updates the contents of EnemyManager. 
+        patch = patch + self.set_portal_boss(patch)
         patch = patch + self.EM.get_patch(relevant=True)
         patch = patch + self.FM.get_patch(self.remove_ned)
         # patch = patch + self.karnak_escape_patch()
@@ -2340,8 +2194,6 @@ class Conductor():
         patch = patch + self.odin_location_fix_patch
         if self.configs['randomize_loot'].lower() != "none":
             patch = patch + self.EM.get_loot_patch()
-        if self.jobpalettes:
-            patch = patch + self.randomize_job_color_palettes()
         if self.item_randomization:
             patch = patch + self.WM.get_patch
             patch = patch + weapon_shop_price_patch 
@@ -2363,11 +2215,17 @@ class Conductor():
 
             
         patch = patch + self.parse_configs()
-        patch = patch + self.set_portal_boss()
 
         spoiler = "CAREER DAY SPOILER LOG\n"
         if self.seed is not None and self.setting_string is not None:
             spoiler = spoiler + self.spoiler_intro()
+
+        logging.error("Creating hash")
+        temp_hash, temp_hash_patch = self.create_hash()
+        patch += temp_hash_patch
+        spoiler = spoiler + temp_hash
+        
+        logging.error("Retreiving spoiler data")
         spoiler = spoiler + self.spoiler_settings()
         spoiler = spoiler + self.starting_crystal_spoiler()
         spoiler = spoiler + self.get_collectible_counts()                
@@ -2389,6 +2247,13 @@ class Conductor():
         temp_hints_asar, temp_hints = self.assign_hints()
         patch = patch + temp_hints_asar
         spoiler = spoiler + temp_hints
+        
+        if self.jobpalettes:
+            patch = patch + self.randomize_job_color_palettes()
+
+        
+        
+        
         logging.error("Finished randomization process.")
         return(spoiler, patch)
 
@@ -2399,7 +2264,7 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    # SEED_NUM = 315358
+    # SEED_NUM = 558818
     SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {'seed': SEED_NUM, 
@@ -2425,13 +2290,13 @@ if __name__ == "__main__":
                            'enforce_all_jobs': 'false',
                            'progressive_bosses': 'false', 
                            'progressive_rewards': 'false', 
-                           'item_randomization': 'true', 
+                           'item_randomization': 'false', 
                            'abbreviated': 'true', 
                            'grantkeyitems': 'false', 
                            'default_abilities': 'false', 
                            'learning_abilities': 'false', 
                            'free_tablets' : '0',
-                           'item_randomization_percent': '33', 
+                           'item_randomization_percent': '0', 
                            'battle_speed': '3',
                            'red_color': '0', 
                            'blue_color': '0', 
@@ -2440,7 +2305,7 @@ if __name__ == "__main__":
                            'place_all_rewards': 'true', 
                            'randomize_loot': 'match', 
                            'loot_percent': '25', 
-                           'portal_boss': 'RainSenshi', 
+                           'portal_boss': 'Random', 
                            'setting_string': 'P W1 T5|1 A PR I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CA RND AB CDA pbSomberMage', 
                            'fileLocation': 'https://bigbridgecareerday.s3.amazonaws.com/careerdayuploads/1593387118413-Final%20Fantasy%20V%20%28J%29.smc',
                            'jobpalettes':'true'}

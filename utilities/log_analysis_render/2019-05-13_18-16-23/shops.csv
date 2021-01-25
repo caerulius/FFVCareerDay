@@ -1,0 +1,449 @@
+shop_name,shop_type,item,seed
+Tule Weapon,01,Golden Armor,3353832
+Tule Weapon,01,Circlet,3353832
+Tule Weapon,01,Gungnir,3353832
+Tule Weapon,01,Venom Rod,3353832
+Tule Weapon,01,Revivify,3353832
+Tule Weapon,01,None,3353832
+Tule Weapon,01,None,3353832
+Tule Weapon,01,None,3353832
+Tule Armor,07,X-Fight,3353832
+Tule Armor,07,Chemist,3353832
+Tule Armor,07,MP +30%,3353832
+Tule Armor,07,HP +10%,3353832
+Tule Armor,07,None,3353832
+Tule Armor,07,None,3353832
+Tule Armor,07,None,3353832
+Tule Armor,07,None,3353832
+Tule Inn,01,Lumina Robe,3353832
+Tule Inn,01,Judgement Staff,3353832
+Tule Inn,01,Fire Bow,3353832
+Tule Inn,01,Iron Armor,3353832
+Tule Inn,01,None,3353832
+Tule Inn,01,None,3353832
+Tule Inn,01,None,3353832
+Tule Inn,01,None,3353832
+Tule Magic,00,Vampire,3353832
+Tule Magic,00,Life2,3353832
+Tule Magic,00,Hero,3353832
+Tule Magic,00,Drain,3353832
+Tule Magic,00,Bolt3,3353832
+Tule Magic,00,None,3353832
+Tule Magic,00,None,3353832
+Tule Magic,00,None,3353832
+Carwen Weapon,01,CopperPlt,3353832
+Carwen Weapon,01,Broadsword,3353832
+Carwen Weapon,01,Wall Ring,3353832
+Carwen Weapon,01,Tricorn Hat,3353832
+Carwen Weapon,01,Phoenix Down,3353832
+Carwen Weapon,01,None,3353832
+Carwen Weapon,01,None,3353832
+Carwen Weapon,01,None,3353832
+Carwen Armor,00,Chocob,3353832
+Carwen Armor,00,Sleep,3353832
+Carwen Armor,00,Aero 3,3353832
+Carwen Armor,00,FrogSong,3353832
+Carwen Armor,00,WhiteWind,3353832
+Carwen Armor,00,None,3353832
+Carwen Armor,00,None,3353832
+Carwen Armor,00,None,3353832
+Carwen Inn,00,Cure2,3353832
+Carwen Inn,00,Qrter,3353832
+Carwen Inn,00,DethClaw,3353832
+Carwen Inn,00,Flash,3353832
+Carwen Inn,00,Golem,3353832
+Carwen Inn,00,None,3353832
+Carwen Inn,00,None,3353832
+Carwen Inn,00,None,3353832
+Carwen Magic,01,DiamndPlt,3353832
+Carwen Magic,01,Elixir,3353832
+Carwen Magic,01,Crystal Helm,3353832
+Carwen Magic,01,Elf Cape,3353832
+Carwen Magic,01,Speed Drink,3353832
+Carwen Magic,01,Golden Armor,3353832
+Carwen Magic,01,Sasuke,3353832
+Carwen Magic,01,Maiden's Kiss,3353832
+Worus Weapon,07,Bard,3353832
+Worus Weapon,07,None,3353832
+Worus Weapon,07,None,3353832
+Worus Weapon,07,None,3353832
+Worus Weapon,07,None,3353832
+Worus Weapon,07,None,3353832
+Worus Weapon,07,None,3353832
+Worus Weapon,07,None,3353832
+Worus Armor,00,Flare,3353832
+Worus Armor,00,TinySong,3353832
+Worus Armor,00,Fusion,3353832
+Worus Armor,00,????,3353832
+Worus Armor,00,Bolt3,3353832
+Worus Armor,00,None,3353832
+Worus Armor,00,None,3353832
+Worus Armor,00,None,3353832
+Worus Magic,01,Potion,3353832
+Worus Magic,01,Guardian,3353832
+Worus Magic,01,Tricorn Hat,3353832
+Worus Magic,01,Spear,3353832
+Worus Magic,01,IceBrand,3353832
+Worus Magic,01,Ribbon,3353832
+Worus Magic,01,OmegaMedl,3353832
+Worus Magic,01,Cabin,3353832
+Karnak Weapon 1,07,White Lv.3,3353832
+Karnak Weapon 1,07,Escape,3353832
+Karnak Weapon 1,07,DrgnSwd,3353832
+Karnak Weapon 1,07,Combine,3353832
+Karnak Weapon 1,07,None,3353832
+Karnak Weapon 1,07,None,3353832
+Karnak Weapon 1,07,None,3353832
+Karnak Weapon 1,07,None,3353832
+Karnak Weapon 2,00,Image,3353832
+Karnak Weapon 2,00,Magic,3353832
+Karnak Weapon 2,00,Break,3353832
+Karnak Weapon 2,00,None,3353832
+Karnak Weapon 2,00,None,3353832
+Karnak Weapon 2,00,None,3353832
+Karnak Weapon 2,00,None,3353832
+Karnak Weapon 2,00,None,3353832
+Karnak Armor,07,Equip Swords,3353832
+Karnak Armor,07,Black Lv.5,3353832
+Karnak Armor,07,Dimen Lv.5,3353832
+Karnak Armor,07,Red Lv.2,3353832
+Karnak Armor,07,None,3353832
+Karnak Armor,07,None,3353832
+Karnak Armor,07,None,3353832
+Karnak Armor,07,None,3353832
+Common World 1 Inn,07,White Lv.5,3353832
+Common World 1 Inn,07,Summoner,3353832
+Common World 1 Inn,07,Equip Spears,3353832
+Common World 1 Inn,07,White Lv.4,3353832
+Common World 1 Inn,07,None,3353832
+Common World 1 Inn,07,None,3353832
+Common World 1 Inn,07,None,3353832
+Common World 1 Inn,07,None,3353832
+Karnak Magic 1,07,Mediator,3353832
+Karnak Magic 1,07,Tame,3353832
+Karnak Magic 1,07,Samurai,3353832
+Karnak Magic 1,07,MgcSwrd Lv.7,3353832
+Karnak Magic 1,07,None,3353832
+Karnak Magic 1,07,None,3353832
+Karnak Magic 1,07,None,3353832
+Karnak Magic 1,07,None,3353832
+Karnak Magic 2,01,Coronet,3353832
+Karnak Magic 2,01,Thief's Glove,3353832
+Karnak Magic 2,01,Kotetsu,3353832
+Karnak Magic 2,01,Bone Mail,3353832
+Karnak Magic 2,01,Spear,3353832
+Karnak Magic 2,01,Angel Ring,3353832
+Karnak Magic 2,01,Water Scroll,3353832
+Karnak Magic 2,01,Rune Chime,3353832
+Karnak Magic 3,00,Aero,3353832
+Karnak Magic 3,00,Levia,3353832
+Karnak Magic 3,00,Void,3353832
+Karnak Magic 3,00,Love,3353832
+Karnak Magic 3,00,Vitality,3353832
+Karnak Magic 3,00,None,3353832
+Karnak Magic 3,00,None,3353832
+Karnak Magic 3,00,None,3353832
+Crescent Weapon,07,Black Lv.2,3353832
+Crescent Weapon,07,Slash,3353832
+Crescent Weapon,07,Evade,3353832
+Crescent Weapon,07,HP +20%,3353832
+Crescent Weapon,07,None,3353832
+Crescent Weapon,07,None,3353832
+Crescent Weapon,07,None,3353832
+Crescent Weapon,07,None,3353832
+Crescent Armor,01,DragonFang,3353832
+Crescent Armor,01,Silver Plate,3353832
+Crescent Armor,01,Epee Sword,3353832
+Crescent Armor,01,Circlet,3353832
+Crescent Armor,01,Potion,3353832
+Crescent Armor,01,Elixir,3353832
+Crescent Armor,01,None,3353832
+Crescent Armor,01,None,3353832
+Istory Relic,01,Aegis Shield,3353832
+Istory Relic,01,Silver Plate,3353832
+Istory Relic,01,Tricorn Hat,3353832
+Istory Relic,01,Staff of Light,3353832
+Istory Relic,01,Ether,3353832
+Istory Relic,01,Revivify,3353832
+Istory Relic,01,Antidote,3353832
+Istory Relic,01,Cabin,3353832
+Jacole Weapon,00,Phenix,3353832
+Jacole Weapon,00,Psych,3353832
+Jacole Weapon,00,Holy,3353832
+Jacole Weapon,00,L2 Old,3353832
+Jacole Weapon,00,Size,3353832
+Jacole Weapon,00,None,3353832
+Jacole Weapon,00,None,3353832
+Jacole Weapon,00,None,3353832
+Jacole Armor,01,Eyedrop,3353832
+Jacole Armor,01,Mythril Helm,3353832
+Jacole Armor,01,Dagger,3353832
+Jacole Armor,01,Black Robe,3353832
+Jacole Armor,01,Ether,3353832
+Jacole Armor,01,LuckMallet,3353832
+Jacole Armor,01,None,3353832
+Jacole Armor,01,None,3353832
+Common World 2 Inn 1,00,Aero 2,3353832
+Common World 2 Inn 1,00,Cure3,3353832
+Common World 2 Inn 1,00,Time Slip,3353832
+Common World 2 Inn 1,00,Sleep,3353832
+Common World 2 Inn 1,00,Hast2,3353832
+Common World 2 Inn 1,00,None,3353832
+Common World 2 Inn 1,00,None,3353832
+Common World 2 Inn 1,00,None,3353832
+Lix Guild,01,Mythril Staff,3353832
+Lix Guild,01,Golden Armor,3353832
+Lix Guild,01,Silver Armlet,3353832
+Lix Guild,01,Earth Bell,3353832
+Lix Guild,01,Silver Plate,3353832
+Lix Guild,01,None,3353832
+Lix Guild,01,None,3353832
+Lix Guild,01,None,3353832
+Lix Armor,01,Cotton Robe,3353832
+Lix Armor,01,Glasses,3353832
+Lix Armor,01,Leather Cap,3353832
+Lix Armor,01,Maiden's Kiss,3353832
+Lix Armor,01,None,3353832
+Lix Armor,01,None,3353832
+Lix Armor,01,None,3353832
+Lix Armor,01,None,3353832
+Lix Magic,07,Berserker,3353832
+Lix Magic,07,None,3353832
+Lix Magic,07,None,3353832
+Lix Magic,07,None,3353832
+Lix Magic,07,None,3353832
+Lix Magic,07,None,3353832
+Lix Magic,07,None,3353832
+Lix Magic,07,None,3353832
+Rugor Weapon,07,Counter,3353832
+Rugor Weapon,07,Catch,3353832
+Rugor Weapon,07,Equip Armors,3353832
+Rugor Weapon,07,Throw,3353832
+Rugor Weapon,07,None,3353832
+Rugor Weapon,07,None,3353832
+Rugor Weapon,07,None,3353832
+Rugor Weapon,07,None,3353832
+Rugor Armor,00,Condemn,3353832
+Rugor Armor,00,Ice,3353832
+Rugor Armor,00,Slow,3353832
+Rugor Armor,00,Old,3353832
+Rugor Armor,00,Odin,3353832
+Rugor Armor,00,None,3353832
+Rugor Armor,00,None,3353832
+Rugor Armor,00,None,3353832
+Common World 2 Inn 2,00,Speed,3353832
+Common World 2 Inn 2,00,Scan,3353832
+Common World 2 Inn 2,00,MindBlst,3353832
+Common World 2 Inn 2,00,Bahmut,3353832
+Common World 2 Inn 2,00,GuardOff,3353832
+Common World 2 Inn 2,00,None,3353832
+Common World 2 Inn 2,00,None,3353832
+Common World 2 Inn 2,00,None,3353832
+Bal/Kelb Weapon,07,Conjure,3353832
+Bal/Kelb Weapon,07,Caution,3353832
+Bal/Kelb Weapon,07,Aim,3353832
+Bal/Kelb Weapon,07,Agility,3353832
+Bal/Kelb Weapon,07,None,3353832
+Bal/Kelb Weapon,07,None,3353832
+Bal/Kelb Weapon,07,None,3353832
+Bal/Kelb Weapon,07,None,3353832
+Bal/Kelb Armor,00,Xzone,3353832
+Bal/Kelb Armor,00,Shiva,3353832
+Bal/Kelb Armor,00,Missile,3353832
+Bal/Kelb Armor,00,Fire2,3353832
+Bal/Kelb Armor,00,Doom,3353832
+Bal/Kelb Armor,00,None,3353832
+Bal/Kelb Armor,00,None,3353832
+Bal/Kelb Armor,00,None,3353832
+Kelb Weapon,07,MgcSwrd Lv.6,3353832
+Kelb Weapon,07,Dimen Lv.3,3353832
+Kelb Weapon,07,Dimen Lv.1,3353832
+Kelb Weapon,07,Control,3353832
+Kelb Weapon,07,None,3353832
+Kelb Weapon,07,None,3353832
+Kelb Weapon,07,None,3353832
+Kelb Weapon,07,None,3353832
+Kelb Armor,00,Remora,3353832
+Kelb Armor,00,Bolt2,3353832
+Kelb Armor,00,Fire,3353832
+Kelb Armor,00,None,3353832
+Kelb Armor,00,None,3353832
+Kelb Armor,00,None,3353832
+Kelb Armor,00,None,3353832
+Kelb Armor,00,None,3353832
+Common World 2 Magic 1,01,Partisan,3353832
+Common World 2 Magic 1,01,Antidote,3353832
+Common World 2 Magic 1,01,Spear,3353832
+Common World 2 Magic 1,01,Iron Armor,3353832
+Common World 2 Magic 1,01,TurtleShell,3353832
+Common World 2 Magic 1,01,TurtleShell,3353832
+Common World 2 Magic 1,01,Eyedrop,3353832
+Common World 2 Magic 1,01,Tent,3353832
+Common World 2 Magic 2,01,Black Robe,3353832
+Common World 2 Magic 2,01,Mythril Knife,3353832
+Common World 2 Magic 2,01,LuckMallet,3353832
+Common World 2 Magic 2,01,Tempest,3353832
+Common World 2 Magic 2,01,Soft,3353832
+Common World 2 Magic 2,01,Tent,3353832
+Common World 2 Magic 2,01,None,3353832
+Common World 2 Magic 2,01,None,3353832
+Common World 2 Magic 3,07,Capture,3353832
+Common World 2 Magic 3,07,Jump,3353832
+Common World 2 Magic 3,07,Thief,3353832
+Common World 2 Magic 3,07,None,3353832
+Common World 2 Magic 3,07,None,3353832
+Common World 2 Magic 3,07,None,3353832
+Common World 2 Magic 3,07,None,3353832
+Common World 2 Magic 3,07,None,3353832
+Surgate Weapon,00,Fire,3353832
+Surgate Weapon,00,Toad,3353832
+Surgate Weapon,00,Comet,3353832
+Surgate Weapon,00,AquaRake,3353832
+Surgate Weapon,00,None,3353832
+Surgate Weapon,00,None,3353832
+Surgate Weapon,00,None,3353832
+Surgate Weapon,00,None,3353832
+Surgate Armor,07,Revive,3353832
+Surgate Armor,07,GilToss,3353832
+Surgate Armor,07,RedMage,3353832
+Surgate Armor,07,DmgFloor,3353832
+Surgate Armor,07,None,3353832
+Surgate Armor,07,None,3353832
+Surgate Armor,07,None,3353832
+Surgate Armor,07,None,3353832
+Mua Weapon,01,Silk robe,3353832
+Mua Weapon,01,Avis Killer,3353832
+Mua Weapon,01,Maiden's Kiss,3353832
+Mua Weapon,01,Bizen,3353832
+Mua Weapon,01,Antidote,3353832
+Mua Weapon,01,None,3353832
+Mua Weapon,01,None,3353832
+Mua Weapon,01,None,3353832
+Mua Armor,00,Bio,3353832
+Mua Armor,00,Syldra,3353832
+Mua Armor,00,Requiem,3353832
+Mua Armor,00,Wall,3353832
+Mua Armor,00,Ice2,3353832
+Mua Armor,00,None,3353832
+Mua Armor,00,None,3353832
+Mua Armor,00,None,3353832
+Mua Magic 1,01,DblLance,3353832
+Mua Magic 1,01,Soft,3353832
+Mua Magic 1,01,Cursed Ring,3353832
+Mua Magic 1,01,DiamndPlt,3353832
+Mua Magic 1,01,Giant Drink,3353832
+Mua Magic 1,01,Defender Sword,3353832
+Mua Magic 1,01,LuckMallet,3353832
+Mua Magic 1,01,None,3353832
+Mua Magic 2,01,Venom Axe,3353832
+Mua Magic 2,01,Leather Armor,3353832
+Mua Magic 2,01,TurtleShell,3353832
+Mua Magic 2,01,Angel Ring,3353832
+Mua Magic 2,01,Giant Drink,3353832
+Mua Magic 2,01,RisingSun,3353832
+Mua Magic 2,01,HiPotion,3353832
+Mua Magic 2,01,Revivify,3353832
+Mua Magic 3,01,Soft,3353832
+Mua Magic 3,01,DragonFang,3353832
+Mua Magic 3,01,Giyaman,3353832
+Mua Magic 3,01,Ice Shield,3353832
+Mua Magic 3,01,Pinwheel,3353832
+Mua Magic 3,01,Phoenix Down,3353832
+Mua Magic 3,01,None,3353832
+Mua Magic 3,01,None,3353832
+Lix Inn,01,Crystal Shield,3353832
+Lix Inn,01,Ramuh,3353832
+Lix Inn,01,Ancient Sword,3353832
+Lix Inn,01,Slumber Sword,3353832
+Lix Inn,01,Knife,3353832
+Lix Inn,01,None,3353832
+Lix Inn,01,None,3353832
+Lix Inn,01,None,3353832
+Dwarf Magic,07,Mantra,3353832
+Dwarf Magic,07,Cover,3353832
+Dwarf Magic,07,Black Lv.3,3353832
+Dwarf Magic,07,WhiteMage,3353832
+Dwarf Magic,07,None,3353832
+Dwarf Magic,07,None,3353832
+Dwarf Magic,07,None,3353832
+Dwarf Magic,07,None,3353832
+Dwarf Weapon,01,Venom Axe,3353832
+Dwarf Weapon,01,Power Drink,3353832
+Dwarf Weapon,01,Leather Shoes,3353832
+Dwarf Weapon,01,Ragnarok,3353832
+Dwarf Weapon,01,Fire Bow,3353832
+Dwarf Weapon,01,Fire Rod,3353832
+Dwarf Weapon,01,HiPotion,3353832
+Dwarf Weapon,01,Soft,3353832
+Dwarf Armor,07,Monk,3353832
+Dwarf Armor,07,Berserk,3353832
+Dwarf Armor,07,X-Magic,3353832
+Dwarf Armor,07,Summon Lv.4,3353832
+Dwarf Armor,07,None,3353832
+Dwarf Armor,07,None,3353832
+Dwarf Armor,07,None,3353832
+Dwarf Armor,07,None,3353832
+Mirage Weapon,01,Leather Armor,3353832
+Mirage Weapon,01,Gauntlets,3353832
+Mirage Weapon,01,Maiden's Kiss,3353832
+Mirage Weapon,01,Wall Ring,3353832
+Mirage Weapon,01,Thunder Rod,3353832
+Mirage Weapon,01,Mythril Armor,3353832
+Mirage Weapon,01,Black Robe,3353832
+Mirage Weapon,01,Potion,3353832
+Mirage Guild,01,Speed Drink,3353832
+Mirage Guild,01,Air Blade,3353832
+Mirage Guild,01,Enhancer,3353832
+Mirage Guild,01,Circlet,3353832
+Mirage Guild,01,Leather Shoes,3353832
+Mirage Guild,01,HiPotion,3353832
+Mirage Guild,01,Eyedrop,3353832
+Mirage Guild,01,Cabin,3353832
+Mirage Armor,07,Red Lv.1,3353832
+Mirage Armor,07,Summon Lv.3,3353832
+Mirage Armor,07,Mimic,3353832
+Mirage Armor,07,SwdSlap,3353832
+Mirage Armor,07,None,3353832
+Mirage Armor,07,None,3353832
+Mirage Armor,07,None,3353832
+Mirage Armor,07,None,3353832
+Mirage Relic,01,Coral Ring,3353832
+Mirage Relic,01,Diamond Armlet,3353832
+Mirage Relic,01,Ancient Sword,3353832
+Mirage Relic,01,Silver Harp,3353832
+Mirage Relic,01,Angel Gwn,3353832
+Mirage Relic,01,Tent,3353832
+Mirage Relic,01,None,3353832
+Mirage Relic,01,None,3353832
+Mirage Magic 1,01,Giyaman,3353832
+Mirage Magic 1,01,Ether,3353832
+Mirage Magic 1,01,DarkMatter,3353832
+Mirage Magic 1,01,Yoichi Bow,3353832
+Mirage Magic 1,01,Crystal Armor,3353832
+Mirage Magic 1,01,Phoenix Down,3353832
+Mirage Magic 1,01,None,3353832
+Mirage Magic 1,01,None,3353832
+Mirage Magic 2,01,Lumina Robe,3353832
+Mirage Magic 2,01,Elven Bow,3353832
+Mirage Magic 2,01,Ribbon,3353832
+Mirage Magic 2,01,Golden Armor,3353832
+Mirage Magic 2,01,Lamia's Tiara,3353832
+Mirage Magic 2,01,Excalibur,3353832
+Mirage Magic 2,01,Elixir,3353832
+Mirage Magic 2,01,None,3353832
+Mirage Inn 1,07,Observe,3353832
+Mirage Inn 1,07,MP +10%,3353832
+Mirage Inn 1,07,MgcSwrd Lv.3,3353832
+Mirage Inn 1,07,Hide,3353832
+Mirage Inn 1,07,None,3353832
+Mirage Inn 1,07,None,3353832
+Mirage Inn 1,07,None,3353832
+Mirage Inn 1,07,None,3353832
+Mirage Inn 2,01,BeastKiller,3353832
+Mirage Inn 2,01,Slumber Sword,3353832
+Mirage Inn 2,01,Darkness Bow,3353832
+Mirage Inn 2,01,Avis Killer,3353832
+Mirage Inn 2,01,Iron Shield,3353832
+Mirage Inn 2,01,None,3353832
+Mirage Inn 2,01,None,3353832
+Mirage Inn 2,01,None,3353832
