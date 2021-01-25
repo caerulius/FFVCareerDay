@@ -19,7 +19,9 @@ db $DE, $41
 db $DF
 db $73
 db $BD, $2B, $FF                ;Start Event Battle 2B
-; db $B5, $84                     ;Play Sound Effect Exdeath destroyed 2
+db $71
+db $DE, $7A ; custom reward
+db $DF
 db $73
 ; db $C5                          ;<unknown>
 ; db $E0, $75                     ;Unknown
