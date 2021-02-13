@@ -20,6 +20,9 @@ db $DF
 db $73
 db $BD, $2B, $FF                ;Start Event Battle 2B
 db $71
+db $C5, $80
+db $B5, $02
+db $71
 db $DE, $7A ; custom reward
 db $DF
 db $73

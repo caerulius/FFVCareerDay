@@ -9,7 +9,7 @@
 !Mantra,E79A40
 !Escape,E79A48
 !Steal,E79A50
-!Capture,E79A58
+!Mug,E79A58
 !Jump,E79A60
 !DrgnSwd,E79A68
 !Smoke,E79A70
@@ -28,7 +28,7 @@
 !Control,E79AD8
 !Catch,E79AE0
 !Release,E79AE8
-!Combine,E79AF0
+!Mix,E79AF0
 !Drink,E79AF8
 !Pray,E79B00
 !Revive,E79B08
@@ -70,12 +70,12 @@
 !Black 6,E79C28
 !TXTERR,E79C30
 !TXTERR,E79C38
-!Dimen 1,E79C40
-!Dimen 2,E79C48
-!Dimen 3,E79C50
-!Dimen 4,E79C58
-!Dimen 5,E79C60
-!Dimen 6,E79C68
+!Time 1,E79C40
+!Time 2,E79C48
+!Time 3,E79C50
+!Time 4,E79C58
+!Time 5,E79C60
+!Time 6,E79C68
 !TXTERR,E79C70
 !TXTERR,E79C78
 !Summon1,E79C80

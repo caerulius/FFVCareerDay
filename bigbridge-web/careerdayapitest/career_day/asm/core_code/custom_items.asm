@@ -12,29 +12,30 @@ org !ADDRESS_customitem1
 CustomItem:
 
 if !fourjobmode == 1
+    if !fourjoblock == 1
+        ; Load in A
+        LDA $7A00,X
 
-    ; Load in A
-    LDA $7A00,X
+        cmp #$EE ; warpshard
+        beq CustomItemTestFourJob
+        ; cmp #$3E ; Exit spell
+        ; beq CustomItemTestFourJob
+        cmp #$F0 ; tent
+        beq CustomItemTestFourJob
+        cmp #$F1 ; cabin
+        beq CustomItemTestFourJob
+        bne ContinueCustomItemStart1
 
-	cmp #$EE ; warpshard
-	beq CustomItemTestFourJob
-	; cmp #$3E ; Exit spell
-	; beq CustomItemTestFourJob
-	cmp #$F0 ; tent
-	beq CustomItemTestFourJob
-	cmp #$F1 ; cabin
-	beq CustomItemTestFourJob
-	bne ContinueCustomItemStart1
-
-	CustomItemTestFourJob:
-	JSL FourJobSubroutineCheck
-	CMP #$01 ; success case
-	BEQ ContinueCustomItemStart1
-	; failure case 
-	JMP ProceedRejectedItemFinish
-	
-	ContinueCustomItemStart1:
-	; proceed as usual if conditions are met
+        CustomItemTestFourJob:
+        JSL FourJobSubroutineCheck
+        CMP #$01 ; success case
+        BEQ ContinueCustomItemStart1
+        ; failure case 
+        JMP ProceedRejectedItemFinish
+        
+        ContinueCustomItemStart1:
+        ; proceed as usual if conditions are met
+    endif 
 endif 
 
 
@@ -355,16 +356,18 @@ STA $39
 ; then reject there if four job conditions aren't met 
  
 if !fourjobmode == 1
-	CMP #$3E
-	BNE ContinueExitSpellFourJob
-	; if it is exit spell, do the check
-	JSL FourJobSubroutineCheck
-	CMP #$01 ; success case
-	BEQ ContinueAllowItemWarping1
-	; failure case defaults 
-    BNE BranchToItemWarpClause2
-    
-	ContinueExitSpellFourJob:
+    if !fourjoblock == 1
+        CMP #$3E
+        BNE ContinueExitSpellFourJob
+        ; if it is exit spell, do the check
+        JSL FourJobSubroutineCheck
+        CMP #$01 ; success case
+        BEQ ContinueAllowItemWarping1
+        ; failure case defaults 
+        BNE BranchToItemWarpClause2
+        
+        ContinueExitSpellFourJob:
+    endif 
 endif
 
 CMP #$EE ; custom item1 

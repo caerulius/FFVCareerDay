@@ -10,7 +10,7 @@ ability_id,readable_name,valid,value,related_jobs,max_count,progression_id,tier
 08,Mantra,TRUE,2,[“Monk”],1,02,2
 09,Escape,TRUE,0,[“Thief”],1,03,2
 0A,Steal,TRUE,1,[“Thief”],1,04,2
-0B,Capture,TRUE,2,[“Thief”],1,05,3
+0B,Mug,TRUE,2,[“Thief”],1,05,3
 0C,Jump,TRUE,2,[“Dragoon”],1,06,2
 0D,DrgnSwd,TRUE,2,[“Dragoon”],1,07,2
 0E,Smoke,TRUE,2,[“Ninja”],1,08,2
@@ -25,10 +25,10 @@ ability_id,readable_name,valid,value,related_jobs,max_count,progression_id,tier
 17,Conjure,TRUE,2,[“Summoner”],1,0F,3
 18,Observe,TRUE,2,[“BlueMage”],1,10,2
 19,Analyze,TRUE,2,[“BlueMage”],1,11,2
-1A,Tame,TRUE,2,[“Mediator”],1,12,3
-1B,Control,TRUE,2,[“Mediator”],1,13,5
-1C,Catch,TRUE,2,[“Mediator”],1,14,4
-1D,Release,FALSE,2,[“Mediator”],1,15,0
+1A,Tame,TRUE,2,[“Trainer”],1,12,3
+1B,Control,TRUE,2,[“Trainer”],1,13,5
+1C,Catch,TRUE,2,[“Trainer”],1,14,4
+1D,Release,FALSE,2,[“Trainer”],1,15,0
 1E,Combine,TRUE,2,[“Chemist”],1,16,5
 1F,Drink,TRUE,2,[“Chemist”],1,17,3
 20,Pray,TRUE,2,[“Chemist”],1,18,3
@@ -71,12 +71,12 @@ ability_id,readable_name,valid,value,related_jobs,max_count,progression_id,tier
 45,Black Lv.6,TRUE,3,[“BlackMage”],1,22,8
 46,Blank1,FALSE,0,[],0,FF,0
 47,Blank2,FALSE,0,[],0,FF,0
-48,Dimen Lv.1,TRUE,1,[“TimeMage”],1,23,2
-49,Dimen Lv.2,TRUE,1,[“TimeMage”],1,23,2
-4A,Dimen Lv.3,TRUE,1,[“TimeMage”],1,23,3
-4B,Dimen Lv.4,TRUE,2,[“TimeMage”],1,23,4
-4C,Dimen Lv.5,TRUE,2,[“TimeMage”],1,23,6
-4D,Dimen Lv.6,TRUE,3,[“TimeMage”],1,23,8
+48,Time Lv.1,TRUE,1,[“TimeMage”],1,23,2
+49,Time Lv.2,TRUE,1,[“TimeMage”],1,23,2
+4A,Time Lv.3,TRUE,1,[“TimeMage”],1,23,3
+4B,Time Lv.4,TRUE,2,[“TimeMage”],1,23,4
+4C,Time Lv.5,TRUE,2,[“TimeMage”],1,23,6
+4D,Time Lv.6,TRUE,3,[“TimeMage”],1,23,8
 4E,Blank3,FALSE,0,[],0,FF,0
 4F,Blank4,FALSE,0,[],0,FF,0
 50,Summon Lv.1,TRUE,1,[“Summoner”],1,24,2
@@ -111,7 +111,7 @@ ability_id,readable_name,valid,value,related_jobs,max_count,progression_id,tier
 6D,Equip Katana,TRUE,2,[“Samurai”],1,2C,3
 6E,Equip Axes,TRUE,2,[“Berserker”],1,2D,3
 6F,Equip Bows,TRUE,2,[“Hunter”],1,2E,3
-70,Equip Whips,TRUE,2,[“Mediator”],1,2F,3
+70,Equip Whips,TRUE,2,[“Trainer”],1,2F,3
 71,Equip Harps,TRUE,2,[“Bard”],1,30,3
 72,Agility,TRUE,2,[“Thief”],1,31,2
 73,HP +10%,TRUE,2,[“Monk”],1,32,2

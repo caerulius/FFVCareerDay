@@ -1,6 +1,10 @@
 hirom
 
 
+; change Exdeath conditional event for new merugene originating flag
+org $f05740
+db $FB, $9B
+
 ; Exdeath pre-dialogue → Warp to World 3
 
 org $C99619
@@ -62,7 +66,8 @@ db $E1, $01, $00, $A0, $9D, $00 ;Return from cutscene?
 
 ; db $A5, $7F                     ;Clear Event Flag 17F
 db $CB, $96, $01                ;Clear Flag 2/3/4/5/96 01
-db $A2, $79                     ;Set Event Flag 079
+; db $A2, $79                     ;Set Event Flag 079
+db $A4, $9B            ; set address 000A47 bit ON 08. THIS WAS REPURPOSED FROM MERUGENE
 db $CB, $7C, $01                ;Clear Flag 2/3/4/5/7C 01
 db $CB, $7D, $01                ;Clear Flag 2/3/4/5/7D 01
 db $CB, $7E, $01                ;Clear Flag 2/3/4/5/7E 01

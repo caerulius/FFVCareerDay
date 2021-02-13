@@ -619,7 +619,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 617,<Bell>Mantra,Mantra Bell,24,bell,2,,,,Mantra,09,ability,38,20,50,80,23,00,78,18,39,00,00,00
 618,<Bell>Escape,Escape Bell,12,bell,1,,,,Escape,0A,ability,38,20,50,80,23,00,78,18,39,00,00,00
 619,<Bell>Steal,Steal Bell,28,bell,2,,,,Steal,0B,ability,38,20,50,80,23,00,78,18,39,00,00,00
-620,<Bell>Capture,Capture Bell,60,bell,5,,,,Capture,0C,ability,38,20,50,80,23,00,78,18,39,00,00,00
+620,<Bell>Mug,Mug Bell,60,bell,5,,,,Mug,0C,ability,38,20,50,80,23,00,78,18,39,00,00,00
 621,<Bell>Jump,Jump Bell,48,bell,4,,,,Jump,0D,ability,38,20,50,80,23,00,78,18,39,00,00,00
 622,<Bell>DrgnSwd,DrgnSwd Bell,71,bell,6,,,,DrgnSwd,0E,ability,38,20,50,80,23,00,78,18,39,00,00,00
 623,<Bell>Image,Image Bell,39,bell,3,,,,Image,10,ability,38,20,50,80,23,00,78,18,39,00,00,00

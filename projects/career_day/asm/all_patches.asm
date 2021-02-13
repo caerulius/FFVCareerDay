@@ -7,7 +7,10 @@ incsrc core_code/relocate_conditional_events.asm
 incsrc ../../shared_asm/data_tables/starting_stats.asm
 
 if !fourjobmode == 1
-	incsrc open_world/4_job_lock.asm
+    if !fourjoblock == 1
+        ; four job lock is only for when there are 4 unique jobs. Otherwise disable (for 1, 2 or 3 jobs in "fjf" mode)
+        incsrc open_world/4_job_lock.asm
+    endif
 endif
 
 
@@ -84,6 +87,7 @@ incsrc world1/telling_mid_cid_about_steamship.asm      ; 11 Desert
 incsrc world1/sandworm.asm                              
 incsrc world1/ruined_city.asm
 incsrc world1/teleporter_beneath_ruined_city.asm
+incsrc world1/catapult_inn.asm
 incsrc world1/steamship_under_crescent.asm 
 incsrc world1/airship_discovery.asm
 incsrc world1/cid_on_flying_ship.asm          					  ; 11 Desert

@@ -4,7 +4,7 @@ index,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,name
 02,08,FF,FF,FF,FF,FF,FF,FF,Mantra
 03,09,FF,FF,FF,FF,FF,FF,FF,Escape
 04,0A,FF,FF,FF,FF,FF,FF,FF,Steal
-05,0B,FF,FF,FF,FF,FF,FF,FF,Capture
+05,0B,FF,FF,FF,FF,FF,FF,FF,Mug
 06,0C,FF,FF,FF,FF,FF,FF,FF,Jump
 07,0D,FF,FF,FF,FF,FF,FF,FF,DrgnSwd
 08,0E,FF,FF,FF,FF,FF,FF,FF,Smoke
@@ -34,7 +34,7 @@ index,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,name
 20,30,31,32,33,34,35,FF,FF,MgcSwrd
 21,38,39,3A,3B,3C,3D,FF,FF,White
 22,40,41,42,43,44,45,FF,FF,Black
-23,48,49,4A,4B,4C,4D,FF,FF,Dimen
+23,48,49,4A,4B,4C,4D,FF,FF,Time
 24,50,51,52,53,54,FF,FF,FF,Summon
 25,58,59,5A,60,FF,FF,FF,FF,Red/X-Magic
 26,61,FF,FF,FF,FF,FF,FF,FF,Blue

@@ -32,6 +32,8 @@ db $03                          ;Player Move Down
 db $73
 ; db $A4, $F6                     ;Set Event Flag 1F6
 ; db $A5, $FE                     ;Clear Event Flag 1FE
+
+
 db $87, $0A
 db $BD, $2B, $FF                ;Start Event Battle 2B
 db $C5, $80
@@ -58,7 +60,7 @@ db $73                          ;Long pause
 ; db $CA, $5D, $02                ;Set Flag 2/3/4/5/5D 02
 ; db $CA, $5E, $02                ;Set Flag 2/3/4/5/5E 02
 ; db $CA, $0C, $00                ;Set Flag 2/3/4/5/0C 00
-db $A4, $9B                     ;Set Event Flag 1F6
+; db $A4, $9B            ; set address 000A47 bit ON 08. THIS WAS REPURPOSED FOR EXDEATH WORLD 2
 ; db $B7, $09                     ;Add/Remove character 09
 ; db $A8, $7F                     ;Adjust Character HP by 7F
 ; db $BB, $01, $80                ;Set Character Lenna  Curable status to Wounded

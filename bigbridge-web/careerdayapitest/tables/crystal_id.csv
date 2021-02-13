@@ -10,11 +10,11 @@ crystal_id,shop_id,readable_name,value,related_jobs,max_count,starting_weapon,st
 08,91,MysticKnight,2,[“MysticKnight”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”]","[“00”, “01, “02”]",MgcSwrd Lv. 1,31,5
 09,92,WhiteMage,1,[“WhiteMage”],1,Staff,38,"[“Cure”, “Scan”, “Antdt”]","[“12”, “13”, “14”]",White Lv. 1,37,4
 0A,93,BlackMage,1,[“BlackMage”],1,Rod,31,"[“Fire”, “Ice”, “Bolt”]","[“24”, “25, “26”]",Black Lv. 1,3d,5
-0B,94,TimeMage,1,[“TimeMage”],1,Rod,31,"[“Drag”, “Slow”, “Regen”]","[“36”, “37”, “38”]",Dimen Lv. 1,43,4
+0B,94,TimeMage,1,[“TimeMage”],1,Rod,31,"[“Drag”, “Slow”, “Regen”]","[“36”, “37”, “38”]",Time Lv. 1,43,4
 0C,95,Summoner,2,[“Summoner”],1,Rod,31,"[“Chocob”, “Sylph”, “Remora”]","[“48”, “49”, “4A”]",Summon Lv. 1,48,6
 0D,96,BlueMage,2,[“BlueMage”],1,Knife,02,"[“Aero”, “GblinPnch”, “Hammer”]","[“8F”, “93” ,”99”]",Blue,4d,6
 0E,97,RedMage,1,[“RedMage”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”, “Cure”, “Scan”, “Antdt”]","[“24”, “25, “26”, “12”, “13”, “14”]",Red Lv. 1,4b,2
-0F,98,Mediator,0,[“Mediator”],1,Whip,4B,[],[“FF”],Tame,1d,1
+0F,98,Trainer,0,[“Trainer”],1,Whip,4B,[],[“FF”],Tame,1d,1
 10,99,Chemist,2,[“Chemist”],1,Staff,38,[],[“FF”],Combine,20,2
 11,9A,Geomancer,1,[“Geomancer”],1,Giyaman,50,[],[“FF”],Terrain,23,1
 12,9B,Bard,1,[“Bard”],1,Knife,02,"[“Power”, “Speed”, “Vitality”]","[“57”, “58”, “59”]",Hide,28,3

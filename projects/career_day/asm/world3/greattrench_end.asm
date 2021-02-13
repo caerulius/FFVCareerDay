@@ -44,7 +44,7 @@ db $DE, $7C ; custom reward
 db $DF
 db $E4, $B4                     ;Unknown
 db $24                          ;Player pose: face down, right hand raised in
-db $A2, $91                     ;Turn on bit 02 at address 0x7e0a26
+; db $A2, $91                     ;Turn on bit 02 at address 0x7e0a26
 db $A2, $0E                     ;Turn on bit 40 at address 0x7e0a15
 db $CB, $20, $00                ;Turn off bit 01 at address  0x7e0a58
 db $CB, $5C, $02                ;Turn off bit 10 at address  0x7e0a9f

@@ -9,7 +9,7 @@
 "Mantra Ability",E787C0
 "Escape Ability",E787D8
 "Steal Ability",E787F0
-"Capture Ability",E78808
+"Mug Ability",E78808
 "Jump Ability",E78820
 "DrgnSwd Ability",E78838
 "Smoke Ability",E78850
@@ -28,7 +28,7 @@
 "Control Ability",E78988
 "Catch Ability",E789A0
 "Release Ability",E789B8
-"Combine Ability",E789D0
+"Mix Ability",E789D0
 "Drink Ability",E789E8
 "Pray Ability",E78A00
 "Revive Ability",E78A18
@@ -70,12 +70,12 @@
 "Black Lv.6 Ability",E78D78
 "Blank1 Ability",E78D90
 "Blank2 Ability",E78DA8
-"Dimen Lv.1 Ability",E78DC0
-"Dimen Lv.2 Ability",E78DD8
-"Dimen Lv.3 Ability",E78DF0
-"Dimen Lv.4 Ability",E78E08
-"Dimen Lv.5 Ability",E78E20
-"Dimen Lv.6 Ability",E78E38
+"Time Lv.1 Ability",E78DC0
+"Time Lv.2 Ability",E78DD8
+"Time Lv.3 Ability",E78DF0
+"Time Lv.4 Ability",E78E08
+"Time Lv.5 Ability",E78E20
+"Time Lv.6 Ability",E78E38
 "Blank3 Ability",E78E50
 "Blank4 Ability",E78E68
 "Summon Lv.1 Ability",E78E80

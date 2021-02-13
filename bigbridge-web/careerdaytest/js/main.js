@@ -70,8 +70,8 @@ $(document).ready( function() {
 	$("#settingstringpresetval2").val("SPOn W0 T5|1 TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open
 	$("#settingstringpresetval3").val("SPOn W1 T5|1 PB I100 TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked weapon rando
 	$("#settingstringpresetval4").val("SPOn W0 T5|1 I100 TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open weapon rando 
-	$("#settingstringpresetval5").val("SPOn 4 J1Random J2Random J3Random J4Random a W1 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked worlds fjf
-	$("#settingstringpresetval6").val("SPOn 4 J1Random J2Random J3Random J4Random a W0 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open fjf
+	$("#settingstringpresetval5").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W1 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked worlds fjf
+	$("#settingstringpresetval6").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W0 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open fjf
 	$("#settingstringpresetval7").val("SPOn P W0 T5|1 A I100 TBLT0 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CDA CLA pbRandom"); // pure chaos
 
 	$("#settingstringpresetval1").click(function(){
@@ -200,6 +200,7 @@ function apiCall(data){
 		"seed": $('#seed').val(),
 		"fjf": $('#fjf').is(':checked'),
 		"fjf_strict": $('#fjf_strict').is(':checked'),
+		"fjf_num_jobs": $('#fjf_num_jobs').val(),
 		"job_1": $('#job_1').val(),
 		"job_2": $('#job_2').val(),
 		"job_3": $('#job_3').val(),
@@ -272,7 +273,10 @@ function getSettingString(){
 		seedString = seedString + " J2" + $("#job_2").val();
 		seedString = seedString + " J3" + $("#job_3").val();
 		seedString = seedString + " J4" + $("#job_4").val();
+		seedString = seedString + " FJNUM" + $("#fjf_num_jobs").val();
 	}
+
+
 	if($('#spoiler_log').is(':checked')){
 		seedString = seedString + " SPOff";
 	}
@@ -389,6 +393,13 @@ function applyCustomSettingString(){
 		else if(val.startsWith("J4")){
 			$("#job_4").val(val.slice(2));
 		}
+		else if(val.startsWith("FJNUM")){
+			xp = parseInt(val.slice(5));
+			if(!isNaN(xp) && (xp == 1 || xp == 2 || xp == 3 || xp == 4)){
+				$("#fjf_num_jobs").val(xp);
+			}
+		}
+
 		else if(val == "SPOn"){
 			$( "#spoiler_log" ).prop( "checked", false );
 		}
@@ -564,6 +575,7 @@ function clearSettings(){
 	$("#tiering_threshold").val(1);
 	$("#item_randomization_percent").val(100);
 	$("#loot_percent").val("");
+	$("#fjf_num_jobs").val(4);
 	$("#exp_mult").val(4);
 	$("#red_color").val(0);
 	$("#green_color").val(0);

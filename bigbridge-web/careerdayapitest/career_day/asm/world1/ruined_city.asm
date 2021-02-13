@@ -21,7 +21,7 @@ pad $C93888
 org $C88FE0
 
 db $01							;Player move up
-db $C4, $10
+db $C4, $04
 db $E3, $D5, $00, $B3, $04, $00	;Inter-map cutscene? D5 00 B3 04 00
 db $A5, $FE						;Clear Event Flag 1FE
 db $D0, $81, $F0				;(Music) 81 F0
@@ -32,8 +32,9 @@ db $03							;Player move down
 db $03							;Player move down
 db $03							;Player move down
 db $03							;Player move down
-db $C3, $10						;Fade in Speed 10
+db $C3, $04						;Fade in Speed 10
 db $DB							;Restore Player status
+db $73
 db $B4, $3D						;Play Background Music Musica Machina
 db $CB, $CB, $00				;Clear Flag 2/3/4/5/CB 00
 db $CB, $CC, $00				;Clear Flag 2/3/4/5/CC 00

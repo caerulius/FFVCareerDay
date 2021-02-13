@@ -2,6 +2,44 @@ hirom
 
 padbyte $00
 
+; Moogle suit dialogue
+
+org $e243DB
+;Its a Moogle suit!?
+db $68, $8D, $99, $8C, $96, $7A, $96, $6C, $88, $88, $80, $85, $7E, $96, $72, $8E, $82, $8D, $A1, $A2, $00
+
+; moogle suit reward
+org $c9105f
+db $84, $09			;Sprite 084 do event: Show
+db $84, $05			;Sprite 084 do event: Bounce
+db $84, $00			;Sprite 084 do event: Hold
+db $82, $10			;Sprite 082 do event: face up, left hand forward
+db $C7, $04			;Play next 04 bytes simultaneously
+db $82, $03			;Sprite 082 do event: Move Down
+db $84, $03			;Sprite 084 do event: Move Down
+db $CF, $02, $04		;Play next 04 bytes simultaneously 02 times
+db $82, $04			;Sprite 082 do event: Move Left
+db $84, $04			;Sprite 084 do event: Move Left
+db $CF, $03, $04		;Play next 04 bytes simultaneously 03 times
+db $82, $01			;Sprite 082 do event: Move Up
+db $84, $01			;Sprite 084 do event: Move Up
+db $82, $26			;Sprite 082 do event: face up, right hand raised out
+db $B5, $3A			;Play Sound Effect Quick
+db $82, $24			;Sprite 082 do event: face down, right hand raised in
+db $CE, $03, $0A		;Play next 0A bytes 03 times
+db $82, $05			;Sprite 082 do event: Bounce
+db $84, $05			;Sprite 084 do event: Bounce
+db $C7, $04			;Play next 04 bytes simultaneously
+db $82, $00			;Sprite 082 do event: Hold
+db $84, $00			;Sprite 084 do event: Hold
+db $82, $24			;Sprite 082 do event: face down, right hand raised in
+db $83, $0A			;Sprite 083 do event: Hide
+db $CB, $20, $02		;Turn off bit 01 at address  0x7e0a98
+db $A4, $3E			;Turn on bit 40 at address 0x7e0a3b
+db $FF				;End Event
+
+pad $C910A3 
+
 ; Talking to Moogle first time in house
 org $C97579
 db $80, $10                     ;Sprite 080 do event: face up, left hand forward

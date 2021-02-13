@@ -3,6 +3,7 @@ import shutil
 import sys
 import glob
 import zipfile
+import hashlib
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 
 parser = ArgumentParser(description="",
@@ -25,8 +26,24 @@ if ROOT_PATH not in sys.path:
     
 os.chdir(ROOT_PATH)
 
+def file_hasher(file):
+    with open(file, "rb") as f:
+        file_hash = hashlib.md5()
+        chunk = f.read(8192)
+        while chunk:
+            file_hash.update(chunk)
+            chunk = f.read(8192)
 
-# Everything is relative to the root path of FFVCareerDay
+    return file_hash.hexdigest()
+
+
+def hash_directory(directory):
+    files = [i for i in glob.glob(os.path.join(directory,"**"), recursive=True) if os.path.isfile(i)]
+    hashes = {}
+    for f in files:
+        hashes[os.path.abspath(f)] = file_hasher(f)
+    return hashes
+
     
 def move_files(input_path,output_path,accepted_files):
     for file in input_path:
@@ -34,7 +51,51 @@ def move_files(input_path,output_path,accepted_files):
             print("Moving file: "+file)
             shutil.copy(file,os.path.join(output_path,os.path.basename(file)))
             
+def retrieve_new_files(dir1, dir2, accepted_filetypes=()):
+    # returns unique files in dir1 not present yet in dir2
+    
+    final_files = {}
+    for k, v in dir1.items():
+        if v not in dir2.values() and k.endswith(accepted_filetypes):
+            final_files[k] = v
+
+    pass
+    return final_files
+
+# Everything is relative to the root path of FFVCareerDay            
 def move_cd():    
+    # utilities/data
+    apitest_hashes = hash_directory(os.path.join(THIS_FILEPATH,os.pardir,os.pardir,'bigbridge-web','careerdayapitest'))
+    accepted_filetypes = ('py','ini')
+    data_input_path = hash_directory(os.path.join('utilities','data'))
+    new_files = retrieve_new_files(data_input_path, apitest_hashes, accepted_filetypes)
+    data_output_path = os.path.join('bigbridge-web','careerdayapitest')
+    move_files(new_files,data_output_path,accepted_filetypes)
+    
+    # utilities/data/tables
+    accepted_filetypes = ('csv')
+    data_input_path = hash_directory(os.path.join('utilities','data', 'tables'))
+    new_files = retrieve_new_files(data_input_path, apitest_hashes, accepted_filetypes)
+    data_output_path = os.path.join('bigbridge-web','careerdayapitest', 'tables')
+    move_files(new_files,data_output_path,accepted_filetypes)    
+    
+    # utilities/data/portal_boss_ai
+    accepted_filetypes = ('txt')
+    data_input_path = hash_directory(os.path.join('utilities','data', 'portal_boss_ai'))
+    new_files = retrieve_new_files(data_input_path, apitest_hashes, accepted_filetypes)
+    data_output_path = os.path.join('bigbridge-web','careerdayapitest', 'portal_boss_ai')
+    move_files(new_files,data_output_path,accepted_filetypes)    
+    
+    
+    # utilities/data/tables/text_tables
+    accepted_filetypes = ('csv')
+    data_input_path = hash_directory(os.path.join('utilities','data', 'tables','text_tables'))
+    new_files = retrieve_new_files(data_input_path, apitest_hashes, accepted_filetypes)
+    data_output_path = os.path.join('bigbridge-web','careerdayapitest', 'tables', 'text_tables')
+    move_files(new_files,data_output_path,accepted_filetypes)    
+    
+    
+def move_cd_old():        
     # utilities/data
     data_input_path = glob.glob(os.path.join('utilities','data','*'))
     data_output_path = os.path.join('bigbridge-web','careerdayapitest')

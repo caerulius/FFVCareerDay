@@ -36,12 +36,10 @@ def init_table(tabletype):
         
 
 data = '''
-
-
-646c6f7378006d7e9096667a867e0061
-
-
+668e878087828b
 '''
+
+
 
 data = data.replace("\n","ZZ")
 n = 2
@@ -97,6 +95,8 @@ def run_encrypt(passed_dict):
         print(text_asar)
         return_text = return_text + text_asar + "\n"
     return return_text
+
+
 
 def run_encrypt_text_string(x,verbose=True,ff_fill=None):
     if verbose:

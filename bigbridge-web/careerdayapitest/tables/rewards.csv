@@ -5,7 +5,7 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 3,C0FAB8,WhiteMage,Wind Shrine,Wind Crystal,event,4,,,,,,,
 4,C0FABA,Monk,Wind Shrine,Wind Crystal,event,4,,,,,,,
 5,C0FABC,Thief,Wind Shrine,Wind Crystal,event,4,,,,,,,
-6,C0FABE,Mediator,Karnak,Fire Crystal,event,4,,,,,,,
+6,C0FABE,Trainer,Karnak,Fire Crystal,event,4,,,,,,,
 7,C0FAC0,Geomancer,Karnak,Fire Crystal,event,4,,,,,,,
 8,C0FAC2,Ninja,Karnak,Fire Crystal,event,4,,,,,,,
 9,C0FAC4,Bard,Crescent Island,Black Choco Crystals,event,3,,,,,,,
@@ -352,7 +352,7 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 350,C0FBA0,New,Exdeath's Castle,Gilgamesh 4,key,7,,"[“Anti Barrier”, “Bracelet”]","[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",78,[“castle”],2
 351,C0FBA2,New,Tule Pass,Antlion,key,7,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",79,[“cave”],3
 352,C0FBA4,New,Pyramid,Merugene,key,7,,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",7A,[“desert”],3
-353,C0FBA6,New,Bal Castle,Odin,key,8,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",7B,[“castle”],3
+353,C0FBA6,New,Bal Castle,Odin,key,8,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",7B,[“cave”],3
 354,C0FBA8,New,Great Trench,"Triton, Neregeid & Phobos",key,8,,"[“Submarine Key”, “Trench Page”]","[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”, “Trench Page”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”, “Trench Page”]",7C,[“underwater”],3
 355,C0FBAA,New,Fork Tower,Omniscient,key,8,,[“Elder Branch”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Elder Branch”]","[“Anti Barrier”, “Bracelet”, “Elder Branch”]",7D,[“tower”],3
 356,C0FBAC,New,Fork Tower,Minotauros,key,8,,[“Elder Branch”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Elder Branch”]","[“Anti Barrier”, “Bracelet”, “Elder Branch”]",7E,[“tower”],3

@@ -55,35 +55,12 @@ db $09                          ;Player Show
 db $B1, $02                     ;Set Player Sprite 02
 db $14                          ;Player pose: face down, left hand forward
 db $D3, $82, $0F, $06           ;Sprite 82 set map position 0F, 06
-
-db $83, $09                     ;Sprite 083 do event: Show
-db $85, $09                     ;Sprite 085 do event: Show
-db $84, $09                     ;Sprite 084 do event: Show
-db $85, $40                     ;Sprite 085 do event: face down, looking right, eyes lowered
-db $C3, $08                     ;Fade in Speed 08
-db $75                          ;Extremely long pause
-db $85, $03                     ;Sprite 085 do event: Move Down
-db $85, $04                     ;Sprite 085 do event: Move Left
-db $85, $20                     ;Sprite 085 do event: face down, left hand raised out
-db $14                          ;Player pose: face down, left hand forward
-db $85, $0B                     ;Sprite 085 do event: 0B
-db $85, $4D                     ;Sprite 085 do event: garbage
-db $C7, $04                     ;Play next 04 bytes simultaneously
-db $85, $01                     ;Sprite 085 do event: Move Up
-db $82, $01                     ;Sprite 082 do event: Move Up
-db $82, $0A                     ;Sprite 082 do event: Hide
-db $85, $20                     ;Sprite 085 do event: face down, left hand raised out
-db $83, $22                     ;Sprite 083 do event: face down, left hand on head
-db $84, $26                     ;Sprite 084 do event: face up, right hand raised out
-db $C7, $06                     ;Play next 06 bytes simultaneously
-db $85, $01                     ;Sprite 085 do event: Move Up
-db $83, $02                     ;Sprite 083 do event: Move Right
-db $84, $04                     ;Sprite 084 do event: Move Left
-db $83, $0A                     ;Sprite 083 do event: Hide
-db $84, $0A                     ;Sprite 084 do event: Hide
-db $85, $0A                     ;Sprite 085 do event: Hide
-db $DB                          ;Restore Player status
 db $03                          ;Player Move Down
+db $03                          ;Player Move Down
+db $C3, $04                     ;Fade in Speed 08
+db $73                          ;Extremely long pause
+db $14                          ;Player pose: face down, left hand forward
+db $DB                          ;Restore Player status
 db $B4, $24                     ;Play Background Music The Book of Sealings
 db $A5, $FE                     ;Clear Event Flag 1FE
 ; db $A2, $8E                     ;Turn on bit 40 at address 0x7e0a25

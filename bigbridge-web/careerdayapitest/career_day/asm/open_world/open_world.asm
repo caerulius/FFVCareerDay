@@ -569,4 +569,45 @@ db $00, $34, $10, $34
 
 
 
+; change mirage village guy's dialogue
+org $e364d6
+db $72, $88, $8B, $8B, $92, $A3, $A3, $A3, $96, $7A, $85, $85, $96, $88, $8E, $8D, $96, $88, $7F, $96, $80, $82, $7F, $8D, $8C, $A1, $00
+pad $E36564
+
+
+
+; change Mediator text to Trainer
+org $E1B752
+db $73, $8B, $7A, $82, $87, $7E, $8B, $FF
+; e1b752 - 76d (fill with FFs)
+
+; D15678 -> 80
+org $D15678
+db $73, $8B, $7A, $82, $87, $7E, $8B, $FF
+
+
+; rename Capture to Mug
+org $e011a4
+db $6C, $8E, $80, $FF, $FF, $FF, $FF
+
+
+
+;Time
+org $e730f2
+db $73, $82, $86, $7E, $FF
+
+
+
+org $e01302
+db $73, $82, $86, $7E, $FF
+org $e01309
+db $73, $82, $86, $7E, $FF
+org $e01310
+db $73, $82, $86, $7E, $FF
+org $e01317
+db $73, $82, $86, $7E, $FF
+org $e0131e
+db $73, $82, $86, $7E, $FF
+org $e01325
+db $73, $82, $86, $7E, $FF
 

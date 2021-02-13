@@ -56,7 +56,7 @@ id,readable_name,readable_location,type,type_address,type_data,item_address,item
 55,Silver Armlet,Worus Tower Chest,Item,D132EA,40,D132EB,B7,Reward
 56,Ether,Worus Tower Chest,Item,D132EE,40,D132EF,E2,Reward
 57,Phoenix Down,Tycoon Meteor Chest,Item,D132F2,40,D132F3,E4,Reward
-58,Heavy Spear,Karnak Castle Chest,Monster,D132F6,E2,D132F7,1D,Reward
+58,Gungnir,Karnak Castle Chest,Monster,D132F6,E2,D132F7,1D,Reward
 59,Thunder Scroll,Karnak Castle Chest,Monster,D132FA,A0,D132FB,FE,Reward
 60,2000,Karnak Castle Chest,Gil,D132FE,03,D132FF,02,Reward
 61,Elixir,Karnak Castle Chest,Monster,D13302,A0,D13303,E3,Reward
@@ -131,7 +131,7 @@ id,readable_name,readable_location,type,type_address,type_data,item_address,item
 130,5000,Hiryuu Valley Chest,Gil,D13416,03,D13417,05,Reward
 131,Cabin,Hiryuu Valley Chest,Item,D1341A,40,D1341B,F1,Reward
 132,7000,Hiryuu Valley Chest,Gil,D1341E,03,D1341F,07,Reward
-133,Hypno,Hiryuu Valley Chest,Item,D13422,40,D13423,CB,Reward
+133,Coronet,Hiryuu Valley Chest,Item,D13422,40,D13423,CB,Reward
 134,Air Blade,Hiryuu Valley Chest,Item,D13426,40,D13427,2A,Reward
 135,Phoenix Down,Hiryuu Valley Chest,Item,D1342A,40,D1342B,E4,Reward
 136,5000,Surgate Castle Chest,Gil,D1342E,03,D1342F,05,Reward
@@ -206,7 +206,7 @@ id,readable_name,readable_location,type,type_address,type_data,item_address,item
 205,Kaiser Knuckles,Great Trench Chest,Item,D13542,40,D13543,C1,Reward
 206,Ether,Istory Falls Chest,Item,D13546,40,D13547,E2,Reward
 207,TurtleShell,Istory Falls Chest,Item,D1354A,40,D1354B,E7,Reward
-208,Air Knife,Istory Falls Chest,Item,D1354E,40,D1354F,0A,Reward
+208,Air Lance,Istory Falls Chest,Item,D1354E,40,D1354F,0A,Reward
 209,Giant Drink,Istory Falls Chest,Item,D13552,40,D13553,F2,Reward
 210,RuneEdge,Istory Falls Chest,Item,D13556,40,D13557,56,Reward
 211,Guard Ring,Istory Falls Chest,Item,D1355A,40,D1355B,AF,Reward
@@ -737,7 +737,7 @@ id,readable_name,readable_location,type,type_address,type_data,item_address,item
 736,Elixir,White Flame Common Steal,Item,-,40,D05310,E3,Loot
 737,Eyedrop,White Flame Rare Steal,Item,-,40,D05311,E9,Loot
 738,Ether,White Flame Common Drop,Item,-,40,D05312,E2,Loot
-739,Air Knife,MossFungus Common Steal,Item,-,40,D05314,0A,Loot
+739,Air Lance,MossFungus Common Steal,Item,-,40,D05314,0A,Loot
 740,HiPotion,MossFungus Rare Steal,Item,-,40,D05315,E1,Loot
 741,Antidote,MossFungus Common Drop,Item,-,40,D05316,E8,Loot
 742,Soft,Orcat Common Steal,Item,-,40,D05318,EC,Loot
@@ -1291,7 +1291,7 @@ id,readable_name,readable_location,type,type_address,type_data,item_address,item
 1290,Slow2,Common World 2 Magic 3,Magic,-,20,D12EA1,40,Shop
 1291,Reset,Common World 2 Magic 3,Magic,-,20,D12EA2,41,Shop
 1292,Epee Sword,Surgate Weapon,Item,-,40,D12EA9,12,Shop
-1293,Heavy Spear,Surgate Weapon,Item,-,40,D12EAA,1D,Shop
+1293,Gungnir,Surgate Weapon,Item,-,40,D12EAA,1D,Shop
 1294,Bizen,Surgate Weapon,Item,-,40,D12EAB,2C,Shop
 1295,Venom Axe,Surgate Weapon,Item,-,40,D12EAC,25,Shop
 1296,Golden Shield,Surgate Armor,Item,-,40,D12EB2,85,Shop
@@ -1302,7 +1302,7 @@ id,readable_name,readable_location,type,type_address,type_data,item_address,item
 1301,Strength,Surgate Armor,Item,-,40,D12EB7,B9,Shop
 1302,Gaia Gear,Surgate Armor,Item,-,40,D12EB8,A9,Shop
 1303,Gauntlets,Surgate Armor,Item,-,40,D12EB9,C2,Shop
-1304,Air Knife,Mua Weapon,Item,-,40,D12EBB,0A,Shop
+1304,Air Lance,Mua Weapon,Item,-,40,D12EBB,0A,Shop
 1305,Elven Bow,Mua Weapon,Item,-,40,D12EBC,44,Shop
 1306,Diamond Shield,Mua Armor,Item,-,40,D12EC4,87,Shop
 1307,Diamond Helm,Mua Armor,Item,-,40,D12EC5,8E,Shop

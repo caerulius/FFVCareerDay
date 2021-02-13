@@ -128,6 +128,7 @@ db $CB, $4F, $00	;Clear Flag 2/3/4/5/4F 00
 db $CB, $50, $00	;Clear Flag 2/3/4/5/50 00
 db $A2, $17			;Set Event Flag 017
 db $CA, $7E, $00	;Set Flag 2/3/4/5/7E 00
+db $A4, $DC                     ;Set Event Flag 1DC ; DISABLED in v0.75, re-enabled 1.0, appears to only be tied to 4 crystal barriers on world map in world 1. MOVED FROM INTRO CUTSCENE
 db $A5, $FE			;Clear Event Flag 1FE
 db $B4, $08			;Play Background Music The Prelude
 db $FF              ;End Event

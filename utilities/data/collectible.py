@@ -482,7 +482,7 @@ class CollectibleManager():
             if of_type is not None:
                 working_list = [x for x in self.get_all_of_type(of_type) if x.max_count != 1 and x.valid]
                 if working_list == []:
-                    working_list = [x for x in self.collectibles if x.max_count != 1 and x.valid]
+                    working_list = [x for x in self.get_all_of_type(of_type) if x.valid]
             else:
                 working_list = [x for x in self.collectibles if x.max_count != 1 and x.valid]
 
@@ -520,6 +520,7 @@ class CollectibleManager():
 #                breakpoint()
 #        except:
 #            pass
+
         return choice
 
     def get_min_value_collectible(self, random_engine):

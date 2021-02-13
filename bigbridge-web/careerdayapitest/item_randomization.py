@@ -111,7 +111,7 @@ ability_dict = {'Guard':'06',
                 'Mantra':'09',
                 'Escape':'0A',
                 'Steal':'0B',
-                'Capture':'0C',
+                'Mug':'0C',
                 'Jump':'0D',
                 'DrgnSwd':'0E',
                 'Image':'10',
@@ -132,7 +132,7 @@ ability_dict_power = {'Guard':12,
                 'Mantra':19,
                 'Escape':7,
                 'Steal':23,
-                'Capture':55,
+                'Mug':55,
                 'Jump':43,
                 'DrgnSwd':66,
                 'Image':34,
@@ -546,6 +546,8 @@ class WeaponManager(ABC):
                 # now rewrite shop costs
                 weapon_patch = weapon_patch + rewrite_shop_costs(choice, self.df_weapon.loc[i])
                 new_weapon.set_replacement(choice)
+                if new_weapon.data_dict['subtype'] == 'flail':
+                    new_weapon.bytemap['byte3'] = self.re.choice(['5E','4B'])
                 self.weapons.append(new_weapon)
                 
             else:

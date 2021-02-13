@@ -521,7 +521,6 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,shop_pric
 526,<Misc>Fight,Fight Flail,49,flail,4,5400,DE,Enemy,,,,spell,F8,80,5e,80,23,08,78,31,38,64,21,DE,|flail|Fight Flail|49|5400|4|-|-,,-
 527,<Misc>Jump,Jump Flail,51,flail,5,5700,E8,Enemy,,,,spell,F8,80,5e,80,23,08,78,33,38,64,21,E8,|flail|Jump Flail|51|5700|5|-|-,,-
 528,<Misc>WindSlsh,WindSlsh Flail,53,flail,5,6000,AB,Enemy,,,,spell,F8,80,5e,80,23,08,78,35,38,64,21,AB,|flail|WindSlsh Flail|53|6000|5|-|-,,-
-529,<Misc>Darkness,Darkness Flail,55,flail,5,6300,AF,Enemy,,,,spell,F8,80,5e,80,23,08,78,37,38,64,21,AF,|flail|Darkness Flail|55|6300|5|-|-,,-
 530,<Misc>PsnBreth,PsnBreth Flail,57,flail,5,6600,B6,Enemy,,,,spell,F8,80,5e,80,23,08,78,39,38,64,21,B6,|flail|PsnBreth Flail|57|6600|5|-|-,,-
 531,<Misc>AtmicRay,AtmicRay Flail,59,flail,5,6900,CA,Enemy,,,,spell,F8,80,5e,80,23,08,78,3B,38,64,21,CA,|flail|AtmicRay Flail|59|6900|5|-|-,,-
 532,<Misc>TrueEdge,TrueEdge Flail,61,flail,6,7200,D0,Enemy,,,,spell,F8,80,5e,80,23,08,78,3D,38,64,21,D0,|flail|TrueEdge Flail|61|7200|6|-|-,,-
@@ -583,7 +582,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,shop_pric
 588,<Bell>Mantra,Mantra Bell,24,bell,2,2000,,,,Mantra,09,ability,38,20,50,92,23,02,78,18,39,00,64,09,|bell|Mantra Bell|24|2000|2|Vitality +3|-,Vitality +3,-
 589,<Bell>Escape,Escape Bell,12,bell,1,600,,,,Escape,0A,ability,38,20,50,A2,23,02,78,0C,39,00,64,0A,|bell|Escape Bell|12|600|1|Agility +3|-,Agility +3,-
 590,<Bell>Steal,Steal Bell,28,bell,2,2000,,,,Steal,0B,ability,38,20,50,A2,23,02,78,1C,39,00,64,0B,|bell|Steal Bell|28|2000|2|Agility +3|-,Agility +3,-
-591,<Bell>Capture,Capture Bell,60,bell,5,5000,,,,Capture,0C,ability,38,20,50,A2,23,02,78,3C,39,00,64,0C,|bell|Capture Bell|60|5000|5|Agility +3|-,Agility +3,-
+591,<Bell>Mug,Mug Bell,60,bell,5,5000,,,,Mug,0C,ability,38,20,50,A2,23,02,78,3C,39,00,64,0C,|bell|Mug Bell|60|5000|5|Agility +3|-,Agility +3,-
 592,<Bell>Jump,Jump Bell,48,bell,4,4000,,,,Jump,0D,ability,38,20,50,C1,23,02,78,30,39,00,64,0D,|bell|Jump Bell|48|4000|4|Strength +2|-,Strength +2,-
 593,<Bell>DrgnSwd,DrgnSwd Bell,71,bell,6,6000,,,,DrgnSwd,0E,ability,38,20,50,D2,23,02,78,47,39,00,64,0E,"|bell|DrgnSwd Bell|71|6000|6|Strength, Vitality +3|-","Strength, Vitality +3",-
 594,<Bell>Image,Image Bell,39,bell,3,3000,,,,Image,10,ability,38,20,50,A7,23,02,78,27,39,00,64,10,|bell|Image Bell|39|3000|3|Agility +5|-,Agility +5,-
