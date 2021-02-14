@@ -409,7 +409,7 @@ idx,address,shop_type,id,content_name,price,resell_byte,price_byte,int_price,res
 408,F8012E,00,97,MindBlst,0305,03,05,5000,HALF,,,,,,
 409,F80130,00,98,Vampire,0205,02,05,500,HALF,,,,,,
 410,F80132,00,99,Hammer,0205,02,05,500,HALF,,,,,,
-411,F80134,00,9A,MgthyGrd,0401,04,01,10000,HALF,,,,,,
+411,F80134,00,9A,BigGuard,0401,04,01,10000,HALF,,,,,,
 412,F80136,00,9B,Exploder,0303,03,03,3000,HALF,,,,,,
 413,F80138,00,9C,????,0301,03,01,1000,HALF,,,,,,
 414,F8013A,00,9D,Blowfish,0401,04,01,10000,HALF,,,,,,

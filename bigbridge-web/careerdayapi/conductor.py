@@ -50,7 +50,7 @@ ITEM_TYPE = "40"
 ITEM_SHOP_TYPE = "01"
 MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
-VERSION = "FFV CareerDay v0.995"
+VERSION = "FFV Career Day v1.0"
 
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
@@ -61,6 +61,7 @@ class Conductor():
         if len(conductor_config) == 0: # if no config was passed in, default False
             self.fjf = False
             self.fjf_strict = False
+            self.fjf_num_jobs = 4
             self.jobpalettes = False
             self.world_lock = 0
             self.tiering_config = True
@@ -99,6 +100,7 @@ class Conductor():
         else:                           # else take the config passed from server.py and set variables
             self.fjf = self.translateBool(conductor_config['fjf'])
             self.fjf_strict = self.translateBool(conductor_config['fjf_strict'])
+            self.fjf_num_jobs = int(conductor_config['fjf_num_jobs'])
             self.jobpalettes = self.translateBool(conductor_config['jobpalettes'])
             self.world_lock = int(conductor_config['world_lock'])
             self.tiering_config = self.translateBool(conductor_config['tiering_config'])
@@ -219,7 +221,6 @@ class Conductor():
             starting_crystal.starting_spell = starting_crystal.starting_spell_list[index]
             starting_crystal.starting_spell_id = starting_crystal.starting_spell_ids[index]
 
-        
             
         if self.fjf and any([self.job_2 != 'Random', self.job_3 != 'Random', self.job_4 != 'Random']):
 
@@ -281,6 +282,21 @@ class Conductor():
             else:
                 crystal_count = 3
             chosen_crystals = self.RE.sample(crystals, crystal_count)
+            job_2 = chosen_crystals[0]
+            job_3 = chosen_crystals[1]
+            job_4 = chosen_crystals[2]
+            # breakpoint()
+        
+        
+        # if less than normal amount of jobs are chosen for this, then change 
+        if self.fjf:
+            if self.fjf_num_jobs == 1:
+                chosen_crystals = [starting_crystal,starting_crystal,starting_crystal]            
+            if self.fjf_num_jobs == 2:
+                chosen_crystals = [starting_crystal,job_2,job_2]
+            if self.fjf_num_jobs == 3:
+                chosen_crystals = [job_2,job_2,job_3]
+
             
             # Ensures for fjf that Freelancer is not included
             # Rerolls until true
@@ -566,7 +582,7 @@ class Conductor():
         
         for index, value in enumerate(self.RE.sample(self.SM.shops,len(self.SM.shops))):
 #            if value.readable_name == 'Mirage Armor':
-#                breakpoint()
+                # breakpoint()
             #don't waste time on invalid shops
             if value.valid is False:
                 continue
@@ -619,6 +635,14 @@ class Conductor():
 
             contents = []
             
+            
+            
+            
+            
+            
+            
+            # if value.idx == 14:
+            #     breakpoint()
             if kind == "item":
                 if value.num_items < 4:
                     value.num_items = 4
@@ -644,6 +668,11 @@ class Conductor():
                     value.update_volume(item_to_place.tier)
                     self.CM.update_placement_rewards(item_to_place, value)
                     
+                    
+                    
+                    
+                    
+                    
             elif kind == "magic":
                 if value.num_items > 5:
                     value.num_items = 5
@@ -661,6 +690,9 @@ class Conductor():
                             item_to_place = self.CM.get_random_collectible(random, respect_weight=True, reward_loc_tier = value.tier, 
                                                                            monitor_counts=True,next_reward = value,
                                                                            of_type=Magic, disable_zerozero=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
+                            
+
+                            
                             if item_to_place not in contents:
                                 break
 
@@ -717,10 +749,27 @@ class Conductor():
                         contents.append(item_to_place)
                         value.update_volume(item_to_place.tier)
                         self.CM.update_placement_rewards(item_to_place, value)
+
+
+            
+            # final check that contents are all the same type
+            # exception for abilities and crystals handled first
+            
+            contents_types = list(set([type(i) for i in contents]))
+            if Ability in contents_types and Crystal in contents_types and len(contents_types) == 2:
+                pass                
+            else:
+                first_slot_type = type(contents[0])
+                for content in contents:
+                    if type(content) != first_slot_type:
+                        contents.remove(content)
+                        logging.error("NOTICE: Removing shop entry for mismatch on collectible type")
+
             while(len(contents) < 8):
                 contents.append(None)
-                
+# 
             value.contents = contents
+            
 
             
         '''
@@ -1193,6 +1242,7 @@ class Conductor():
                     
             # CLAUSE FOR SANDWORM:
             elif random_boss.event_id in ['0A']:
+                new_exp = int(round(new_exp / 3))
                 for enemy in [random_boss.enemy_classes[3],random_boss.enemy_classes[4],random_boss.enemy_classes[5]]:
                     enemy.num_exp = new_exp
                     
@@ -1322,6 +1372,23 @@ class Conductor():
             output_str = output_str[:-2]
             logging.error(output_str)
             return output_str
+        
+        
+    def randomize_dragon(self):
+        return '''
+                    org $C33320
+                
+                dw $0100
+                dw $0000
+                
+                !color_num = 15
+                while !color_num > 0 
+                    dw $%s
+                    !color_num #= !color_num-1
+                endif
+                
+                
+                    ''' % i2b(self.RE.randint(0,65535))
         
         
     def set_portal_boss(self, output_str):
@@ -1667,7 +1734,7 @@ class Conductor():
         output_str = output_str + '\n; CODE OF THE VOID: \norg $E77476\n'+code_str+'\norg $F80900\n'+code_str+'\n\n'
 
         
-        self.superbosses_spoiler = self.superbosses_spoiler + "\-----CODE OF THE VOID-----\n"+''.join(letters)+"\n\n"
+        self.superbosses_spoiler = self.superbosses_spoiler + "-----CODE OF THE VOID-----\n"+''.join(letters)+"\n\n"
             
         return output_str
     
@@ -1676,6 +1743,7 @@ class Conductor():
         hint_text = []
             
         keys = self.RM.get_rewards_by_style('key')
+        keys = [i for i in keys if i.description != 'WingRaptor']
         
         keys_main = []
         keys_barren = []
@@ -1713,7 +1781,7 @@ class Conductor():
         tablet_reqs = []
         for tablet in tablets:
     #        breakpoint()
-            logging.error(">>>>>>>>>>>:"+tablet.description)
+            # logging.error(">>>>>>>>>>>:"+tablet.description)
             # for each tablet, iterate through required keys for that tablet
             if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
                 tablet_reqs = getattr(tablet, 'required_key_items')
@@ -1728,23 +1796,27 @@ class Conductor():
                     if tablet_reqs == []:
                         loop_flag = False
                         break
-                    logging.error(tablet_reqs)
+                    if type(tablet_reqs) == str:
+                        tablet_reqs = [tablet_reqs]
+                    # logging.error(tablet_reqs)
                     # find the reward associated with the latest tablet_req
-                    new_reward = [x for x in keys if x.collectible.collectible_name == tablet_reqs[0]][0]
-                    if new_reward not in required_rewards:
-                        required_rewards.append(new_reward)
-                    # check if this new reward has any reqs of its own, if it does, add to tablet_reqs
-                    if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
-                        new_reward_reqs = getattr(tablet, 'required_key_items')
-                    else:
-                        new_reward_reqs = getattr(new_reward,'required_key_items_lock'+str(self.configs['world_lock']))
-                    if new_reward_reqs:
-                        for i in new_reward_reqs:
-                            if i not in tablet_reqs:
-    #                            logging.error("Adding %s to tablet_reqs" % i)
-                                tablet_reqs.append(i)
-                    tablet_reqs = tablet_reqs[1:]
-    #                time.sleep(2)
+                    new_rewards = [x for x in keys if x.collectible.collectible_name == tablet_reqs[0]]                       
+                    if new_rewards:
+                        new_reward = new_rewards[0]
+                        if new_reward not in required_rewards:
+                            required_rewards.append(new_reward)
+                        # check if this new reward has any reqs of its own, if it does, add to tablet_reqs
+                        if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
+                            new_reward_reqs = getattr(tablet, 'required_key_items')
+                        else:
+                            new_reward_reqs = getattr(new_reward,'required_key_items_lock'+str(self.configs['world_lock']))
+                        if new_reward_reqs:
+                            for i in new_reward_reqs:
+                                if i not in tablet_reqs:
+        #                            logging.error("Adding %s to tablet_reqs" % i)
+                                    tablet_reqs.append(i)
+                        tablet_reqs = tablet_reqs[1:]
+        #                time.sleep(2)
             else:
                 continue # if there's no requirements, move on to next 
                         
@@ -1950,7 +2022,7 @@ class Conductor():
         try:
             randomized_weapons_ids = [i.data_dict['item_id'] for i in self.WM.weapons]
         except:
-            logging.error("no weapon manager")
+            logging.error("No weapon manager, skipping...")
 
         for i in range(0, len(kuzar_reward_addresses)):
 #            logging.error(i)
@@ -1999,16 +2071,16 @@ class Conductor():
     def translateBool(self, boolean):
         
         if type(boolean) == bool:
-            logging.error("Argument passed in to translate: %s, returning original as boolean" % (boolean))
+            # logging.error("Argument passed in to translate: %s, returning original as boolean" % (boolean))
             return boolean
         if boolean == "false" or boolean == "False" or boolean == "off" or boolean == "0" or boolean == 0:
-            logging.error("Argument passed in to translate: %s, returning boolean False" % (boolean))
+            # logging.error("Argument passed in to translate: %s, returning boolean False" % (boolean))
             return False
         if boolean == "true" or boolean == "True" or boolean == "on" or boolean == "1" or boolean == 1:
-            logging.error("Argument passed in to translate: %s, returning boolean True" % (boolean))
+            # logging.error("Argument passed in to translate: %s, returning boolean True" % (boolean))
             return True
         else:
-            logging.error("Argument passed in to translate: %s, returning NONETYPE" % (boolean))
+            # logging.error("Argument passed in to translate: %s, returning NONETYPE" % (boolean))
             return None
         
 #   Unused, but may be necessary one day. The concept here is to iterate through unplaced collectibles and assign them to random rewards
@@ -2076,12 +2148,12 @@ class Conductor():
         
     
     def create_hash(self):
-        choices = {"BB":"Crys",
+        choices = {"BB":"Crystal",
                     "BC":"Key",
                     "BF":"Hammer",
                     "C0":"Tent",
                     "C1":"Ribbon",
-                    "C2":"Dronk",
+                    "C2":"Drink",
                     "C3":"Suit",
                     "C4":"Song",
                     "C6":"Shuriken",
@@ -2091,7 +2163,7 @@ class Conductor():
                     "E3":"Sword",
                     "E4":"White",
                     "E5":"Black",
-                    "E6":"Dimension",
+                    "E6":"Time",
                     "E7":"Knife",
                     "E8":"Spear",
                     "E9":"Axe",
@@ -2220,10 +2292,7 @@ class Conductor():
         if self.seed is not None and self.setting_string is not None:
             spoiler = spoiler + self.spoiler_intro()
 
-        logging.error("Creating hash")
-        temp_hash, temp_hash_patch = self.create_hash()
-        patch += temp_hash_patch
-        spoiler = spoiler + temp_hash
+
         
         logging.error("Retreiving spoiler data")
         spoiler = spoiler + self.spoiler_settings()
@@ -2248,11 +2317,20 @@ class Conductor():
         patch = patch + temp_hints_asar
         spoiler = spoiler + temp_hints
         
+
+        logging.error("Creating hash...")
+        temp_hash, temp_hash_patch = self.create_hash()
+        patch += temp_hash_patch
+        spoiler =  temp_hash + spoiler
+
         if self.jobpalettes:
             patch = patch + self.randomize_job_color_palettes()
 
+
+        patch = patch + self.randomize_dragon()
         
         
+
         
         logging.error("Finished randomization process.")
         return(spoiler, patch)
@@ -2264,12 +2342,13 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    # SEED_NUM = 558818
-    SEED_NUM = random.randint(1,1000000)
+    SEED_NUM = 166
+    # SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {'seed': SEED_NUM, 
-                           'fjf': 'true', 
-                           'fjf_strict': 'true', 
+                           'fjf': 'false', 
+                           'fjf_strict': 'false', 
+                           'fjf_num_jobs' : 4,
                            'job_1': 'Random', 
                            'job_2': 'Random', 
                            'job_3': 'Random', 
@@ -2296,7 +2375,7 @@ if __name__ == "__main__":
                            'default_abilities': 'false', 
                            'learning_abilities': 'false', 
                            'free_tablets' : '0',
-                           'item_randomization_percent': '0', 
+                           'item_randomization_percent': '100', 
                            'battle_speed': '3',
                            'red_color': '0', 
                            'blue_color': '0', 

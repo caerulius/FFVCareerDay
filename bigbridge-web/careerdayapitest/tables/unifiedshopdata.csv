@@ -1,0 +1,333 @@
+Broadsword,Tule Weapon,Item,-,40,D12D41,0D,Shop
+Rod,Tule Weapon,Item,-,40,D12D42,31,Shop
+Staff,Tule Weapon,Item,-,40,D12D43,38,Shop
+Leather Shield,Tule Armor,Item,-,40,D12D4A,81,Shop
+Leather Cap,Tule Armor,Item,-,40,D12D4B,89,Shop
+Leather Armor,Tule Armor,Item,-,40,D12D4C,9A,Shop
+Potion,Tule Inn,Item,-,40,D12D53,E0,Shop
+Tent,Tule Inn,Item,-,40,D12D54,F0,Shop
+Fire,Tule Magic,Magic,-,20,D12D5C,24,Shop
+Ice,Tule Magic,Magic,-,20,D12D5D,25,Shop
+Bolt,Tule Magic,Magic,-,20,D12D5E,26,Shop
+Cure,Tule Magic,Magic,-,20,D12D5F,12,Shop
+Scan,Tule Magic,Magic,-,20,D12D60,13,Shop
+Antdt,Tule Magic,Magic,-,20,D12D61,14,Shop
+Dagger,Carwen Weapon,Item,-,40,D12D65,03,Shop
+RegalCut,Carwen Weapon,Item,-,40,D12D66,0E,Shop
+Rod,Carwen Weapon,Item,-,40,D12D67,31,Shop
+Staff,Carwen Weapon,Item,-,40,D12D68,38,Shop
+Bronze Shield,Carwen Armor,Item,-,40,D12D6E,82,Shop
+Bronze Helm,Carwen Armor,Item,-,40,D12D6F,8A,Shop
+Bronze Armor,Carwen Armor,Item,-,40,D12D70,9B,Shop
+CopperPlt,Carwen Armor,Item,-,40,D12D71,A1,Shop
+Cotton Robe,Carwen Armor,Item,-,40,D12D72,A7,Shop
+Potion,Carwen Inn,Item,-,40,D12D77,E0,Shop
+Antidote,Carwen Inn,Item,-,40,D12D78,E8,Shop
+Eyedrop,Carwen Inn,Item,-,40,D12D79,E9,Shop
+Maiden's Kiss,Carwen Inn,Item,-,40,D12D7A,E5,Shop
+LuckMallet,Carwen Inn,Item,-,40,D12D7B,ED,Shop
+Soft,Carwen Inn,Item,-,40,D12D7C,EC,Shop
+Phoenix Down,Carwen Inn,Item,-,40,D12D7D,E4,Shop
+Tent,Carwen Inn,Item,-,40,D12D7E,F0,Shop
+Fire,Carwen Magic,Magic,-,20,D12D80,24,Shop
+Ice,Carwen Magic,Magic,-,20,D12D81,25,Shop
+Bolt,Carwen Magic,Magic,-,20,D12D82,26,Shop
+Sleep,Carwen Magic,Magic,-,20,D12D83,28,Shop
+Cure,Carwen Magic,Magic,-,20,D12D84,12,Shop
+Antdt,Carwen Magic,Magic,-,20,D12D85,14,Shop
+Mute,Carwen Magic,Magic,-,20,D12D86,15,Shop
+Armor,Carwen Magic,Magic,-,20,D12D87,16,Shop
+Battle Axe,Worus Weapon,Item,-,40,D12D89,21,Shop
+RegalCut,Worus Weapon,Item,-,40,D12D8A,0E,Shop
+Dagger,Worus Weapon,Item,-,40,D12D8B,03,Shop
+Iron Shield,Worus Armor,Item,-,40,D12D92,83,Shop
+Iron Helm,Worus Armor,Item,-,40,D12D93,8B,Shop
+Iron Armor,Worus Armor,Item,-,40,D12D94,9C,Shop
+Training Suit,Worus Armor,Item,-,40,D12D95,A2,Shop
+Cotton Robe,Worus Armor,Item,-,40,D12D96,A7,Shop
+Slow,Worus Magic,Magic,-,20,D12D9B,37,Shop
+Regen,Worus Magic,Magic,-,20,D12D9C,38,Shop
+Void,Worus Magic,Magic,-,20,D12D9D,39,Shop
+Haste,Worus Magic,Magic,-,20,D12D9E,3A,Shop
+Chocob,Worus Magic,Magic,-,20,D12D9F,48,Shop
+Sylph,Worus Magic,Magic,-,20,D12DA0,49,Shop
+Remora,Worus Magic,Magic,-,20,D12DA1,4A,Shop
+Mythril Knife,Karnak Weapon 1,Item,-,40,D12DA4,04,Shop
+Mythril Sword,Karnak Weapon 1,Item,-,40,D12DA5,0F,Shop
+Mythril Hammer,Karnak Weapon 1,Item,-,40,D12DA6,22,Shop
+Fire Rod,Karnak Weapon 1,Item,-,40,D12DA7,32,Shop
+Ice Rod,Karnak Weapon 1,Item,-,40,D12DA8,33,Shop
+Thunder Rod,Karnak Weapon 1,Item,-,40,D12DA9,34,Shop
+Flail,Karnak Weapon 1,Item,-,40,D12DAA,5E,Shop
+Mythril Spear,Karnak Weapon 2,Item,-,40,D12DAD,19,Shop
+Kunai,Karnak Weapon 2,Item,-,40,D12DAE,05,Shop
+Whip,Karnak Weapon 2,Item,-,40,D12DAF,4B,Shop
+Giyaman,Karnak Weapon 2,Item,-,40,D12DB0,50,Shop
+Mythril Shield,Karnak Armor,Item,-,40,D12DB6,84,Shop
+Mythril Helm,Karnak Armor,Item,-,40,D12DB7,8C,Shop
+Plumed Hat,Karnak Armor,Item,-,40,D12DB8,90,Shop
+Mythril Armor,Karnak Armor,Item,-,40,D12DB9,9D,Shop
+Silver Plate,Karnak Armor,Item,-,40,D12DBA,A3,Shop
+Silk robe,Karnak Armor,Item,-,40,D12DBB,A8,Shop
+Mythril Glove,Karnak Armor,Item,-,40,D12DBC,B6,Shop
+Silver Armlet,Karnak Armor,Item,-,40,D12DBD,B7,Shop
+Potion,Common World 1 Inn,Item,-,40,D12DBF,E0,Shop
+Antidote,Common World 1 Inn,Item,-,40,D12DC0,E8,Shop
+Eyedrop,Common World 1 Inn,Item,-,40,D12DC1,E9,Shop
+Maiden's Kiss,Common World 1 Inn,Item,-,40,D12DC2,E5,Shop
+LuckMallet,Common World 1 Inn,Item,-,40,D12DC3,ED,Shop
+Soft,Common World 1 Inn,Item,-,40,D12DC4,EC,Shop
+Phoenix Down,Common World 1 Inn,Item,-,40,D12DC5,E4,Shop
+Tent,Common World 1 Inn,Item,-,40,D12DC6,F0,Shop
+Fire2,Karnak Magic 1,Magic,-,20,D12DC8,2A,Shop
+Ice2,Karnak Magic 1,Magic,-,20,D12DC9,2B,Shop
+Bolt2,Karnak Magic 1,Magic,-,20,D12DCA,2C,Shop
+Venom,Karnak Magic 1,Magic,-,20,D12DCB,27,Shop
+Sleep,Karnak Magic 1,Magic,-,20,D12DCC,28,Shop
+Fire,Karnak Magic 1,Magic,-,20,D12DCD,24,Shop
+Ice,Karnak Magic 1,Magic,-,20,D12DCE,25,Shop
+Bolt,Karnak Magic 1,Magic,-,20,D12DCF,26,Shop
+Cure2,Karnak Magic 2,Magic,-,20,D12DD1,18,Shop
+Life,Karnak Magic 2,Magic,-,20,D12DD2,19,Shop
+Charm,Karnak Magic 2,Magic,-,20,D12DD3,1A,Shop
+Mute,Karnak Magic 2,Magic,-,20,D12DD4,15,Shop
+Armor,Karnak Magic 2,Magic,-,20,D12DD5,16,Shop
+Cure,Karnak Magic 2,Magic,-,20,D12DD6,12,Shop
+Scan,Karnak Magic 2,Magic,-,20,D12DD7,13,Shop
+Antdt,Karnak Magic 2,Magic,-,20,D12DD8,14,Shop
+Demi,Karnak Magic 3,Magic,-,20,D12DDA,3C,Shop
+Stop,Karnak Magic 3,Magic,-,20,D12DDB,3D,Shop
+Haste,Karnak Magic 3,Magic,-,20,D12DDC,3A,Shop
+Void,Karnak Magic 3,Magic,-,20,D12DDD,39,Shop
+Slow,Karnak Magic 3,Magic,-,20,D12DDE,37,Shop
+Regen,Karnak Magic 3,Magic,-,20,D12DDF,38,Shop
+Fire Bow,Crescent Weapon,Item,-,40,D12DE3,3F,Shop
+Ice Bow,Crescent Weapon,Item,-,40,D12DE4,40,Shop
+Thunder Bow,Crescent Weapon,Item,-,40,D12DE5,41,Shop
+Silver Harp,Crescent Weapon,Item,-,40,D12DE6,47,Shop
+Plumed Hat,Crescent Armor,Item,-,40,D12DEC,90,Shop
+Bard's Surplice,Crescent Armor,Item,-,40,D12DED,AA,Shop
+Flame Ring,Istory Rare,Item,-,40,D12DFE,BD,Shop
+Coral Ring,Istory Rare,Item,-,40,D12DFF,BE,Shop
+Angel Ring,Istory Rare,Item,-,40,D12E00,BC,Shop
+Ogre Killer,Jacole Weapon,Item,-,40,D12E19,23,Shop
+Coral Sword,Jacole Weapon,Item,-,40,D12E1A,10,Shop
+Mage Masher,Jacole Weapon,Item,-,40,D12E1B,06,Shop
+Trident,Jacole Weapon,Item,-,40,D12E1C,1A,Shop
+Katana,Jacole Weapon,Item,-,40,D12E1D,29,Shop
+Silver Bow,Jacole Weapon,Item,-,40,D12E1E,65,Shop
+GrnBeret,Jacole Armor,Item,-,40,D12E22,97,Shop
+Stealth Suit,Jacole Armor,Item,-,40,D12E23,A4,Shop
+Bard's Surplice,Jacole Armor,Item,-,40,D12E24,AA,Shop
+Ether,Common World 2 Inn 1,Item,-,40,D12E2B,E2,Shop
+Revivify,Common World 2 Inn 1,Item,-,40,D12E2C,E6,Shop
+Cabin,Common World 2 Inn 1,Item,-,40,D12E2D,F1,Shop
+Giant Drink,Common World 2 Inn 1,Item,-,40,D12E2E,F2,Shop
+Power Drink,Common World 2 Inn 1,Item,-,40,D12E2F,F3,Shop
+Speed Drink,Common World 2 Inn 1,Item,-,40,D12E30,F4,Shop
+Protect Drink,Common World 2 Inn 1,Item,-,40,D12E31,F5,Shop
+Hero Drink,Common World 2 Inn 1,Item,-,40,D12E32,F6,Shop
+Kunai,Lix Guild,Item,-,40,D12E34,05,Shop
+Shuriken,Lix Guild,Item,-,40,D12E35,5A,Shop
+Flame Scroll,Lix Guild,Item,-,40,D12E36,FC,Shop
+Water Scroll,Lix Guild,Item,-,40,D12E37,FD,Shop
+Thunder Scroll,Lix Guild,Item,-,40,D12E38,FE,Shop
+GrnBeret,Lix Armor,Item,-,40,D12E3D,97,Shop
+Stealth Suit,Lix Armor,Item,-,40,D12E3E,A4,Shop
+Heal,Lix Magic,Magic,-,20,D12E46,1D,Shop
+Orialcon,Rugor Weapon,Item,-,40,D12E4F,09,Shop
+War Hammer,Rugor Weapon,Item,-,40,D12E50,24,Shop
+Katana,Rugor Weapon,Item,-,40,D12E51,29,Shop
+Slumber Sword,Rugor Weapon,Item,-,40,D12E52,13,Shop
+Wind Spear,Rugor Weapon,Item,-,40,D12E53,1B,Shop
+Darkness Bow,Rugor Weapon,Item,-,40,D12E54,42,Shop
+Dream Harp,Rugor Weapon,Item,-,40,D12E55,48,Shop
+Chain Whip,Rugor Weapon,Item,-,40,D12E56,4C,Shop
+Golden Shield,Rugor Armor,Item,-,40,D12E58,85,Shop
+Golden Helm,Rugor Armor,Item,-,40,D12E59,8D,Shop
+GrnBeret,Rugor Armor,Item,-,40,D12E5A,97,Shop
+Tricorn Hat,Rugor Armor,Item,-,40,D12E5B,91,Shop
+Golden Armor,Rugor Armor,Item,-,40,D12E5C,9E,Shop
+Stealth Suit,Rugor Armor,Item,-,40,D12E5D,A4,Shop
+Gaia Gear,Rugor Armor,Item,-,40,D12E5E,A9,Shop
+HiPotion,Common World 2 Inn 2,Item,-,40,D12E61,E1,Shop
+Potion,Common World 2 Inn 2,Item,-,40,D12E62,E0,Shop
+Phoenix Down,Common World 2 Inn 2,Item,-,40,D12E63,E4,Shop
+Soft,Common World 2 Inn 2,Item,-,40,D12E64,EC,Shop
+Maiden's Kiss,Common World 2 Inn 2,Item,-,40,D12E65,E5,Shop
+LuckMallet,Common World 2 Inn 2,Item,-,40,D12E66,ED,Shop
+Eyedrop,Common World 2 Inn 2,Item,-,40,D12E67,E9,Shop
+Antidote,Common World 2 Inn 2,Item,-,40,D12E68,E8,Shop
+Orialcon,Bal/Kelb Weapon,Item,-,40,D12E6A,09,Shop
+War Hammer,Bal/Kelb Weapon,Item,-,40,D12E6B,24,Shop
+Katana,Bal/Kelb Weapon,Item,-,40,D12E6C,29,Shop
+Slumber Sword,Bal/Kelb Weapon,Item,-,40,D12E6D,13,Shop
+Wind Spear,Bal/Kelb Weapon,Item,-,40,D12E6E,1B,Shop
+Darkness Bow,Bal/Kelb Weapon,Item,-,40,D12E6F,42,Shop
+Dream Harp,Bal/Kelb Weapon,Item,-,40,D12E70,48,Shop
+Chain Whip,Bal/Kelb Weapon,Item,-,40,D12E71,4C,Shop
+Golden Shield,Bal/Kelb Armor,Item,-,40,D12E73,85,Shop
+Golden Helm,Bal/Kelb Armor,Item,-,40,D12E74,8D,Shop
+GrnBeret,Bal/Kelb Armor,Item,-,40,D12E75,97,Shop
+Tricorn Hat,Bal/Kelb Armor,Item,-,40,D12E76,91,Shop
+Golden Armor,Bal/Kelb Armor,Item,-,40,D12E77,9E,Shop
+Stealth Suit,Bal/Kelb Armor,Item,-,40,D12E78,A4,Shop
+Gaia Gear,Bal/Kelb Armor,Item,-,40,D12E79,A9,Shop
+Gauntlets,Bal/Kelb Armor,Item,-,40,D12E7A,C2,Shop
+Kodachi,Kelb Weapon,Item,-,40,D12E7C,08,Shop
+Killer Bow,Kelb Weapon,Item,-,40,D12E7D,43,Shop
+Venom Rod,Kelb Weapon,Item,-,40,D12E7E,35,Shop
+Shuriken,Kelb Weapon,Item,-,40,D12E7F,5A,Shop
+Flame Scroll,Kelb Weapon,Item,-,40,D12E80,FC,Shop
+Water Scroll,Kelb Weapon,Item,-,40,D12E81,FD,Shop
+Thunder Scroll,Kelb Weapon,Item,-,40,D12E82,FE,Shop
+Bandana,Kelb Armor,Item,-,40,D12E85,96,Shop
+Strength,Kelb Armor,Item,-,40,D12E86,B9,Shop
+Power Wrist,Kelb Armor,Item,-,40,D12E87,BA,Shop
+Image,Common World 2 Magic 1,Magic,-,20,D12E8E,1B,Shop
+Shell,Common World 2 Magic 1,Magic,-,20,D12E8F,1C,Shop
+Heal,Common World 2 Magic 1,Magic,-,20,D12E90,1D,Shop
+Drain,Common World 2 Magic 2,Magic,-,20,D12E97,2D,Shop
+Break,Common World 2 Magic 2,Magic,-,20,D12E98,2E,Shop
+Bio,Common World 2 Magic 2,Magic,-,20,D12E99,2F,Shop
+Comet,Common World 2 Magic 3,Magic,-,20,D12EA0,3F,Shop
+Slow2,Common World 2 Magic 3,Magic,-,20,D12EA1,40,Shop
+Reset,Common World 2 Magic 3,Magic,-,20,D12EA2,41,Shop
+Epee Sword,Surgate Weapon,Item,-,40,D12EA9,12,Shop
+Heavy Spear,Surgate Weapon,Item,-,40,D12EAA,1D,Shop
+Bizen,Surgate Weapon,Item,-,40,D12EAB,2C,Shop
+Venom Axe,Surgate Weapon,Item,-,40,D12EAC,25,Shop
+Golden Shield,Surgate Armor,Item,-,40,D12EB2,85,Shop
+Golden Helm,Surgate Armor,Item,-,40,D12EB3,8D,Shop
+Bandana,Surgate Armor,Item,-,40,D12EB4,96,Shop
+Tricorn Hat,Surgate Armor,Item,-,40,D12EB5,91,Shop
+Golden Armor,Surgate Armor,Item,-,40,D12EB6,9E,Shop
+Strength,Surgate Armor,Item,-,40,D12EB7,B9,Shop
+Gaia Gear,Surgate Armor,Item,-,40,D12EB8,A9,Shop
+Gauntlets,Surgate Armor,Item,-,40,D12EB9,C2,Shop
+Air Knife,Mua Weapon,Item,-,40,D12EBB,0A,Shop
+Elven Bow,Mua Weapon,Item,-,40,D12EBC,44,Shop
+Diamond Shield,Mua Armor,Item,-,40,D12EC4,87,Shop
+Diamond Helm,Mua Armor,Item,-,40,D12EC5,8E,Shop
+Tiger Mask,Mua Armor,Item,-,40,D12EC6,C3,Shop
+Magus,Mua Armor,Item,-,40,D12EC7,92,Shop
+Diamond Armor,Mua Armor,Item,-,40,D12EC8,9F,Shop
+DiamndPlt,Mua Armor,Item,-,40,D12EC9,A5,Shop
+Lumina Robe,Mua Armor,Item,-,40,D12ECA,AB,Shop
+Diamond Armlet,Mua Armor,Item,-,40,D12ECB,B8,Shop
+Cure3,Mua Magic 1,Magic,-,20,D12ECD,1E,Shop
+Wall,Mua Magic 1,Magic,-,20,D12ECE,1F,Shop
+Bersk,Mua Magic 1,Magic,-,20,D12ECF,20,Shop
+Image,Mua Magic 1,Magic,-,20,D12ED0,1B,Shop
+Shell,Mua Magic 1,Magic,-,20,D12ED1,1C,Shop
+Heal,Mua Magic 1,Magic,-,20,D12ED2,1D,Shop
+Fire3,Mua Magic 2,Magic,-,20,D12ED6,30,Shop
+Ice3,Mua Magic 2,Magic,-,20,D12ED7,31,Shop
+Bolt3,Mua Magic 2,Magic,-,20,D12ED8,32,Shop
+Drain,Mua Magic 2,Magic,-,20,D12ED9,2D,Shop
+Break,Mua Magic 2,Magic,-,20,D12EDA,2E,Shop
+Bio,Mua Magic 2,Magic,-,20,D12EDB,2F,Shop
+Qrter,Mua Magic 3,Magic,-,20,D12EDF,42,Shop
+Hast2,Mua Magic 3,Magic,-,20,D12EE0,43,Shop
+Old,Mua Magic 3,Magic,-,20,D12EE1,44,Shop
+Comet,Mua Magic 3,Magic,-,20,D12EE2,3F,Shop
+Slow2,Mua Magic 3,Magic,-,20,D12EE3,40,Shop
+Reset,Mua Magic 3,Magic,-,20,D12EE4,41,Shop
+Ether,Lix Inn,Item,-,40,D12EFA,E2,Shop
+Potion,Lix Inn,Item,-,40,D12EFB,E0,Shop
+Antidote,Lix Inn,Item,-,40,D12EFC,E8,Shop
+Eyedrop,Lix Inn,Item,-,40,D12EFD,E9,Shop
+LuckMallet,Lix Inn,Item,-,40,D12EFE,ED,Shop
+Maiden's Kiss,Lix Inn,Item,-,40,D12EFF,E5,Shop
+Soft,Lix Inn,Item,-,40,D12F00,EC,Shop
+Tent,Lix Inn,Item,-,40,D12F01,F0,Shop
+Life2,Dwarf Magic,Magic,-,20,D12F03,21,Shop
+Dispel,Dwarf Magic,Magic,-,20,D12F04,23,Shop
+Doom,Dwarf Magic,Magic,-,20,D12F05,34,Shop
+Psych,Dwarf Magic,Magic,-,20,D12F06,35,Shop
+Quick,Dwarf Magic,Magic,-,20,D12F07,46,Shop
+Xzone,Dwarf Magic,Magic,-,20,D12F08,47,Shop
+Earth Hammer,Dwarf Weapon,Item,-,40,D12F0C,26,Shop
+Morning Star,Dwarf Weapon,Item,-,40,D12F0D,5F,Shop
+AntiMagic Bow,Dwarf Weapon,Item,-,40,D12F0E,67,Shop
+Forged,Dwarf Weapon,Item,-,40,D12F0F,2D,Shop
+Crystal Shield,Dwarf Armor,Item,-,40,D12F15,88,Shop
+Crystal Helm,Dwarf Armor,Item,-,40,D12F16,8F,Shop
+DarkHood,Dwarf Armor,Item,-,40,D12F17,98,Shop
+Circlet,Dwarf Armor,Item,-,40,D12F18,93,Shop
+Crystal Armor,Dwarf Armor,Item,-,40,D12F19,A0,Shop
+DarkSuit,Dwarf Armor,Item,-,40,D12F1A,A6,Shop
+Black Robe,Dwarf Armor,Item,-,40,D12F1B,AC,Shop
+White Robe,Dwarf Armor,Item,-,40,D12F1C,AD,Shop
+Flametongue,Mirage Weapon,Item,-,40,D12F27,57,Shop
+IceBrand,Mirage Weapon,Item,-,40,D12F28,58,Shop
+Earth Hammer,Mirage Weapon,Item,-,40,D12F29,26,Shop
+Morning Star,Mirage Weapon,Item,-,40,D12F2A,5F,Shop
+AntiMagic Bow,Mirage Weapon,Item,-,40,D12F2B,67,Shop
+Forged,Mirage Weapon,Item,-,40,D12F2C,2D,Shop
+Partisan,Mirage Weapon,Item,-,40,D12F2D,1C,Shop
+Pinwheel,Mirage Guild,Item,-,40,D12F30,5B,Shop
+Shuriken,Mirage Guild,Item,-,40,D12F31,5A,Shop
+DblLance,Mirage Guild,Item,-,40,D12F32,1E,Shop
+Full Moon,Mirage Guild,Item,-,40,D12F33,59,Shop
+Flame Scroll,Mirage Guild,Item,-,40,D12F34,FC,Shop
+Water Scroll,Mirage Guild,Item,-,40,D12F35,FD,Shop
+Thunder Scroll,Mirage Guild,Item,-,40,D12F36,FE,Shop
+Crystal Shield,Mirage Armor,Item,-,40,D12F39,88,Shop
+Crystal Helm,Mirage Armor,Item,-,40,D12F3A,8F,Shop
+DarkHood,Mirage Armor,Item,-,40,D12F3B,98,Shop
+Circlet,Mirage Armor,Item,-,40,D12F3C,93,Shop
+Crystal Armor,Mirage Armor,Item,-,40,D12F3D,A0,Shop
+DarkSuit,Mirage Armor,Item,-,40,D12F3E,A6,Shop
+Black Robe,Mirage Armor,Item,-,40,D12F3F,AC,Shop
+White Robe,Mirage Armor,Item,-,40,D12F40,AD,Shop
+Running Shoes,Mirage Rare,Item,-,40,D12F42,B5,Shop
+Angel Ring,Mirage Rare,Item,-,40,D12F43,BC,Shop
+Flame Ring,Mirage Rare,Item,-,40,D12F44,BD,Shop
+Coral Ring,Mirage Rare,Item,-,40,D12F45,BE,Shop
+Lamia's Tiara,Mirage Rare,Item,-,40,D12F46,99,Shop
+Angel Gwn,Mirage Rare,Item,-,40,D12F47,BB,Shop
+Life2,Mirage Magic 1,Magic,-,20,D12F4B,21,Shop
+Dispel,Mirage Magic 1,Magic,-,20,D12F4C,23,Shop
+Doom,Mirage Magic 1,Magic,-,20,D12F4D,34,Shop
+Psych,Mirage Magic 1,Magic,-,20,D12F4E,35,Shop
+Quick,Mirage Magic 1,Magic,-,20,D12F4F,46,Shop
+Xzone,Mirage Magic 1,Magic,-,20,D12F50,47,Shop
+Size,Mirage Magic 2,Magic,-,20,D12F54,17,Shop
+Toad,Mirage Magic 2,Magic,-,20,D12F55,29,Shop
+Drag,Mirage Magic 2,Magic,-,20,D12F56,36,Shop
+Float,Mirage Magic 2,Magic,-,20,D12F57,3B,Shop
+Exit,Mirage Magic 2,Magic,-,20,D12F58,3E,Shop
+Chocob,Mirage Magic 2,Magic,-,20,D12F59,48,Shop
+Sylph,Mirage Magic 2,Magic,-,20,D12F5A,49,Shop
+Remora,Mirage Magic 2,Magic,-,20,D12F5B,4A,Shop
+Potion,Mirage Inn 1,Item,-,40,D12F5D,E0,Shop
+HiPotion,Mirage Inn 1,Item,-,40,D12F5E,E1,Shop
+Phoenix Down,Mirage Inn 1,Item,-,40,D12F5F,E4,Shop
+Maiden's Kiss,Mirage Inn 1,Item,-,40,D12F60,E5,Shop
+Antidote,Mirage Inn 1,Item,-,40,D12F61,E8,Shop
+Eyedrop,Mirage Inn 1,Item,-,40,D12F62,E9,Shop
+Soft,Mirage Inn 1,Item,-,40,D12F63,EC,Shop
+LuckMallet,Mirage Inn 1,Item,-,40,D12F64,ED,Shop
+Elixir,Mirage Inn 2,Item,-,40,D12F66,E3,Shop
+Ether,Mirage Inn 2,Item,-,40,D12F67,E2,Shop
+Revivify,Mirage Inn 2,Item,-,40,D12F68,E6,Shop
+Giant Drink,Mirage Inn 2,Item,-,40,D12F69,F2,Shop
+Power Drink,Mirage Inn 2,Item,-,40,D12F6A,F3,Shop
+Speed Drink,Mirage Inn 2,Item,-,40,D12F6B,F4,Shop
+Protect Drink,Mirage Inn 2,Item,-,40,D12F6C,F5,Shop
+Hero Drink,Mirage Inn 2,Item,-,40,D12F6D,F6,Shop
+Mythril Knife,Karnak Weapon (discount),Item,-,40,D12F6F,04,Shop
+Mythril Sword,Karnak Weapon (discount),Item,-,40,D12F70,0F,Shop
+Mythril Hammer,Karnak Weapon (discount),Item,-,40,D12F71,22,Shop
+Fire Rod,Karnak Weapon (discount),Item,-,40,D12F72,32,Shop
+Ice Rod,Karnak Weapon (discount),Item,-,40,D12F73,33,Shop
+Thunder Rod,Karnak Weapon (discount),Item,-,40,D12F74,34,Shop
+Flail,Karnak Weapon (discount),Item,-,40,D12F75,5E,Shop
+Mythril Shield,Karnak Armor (discount),Item,-,40,D12F78,84,Shop
+Mythril Helm,Karnak Armor (discount),Item,-,40,D12F79,8C,Shop
+Mythril Armor,Karnak Armor (discount),Item,-,40,D12F7A,9D,Shop
+Silver Plate,Karnak Armor (discount),Item,-,40,D12F7B,A3,Shop
+Silk robe,Karnak Armor (discount),Item,-,40,D12F7C,A8,Shop
+Mythril Glove,Karnak Armor (discount),Item,-,40,D12F7D,B6,Shop
+Silver Armlet,Karnak Armor (discount),Item,-,40,D12F7E,B7,Shop

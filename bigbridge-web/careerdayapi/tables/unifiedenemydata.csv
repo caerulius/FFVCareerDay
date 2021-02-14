@@ -1,0 +1,784 @@
+Potion,Goblin Rare Steal,Item,-,40,D05001,E0,Loot
+Leather Cap,Goblin Common Drop,Item,-,40,D05002,89,Loot
+Potion,Killer Bee Common Steal,Item,-,40,D05004,E0,Loot
+Potion,Nut Eater Common Steal,Item,-,40,D05008,E0,Loot
+Potion,Nut Eater Rare Steal,Item,-,40,D05009,E0,Loot
+Potion,Nut Eater Common Drop,Item,-,40,D0500A,E0,Loot
+Potion,Stray Cat Common Steal,Item,-,40,D0500C,E0,Loot
+Potion,Steel Bat Common Steal,Item,-,40,D05010,E0,Loot
+Potion,Dearo Common Steal,Item,-,40,D05014,E0,Loot
+Potion,Stroper Common Steal,Item,-,40,D05018,E0,Loot
+Potion,Stroper Rare Steal,Item,-,40,D05019,E0,Loot
+Potion,Black Goblin Common Steal,Item,-,40,D0501C,E0,Loot
+Potion,Black Goblin Rare Steal,Item,-,40,D0501D,E0,Loot
+Leather Shoes,Black Goblin Common Drop,Item,-,40,D0501E,C0,Loot
+Potion,White Snake Common Steal,Item,-,40,D05020,E0,Loot
+Elixir,Mold Wind Common Drop,Item,-,40,D05026,E3,Loot
+Potion,ManiWizard Common Steal,Item,-,40,D05028,E0,Loot
+Potion,ManiWizard Rare Steal,Item,-,40,D05029,E0,Loot
+Rod,ManiWizard Common Drop,Item,-,40,D0502A,31,Loot
+HiPotion,Magic Pot Common Steal,Item,-,40,D0502C,E1,Loot
+Elixir,Magic Pot Common Drop,Item,-,40,D0502E,E3,Loot
+Potion,Sucker Common Drop,Item,-,40,D05032,E0,Loot
+Potion,Octoraken Common Drop,Item,-,40,D05036,E0,Loot
+Soft,Gatlings Common Steal,Item,-,40,D05038,EC,Loot
+Soft,Gatlings Common Drop,Item,-,40,D0503A,EC,Loot
+Potion,Bighorn Common Steal,Item,-,40,D0503C,E0,Loot
+Potion,Bighorn Common Drop,Item,-,40,D0503E,E0,Loot
+Potion,Tatu Common Steal,Item,-,40,D05040,E0,Loot
+Tent,Tatu Common Drop,Item,-,40,D05042,F0,Loot
+Potion,Bander S. Rare Steal,Item,-,40,D05045,E0,Loot
+Potion,Bander S. Common Drop,Item,-,40,D05046,E0,Loot
+Maiden's Kiss,Galura Common Steal,Item,-,40,D05048,E5,Loot
+Maiden's Kiss,Galura Rare Steal,Item,-,40,D05049,E5,Loot
+Dagger,Skeleton Common Drop,Item,-,40,D0504E,3,Loot
+Potion,Carcurser Common Steal,Item,-,40,D05050,E0,Loot
+Potion,Carcurser Rare Steal,Item,-,40,D05051,E0,Loot
+Elixir,Carcurser Common Drop,Item,-,40,D05052,E3,Loot
+Ether,UndeadRusk Common Steal,Item,-,40,D05054,E2,Loot
+Potion,UndeadRusk Rare Steal,Item,-,40,D05055,E0,Loot
+Elixir,UndeadRusk Common Drop,Item,-,40,D05056,E3,Loot
+Flame Scroll,PsychoHead Common Drop,Item,-,40,D0505A,FC,Loot
+Potion,RockGarter Rare Steal,Item,-,40,D0505D,E0,Loot
+Potion,Gala Cat Common Steal,Item,-,40,D05060,E0,Loot
+Potion,Gala Cat Rare Steal,Item,-,40,D05061,E0,Loot
+Soft,Cockatrice Rare Steal,Item,-,40,D05065,EC,Loot
+HiPotion,Blocks Common Steal,Item,-,40,D05068,E1,Loot
+Glasses,Blocks Rare Steal,Item,-,40,D05069,B4,Loot
+Potion,Elf Toad Common Drop,Item,-,40,D0506E,E0,Loot
+Potion,IceSoldier Common Steal,Item,-,40,D05070,E0,Loot
+Mythril Sword,IceSoldier Rare Steal,Item,-,40,D05071,0F,Loot
+RegalCut,IceSoldier Common Drop,Item,-,40,D05072,0E,Loot
+Rod,RikaldMage Rare Steal,Item,-,40,D05075,31,Loot
+Fire Rod,RikaldMage Common Drop,Item,-,40,D05076,32,Loot
+Mythril Knife,Wyvern Rare Steal,Item,-,40,D05079,4,Loot
+Potion,Wyvern Rare Drop,Item,-,40,D0507B,E0,Loot
+Potion,Padosule Rare Steal,Item,-,40,D0507D,E0,Loot
+DarkMatter,Byblos Common Steal,Item,-,40,D05080,EB,Loot
+LuckMallet,Byblos Rare Steal,Item,-,40,D05081,ED,Loot
+Protect Drink,Byblos Rare Drop,Item,-,40,D05083,F5,Loot
+Potion,Aegil Rare Steal,Item,-,40,D05085,E0,Loot
+Elixir,Zuu Common Steal,Item,-,40,D05088,E3,Loot
+Elixir,Zuu Common Drop,Item,-,40,D0508A,E3,Loot
+Potion,Wild Nack Rare Steal,Item,-,40,D0508D,E0,Loot
+TurtleShell,GrassTurtle Common Steal,Item,-,40,D05090,E7,Loot
+TurtleShell,GrassTurtle Rare Drop,Item,-,40,D05093,E7,Loot
+Soft,Silent Bee Common Drop,Item,-,40,D05096,EC,Loot
+Mythril Armor,Mithril Drgn Common Steal,Item,-,40,D05098,9D,Loot
+Potion,Mithril Drgn Rare Steal,Item,-,40,D05099,E0,Loot
+Mythril Glove,Mithril Drgn Common Drop,Item,-,40,D0509A,B6,Loot
+HiPotion,Ramuh Common Steal,Item,-,40,D0509C,E1,Loot
+HiPotion,Ramuh Rare Steal,Item,-,40,D0509D,E1,Loot
+Ramuh,Ramuh Rare Drop,Item,-,40,D0509F,F9,Loot
+Eyedrop,Crew Dust Common Steal,Item,-,40,D050A0,E9,Loot
+Potion,Crew Dust Rare Steal,Item,-,40,D050A1,E0,Loot
+HiPotion,PoItergeist Rare Steal,Item,-,40,D050A5,E1,Loot
+Ether,Motor Trap Rare Steal,Item,-,40,D050A9,E2,Loot
+Potion,Defeater Rare Steal,Item,-,40,D050AD,E0,Loot
+Speed Drink,Defeater Common Drop,Item,-,40,D050AE,F4,Loot
+Elixir,Garkimasra Common Steal,Item,-,40,D050B0,E3,Loot
+Protect Drink,Garkimasra Rare Steal,Item,-,40,D050B1,F5,Loot
+Phoenix Down,Garkimasra Common Drop,Item,-,40,D050B2,E4,Loot
+Potion,Sergeant Common Steal,Item,-,40,D050B4,E0,Loot
+Potion,Sergeant Rare Steal,Item,-,40,D050B5,E0,Loot
+Silver Plate,Sergeant Common Drop,Item,-,40,D050B6,A3,Loot
+Gaia Gear,Sorcerer Common Steal,Item,-,40,D050B8,A9,Loot
+Mage Masher,Sorcerer Rare Steal,Item,-,40,D050B9,6,Loot
+Ether,Sorcerer Common Drop,Item,-,40,D050BA,E2,Loot
+Potion,Karnak Rare Steal,Item,-,40,D050BD,E0,Loot
+Elixir,Gigas Rare Steal,Item,-,40,D050C1,E3,Loot
+Giant Drink,Gigas Rare Drop,Item,-,40,D050C3,F2,Loot
+GrnBeret,Page 32 Common Steal,Item,-,40,D050C4,97,Loot
+Potion,Page 32 Rare Steal,Item,-,40,D050C5,E0,Loot
+Potion,Page 32 Common Drop,Item,-,40,D050C6,E0,Loot
+Glasses,Page 64 Common Steal,Item,-,40,D050C8,B4,Loot
+Potion,Page 64 Rare Steal,Item,-,40,D050C9,E0,Loot
+Phoenix Down,Page 64 Common Drop,Item,-,40,D050CA,E4,Loot
+Ether,Page 128 Rare Steal,Item,-,40,D050CD,E2,Loot
+Potion,Page 128 Common Drop,Item,-,40,D050CE,E0,Loot
+Stealth Suit,Page 256 Common Steal,Item,-,40,D050D0,A4,Loot
+HiPotion,Page 256 Rare Steal,Item,-,40,D050D1,E1,Loot
+Mythril Shield,Page 256 Common Drop,Item,-,40,D050D2,84,Loot
+Phoenix Down,Ifrit Rare Steal,Item,-,40,D050D5,E4,Loot
+Flame Scroll,Ifrit Rare Drop,Item,-,40,D050D7,FC,Loot
+Potion,Bomb Rare Steal,Item,-,40,D050D9,E0,Loot
+Potion,Bomb Common Drop,Item,-,40,D050DA,E0,Loot
+Potion,TwinLizard Common Drop,Item,-,40,D050DE,E0,Loot
+War Hammer,BioSoldier Common Steal,Item,-,40,D050E0,24,Loot
+Battle Axe,BioSoldier Rare Steal,Item,-,40,D050E1,21,Loot
+Antidote,BioSoldier Common Drop,Item,-,40,D050E2,E8,Loot
+Silver Bow,Crescent Rare Steal,Item,-,40,D050E5,65,Loot
+DoomCut,Crescent Common Drop,Item,-,40,D050E6,69,Loot
+Speed Drink,BlackFlame Common Steal,Item,-,40,D050E8,F4,Loot
+Speed Drink,BlackFlame Common Drop,Item,-,40,D050EA,F4,Loot
+Soft,StoneGolem Rare Steal,Item,-,40,D050ED,EC,Loot
+HiPotion,StoneGolem Common Drop,Item,-,40,D050EE,E1,Loot
+DragonFang,MiniDragon Common Steal,Item,-,40,D050F0,EA,Loot
+Ether,Prototype Rare Steal,Item,-,40,D050F5,E2,Loot
+DarkMatter,Prototype Rare Drop,Item,-,40,D050F7,EB,Loot
+Trident,D.Chimera Common Steal,Item,-,40,D050F8,1A,Loot
+Phoenix Down,D.Chimera Common Drop,Item,-,40,D050FA,E4,Loot
+Potion,Sand Porky Rare Steal,Item,-,40,D050FD,E0,Loot
+Potion,Sand Porky Common Drop,Item,-,40,D050FE,E0,Loot
+Antidote,Sand Killer Common Drop,Item,-,40,D05102,E8,Loot
+Javelin,Sand Bear Common Steal,Item,-,40,D05104,17,Loot
+Antidote,Sand Bear Rare Drop,Item,-,40,D05107,E8,Loot
+Bard's Surplice,Ra Mage Rare Steal,Item,-,40,D05109,AA,Loot
+Elixir,Ra Mage Common Drop,Item,-,40,D0510A,E3,Loot
+Power Drink,LonkaKnght Common Steal,Item,-,40,D0510C,F3,Loot
+HiPotion,LonkaKnght Rare Steal,Item,-,40,D0510D,E1,Loot
+Mythril Shield,LonkaKnght Common Drop,Item,-,40,D0510E,84,Loot
+Soft,StonedMask Rare Steal,Item,-,40,D05111,EC,Loot
+Elixir,Whirl Demon Common Steal,Item,-,40,D05114,E3,Loot
+Potion,Whirl Demon Rare Steal,Item,-,40,D05115,E0,Loot
+Darkness Bow,Whirl Demon Common Drop,Item,-,40,D05116,42,Loot
+Lamia's Tiara,Lamia Common Steal,Item,-,40,D05118,99,Loot
+Maiden's Kiss,Lamia Rare Steal,Item,-,40,D05119,E5,Loot
+HiPotion,ArchaeToad Common Steal,Item,-,40,D0511C,E1,Loot
+HiPotion,Hyudora Common Steal,Item,-,40,D05120,E1,Loot
+Ether,Hyudora Rare Steal,Item,-,40,D05121,E2,Loot
+DragonFang,Hyudora Common Drop,Item,-,40,D05122,EA,Loot
+Killer Bow,Hydra Common Steal,Item,-,40,D05124,43,Loot
+Phoenix Down,Hydra Rare Drop,Item,-,40,D05127,E4,Loot
+Ether,Water Buzz Common Steal,Item,-,40,D05128,E2,Loot
+Potion,Torrent Common Steal,Item,-,40,D0512C,E0,Loot
+HiPotion,Torrent Rare Steal,Item,-,40,D0512D,E1,Loot
+Potion,Torrent Common Drop,Item,-,40,D0512E,E0,Loot
+Elixir,Rock Brain Common Steal,Item,-,40,D05130,E3,Loot
+Potion,Tarantula Rare Drop,Item,-,40,D05137,E0,Loot
+Spear,Jail Bear Common Steal,Item,-,40,D05138,18,Loot
+HiPotion,Jail Bear Common Drop,Item,-,40,D0513A,E1,Loot
+Phoenix Down,Lunenta Common Steal,Item,-,40,D0513C,E4,Loot
+Ether,Lunenta Common Drop,Item,-,40,D0513E,E2,Loot
+Potion,Dilure Rare Steal,Item,-,40,D05141,E0,Loot
+Potion,Dilure Common Drop,Item,-,40,D05142,E0,Loot
+Potion,Faerie Orc Common Steal,Item,-,40,D05144,E0,Loot
+Revivify,Faerie Orc Rare Steal,Item,-,40,D05145,E6,Loot
+HiPotion,Faerie Orc Common Drop,Item,-,40,D05146,E1,Loot
+HiPotion,Devourer Common Steal,Item,-,40,D05148,E1,Loot
+Antidote,Mandrake Common Steal,Item,-,40,D0514C,E8,Loot
+Eyedrop,Mandrake Rare Steal,Item,-,40,D0514D,E9,Loot
+Elixir,Kuzar Common Drop,Item,-,40,D05152,E3,Loot
+Soft,Cactus Common Steal,Item,-,40,D05154,EC,Loot
+Potion,Cactus Rare Steal,Item,-,40,D05155,E0,Loot
+Tent,Sand Crawl Common Steal,Item,-,40,D05158,F0,Loot
+Power Drink,Sand Crawl Rare Drop,Item,-,40,D0515B,F3,Loot
+Golden Shield,ShieldDrgn Common Steal,Item,-,40,D0515C,85,Loot
+Mythril Shield,ShieldDrgn Rare Steal,Item,-,40,D0515D,84,Loot
+Golden Shield,ShieldDrgn Common Drop,Item,-,40,D0515E,85,Loot
+Revivify,Blood Slime Rare Steal,Item,-,40,D05161,E6,Loot
+Revivify,Blood Slime Common Drop,Item,-,40,D05162,E6,Loot
+Potion,Acrophese Rare Steal,Item,-,40,D05165,E0,Loot
+HiPotion,MooglEater Common Steal,Item,-,40,D05168,E1,Loot
+HiPotion,Lopros Rare Steal,Item,-,40,D0516D,E1,Loot
+HiPotion,Lopros Common Drop,Item,-,40,D0516E,E1,Loot
+Tent,Skull Eater Rare Steal,Item,-,40,D05171,F0,Loot
+Elixir,Skull Eater Common Drop,Item,-,40,D05172,E3,Loot
+Potion,Aquathone Rare Steal,Item,-,40,D05175,E0,Loot
+Antidote,Aquathone Common Drop,Item,-,40,D05176,E8,Loot
+Potion,Weresnake Rare Steal,Item,-,40,D05179,E0,Loot
+HiPotion,Weresnake Common Drop,Item,-,40,D0517A,E1,Loot
+Potion,Conago Rare Steal,Item,-,40,D0517D,E0,Loot
+Eyedrop,Conago Common Drop,Item,-,40,D0517E,E9,Loot
+Maiden's Kiss,Ridicule Rare Steal,Item,-,40,D05181,E5,Loot
+Hero Drink,Ridicule Common Drop,Item,-,40,D05182,F6,Loot
+Protect Drink,Andagranda Common Drop,Item,-,40,D05186,F5,Loot
+Bard's Surplice,Drippy Common Steal,Item,-,40,D05188,AA,Loot
+Mythril Hammer,Drippy Rare Steal,Item,-,40,D05189,22,Loot
+Tent,Drippy Common Drop,Item,-,40,D0518A,F0,Loot
+HiPotion,Likaon Common Steal,Item,-,40,D0518C,E1,Loot
+Revivify,Likaon Common Drop,Item,-,40,D0518E,E6,Loot
+Soft,BoneDragon Rare Steal,Item,-,40,D05191,EC,Loot
+Ether,BoneDragon Common Drop,Item,-,40,D05192,E2,Loot
+Gale Bow,Sting Eagle Common Steal,Item,-,40,D05194,66,Loot
+Antidote,Sting Eagle Common Drop,Item,-,40,D05196,E8,Loot
+DarkMatter,ZombieDrgn Common Steal,Item,-,40,D05198,EB,Loot
+DragonFang,ZombieDrgn Rare Drop,Item,-,40,D0519B,EA,Loot
+Soft,Golem Common Steal,Item,-,40,D0519C,EC,Loot
+Soft,Golem Rare Steal,Item,-,40,D0519D,EC,Loot
+Speed Drink,Neon Rare Steal,Item,-,40,D051A1,F4,Loot
+Speed Drink,Neon Common Drop,Item,-,40,D051A2,F4,Loot
+HiPotion,Magnetes Common Drop,Item,-,40,D051A6,E1,Loot
+Venom Axe,Wall Knight Common Steal,Item,-,40,D051A8,25,Loot
+War Hammer,Wall Knight Rare Steal,Item,-,40,D051A9,24,Loot
+Wall Ring,Wall Knight Common Drop,Item,-,40,D051AA,CA,Loot
+Dream Harp,Traveler Common Steal,Item,-,40,D051AC,48,Loot
+Dream Harp,Traveler Common Drop,Item,-,40,D051AE,48,Loot
+Potion,Tricker Rare Steal,Item,-,40,D051B1,E0,Loot
+HiPotion,Tricker Common Drop,Item,-,40,D051B2,E1,Loot
+HiPotion,Gravido Common Steal,Item,-,40,D051B4,E1,Loot
+Gaia Gear,Gravido Common Drop,Item,-,40,D051B6,A9,Loot
+Partisan,Ziggurat Common Steal,Item,-,40,D051B8,1C,Loot
+Giant Drink,Ziggurat Common Drop,Item,-,40,D051BA,F2,Loot
+HiPotion,Cure Beast Common Steal,Item,-,40,D051BC,E1,Loot
+Elixir,Cure Beast Common Drop,Item,-,40,D051BE,E3,Loot
+Potion,Land Turtle Rare Steal,Item,-,40,D051C1,E0,Loot
+TurtleShell,Land Turtle Rare Drop,Item,-,40,D051C3,E7,Loot
+HiPotion,Bold Mani Common Steal,Item,-,40,D051C4,E1,Loot
+Revivify,Bold Mani Common Drop,Item,-,40,D051C6,E6,Loot
+Phoenix Down,Shoat Common Steal,Item,-,40,D051C8,E4,Loot
+Shoat,Shoat Rare Drop,Item,-,40,D051CB,FA,Loot
+Tricorn Hat,MiniMage Common Steal,Item,-,40,D051CC,91,Loot
+Tricorn Hat,MiniMage Common Drop,Item,-,40,D051CE,91,Loot
+Eyedrop,GajraGajri Rare Steal,Item,-,40,D051D1,E9,Loot
+Ether,GajraGajri Common Drop,Item,-,40,D051D2,E2,Loot
+HiPotion,Mammon Common Steal,Item,-,40,D051D4,E1,Loot
+HiPotion,Mammon Common Drop,Item,-,40,D051D6,E1,Loot
+Potion,Imp Rare Steal,Item,-,40,D051D9,E0,Loot
+Diamond Armlet,Imp Common Drop,Item,-,40,D051DA,B8,Loot
+Antidote,Wyrm Rare Steal,Item,-,40,D051DD,E8,Loot
+DragonFang,Wyrm Common Drop,Item,-,40,D051DE,EA,Loot
+HiPotion,TwinLizard Common Steal,Item,-,40,D051E0,E1,Loot
+Potion,TwinLizard Common Drop,Item,-,40,D051E2,E0,Loot
+Eyedrop,Blind Wolf Common Steal,Item,-,40,D051E4,E9,Loot
+Eyedrop,Blind Wolf Common Drop,Item,-,40,D051E6,E9,Loot
+HiPotion,Arage Common Steal,Item,-,40,D051E8,E1,Loot
+Potion,Arage Rare Steal,Item,-,40,D051E9,E0,Loot
+Phoenix Down,Arage Common Drop,Item,-,40,D051EA,E4,Loot
+Wall Ring,Wall Mage Common Steal,Item,-,40,D051EC,CA,Loot
+Ether,Wall Mage Common Drop,Item,-,40,D051EE,E2,Loot
+HiPotion,Magic Drgn Common Steal,Item,-,40,D051F0,E1,Loot
+Potion,Magic Drgn Rare Steal,Item,-,40,D051F1,E0,Loot
+Elixir,Magic Drgn Common Drop,Item,-,40,D051F2,E3,Loot
+Judgement Staff,DarkWizard Common Steal,Item,-,40,D051F4,3E,Loot
+Venom Rod,DarkWizard Rare Steal,Item,-,40,D051F5,35,Loot
+Power Staff,DarkWizard Common Drop,Item,-,40,D051F6,3A,Loot
+HiPotion,AdamaGolem Common Steal,Item,-,40,D051F8,E1,Loot
+Potion,AdamaGolem Rare Steal,Item,-,40,D051F9,E0,Loot
+HiPotion,AdamaGolem Common Drop,Item,-,40,D051FA,E1,Loot
+Phoenix Down,BandelKuar Common Steal,Item,-,40,D051FC,E4,Loot
+Phoenix Down,BandelKuar Common Drop,Item,-,40,D051FE,E4,Loot
+BeastKiller,Motordrive Common Steal,Item,-,40,D05200,5D,Loot
+Potion,Motordrive Rare Steal,Item,-,40,D05201,E0,Loot
+Hero Drink,Motordrive Common Drop,Item,-,40,D05202,F6,Loot
+Cabin,BlueDragon Common Steal,Item,-,40,D05204,F1,Loot
+DragonFang,BlueDragon Rare Steal,Item,-,40,D05205,EA,Loot
+DragonFang,BlueDragon Common Drop,Item,-,40,D05206,EA,Loot
+Flame Ring,Red Dragon Common Steal,Item,-,40,D05208,BD,Loot
+HiPotion,Red Dragon Rare Steal,Item,-,40,D05209,E1,Loot
+Elixir,Red Dragon Common Drop,Item,-,40,D0520A,E3,Loot
+Ether,Yellow Drgn Common Steal,Item,-,40,D0520C,E2,Loot
+Thunder Rod,Yellow Drgn Rare Steal,Item,-,40,D0520D,34,Loot
+Coral Ring,Yellow Drgn Common Drop,Item,-,40,D0520E,BE,Loot
+HiPotion,Sleepy Common Steal,Item,-,40,D05210,E1,Loot
+Healing Staff,Sleepy Rare Steal,Item,-,40,D05211,3B,Loot
+Leather Cap,Sleepy Common Drop,Item,-,40,D05212,89,Loot
+Protect Drink,Treeman Common Steal,Item,-,40,D05214,F5,Loot
+Power Drink,Treeman Rare Steal,Item,-,40,D05215,F3,Loot
+Speed Drink,Treeman Common Drop,Item,-,40,D05216,F4,Loot
+Soft,Hedgehog Rare Steal,Item,-,40,D05219,EC,Loot
+Soft,Hedgehog Common Drop,Item,-,40,D0521A,EC,Loot
+Antidote,Python Rare Steal,Item,-,40,D0521D,E8,Loot
+Eyedrop,Python Common Drop,Item,-,40,D0521E,E9,Loot
+HiPotion,Shadow Common Steal,Item,-,40,D05220,E1,Loot
+Revivify,Shadow Common Drop,Item,-,40,D05222,E6,Loot
+Hero Drink,Elm Gigas Common Steal,Item,-,40,D05224,F6,Loot
+Giant Drink,Elm Gigas Common Drop,Item,-,40,D05226,F2,Loot
+HiPotion,Pao Common Steal,Item,-,40,D05228,E1,Loot
+Potion,Pao Rare Steal,Item,-,40,D05229,E0,Loot
+Tent,Pao Rare Drop,Item,-,40,D0522B,F0,Loot
+Potion,Radiator Common Steal,Item,-,40,D0522C,E0,Loot
+Potion,Radiator Common Drop,Item,-,40,D0522E,E0,Loot
+HiPotion,Metamorpha Common Steal,Item,-,40,D05230,E1,Loot
+Staff,Metamorpha Rare Steal,Item,-,40,D05231,38,Loot
+Staff of Light,Metamorpha Common Drop,Item,-,40,D05232,3C,Loot
+BeastKiller,Unknown Common Steal,Item,-,40,D05234,5D,Loot
+Antidote,Desertpede Common Steal,Item,-,40,D05238,E8,Loot
+Potion,Desertpede Rare Steal,Item,-,40,D05239,E0,Loot
+DarkMatter,Desertpede Common Drop,Item,-,40,D0523A,EB,Loot
+Potion,Barette Rare Steal,Item,-,40,D0523D,E0,Loot
+HiPotion,Barette Common Drop,Item,-,40,D0523E,E1,Loot
+Thief's Glove,Sekmet Common Steal,Item,-,40,D05240,B0,Loot
+HiPotion,Sekmet Rare Steal,Item,-,40,D05241,E1,Loot
+Crystal Armor,Sekmet Common Drop,Item,-,40,D05242,A0,Loot
+Thornlet,BlandLamia Common Steal,Item,-,40,D05244,CC,Loot
+Maiden's Kiss,BlandLamia Rare Steal,Item,-,40,D05245,E5,Loot
+Lamia's Tiara,BlandLamia Common Drop,Item,-,40,D05246,99,Loot
+Power Drink,Pyra Layer Rare Steal,Item,-,40,D05249,F3,Loot
+Potion,Pyra Layer Common Drop,Item,-,40,D0524A,E0,Loot
+Protect Drink,Nile Common Drop,Item,-,40,D0524E,F5,Loot
+Phoenix Down,Archaesaur Common Steal,Item,-,40,D05250,E4,Loot
+DragonFang,Archaesaur Rare Drop,Item,-,40,D05253,EA,Loot
+Elixir,ZephyrZone Common Steal,Item,-,40,D05254,E3,Loot
+Potion,ZephyrZone Rare Steal,Item,-,40,D05255,E0,Loot
+Elixir,ZephyrZone Common Drop,Item,-,40,D05256,E3,Loot
+DarkMatter,ExdethSoul Rare Drop,Item,-,40,D0525B,EB,Loot
+HiPotion,Slug Common Steal,Item,-,40,D0525C,E1,Loot
+Potion,Slug Rare Steal,Item,-,40,D0525D,E0,Loot
+HiPotion,GloomWidow Common Steal,Item,-,40,D05260,E1,Loot
+Potion,GloomWidow Rare Steal,Item,-,40,D05261,E0,Loot
+DoomCut,Mukare Common Steal,Item,-,40,D05264,69,Loot
+Silk robe,Mukare Rare Steal,Item,-,40,D05265,A8,Loot
+Lumina Robe,Mukare Common Drop,Item,-,40,D05266,AB,Loot
+Ether,Ixecrator Common Steal,Item,-,40,D05268,E2,Loot
+Diamond Armlet,Ixecrator Common Drop,Item,-,40,D0526A,B8,Loot
+Mirage Vest,Owazoral Common Steal,Item,-,40,D0526C,AE,Loot
+HiPotion,Owazoral Rare Steal,Item,-,40,D0526D,E1,Loot
+Revivify,Owazoral Common Drop,Item,-,40,D0526E,E6,Loot
+Dancing Dagger,ShdwDancer Common Steal,Item,-,40,D05270,6D,Loot
+Power Wrist,ShdwDancer Rare Steal,Item,-,40,D05271,BA,Loot
+LuckMallet,ShdwDancer Common Drop,Item,-,40,D05272,ED,Loot
+Revivify,Cursed One Common Steal,Item,-,40,D05274,E6,Loot
+Revivify,Cursed One Common Drop,Item,-,40,D05276,E6,Loot
+Ice Shield,Slownin Common Steal,Item,-,40,D05278,CD,Loot
+Katana,Slownin Rare Steal,Item,-,40,D05279,29,Loot
+Kotetsu,Slownin Common Drop,Item,-,40,D0527A,2B,Loot
+Ether,TinyMage Common Steal,Item,-,40,D0527C,E2,Loot
+Potion,TinyMage Common Drop,Item,-,40,D0527E,E0,Loot
+Healing Staff,Dim Master Common Steal,Item,-,40,D05280,3B,Loot
+Potion,Dim Master Rare Steal,Item,-,40,D05281,E0,Loot
+HiPotion,Dim Master Common Drop,Item,-,40,D05282,E1,Loot
+Thunder Whip,Flare Common Steal,Item,-,40,D05288,4D,Loot
+Elixir,Flare Rare Steal,Item,-,40,D05289,E3,Loot
+Magus,Flare Common Drop,Item,-,40,D0528A,92,Loot
+Flame Shield,DuelKnight Common Steal,Item,-,40,D0528C,C4,Loot
+Power Drink,DuelKnight Rare Steal,Item,-,40,D0528D,F3,Loot
+Power Drink,DuelKnight Common Drop,Item,-,40,D0528E,F3,Loot
+Giant Drink,Ion Rare Steal,Item,-,40,D05291,F2,Loot
+Giant Drink,Ion Common Drop,Item,-,40,D05292,F2,Loot
+Elven Bow,Berserker Common Steal,Item,-,40,D05294,44,Loot
+Speed Drink,Berserker Rare Steal,Item,-,40,D05295,F4,Loot
+DoomCut,Berserker Common Drop,Item,-,40,D05296,69,Loot
+Angel Ring,Druid Common Steal,Item,-,40,D0529C,BC,Loot
+Potion,Druid Rare Steal,Item,-,40,D0529D,E0,Loot
+Phoenix Down,Druid Common Drop,Item,-,40,D0529E,E4,Loot
+Potion,Iron Dress Rare Steal,Item,-,40,D052A1,E0,Loot
+Tent,Iron Dress Common Drop,Item,-,40,D052A2,F0,Loot
+DblLance,Statue Common Steal,Item,-,40,D052A4,1E,Loot
+HiPotion,Statue Rare Steal,Item,-,40,D052A5,E1,Loot
+Soft,Statue Common Drop,Item,-,40,D052A6,EC,Loot
+HiPotion,Blizzard Common Steal,Item,-,40,D052A8,E1,Loot
+HiPotion,Blizzard Common Drop,Item,-,40,D052AA,E1,Loot
+Judgement Staff,Isteritos Common Steal,Item,-,40,D052AC,3E,Loot
+Antidote,Isteritos Rare Steal,Item,-,40,D052AD,E8,Loot
+DragonFang,Isteritos Common Drop,Item,-,40,D052AE,EA,Loot
+Potion,Spizner Rare Steal,Item,-,40,D052B1,E0,Loot
+Potion,Spizner Common Drop,Item,-,40,D052B2,E0,Loot
+HiPotion,Unknown Common Steal,Item,-,40,D052B4,E1,Loot
+Potion,Unknown Rare Steal,Item,-,40,D052B5,E0,Loot
+Giant Drink,Unknown Common Drop,Item,-,40,D052B6,F2,Loot
+HiPotion,Unknown Common Steal,Item,-,40,D052B8,E1,Loot
+Potion,Unknown Rare Steal,Item,-,40,D052B9,E0,Loot
+Power Drink,Unknown Common Drop,Item,-,40,D052BA,F3,Loot
+HiPotion,Unknown Common Steal,Item,-,40,D052BC,E1,Loot
+Potion,Unknown Rare Steal,Item,-,40,D052BD,E0,Loot
+Speed Drink,Unknown Common Drop,Item,-,40,D052BE,F4,Loot
+HiPotion,Unknown Common Steal,Item,-,40,D052C0,E1,Loot
+Potion,Unknown Rare Steal,Item,-,40,D052C1,E0,Loot
+Protect Drink,Unknown Common Drop,Item,-,40,D052C2,F5,Loot
+Potion,MercuryBat Rare Steal,Item,-,40,D052C5,E0,Loot
+HiPotion,MercuryBat Common Drop,Item,-,40,D052C6,E1,Loot
+Protect Drink,Coral Common Steal,Item,-,40,D052C8,F5,Loot
+Potion,Coral Rare Steal,Item,-,40,D052C9,E0,Loot
+Elixir,Tonberi Common Steal,Item,-,40,D052CC,E3,Loot
+Plumed Hat,Tonberi Rare Steal,Item,-,40,D052CD,90,Loot
+Mirage Vest,Tonberi Common Drop,Item,-,40,D052CE,AE,Loot
+HiPotion,Gel Water Common Steal,Item,-,40,D052D0,E1,Loot
+Potion,Gel Water Rare Steal,Item,-,40,D052D1,E0,Loot
+Speed Drink,Gel Water Common Drop,Item,-,40,D052D2,F4,Loot
+Hero Drink,Fall Guard Common Steal,Item,-,40,D052D4,F6,Loot
+Bandana,Fall Guard Rare Steal,Item,-,40,D052D5,96,Loot
+Kaiser Knuckles,Fall Guard Common Drop,Item,-,40,D052D6,C1,Loot
+ManEater,Alcumia Common Steal,Item,-,40,D052D8,6B,Loot
+Maiden's Kiss,Alcumia Rare Steal,Item,-,40,D052D9,E5,Loot
+Elixir,Alcumia Common Drop,Item,-,40,D052DA,E3,Loot
+DragonFang,Red Dragon Common Steal,Item,-,40,D052DC,EA,Loot
+Flame Scroll,Red Dragon Rare Steal,Item,-,40,D052DD,FC,Loot
+DarkMatter,Red Dragon Common Drop,Item,-,40,D052DE,EB,Loot
+DragonFang,Hydra Common Steal,Item,-,40,D052E0,EA,Loot
+Thunder Scroll,Hydra Rare Steal,Item,-,40,D052E1,FE,Loot
+DarkMatter,Hydra Common Drop,Item,-,40,D052E2,EB,Loot
+DragonFang,BoneDragon Common Steal,Item,-,40,D052E4,EA,Loot
+Water Scroll,BoneDragon Rare Steal,Item,-,40,D052E5,FD,Loot
+DarkMatter,BoneDragon Common Drop,Item,-,40,D052E6,EB,Loot
+Flame Shield,Grenade Common Steal,Item,-,40,D052E8,C4,Loot
+HiPotion,Grenade Rare Steal,Item,-,40,D052E9,E1,Loot
+HiPotion,Grenade Common Drop,Item,-,40,D052EA,E1,Loot
+Enhancer,SwrdDancer Common Steal,Item,-,40,D052EC,6E,Loot
+Mythril Helm,SwrdDancer Rare Steal,Item,-,40,D052ED,8C,Loot
+IceBrand,SwrdDancer Common Drop,Item,-,40,D052EE,58,Loot
+Angel Ring,Bardandels Common Steal,Item,-,40,D052F0,BC,Loot
+TurtleShell,Bardandels Rare Steal,Item,-,40,D052F1,E7,Loot
+Rune Chime,Bardandels Common Drop,Item,-,40,D052F2,52,Loot
+Magus,DoomDealer Common Steal,Item,-,40,D052F4,92,Loot
+Revivify,DoomDealer Rare Steal,Item,-,40,D052F5,E6,Loot
+Phoenix Down,DoomDealer Common Drop,Item,-,40,D052F6,E4,Loot
+HiPotion,Anku Heggu Common Steal,Item,-,40,D052F8,E1,Loot
+Potion,Anku Heggu Rare Steal,Item,-,40,D052F9,E0,Loot
+HiPotion,Anku Heggu Common Drop,Item,-,40,D052FA,E1,Loot
+Potion,Ammona Common Steal,Item,-,40,D052FC,E0,Loot
+HiPotion,Ammona Rare Steal,Item,-,40,D052FD,E1,Loot
+Revivify,Ammona Common Drop,Item,-,40,D052FE,E6,Loot
+Defender Sword,Land Crawl Common Steal,Item,-,40,D05300,14,Loot
+Ancient Sword,Land Crawl Rare Steal,Item,-,40,D05301,11,Loot
+Elixir,Land Crawl Common Drop,Item,-,40,D05302,E3,Loot
+Ribbon,Chamcubia Common Steal,Item,-,40,D05304,95,Loot
+Wall Ring,Chamcubia Rare Steal,Item,-,40,D05305,CA,Loot
+Lamia's Harp,Chamcubia Common Drop,Item,-,40,D05306,49,Loot
+Coral Ring,Bella Donna Common Steal,Item,-,40,D05308,BE,Loot
+Rainbow Dress,Bella Donna Rare Steal,Item,-,40,D05309,CF,Loot
+Wall Ring,Bella Donna Common Drop,Item,-,40,D0530A,CA,Loot
+Elf Cape,Cherie Common Steal,Item,-,40,D0530C,B2,Loot
+Red Shoes,Cherie Rare Steal,Item,-,40,D0530D,D0,Loot
+Running Shoes,Cherie Common Drop,Item,-,40,D0530E,B5,Loot
+Elixir,White Flame Common Steal,Item,-,40,D05310,E3,Loot
+Eyedrop,White Flame Rare Steal,Item,-,40,D05311,E9,Loot
+Ether,White Flame Common Drop,Item,-,40,D05312,E2,Loot
+Air Knife,MossFungus Common Steal,Item,-,40,D05314,0A,Loot
+HiPotion,MossFungus Rare Steal,Item,-,40,D05315,E1,Loot
+Antidote,MossFungus Common Drop,Item,-,40,D05316,E8,Loot
+Soft,Orcat Common Steal,Item,-,40,D05318,EC,Loot
+DarkMatter,Orcat Rare Steal,Item,-,40,D05319,EB,Loot
+Phoenix Down,Orcat Common Drop,Item,-,40,D0531A,E4,Loot
+Iron Armor,Iron Giant Common Steal,Item,-,40,D0531C,9C,Loot
+Iron Helm,Iron Giant Rare Steal,Item,-,40,D0531D,8B,Loot
+Giant Drink,Iron Giant Rare Drop,Item,-,40,D0531F,F2,Loot
+Thor Hammer,Death Claw Common Steal,Item,-,40,D05320,28,Loot
+Hero Drink,Death Claw Rare Steal,Item,-,40,D05321,F6,Loot
+Soft,Death Claw Common Drop,Item,-,40,D05322,EC,Loot
+Drain Sword,K.Behemoth Common Steal,Item,-,40,D05324,55,Loot
+Phoenix Down,K.Behemoth Rare Steal,Item,-,40,D05325,E4,Loot
+DblLance,K.Behemoth Common Drop,Item,-,40,D05326,1E,Loot
+Lillith Rod,Farfarerro Common Steal,Item,-,40,D05328,36,Loot
+Speed Drink,Farfarerro Rare Steal,Item,-,40,D05329,F4,Loot
+Eyedrop,Farfarerro Common Drop,Item,-,40,D0532A,E9,Loot
+Bone Mail,Necromancr Common Steal,Item,-,40,D0532C,BF,Loot
+Revivify,Necromancr Rare Steal,Item,-,40,D0532D,E6,Loot
+Revivify,Necromancr Common Drop,Item,-,40,D0532E,E6,Loot
+Forged,Ninja Common Steal,Item,-,40,D05330,2D,Loot
+Shuriken,Ninja Rare Steal,Item,-,40,D05331,5A,Loot
+Pinwheel,Ninja Common Drop,Item,-,40,D05332,5B,Loot
+Power Drink,Great Drgn Common Steal,Item,-,40,D05334,F3,Loot
+DragonFang,Great Drgn Rare Steal,Item,-,40,D05335,EA,Loot
+DragonFang,Great Drgn Common Drop,Item,-,40,D05336,EA,Loot
+Artemis Bow,AvisDragon Common Steal,Item,-,40,D05338,46,Loot
+Trident,AvisDragon Rare Steal,Item,-,40,D05339,1A,Loot
+DragonFang,AvisDragon Rare Drop,Item,-,40,D0533B,EA,Loot
+Aegis Shield,Gorchimera Common Steal,Item,-,40,D0533C,86,Loot
+HiPotion,Gorchimera Rare Steal,Item,-,40,D0533D,E1,Loot
+Circlet,Gorchimera Common Drop,Item,-,40,D0533E,93,Loot
+Ether,LevelCheck Common Steal,Item,-,40,D05340,E2,Loot
+Potion,LevelCheck Rare Steal,Item,-,40,D05341,E0,Loot
+Elixir,LevelCheck Common Drop,Item,-,40,D05342,E3,Loot
+Guardian,Mind Mage Common Steal,Item,-,40,D05344,7,Loot
+GrnBeret,Mind Mage Rare Steal,Item,-,40,D05345,97,Loot
+White Robe,Mind Mage Common Drop,Item,-,40,D05346,AD,Loot
+Cursed Ring,Fury Common Steal,Item,-,40,D05348,B3,Loot
+Wall Ring,Fury Rare Steal,Item,-,40,D05349,CA,Loot
+Black Robe,Fury Common Drop,Item,-,40,D0534A,AC,Loot
+Crystal Shield,Thing Common Steal,Item,-,40,D0534C,88,Loot
+Ether,Thing Rare Steal,Item,-,40,D0534D,E2,Loot
+Crystal Helm,Thing Common Drop,Item,-,40,D0534E,8F,Loot
+Water Scroll,Mover Common Steal,Item,-,40,D05350,FD,Loot
+Flame Scroll,Mover Rare Steal,Item,-,40,D05351,FC,Loot
+Thunder Scroll,Mover Common Drop,Item,-,40,D05352,FE,Loot
+Dragoon Lance,CrysDragon Common Steal,Item,-,40,D05354,20,Loot
+Elixir,CrysDragon Rare Steal,Item,-,40,D05355,E3,Loot
+Crystal Armor,CrysDragon Common Drop,Item,-,40,D05356,A0,Loot
+Flametongue,Achelone Common Steal,Item,-,40,D05358,57,Loot
+TurtleShell,Achelone Rare Steal,Item,-,40,D05359,E7,Loot
+Elixir,Achelone Common Drop,Item,-,40,D0535A,E3,Loot
+Tempest,Bodyguard Common Steal,Item,-,40,D0535C,30,Loot
+Cabin,Bodyguard Rare Steal,Item,-,40,D0535D,F1,Loot
+Strength,Bodyguard Common Drop,Item,-,40,D0535E,B9,Loot
+Genji Shield,Gilgamesh Rare Steal,Item,-,40,D05361,C6,Loot
+AntiMagic Bow,Gilgamesh Common Drop,Item,-,40,D05362,67,Loot
+Potion,Sahagin Common Steal,Item,-,40,D05364,E0,Loot
+Potion,Sahagin Rare Steal,Item,-,40,D05365,E0,Loot
+Potion,Sahagin Common Drop,Item,-,40,D05366,E0,Loot
+Potion,Th.Anemone Common Drop,Item,-,40,D0536A,E0,Loot
+Thunder Scroll,Th.Anemone Rare Drop,Item,-,40,D0536B,FE,Loot
+Soft,Sea Avis Common Steal,Item,-,40,D0536C,EC,Loot
+Soft,Sea Avis Common Drop,Item,-,40,D0536E,EC,Loot
+Trident,Corvette Common Steal,Item,-,40,D05370,1A,Loot
+HiPotion,Corvette Common Drop,Item,-,40,D05372,E1,Loot
+HiPotion,Armon Common Steal,Item,-,40,D05374,E1,Loot
+Antidote,Armon Rare Steal,Item,-,40,D05375,E8,Loot
+HiPotion,Armon Common Drop,Item,-,40,D05376,E1,Loot
+Potion,SeaScorpio Rare Steal,Item,-,40,D05379,E0,Loot
+Potion,SeaScorpio Common Drop,Item,-,40,D0537A,E0,Loot
+Glasses,Silvune Common Steal,Item,-,40,D0537C,B4,Loot
+Maiden's Kiss,Silvune Rare Steal,Item,-,40,D0537D,E5,Loot
+Angel Ring,Silvune Common Drop,Item,-,40,D0537E,BC,Loot
+Potion,Gel Fish Rare Steal,Item,-,40,D05381,E0,Loot
+HiPotion,Gel Fish Common Drop,Item,-,40,D05382,E1,Loot
+Murasume,Giant Bird Common Steal,Item,-,40,D05384,2E,Loot
+HiPotion,Giant Bird Rare Steal,Item,-,40,D05385,E1,Loot
+Giant Drink,Giant Bird Common Drop,Item,-,40,D05386,F2,Loot
+Defender Sword,Sea Devil Common Steal,Item,-,40,D05388,14,Loot
+HiPotion,Sea Devil Rare Steal,Item,-,40,D05389,E1,Loot
+TurtleShell,Sea Devil Common Drop,Item,-,40,D0538A,E7,Loot
+RuneEdge,Stingray Common Steal,Item,-,40,D0538C,56,Loot
+DarkMatter,Stingray Rare Steal,Item,-,40,D0538D,EB,Loot
+Dragon's Whisker,Stingray Common Drop,Item,-,40,D0538E,4F,Loot
+Potion,???? Rare Steal,Item,-,40,D05391,E0,Loot
+Potion,???? Common Drop,Item,-,40,D05392,E0,Loot
+Soft,Golem Rare Steal,Item,-,40,D05395,EC,Loot
+Golem,Golem Rare Drop,Item,-,40,D05397,FB,Loot
+Potion,Shiva Rare Steal,Item,-,40,D0539D,E0,Loot
+Water Scroll,Shiva Common Drop,Item,-,40,D0539E,FD,Loot
+Potion,Ifrit Rare Steal,Item,-,40,D053A1,E0,Loot
+Flame Scroll,Ifrit Common Drop,Item,-,40,D053A2,FC,Loot
+Potion,Ramuh Rare Steal,Item,-,40,D053A5,E0,Loot
+Thunder Scroll,Ramuh Common Drop,Item,-,40,D053A6,FE,Loot
+Potion,Gala Cat Rare Steal,Item,-,40,D053A9,E0,Loot
+Ether,Gala Cat Common Drop,Item,-,40,D053AA,E2,Loot
+Potion,Wyvern Rare Steal,Item,-,40,D053AD,E0,Loot
+HiPotion,Wyvern Common Drop,Item,-,40,D053AE,E1,Loot
+Potion,Elf Toad Rare Steal,Item,-,40,D053B1,E0,Loot
+Maiden's Kiss,Elf Toad Common Drop,Item,-,40,D053B2,E5,Loot
+Potion,Crew Dust Rare Steal,Item,-,40,D053B5,E0,Loot
+Eyedrop,Crew Dust Common Drop,Item,-,40,D053B6,E9,Loot
+Potion,Whirl Demon Rare Steal,Item,-,40,D053B9,E0,Loot
+Elixir,Whirl Demon Common Drop,Item,-,40,D053BA,E3,Loot
+Potion,ZombieDrgn Rare Steal,Item,-,40,D053BD,E0,Loot
+DragonFang,ZombieDrgn Common Drop,Item,-,40,D053BE,EA,Loot
+HiPotion,D.Chimera Rare Steal,Item,-,40,D053C1,E1,Loot
+Protect Drink,D.Chimera Common Drop,Item,-,40,D053C2,F5,Loot
+HiPotion,AdamaGolem Rare Steal,Item,-,40,D053C5,E1,Loot
+Soft,AdamaGolem Common Drop,Item,-,40,D053C6,EC,Loot
+Diamond Armor,Ziggurat Common Steal,Item,-,40,D053C8,9F,Loot
+Power Drink,Ziggurat Rare Steal,Item,-,40,D053C9,F3,Loot
+Giant Drink,Ziggurat Rare Drop,Item,-,40,D053CB,F2,Loot
+Hero Drink,LonkaKnght Rare Steal,Item,-,40,D053CD,F6,Loot
+Flame Scroll,LonkaKnght Common Drop,Item,-,40,D053CE,FC,Loot
+Diamond Helm,BioSoldier Common Steal,Item,-,40,D053D0,8E,Loot
+Antidote,BioSoldier Rare Steal,Item,-,40,D053D1,E8,Loot
+Venom Axe,BioSoldier Common Drop,Item,-,40,D053D2,25,Loot
+Eyedrop,Lunenta Rare Steal,Item,-,40,D053D5,E9,Loot
+Antidote,Lunenta Common Drop,Item,-,40,D053D6,E8,Loot
+Ether,Tote Avis Common Steal,Item,-,40,D053D8,E2,Loot
+Avis Killer,Tote Avis Rare Steal,Item,-,40,D053D9,68,Loot
+Avis Killer,Tote Avis Common Drop,Item,-,40,D053DA,68,Loot
+RisingSun,Belfegor Common Steal,Item,-,40,D053DC,64,Loot
+Full Moon,Belfegor Rare Steal,Item,-,40,D053DD,59,Loot
+Ice Shield,Belfegor Common Drop,Item,-,40,D053DE,CD,Loot
+HiPotion,Imp Common Steal,Item,-,40,D053E0,E1,Loot
+Potion,Imp Rare Steal,Item,-,40,D053E1,E0,Loot
+HiPotion,Imp Common Drop,Item,-,40,D053E2,E1,Loot
+HiPotion,Owazoral Common Steal,Item,-,40,D053E4,E1,Loot
+Potion,Owazoral Rare Steal,Item,-,40,D053E5,E0,Loot
+Ether,Owazoral Common Drop,Item,-,40,D053E6,E2,Loot
+HiPotion,Garkimasra Common Steal,Item,-,40,D053E8,E1,Loot
+Potion,Garkimasra Rare Steal,Item,-,40,D053E9,E0,Loot
+Elixir,Garkimasra Common Drop,Item,-,40,D053EA,E3,Loot
+HiPotion,Gabbldegak Common Steal,Item,-,40,D053EC,E1,Loot
+Potion,Gabbldegak Rare Steal,Item,-,40,D053ED,E0,Loot
+Phoenix Down,Gabbldegak Common Drop,Item,-,40,D053EE,E4,Loot
+HiPotion,Gil Turtle Common Steal,Item,-,40,D053F0,E1,Loot
+Potion,Gil Turtle Rare Steal,Item,-,40,D053F1,E0,Loot
+OmegaMedl,Omega Rare Drop,Item,-,40,D053F7,F8,Loot
+Potion,WingRaptor Rare Steal,Item,-,40,D05001,E0,Loot
+Phoenix Down,WingRaptor Rare Drop,Item,-,40,D05003,E4,Loot
+Potion,WingRaptor Rare Steal,Item,-,40,D05005,E0,Loot
+Phoenix Down,WingRaptor Rare Drop,Item,-,40,D05007,E4,Loot
+Potion,Karlabos Rare Steal,Item,-,40,D05009,E0,Loot
+Tent,Karlabos Rare Drop,Item,-,40,D0500B,F0,Loot
+Giant's Axe,Twin Tania Rare Steal,Item,-,40,D0500D,6A,Loot
+Murasume,Twin Tania Common Drop,Item,-,40,D0500E,2E,Loot
+Bronze Armor,Siren Rare Drop,Item,-,40,D05013,9B,Loot
+Bronze Shield,Siren Rare Drop,Item,-,40,D05017,82,Loot
+Power Drink,Forza Rare Drop,Item,-,40,D0501B,F3,Loot
+Whip,Magisa Rare Drop,Item,-,40,D0501F,4B,Loot
+HiPotion,Galura Common Steal,Item,-,40,D05020,E1,Loot
+Potion,Galura Rare Steal,Item,-,40,D05021,E0,Loot
+HiPotion,Galura Rare Drop,Item,-,40,D05023,E1,Loot
+Flame Scroll,LiquiFlame Rare Drop,Item,-,40,D05027,FC,Loot
+Fire Rod,LiquiFlame Rare Drop,Item,-,40,D0502B,32,Loot
+Fire Bow,LiquiFlame Rare Drop,Item,-,40,D0502F,3F,Loot
+Mythril Sword,Commander Rare Steal,Item,-,40,D05031,0F,Loot
+RegalCut,Commander Common Drop,Item,-,40,D05032,0E,Loot
+Protect Drink,AdamanTiMi Rare Steal,Item,-,40,D05041,F5,Loot
+TurtleShell,AdamanTiMi Rare Drop,Item,-,40,D05043,E7,Loot
+Ether,Flamegun Common Steal,Item,-,40,D05044,E2,Loot
+Potion,Flamegun Rare Steal,Item,-,40,D05045,E0,Loot
+Speed Drink,Flamegun Rare Drop,Item,-,40,D05047,F4,Loot
+Ether,Rocket Common Steal,Item,-,40,D05048,E2,Loot
+Potion,Rocket Rare Steal,Item,-,40,D05049,E0,Loot
+Protect Drink,Rocket Rare Drop,Item,-,40,D0504B,F5,Loot
+Wonder Wand,Exdeath Common Steal,Item,-,40,D0504C,60,Loot
+Phoenix Down,Exdeath Rare Steal,Item,-,40,D0504D,E4,Loot
+Elixir,Sol Cannon Common Steal,Item,-,40,D05050,E3,Loot
+Ether,Sol Cannon Rare Steal,Item,-,40,D05051,E2,Loot
+DarkMatter,Sol Cannon Rare Drop,Item,-,40,D05053,EB,Loot
+Giant Drink,ArchaeAvis Rare Drop,Item,-,40,D05057,F2,Loot
+Power Drink,ArchaeAvis Rare Drop,Item,-,40,D0505B,F3,Loot
+Speed Drink,ArchaeAvis Rare Drop,Item,-,40,D0505F,F4,Loot
+Protect Drink,ArchaeAvis Rare Drop,Item,-,40,D05063,F5,Loot
+Hero Drink,ArchaeAvis Rare Drop,Item,-,40,D05067,F6,Loot
+Wind Spear,Chim.Brain Common Steal,Item,-,40,D05068,1B,Loot
+DragonFang,Chim.Brain Rare Steal,Item,-,40,D05069,EA,Loot
+Phoenix Down,Chim.Brain Rare Drop,Item,-,40,D0506B,E4,Loot
+Earth Hammer,Titan Common Steal,Item,-,40,D0506C,26,Loot
+Potion,Titan Rare Steal,Item,-,40,D0506D,E0,Loot
+HiPotion,Titan Rare Drop,Item,-,40,D0506F,E1,Loot
+Eyedrop,Puroboros Common Steal,Item,-,40,D05070,E9,Loot
+Potion,Puroboros Common Drop,Item,-,40,D05072,E0,Loot
+Gaia Gear,Abductor Common Steal,Item,-,40,D05074,A9,Loot
+Ether,Abductor Rare Drop,Item,-,40,D05077,E2,Loot
+Elixir,Gilgamesh Rare Drop,Item,-,40,D0507B,E3,Loot
+Potion,Fishman Common Drop,Item,-,40,D0507E,E0,Loot
+Antidote,FlyingKillr Common Drop,Item,-,40,D05082,E8,Loot
+HiPotion,Lil Chariot Common Drop,Item,-,40,D05086,E1,Loot
+Water Scroll,NeoGalura Common Drop,Item,-,40,D0508A,FD,Loot
+Trident,Gilgamesh Common Steal,Item,-,40,D0508C,1A,Loot
+Hero Drink,Gilgamesh Rare Steal,Item,-,40,D0508D,F6,Loot
+Tricorn Hat,Gilgamesh Rare Drop,Item,-,40,D0508F,91,Loot
+Golden Shield,Tyrasaurus Common Steal,Item,-,40,D05090,85,Loot
+Elixir,Tyrasaurus Common Drop,Item,-,40,D05092,E3,Loot
+Phoenix Down,Shiva Common Steal,Item,-,40,D05094,E4,Loot
+HiPotion,Shiva Rare Steal,Item,-,40,D05095,E1,Loot
+Ice Rod,Shiva Rare Drop,Item,-,40,D05097,33,Loot
+Power Wrist,Abductor Common Steal,Item,-,40,D05098,BA,Loot
+HiPotion,Abductor Rare Steal,Item,-,40,D05099,E1,Loot
+Potion,Abductor Common Drop,Item,-,40,D0509A,E0,Loot
+Elixir,HiryuuPlant Rare Drop,Item,-,40,D0509F,E3,Loot
+Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050A2,E4,Loot
+Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050A6,E4,Loot
+Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050AA,E4,Loot
+Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050AE,E4,Loot
+Phoenix Down,HiryuuFlowr Common Drop,Item,-,40,D050B2,E4,Loot
+Genji Gloves,Gilgamesh Rare Steal,Item,-,40,D050B5,C9,Loot
+Golden Shield,Gilgamesh Rare Drop,Item,-,40,D050B7,85,Loot
+GrnBeret,Enkidou Rare Steal,Item,-,40,D050B9,97,Loot
+Trident,Enkidou Rare Drop,Item,-,40,D050BB,1A,Loot
+Flail,Atmos Common Steal,Item,-,40,D050BC,5E,Loot
+Ether,Atmos Rare Steal,Item,-,40,D050BD,E2,Loot
+DarkMatter,Atmos Rare Drop,Item,-,40,D050BF,EB,Loot
+Elixir,Guardian Common Steal,Item,-,40,D050C0,E3,Loot
+Soot,Guardian Common Drop,Item,-,40,D050C2,62,Loot
+Elixir,Guardian Common Steal,Item,-,40,D050C4,E3,Loot
+Soot,Guardian Common Drop,Item,-,40,D050C6,62,Loot
+Elixir,Guardian Common Steal,Item,-,40,D050C8,E3,Loot
+Soot,Guardian Common Drop,Item,-,40,D050CA,62,Loot
+Elixir,Guardian Common Steal,Item,-,40,D050CC,E3,Loot
+Soot,Guardian Common Drop,Item,-,40,D050CE,62,Loot
+Giant Drink,Carbunkle Common Steal,Item,-,40,D050D0,F2,Loot
+Wall Ring,Carbunkle Rare Steal,Item,-,40,D050D1,CA,Loot
+TurtleShell,Carbunkle Common Drop,Item,-,40,D050D2,E7,Loot
+Giant Drink,Merugene Common Steal,Item,-,40,D050D4,F2,Loot
+Wall Ring,Merugene Rare Steal,Item,-,40,D050D5,CA,Loot
+TurtleShell,Merugene Common Drop,Item,-,40,D050D6,E7,Loot
+Genji Helm,Gilgamesh Rare Steal,Item,-,40,D050D9,C7,Loot
+Excailbur,Gilgamesh Rare Drop,Item,-,40,D050DB,5C,Loot
+Judgement Staff,Exdeath Common Steal,Item,-,40,D050DC,3E,Loot
+Elixir,Exdeath Rare Steal,Item,-,40,D050DD,E3,Loot
+HiPotion,Antlion Rare Steal,Item,-,40,D050E1,E1,Loot
+Cabin,Antlion Rare Drop,Item,-,40,D050E3,F1,Loot
+HiPotion,Mummy Common Steal,Item,-,40,D050E4,E1,Loot
+Potion,Mummy Rare Steal,Item,-,40,D050E5,E0,Loot
+Revivify,Mummy Common Drop,Item,-,40,D050E6,E6,Loot
+HiPotion,Aspis Common Steal,Item,-,40,D050E8,E1,Loot
+Antidote,Aspis Rare Steal,Item,-,40,D050E9,E8,Loot
+Antidote,Aspis Common Drop,Item,-,40,D050EA,E8,Loot
+Gauntlets,MachinHead Common Steal,Item,-,40,D050EC,C2,Loot
+Ether,MachinHead Rare Steal,Item,-,40,D050ED,E2,Loot
+Speed Drink,MachinHead Common Drop,Item,-,40,D050EE,F4,Loot
+Leather Armor,Merugene Rare Steal,Item,-,40,D050F1,9A,Loot
+Maiden's Kiss,Merugene Common Drop,Item,-,40,D050F2,E5,Loot
+Leather Cap,Merugene Rare Steal,Item,-,40,D050F5,89,Loot
+Maiden's Kiss,Merugene Common Drop,Item,-,40,D050F6,E5,Loot
+Leather Shoes,Merugene Rare Steal,Item,-,40,D050F9,C0,Loot
+Maiden's Kiss,Merugene Common Drop,Item,-,40,D050FA,E5,Loot
+Leather Shield,Merugene Rare Steal,Item,-,40,D050FD,81,Loot
+Maiden's Kiss,Merugene Common Drop,Item,-,40,D050FE,E5,Loot
+Guard Ring,Odin Common Steal,Item,-,40,D05100,AF,Loot
+Flame Shield,Odin Common Drop,Item,-,40,D05102,C4,Loot
+Phoenix Down,Gargoyle Common Steal,Item,-,40,D05104,E4,Loot
+Potion,Gargoyle Rare Steal,Item,-,40,D05105,E0,Loot
+HiPotion,Gargoyle Common Drop,Item,-,40,D05106,E1,Loot
+Elixir,Triton Common Steal,Item,-,40,D05108,E3,Loot
+Soft,Triton Rare Steal,Item,-,40,D05109,EC,Loot
+Protect Drink,Triton Common Drop,Item,-,40,D0510A,F5,Loot
+Elixir,Neregeid Common Steal,Item,-,40,D0510C,E3,Loot
+Soft,Neregeid Rare Steal,Item,-,40,D0510D,EC,Loot
+Power Drink,Neregeid Common Drop,Item,-,40,D0510E,F3,Loot
+Elixir,Phobos Common Steal,Item,-,40,D05110,E3,Loot
+Soft,Phobos Rare Steal,Item,-,40,D05111,EC,Loot
+Giant Drink,Phobos Common Drop,Item,-,40,D05112,F2,Loot
+CornaJar,Omniscient Common Steal,Item,-,40,D05114,C5,Loot
+Potion,Omniscient Rare Steal,Item,-,40,D05115,E0,Loot
+Pinwheel,Minotauros Common Steal,Item,-,40,D05118,5B,Loot
+Leather Shoes,Minotauros Rare Steal,Item,-,40,D05119,C0,Loot
+Elixir,Leviathan Rare Steal,Item,-,40,D0511D,E3,Loot
+Wall Ring,Leviathan Rare Drop,Item,-,40,D0511F,CA,Loot
+DarkMatter,Stalker Rare Steal,Item,-,40,D05121,EB,Loot
+Gold Hairpin,Gogo Common Steal,Item,-,40,D05124,94,Loot
+Leather Armor,Gogo Rare Steal,Item,-,40,D05125,9A,Loot
+Tiger Mask,Gogo Common Drop,Item,-,40,D05126,C3,Loot
+DragonFang,Bahamut Common Steal,Item,-,40,D05128,EA,Loot
+DragonFang,Bahamut Rare Steal,Item,-,40,D05129,EA,Loot
+DragonFang,Bahamut Common Drop,Item,-,40,D0512A,EA,Loot
+Dragoon Lance,Jura Avis Common Steal,Item,-,40,D0512C,20,Loot
+TurtleShell,Jura Avis Rare Steal,Item,-,40,D0512D,E7,Loot
+DragonFang,Jura Avis Rare Drop,Item,-,40,D0512F,EA,Loot
+Aegis Shield,Halicarnaso Common Steal,Item,-,40,D05130,86,Loot
+Staff of Light,Halicarnaso Rare Steal,Item,-,40,D05131,3C,Loot
+Elf Cape,Halicarnaso Common Drop,Item,-,40,D05132,B2,Loot
+Hero Drink,Iron Claw Rare Steal,Item,-,40,D05145,F6,Loot
+Glasses,Iron Claw Common Drop,Item,-,40,D05146,B4,Loot
+Potion,Sergeant Rare Steal,Item,-,40,D05149,E0,Loot
+Eyedrop,Sergeant Common Drop,Item,-,40,D0514A,E9,Loot
+Potion,Karnak Rare Steal,Item,-,40,D0514D,E0,Loot
+Potion,Karnak Common Drop,Item,-,40,D0514E,E0,Loot
+Coral Sword,Crayclaw Rare Steal,Item,-,40,D05151,10,Loot
+Ice Bow,Crayclaw Rare Drop,Item,-,40,D05153,40,Loot
+Wall Ring,Calofisteri Common Steal,Item,-,40,D05158,CA,Loot
+Plumed Hat,Calofisteri Rare Steal,Item,-,40,D05159,90,Loot
+DiamndPlt,Calofisteri Common Drop,Item,-,40,D0515A,A5,Loot
+Giant's Gloves,Apocalypse Common Steal,Item,-,40,D0515C,B1,Loot
+Elixir,Apocalypse Rare Steal,Item,-,40,D0515D,E3,Loot
+DarkHood,Apocalypse Common Drop,Item,-,40,D0515E,98,Loot
+Cabin,Catastroph Common Steal,Item,-,40,D05160,F1,Loot
+Elixir,Catastroph Rare Steal,Item,-,40,D05161,E3,Loot
+Soft,Catastroph Rare Drop,Item,-,40,D05163,EC,Loot
+Thief's Glove,Necrofobia Common Steal,Item,-,40,D05164,B0,Loot
+Elixir,Necrofobia Rare Steal,Item,-,40,D05165,E3,Loot
+Lumina Robe,Necrofobia Common Drop,Item,-,40,D05166,AB,Loot
+Flame Shield,Twin Tania Common Steal,Item,-,40,D05168,C4,Loot
+Phoenix Down,Twin Tania Rare Steal,Item,-,40,D05169,E4,Loot
+Tinkerbell,Twin Tania Common Drop,Item,-,40,D0516A,53,Loot
+Ether,Launcher Rare Steal,Item,-,40,D0516D,E2,Loot
+HiPotion,Launcher Rare Drop,Item,-,40,D0516F,E1,Loot
+Ether,Launcher Rare Steal,Item,-,40,D05171,E2,Loot
+HiPotion,Launcher Rare Drop,Item,-,40,D05173,E1,Loot
+Gauntlets,Gilgamesh Common Steal,Item,-,40,D05174,C2,Loot
+HiPotion,Gilgamesh Rare Steal,Item,-,40,D05175,E1,Loot
+Giant Drink,Carbunkle Common Steal,Item,-,40,D05178,F2,Loot
+Wall Ring,Carbunkle Rare Steal,Item,-,40,D05179,CA,Loot
+TurtleShell,Carbunkle Common Drop,Item,-,40,D0517A,E7,Loot
+Revivify,GrandMummy Common Steal,Item,-,40,D0517C,E6,Loot
+HiPotion,GrandMummy Rare Steal,Item,-,40,D0517D,E1,Loot
+HiPotion,GrandMummy Rare Drop,Item,-,40,D0517F,E1,Loot
+Soot,Apanda Common Steal,Item,-,40,D05180,62,Loot
+Soot,Apanda Rare Steal,Item,-,40,D05181,62,Loot
+Soot,Apanda Rare Drop,Item,-,40,D05183,62,Loot
+Revivify,Alte Roite Common Steal,Item,-,40,D05184,E6,Loot
+Potion,Alte Roite Rare Steal,Item,-,40,D05185,E0,Loot
+Healing Staff,Alte Roite Common Drop,Item,-,40,D05186,3B,Loot
+DarkHood,Invisible Common Steal,Item,-,40,D05188,98,Loot
+Stealth Suit,Invisible Rare Steal,Item,-,40,D05189,A4,Loot
+Shuriken,Abductor Common Steal,Item,-,40,D0518C,5A,Loot
+HiPotion,Abductor Rare Steal,Item,-,40,D0518D,E1,Loot
+Gale Bow,Abductor Common Drop,Item,-,40,D0518E,66,Loot
+Soft,BandelKuar Rare Steal,Item,-,40,D05191,EC,Loot
+Elixir,BandelKuar Common Drop,Item,-,40,D05192,E3,Loot
+LuckMallet,LiquiFlame Rare Steal,Item,-,40,D05195,ED,Loot
+Flame Scroll,LiquiFlame Common Drop,Item,-,40,D05196,FC,Loot
+HiPotion,Kuzar Rare Steal,Item,-,40,D05199,E1,Loot
+Phoenix Down,Kuzar Common Drop,Item,-,40,D0519A,E4,Loot
+Guard Ring,Sol Cannon Common Steal,Item,-,40,D0519C,AF,Loot
+Ether,Sol Cannon Rare Steal,Item,-,40,D0519D,E2,Loot
+HiPotion,Sol Cannon Common Drop,Item,-,40,D0519E,E1,Loot
+Elixir,Pantera Common Steal,Item,-,40,D051A0,E3,Loot
+Phoenix Down,Pantera Rare Steal,Item,-,40,D051A1,E4,Loot
+Dragon's Whisker,Shinryuu Common Steal,Item,-,40,D051A4,4F,Loot
+DragonFang,Shinryuu Rare Steal,Item,-,40,D051A5,EA,Loot
+DrgnCrest,Shinryuu Rare Drop,Item,-,40,D051A7,F7,Loot
+Wall Ring,Barrier Common Steal,Item,-,40,D051A8,CA,Loot
+HiPotion,Barrier Rare Steal,Item,-,40,D051A9,E1,Loot
+Dragoon Lance,NeoExdeath Common Steal,Item,-,40,D051AC,20,Loot
+Pinwheel,NeoExdeath Rare Steal,Item,-,40,D051B1,5B,Loot
+Tempest,NeoExdeath Common Steal,Item,-,40,D051B4,30,Loot
+Ragnarok,NeoExdeath Common Steal,Item,-,40,D051B8,16,Loot
+Genji Armor,Gilgamesh Rare Steal,Item,-,40,D051BD,C8,Loot

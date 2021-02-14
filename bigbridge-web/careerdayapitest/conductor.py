@@ -2342,8 +2342,8 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    # SEED_NUM = 1605
-    SEED_NUM = random.randint(1,1000000)
+    SEED_NUM = 166
+    # SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {'seed': SEED_NUM, 
                            'fjf': 'false', 
@@ -2369,7 +2369,7 @@ if __name__ == "__main__":
                            'enforce_all_jobs': 'false',
                            'progressive_bosses': 'false', 
                            'progressive_rewards': 'false', 
-                           'item_randomization': 'true', 
+                           'item_randomization': 'false', 
                            'abbreviated': 'true', 
                            'grantkeyitems': 'false', 
                            'default_abilities': 'false', 

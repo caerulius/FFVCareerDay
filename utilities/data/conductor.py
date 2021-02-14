@@ -2342,8 +2342,8 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    # SEED_NUM = 1605
-    SEED_NUM = random.randint(1,1000000)
+    SEED_NUM = 166
+    # SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {'seed': SEED_NUM, 
                            'fjf': 'false', 

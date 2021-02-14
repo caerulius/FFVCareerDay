@@ -12,8 +12,8 @@ db $71
 db $E3, $C0, $00, $A6, $1E, $00	;Inter-map cutscene? C0 00 A6 1E 00
 db $A5, $FE						;Clear Event Flag 1FE
 db $D4, $3D, $48, $0F			;(Music) 3D 48 0F
-db $C3, $03						;Fade in Speed 02
-db $70
+db $C3, $04						;Fade in Speed 02
+db $73
 db $FF							;End event
 
 padbyte $00

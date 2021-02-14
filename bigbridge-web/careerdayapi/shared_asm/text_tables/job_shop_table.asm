@@ -24,7 +24,7 @@ org $E79E80
 db $BB, $67, $8E, $87, $8D, $7E, $8B
 ; <Scrl>M Knight
 org $E79E88
-db $BB, $6C, $96, $6A, $87, $82, $80, $81, $8D
+db $BB, $6C, $6A, $87, $82, $80, $81, $8D
 ; <Scrl>WhMage
 org $E79E90
 db $BB, $76, $81, $6C, $7A, $80, $7E

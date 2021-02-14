@@ -118,7 +118,7 @@ magic_id,readable_name,type,value,max_count,valid,item_randomization_valid,relat
 97,MindBlst,Blue,2,1,TRUE,TRUE,[“BlueMage”],27,5,87
 98,Vampire,Blue,2,1,TRUE,TRUE,[“BlueMage”],27,1,13
 99,Hammer,Blue,2,1,TRUE,TRUE,[“BlueMage”],23,1,21
-9A,MgthyGrd,Blue,2,1,TRUE,TRUE,[“BlueMage”],23,7,102
+9A,BigGuard,Blue,2,1,TRUE,TRUE,[“BlueMage”],23,7,102
 9B,Exploder,Blue,2,1,TRUE,TRUE,[“BlueMage”],25,2,32
 9C,????,Blue,2,1,TRUE,TRUE,[“BlueMage”],25,1,16
 9D,Blowfish,Blue,2,1,TRUE,TRUE,[“BlueMage”],26,5,59

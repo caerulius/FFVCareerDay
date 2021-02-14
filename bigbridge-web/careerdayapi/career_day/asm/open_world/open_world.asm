@@ -528,14 +528,18 @@ org $CE12AB
 db $01
 
 
-; fix merugune spot's event flag for clearing the fight
-org $f0562D
-db $FB, $9B
+; THIS was once used for Merugene, but now that the fight has moved entirely, no longer necessary
+; ; fix merugune spot's event flag for clearing the fight
+; org $f0562D
+; db $FB, $9B
 
-org $f05634
-db $FB, $9B
+; org $f05634
+; db $FB, $9B
 
-
+; INSTEAD, deleting entirely from world map checks
+; simply overwrite the entry in the table with another duplicate 
+org $CE2890
+db $CE, $C8, $FC, $01, $CE, $C8, $FC, $01
 
 
 ; change excalibur fake to excalipoor
@@ -564,5 +568,131 @@ org $C0FA23
 db $00, $34, $10, $34
 
 
+
+; change mirage village guy's dialogue
+org $e364d6
+db $72, $88, $8B, $8B, $92, $A3, $A3, $A3, $96, $7A, $85, $85, $96, $88, $8E, $8D, $96, $88, $7F, $96, $80, $82, $7F, $8D, $8C, $A1, $00
+pad $E36564
+
+
+
+; change Mediator text to Trainer
+org $E1B752
+db $73, $8B, $7A, $82, $87, $7E, $8B, $FF
+; e1b752 - 76d (fill with FFs)
+
+; D15678 -> 80
+org $D15678
+db $73, $8B, $7A, $82, $87, $7E, $8B, $FF
+
+
+; rename Capture to Mug
+org $e011a4
+db $6C, $8E, $80, $FF, $FF, $FF, $FF
+
+; rename Combine to Mix
+org $e01229
+db  $6C, $82, $91, $FF, $FF, $FF, $FF
+
+
+
+;Time
+org $e730f2
+db $73, $82, $86, $7E, $FF
+
+
+
+org $e01302
+db $73, $82, $86, $7E, $FF
+org $e01309
+db $73, $82, $86, $7E, $FF
+org $e01310
+db $73, $82, $86, $7E, $FF
+org $e01317
+db $73, $82, $86, $7E, $FF
+org $e0131e
+db $73, $82, $86, $7E, $FF
+org $e01325
+db $73, $82, $86, $7E, $FF
+
+; Worus -> Walse
+
+org $e70257
+db $76, $7A, $85, $8C, $7E
+org $e70263
+db $76, $7A, $85, $8C, $7E
+org $e70274
+db $76, $7A, $85, $8C, $7E
+org $e70285
+db $76, $7A, $85, $8C, $7E
+org $e70298
+db $76, $7A, $85, $8C, $7E
+org $e7029d
+db $76, $7A, $85, $8C, $7E
+org $e702b2
+db $76, $7A, $85, $8C, $7E
+
+
+org $e174c5
+db $76, $7A, $85, $8C, $7E
+org $e16f60
+db $76, $7A, $85, $8C, $7E
+org $e170fc
+db $76, $7A, $85, $8C, $7E
+org $e17009
+db $76, $7A, $85, $8C, $7E
+org $e17209
+db $76, $7A, $85, $8C, $7E
+
+
+; Mua -> Moore
+org $e33993
+db $6C, $88, $88, $8B, $7E, $96, $82, $8C, $96, $96
+org $e33851
+db $6C, $88, $88, $8B, $7E, $96
+org $e33589
+db $6C, $88, $88, $8B, $7E, $A3, $A3, $A3
+
+org $D070FE
+db $8A
+org $e70485
+db $6C, $88, $88, $8B, $7E, $FF, $FF, $FF
+
+
+
+; Coronet -> Hypno
+org $d11aa4
+db $67, $92, $89, $87, $88, $FF, $FF
+org $e76b68
+db $67, $92, $89, $87, $88, $96, $67, $7E, $85, $86
+
+
+; Air Lance -> Air Knife
+org $d113de
+db $6A, $87, $82, $7F, $7E
+
+org $E75954
+db $6A, $87, $82, $7F, $7E, $FF
+
+; Gungnir -> Heavy Spear
+org $d11486
+db $67, $7E, $7A, $8F, $92, $FF, $FF
+org $e75b18
+db $67, $7E, $7A, $8F, $92, $96, $72, $89, $7E, $7A, $8B
+org $e719c0
+db $67, $7E, $7A, $8F, $92, $96, $72, $89, $7E, $7A, $8B
+
+
+; Protect Drink -> Protect Potion (MIX)
+org $e70c80
+db $6F, $8B, $88, $8D, $7E, $7C, $8D, $96, $6F, $88, $8D, $82, $88, $87
+
+; Sampson -> Samson
+org $e70c40
+db $72, $7A, $86, $8C, $88, $87, $96, $6F, $88, $90, $7E, $8B, $FF
+
+;  MgthyGrd -> BigGuard
+org $d120e5
+db $61, $82, $80, $66, $8E, $7A, $8B, $7D
 
 

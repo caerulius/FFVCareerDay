@@ -46,7 +46,7 @@ progression_abilities = {
 	"20": "MgcSword Ability Progressive",
 	"21": "White Ability Progressive",
 	"22": "Black Ability Progressive",
-	"23": "Dimen Ability Progressive",
+	"23": "Time Ability Progressive",
 	"24": "Summon Ability Progressive",
 	"25": "Red1->Red2->Red3->X-Magic",
 	"32": "HP +X%",

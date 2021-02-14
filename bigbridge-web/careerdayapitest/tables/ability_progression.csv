@@ -21,7 +21,7 @@ index,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,name
 13,1B,FF,FF,FF,FF,FF,FF,FF,Control
 14,1C,FF,FF,FF,FF,FF,FF,FF,Catch
 15,1D,FF,FF,FF,FF,FF,FF,FF,Release
-16,1E,FF,FF,FF,FF,FF,FF,FF,Combine
+16,1E,FF,FF,FF,FF,FF,FF,FF,Mix
 17,1F,FF,FF,FF,FF,FF,FF,FF,Drink
 18,20,FF,FF,FF,FF,FF,FF,FF,Pray
 19,21,FF,FF,FF,FF,FF,FF,FF,Revive

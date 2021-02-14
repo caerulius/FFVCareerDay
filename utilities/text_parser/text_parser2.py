@@ -36,7 +36,7 @@ def init_table(tabletype):
         
 
 data = '''
-668e878087828b
+6c80818d92668b7d
 '''
 
 

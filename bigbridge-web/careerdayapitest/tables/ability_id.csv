@@ -29,7 +29,7 @@ ability_id,readable_name,valid,value,related_jobs,max_count,progression_id,tier
 1B,Control,TRUE,2,[“Trainer”],1,13,5
 1C,Catch,TRUE,2,[“Trainer”],1,14,4
 1D,Release,FALSE,2,[“Trainer”],1,15,0
-1E,Combine,TRUE,2,[“Chemist”],1,16,5
+1E,Mix,TRUE,2,[“Chemist”],1,16,5
 1F,Drink,TRUE,2,[“Chemist”],1,17,3
 20,Pray,TRUE,2,[“Chemist”],1,18,3
 21,Revive,TRUE,2,[“Chemist”],1,19,5

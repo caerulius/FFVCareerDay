@@ -15,7 +15,7 @@ crystal_id,shop_id,readable_name,value,related_jobs,max_count,starting_weapon,st
 0D,96,BlueMage,2,[“BlueMage”],1,Knife,02,"[“Aero”, “GblinPnch”, “Hammer”]","[“8F”, “93” ,”99”]",Blue,4d,6
 0E,97,RedMage,1,[“RedMage”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”, “Cure”, “Scan”, “Antdt”]","[“24”, “25, “26”, “12”, “13”, “14”]",Red Lv. 1,4b,2
 0F,98,Trainer,0,[“Trainer”],1,Whip,4B,[],[“FF”],Tame,1d,1
-10,99,Chemist,2,[“Chemist”],1,Staff,38,[],[“FF”],Combine,20,2
+10,99,Chemist,2,[“Chemist”],1,Staff,38,[],[“FF”],Mix,20,2
 11,9A,Geomancer,1,[“Geomancer”],1,Giyaman,50,[],[“FF”],Terrain,23,1
 12,9B,Bard,1,[“Bard”],1,Knife,02,"[“Power”, “Speed”, “Vitality”]","[“57”, “58”, “59”]",Hide,28,3
 13,9C,Dancer,1,[“Dancer”],1,Knife,02,[],[“FF”],Flirt,2a,2

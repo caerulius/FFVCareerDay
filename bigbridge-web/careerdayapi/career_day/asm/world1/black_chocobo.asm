@@ -35,41 +35,34 @@ pad $C94774
 
 org $C947DF
 db $A0, $00                     ;(Message) 00
-db $C7, $04                     ;Play next 04 bytes simultaneously
-db $80, $01                     ;Sprite 080 do event: Move Up
-db $82, $01                     ;Sprite 082 do event: Move Up
-db $80, $22                     ;Sprite 080 do event: face down, left hand on head
-db $82, $26                     ;Sprite 082 do event: face up, right hand raised out
-db $71                          ;Short pause
-db $A0, $01                     ;(Message) 01
-db $C7, $06                     ;Play next 06 bytes simultaneously
-db $80, $02                     ;Sprite 080 do event: Move Right
-db $82, $04                     ;Sprite 082 do event: Move Left
-db $81, $01                     ;Sprite 081 do event: Move Up
-db $80, $0A                     ;Sprite 080 do event: Hide
-db $82, $0A                     ;Sprite 082 do event: Hide
-db $81, $0A                     ;Sprite 081 do event: Hide
 db $E0, $00, $00, $D4, $D1, $00 ;Unknown
 db $FF                          ;End Event
 
 
 org $C89A86
 db $B1, $02                     ;Set Player Sprite 02
-db $80, $09                     ;Sprite 080 do event: Show
-db $82, $09                     ;Sprite 082 do event: Show
+; db $80, $09                     ;Sprite 080 do event: Show
+; db $82, $09                     ;Sprite 082 do event: Show
 db $81, $09                     ;Sprite 081 do event: Show
-db $C7, $05                     ;Play next 05 bytes simultaneously
-db $80, $04                     ;Sprite 080 do event: Move Left
-db $82, $02                     ;Sprite 082 do event: Move Right
+; db $C7, $05                     ;Play next 05 bytes simultaneously
+; db $80, $04                     ;Sprite 080 do event: Move Left
+; db $82, $02                     ;Sprite 082 do event: Move Right
 db $01                          ;Player Move Up
-db $80, $20                     ;Sprite 080 do event: face down, left hand raised out
-db $82, $20                     ;Sprite 082 do event: face down, left hand raised out
-db $80, $12                     ;Sprite 080 do event: face right, standing
-db $82, $12                     ;Sprite 082 do event: face right, standing
+; db $80, $20                     ;Sprite 080 do event: face down, left hand raised out
+; db $82, $20                     ;Sprite 082 do event: face down, left hand raised out
+; db $80, $12                     ;Sprite 080 do event: face right, standing
+; db $82, $12                     ;Sprite 082 do event: face right, standing
 db $81, $12                     ;Sprite 081 do event: face right, standing
 db $FF                          ;End Event
 
+; change galuf default to lenna for sprite & dialogue
+org $ce786D
+db $4E
 
+org $e1e325
+db $6B, $7E, $87, $87, $7A
+org $e1e357
+db $6B, $7E, $87, $87, $7A
 
 ;Remove text after catching black chocobo (from right)
 org $C93719

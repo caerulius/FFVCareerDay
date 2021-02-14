@@ -133,9 +133,11 @@ def patch_and_return():
             
         # We're going to pass in conductor_config into Conductor() object now
         # Any configuration for new parameters belong here
+        
         conductor_config = {
                             'fjf':          data["fjf"],
                             'fjf_strict':   data["fjf_strict"],
+                            'fjf_num_jobs': data["fjf_num_jobs"],
                             'jobpalettes':  data['jobpalette'],
                             'world_lock':   data['world_lock'],
                             'job_1':   data['job_1'],
@@ -262,6 +264,10 @@ def bool_to_int(boolean):
     
 def patch_careerday(filename, data):
     fjf = bool_to_int(translateBool(data['fjf']))
+    fourjoblock = 1 if int(data['fjf_num_jobs']) == 4 and fjf == 1 else 0
+    logging.error(int(data['fjf_num_jobs']))
+    logging.error(fjf)
+    logging.error(fourjoblock)
     progressive_rewards = bool_to_int(translateBool(data['progressive_rewards']))
     abbreviated = bool_to_int(translateBool(data['abbreviated']))
     grantkeyitems = bool_to_int(translateBool(data['grantkeyitems']))
@@ -274,8 +280,8 @@ def patch_careerday(filename, data):
     
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
     --define passages=1 --define double_atb=0 --define progressive={} --define abbreviated={} --define grantkeyitems={} --define boss_exp=1 --define free_tablets={} \
-    --define fourjobmode={} --define world_lock={} --define starting_cara={} --define everysteprandomencounter={} --define explv50={}\
-    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, world_lock, starting_cara, everysteprandomencounter, explv50, MAIN_PATCH, filename)
+    --define fourjobmode={} --define fourjoblock={} --define world_lock={} --define starting_cara={} --define everysteprandomencounter={} --define explv50={}\
+    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, fourjoblock, world_lock, starting_cara, everysteprandomencounter, explv50, MAIN_PATCH, filename)
 
     logging.error(command)
     

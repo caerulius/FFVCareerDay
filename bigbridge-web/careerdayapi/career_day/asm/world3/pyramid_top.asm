@@ -11,20 +11,28 @@ db $26                          ;Player pose: face up, right hand raised out
 db $72                          ;Medium pause
 db $82, $0A                     ;Sprite 082 do event: Hide
 db $01                          ;Player Move Up
+db $B4, $24                     ;Play Background Music The Book of Sealings
 db $73                          ;Long pause
 db $14                          ;Player pose: face down, left hand forward
 db $D0, $81, $40                ;(Music) 81 40
 db $DE, $41
 db $DF
-db $B4, $24                     ;Play Background Music The Book of Sealings
-db $B5, $84                     ;Play Sound Effect Exdeath destroyed 2
-db $C5                          ;<unknown>
-db $E0, $75                     ;Unknown
+db $73
+db $BD, $2B, $FF                ;Start Event Battle 2B
+db $71
+db $C5, $80
+db $B5, $02
+db $71
+db $DE, $7A ; custom reward
+db $DF
+db $73
+; db $C5                          ;<unknown>
+; db $E0, $75                     ;Unknown
 db $E3, $7A, $01, $A0, $14, $00 ;Inter-map cutscene? 7A 01 A0 14 00
 db $0A                          ;Player Hide
 db $D8, $47, $90, $87           ;Unknown
 db $09                          ;Player Show
-db $75
+db $74
 db $C3, $02
 db $CE, $07, $01                ;Play next 01 bytes 07 times
 db $04                          ;Player move Left

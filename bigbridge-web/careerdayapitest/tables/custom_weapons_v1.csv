@@ -72,7 +72,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 70,<Knif>MindBlst,MindBlst Knife,90,knife,5,97,Blue,,,,spell,00,80,02,80,16,04,78,00,32,00,00,00
 71,<Knif>Vampire,Vampire Knife,16,knife,1,98,Blue,,,,spell,00,80,02,80,16,04,78,00,32,00,00,00
 72,<Knif>Hammer,Hammer Knife,24,knife,1,99,Blue,,,,spell,00,80,02,80,16,04,78,00,32,00,00,00
-73,<Knif>MgthyGrd,MgthyGrd Knife,105,knife,7,9A,Blue,,,,spell,00,80,02,80,16,04,78,00,32,00,00,00
+73,<Knif>BigGuard,BigGuard Knife,105,knife,7,9A,Blue,,,,spell,00,80,02,80,16,04,78,00,32,00,00,00
 74,<Knif>Exploder,Exploder Knife,35,knife,2,9B,Blue,,,,spell,00,80,02,80,16,04,78,00,32,00,00,00
 75,<Knif>????,???? Knife,19,knife,1,9C,Blue,,,,spell,00,80,02,80,16,04,78,00,32,00,00,00
 76,<Knif>Blowfish,Blowfish Knife,62,knife,5,9D,Blue,,,,spell,00,80,02,80,16,04,78,00,32,00,00,00
@@ -151,7 +151,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 149,<Swrd>MindBlst,MindBlst Sword,91,sword,5,97,Blue,,,,spell,00,80,04,80,55,04,78,00,31,00,00,00
 150,<Swrd>Vampire,Vampire Sword,17,sword,1,98,Blue,,,,spell,00,80,04,80,55,04,78,00,31,00,00,00
 151,<Swrd>Hammer,Hammer Sword,25,sword,1,99,Blue,,,,spell,00,80,04,80,55,04,78,00,31,00,00,00
-152,<Swrd>MgthyGrd,MgthyGrd Sword,106,sword,7,9A,Blue,,,,spell,00,80,04,80,55,04,78,00,31,00,00,00
+152,<Swrd>BigGuard,BigGuard Sword,106,sword,7,9A,Blue,,,,spell,00,80,04,80,55,04,78,00,31,00,00,00
 153,<Swrd>Exploder,Exploder Sword,36,sword,2,9B,Blue,,,,spell,00,80,04,80,55,04,78,00,31,00,00,00
 154,<Swrd>????,???? Sword,20,sword,1,9C,Blue,,,,spell,00,80,04,80,55,04,78,00,31,00,00,00
 155,<Swrd>Blowfish,Blowfish Sword,63,sword,5,9D,Blue,,,,spell,00,80,04,80,55,04,78,00,31,00,00,00
@@ -230,7 +230,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 228,<Swrd>MindBlst,MindBlst Knightsword,98,knightsword,5,97,Blue,,,,spell,00,80,05,80,55,04,78,00,31,00,00,00
 229,<Swrd>Vampire,Vampire Knightsword,24,knightsword,1,98,Blue,,,,spell,00,80,05,80,55,04,78,00,31,00,00,00
 230,<Swrd>Hammer,Hammer Knightsword,32,knightsword,1,99,Blue,,,,spell,00,80,05,80,55,04,78,00,31,00,00,00
-231,<Swrd>MgthyGrd,MgthyGrd Knightsword,113,knightsword,7,9A,Blue,,,,spell,00,80,05,80,55,04,78,00,31,00,00,00
+231,<Swrd>BigGuard,BigGuard Knightsword,113,knightsword,7,9A,Blue,,,,spell,00,80,05,80,55,04,78,00,31,00,00,00
 232,<Swrd>Exploder,Exploder Knightsword,43,knightsword,2,9B,Blue,,,,spell,00,80,05,80,55,04,78,00,31,00,00,00
 233,<Swrd>????,???? Knightsword,27,knightsword,1,9C,Blue,,,,spell,00,80,05,80,55,04,78,00,31,00,00,00
 234,<Swrd>Blowfish,Blowfish Knightsword,70,knightsword,5,9D,Blue,,,,spell,00,80,05,80,55,04,78,00,31,00,00,00
@@ -309,7 +309,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 307,<Axe>MindBlst,MindBlst Axe,104,axe,5,97,Blue,,,,spell,00,80,07,80,59,00,78,17,34,50,00,00
 308,<Axe>Vampire,Vampire Axe,30,axe,1,98,Blue,,,,spell,00,80,07,80,59,00,78,17,34,50,00,00
 309,<Axe>Hammer,Hammer Axe,38,axe,1,99,Blue,,,,spell,00,80,07,80,59,00,78,17,34,50,00,00
-310,<Axe>MgthyGrd,MgthyGrd Axe,119,axe,7,9A,Blue,,,,spell,00,80,07,80,59,00,78,17,34,50,00,00
+310,<Axe>BigGuard,BigGuard Axe,119,axe,7,9A,Blue,,,,spell,00,80,07,80,59,00,78,17,34,50,00,00
 311,<Axe>Exploder,Exploder Axe,49,axe,2,9B,Blue,,,,spell,00,80,07,80,59,00,78,17,34,50,00,00
 312,<Axe>????,???? Axe,33,axe,1,9C,Blue,,,,spell,00,80,07,80,59,00,78,17,34,50,00,00
 313,<Axe>Blowfish,Blowfish Axe,76,axe,5,9D,Blue,,,,spell,00,80,07,80,59,00,78,17,34,50,00,00
@@ -388,7 +388,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 386,<Katn>MindBlst,MindBlst Katana,96,katana,5,97,Blue,,,,spell,00,80,09,80,5a,00,78,2a,37,0c,00,00
 387,<Katn>Vampire,Vampire Katana,22,katana,1,98,Blue,,,,spell,00,80,09,80,5a,00,78,2a,37,0c,00,00
 388,<Katn>Hammer,Hammer Katana,30,katana,1,99,Blue,,,,spell,00,80,09,80,5a,00,78,2a,37,0c,00,00
-389,<Katn>MgthyGrd,MgthyGrd Katana,111,katana,7,9A,Blue,,,,spell,00,80,09,80,5a,00,78,2a,37,0c,00,00
+389,<Katn>BigGuard,BigGuard Katana,111,katana,7,9A,Blue,,,,spell,00,80,09,80,5a,00,78,2a,37,0c,00,00
 390,<Katn>Exploder,Exploder Katana,41,katana,2,9B,Blue,,,,spell,00,80,09,80,5a,00,78,2a,37,0c,00,00
 391,<Katn>????,???? Katana,25,katana,1,9C,Blue,,,,spell,00,80,09,80,5a,00,78,2a,37,0c,00,00
 392,<Katn>Blowfish,Blowfish Katana,68,katana,5,9D,Blue,,,,spell,00,80,09,80,5a,00,78,2a,37,0c,00,00
@@ -502,7 +502,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 500,<Harp>MindBlst,MindBlst Harp,89,harp,5,97,Blue,,,,spell,78,20,4e,80,9b,08,78,0f,7f,00,64,74
 501,<Harp>Vampire,Vampire Harp,15,harp,1,98,Blue,,,,spell,78,20,4e,80,9b,08,78,0f,7f,00,64,74
 502,<Harp>Hammer,Hammer Harp,23,harp,1,99,Blue,,,,spell,78,20,4e,80,9b,08,78,0f,7f,00,64,74
-503,<Harp>MgthyGrd,MgthyGrd Harp,104,harp,7,9A,Blue,,,,spell,78,20,4e,80,9b,08,78,0f,7f,00,64,74
+503,<Harp>BigGuard,BigGuard Harp,104,harp,7,9A,Blue,,,,spell,78,20,4e,80,9b,08,78,0f,7f,00,64,74
 504,<Harp>Exploder,Exploder Harp,34,harp,2,9B,Blue,,,,spell,78,20,4e,80,9b,08,78,0f,7f,00,64,74
 505,<Harp>????,???? Harp,18,harp,1,9C,Blue,,,,spell,78,20,4e,80,9b,08,78,0f,7f,00,64,74
 506,<Harp>Blowfish,Blowfish Harp,61,harp,5,9D,Blue,,,,spell,78,20,4e,80,9b,08,78,0f,7f,00,64,74
@@ -581,7 +581,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,magic_id,
 579,<Misc>MindBlst,MindBlst Flail,94,flail,5,97,Blue,,,,spell,38,80,5e,80,23,00,78,23,38,5f,00,00
 580,<Misc>Vampire,Vampire Flail,20,flail,1,98,Blue,,,,spell,38,80,5e,80,23,00,78,23,38,5f,00,00
 581,<Misc>Hammer,Hammer Flail,28,flail,1,99,Blue,,,,spell,38,80,5e,80,23,00,78,23,38,5f,00,00
-582,<Misc>MgthyGrd,MgthyGrd Flail,109,flail,7,9A,Blue,,,,spell,38,80,5e,80,23,00,78,23,38,5f,00,00
+582,<Misc>BigGuard,BigGuard Flail,109,flail,7,9A,Blue,,,,spell,38,80,5e,80,23,00,78,23,38,5f,00,00
 583,<Misc>Exploder,Exploder Flail,39,flail,2,9B,Blue,,,,spell,38,80,5e,80,23,00,78,23,38,5f,00,00
 584,<Misc>????,???? Flail,23,flail,1,9C,Blue,,,,spell,38,80,5e,80,23,00,78,23,38,5f,00,00
 585,<Misc>Blowfish,Blowfish Flail,66,flail,5,9D,Blue,,,,spell,38,80,5e,80,23,00,78,23,38,5f,00,00

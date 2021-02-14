@@ -71,7 +71,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,shop_pric
 70,<Knif>MindBlst,MindBlst Knife,90,knife,5,9000,97,Blue,,,,spell,F8,80,02,89,16,0C,78,5A,32,00,21,97,|knife|MindBlst Knife|90|9000|5|Magic Power +2|-,Magic Power +2,-
 71,<Knif>Vampire,Vampire Knife,16,knife,1,900,98,Blue,,,,spell,F8,80,02,91,16,0C,78,10,32,00,21,98,|knife|Vampire Knife|16|900|1|Vitality +2|-,Vitality +2,-
 72,<Knif>Hammer,Hammer Knife,24,knife,1,2000,99,Blue,,,,spell,F8,80,02,88,16,0C,78,18,32,00,21,99,|knife|Hammer Knife|24|2000|1|Magic Power +1|-,Magic Power +1,-
-73,<Knif>MgthyGrd,MgthyGrd Knife,105,knife,7,11000,9A,Blue,,,,spell,F8,80,02,FF,16,0C,78,69,32,00,64,9A,"|knife|MgthyGrd Knife|105|11000|7|Agility, Magic Power, Strength, Vitality +5|-","Agility, Magic Power, Strength, Vitality +5",-
+73,<Knif>BigGuard,BigGuard Knife,105,knife,7,11000,9A,Blue,,,,spell,F8,80,02,FF,16,0C,78,69,32,00,64,9A,"|knife|BigGuard Knife|105|11000|7|Agility, Magic Power, Strength, Vitality +5|-","Agility, Magic Power, Strength, Vitality +5",-
 74,<Knif>Exploder,Exploder Knife,35,knife,2,3000,9B,Blue,,,,spell,F8,80,02,97,16,0C,78,23,32,00,21,9B,|knife|Exploder Knife|35|3000|2|Vitality +5|-,Vitality +5,-
 75,<Knif>????,???? Knife,19,knife,1,1000,9C,Blue,,,,spell,F8,80,02,FA,16,0C,78,13,32,00,21,9C,"|knife|???? Knife|19|1000|1|Agility, Magic Power, Strength, Vitality +3|-","Agility, Magic Power, Strength, Vitality +3",-
 76,<Knif>Blowfish,Blowfish Knife,62,knife,5,5000,9D,Blue,,,,spell,F8,80,02,91,16,0C,78,3E,32,00,21,9D,|knife|Blowfish Knife|62|5000|5|Vitality +2|-,Vitality +2,-
@@ -149,7 +149,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,shop_pric
 149,<Swrd>MindBlst,MindBlst Sword,91,sword,5,9000,97,Blue,,,,spell,F8,80,04,89,55,0C,78,5B,31,00,21,97,|sword|MindBlst Sword|91|9000|5|Magic Power +2|-,Magic Power +2,-
 150,<Swrd>Vampire,Vampire Sword,17,sword,1,1000,98,Blue,,,,spell,F8,80,04,91,55,0C,78,11,31,00,21,98,|sword|Vampire Sword|17|1000|1|Vitality +2|-,Vitality +2,-
 151,<Swrd>Hammer,Hammer Sword,25,sword,1,2000,99,Blue,,,,spell,F8,80,04,88,55,0C,78,19,31,00,21,99,|sword|Hammer Sword|25|2000|1|Magic Power +1|-,Magic Power +1,-
-152,<Swrd>MgthyGrd,MgthyGrd Sword,106,sword,7,11000,9A,Blue,,,,spell,F8,80,04,FF,55,0C,78,6A,31,00,64,9A,"|sword|MgthyGrd Sword|106|11000|7|Agility, Magic Power, Strength, Vitality +5|-","Agility, Magic Power, Strength, Vitality +5",-
+152,<Swrd>BigGuard,BigGuard Sword,106,sword,7,11000,9A,Blue,,,,spell,F8,80,04,FF,55,0C,78,6A,31,00,64,9A,"|sword|BigGuard Sword|106|11000|7|Agility, Magic Power, Strength, Vitality +5|-","Agility, Magic Power, Strength, Vitality +5",-
 153,<Swrd>Exploder,Exploder Sword,36,sword,2,3000,9B,Blue,,,,spell,F8,80,04,97,55,0C,78,24,31,00,21,9B,|sword|Exploder Sword|36|3000|2|Vitality +5|-,Vitality +5,-
 154,<Swrd>????,???? Sword,20,sword,1,1000,9C,Blue,,,,spell,F8,80,04,FA,55,0C,78,14,31,00,21,9C,"|sword|???? Sword|20|1000|1|Agility, Magic Power, Strength, Vitality +3|-","Agility, Magic Power, Strength, Vitality +3",-
 155,<Swrd>Blowfish,Blowfish Sword,63,sword,5,5000,9D,Blue,,,,spell,F8,80,04,91,55,0C,78,3F,31,00,21,9D,|sword|Blowfish Sword|63|5000|5|Vitality +2|-,Vitality +2,-
@@ -227,7 +227,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,shop_pric
 228,<Swrd>MindBlst,MindBlst Knightsword,98,knightsword,5,10000,97,Blue,,,,spell,F8,80,05,89,55,0C,78,62,31,00,21,97,|knightsword|MindBlst Knightsword|98|10000|5|Magic Power +2|-,Magic Power +2,-
 229,<Swrd>Vampire,Vampire Knightsword,24,knightsword,1,2000,98,Blue,,,,spell,F8,80,05,91,55,0C,78,18,31,00,21,98,|knightsword|Vampire Knightsword|24|2000|1|Vitality +2|-,Vitality +2,-
 230,<Swrd>Hammer,Hammer Knightsword,32,knightsword,1,2000,99,Blue,,,,spell,F8,80,05,88,55,0C,78,20,31,00,21,99,|knightsword|Hammer Knightsword|32|2000|1|Magic Power +1|-,Magic Power +1,-
-231,<Swrd>MgthyGrd,MgthyGrd Knightsword,113,knightsword,7,12000,9A,Blue,,,,spell,F8,80,05,FF,55,0C,78,71,31,00,64,9A,"|knightsword|MgthyGrd Knightsword|113|12000|7|Agility, Magic Power, Strength, Vitality +5|-","Agility, Magic Power, Strength, Vitality +5",-
+231,<Swrd>BigGuard,BigGuard Knightsword,113,knightsword,7,12000,9A,Blue,,,,spell,F8,80,05,FF,55,0C,78,71,31,00,64,9A,"|knightsword|BigGuard Knightsword|113|12000|7|Agility, Magic Power, Strength, Vitality +5|-","Agility, Magic Power, Strength, Vitality +5",-
 232,<Swrd>Exploder,Exploder Knightsword,43,knightsword,2,3000,9B,Blue,,,,spell,F8,80,05,97,55,0C,78,2B,31,00,21,9B,|knightsword|Exploder Knightsword|43|3000|2|Vitality +5|-,Vitality +5,-
 233,<Swrd>????,???? Knightsword,27,knightsword,1,2000,9C,Blue,,,,spell,F8,80,05,FA,55,0C,78,1B,31,00,21,9C,"|knightsword|???? Knightsword|27|2000|1|Agility, Magic Power, Strength, Vitality +3|-","Agility, Magic Power, Strength, Vitality +3",-
 234,<Swrd>Blowfish,Blowfish Knightsword,70,knightsword,5,6000,9D,Blue,,,,spell,F8,80,05,91,55,0C,78,46,31,00,21,9D,|knightsword|Blowfish Knightsword|70|6000|5|Vitality +2|-,Vitality +2,-
@@ -305,7 +305,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,shop_pric
 307,<Axe>MindBlst,MindBlst Axe,104,axe,5,10000,97,Blue,,,,spell,F8,80,07,D9,59,08,78,68,34,64,21,97,"|axe|MindBlst Axe|104|10000|5|Magic Power, Strength, Vitality +2|-","Magic Power, Strength, Vitality +2",-
 308,<Axe>Vampire,Vampire Axe,30,axe,1,2000,98,Blue,,,,spell,F8,80,07,DA,59,08,78,1E,34,64,21,98,"|axe|Vampire Axe|30|2000|1|Magic Power, Strength, Vitality +3|-","Magic Power, Strength, Vitality +3",-
 309,<Axe>Hammer,Hammer Axe,38,axe,1,3000,99,Blue,,,,spell,F8,80,07,D9,59,08,78,26,34,64,21,99,"|axe|Hammer Axe|38|3000|1|Magic Power, Strength, Vitality +2|-","Magic Power, Strength, Vitality +2",-
-310,<Axe>MgthyGrd,MgthyGrd Axe,119,axe,7,12000,9A,Blue,,,,spell,F8,80,07,FF,59,08,78,77,34,64,64,9A,"|axe|MgthyGrd Axe|119|12000|7|Agility, Magic Power, Strength, Vitality +5|-","Agility, Magic Power, Strength, Vitality +5",-
+310,<Axe>BigGuard,BigGuard Axe,119,axe,7,12000,9A,Blue,,,,spell,F8,80,07,FF,59,08,78,77,34,64,64,9A,"|axe|BigGuard Axe|119|12000|7|Agility, Magic Power, Strength, Vitality +5|-","Agility, Magic Power, Strength, Vitality +5",-
 311,<Axe>Exploder,Exploder Axe,49,axe,2,4000,9B,Blue,,,,spell,F8,80,07,D7,59,08,78,31,34,64,21,9B,"|axe|Exploder Axe|49|4000|2|Strength, Vitality +5|-","Strength, Vitality +5",-
 312,<Axe>????,???? Axe,33,axe,1,2000,9C,Blue,,,,spell,F8,80,07,FA,59,08,78,21,34,64,21,9C,"|axe|???? Axe|33|2000|1|Agility, Magic Power, Strength, Vitality +3|-","Agility, Magic Power, Strength, Vitality +3",-
 313,<Axe>Blowfish,Blowfish Axe,76,axe,5,7000,9D,Blue,,,,spell,F8,80,07,D9,59,08,78,4C,34,64,21,9D,"|axe|Blowfish Axe|76|7000|5|Magic Power, Strength, Vitality +2|-","Magic Power, Strength, Vitality +2",-
@@ -383,7 +383,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,shop_pric
 386,<Katn>MindBlst,MindBlst Katana,96,katana,5,9000,97,Blue,,,,spell,F8,80,09,BA,5a,08,78,60,37,0c,21,97,"|katana|MindBlst Katana|96|9000|5|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
 387,<Katn>Vampire,Vampire Katana,22,katana,1,1000,98,Blue,,,,spell,F8,80,09,BA,5a,08,78,16,37,0c,21,98,"|katana|Vampire Katana|22|1000|1|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
 388,<Katn>Hammer,Hammer Katana,30,katana,1,2000,99,Blue,,,,spell,F8,80,09,BA,5a,08,78,1E,37,0c,21,99,"|katana|Hammer Katana|30|2000|1|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
-389,<Katn>MgthyGrd,MgthyGrd Katana,111,katana,7,11000,9A,Blue,,,,spell,F8,80,09,BA,5a,08,78,6F,37,0c,64,9A,"|katana|MgthyGrd Katana|111|11000|7|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
+389,<Katn>BigGuard,BigGuard Katana,111,katana,7,11000,9A,Blue,,,,spell,F8,80,09,BA,5a,08,78,6F,37,0c,64,9A,"|katana|BigGuard Katana|111|11000|7|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
 390,<Katn>Exploder,Exploder Katana,41,katana,2,3000,9B,Blue,,,,spell,F8,80,09,BA,5a,08,78,29,37,0c,21,9B,"|katana|Exploder Katana|41|3000|2|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
 391,<Katn>????,???? Katana,25,katana,1,2000,9C,Blue,,,,spell,F8,80,09,BF,5a,08,78,19,37,0c,21,9C,"|katana|???? Katana|25|2000|1|Agility, Magic Power, Vitality +5|-","Agility, Magic Power, Vitality +5",-
 392,<Katn>Blowfish,Blowfish Katana,68,katana,5,6000,9D,Blue,,,,spell,F8,80,09,BA,5a,08,78,44,37,0c,21,9D,"|katana|Blowfish Katana|68|6000|5|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
@@ -495,7 +495,7 @@ index,weapon_name_menu,weapon_name_textbox,weapon_str,weapon_type,tier,shop_pric
 500,<Harp>MindBlst,MindBlst Harp,89,harp,5,18000,97,Blue,,,,spell,F8,20,4e,BA,9b,08,78,59,7f,00,64,97,"|harp|MindBlst Harp|89|18000|5|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
 501,<Harp>Vampire,Vampire Harp,15,harp,1,1600,98,Blue,,,,spell,F8,20,4e,BA,9b,08,78,0F,7f,00,64,98,"|harp|Vampire Harp|15|1600|1|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
 502,<Harp>Hammer,Hammer Harp,23,harp,1,2000,99,Blue,,,,spell,F8,20,4e,BA,9b,08,78,17,7f,00,64,99,"|harp|Hammer Harp|23|2000|1|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
-503,<Harp>MgthyGrd,MgthyGrd Harp,104,harp,7,20000,9A,Blue,,,,spell,F8,20,4e,BA,9b,08,78,68,7f,00,64,9A,"|harp|MgthyGrd Harp|104|20000|7|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
+503,<Harp>BigGuard,BigGuard Harp,104,harp,7,20000,9A,Blue,,,,spell,F8,20,4e,BA,9b,08,78,68,7f,00,64,9A,"|harp|BigGuard Harp|104|20000|7|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
 504,<Harp>Exploder,Exploder Harp,34,harp,2,4000,9B,Blue,,,,spell,F8,20,4e,BA,9b,08,78,22,7f,00,64,9B,"|harp|Exploder Harp|34|4000|2|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
 505,<Harp>????,???? Harp,18,harp,1,2000,9C,Blue,,,,spell,F8,20,4e,BF,9b,08,78,12,7f,00,64,9C,"|harp|???? Harp|18|2000|1|Agility, Magic Power, Vitality +5|-","Agility, Magic Power, Vitality +5",-
 506,<Harp>Blowfish,Blowfish Harp,61,harp,5,10000,9D,Blue,,,,spell,F8,20,4e,BA,9b,08,78,3D,7f,00,64,9D,"|harp|Blowfish Harp|61|10000|5|Agility, Magic Power, Vitality +3|-","Agility, Magic Power, Vitality +3",-
