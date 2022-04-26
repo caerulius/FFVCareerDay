@@ -66,13 +66,13 @@ $(document).ready( function() {
 		);
 	});
 
-	$("#settingstringpresetval1").val("SPOff W2 T15|3 A TBLT1 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris STP AB pbRandom"); // locked
-	$("#settingstringpresetval2").val("SPOn W0 T5|1 TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open
-	$("#settingstringpresetval3").val("SPOn W1 T5|1 PB I100 TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked weapon rando
-	$("#settingstringpresetval4").val("SPOn W0 T5|1 I100 TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open weapon rando 
-	$("#settingstringpresetval5").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W1 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked worlds fjf
-	$("#settingstringpresetval6").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W0 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open fjf
-	$("#settingstringpresetval7").val("SPOn P W0 T5|1 A I100 TBLT0 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CDA CLA pbRandom"); // pure chaos
+	$("#settingstringpresetval1").val("SPOff W2 T15|3 A TBLT1 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris STP AB pbRandom"); // locked
+	$("#settingstringpresetval2").val("SPOn W0 T5|1 TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open
+	$("#settingstringpresetval3").val("SPOn W1 T5|1 PB I100 TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked weapon rando
+	$("#settingstringpresetval4").val("SPOn W0 T5|1 I100 TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open weapon rando 
+	$("#settingstringpresetval5").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W1 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked worlds fjf
+	$("#settingstringpresetval6").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W0 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open fjf
+	$("#settingstringpresetval7").val("SPOn P W0 T5|1 A I100 TBLT0 RGB0|0|0 X4 BS3 AR HINT Lfull LNLenna GNGaluf CNCara FNFaris CDA CLA pbRandom"); // pure chaos
 
 	$("#settingstringpresetval1").click(function(){
 		$("#settingstringpresetval1").notify(
@@ -235,6 +235,8 @@ function apiCall(data){
 		"exp_mult": $("#exp_mult").val(),
         "free_tablets": $("#free_tablets").val(),
 		"place_all_rewards": $('#place_all_rewards').is(':checked'),
+		"hints_flag": $('#hints_flag').is(':checked'),
+		"end_on_exdeath1": $('#end_on_exdeath1').is(':checked'),
 		"randomize_loot": $("input:radio[name=randomize_loot]:checked").val(),
 		"loot_percent": $("#loot_percent").val(), 
 		"portal_boss": $("#portal_boss").val(),
@@ -342,6 +344,17 @@ function getSettingString(){
 	if($('#free_shops').is(':checked')){
 		seedString = seedString + " SHO";
 	}
+
+	if($('#hints_flag').is(':checked')){
+		seedString = seedString + " HINT";
+	} 
+	else {
+		seedString = seedString + " NOHINT";
+	}
+	if($('#end_on_exdeath1').is(':checked')){
+		seedString = seedString + " EOX";
+	}
+
 	if($('#music_randomization').is(':checked')){
 		seedString = seedString + " MUS";
 	}
@@ -432,6 +445,16 @@ function applyCustomSettingString(){
 		}
 		else if(val == "SHO"){
 			$( "#free_shops" ).prop( "checked", true );
+		}
+		else if(val == "HINT"){
+			$( "#hints_flag" ).prop( "checked", true );
+		}
+		else if(val == "NOHINT"){
+			$( "#hints_flag" ).prop( "checked", false );
+		}
+
+		else if(val == "EOX"){
+			$( "#end_on_exdeath1" ).prop( "checked", true );
 		}
 		else if(val == "MUS"){
 			$( "#music_randomization").prop( "checked", true );
@@ -567,6 +590,8 @@ function clearSettings(){
 	$('#jobpalette').prop( "checked", false );
 	$('#abbreviated').prop( "checked", false );
     $('#grantkeyitems').prop( "checked", false );
+	$('#hints_flag').prop( "checked", true );
+    $('#end_on_exdeath1').prop( "checked", false );
     $('#default_abilities').prop( "checked", false );
     $('#learning_abilities').prop( "checked", false );
 

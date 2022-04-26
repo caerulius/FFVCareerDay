@@ -240,6 +240,8 @@ def check_completeable_spoiler_log(key_list, world_lock):
     output_str = ''    
     
     df = pd.read_csv('tables/rewards.csv')
+    
+    df['reward_style'] = df['reward_style'].apply(lambda x: "key" if x == 'mib_key' else x)
 
     if world_lock == 0:
         df = df[df['reward_style']=='key'][['description','required_key_items']]
@@ -283,7 +285,7 @@ def check_completeable_spoiler_log(key_list, world_lock):
     num_sphere_limit = 100       # hard cap on how many iterations to do for the loop
     tablets_sphere = 0              # init as zero, when 4 tablets acquired, mark done
     
-#    breakpoint()
+
     while len(df['obtained'][df['obtained'] == "y"]) < keys_in_seed and num_sphere < num_sphere_limit:
         obtained_keys_temp = obtained_keys[:]
         for index, row in df[df['obtained']==""].iterrows():

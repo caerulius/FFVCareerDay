@@ -79,6 +79,7 @@ class Conductor():
             self.progressive_rewards = False
             self.item_randomization = False
             self.item_randomization_percent = 100
+            self.hints_flag = True
             self.setting_string = None
             self.learning_abilities = False
             self.default_abilities = False
@@ -123,6 +124,7 @@ class Conductor():
             self.galuf_name = conductor_config['galuf_name']
             self.cara_name = conductor_config['cara_name']
             self.faris_name = conductor_config['faris_name']
+            self.hints_flag = self.translateBool(conductor_config['hints_flag'])
             self.music_randomization = self.translateBool(conductor_config['music_randomization'])
             self.free_shops = self.translateBool(conductor_config['free_shops'])
             self.remove_ned = self.translateBool(conductor_config['remove_ned'])
@@ -226,6 +228,7 @@ class Conductor():
 
             logging.error("Assigning 4 jobs manually: next jobs assigned %s, %s, %s" % (self.job_2,self.job_3,self.job_4))
             # crystals = [x for x in crystals if x != starting_crystal and x.collectible_name != "Freelancer"]
+            full_crystals = crystals[:]
             crystals = [x for x in crystals if x != starting_crystal]
             self.RE.shuffle(crystals)
 #            breakpoint()
@@ -233,7 +236,7 @@ class Conductor():
             
             if self.job_2 != "Random":
                 try:
-                    job_2 = [i for i in crystals if i.collectible_name == self.job_2][0]
+                    job_2 = [i for i in full_crystals if i.collectible_name == self.job_2][0]
                 except:
                     logging.error("Failure on job_2, choosing random")
                     job_2 = crystals.pop()
@@ -246,7 +249,7 @@ class Conductor():
 
             if self.job_3 != "Random":
                 try:
-                    job_3 = [i for i in crystals if i.collectible_name == self.job_3][0]
+                    job_3 = [i for i in full_crystals if i.collectible_name == self.job_3][0]
                 except:
                     logging.error("Failure on job_3, choosing random")
                     job_3 = crystals.pop()
@@ -258,7 +261,7 @@ class Conductor():
                 
             if self.job_4 != "Random":
                 try:
-                    job_4 = [i for i in crystals if i.collectible_name == self.job_4][0]
+                    job_4 = [i for i in full_crystals if i.collectible_name == self.job_4][0]
                 except:
                     logging.error("Failure on job_4, choosing random")
                     job_4 = crystals.pop()
@@ -2313,9 +2316,10 @@ class Conductor():
             spoiler = spoiler + default_spoiler
         if self.learning_abilities:
             spoiler = spoiler + learning_spoiler
-        temp_hints_asar, temp_hints = self.assign_hints()
-        patch = patch + temp_hints_asar
-        spoiler = spoiler + temp_hints
+        if self.hints_flag:
+            temp_hints_asar, temp_hints = self.assign_hints()
+            patch = patch + temp_hints_asar
+            spoiler = spoiler + temp_hints
         
 
         logging.error("Creating hash...")
@@ -2342,15 +2346,15 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    SEED_NUM = 166
-    # SEED_NUM = random.randint(1,1000000)
+    # SEED_NUM = 166
+    SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {'seed': SEED_NUM, 
-                           'fjf': 'false', 
+                           'fjf': 'true', 
                            'fjf_strict': 'false', 
                            'fjf_num_jobs' : 4,
-                           'job_1': 'Random', 
-                           'job_2': 'Random', 
+                           'job_1': 'Trainer', 
+                           'job_2': 'Trainer', 
                            'job_3': 'Random', 
                            'job_4': 'Random', 
                            'lenna_name': 'Lenna', 
@@ -2385,6 +2389,7 @@ if __name__ == "__main__":
                            'randomize_loot': 'match', 
                            'loot_percent': '25', 
                            'portal_boss': 'Random', 
+                           'hints_flag': 'false', 
                            'setting_string': 'P W1 T5|1 A PR I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CA RND AB CDA pbSomberMage', 
                            'fileLocation': 'https://bigbridgecareerday.s3.amazonaws.com/careerdayuploads/1593387118413-Final%20Fantasy%20V%20%28J%29.smc',
                            'jobpalettes':'true'}

@@ -270,6 +270,7 @@ incsrc open_world/phoenix_tower.asm
 incsrc open_world/custom_enemies.asm
 incsrc open_world/boss_portal.asm
 incsrc open_world/enemy_dialogue_hook.asm
+incsrc open_world/ff5_optimize.asm
 incsrc world2/mooglewaterway_encounters.asm
 
 

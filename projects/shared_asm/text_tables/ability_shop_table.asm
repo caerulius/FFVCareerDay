@@ -33,7 +33,7 @@ org $E79A50
 db $C9, $72, $8D, $7E, $7A, $85
 ; !Mug
 org $E79A58
-db $6C, $8E, $80
+db $C9, $6C, $8E, $80
 ; !Jump
 org $E79A60
 db $C9, $69, $8E, $86, $89
@@ -88,7 +88,7 @@ db $C9, $62, $7A, $8D, $7C, $81
 ; !Release
 org $E79AE8
 db $C9, $71, $7E, $85, $7E, $7A, $8C, $7E
-; !Combine
+; !Mix
 org $E79AF0
 db $C9, $6C, $82, $91
 ; !Drink

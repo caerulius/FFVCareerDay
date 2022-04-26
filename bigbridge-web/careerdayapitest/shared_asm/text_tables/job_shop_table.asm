@@ -43,9 +43,9 @@ db $BB, $61, $85, $8E, $6C, $7A, $80, $7E
 ; <Scrl>RedMage
 org $E79EB8
 db $BB, $71, $7E, $7D, $6C, $7A, $80, $7E
-; <Scrl>Mediatr
+; <Scrl>Trainer
 org $E79EC0
-db $BB, $6C, $7E, $7D, $82, $7A, $8D, $8B
+db $BB, $73, $8B, $7A, $82, $87, $7E, $8B
 ; <Scrl>Chemist
 org $E79EC8
 db $BB, $62, $81, $7E, $86, $82, $8C, $8D

@@ -176,6 +176,8 @@ def patch_and_return():
                             'music_randomization':   data['music_randomization'],
                             'remove_ned':   data['remove_ned'],
                             'free_shops':   data['free_shops'],
+                            'end_on_exdeath1': data['end_on_exdeath1'],
+                            'hints_flag': data['hints_flag'],
                             'seed':   seed
                             }
         logging.error("Begin randomization process")
@@ -275,13 +277,14 @@ def patch_careerday(filename, data):
     starting_cara = bool_to_int(translateBool(data['starting_cara']))
     everysteprandomencounter = bool_to_int(translateBool(data['everysteprandomencounter']))
     explv50 = bool_to_int(translateBool(data['everysteprandomencounter']))
+    end_on_exdeath1 = bool_to_int(translateBool(data['end_on_exdeath1']))
     # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
     world_lock = int(data['world_lock'])
     
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
     --define passages=1 --define double_atb=0 --define progressive={} --define abbreviated={} --define grantkeyitems={} --define boss_exp=1 --define free_tablets={} \
-    --define fourjobmode={} --define fourjoblock={} --define world_lock={} --define starting_cara={} --define everysteprandomencounter={} --define explv50={}\
-    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, fourjoblock, world_lock, starting_cara, everysteprandomencounter, explv50, MAIN_PATCH, filename)
+    --define fourjobmode={} --define fourjoblock={} --define world_lock={} --define starting_cara={} --define end_on_exdeath1={} --define everysteprandomencounter={} --define explv50={}\
+    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, fourjoblock, world_lock, starting_cara, end_on_exdeath1, everysteprandomencounter, explv50, MAIN_PATCH, filename)
 
     logging.error(command)
     

@@ -22,7 +22,7 @@ item_id,readable_name,valid,type,subtype,value,max_count,tier,related_jobs
 14,Defender Sword,TRUE,weapon,knightsword,6,3,6,[“Knight”]
 15,Excalibur,TRUE,weapon,knightsword,7,1,7,"[""Knight"", ""MysticKnight"", ""BlueMage"", ""RedMage""]"
 16,Ragnarok,TRUE,weapon,knightsword,8,1,8,[“Knight”]
-17,Javelin,TRUE,weapon,spear,1,3,1,[“Dragoon”]
+17,Javelin,TRUE,weapon,spear,3,3,3,[“Dragoon”]
 18,Spear,TRUE,weapon,spear,2,3,2,[“Dragoon”]
 19,Mythril Spear,TRUE,weapon,spear,2,3,2,[“Dragoon”]
 1A,Trident,TRUE,weapon,spear,3,3,3,[“Dragoon”]

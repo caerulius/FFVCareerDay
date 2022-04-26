@@ -79,6 +79,7 @@ class Conductor():
             self.progressive_rewards = False
             self.item_randomization = False
             self.item_randomization_percent = 100
+            self.hints_flag = True
             self.setting_string = None
             self.learning_abilities = False
             self.default_abilities = False
@@ -94,6 +95,7 @@ class Conductor():
             self.free_shops = False
             self.seed = None
             self.remove_ned = True
+            self.key_items_in_mib = True
             self.free_tablets = 0
             
             
@@ -123,9 +125,12 @@ class Conductor():
             self.galuf_name = conductor_config['galuf_name']
             self.cara_name = conductor_config['cara_name']
             self.faris_name = conductor_config['faris_name']
+            self.hints_flag = self.translateBool(conductor_config['hints_flag'])
             self.music_randomization = self.translateBool(conductor_config['music_randomization'])
             self.free_shops = self.translateBool(conductor_config['free_shops'])
             self.remove_ned = self.translateBool(conductor_config['remove_ned'])
+            self.key_items_in_mib = self.translateBool(conductor_config['key_items_in_mib'])
+
             self.free_tablets = int(conductor_config['free_tablets'])
 
             self.seed = conductor_config['seed']
@@ -201,7 +206,6 @@ class Conductor():
             starting_crystal = [i for i in crystals if i.collectible_name == self.job_1][0]
         elif self.fjf and self.job_1 == 'Random':
             logging.error("First job random, ensuring others chosen are not in pool")
-#            breakpoint()
             temp_crystals = [i for i in crystals if i.collectible_name not in [self.job_2,self.job_3,self.job_4]]
             starting_crystal = self.RE.choice(temp_crystals)
             
@@ -226,14 +230,14 @@ class Conductor():
 
             logging.error("Assigning 4 jobs manually: next jobs assigned %s, %s, %s" % (self.job_2,self.job_3,self.job_4))
             # crystals = [x for x in crystals if x != starting_crystal and x.collectible_name != "Freelancer"]
+            full_crystals = crystals[:]
             crystals = [x for x in crystals if x != starting_crystal]
             self.RE.shuffle(crystals)
-#            breakpoint()
             
             
             if self.job_2 != "Random":
                 try:
-                    job_2 = [i for i in crystals if i.collectible_name == self.job_2][0]
+                    job_2 = [i for i in full_crystals if i.collectible_name == self.job_2][0]
                 except:
                     logging.error("Failure on job_2, choosing random")
                     job_2 = crystals.pop()
@@ -246,7 +250,7 @@ class Conductor():
 
             if self.job_3 != "Random":
                 try:
-                    job_3 = [i for i in crystals if i.collectible_name == self.job_3][0]
+                    job_3 = [i for i in full_crystals if i.collectible_name == self.job_3][0]
                 except:
                     logging.error("Failure on job_3, choosing random")
                     job_3 = crystals.pop()
@@ -258,7 +262,7 @@ class Conductor():
                 
             if self.job_4 != "Random":
                 try:
-                    job_4 = [i for i in crystals if i.collectible_name == self.job_4][0]
+                    job_4 = [i for i in full_crystals if i.collectible_name == self.job_4][0]
                 except:
                     logging.error("Failure on job_4, choosing random")
                     job_4 = crystals.pop()
@@ -285,7 +289,6 @@ class Conductor():
             job_2 = chosen_crystals[0]
             job_3 = chosen_crystals[1]
             job_4 = chosen_crystals[2]
-            # breakpoint()
         
         
         # if less than normal amount of jobs are chosen for this, then change 
@@ -365,7 +368,6 @@ class Conductor():
         exdeath_list = []
 
         
-        # breakpoint()
         
         # handle granting tablets immediately per config:
         if self.free_tablets > 0:
@@ -387,18 +389,39 @@ class Conductor():
             global curr_key_item
             global forbidden_items
             global next_key_reward_locs
-            next_key_reward = self.RE.choice([x for x in self.RM.get_rewards_by_style('key') if x.randomized == False])
+            
+            
+            if self.key_items_in_mib:
+                key_item_list = [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False] + [x for x in self.RM.get_rewards_by_style('mib_key') if x.randomized == False]
+            else:
+                key_item_list = [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False]
+            
+            next_key_reward = self.RE.choice(key_item_list)
+            
+
             next_key_reward_locs = next_key_reward.__dict__.get(set_key_item_level)
             if next_key_reward_locs != next_key_reward_locs: # stupid fix for python returning NaN instead of None
                 next_key_reward_locs = None
             
             if next_key_reward_locs == None:
                 next_key_item = self.CM.get_random_collectible(self.RE, monitor_counts=True,next_reward = next_key_reward,tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, of_type=KeyItem)
+                
+                
                 # logging.error("LOGGING %s " % next_key_item.collectible_name)
                 next_key_reward.set_collectible(next_key_item)
                 self.CM.update_placement_rewards(next_key_item, next_key_reward)
                 next_key_reward.randomized = True
                 num_placed_key_items = num_placed_key_items + 1
+                    
+                if next_key_reward.reward_style == 'mib_key':
+                    # replace original MIB chest code with the B version (e.g., A3 -> B3)
+                    # B3 will trigger the game to load the key item table instead of regular item
+                    # and A3 or B3 causes monster in a box at all 
+                    og_mib_encounter_data = self.MIBM.get_mib_by_address(next_key_reward.address).monster_chest_data
+                    next_key_reward.collectible.reward_type = "B" + og_mib_encounter_data[1:]
+                    
+                    logging.error("Updating chosen mib_key %s area volume" % next_key_reward.description)
+                    self.AM.update_volume(next_key_reward)
             else:
                 forbidden_items = []
                 nodes_to_visit = []
@@ -430,12 +453,36 @@ class Conductor():
                     self.CM.add_to_placement_history(next_key_item,"No") #add this manually, usually get_random_collectible handles it
                     next_key_reward.randomized = True
                     num_placed_key_items = num_placed_key_items + 1
+                    
+                    if next_key_reward.reward_style == 'mib_key':
+                        # replace original MIB chest code with the B version (e.g., A3 -> B3)
+                        # B3 will trigger the game to load the key item table instead of regular item
+                        # and A3 or B3 causes monster in a box at all 
+                        og_mib_encounter_data = self.MIBM.get_mib_by_address(next_key_reward.address).monster_chest_data
+                        next_key_reward.collectible.reward_type = "B" + og_mib_encounter_data[1:]
+                        
+                        logging.error("Updating chosen mib_key %s area volume" % next_key_reward.description)
+                        self.AM.update_volume(next_key_reward)
+                    
 
-        for key_item_reward in [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False]:
+        if self.key_items_in_mib:
+            key_item_list_remaining = [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False] + [x for x in self.RM.get_rewards_by_style('mib_key') if x.randomized == False]
+        else:
+            key_item_list_remaining = [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False]
+
+        
+        for key_item_reward in key_item_list_remaining:
             key_item_collectible = self.CM.get_of_value_or_lower(self.RE, value=4)
             key_item_reward.set_collectible(key_item_collectible)
             key_item_reward.randomized = True
             self.CM.update_placement_rewards(key_item_collectible, key_item_reward)
+            if key_item_reward.reward_style == 'mib_key':
+                # this version does not replace A with B, since it is not reward a key item
+                og_mib_encounter_data = self.MIBM.get_mib_by_address(key_item_reward.address).monster_chest_data
+                key_item_reward.collectible.reward_type = og_mib_encounter_data
+                
+                logging.error("Updating non-chosen mib_key %s area volume" % key_item_reward.description)
+                self.AM.update_volume(key_item_reward)
 
         exdeath_rewards = {}
         for i in self.RE.sample(exdeath_list, 3):
@@ -478,7 +525,12 @@ class Conductor():
                          and x.randomized == False and x.reward_style != 'key']
             #logging.error("Area rewards: # of reward spot choices: " + str(len(possibles)))
 
+            # try:
             next_reward = self.RE.choice(possibles)
+            # except:
+
+            #     pass
+                
             
             if next_reward.randomized:
                 logging.error("%s was already randomzed...?" % (next_reward.description))
@@ -488,7 +540,21 @@ class Conductor():
             mib = self.MIBM.get_mib_for_area(area)
             #logging.error("Area rewards: next reward style: " + next_reward.reward_style)
 
+            
             if mib is not None and next_reward.reward_style == "chest": #only mibs in chests
+            
+            
+                if self.key_items_in_mib:
+                    possible_placed_mib_keys = [x for x in self.RM.rewards if x.area == mib.area
+                        and x.randomized == True
+                        and x.reward_style == 'mib_key'
+                        and x.address == mib.monster_chest_id]
+                    if possible_placed_mib_keys:
+                        
+                        logging.error("Skipping regular item placement %s, was already placed as MIB key" % mib.readable_name)
+
+                    
+                    
                 #logging.error("Area rewards: doing the mib stuff")
                 chosen_tier = random.choice([5,6,7,8,9])
                 to_place = self.CM.get_random_collectible(self.RE,reward_loc_tier=next_reward.tier,next_reward=next_reward, respect_weight=True, of_type=Item, monitor_counts=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, force_tier = chosen_tier) #only items in mibs
@@ -581,8 +647,6 @@ class Conductor():
         #logging.error("difficulty: " + str(self.difficulty))
         
         for index, value in enumerate(self.RE.sample(self.SM.shops,len(self.SM.shops))):
-#            if value.readable_name == 'Mirage Armor':
-                # breakpoint()
             #don't waste time on invalid shops
             if value.valid is False:
                 continue
@@ -641,8 +705,6 @@ class Conductor():
             
             
             
-            # if value.idx == 14:
-            #     breakpoint()
             if kind == "item":
                 if value.num_items < 4:
                     value.num_items = 4
@@ -832,7 +894,6 @@ class Conductor():
                 while(len(new_contents) < 8):
                     new_contents.append(None)
                 shop.contents = new_contents
-                # breakpoint()
                 
             # Finally check each entry for None, if they appear, pop, then re-add
             
@@ -855,7 +916,6 @@ class Conductor():
                     req_loc = []
                     
                     
-#                    breakpoint()
                     for reward in self.RM.get_rewards_by_style("key"):
                         if reward.collectible in keys:
                             req_loc.append(reward)
@@ -918,11 +978,46 @@ class Conductor():
         banned_at_odin = self.config['BANNEDATODIN']['boss_names'].split('\n')
     
 
+
+        DEBUG_FLAG = True
+        LOOP_FLAG = False
+        ENEMY_LIST_STRING_BEING_RANDOMIZED = 'Gilga'
+        ENEMY_LIST_STRING_TO_REPLACE = 'Tyras'
+        
+
+        
+        if DEBUG_FLAG:
+            # move debug to top of formation_list
+            new_list = [i for i in formation_list if ENEMY_LIST_STRING_BEING_RANDOMIZED not in i.enemy_list]
+            
+            formation_list = [i for i in formation_list if ENEMY_LIST_STRING_BEING_RANDOMIZED in i.enemy_list]
+            formation_list = formation_list  + new_list
+            
+            
+            # override use this for specific encounters like in gilgamesh's case
+            if True:
+                formation_list = [i for i in formation_list if i.idx == '465'] + [i for i in formation_list if i.idx != '465']
+            
+
         for random_boss in formation_list:
+
             # First pick a random original boss
-            original_boss = original_boss_list.pop()
-#            if "Goblin" in original_boss.enemy_list:
-#                breakpoint()
+                        
+            if DEBUG_FLAG:
+                if ENEMY_LIST_STRING_BEING_RANDOMIZED in random_boss.enemy_list and not LOOP_FLAG:
+                    
+                    original_boss = [i for i in original_boss_list if ENEMY_LIST_STRING_TO_REPLACE in i.enemy_list][0]
+                    original_boss_list = [i for i in original_boss_list if ENEMY_LIST_STRING_TO_REPLACE not in i.enemy_list]
+                    
+                    
+                    LOOP_FLAG = True
+
+                else:              
+                    original_boss = original_boss_list.pop()
+
+            else:              
+                original_boss = original_boss_list.pop()
+
             
             #this is specifically an unworkable situation
             #this will just cycle gogo/stalker to the end and get a new boss
@@ -986,6 +1081,7 @@ class Conductor():
                 except Exception as e:
 #                    print("Error %s " % e)
                     pass
+                
                 
                 
 #            random_boss.boss_rank = new_rank
@@ -1126,6 +1222,7 @@ class Conductor():
                     
             # CLAUSE FOR SERGEANT/KARNAKS
             elif random_boss.event_id in ['08']:
+                random_boss.enemy_classes[0].num_hp = new_hp
                 # Apply HP to IronClaw
                 random_boss.enemy_classes[4].num_hp = new_hp
                 # Apply 30% to Karnaks
@@ -1136,6 +1233,7 @@ class Conductor():
             # CLAUSE FOR SHIVA/COMMANDER
             elif random_boss.event_id in ['05']:
                 # Apply 40% to Commanders
+                random_boss.enemy_classes[0].num_hp = new_hp
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .4)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .4)            
                 random_boss.enemy_classes[3].num_hp = round(new_hp * .4)
@@ -1152,12 +1250,14 @@ class Conductor():
             # CLAUSE FOR GOLEM
             elif random_boss.event_id in ['3E']:
                 # Apply 50% to other enemies
+                random_boss.enemy_classes[0].num_hp = new_hp
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .5)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .5)
                 
             # CLAUSE FOR HIRYUUPLANT
             elif random_boss.event_id in ['1E']:
                 # Apply 5% to Flowers
+                random_boss.enemy_classes[0].num_hp = new_hp
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .05)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .05)
                 random_boss.enemy_classes[3].num_hp = round(new_hp * .05)
@@ -1167,6 +1267,7 @@ class Conductor():
             # CLAUSE FOR NECROPHOBIA:
             elif random_boss.event_id in ['4B']:
                 # Apply 20% to Barriers
+                random_boss.enemy_classes[0].num_hp = new_hp
                 random_boss.enemy_classes[1].num_hp = round(new_hp * .2)
                 random_boss.enemy_classes[2].num_hp = round(new_hp * .2)
                 random_boss.enemy_classes[3].num_hp = round(new_hp * .2)
@@ -1282,7 +1383,6 @@ class Conductor():
             for enemy in random_boss.enemy_classes:
                 list_of_randomized_enemies.append(enemy) #maintain a list of only the enemies we've actually randomized
                 text_str = text_str + '; ENEMY: '+enemy.enemy_name+'\n'
-#                breakpoint()
                 df_temp = self.DM.files['boss_scaling'][(self.DM.files['boss_scaling']['idx']==int(enemy.idx)) & (self.DM.files['boss_scaling']['boss_rank']==int(new_rank))]
                 
                 # STATS
@@ -1339,6 +1439,7 @@ class Conductor():
             
             enemy_change = "%s (Rank %s)  > %s (Rank %s)" % (random_boss.enemy_classes[0].enemy_name, prev_rank, original_boss.enemy_classes[0].enemy_name, new_rank)
 
+            
             random_boss.random_boss_rank = new_rank
             random_boss.enemy_change = enemy_change
 
@@ -1743,7 +1844,7 @@ class Conductor():
         hint_text = []
             
         keys = self.RM.get_rewards_by_style('key')
-        keys = [i for i in keys if i.description != 'WingRaptor']
+        keys = [i for i in keys if i.description != 'WingRaptor' and i.description != "Beginner's House Chest"]
         
         keys_main = []
         keys_barren = []
@@ -1780,9 +1881,6 @@ class Conductor():
         
         tablet_reqs = []
         for tablet in tablets:
-    #        breakpoint()
-            # logging.error(">>>>>>>>>>>:"+tablet.description)
-            # for each tablet, iterate through required keys for that tablet
             if self.configs['world_lock'] == 0 or self.configs['world_lock'] == '0':
                 tablet_reqs = getattr(tablet, 'required_key_items')
             else:
@@ -2111,7 +2209,6 @@ class Conductor():
         g_color = int(config['green_color']) * 32
         b_color = int(config['blue_color']) * 1024
 
-#        breakpoint()        
         colors = hex(r_color+g_color+b_color).replace("0x","")
         # print(colors)
         
@@ -2303,7 +2400,13 @@ class Conductor():
         spoiler = spoiler + self.CM.get_spoiler()    
         #spoiler = spoiler + self.EM.get_spoiler()
         spoiler = spoiler + self.superbosses_spoiler        
+        
+        
+        ######## FIX FIX 
         spoiler = spoiler + self.FM.get_spoiler(self.remove_ned)
+        
+        
+        
         if self.item_randomization:
             spoiler = spoiler + self.WM.get_spoiler
 
@@ -2313,9 +2416,10 @@ class Conductor():
             spoiler = spoiler + default_spoiler
         if self.learning_abilities:
             spoiler = spoiler + learning_spoiler
-        temp_hints_asar, temp_hints = self.assign_hints()
-        patch = patch + temp_hints_asar
-        spoiler = spoiler + temp_hints
+        if self.hints_flag:
+            temp_hints_asar, temp_hints = self.assign_hints()
+            patch = patch + temp_hints_asar
+            spoiler = spoiler + temp_hints
         
 
         logging.error("Creating hash...")
@@ -2342,15 +2446,15 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    SEED_NUM = 166
-    # SEED_NUM = random.randint(1,1000000)
+    # SEED_NUM = 166
+    SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     c = Conductor(random, {'seed': SEED_NUM, 
                            'fjf': 'false', 
                            'fjf_strict': 'false', 
                            'fjf_num_jobs' : 4,
-                           'job_1': 'Random', 
-                           'job_2': 'Random', 
+                           'job_1': 'Trainer', 
+                           'job_2': 'Trainer', 
                            'job_3': 'Random', 
                            'job_4': 'Random', 
                            'lenna_name': 'Lenna', 
@@ -2359,10 +2463,11 @@ if __name__ == "__main__":
                            'faris_name': 'Faris', 
                            'starting_cara': 'false',
                            'remove_ned': 'false',
+                           'key_items_in_mib' : 'true',
                            'everysteprandomencounter': 'true', 
                            'free_shops': 'false', 
                            'music_randomization': 'false', 
-                           'world_lock': '1',
+                           'world_lock': '0',
                            'tiering_config': 'true', 
                            'tiering_percentage': '5', 
                            'tiering_threshold': '1', 
@@ -2385,6 +2490,7 @@ if __name__ == "__main__":
                            'randomize_loot': 'match', 
                            'loot_percent': '25', 
                            'portal_boss': 'Random', 
+                           'hints_flag': 'false', 
                            'setting_string': 'P W1 T5|1 A PR I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CA RND AB CDA pbSomberMage', 
                            'fileLocation': 'https://bigbridgecareerday.s3.amazonaws.com/careerdayuploads/1593387118413-Final%20Fantasy%20V%20%28J%29.smc',
                            'jobpalettes':'true'}

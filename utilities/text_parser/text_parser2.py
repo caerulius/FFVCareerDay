@@ -36,7 +36,13 @@ def init_table(tabletype):
         
 
 data = '''
-6c80818d92668b7d
+6e819dff6f8b82877c7e8c8cff6b7e87
+877aa101ffff78888e998b7eff7a858b
+8280818da1a101ffff73817a8dff7b88
+8884a3a3a3a2010176888e857dff9288
+8eff8582847eff867eff8d88ff8b7e7a
+7dff828dff7f888bff01ffff92888ea3
+a3a3a200
 '''
 
 

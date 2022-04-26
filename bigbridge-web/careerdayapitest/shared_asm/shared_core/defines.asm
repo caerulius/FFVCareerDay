@@ -4,11 +4,12 @@
 !ADDRESS_abpmod = $F00100
 !ADDRESS_progressiverewards = $F02000
 !ADDRESS_chesthook = $F03000
+!ADDRESS_chesthook_mib = $F03200
 !ADDRESS_jobindexing = $F00400
 !ADDRESS_magicreward = $F00480
 !ADDRESS_double_atb = $F004A0
 ; !ADDRESS_shoatsound = $F01200
-!ADDRESS_customitem1 = $F01600
+!ADDRESS_customitem1 = $F01640
 !ADDRESS_customitem2 = $F01300
 !ADDRESS_battlehook = $F01380
 !ADDRESS_STARTROM = $FF0000

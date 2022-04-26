@@ -24,8 +24,8 @@ bitsetnum[0] = '80'
 #address = input("Input address: ")
 #bit = input("Input byte: ")
 #type_set = input("Input on/off: ")
-address = 'AF0'
-bit = '80'
+address = 'AC3'
+bit = '20'
 type_set = 'on'
 def encrypt(address,bit,type_set):
     if "7E0" in address:
