@@ -719,3 +719,9 @@ db $8D, $81, $7E, $96, $7C, $8B, $7E, $7D, $82, $8D, $8C, $96, $8C, $7E, $8A, $8
 db $73, $81, $82, $8C, $96, $90, $82, $85, $85, $96, $82, $86, $86, $7E, $7D, $82, $7A, $8D, $7E, $85, $92, $01
 ;end the game.
 db $7E, $87, $7D, $96, $8D, $81, $7E, $96, $80, $7A, $86, $7E, $A3, $00
+
+
+; cause Odin to not self terminate (for giving EXP)
+org $D0BBBE
+db $FF
+

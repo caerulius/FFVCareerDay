@@ -1,43 +1,43 @@
-monster_box_id,readable_name,area,monster_chest_id,monster_chest_data,reward_id,reward_data,useable_flag
-0,,Tule,D1322A,A4,D1322B,C0,y
-1,,Karnak,D132F6,A2,D132F7,1D,y
-2,,Karnak,D132FA,A0,D132FB,FE,y
-3,,Karnak,D13302,A0,D13303,E3,y
-4,,Karnak,D13306,A1,D13307,E3,
-5,,Karnak,D1330A,A0,D1330B,E3,
-6,,Karnak,D13312,A1,D13313,E3,
-7,,Karnak,D13316,A0,D13317,E3,
-8,,Karnak,D1331A,A2,D1331B,95,
-9,,Karnak,D1331E,A1,D1331F,5A,
-10,,Karnak,D13326,A0,D13327,E3,
-11,,Karnak,D1332A,A3,D1332B,B2,
-12,,Karnak,D1332E,A3,D1332F,7,
-13,,Barrier Tower,D13436,A5,D13437,55,y
-14,,Barrier Tower,D13442,A5,D13443,94,y
-15,,Pyramid,D13486,A7,D13487,AC,y
-16,,Pyramid,D1348E,A6,D1348F,EB,y
-17,,Pyramid,D13492,AA,D13493,A0,y
-18,,Pyramid,D1349A,A6,D1349B,CD,
-19,,Pyramid,D1349E,A6,D1349F,C4,
-20,,Pyramid,D134A2,A6,D134A3,EB,
-21,,Pyramid,D134A6,A8,D134A7,AD,
-22,,Pyramid,D134AA,A9,D134AB,A6,
-23,,Pyramid,D134AE,A6,D134A7,EB,
-24,,Pyramid,D134B2,A6,D134B3,EB,
-25,,Pyramid,D134B6,A6,D134B7,EB,
-26,,Pyramid,D134C2,A6,D134C3,26,
-27,,Pyramid,D134D6,A6,D134D7,EB,
-28,,Pyramid,D134DE,A6,D134DF,EB,
-29,,Solitary Island,D134FE,AB,D134FF,64,y
-30,,Solitary Island,D13506,AC,D13507,AF,y
-31,,Phoenix Tower,D1357E,AD,D1357F,E4,y
-32,,Phoenix Tower,D13582,AD,D13583,E4,y
-33,,Phoenix Tower,D13586,AD,D13587,E4,y
-34,,Phoenix Tower,D1358A,AD,D1358B,E4,y
-35,,Phoenix Tower,D1358E,AD,D1358F,E4,y
-36,,Phoenix Tower,D13592,AD,D13593,E4,y
-37,,Phoenix Tower,D13596,AD,D13597,E4,y
-38,,Phoenix Tower,D1359A,AD,D1359B,E4,y
-39,,Phoenix Tower,D1359E,AD,D1359F,E4,y
-40,,Phoenix Tower,D135A2,AD,D135A3,E4,y
-41,,Void,D135FA,AE,D135FB,16,y
+monster_box_id,readable_name,area,monster_chest_id,monster_chest_data,reward_id,reward_data,useable_flag,key_item_allowed
+0,Tule MIB 1,Tule,D1322A,A4,D1322B,C0,y,y
+1,Karnak MIB 1,Karnak,D132F6,A2,D132F7,1D,y,y
+2,Karnak MIB 2,Karnak,D132FA,A0,D132FB,FE,y,y
+3,Karnak MIB 3,Karnak,D13302,A0,D13303,E3,y,y
+4,Karnak MIB 4,Karnak,D13306,A1,D13307,E3,,
+5,Karnak MIB 5,Karnak,D1330A,A0,D1330B,E3,,
+6,Karnak MIB 6,Karnak,D13312,A1,D13313,E3,,
+7,Karnak MIB 7,Karnak,D13316,A0,D13317,E3,,
+8,Karnak MIB 8,Karnak,D1331A,A2,D1331B,95,,
+9,Karnak MIB 9,Karnak,D1331E,A1,D1331F,5A,,
+10,Karnak MIB 10,Karnak,D13326,A0,D13327,E3,,
+11,Karnak MIB 11,Karnak,D1332A,A3,D1332B,B2,,
+12,Karnak MIB 12,Karnak,D1332E,A3,D1332F,7,,
+13,Barrier Tower MIB 1,Barrier Tower,D13436,A5,D13437,55,y,y
+14,Barrier Tower MIB 2,Barrier Tower,D13442,A5,D13443,94,y,y
+15,Pyramid MIB 1,Pyramid,D13486,A7,D13487,AC,y,y
+16,Pyramid MIB 2,Pyramid,D1348E,A6,D1348F,EB,y,y
+17,Pyramid MIB 3,Pyramid,D13492,AA,D13493,A0,y,y
+18,Pyramid MIB 4,Pyramid,D1349A,A6,D1349B,CD,,
+19,Pyramid MIB 5,Pyramid,D1349E,A6,D1349F,C4,,
+20,Pyramid MIB 6,Pyramid,D134A2,A6,D134A3,EB,,
+21,Pyramid MIB 7,Pyramid,D134A6,A8,D134A7,AD,,
+22,Pyramid MIB 8,Pyramid,D134AA,A9,D134AB,A6,,
+23,Pyramid MIB 9,Pyramid,D134AE,A6,D134A7,EB,,
+24,Pyramid MIB 10,Pyramid,D134B2,A6,D134B3,EB,,
+25,Pyramid MIB 11,Pyramid,D134B6,A6,D134B7,EB,,
+26,Pyramid MIB 12,Pyramid,D134C2,A6,D134C3,26,,
+27,Pyramid MIB 13,Pyramid,D134D6,A6,D134D7,EB,,
+28,Pyramid MIB 14,Pyramid,D134DE,A6,D134DF,EB,,
+29,Solitary Island MIB 1,Solitary Island,D134FE,AB,D134FF,64,y,y
+30,Solitary Island MIB 2,Solitary Island,D13506,AC,D13507,AF,y,y
+31,Phoenix Tower MIB 1,Phoenix Tower,D1357E,AD,D1357F,E4,y,
+32,Phoenix Tower MIB 2,Phoenix Tower,D13582,AD,D13583,E4,y,
+33,Phoenix Tower MIB 3,Phoenix Tower,D13586,AD,D13587,E4,y,
+34,Phoenix Tower MIB 4,Phoenix Tower,D1358A,AD,D1358B,E4,y,
+35,Phoenix Tower MIB 5,Phoenix Tower,D1358E,AD,D1358F,E4,y,
+36,Phoenix Tower MIB 6,Phoenix Tower,D13592,AD,D13593,E4,y,
+37,Phoenix Tower MIB 7,Phoenix Tower,D13596,AD,D13597,E4,y,
+38,Phoenix Tower MIB 8,Phoenix Tower,D1359A,AD,D1359B,E4,y,
+39,Phoenix Tower MIB 9,Phoenix Tower,D1359E,AD,D1359F,E4,y,
+40,Phoenix Tower MIB 10,Phoenix Tower,D135A2,AD,D135A3,E4,y,
+41,Void MIB 1,Void,D135FA,AE,D135FB,16,y,

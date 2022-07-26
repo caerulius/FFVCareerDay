@@ -50,7 +50,7 @@ ITEM_TYPE = "40"
 ITEM_SHOP_TYPE = "01"
 MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
-VERSION = "FFV Career Day v1.0"
+VERSION = "FFV Career Day v1.1"
 
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
@@ -94,6 +94,7 @@ class Conductor():
             self.music_randomization = True
             self.free_shops = False
             self.seed = None
+            self.extra_patch = False
             self.remove_ned = True
             self.key_items_in_mib = True
             self.free_tablets = 0
@@ -130,7 +131,7 @@ class Conductor():
             self.free_shops = self.translateBool(conductor_config['free_shops'])
             self.remove_ned = self.translateBool(conductor_config['remove_ned'])
             self.key_items_in_mib = self.translateBool(conductor_config['key_items_in_mib'])
-
+            self.extra_patch = conductor_config['extra_patches']
             self.free_tablets = int(conductor_config['free_tablets'])
 
             self.seed = conductor_config['seed']
@@ -169,7 +170,7 @@ class Conductor():
         logging.error("Init Formation Manager...")
         self.FM = FormationManager(self.DM, self.EM)       #Set up battle formations
         logging.error("Init MonsterInABox Manager...")
-        self.MIBM = MonsterInABoxManager(self.DM, self.RE) #Set up monsters in boxes
+        self.MIBM = MonsterInABoxManager(self.DM, self.RE, self.key_items_in_mib) #Set up monsters in boxes
         logging.error("Init TextParser...")
         self.TP = TextParser()                             #Set up Text Parser Utility Object
 
@@ -345,13 +346,6 @@ class Conductor():
                     increase_amount = int(self.conductor_config['MAGIC_RELEVANCE_WEIGHT_MODIFIER'])  #much more likely to find these magics
                 value.place_weight = value.place_weight + increase_amount
 
-#    def randomize_rewards(self):
-#        for _, value in enumerate(self.RM.rewards):
-#            to_place = self.CM.get_random_collectible(self.RE, respect_weight=True,
-#                                                      monitor_counts=True)
-#            value.set_collectible(to_place)
-#            value.randomized = True
-#            self.AM.update_volume(value)
 
     def randomize_key_items(self):
         
@@ -398,14 +392,19 @@ class Conductor():
             
             next_key_reward = self.RE.choice(key_item_list)
             
+            
 
             next_key_reward_locs = next_key_reward.__dict__.get(set_key_item_level)
             if next_key_reward_locs != next_key_reward_locs: # stupid fix for python returning NaN instead of None
                 next_key_reward_locs = None
             
             if next_key_reward_locs == None:
+
                 next_key_item = self.CM.get_random_collectible(self.RE, monitor_counts=True,next_reward = next_key_reward,tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, of_type=KeyItem)
                 
+                # logging.error(next_key_item.collectible_name)
+
+
                 
                 # logging.error("LOGGING %s " % next_key_item.collectible_name)
                 next_key_reward.set_collectible(next_key_item)
@@ -417,7 +416,10 @@ class Conductor():
                     # replace original MIB chest code with the B version (e.g., A3 -> B3)
                     # B3 will trigger the game to load the key item table instead of regular item
                     # and A3 or B3 causes monster in a box at all 
-                    og_mib_encounter_data = self.MIBM.get_mib_by_address(next_key_reward.address).monster_chest_data
+                    matching_mib = self.MIBM.get_mib_by_address(next_key_reward.address)
+                    matching_mib.processed = True
+                    og_mib_encounter_data = matching_mib.monster_chest_data
+                    
                     next_key_reward.collectible.reward_type = "B" + og_mib_encounter_data[1:]
                     
                     logging.error("Updating chosen mib_key %s area volume" % next_key_reward.description)
@@ -439,18 +441,29 @@ class Conductor():
                                     nodes_to_visit.append(i)
 
                 possible_key_items = [x for x in self.CM.get_all_of_type_respect_counts(KeyItem) if x not in forbidden_items]
+                
+                # logging.error([i.collectible_name for i in possible_key_items])
+                # logging.error("\n")
+                
+
+                
 
                 if len(possible_key_items) == 0:
                     #logging.error("failed to place a key item here")
                     continue
                 else:
                     next_key_item = self.RE.choice(possible_key_items)
+
+                        
+                    # logging.error("ITEM: %s" % next_key_item.writeable_name)
+                    # logging.error("\n")
+                   
                     next_key_reward.set_collectible(next_key_item)
                     self.CM.update_placement_rewards(next_key_item, next_key_reward)
                     if "Tablet" not in next_key_item.reward_name:
                         exdeath_list.append(next_key_reward)
                     next_key_item.required_by_placement.extend(next_key_reward_locs)
-                    self.CM.add_to_placement_history(next_key_item,"No") #add this manually, usually get_random_collectible handles it
+                    self.CM.add_to_placement_history(next_key_item,"No") #add this manually, usually get_random collectible handles it
                     next_key_reward.randomized = True
                     num_placed_key_items = num_placed_key_items + 1
                     
@@ -458,32 +471,44 @@ class Conductor():
                         # replace original MIB chest code with the B version (e.g., A3 -> B3)
                         # B3 will trigger the game to load the key item table instead of regular item
                         # and A3 or B3 causes monster in a box at all 
-                        og_mib_encounter_data = self.MIBM.get_mib_by_address(next_key_reward.address).monster_chest_data
+                        matching_mib = self.MIBM.get_mib_by_address(next_key_reward.address)
+                        matching_mib.processed = True
+                        og_mib_encounter_data = matching_mib.monster_chest_data
                         next_key_reward.collectible.reward_type = "B" + og_mib_encounter_data[1:]
                         
                         logging.error("Updating chosen mib_key %s area volume" % next_key_reward.description)
                         self.AM.update_volume(next_key_reward)
                     
 
+
+        
         if self.key_items_in_mib:
             key_item_list_remaining = [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False] + [x for x in self.RM.get_rewards_by_style('mib_key') if x.randomized == False]
         else:
             key_item_list_remaining = [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False]
 
+
+        # # TEMP DELETE LATER
+        # key_item_list_remaining[27].debug_flag = True
         
         for key_item_reward in key_item_list_remaining:
+
             key_item_collectible = self.CM.get_of_value_or_lower(self.RE, value=4)
             key_item_reward.set_collectible(key_item_collectible)
             key_item_reward.randomized = True
             self.CM.update_placement_rewards(key_item_collectible, key_item_reward)
             if key_item_reward.reward_style == 'mib_key':
                 # this version does not replace A with B, since it is not reward a key item
-                og_mib_encounter_data = self.MIBM.get_mib_by_address(key_item_reward.address).monster_chest_data
-                key_item_reward.collectible.reward_type = og_mib_encounter_data
+                matching_mib = self.MIBM.get_mib_by_address(key_item_reward.address)
+                matching_mib.processed = True
+                og_mib_encounter_data = matching_mib.monster_chest_data
+                key_item_reward.mib_type = og_mib_encounter_data
                 
                 logging.error("Updating non-chosen mib_key %s area volume" % key_item_reward.description)
                 self.AM.update_volume(key_item_reward)
-
+        
+        
+        
         exdeath_rewards = {}
         for i in self.RE.sample(exdeath_list, 3):
             exdeath_rewards[i.collectible.reward_name] = i.exdeath_address
@@ -539,11 +564,13 @@ class Conductor():
                 
             mib = self.MIBM.get_mib_for_area(area)
             #logging.error("Area rewards: next reward style: " + next_reward.reward_style)
+            
+            
+                
 
             
             if mib is not None and next_reward.reward_style == "chest": #only mibs in chests
-            
-            
+
                 if self.key_items_in_mib:
                     possible_placed_mib_keys = [x for x in self.RM.rewards if x.area == mib.area
                         and x.randomized == True
@@ -557,6 +584,8 @@ class Conductor():
                     
                 #logging.error("Area rewards: doing the mib stuff")
                 chosen_tier = random.choice([5,6,7,8,9])
+
+
                 to_place = self.CM.get_random_collectible(self.RE,reward_loc_tier=next_reward.tier,next_reward=next_reward, respect_weight=True, of_type=Item, monitor_counts=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, force_tier = chosen_tier) #only items in mibs
                 next_reward.mib_type = mib.monster_chest_data
                 mib.processed = True
@@ -596,10 +625,12 @@ class Conductor():
 
         #logging.error("going into cleanup")
         
+        
         non_randomized_list = [i for i in self.RM.rewards if not i.randomized]
         # logging.error("Cleanup non-randomized rewards %s" % ([i.description for i in non_randomized_list]))
         
         for next_reward in non_randomized_list:
+
             to_place = self.CM.get_random_collectible(self.RE,respect_weight=True, reward_loc_tier=next_reward.tier, of_type=next_reward.force_type,
                                                       monitor_counts=True, gil_allowed=next_reward.reward_style == "chest",next_reward=next_reward, 
                                                       tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
@@ -979,7 +1010,7 @@ class Conductor():
     
 
 
-        DEBUG_FLAG = True
+        DEBUG_FLAG = False
         LOOP_FLAG = False
         ENEMY_LIST_STRING_BEING_RANDOMIZED = 'Gilga'
         ENEMY_LIST_STRING_TO_REPLACE = 'Tyras'
@@ -1844,8 +1875,13 @@ class Conductor():
         hint_text = []
             
         keys = self.RM.get_rewards_by_style('key')
-        keys = [i for i in keys if i.description != 'WingRaptor' and i.description != "Beginner's House Chest"]
-        
+        if self.key_items_in_mib:
+            keys = keys + self.RM.get_rewards_by_style('mib_key')
+    
+        keys = [i for i in keys if i.description != 'WingRaptor' and i.description != "Beginner's House Chest MIB 1"]
+
+                
+            
         keys_main = []
         keys_barren = []
         
@@ -2296,19 +2332,32 @@ class Conductor():
     
 
     def randomize(self, random_engine=None):
+
+        pass_flag = True # true until process fails
+        
         logging.error("Starting randomization process.")
         if random_engine is None:
             random_engine = self.RE
         
         self.AM.change_power_level(float(self.conductor_config['DEFAULT_POWER_CHANGE']))
+        
+        
         logging.error("Randomizing key items...")
         num_placed_key_items = self.randomize_key_items()
+        
         #logging.error(num_placed_key_items)
-        while num_placed_key_items < (int(self.conductor_config['NUM_KEY_ITEMS']) - self.free_tablets):
-            #logging.error("didn't place them all, retrying")
-            self.CM.reset_all_of_type(KeyItem)
-            self.RM.reset_rewards_by_style("key")
-            num_placed_key_items = self.randomize_key_items()
+        if num_placed_key_items < (int(self.conductor_config['NUM_KEY_ITEMS']) - self.free_tablets):
+            logging.error("DID NOT PLACE ALL KEY ITEMS, pass_flag SET TO FALSE...")
+            pass_flag = False
+            return pass_flag, (None, None)
+        # while num_placed_key_items < (int(self.conductor_config['NUM_KEY_ITEMS']) - self.free_tablets):
+        #     logging.error("DID NOT PLACE ALL KEY ITEMS, RETRYING...")
+            
+        #     # self.CM.reset_all_of_type(KeyItem)
+        #     self.CM.reset_all_types()
+        #     self.RM.reset_rewards_by_style("key")
+        #     self.RM.reset_rewards_by_style("mib_key")
+        #     num_placed_key_items = self.randomize_key_items()
 
 
         logging.error("Randomizing shops...")
@@ -2324,9 +2373,10 @@ class Conductor():
         for i in self.RM.rewards: #this is a fix for an unsolved bug where some rewards don't get collectibles. it's rare, but it happens
             if i.collectible is None:
                 if i.reward_style != 'key':
+                    logging.error("\nUNSOLVED BUG: Placing reward for key item...\n")
                     i.collectible = self.CM.get_random_collectible(self.RE, monitor_counts=True, gil_allowed=False, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
 
-
+        
         logging.error("Randomizing bosses...")
         self.randomize_bosses()
 
@@ -2437,7 +2487,7 @@ class Conductor():
 
         
         logging.error("Finished randomization process.")
-        return(spoiler, patch)
+        return pass_flag, (spoiler, patch)
 
 
 
@@ -2446,61 +2496,78 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    # SEED_NUM = 166
+    # SEED_NUM = 4552623
     SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
-    c = Conductor(random, {'seed': SEED_NUM, 
-                           'fjf': 'false', 
-                           'fjf_strict': 'false', 
-                           'fjf_num_jobs' : 4,
-                           'job_1': 'Trainer', 
-                           'job_2': 'Trainer', 
-                           'job_3': 'Random', 
-                           'job_4': 'Random', 
-                           'lenna_name': 'Lenna', 
-                           'galuf_name': 'Galuf', 
-                           'cara_name': 'Cara',
-                           'faris_name': 'Faris', 
-                           'starting_cara': 'false',
-                           'remove_ned': 'false',
-                           'key_items_in_mib' : 'true',
-                           'everysteprandomencounter': 'true', 
-                           'free_shops': 'false', 
-                           'music_randomization': 'false', 
-                           'world_lock': '0',
-                           'tiering_config': 'true', 
-                           'tiering_percentage': '5', 
-                           'tiering_threshold': '1', 
-                           'enforce_all_jobs': 'false',
-                           'progressive_bosses': 'false', 
-                           'progressive_rewards': 'false', 
-                           'item_randomization': 'false', 
-                           'abbreviated': 'true', 
-                           'grantkeyitems': 'false', 
-                           'default_abilities': 'false', 
-                           'learning_abilities': 'false', 
-                           'free_tablets' : '0',
-                           'item_randomization_percent': '100', 
-                           'battle_speed': '3',
-                           'red_color': '0', 
-                           'blue_color': '0', 
-                           'green_color': '0', 
-                           'exp_mult': '4', 
-                           'place_all_rewards': 'true', 
-                           'randomize_loot': 'match', 
-                           'loot_percent': '25', 
-                           'portal_boss': 'Random', 
-                           'hints_flag': 'false', 
-                           'setting_string': 'P W1 T5|1 A PR I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CA RND AB CDA pbSomberMage', 
-                           'fileLocation': 'https://bigbridgecareerday.s3.amazonaws.com/careerdayuploads/1593387118413-Final%20Fantasy%20V%20%28J%29.smc',
-                           'jobpalettes':'true'}
-
-                 )
-    (spoiler, patch) = c.randomize()
-    with open(os.path.join(os.path.pardir,os.path.pardir,'projects','test_asm','r-patch.asm'),'w') as f:
-        f.write(patch)
-    with open(os.path.join(os.path.pardir,os.path.pardir,'projects','test_asm','r-spoiler.txt'),'w') as f:
-        f.write(spoiler)
+    
+    attempts = 0
+    seed_success = False
+    
+    while attempts < 10:
+        c = Conductor(random, {'seed': SEED_NUM, 
+                               'fjf': 'false', 
+                               'fjf_strict': 'false', 
+                               'fjf_num_jobs' : 4,
+                               'job_1': 'Random', 
+                               'job_2': 'Random', 
+                               'job_3': 'Random', 
+                               'job_4': 'Random', 
+                               'lenna_name': 'Lenna', 
+                               'galuf_name': 'Galuf', 
+                               'cara_name': 'Cara',
+                               'faris_name': 'Faris', 
+                               'starting_cara': 'false',
+                               'remove_ned': 'false',
+                               
+                               'key_items_in_mib' : 'true',
+                               
+                               'everysteprandomencounter': 'true', 
+                               'free_shops': 'false', 
+                               'music_randomization': 'false', 
+                               'world_lock': '2',
+                               'tiering_config': 'true', 
+                               'tiering_percentage': '15', 
+                               'tiering_threshold': '3', 
+                               'enforce_all_jobs': 'true',
+                               'progressive_bosses': 'false', 
+                               'progressive_rewards': 'false', 
+                               'item_randomization': 'false', 
+                               'abbreviated': 'true', 
+                               'grantkeyitems': 'false', 
+                               'default_abilities': 'false', 
+                               'learning_abilities': 'false', 
+                               'free_tablets' : '0',
+                               'item_randomization_percent': '100', 
+                               'battle_speed': '3',
+                               'red_color': '0', 
+                               'blue_color': '0', 
+                               'green_color': '0', 
+                               'exp_mult': '4', 
+                               'place_all_rewards': 'true', 
+                               'randomize_loot': 'none', 
+                               'loot_percent': '25', 
+                               'portal_boss': 'Random', 
+                               'hints_flag': 'true', 
+                               'extra_patches': 'false', 
+                               'setting_string': 'P W1 T5|1 A PR I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CA RND AB CDA pbSomberMage', 
+                               'fileLocation': 'https://bigbridgecareerday.s3.amazonaws.com/careerdayuploads/1593387118413-Final%20Fantasy%20V%20%28J%29.smc',
+                               'jobpalettes':'true'}
+    
+                     )
+        pass_flag, (spoiler, patch) = c.randomize()
+        if pass_flag:
+            attempts = 100
+            seed_success = True
+        else:
+            attempts += 1
+        
+    if not seed_success:
+        logging.error("\n ***** FAILED GENERATION, NO SEED CREATED ***** \n\n")
+    else:
+        with open(os.path.join(os.path.pardir,os.path.pardir,'projects','test_asm','r-patch.asm'),'w') as f:
+            f.write(patch)
+        with open(os.path.join(os.path.pardir,os.path.pardir,'projects','test_asm','r-spoiler.txt'),'w') as f:
+            f.write(spoiler)
 
     # logging.error(spoiler)
     

@@ -705,3 +705,75 @@ PLA
 TAX
 LDA $06
 JML $C08AC7
+
+
+
+; Code for new monster-in-a-box supporting key items
+; start at c00ec9
+; instantly after the lda $11, inject key item code:
+; if $11 starts with $B
+;   This means you change $11 to be 0x30 instead of 0xA0, 0xA1.. etc 
+;   Then you re-perform the lda $11 with adjusting $B to $A, then let the code resume
+;   the X register holds the value that gives the item reward
+;   the accumulator gets shifted for the value that is indexed for the enemy encounter (A0-A7)
+
+; otherwise do nothing and resume regular code
+
+org $c00ec6
+jml !ADDRESS_chesthook_mib
+
+org !ADDRESS_chesthook_mib
+sta $0be0
+; first check if 0xB was present
+lda $11
+and #$B0
+cmp #$B0
+beq MIBKeyItemPass
+
+; fail case
+bra MIBKeyItemResume
+
+; pass case
+MIBKeyItemPass:
+
+lda $11
+; give access to flags 
+pha
+JSL BranchToKeyItemReward
+
+; store key item
+lda #$30
+sta $11
+ldx $11
+
+
+
+; pull original $11 and adjust down by $11
+pla
+clc
+sbc #$0F
+and #$3f
+ora #$40
+
+
+bra MIBKeyItemFinish
+
+MIBKeyItemResume:
+
+lda $11
+and #$3f
+ora #$40
+ldx $11
+
+
+; original code
+; lda $11
+; and #$3f
+; ora #$40
+; ldx $11
+MIBKeyItemFinish:
+jml $c00ed1
+
+
+
+

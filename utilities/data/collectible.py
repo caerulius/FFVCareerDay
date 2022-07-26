@@ -329,6 +329,12 @@ class CollectibleManager():
                 if t == KeyItem:
                     i.required_by_placement = []
 
+    def reset_all_types(self):
+        for i in self.collectibles:
+            self.remove_from_placement_history(i)
+            i.required_by_placement = []
+
+
     def get_all_of_type_respect_counts(self, t):
         if type(t) is list or type(t) is tuple:
             return [x for x in self.collectibles if type(x) in t and (x not in self.placement_history.keys() or

@@ -20,6 +20,14 @@ ASAR_PATH = '/usr/local/bin/asar/asar/asar-standalone'
 MAIN_PATCH = 'all_patches.asm'
 TRANSLATE_PATCH = 'patches/rpge.ips'
 
+EXTRA_PATCH1 = 'patches/ff5_equip_change.ips'
+EXTRA_PATCH2 = 'patches/ff5_hp_color.ips'
+EXTRA_PATCH3 = 'patches/ff5_items_total.ips'
+EXTRA_PATCH4 = 'patches/ff5_lr_menu-1.0.ips'
+EXTRA_PATCH5 = 'patches/ff5_optimize.ips'
+EXTRA_PATCH6 = 'patches/ff5_reequip.ips'
+EXTRA_PATCH7 = 'patches/ff5_sortplus.ips'
+
 HEADERED_J_SIZE = 2097664
 UNHEADERED_J_SIZE = 2097152
 HEADERED_U_SIZE = 2621952
@@ -83,25 +91,28 @@ def patch_and_return():
             romdata = bytearray(file.read())
 
         if len(romdata) == UNHEADERED_J_SIZE:
-            print("Detected unheadered, untranslated rom")
+            logging.error("Detected unheadered, untranslated rom")
             reheader = True
-            smc = True
+            smc = False
             rpge = True
         if len(romdata) == HEADERED_J_SIZE:
-            print("Detected headered, untranslated rom")
+            logging.error("Detected headered, untranslated rom")
             reheader = False
             smc = True
             rpge = True
         if len(romdata) == UNHEADERED_U_SIZE:
-            print("Detected unheadered, translated rom")
-            reheader = False
+            logging.error("Detected unheadered, translated rom")
+            reheader = True
             smc = False
             rpge = False
         if len(romdata) == HEADERED_U_SIZE:
-            print("Detected headered, translated rom")
+            logging.error("Detected headered, translated rom")
             reheader = False
             smc = True
             rpge = False
+
+
+        smc = headers_and_translate(filename, reheader, rpge, (translateBool(data['extra_patches'])), smc)
 
         if smc:
             os.rename(filename, filename + ".smc")
@@ -110,7 +121,7 @@ def patch_and_return():
             os.rename(filename, filename + ".sfc")
             filename = filename + ".sfc"
 
-        headers_and_translate(filename, reheader, rpge)
+
 
         patch_careerday(filename, data)
 
@@ -124,10 +135,10 @@ def patch_and_return():
             spoiler_log_flag = True
         
         if spoiler_log_flag:
-            print("Spoiler log enabled")
+            logging.error("Spoiler log enabled")
             random.seed(seed)
         else:
-            print("Spoiler log disabled")
+            logging.error("Spoiler log disabled")
             random.seed(seed)
             random.seed(random.randint(0,1000000))
             
@@ -175,63 +186,127 @@ def patch_and_return():
                             'setting_string':   data['setting_string'],
                             'music_randomization':   data['music_randomization'],
                             'remove_ned':   data['remove_ned'],
+                            'key_items_in_mib':   data['key_items_in_mib'],
                             'free_shops':   data['free_shops'],
                             'end_on_exdeath1': data['end_on_exdeath1'],
                             'hints_flag': data['hints_flag'],
+                            'extra_patches': data['extra_patches'],
                             'seed':   seed
                             }
         logging.error("Begin randomization process")
-        C = Conductor(random, conductor_config)
-        spoilerandpatch = C.randomize()
-        logging.error("End randomization process")
-        spoiler_file_name = "CareerDay-{}-spoiler.txt".format(seed)
-        patch_file_name = "CareerDay-{}-patch.asm".format(seed)
 
-        with open(patch_file_name, 'w') as f:
-            f.write(spoilerandpatch[1].replace('\n', '\r\n'))
-        with open(spoiler_file_name, 'w') as f:
-            f.write(spoilerandpatch[0].replace('\n', '\r\n'))
-
-        patch_random(filename, patch_file_name);
-
-        file_list = []
-        file_list.append(filename)
-#       file_list.append(patch_file_name) #removed patch file for zip to players
-        os.remove(patch_file_name)
+        attempts = 0
+        seed_success = False
         
-        if spoiler_log_flag:
-            file_list.append(spoiler_file_name)
-
-        zip_file_name = "{}.zip".format(filename[:-4])
-
-        with zipfile.ZipFile(zip_file_name, 'w') as zip:
-            for file_name in file_list:
-                zip.write(file_name)
+        while attempts < 25:
+            logging.error("Seed generation attempt # %s out of 25" % (attempts + 1))
+            C = Conductor(random, conductor_config)
+            pass_flag, spoilerandpatch = C.randomize()
+            if pass_flag:
+                attempts = 100
+                seed_success = True
+            else:
+                attempts += 1
         
-        s3 = boto3.client('s3')
-        s3_filename = "careerdaydownloads/CareerDay-{}.zip".format(seed) 
-        bucket_name = "bigbridgecareerday"
+        if not seed_success:
+            logging.error("\n ***** FAILED GENERATION, NO SEED CREATED ***** \n\n")
 
-        s3.upload_file(zip_file_name, bucket_name, s3_filename, ExtraArgs={'ContentType': "application/zip"})
+        else:
+            logging.error("Finish randomization process")
+            spoiler_file_name = "CareerDay-{}-spoiler.txt".format(seed)
+            patch_file_name = "CareerDay-{}-patch.asm".format(seed)
 
-        os.remove(zip_file_name)
+            with open(patch_file_name, 'w') as f:
+                f.write(spoilerandpatch[1].replace('\n', '\r\n'))
+            with open(spoiler_file_name, 'w') as f:
+                f.write(spoilerandpatch[0].replace('\n', '\r\n'))
 
-        for i in file_list:
-            os.remove(i)
+            patch_random(filename, patch_file_name);
 
-        sys.stdout.flush()
-        logging.error("Finish patch & return process")
-        return jsonify(s3_filename)
+            file_list = []
+            file_list.append(filename)
+            # file_list.append(patch_file_name) #removed patch file for zip to players
+            os.remove(patch_file_name)
+            
+            if spoiler_log_flag:
+                file_list.append(spoiler_file_name)
 
-def headers_and_translate(filename, reheader, rpge):
+            zip_file_name = "{}.zip".format(filename[:-4])
+
+            with zipfile.ZipFile(zip_file_name, 'w') as zip:
+                for file_name in file_list:
+                    zip.write(file_name)
+            
+            s3 = boto3.client('s3')
+            s3_filename = "careerdaydownloads/CareerDay-{}.zip".format(seed) 
+            bucket_name = "bigbridgecareerday"
+
+            s3.upload_file(zip_file_name, bucket_name, s3_filename, ExtraArgs={'ContentType': "application/zip"})
+
+            os.remove(zip_file_name)
+
+            for i in file_list:
+                os.remove(i)
+
+            sys.stdout.flush()
+            logging.error("Finish patch & return process")
+            return jsonify(s3_filename)
+
+def headers_and_translate(filename, reheader, rpge, extra_patches, smc):
+
+    # reheader = there is no header on the rom 
+    # not reheader = there is a header on the rom 
+
+    logging.error(reheader)
+    logging.error(rpge)
+    logging.error(extra_patches)
+
+
+
+    try:
+        if extra_patches:
+            logging.error("Applying extra patches")
+
+            logging.error("Checking for unheadered files")
+            if not reheader:
+                logging.error("REMOVING header from rom for extra_patches")
+                with open(filename, "r+b") as file:
+                    data = bytearray(file.read())
+                    data = remove_header(data)
+                    file.seek(0)
+                    logging.error(len(data))
+                    file.write(data)
+                logging.error("Rom REMOVED header")
+                smc = True
+                reheader = True
+
+            ips.apply(EXTRA_PATCH1, filename)
+            ips.apply(EXTRA_PATCH2, filename)
+            ips.apply(EXTRA_PATCH3, filename)
+            ips.apply(EXTRA_PATCH4, filename)
+            ips.apply(EXTRA_PATCH5, filename)
+            ips.apply(EXTRA_PATCH6, filename) 
+            ips.apply(EXTRA_PATCH7, filename)
+            logging.error("Extra patches applied successfully")
+    except FileNotFoundError as e:
+        logging.error("Error applying extra patches")
+        logging.error("Extra patches missing. Verify patches files exist in patches directory")
+    except Exception as e:
+        logging.error("Error applying extra patches")
+        logging.error("Unknown exception: "+str(e))
+        
+        
+        
     if reheader:
         logging.error("Reheadering rom for RPGe patch application")
         with open(filename, "r+b") as file:
             data = bytearray(file.read())
             data = add_header(data)
             file.seek(0)
+            logging.error(len(data))
             file.write(data)
         logging.error("Rom reheadered")
+        smc = True
 
     try:
         if rpge:
@@ -245,8 +320,15 @@ def headers_and_translate(filename, reheader, rpge):
         logging.error("Error applying RPGe Translation Patch")
         logging.error("Unknown exception: "+str(e))
 
+    return smc
+
+
 def add_header(byte_list):
     return FAKE_HEADER + byte_list
+
+def remove_header(byte_list):
+    new_bytes = byte_list[512:]
+    return new_bytes
 
 def translateBool(boolean):
     if type(boolean) == bool:
@@ -278,13 +360,14 @@ def patch_careerday(filename, data):
     everysteprandomencounter = bool_to_int(translateBool(data['everysteprandomencounter']))
     explv50 = bool_to_int(translateBool(data['everysteprandomencounter']))
     end_on_exdeath1 = bool_to_int(translateBool(data['end_on_exdeath1']))
+    remove_ned = bool_to_int(translateBool(data['end_on_exdeath1']))
     # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
     world_lock = int(data['world_lock'])
     
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
     --define passages=1 --define double_atb=0 --define progressive={} --define abbreviated={} --define grantkeyitems={} --define boss_exp=1 --define free_tablets={} \
-    --define fourjobmode={} --define fourjoblock={} --define world_lock={} --define starting_cara={} --define end_on_exdeath1={} --define everysteprandomencounter={} --define explv50={}\
-    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, fourjoblock, world_lock, starting_cara, end_on_exdeath1, everysteprandomencounter, explv50, MAIN_PATCH, filename)
+    --define fourjobmode={} --define fourjoblock={} --define world_lock={} --define starting_cara={} --define end_on_exdeath1={}  --define remove_ned={} --define everysteprandomencounter={} --define explv50={}\
+    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, fourjoblock, world_lock, starting_cara, end_on_exdeath1, remove_ned, everysteprandomencounter, explv50, MAIN_PATCH, filename)
 
     logging.error(command)
     

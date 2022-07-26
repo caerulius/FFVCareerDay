@@ -237,6 +237,7 @@ function apiCall(data){
         "free_tablets": $("#free_tablets").val(),
 		"place_all_rewards": $('#place_all_rewards').is(':checked'),
 		"hints_flag": $('#hints_flag').is(':checked'),
+		"extra_patches": $('#extra_patches').is(':checked'),
 		"end_on_exdeath1": $('#end_on_exdeath1').is(':checked'),
 		"randomize_loot": $("input:radio[name=randomize_loot]:checked").val(),
 		"loot_percent": $("#loot_percent").val(), 
@@ -355,6 +356,11 @@ function getSettingString(){
 	else {
 		seedString = seedString + " NOHINT";
 	}
+
+	if($('#extra_patches').is(':checked')){
+		seedString = seedString + " EXTRAP";
+	} 
+
 	if($('#end_on_exdeath1').is(':checked')){
 		seedString = seedString + " EOX";
 	}
@@ -458,6 +464,10 @@ function applyCustomSettingString(){
 		}
 		else if(val == "NOHINT"){
 			$( "#hints_flag" ).prop( "checked", false );
+		}
+
+		else if(val == "EXTRAP"){
+			$( "#extra_patches" ).prop( "checked", true );
 		}
 
 		else if(val == "EOX"){
@@ -599,6 +609,7 @@ function clearSettings(){
 	$('#abbreviated').prop( "checked", false );
     $('#grantkeyitems').prop( "checked", false );
 	$('#hints_flag').prop( "checked", true );
+	$('#extra_patches').prop( "checked", false);
     $('#end_on_exdeath1').prop( "checked", false );
     $('#default_abilities').prop( "checked", false );
     $('#learning_abilities').prop( "checked", false );

@@ -110,7 +110,7 @@ else
     
     if !world_lock = 0
         if !remove_ned = 0
-            print "setting exdeath overwrite"
+            
     
             ; new code - only do this IF remove_ned is NOT set
             ; i.e., do not set the custom flag for the 1HP exdfeath if another randomized boss was put there 

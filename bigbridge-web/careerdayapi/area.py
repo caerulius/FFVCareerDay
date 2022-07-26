@@ -140,6 +140,7 @@ class AreaManager():
         """
         for i in self.areas:
             if reward.area == i.area_name:
+
                 i.current_volume += reward.collectible.reward_value
                 i.num_placed_checks += 1
                 return

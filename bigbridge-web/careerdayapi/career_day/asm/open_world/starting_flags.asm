@@ -385,7 +385,10 @@ db $A4, $7E            ; set address 000A43 bit ON 40
 ; db $CA, $54, $00                ;Set Flag 2/3/4/5/54 00
 ; db $CA, $55, $00                ;Set Flag 2/3/4/5/55 00
 ; db $CA, $98, $03                ;Set Flag 2/3/4/5/98 03
-; db $CA, $7D, $03                ;Set Flag 2/3/4/5/7D 03
+
+; allowing guy to spawn in kuzar 
+db $CA, $7D, $03                ;Set Flag 2/3/4/5/7D 03
+
 ; db $CA, $7E, $03                ;Set Flag 2/3/4/5/7E 03
 ; db $CA, $7F, $03                ;Set Flag 2/3/4/5/7F 03
 ; db $CA, $80, $03                ;Set Flag 2/3/4/5/80 03

@@ -737,7 +737,9 @@ bra MIBKeyItemResume
 MIBKeyItemPass:
 
 lda $11
+; give access to flags 
 pha
+JSL BranchToKeyItemReward
 
 ; store key item
 lda #$30
@@ -748,7 +750,8 @@ ldx $11
 
 ; pull original $11 and adjust down by $11
 pla
-sbc #$10
+clc
+sbc #$0F
 and #$3f
 ora #$40
 

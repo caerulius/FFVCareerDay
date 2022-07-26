@@ -192,8 +192,10 @@ incsrc ../../shared_asm/shared_core/chest_magicreward.asm
 incsrc ../../shared_asm/shared_core/shop_hook.asm
 incsrc ../../shared_asm/shared_core/battle_hook.asm
 incsrc ../../shared_asm/balancing/exp_abp_modifier.asm
+
 incsrc ../../shared_asm/recovery/all_inns.asm
 incsrc ../../shared_asm/recovery/tent.asm
+
 
 
 ; optionals
@@ -270,6 +272,19 @@ incsrc open_world/phoenix_tower.asm
 incsrc open_world/custom_enemies.asm
 incsrc open_world/boss_portal.asm
 incsrc open_world/enemy_dialogue_hook.asm
+
+; these were first included as source code, but it was a pain in the ass
+; since they werent made with asar 
+; so now theyre just separate patches 
+
+
+; incsrc open_world/ff5_sortplus.asm
+; incsrc open_world/ff5_lr_menu.asm
+; incsrc open_world/ff5_items_total.asm
+; incsrc open_world/ff5_hp_color.asm
+; incsrc open_world/ff5_optimize.asm
+; incsrc open_world/ff5_reequip.asm
+
 incsrc world2/mooglewaterway_encounters.asm
 
 

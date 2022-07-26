@@ -76,7 +76,7 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 74,D1321E,Potion,Tule,Beginner's House Chest,chest,2,,,,,,,
 75,D13222,Phoenix Down,Tule,Beginner's House Chest,chest,2,,,,,,,
 76,D13226,Tent,Tule,Beginner's House Chest,chest,2,,,,,,,
-77,D1322A,Leather Shoes,Tule,Beginner's House Chest MIB 1,mib_key,2,Item,,,,83,,1
+77,D1322A,Leather Shoes,Tule,Beginner's House Chest MIB 1,mib_key,2,Item,,,,83,[“town”],1
 78,D1322E,Leather Cap,Pirate's Cave,Pirate's Cave Chest,chest,2,,,,,,,
 79,D13232,Tent,Pirate's Cave,Pirate's Cave Chest,chest,2,,,,,,,
 80,D13236,Ether,Pirate's Cave,Pirate's Cave Chest,chest,2,,,,,,,
@@ -127,10 +127,10 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 125,D132EA,Silver Armlet,Walse,Walse Tower Chest,chest,2,,,,,,,
 126,D132EE,Ether,Walse,Walse Tower Chest,chest,2,,,,,,,
 127,D132F2,Phoenix Down,Tycoon Castle,Tycoon Meteor Chest,chest,2,,,,,,,
-128,D132F6,Heavy Spear,Karnak,Karnak Castle Chest MIB 1,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],84,[“ship”],1
-129,D132FA,Thunder Scroll,Karnak,Karnak Castle Chest MIB 2,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],85,[“ship”],1
+128,D132F6,Heavy Spear,Karnak,Karnak Castle Chest MIB 1,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],84,[“burning”],1
+129,D132FA,Thunder Scroll,Karnak,Karnak Castle Chest MIB 2,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],85,[“burning”],1
 130,D132FE,2000,Karnak,Karnak Castle Chest,chest,4,,,,,,,
-131,D13302,Elixir,Karnak,Karnak Castle Chest MIB 3,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],86,[“ship”],1
+131,D13302,Elixir,Karnak,Karnak Castle Chest MIB 3,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],86,[“burning”],1
 132,D13306,Elixir,Karnak,Karnak Castle Chest,chest,4,,,,,,,
 133,D1330A,Elixir,Karnak,Karnak Castle Chest,chest,4,,,,,,,
 134,D1330E,2000,Karnak,Karnak Castle Chest,chest,4,,,,,,,
@@ -188,13 +188,13 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 186,D133DE,Pinwheel,Exdeath's Castle,Exdeath's Castle Chest,chest,5,,,,,,,
 187,D133E2,4400,Moogle Village,Moogle Cave Chest,chest,4,,,,,,,
 188,D133E6,Phoenix Down,Moogle Village,Moogle Cave Chest,chest,4,,,,,,,
-189,D133EA,Cabin,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-190,D133EE,Dancing Dagger,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-191,D133F2,1,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-192,D133F6,10000,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-193,D133FA,Phoenix Down,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-194,D133FE,Ether,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-195,D13402,Elf Cape,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
+189,D133EA,Cabin,Moogle Village,Moogle Village Chest,chest,6,,,,,,,
+190,D133EE,Dancing Dagger,Moogle Village,Moogle Village Chest,chest,6,,,,,,,
+191,D133F2,1,Moogle Village,Moogle Village Chest,chest,6,,,,,,,
+192,D133F6,10000,Moogle Village,Moogle Village Chest,chest,7,,,,,,,
+193,D133FA,Phoenix Down,Moogle Village,Moogle Village Chest,chest,7,,,,,,,
+194,D133FE,Ether,Moogle Village,Moogle Village Chest,chest,7,,,,,,,
+195,D13402,Elf Cape,Moogle Village,Moogle Village Chest,chest,8,,,,,,,
 196,D13406,Angel Gwn,Bal Castle,Bal Castle Chest,chest,4,,,,,,,
 197,D1340A,Hero Drink,Bal Castle,Bal Castle Chest,chest,4,,,,,,,
 198,D1340E,Exit,Bal Castle,Bal Castle Chest,chest,4,,,,,,,
@@ -227,10 +227,10 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 225,D1347A,DragonFang,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 226,D1347E,Elixir,Pyramid,Pyramid Chest,chest,6,,,,,,,
 227,D13482,Elixir,Pyramid,Pyramid Chest,chest,7,,,,,,,
-228,D13486,Black Robe,Pyramid,Pyramid Chest MIB 1,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",89,,3
+228,D13486,Black Robe,Pyramid,Pyramid Chest MIB 1,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",89,[“desert”],3
 229,D1348A,Thornlet,Pyramid,Pyramid Chest,chest,6,,,,,,,
-230,D1348E,DarkMatter,Pyramid,Pyramid Chest MIB 2,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8A,,3
-231,D13492,Crystal Armor,Pyramid,Pyramid Chest MIB 3,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8B,,3
+230,D1348E,DarkMatter,Pyramid,Pyramid Chest MIB 2,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8A,[“desert”],3
+231,D13492,Crystal Armor,Pyramid,Pyramid Chest MIB 3,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8B,[“desert”],3
 232,D13496,Cursed Ring,Pyramid,Pyramid Chest,chest,6,,,,,,,
 233,D1349A,Ice Shield,Pyramid,Pyramid Chest,chest,6,,,,,,,
 234,D1349E,Flame Shield,Pyramid,Pyramid Chest,chest,6,,,,,,,

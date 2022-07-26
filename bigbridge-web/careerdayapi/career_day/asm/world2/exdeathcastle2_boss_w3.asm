@@ -107,8 +107,15 @@ else
     db $CB, $49, $00                ;Clear Flag 2/3/4/5/49 00
     db $CB, $30, $00                ;Clear Flag 2/3/4/5/30 00
     db $A5, $9A                     ;Clear Event Flag 19A
+    
     if !world_lock = 0
-        db $A2, $CC						; CUSTOM FLAG for final exdeath death phase 1. Only do this if world lock is fully open (where Exdeath is optional)
+        if !remove_ned = 0
+            
+    
+            ; new code - only do this IF remove_ned is NOT set
+            ; i.e., do not set the custom flag for the 1HP exdfeath if another randomized boss was put there 
+            db $A2, $CC						; CUSTOM FLAG for final exdeath death phase 1. Only do this if world lock is fully open (where Exdeath is optional)
+        endif
     endif
 
     db $CA, $DA, $02            ; set address 000AAF bit ON 02. ENABLE world 3

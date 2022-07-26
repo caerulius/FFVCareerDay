@@ -26,16 +26,16 @@ class Monster_In_A_Box:
                 setattr(self,index,s.loc[index])
 
 class MonsterInABoxManager:
-    def __init__(self, data_manager, random=None):
+    def __init__(self, data_manager, random=None, key_items_in_mib=False):
         self.monsters_in_boxes = [Monster_In_A_Box(x, data_manager.files['monsters_in_boxes']) for x in range(0, data_manager.files['monsters_in_boxes'].shape[0])]
-        if random == None:
-            self.random = Random()
-        else:
-            self.random = random
+        self.random = random
+        self.key_items_in_mib = key_items_in_mib
 
     def get_mib_for_area(self, area):
         #print("getting mib for area: " + area.area_name)
         working_list = [x for x in self.monsters_in_boxes if x.area == area.area_name and x.processed == False]
+        # if working_list:
+        #     breakpoint()
         #print("mib list length: " + str(len(working_list)))
         if len(working_list) > 0:
             return random.choice(working_list)

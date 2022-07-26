@@ -211,6 +211,7 @@ function apiCall(data){
 		"faris_name": $('#faris_name').val(),
 		"starting_cara": $('#starting_cara').is(':checked'),
 		"remove_ned": $('#remove_ned').is(':checked'),
+        "key_items_in_mib": $('#key_items_in_mib').is(':checked'),
 		"everysteprandomencounter": $('#everysteprandomencounter').is(':checked'),
 		"free_shops": $('#free_shops').is(':checked'),
 		"music_randomization": $('#music_randomization').is(':checked'),
@@ -236,6 +237,7 @@ function apiCall(data){
         "free_tablets": $("#free_tablets").val(),
 		"place_all_rewards": $('#place_all_rewards').is(':checked'),
 		"hints_flag": $('#hints_flag').is(':checked'),
+		"extra_patches": $('#extra_patches').is(':checked'),
 		"end_on_exdeath1": $('#end_on_exdeath1').is(':checked'),
 		"randomize_loot": $("input:radio[name=randomize_loot]:checked").val(),
 		"loot_percent": $("#loot_percent").val(), 
@@ -338,6 +340,9 @@ function getSettingString(){
 	if($('#remove_ned').is(':checked')){
 		seedString = seedString + " RND";
 	}
+	if($('#key_items_in_mib').is(':checked')){
+		seedString = seedString + " KIMIB";
+	}
 	if($('#everysteprandomencounter').is(':checked')){
 		seedString = seedString + " STP";
 	}
@@ -351,6 +356,11 @@ function getSettingString(){
 	else {
 		seedString = seedString + " NOHINT";
 	}
+
+	if($('#extra_patches').is(':checked')){
+		seedString = seedString + " EXTRAP";
+	} 
+
 	if($('#end_on_exdeath1').is(':checked')){
 		seedString = seedString + " EOX";
 	}
@@ -440,6 +450,9 @@ function applyCustomSettingString(){
 		else if(val == "RND"){
 			$( "#remove_ned" ).prop( "checked", true );
 		}
+		else if(val == "KIMIB"){
+			$( "#key_items_in_mib" ).prop( "checked", true );
+		}
 		else if(val == "STP"){
 			$( "#everysteprandomencounter" ).prop( "checked", true );
 		}
@@ -451,6 +464,10 @@ function applyCustomSettingString(){
 		}
 		else if(val == "NOHINT"){
 			$( "#hints_flag" ).prop( "checked", false );
+		}
+
+		else if(val == "EXTRAP"){
+			$( "#extra_patches" ).prop( "checked", true );
 		}
 
 		else if(val == "EOX"){
@@ -584,6 +601,7 @@ function clearSettings(){
 	$( "#tiering_config" ).prop( "checked", false );
 	$('#starting_cara').prop( "checked", false );
 	$('#remove_ned').prop( "checked", false );
+    $('#key_items_in_mib').prop( "checked", false );
 	$('#everysteprandomencounter').prop( "checked", false );
 	$('#free_shops').prop( "checked", false );
 	$('#music_randomization').prop( "checked", false );
@@ -591,6 +609,7 @@ function clearSettings(){
 	$('#abbreviated').prop( "checked", false );
     $('#grantkeyitems').prop( "checked", false );
 	$('#hints_flag').prop( "checked", true );
+	$('#extra_patches').prop( "checked", false);
     $('#end_on_exdeath1').prop( "checked", false );
     $('#default_abilities').prop( "checked", false );
     $('#learning_abilities').prop( "checked", false );

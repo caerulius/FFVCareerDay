@@ -76,7 +76,7 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 74,D1321E,Potion,Tule,Beginner's House Chest,chest,2,,,,,,,
 75,D13222,Phoenix Down,Tule,Beginner's House Chest,chest,2,,,,,,,
 76,D13226,Tent,Tule,Beginner's House Chest,chest,2,,,,,,,
-77,D1322A,Leather Shoes,Tule,Beginner's House Chest,chest,2,Item,,,,,,
+77,D1322A,Leather Shoes,Tule,Beginner's House Chest MIB 1,mib_key,2,Item,,,,83,[“town”],1
 78,D1322E,Leather Cap,Pirate's Cave,Pirate's Cave Chest,chest,2,,,,,,,
 79,D13232,Tent,Pirate's Cave,Pirate's Cave Chest,chest,2,,,,,,,
 80,D13236,Ether,Pirate's Cave,Pirate's Cave Chest,chest,2,,,,,,,
@@ -127,10 +127,10 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 125,D132EA,Silver Armlet,Walse,Walse Tower Chest,chest,2,,,,,,,
 126,D132EE,Ether,Walse,Walse Tower Chest,chest,2,,,,,,,
 127,D132F2,Phoenix Down,Tycoon Castle,Tycoon Meteor Chest,chest,2,,,,,,,
-128,D132F6,Heavy Spear,Karnak,Karnak Castle Chest,chest,4,Item,,,,,,
-129,D132FA,Thunder Scroll,Karnak,Karnak Castle Chest,chest,4,Item,,,,,,
+128,D132F6,Heavy Spear,Karnak,Karnak Castle Chest MIB 1,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],84,[“burning”],1
+129,D132FA,Thunder Scroll,Karnak,Karnak Castle Chest MIB 2,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],85,[“burning”],1
 130,D132FE,2000,Karnak,Karnak Castle Chest,chest,4,,,,,,,
-131,D13302,Elixir,Karnak,Karnak Castle Chest,chest,4,Item,,,,,,
+131,D13302,Elixir,Karnak,Karnak Castle Chest MIB 3,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],86,[“burning”],1
 132,D13306,Elixir,Karnak,Karnak Castle Chest,chest,4,,,,,,,
 133,D1330A,Elixir,Karnak,Karnak Castle Chest,chest,4,,,,,,,
 134,D1330E,2000,Karnak,Karnak Castle Chest,chest,4,,,,,,,
@@ -188,13 +188,13 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 186,D133DE,Pinwheel,Exdeath's Castle,Exdeath's Castle Chest,chest,5,,,,,,,
 187,D133E2,4400,Moogle Village,Moogle Cave Chest,chest,4,,,,,,,
 188,D133E6,Phoenix Down,Moogle Village,Moogle Cave Chest,chest,4,,,,,,,
-189,D133EA,Cabin,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-190,D133EE,Dancing Dagger,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-191,D133F2,1,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-192,D133F6,10000,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-193,D133FA,Phoenix Down,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-194,D133FE,Ether,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
-195,D13402,Elf Cape,Moogle Village,Moogle Village Chest,chest,9,,,,,,,
+189,D133EA,Cabin,Moogle Village,Moogle Village Chest,chest,6,,,,,,,
+190,D133EE,Dancing Dagger,Moogle Village,Moogle Village Chest,chest,6,,,,,,,
+191,D133F2,1,Moogle Village,Moogle Village Chest,chest,6,,,,,,,
+192,D133F6,10000,Moogle Village,Moogle Village Chest,chest,7,,,,,,,
+193,D133FA,Phoenix Down,Moogle Village,Moogle Village Chest,chest,7,,,,,,,
+194,D133FE,Ether,Moogle Village,Moogle Village Chest,chest,7,,,,,,,
+195,D13402,Elf Cape,Moogle Village,Moogle Village Chest,chest,8,,,,,,,
 196,D13406,Angel Gwn,Bal Castle,Bal Castle Chest,chest,4,,,,,,,
 197,D1340A,Hero Drink,Bal Castle,Bal Castle Chest,chest,4,,,,,,,
 198,D1340E,Exit,Bal Castle,Bal Castle Chest,chest,4,,,,,,,
@@ -207,10 +207,10 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 205,D1342A,Phoenix Down,Hiryuu Valley,Hiryuu Valley Chest,chest,4,,,,,,,
 206,D1342E,5000,Surgate Castle,Surgate Castle Chest,chest,4,,,,,,,
 207,D13432,Float,Surgate Castle,Surgate Castle Chest,chest,4,,,,,,,
-208,D13436,Drain Sword,Barrier Tower,Barrier Tower Chest,chest,4,Item,,,,,,
+208,D13436,Drain Sword,Barrier Tower,Barrier Tower Chest MIB 1,mib_key,4,Item,[“Submarine Key”],"[“Adamantite”, “Submarine Key”]",[“Submarine Key”],87,[“tower”],2
 209,D1343A,9000,Barrier Tower,Barrier Tower Chest,chest,4,,,,,,,
 210,D1343E,18000,Barrier Tower,Barrier Tower Chest,chest,4,,,,,,,
-211,D13442,Gold Hairpin,Barrier Tower,Barrier Tower Chest,chest,4,Item,,,,,,
+211,D13442,Gold Hairpin,Barrier Tower,Barrier Tower Chest MIB 2,mib_key,4,Item,[“Submarine Key”],"[“Adamantite”, “Submarine Key”]",[“Submarine Key”],88,[“tower”],2
 212,D13446,Guardian,Mua,Mua Town Barrel,chest,4,,,,,,,
 213,D1344A,2500,Mua,Mua Forest Chest,chest,4,,,,,,,
 214,D1344E,Ether,Mua,Mua Forest Chest,chest,4,,,,,,,
@@ -227,10 +227,10 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 225,D1347A,DragonFang,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 226,D1347E,Elixir,Pyramid,Pyramid Chest,chest,6,,,,,,,
 227,D13482,Elixir,Pyramid,Pyramid Chest,chest,7,,,,,,,
-228,D13486,Black Robe,Pyramid,Pyramid Chest,chest,9,Item,,,,,,
+228,D13486,Black Robe,Pyramid,Pyramid Chest MIB 1,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",89,[“desert”],3
 229,D1348A,Thornlet,Pyramid,Pyramid Chest,chest,6,,,,,,,
-230,D1348E,DarkMatter,Pyramid,Pyramid Chest,chest,9,Item,,,,,,
-231,D13492,Crystal Armor,Pyramid,Pyramid Chest,chest,9,Item,,,,,,
+230,D1348E,DarkMatter,Pyramid,Pyramid Chest MIB 2,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8A,[“desert”],3
+231,D13492,Crystal Armor,Pyramid,Pyramid Chest MIB 3,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8B,[“desert”],3
 232,D13496,Cursed Ring,Pyramid,Pyramid Chest,chest,6,,,,,,,
 233,D1349A,Ice Shield,Pyramid,Pyramid Chest,chest,6,,,,,,,
 234,D1349E,Flame Shield,Pyramid,Pyramid Chest,chest,6,,,,,,,
@@ -257,9 +257,9 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 255,D134F2,Hi-Potion,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 256,D134F6,Protect Drink,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 257,D134FA,BeastKiller,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
-258,D134FE,RisingSun,Solitary Island,Solitary Island Chest,chest,6,Item,,,,,,
+258,D134FE,RisingSun,Solitary Island,Solitary Island Chest MIB 1,mib_key,6,Item,[“Shrine Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Shrine Page”]","[“Anti Barrier”, “Bracelet”, “Shrine Page”]",8C,[“bridge”],3
 259,D13502,Ether,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
-260,D13506,Guard Ring,Solitary Island,Solitary Island Chest,chest,6,Item,,,,,,
+260,D13506,Guard Ring,Solitary Island,Solitary Island Chest MIB 2,mib_key,6,Item,[“Shrine Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Shrine Page”]","[“Anti Barrier”, “Bracelet”, “Shrine Page”]",8D,[“bridge”],3
 261,D1350A,Crystal Helm,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 262,D1350E,9000,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 263,D13512,Elixir,Solitary Island,Solitary Island Chest,chest,6,,,,,,,

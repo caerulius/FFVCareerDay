@@ -48,8 +48,10 @@ class Reward:
 
         self.collectible = collectible_manager.get_by_name(self.original_reward)
         self.mib_type = None #keep a byte for the monster in a box type, override the type in the asar_output if exists
+        self.mib_placed_key_item = False # this flag is used rarely for MIB to change the asar_output
         self.randomized = False
         self.max_world_requirements_flag = False # used for progressive bosses setting
+
 
     @property
     def asar_output(self):
@@ -80,6 +82,12 @@ class Reward:
 
     def set_collectible(self, collectible, type_override=None):
         self.randomized = True
+        # collectible.collectible_name == 'Avis Killer' or 
+        # if collectible.collectible_name == 'Golden Armor':
+            # breakpoint()# 
+        # if "debug_flag" in self.__dict__:
+            # breakpoint()
+            
         self.collectible = collectible
 
 class RewardManager:

@@ -1,4 +1,14 @@
 hirom
+
+
+; RIFT CASTLE DOOR
+; flag 0A42 bit 04 is tied to catastrophe
+; flag 0A42 bit 20 is tied to halicarnassus
+org $F06009
+db $FC, $75, $f7, $00, $fb, $03, $f6, $ff, $a2, $06
+
+
+
 ; STEAMSHIP LOCK
 
 ; new code area for conditional checking. EACH X/Y CHECKER HAS A CORRESPONDING OUTPUT HERE
@@ -145,7 +155,6 @@ db $F7, $00, $FF, $65, $03
 
 
 
-
 ; X Y CUSTOM COORDINATES
 
 org $CE3660
@@ -181,6 +190,10 @@ db $08, $0A, $00, $00
 ; ; World map steamship
 org $CE3688
 db $54, $4F, $00, $11
+
+; ; Rift castle door
+org $CE368C
+db $06, $28, $00, $00
 
 ; I decided to make a custom solution by making a new table entirely for offsets here
 ; the above $00, $11 places data in an entirely new blank area (0x1100 times 2 offset from F04000)
@@ -353,6 +366,29 @@ LDA #$128C
 STA $23
 JMP XYCoordinateHookContinueNormalCase
 XYCoordinateHookContinueCase8:
+
+
+
+
+
+; ; RIFT CASTLE DOOR
+lda !mapid
+CMP #$01F5
+BNE XYCoordinateHookContinueCase9
+lda !xycoordcheck
+CMP #$2806
+BNE XYCoordinateHookContinueCase9
+
+
+
+; ; IF these match, set up coordinates specifically
+LDA #$128C
+STA $26
+TAX
+LDA #$1290
+STA $23
+JMP XYCoordinateHookContinueNormalCase
+XYCoordinateHookContinueCase9:
 
 
 
@@ -757,6 +793,25 @@ STA $26
 JMP KeyItemLockingImmediateFinish
 
 KeyItemLockingNextCheck15:
+
+
+
+; RIFT CASTLE DOOR ACCESS
+lda !mapid
+CMP #$01F5
+BNE KeyItemLockingNextCheck16
+lda !xycoordcheck
+CMP #$2806
+BNE KeyItemLockingNextCheck16
+
+; HANDLE RIFT CASTLE DOOR
+LDA #$2009
+STA $23
+LDA #$2013
+STA $26
+JMP KeyItemLockingImmediateFinish
+
+KeyItemLockingNextCheck16:
 
 
 
