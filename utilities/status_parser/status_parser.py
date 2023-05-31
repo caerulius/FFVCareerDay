@@ -103,36 +103,36 @@ maps = { 'elemental_immune' : {
         
         
 enemy_1 = {
-        'elemental_immune' :        ['earth'],
-        'status1_weakness' :        [''],
-        'status2_weakness' :        [''],
-        'status3_weakness' :        ['regen','haste','shell','armor','wall'],
-        'elemental_absorb' :        ['wind'],
+        'elemental_immune' :        ['fire'],
+        'status1_weakness' :        ['darkness'],
+        'status2_weakness' :        ['image1','image2','aging'],
+        'status3_weakness' :        ['regen','haste','slow','shell','armor','wall'],
+        'elemental_absorb' :        ['earth'],
         'blank':                    [''],
         'elemental_weakness' :      ['poison'],
-        'creature_type' :           ['dragon', 'heavy']
+        'creature_type' :           ['creature', 'heavy']
         }
 
 enemy_2 = {        
-        'elemental_immune' :        ['ice'],
+        'elemental_immune' :        ['fire'],
         'status1_weakness' :        [''],
-        'status2_weakness' :        ['mute','berserk'],
+        'status2_weakness' :        ['image1','image2','sleep', 'mute'],
         'status3_weakness' :        ['regen','haste','slow','shell','armor','wall'],
-        'elemental_absorb' :        ['lightning'],
+        'elemental_absorb' :        ['earth'],
         'blank':                    [''],
-        'elemental_weakness' :      [''],
-        'creature_type' :           ['dragon', 'heavy']
+        'elemental_weakness' :      ['holy'],
+        'creature_type' :           ['human', 'heavy']
         }
 
 enemy_3 = {
-        'elemental_immune' :        ['fire'],
+        'elemental_immune' :        ['fire', 'holy'],
         'status1_weakness' :        [''],
-        'status2_weakness' :        [''],
+        'status2_weakness' :        ['image1','image2'],
         'status3_weakness' :        ['regen','haste','shell','armor','wall'],
         'elemental_absorb' :        ['earth'],
         'blank':                    [''],
-        'elemental_weakness' :      [''],
-        'creature_type' :           ['dragon', 'heavy']
+        'elemental_weakness' :      ['ice'],
+        'creature_type' :           ['heavy']
         }
 
 

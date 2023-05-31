@@ -1,9 +1,9 @@
 crystal_id,shop_id,readable_name,value,related_jobs,max_count,starting_weapon,starting_weapon_id,starting_spell_list,starting_spell_ids,starting_ability,starting_ability_id,tier
-00,89,Knight,1,[“Knight”],1,Knife,02,[],[“FF”],Guard,06,4
+00,89,Knight,1,[“Knight”],1,Knife,02,[],[“FF”],Guard,06,3
 01,8A,Monk,1,[“Monk”],1,Nothing,01,[],[“FF”],Kick,07,1
 02,8B,Thief,1,[“Thief”],1,Knife,02,[],[“FF”],Escape,0b,1
-03,8C,Dragoon,1,[“Dragoon”],1,Knife,02,[],[“FF”],Jump,0d,3
-04,8D,Ninja,2,[“Ninja”],1,Knife,02,[],[“FF”],Smoke,11,3
+03,8C,Dragoon,1,[“Dragoon”],1,Knife,02,[],[“FF”],Jump,0d,2
+04,8D,Ninja,2,[“Ninja”],1,Knife,02,[],[“FF”],Smoke,11,4
 05,8E,Samurai,2,[“Samurai”],1,Knife,02,[],[“FF”],SwdSlap,13,9
 06,8F,Berserker,0,[“Berserker”],1,Knife,02,[],[“FF”],None,00,1
 07,90,Hunter,1,[“Hunter”],1,Knife,02,[],[“FF”],Animals,16,2
@@ -15,9 +15,9 @@ crystal_id,shop_id,readable_name,value,related_jobs,max_count,starting_weapon,st
 0D,96,BlueMage,2,[“BlueMage”],1,Knife,02,"[“Aero”, “GblinPnch”, “Hammer”]","[“8F”, “93” ,”99”]",Blue,4d,6
 0E,97,RedMage,1,[“RedMage”],1,Knife,02,"[“Fire”, “Ice”, “Bolt”, “Cure”, “Scan”, “Antdt”]","[“24”, “25, “26”, “12”, “13”, “14”]",Red Lv. 1,4b,2
 0F,98,Trainer,0,[“Trainer”],1,Whip,4B,[],[“FF”],Tame,1d,1
-10,99,Chemist,2,[“Chemist”],1,Staff,38,[],[“FF”],Mix,20,2
+10,99,Chemist,2,[“Chemist”],1,Staff,38,[],[“FF”],Mix,20,6
 11,9A,Geomancer,1,[“Geomancer”],1,Giyaman,50,[],[“FF”],Terrain,23,1
 12,9B,Bard,1,[“Bard”],1,Knife,02,"[“Power”, “Speed”, “Vitality”]","[“57”, “58”, “59”]",Hide,28,3
-13,9C,Dancer,1,[“Dancer”],1,Knife,02,[],[“FF”],Flirt,2a,2
+13,9C,Dancer,1,[“Dancer”],1,Knife,02,[],[“FF”],Flirt,2a,3
 14,9D,Mimic,2,[“Mimic”],1,Knife,02,[],[“FF”],Mimic,2b,9
 15,9E,Freelancer,0,[“Freelancer”],1,Knife,02,[],[“FF”],None,00,9

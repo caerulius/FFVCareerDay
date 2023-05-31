@@ -104,3 +104,39 @@ enemy_3 = {
         'elemental_weakness' :      [''],
         'creature_type' :           ['dragon', 'heavy']
         }
+
+
+### TETSUDONO
+
+enemy_1 = {
+        'elemental_immune' :        ['fire'],
+        'status1_weakness' :        ['darkness'],
+        'status2_weakness' :        ['aging'],
+        'status3_weakness' :        ['regen','haste','slow','shell','armor','wall'],
+        'elemental_absorb' :        ['earth'],
+        'blank':                    [''],
+        'elemental_weakness' :      ['poison'],
+        'creature_type' :           ['creature', 'heavy']
+        }
+
+enemy_2 = {        
+        'elemental_immune' :        ['fire'],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        ['sleep', 'mute'],
+        'status3_weakness' :        ['regen','haste','slow','shell','armor','wall'],
+        'elemental_absorb' :        ['earth'],
+        'blank':                    [''],
+        'elemental_weakness' :      ['holy'],
+        'creature_type' :           ['human', 'heavy']
+        }
+
+enemy_3 = {
+        'elemental_immune' :        ['fire', 'holy'],
+        'status1_weakness' :        [''],
+        'status2_weakness' :        [''],
+        'status3_weakness' :        ['regen','haste','shell','armor','wall'],
+        'elemental_absorb' :        ['earth'],
+        'blank':                    [''],
+        'elemental_weakness' :      ['ice'],
+        'creature_type' :           ['heavy']
+        }

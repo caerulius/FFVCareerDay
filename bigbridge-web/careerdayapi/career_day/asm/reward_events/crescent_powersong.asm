@@ -10,5 +10,3 @@ db $E4, $B4                     ;Unknown
 db $05                          ;Player Bounce in Place
 db $A2, $CF                     ;Turn on bit 80 at address 0x7e0a2d
 db $FF                          ;End Event
-
-org $C9200F

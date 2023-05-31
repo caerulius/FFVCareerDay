@@ -20,13 +20,13 @@ ASAR_PATH = '/usr/local/bin/asar/asar/asar-standalone'
 MAIN_PATCH = 'all_patches.asm'
 TRANSLATE_PATCH = 'patches/rpge.ips'
 
-EXTRA_PATCH1 = 'patches/ff5_equip_change.ips'
-EXTRA_PATCH2 = 'patches/ff5_hp_color.ips'
-EXTRA_PATCH3 = 'patches/ff5_items_total.ips'
+# EXTRA_PATCH1 = 'patches/ff5_equip_change.ips'
+# EXTRA_PATCH2 = 'patches/ff5_hp_color.ips'
+# EXTRA_PATCH3 = 'patches/ff5_items_total.ips'
 EXTRA_PATCH4 = 'patches/ff5_lr_menu-1.0.ips'
 EXTRA_PATCH5 = 'patches/ff5_optimize.ips'
 EXTRA_PATCH6 = 'patches/ff5_reequip.ips'
-EXTRA_PATCH7 = 'patches/ff5_sortplus.ips'
+# EXTRA_PATCH7 = 'patches/ff5_sortplus.ips'
 
 HEADERED_J_SIZE = 2097664
 UNHEADERED_J_SIZE = 2097152
@@ -78,7 +78,7 @@ def patch_and_return():
 
         data = request.form.to_dict()
         logging.error("Request data %s" % (str(data)))
-        seed = data["seed"]
+        seed = str(data["seed"]).strip()
         if seed == "":
             seed = str(random.randint(1000000, 9999999))
         filename = "CareerDay-{}".format(seed)
@@ -111,8 +111,9 @@ def patch_and_return():
             smc = True
             rpge = False
 
-
-        smc = headers_and_translate(filename, reheader, rpge, (translateBool(data['extra_patches'])), smc)
+        extra_patches_flag = translateBool(data['extra_patches'])
+        logging.error("Header flags: REHEADER %s SMC %s RPGE %s EXTRA_PATCHES %s (%s)" % (reheader,smc,rpge, data['extra_patches'], extra_patches_flag))
+        smc = headers_and_translate(filename, reheader, rpge, extra_patches_flag, smc)
 
         if smc:
             os.rename(filename, filename + ".smc")
@@ -169,6 +170,7 @@ def patch_and_return():
                             'progressive_rewards':   data['progressive_rewards'],
                             'item_randomization':   data['item_randomization'],
                             'item_randomization_percent':   data['item_randomization_percent'],
+                            'boss_exp_percent':   data['boss_exp_percent'],
                             'battle_speed':   data['battle_speed'],
                             'red_color':   data['red_color'],
                             'green_color':   data['green_color'],
@@ -190,7 +192,9 @@ def patch_and_return():
                             'free_shops':   data['free_shops'],
                             'end_on_exdeath1': data['end_on_exdeath1'],
                             'hints_flag': data['hints_flag'],
+                            'remove_flashes': data['remove_flashes'],
                             'extra_patches': data['extra_patches'],
+                            'kuzar_credits_warp': data['kuzar_credits_warp'],
                             'seed':   seed
                             }
         logging.error("Begin randomization process")
@@ -257,10 +261,6 @@ def headers_and_translate(filename, reheader, rpge, extra_patches, smc):
     # reheader = there is no header on the rom 
     # not reheader = there is a header on the rom 
 
-    logging.error(reheader)
-    logging.error(rpge)
-    logging.error(extra_patches)
-
 
 
     try:
@@ -280,13 +280,13 @@ def headers_and_translate(filename, reheader, rpge, extra_patches, smc):
                 smc = True
                 reheader = True
 
-            ips.apply(EXTRA_PATCH1, filename)
-            ips.apply(EXTRA_PATCH2, filename)
-            ips.apply(EXTRA_PATCH3, filename)
+            # ips.apply(EXTRA_PATCH1, filename)
+            # ips.apply(EXTRA_PATCH2, filename)
+            # ips.apply(EXTRA_PATCH3, filename)
             ips.apply(EXTRA_PATCH4, filename)
             ips.apply(EXTRA_PATCH5, filename)
             ips.apply(EXTRA_PATCH6, filename) 
-            ips.apply(EXTRA_PATCH7, filename)
+            # ips.apply(EXTRA_PATCH7, filename)
             logging.error("Extra patches applied successfully")
     except FileNotFoundError as e:
         logging.error("Error applying extra patches")
@@ -361,13 +361,15 @@ def patch_careerday(filename, data):
     explv50 = bool_to_int(translateBool(data['everysteprandomencounter']))
     end_on_exdeath1 = bool_to_int(translateBool(data['end_on_exdeath1']))
     remove_ned = bool_to_int(translateBool(data['end_on_exdeath1']))
+    kuzar_credits_warp = bool_to_int(translateBool(data['kuzar_credits_warp']))
     # world_lock should be passed as an integer (either 0, 1 or 2). If it's not, make a function to do so
     world_lock = int(data['world_lock'])
+    remove_flashes = bool_to_int(translateBool(data['remove_flashes']))
     
     command = "(cd career_day/asm && {} --define dash=1 --define learning=1 --define pitfalls=1 \
     --define passages=1 --define double_atb=0 --define progressive={} --define abbreviated={} --define grantkeyitems={} --define boss_exp=1 --define free_tablets={} \
-    --define fourjobmode={} --define fourjoblock={} --define world_lock={} --define starting_cara={} --define end_on_exdeath1={}  --define remove_ned={} --define everysteprandomencounter={} --define explv50={}\
-    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, fourjoblock, world_lock, starting_cara, end_on_exdeath1, remove_ned, everysteprandomencounter, explv50, MAIN_PATCH, filename)
+    --define fourjobmode={} --define fourjoblock={} --define world_lock={} --define starting_cara={} --define end_on_exdeath1={}  --define remove_ned={} --define everysteprandomencounter={} --define explv50={} --define remove_flashes={} --define kuzar_credits_warp={}\
+    --fix-checksum=off --define vanillarewards=0 --no-title-check {} ../../{})".format(ASAR_PATH,progressive_rewards, abbreviated, grantkeyitems, free_tablets, fjf, fourjoblock, world_lock, starting_cara, end_on_exdeath1, remove_ned, everysteprandomencounter, explv50, remove_flashes, kuzar_credits_warp, MAIN_PATCH, filename)
 
     logging.error(command)
     

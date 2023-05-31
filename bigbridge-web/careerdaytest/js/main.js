@@ -66,13 +66,13 @@ $(document).ready( function() {
 		);
 	});
 
-	$("#settingstringpresetval1").val("SPOff W2 T15|3 A TBLT1 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris STP AB pbRandom"); // locked
-	$("#settingstringpresetval2").val("SPOn W0 T5|1 TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open
-	$("#settingstringpresetval3").val("SPOn W1 T5|1 PB I100 TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked weapon rando
-	$("#settingstringpresetval4").val("SPOn W0 T5|1 I100 TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open weapon rando 
-	$("#settingstringpresetval5").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W1 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked worlds fjf
-	$("#settingstringpresetval6").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W0 T5|1 PB TBLT0 RGB0|0|0 X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open fjf
-	$("#settingstringpresetval7").val("SPOn P W0 T5|1 A I100 TBLT0 RGB0|0|0 X4 BS3 AR HINT Lfull LNLenna GNGaluf CNCara FNFaris CDA CLA pbRandom"); // pure chaos
+	$("#settingstringpresetval1").val("SPOff W2 T15|3 A TBLT1 RGB0|0|0 NOFLASH X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris STP AB pbRandom"); // locked
+	$("#settingstringpresetval2").val("SPOn W0 T5|1 TBLT0 RGB0|0|0 NOFLASH X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open
+	$("#settingstringpresetval3").val("SPOn W1 T5|1 PB I100 TBLT0 RGB0|0|0 NOFLASH X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked weapon rando
+	$("#settingstringpresetval4").val("SPOn W0 T5|1 I100 TBLT0 RGB0|0|0 NOFLASH X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open weapon rando 
+	$("#settingstringpresetval5").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W1 T5|1 PB TBLT0 RGB0|0|0 NOFLASH X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // locked worlds fjf
+	$("#settingstringpresetval6").val("SPOn 4 J1Random J2Random J3Random J4Random FJNUM4 a W0 T5|1 PB TBLT0 RGB0|0|0 NOFLASH X4 BS3 AR HINT Lnone LNLenna GNGaluf CNCara FNFaris pbRandom"); // open fjf
+	$("#settingstringpresetval7").val("SPOn P W0 T5|1 A I100 TBLT0 RGB0|0|0 NOFLASH X4 BS3 AR HINT Lfull LNLenna GNGaluf CNCara FNFaris CDA CLA pbRandom"); // pure chaos
 
 	$("#settingstringpresetval1").click(function(){
 		$("#settingstringpresetval1").notify(
@@ -229,6 +229,7 @@ function apiCall(data){
         "default_abilities": $('#default_abilities').is(':checked'),
         "learning_abilities": $('#learning_abilities').is(':checked'),
         "item_randomization_percent": $("#item_randomization_percent").val(), 
+        "boss_exp_percent": $("#boss_exp_percent").val(), 
 		"battle_speed": $("#battle_speed").val(),
 		"red_color": $("#red_color").val(),
 		"blue_color": $("#blue_color").val(),
@@ -237,7 +238,11 @@ function apiCall(data){
         "free_tablets": $("#free_tablets").val(),
 		"place_all_rewards": $('#place_all_rewards').is(':checked'),
 		"hints_flag": $('#hints_flag').is(':checked'),
+		"remove_flashes": $('#remove_flashes').is(':checked'),
+
 		"extra_patches": $('#extra_patches').is(':checked'),
+		"kuzar_credits_warp" : $("#kuzar_credits_warp").is(':checked'),
+
 		"end_on_exdeath1": $('#end_on_exdeath1').is(':checked'),
 		"randomize_loot": $("input:radio[name=randomize_loot]:checked").val(),
 		"loot_percent": $("#loot_percent").val(), 
@@ -317,8 +322,12 @@ function getSettingString(){
 	if($('#item_randomization').is(':checked')){
 		seedString = seedString + " I" + $("#item_randomization_percent").val();
 	}
+	seedString = seedString + " BXP" + $("#boss_exp_percent").val();
 	seedString = seedString + " TBLT" + $("#free_tablets").val();
-	seedString = seedString + " RGB" + $("#red_color").val() + "|" + $("#blue_color").val() + "|" + $("#green_color").val();
+	seedString = seedString + " RGB" + $("#red_color").val() + "|" + $("#green_color").val() + "|" + $("#blue_color").val();
+	if($('#remove_flashes').is(':checked')){
+		seedString = seedString + " NOFLASH";
+	}	
 	seedString = seedString + " X" + $("#exp_mult").val();
 	seedString = seedString + " BS" + $("#battle_speed").val();
 	if($('#place_all_rewards').is(':checked')){
@@ -360,6 +369,11 @@ function getSettingString(){
 	if($('#extra_patches').is(':checked')){
 		seedString = seedString + " EXTRAP";
 	} 
+	if($('#kuzar_credits_warp').is(':checked')){
+		seedString = seedString + " CRED";
+	} 
+
+
 
 	if($('#end_on_exdeath1').is(':checked')){
 		seedString = seedString + " EOX";
@@ -469,7 +483,9 @@ function applyCustomSettingString(){
 		else if(val == "EXTRAP"){
 			$( "#extra_patches" ).prop( "checked", true );
 		}
-
+		else if(val == "CRED"){
+			$( "#kuzar_credits_warp" ).prop( "checked", true );
+		}
 		else if(val == "EOX"){
 			$( "#end_on_exdeath1" ).prop( "checked", true );
 		}
@@ -481,6 +497,9 @@ function applyCustomSettingString(){
 		}
 		else if(val == "GKI"){
 			$( "#grantkeyitems" ).prop( "checked", true );
+		}
+		else if(val == "NOFLASH"){
+			$( "#remove_flashes" ).prop( "checked", true );
 		}
 		else if(val == "CDA"){
 			$( "#default_abilities" ).prop( "checked", true );
@@ -518,6 +537,12 @@ function applyCustomSettingString(){
 			percent = parseInt(val.slice(1));
 			if(!isNaN(percent) && percent >= 0 && percent <= 100){
 				$("#item_randomization_percent").val(percent);	
+			}
+		}
+		else if(val.charAt(0) == "BXP"){
+			percent = parseInt(val.slice(3));
+			if(!isNaN(percent) && percent >= 0 && percent <= 999){
+				$("#boss_exp_percent").val(percent);
 			}
 		}
 		else if(val.startsWith("RGB")){
@@ -609,8 +634,12 @@ function clearSettings(){
 	$('#abbreviated').prop( "checked", false );
     $('#grantkeyitems').prop( "checked", false );
 	$('#hints_flag').prop( "checked", true );
+
 	$('#extra_patches').prop( "checked", false);
+	$('#kuzar_credits_warp').prop("unchecked", false)
+
     $('#end_on_exdeath1').prop( "checked", false );
+    $('#remove_flashes').prop( "checked", false );
     $('#default_abilities').prop( "checked", false );
     $('#learning_abilities').prop( "checked", false );
 
@@ -618,6 +647,7 @@ function clearSettings(){
 	$("#tiering_percentage").val(5);
 	$("#tiering_threshold").val(1);
 	$("#item_randomization_percent").val(100);
+	$("#boss_exp_percent").val(100);
 	$("#loot_percent").val("");
 	$("#fjf_num_jobs").val(4);
 	$("#exp_mult").val(4);

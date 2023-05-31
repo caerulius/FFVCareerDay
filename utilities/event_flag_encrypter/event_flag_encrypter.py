@@ -24,7 +24,7 @@ bitsetnum[0] = '80'
 #address = input("Input address: ")
 #bit = input("Input byte: ")
 #type_set = input("Input on/off: ")
-address = 'AC3'
+address = 'A36'
 bit = '20'
 type_set = 'on'
 def encrypt(address,bit,type_set):
@@ -132,7 +132,7 @@ def reverse_conditional_flag(address, bit, type_set):
     
         
 #conditional_flag('FB','19')
-reverse_conditional_flag('A1E','10','set')
+reverse_conditional_flag('A35','04','set')
             
             
             

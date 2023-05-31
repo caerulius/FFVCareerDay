@@ -50,7 +50,7 @@ ITEM_TYPE = "40"
 ITEM_SHOP_TYPE = "01"
 MAGIC_SHOP_TYPE = "00"
 CRYSTAL_SHOP_TYPE = "07"
-VERSION = "FFV Career Day v1.1"
+VERSION = "FFV Career Day v1.2"
 
 class Conductor():
     def __init__(self, random_engine, conductor_config={}, config_file="local-config.ini"):
@@ -79,6 +79,7 @@ class Conductor():
             self.progressive_rewards = False
             self.item_randomization = False
             self.item_randomization_percent = 100
+            self.boss_exp_percent = 100
             self.hints_flag = True
             self.setting_string = None
             self.learning_abilities = False
@@ -94,10 +95,12 @@ class Conductor():
             self.music_randomization = True
             self.free_shops = False
             self.seed = None
-            self.extra_patch = False
+            self.extra_patches = False
+            self.kuzar_credits_warp = False
             self.remove_ned = True
             self.key_items_in_mib = True
             self.free_tablets = 0
+            self.remove_flashes = True
             
             
         else:                           # else take the config passed from server.py and set variables
@@ -107,7 +110,7 @@ class Conductor():
             self.jobpalettes = self.translateBool(conductor_config['jobpalettes'])
             self.world_lock = int(conductor_config['world_lock'])
             self.tiering_config = self.translateBool(conductor_config['tiering_config'])
-            self.tiering_percentage = int(conductor_config['tiering_percentage'])
+            self.tiering_percentage = 100 - int(conductor_config['tiering_percentage'])
             self.tiering_threshold= int(conductor_config['tiering_threshold'])
             self.enforce_all_jobs = self.translateBool(conductor_config['enforce_all_jobs'])
 #            self.progressive_bosses = self.translateBool(conductor_config['progressive_bosses'])
@@ -115,6 +118,7 @@ class Conductor():
             self.progressive_rewards = self.translateBool(conductor_config['progressive_rewards'])
             self.item_randomization = self.translateBool(conductor_config['item_randomization'])
             self.item_randomization_percent = int(conductor_config['item_randomization_percent'])
+            self.boss_exp_percent = int(conductor_config['boss_exp_percent'])
             self.default_abilities = self.translateBool(conductor_config['default_abilities'])
             self.learning_abilities = self.translateBool(conductor_config['learning_abilities'])
             self.setting_string = conductor_config['setting_string']
@@ -131,8 +135,10 @@ class Conductor():
             self.free_shops = self.translateBool(conductor_config['free_shops'])
             self.remove_ned = self.translateBool(conductor_config['remove_ned'])
             self.key_items_in_mib = self.translateBool(conductor_config['key_items_in_mib'])
-            self.extra_patch = conductor_config['extra_patches']
+            self.extra_patches = conductor_config['extra_patches']
+            self.kuzar_credits_warp = conductor_config['kuzar_credits_warp']
             self.free_tablets = int(conductor_config['free_tablets'])
+            self.remove_flashes = self.translateBool(conductor_config['remove_flashes'])
 
             self.seed = conductor_config['seed']
             
@@ -487,13 +493,15 @@ class Conductor():
         else:
             key_item_list_remaining = [x for x in self.RM.get_rewards_by_style('key') if x.randomized == False]
 
-
-        # # TEMP DELETE LATER
-        # key_item_list_remaining[27].debug_flag = True
         
         for key_item_reward in key_item_list_remaining:
 
-            key_item_collectible = self.CM.get_of_value_or_lower(self.RE, value=4)
+            key_item_collectible = self.CM.get_random_collectible(self.RE,respect_weight=True, reward_loc_tier=key_item_reward.tier, of_type=key_item_reward.force_type,
+                                    monitor_counts=True, gil_allowed=key_item_reward.reward_style == "chest",next_reward=key_item_reward, 
+                                    tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold)
+
+
+            # key_item_collectible = self.CM.get_of_value_or_lower(self.RE, value=4)
             key_item_reward.set_collectible(key_item_collectible)
             key_item_reward.randomized = True
             self.CM.update_placement_rewards(key_item_collectible, key_item_reward)
@@ -570,7 +578,6 @@ class Conductor():
 
             
             if mib is not None and next_reward.reward_style == "chest": #only mibs in chests
-
                 if self.key_items_in_mib:
                     possible_placed_mib_keys = [x for x in self.RM.rewards if x.area == mib.area
                         and x.randomized == True
@@ -587,6 +594,8 @@ class Conductor():
 
 
                 to_place = self.CM.get_random_collectible(self.RE,reward_loc_tier=next_reward.tier,next_reward=next_reward, respect_weight=True, of_type=Item, monitor_counts=True, tiering_config=self.tiering_config, tiering_percentage=self.tiering_percentage, tiering_threshold=self.tiering_threshold, force_tier = chosen_tier) #only items in mibs
+                
+                logging.error("Assigning MIB from chosen tier %s -> Tier %s : %s" % (chosen_tier, to_place.tier, to_place.reward_name))
                 next_reward.mib_type = mib.monster_chest_data
                 mib.processed = True
                 #logging.error(mib.processed)
@@ -658,6 +667,69 @@ class Conductor():
                     j.randomized = True
                     self.AM.update_volume(j)
                     self.CM.update_placement_rewards(to_place, next_reward)
+                    
+                    
+                    
+        # final check for place_all_rewards
+        
+        if self.CM.collectible_config['place_all_rewards']:
+            
+            logging.error("Placing all rewards final check")
+            unplaced_collectibles = [i for i in self.CM.collectibles if i not in self.CM.placement_history.keys()]
+            
+            all_valid_collectibles = [i for i in self.CM.collectibles if i.valid and i.tier]
+            all_valid_collectibles = [i for i in all_valid_collectibles if i not in unplaced_collectibles]
+            
+            
+            
+            for collectible_to_place in unplaced_collectibles:
+                try:
+                    collectible_choices_to_replace = [i for i in all_valid_collectibles if collectible_to_place.tier >= i.tier -1 and collectible_to_place.tier <= i.tier + 1 and self.CM.placement_history[i] > 1]
+                    
+                    if not collectible_choices_to_replace:
+                        # try again, larger bottom tier
+                        collectible_choices_to_replace = [i for i in all_valid_collectibles if collectible_to_place.tier >= i.tier - 3 and collectible_to_place.tier <= i.tier + 3 and self.CM.placement_history[i] > 1]
+                        if not collectible_choices_to_replace:
+                            pass
+                    
+                    collectible_to_replace = self.RE.choice(collectible_choices_to_replace)                    
+                    valid_rewards = [i for i in self.RM.rewards if i.reward_style != 'mib_key' and i.reward_style != 'key' and i.collectible == collectible_to_replace]
+                    
+
+
+                    reward_choices_to_replace = [i for i in valid_rewards if int(collectible_to_replace.tier) >= int(i.tier)-1 and int(collectible_to_replace.tier) <= int(i.tier)+1]                    
+                    # disallow placing gil on events
+                    if collectible_to_place.name == "Gil":
+                        reward_choices_to_replace = [i for i in valid_rewards if "C0" not in i.address]
+                    
+                    
+                    if not reward_choices_to_replace:
+                        # try again, larger bottom tier
+                        reward_choices_to_replace = [i for i in valid_rewards if int(collectible_to_replace.tier) >= int(i.tier)-3 and int(collectible_to_replace.tier) <= int(i.tier)+3 and "C0" not in i.address]
+                        if not reward_choices_to_replace:
+                            pass
+                    
+                        
+                    reward_to_replace = self.RE.choice(reward_choices_to_replace)
+                    
+                    logging.error("Replacing %s (%s) : %s (%s) with %s (%s)" % (reward_to_replace.description, reward_to_replace.tier, collectible_to_replace.reward_name, collectible_to_replace.tier, collectible_to_place.reward_name, collectible_to_place.tier))
+                    
+                    # adjust placement history for chosen collectible by -1
+
+                    self.CM.placement_history[collectible_to_replace] = self.CM.placement_history[collectible_to_replace] - 1
+                    self.CM.add_to_placement_history(collectible_to_place, reward_to_replace)
+                    self.CM.update_placement_rewards(collectible_to_place, reward_to_replace)
+                    self.CM.remove_from_placement_rewards(collectible_to_replace, reward_to_replace)
+                    reward_to_replace.set_collectible(collectible_to_place)
+                    reward_to_replace.randomized = True
+                except:
+                    logging.error("Failure on placing %s" % collectible_to_place.reward_name)
+                
+                
+            
+            
+
+        
             
 
     def randomize_shops(self):
@@ -903,7 +975,7 @@ class Conductor():
 
                 value = value + 1
         
-        # finally dedupe shops
+        #  dedupe shops
         global shops
         shops = self.SM.shops
         
@@ -1012,8 +1084,8 @@ class Conductor():
 
         DEBUG_FLAG = False
         LOOP_FLAG = False
-        ENEMY_LIST_STRING_BEING_RANDOMIZED = 'Gilga'
-        ENEMY_LIST_STRING_TO_REPLACE = 'Tyras'
+        ENEMY_LIST_STRING_BEING_RANDOMIZED = 'Omniscient'
+        ENEMY_LIST_STRING_TO_REPLACE = 'Halicarnaso'
         
 
         
@@ -1027,11 +1099,11 @@ class Conductor():
             
             # override use this for specific encounters like in gilgamesh's case
             if True:
-                formation_list = [i for i in formation_list if i.idx == '465'] + [i for i in formation_list if i.idx != '465']
+                formation_list = [i for i in formation_list if i.idx == '406'] + [i for i in formation_list if i.idx != '406']
             
 
         for random_boss in formation_list:
-
+            
             # First pick a random original boss
                         
             if DEBUG_FLAG:
@@ -1055,6 +1127,21 @@ class Conductor():
             while (original_boss.enemy_1_name == "Odin" and random_boss.enemy_1_name in banned_at_odin):
                 original_boss_list = [original_boss] + original_boss_list
                 original_boss = original_boss_list.pop()
+
+
+            # disallow Sandworm in Fork Tower
+            
+            # logging.error("Original boss: %s"  % original_boss.enemy_list)
+            while (("Sandworm" in random_boss.enemy_list or "Atmos" in random_boss.enemy_list) and original_boss.enemy_1_name in ['Omniscient', 'Minotauros']):
+                original_boss_list = [original_boss] + original_boss_list
+                original_boss = original_boss_list.pop()
+                
+            if "Sandworm" in random_boss.enemy_list:
+                logging.error("Placed Sandworm at %s" % original_boss.enemy_list)
+            if "Atmos" in random_boss.enemy_list:
+                logging.error("Placed Atmos at %s" % original_boss.enemy_list)
+
+
             if original_boss.enemy_1_name == "Odin":               
                 # all we need to do is take the current final flag of random boss
                 # which corresponds to in battle flags associated with that formation
@@ -1191,6 +1278,11 @@ class Conductor():
             if original_formation_id in ['0F']:
                 new_hp = new_hp * 5
                 
+            # CLAUSE FOR ENEMIES WITH 6x BOSS AS SEPARATE ENEMIES
+            # PUROBUROS
+            if original_formation_id in ['12']:
+                new_hp = new_hp * 2
+                
             # CLAUSE FOR SOL CANNON
             if original_formation_id in ['0E']:
                 new_hp = 12500
@@ -1308,24 +1400,34 @@ class Conductor():
                 random_boss.enemy_classes[0].num_hp = new_hp
 
 
-            # Get base exp
-            base_exp = RANK_EXP_REWARD[round(int(new_rank)/3)]
+
+            # new exp system
+            try:
+                new_exp = new_hp * float(self.boss_exp_percent / 100)
+            except:
+                logging.error("Error on parsing boss_exp_percent %s, setting to 100 percent" % self.boss_exp_percent)
+                new_exp = new_hp
             
-            # Adjust base exp based on multiplier
-            # This is INVERTED multiplier
-            # If you fight a hard boss at an easy location, the multiplier will be less than 1 
-            # To reduce its stats
-            # However, you want to still reward the player MORE because it is still a hard boss
-            # So invert the multiplier
+            
+            # old exp system
+            # # Get base exp
+            # base_exp = RANK_EXP_REWARD[round(int(new_rank)/3)]
+            
+            # # Adjust base exp based on multiplier
+            # # This is INVERTED multiplier
+            # # If you fight a hard boss at an easy location, the multiplier will be less than 1 
+            # # To reduce its stats
+            # # However, you want to still reward the player MORE because it is still a hard boss
+            # # So invert the multiplier
     
-            # First use 25% multiplier over 100% of the original (the +1 at the end)
-            rank_mult = (abs(rank_delta) * float(self.conductor_config['STAT_MULTIPLIER'])) + 1 
+            # # First use 25% multiplier over 100% of the original (the +1 at the end)
+            # rank_mult = (abs(rank_delta) * float(self.conductor_config['STAT_MULTIPLIER'])) + 1 
             
-            new_exp = base_exp * 1/rank_mult
-            # Round for nice number, merely for presentation
-            new_exp = int(round(new_exp,-2))
+            # new_exp = base_exp * 1/rank_mult
+            # # Round for nice number, merely for presentation
+            # new_exp = int(round(new_exp,-2))
             
-            # First clear out exp on all enemies:
+            # # First clear out exp on all enemies:
             
             for enemy in random_boss.enemy_classes:
                 enemy.num_exp = 0
@@ -1343,8 +1445,8 @@ class Conductor():
             # Split exp
             
             # CLAUSE FOR FORMATIONS WITH SHARED HP, ONLY ONE ENEMY ACTIVE ON THE FIELD
-            # WINGRAPTOR, SIREN, LIQUIFLAME, ARCHEOAVIS, MELUSINE, CARBUNKLE, GILGAMESH, TWINTANIA, STALKER
-            if random_boss.event_id in ['01','03','07','0F','2B','22','23','4A','2E']:
+            # WINGRAPTOR, SIREN, LIQUIFLAME, ARCHEOAVIS, MELUSINE, CARBUNKLE, GILGAMESH, TWINTANIA
+            if random_boss.event_id in ['01','03','07','0F','2B','22','23','4A']:
                 for enemy in random_boss.enemy_classes:
                     enemy.num_exp = new_exp
             # CLAUSE FOR FORMATIONS WITH 2x SAME/SIMILAR BOSS:
@@ -1367,8 +1469,8 @@ class Conductor():
                     enemy.num_exp = round(new_exp / 6)
                     
             # CLAUSE FOR FORMATIONS WITH 4x SAME/SIMILAR BOSS:
-            # GUARDIANS
-            elif random_boss.event_id in ['21']:
+            # GUARDIANS, STALKER
+            elif random_boss.event_id in ['21', '2E']:
                 for enemy in random_boss.enemy_classes:
                     enemy.num_exp = round(new_exp / 4)
                     
@@ -1377,6 +1479,9 @@ class Conductor():
                 new_exp = int(round(new_exp / 3))
                 for enemy in [random_boss.enemy_classes[3],random_boss.enemy_classes[4],random_boss.enemy_classes[5]]:
                     enemy.num_exp = new_exp
+            # CLAUSE FOR SOL CANNON:
+            elif random_boss.event_id in ['0E']:
+                random_boss.enemy_classes[0].num_exp = max(1,new_exp - 10000)
                     
             else:    
                 random_boss.enemy_classes[0].num_exp = new_exp
@@ -1404,7 +1509,12 @@ class Conductor():
                     text_str = text_str + "; Original HP: "+str(random_boss.enemy_classes[0].num_hp)+"\n"
                     text_str = text_str + "; New trigger HP: "+str(trigger_hp)+"\n" 
                     text_str = text_str + 'org $'+address+'\n'
-                    text_str = text_str + inttohex_asar(trigger_hp)+"\n"
+                    
+                    hp_hex = inttohex_asar(trigger_hp)
+                    if "fe" in hp_hex.lower():
+                        hp_hex = hp_hex.replace("fe", "ef")
+                    
+                    text_str = text_str + hp_hex +"\n"
                 
                 return text_str
 
@@ -1525,7 +1635,7 @@ class Conductor():
         
     def set_portal_boss(self, output_str):
         if self.configs['portal_boss'] == "Random":
-            portal_boss_str = random.choice(['DragonClan','RainSenshi','SomberMage'])
+            portal_boss_str = random.choice(['DragonClan','RainSenshi','SomberMage', 'Tetsudono'])
         else:
             portal_boss_str =  self.configs['portal_boss']
         self.portal_boss_str = portal_boss_str
@@ -1858,7 +1968,7 @@ class Conductor():
         text_dict2 = pd.read_csv(self.config['PATHS']['text_table_path'] + self.config['PATHS']['text_table_to_use'], header=None, index_col=1).to_dict()[0]
         #text_dict2 = pd.read_csv(os.path.join(os.path.pardir,'data','tables','text_tables','text_table_chest.csv'),header=None,index_col=1).to_dict()[0]
         
-        letters = self.RE.sample('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',6)
+        letters = self.RE.sample('ABCDEFGHIJKLMNOPQRSTUVWXYZ',6)
         code_str = 'db '
         for letter in letters:
             code_str = code_str + "$" +str(text_dict2[letter]) + ", "
@@ -2029,6 +2139,7 @@ class Conductor():
         ###########
         
         hint_data = [hint for hint in self.DM.files['hints']['start']]
+        
         
         hint_data_str = []
         tp = TextParser()
@@ -2496,7 +2607,7 @@ class Conductor():
 ####################################
 
 if __name__ == "__main__":   
-    # SEED_NUM = 4552623
+    # SEED_NUM = 585152
     SEED_NUM = random.randint(1,1000000)
     random.seed(SEED_NUM)
     
@@ -2508,10 +2619,10 @@ if __name__ == "__main__":
                                'fjf': 'false', 
                                'fjf_strict': 'false', 
                                'fjf_num_jobs' : 4,
-                               'job_1': 'Random', 
-                               'job_2': 'Random', 
-                               'job_3': 'Random', 
-                               'job_4': 'Random', 
+                               'job_1': 'Monk', 
+                               'job_2': 'Monk', 
+                               'job_3': 'Monk', 
+                               'job_4': 'Monk', 
                                'lenna_name': 'Lenna', 
                                'galuf_name': 'Galuf', 
                                'cara_name': 'Cara',
@@ -2538,17 +2649,20 @@ if __name__ == "__main__":
                                'learning_abilities': 'false', 
                                'free_tablets' : '0',
                                'item_randomization_percent': '100', 
+                               'boss_exp_percent': '100', 
                                'battle_speed': '3',
                                'red_color': '0', 
                                'blue_color': '0', 
                                'green_color': '0', 
                                'exp_mult': '4', 
+                               'remove_flashes' : 'true',
                                'place_all_rewards': 'true', 
                                'randomize_loot': 'none', 
                                'loot_percent': '25', 
-                               'portal_boss': 'Random', 
+                               'portal_boss': 'Tetsudono', 
                                'hints_flag': 'true', 
                                'extra_patches': 'false', 
+                               'kuzar_credits_warp' : 'false',
                                'setting_string': 'P W1 T5|1 A PR I100 RGB0|0|0 X4 BS3 AR Lfull LNLenna GNGaluf CNCara FNFaris CA RND AB CDA pbSomberMage', 
                                'fileLocation': 'https://bigbridgecareerday.s3.amazonaws.com/careerdayuploads/1593387118413-Final%20Fantasy%20V%20%28J%29.smc',
                                'jobpalettes':'true'}
@@ -2574,8 +2688,21 @@ if __name__ == "__main__":
 
 
 
-
-
+    
+    # if True:
+    #     # use this to check if mismatched rewards
+        
+    #     mismatched = {}
+    #     for i in c.CM.collectibles:
+    #         try:
+    #             if i != i.placed_reward.collectible:
+    #                 mismatched[i.placed_reward] = i
+    #         except:
+    #             pass
+    
+    #     for k, v in mismatched.items():
+    #         print(v.reward_name, "\t\t", k.description)
+    
 
 
 

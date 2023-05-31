@@ -628,4 +628,105 @@ class EnemyManager(object):
             output_str = output_str + "\n" + "db $76, $81, $7A, $8D, $96, $81, $7A, $8F, $7E, $96, $92, $88, $8E, $96, $85, $7E, $7A, $8B, $87, $7E, $7D, $96, $7A, $7B, $88, $8E, $8D, $96, $8D, $81, $7E, $01, $85, $7A, $90, $8C, $96, $88, $7F, $96, $89, $81, $92, $8C, $82, $7C, $8C, $96, $8D, $88, $96, $89, $8B, $7E, $89, $7A, $8B, $7E, $96, $92, $88, $8E, $01, $7F, $88, $8B, $96, $8D, $81, $82, $8C, $96, $7B, $7A, $8D, $8D, $85, $7E, $A2, $96, $62, $88, $86, $7E, $A1, $00"
 
 
+
+        if portal_boss_str == 'Tetsudono':
+            
+            
+            output_str = ''
+            output_str = '\n\n; PORTAL BOSS\n'
+            
+            # Change liquiflame formation to not have opening hide and no ABP. Last byte shows who's unhidden
+            output_str = output_str + "\n" + "; Formation changes"
+            output_str = output_str + "\n" + ("org $D04EB0")
+            output_str = output_str + "\n" + ("db $00, $80, $00, $80")
+            
+            # Add 3 bosses for liquiflame, kuzar, solcannon
+            output_str = output_str + "\n" + ("org $D04EB4")
+            output_str = output_str + "\n" + ("db $65, $66, $67")
+            # Change to Exdeath W2 music and Strong Boss fade
+            output_str = output_str + "\n" + ("org $D04EBE")
+            output_str = output_str + "\n" + ("db $28, $21")
+            
+            
+            # set liquidflame spot to AI
+            output_str = output_str + "\n" + ";AI table changes"
+            output_str = output_str + "\n" + ("org $D09ECA")
+            output_str = output_str + "\n" + ("db $E0, $F1")
+            # set kuzar ai
+            output_str = output_str + "\n" + ("db $E0, $F2")
+            # set solcannon ai
+            output_str = output_str + "\n" + ("db $E0, $F3")
+            
+            output_str = output_str + "\n" + ";Formation table changes"
+            # Formation table, which will correspond to battle code $BD, $55, $FF found in the custom event
+            output_str = output_str + "\n" + ("org $D07954")
+            output_str = output_str + "\n" + ("db $EB, $01") # ; use liquiflame formation in free space on lookup table
+            output_str = output_str + "\n" + ("db $EB, $01") # ; duplicate for table sometimes pulling next address
+            # Now pivot on which type of portal boss 
+
+            ########## 
+            # UPDATE STEP
+            # Custom write AI for each of the forms
+            ##########
+            output_str = output_str + "\n" + ";AI Changes"
+            #LiquiFlame AI
+            
+            data = parse_ai_data('tetsudono.txt')
+            output_str = output_str + "\n" + data
+
+
+            # End of battle dialogue
+            output_str = output_str + "\n" + "org $D0F1D4"
+            output_str = output_str + "\n" + "db $B0, $4F"
+            
+            output_str = output_str + "\n" + "org $E74FB0"
+            output_str = output_str + "\n" + "db $A3, $A3, $A3, $00"
+            ########## 
+            # UPDATE STEP
+            # Change formation x/y coords if necessary. Default is middle
+            ##########
+            output_str = output_str + "\n" + ";Enemy X/Y Coords"
+            # ; Formation coords. Low byte x, High byte y coord
+            output_str = output_str + "\n" + ("org $d09858")
+            output_str = output_str + "\n" + ("db $78, $78, $78, $78, $78, $78, $78, $78") # ; default
+
+            ########## 
+            # UPDATE STEP
+            # Change sprites. The addresses are always the same, but you can grab from enemy_data.csv, the rightmost columns
+            # Then change the 4th byte (and also the $00 or $01 on the 3rd byte) for palette swaps
+            ##########
+            
+            # Change sprites 
+            # ; Cherie sprite
+            output_str = output_str + "\n" + "; Battle sprite changes"
+            output_str = output_str + "\n" + ("org $D4B879")
+            
+
+            output_str = output_str + "\n" + ("db $32, $6A, $81, $51, $19")
+            output_str = output_str + "\n" + ("db $32, $6A, $81, $53, $19")
+            output_str = output_str + "\n" + ("db $32, $6A, $81, $4C, $19")
+            
+
+            ########## 
+            # UPDATE STEP
+            # Change name of enemy with text_parser2.py, limit of 10 characters
+            ##########            
+            # ; Change LiquiFlame, Kuzar and Sol Cannon name to TETSUDONO
+            output_str = output_str + "\n" + ("org $E00E42")
+            output_str = output_str + "\n" + ("db $73, $7E, $8D, $8C, $8E, $7D, $88, $87, $88, $FF")
+            output_str = output_str + "\n" + ("db $73, $7E, $8D, $8C, $8E, $7D, $88, $87, $88, $FF")
+            output_str = output_str + "\n" + ("db $73, $7E, $8D, $8C, $8E, $7D, $88, $87, $88, $FF")
+            
+            ########## 
+            # UPDATE STEP
+            # Change dialogue of enemy before battle
+            ##########            
+
+            output_str = output_str + "\n" + "; Pre-battle dialogue"
+            output_str = output_str + "\n" + "org $E14BF1"
+            output_str = output_str + "\n" + "db $65, $8B, $88, $86, $96, $8D, $81, $7E, $96, $7F, $88, $8B, $80, $7E, $A3, $A3, $A3, $01, $68, $96, $81, $7A, $8F, $7E, $96, $7A, $8B, $82, $8C, $7E, $87, $96, $8D, $88, $96, $7E, $91, $8D, $7E, $8B, $86, $82, $87, $7A, $8D, $7E, $96, $92, $88, $8E, $A3, $A3, $A3, $01, $61, $7E, $96, $80, $88, $87, $7E, $A1, $00"
+
+
+
+
         return output_str

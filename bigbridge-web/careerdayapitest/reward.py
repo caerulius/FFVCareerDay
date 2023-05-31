@@ -66,8 +66,15 @@ class Reward:
             return ""
         if str(type(self.collectible)) == "<class 'collectible.KeyItem'>":
             return '{:30}'.format("%s " % (self.description)) + '{:30}'.format("%s" % (self.collectible.reward_name))
+        if str(type(self.collectible)) == "<class 'collectible.Magic'>":
+            return '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s (%s)" % (self.collectible.tier, self.collectible.reward_name, self.collectible.type))
+        if str(type(self.collectible)) == "<class 'collectible.Ability'>":
+            return '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s (%s)" % (self.collectible.tier, self.collectible.reward_name, "Ability"))
+        if str(type(self.collectible)) == "<class 'collectible.Crystal'>":
+            return '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s (%s)" % (self.collectible.tier, self.collectible.reward_name, "Crystal"))
+    
+
         if self.mib_type is None:
-            # return f"{self.description} {self.original_reward} (T{self.tier}) -> {self.collectible.reward_name} (T{self.collectible.tier})"
             return  '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s" % (self.collectible.tier, self.collectible.reward_name))
         else:
             return '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s (monster-in-a-box)" % (self.collectible.tier, self.collectible.reward_name))
@@ -82,12 +89,6 @@ class Reward:
 
     def set_collectible(self, collectible, type_override=None):
         self.randomized = True
-        # collectible.collectible_name == 'Avis Killer' or 
-        # if collectible.collectible_name == 'Golden Armor':
-            # breakpoint()# 
-        # if "debug_flag" in self.__dict__:
-            # breakpoint()
-            
         self.collectible = collectible
 
 class RewardManager:

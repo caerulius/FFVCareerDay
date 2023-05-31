@@ -35,8 +35,8 @@ db $B5, $02                     ;Play Sound Effect Void, Image
 db $C4, $06
 db $71
 db $E1, $01, $00, $4C, $6F, $00 ;Return from cutscene? E1 00 97 1A 00
-db $ED, $01, $4B, $6E, $6C ; hiryuu CONDITIONAL
-db $ED, $01, $4C, $73, $90 ; submarine CONDITIONAL
+db $ED, $01, $AC, $A5, $6C ; hiryuu CONDITIONAL
+db $ED, $01, $AD, $A5, $90 ; submarine CONDITIONAL
 db $D2, $01, $4D, $6F, $D8 ; airship ???
 
 ; WORLD CONDITIONALS

@@ -68,7 +68,7 @@
 		<div class="container">
 			<h4>Looking for help with this randomizer? Check out our <a href = "https://www.bigbridge.studio/cdwiki/doku.php">Career Day wiki!</a></h4>
 			<br>
-			<h2>Generate Randomized FF5 Rom (v1.1)</h2>
+			<h2>Generate Randomized FF5 Rom (v1.2)</h2>
 			<input type="file" accept=".smc, .sfc" class="file-browse" id="fileupload"/>
 			<label for="fileupload"><i class="fa fa-upload"></i>  Browse</label>
 			<div class="file-info" id="file-info">Upload a Final Fantasy 5 ROM, Japanese or patched with the RPGe Translation</div><br/>
@@ -515,6 +515,11 @@
 				onblur="javascript: if (this.value < 1 || this.value > 4) this.value = 0">
 					<b>Free Tablets</b> Grant the player between 0 to 4 free tablets
 			</div>
+			<div class="input-div">
+				<input type="number" class="option" id="boss_exp_percent" value="100" style="width:50px" 
+				onblur="javascript: if (this.value < 0 || this.value > 999) this.value = 0">
+					<b>Boss EXP Percent</b> Bosses will award EXP based on their cumulative HP. Choose a multiplier (default 100%)
+			</div>
 			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
 				<input type="checkbox" class="option" id="abbreviated" checked>
 				<div class="state">
@@ -571,6 +576,15 @@
 				</div>
 			</div><p>
 			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="remove_flashes" checked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Remove flashes:</b> Removes various white flashes from the game (boss KO, Grand Cross)
+					</label>
+				</div>
+			</div><p>
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
 				<input type="checkbox" class="option" id="explv50" checked>
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
@@ -579,17 +593,29 @@
 					</label>
 				</div>
 			</div>
-<!-- 
+
 			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
-				<input type="checkbox" class="option" id="extra_patches" unchecked>
+				<input type="checkbox" class="option" id="extra_patches" checked>
 				<div class="state">
 					<i class="icon fa fa-check check-icon"></i>
 					<label>
-						<b>Extra patches</b> Extra patches from http://x11.s11.xrea.com/ff5patches Improvements to sorting, re-equipping on job change, and optimize
+						<b>Extra patches</b> Extra patches from http://x11.s11.xrea.com/ff5patches L/R menus, re-equipping on job change, and optimize
 					</label>
 				</div>
 			</div>
--->
+
+
+			<div class="pretty p-curve p-smooth p-bigger p-icon check-div">
+				<input type="checkbox" class="option" id="kuzar_credits_warp" unchecked>
+				<div class="state">
+					<i class="icon fa fa-check check-icon"></i>
+					<label>
+						<b>Credits Warp</b> Enable NPC in Kuzar to access credits
+					</label>
+				</div>
+			</div>
+
+
 
 
 			<br>
@@ -601,6 +627,7 @@
                     <option value="DragonClan">DragonClan
                     <option value="RainSenshi">RainSenshi
 					<option value="SomberMage">SomberMage
+					<option value="Tetsudono">Tetsudono
 				</select>
 			</div>			
 

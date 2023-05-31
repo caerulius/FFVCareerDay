@@ -79,7 +79,7 @@ class Shop(object):
     @property
     def short_output(self):
         #these two lists format the None collectibles into strings for easy reading
-        # breakpoint()
+
         readable_original = [x.shop_name if x is not None else "None" for x in self.original_contents]
         readable_current = [x.shop_name if x is not None else "None" for x in self.contents]
         readable_current_tier = ["T"+str(x.tier) if x is not None else "  " for x in self.contents]

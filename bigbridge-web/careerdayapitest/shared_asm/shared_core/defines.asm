@@ -1,10 +1,15 @@
 ; addresses 
 
-!ADDRESS_expmod = $F000A0
+!ADDRESS_expmod = $F00300
 !ADDRESS_abpmod = $F00100
 !ADDRESS_progressiverewards = $F02000
 !ADDRESS_chesthook = $F03000
 !ADDRESS_chesthook_mib = $F03200
+!ADDRESS_chesthook_mib_disable_on_reward_new_regular_item = $F03280
+!ADDRESS_chesthook_new_reward_had_prior_item = $F03300
+!ADDRESS_reset_unusedram3 = $F03380
+
+
 !ADDRESS_jobindexing = $F00400
 !ADDRESS_magicreward = $F00480
 !ADDRESS_double_atb = $F004A0
@@ -127,6 +132,7 @@
 !rewardid = $12
 !unusedram1 = $1F10
 !unusedram2 = $1F11
+!unusedram3 = $1F12
 
 !worldmapflag = $0B53 ; if this is 1, not in world map
 !walkinginput = $0b03

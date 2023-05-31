@@ -3,18 +3,18 @@ magic_id,readable_name,type,value,max_count,valid,item_randomization_valid,relat
 1,Ice,Sword,2,1,TRUE,FALSE,[“MysticKnight”],1,1,
 2,Bolt,Sword,2,1,TRUE,FALSE,[“MysticKnight”],2,1,
 3,Venom,Sword,2,1,TRUE,FALSE,[“MysticKnight”],3,1,
-4,Mute,Sword,2,1,TRUE,FALSE,[“MysticKnight”],4,1,
-5,Sleep,Sword,2,1,TRUE,FALSE,[“MysticKnight”],5,1,
+4,Mute,Sword,2,1,TRUE,FALSE,[“MysticKnight”],4,2,
+5,Sleep,Sword,2,1,TRUE,FALSE,[“MysticKnight”],5,2,
 6,Fire2,Sword,2,1,TRUE,FALSE,[“MysticKnight”],0,2,
 7,Ice2,Sword,2,1,TRUE,FALSE,[“MysticKnight”],1,2,
 8,Bolt2,Sword,2,1,TRUE,FALSE,[“MysticKnight”],2,2,
-9,Drain,Sword,3,1,TRUE,FALSE,[“MysticKnight”],3,2,
-0A,Break,Sword,3,1,TRUE,FALSE,[“MysticKnight”],3,3,
+9,Drain,Sword,3,1,TRUE,FALSE,[“MysticKnight”],3,3,
+0A,Break,Sword,3,1,TRUE,FALSE,[“MysticKnight”],3,4,
 0B,Bio,Sword,3,1,TRUE,FALSE,[“MysticKnight”],5,3,
 0C,Fire3,Sword,3,1,TRUE,FALSE,[“MysticKnight”],0,4,
 0D,Ice3,Sword,3,1,TRUE,FALSE,[“MysticKnight”],1,4,
 0E,Bolt3,Sword,3,1,TRUE,FALSE,[“MysticKnight”],2,4,
-0F,Holy,Sword,3,1,TRUE,FALSE,[“MysticKnight”],4,7,
+0F,Holy,Sword,3,1,TRUE,FALSE,[“MysticKnight”],4,5,
 10,Flare,Sword,3,1,TRUE,FALSE,[“MysticKnight”],5,7,
 11,Psych,Sword,3,1,TRUE,FALSE,[“MysticKnight”],4,3,
 12,Cure,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",6,1,3
@@ -27,13 +27,13 @@ magic_id,readable_name,type,value,max_count,valid,item_randomization_valid,relat
 19,Life,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",0B,2,24
 1A,Charm,White,2,1,TRUE,TRUE,"[“WhiteMage”, “RedMage”]",0A,2,27
 1B,Image,White,2,1,TRUE,TRUE,[“WhiteMage”],9,2,30
-1C,Shell,White,2,1,TRUE,TRUE,[“WhiteMage”],7,2,33
+1C,Shell,White,2,1,TRUE,TRUE,[“WhiteMage”],7,3,33
 1D,Heal,White,2,1,TRUE,TRUE,[“WhiteMage”],9,3,36
 1E,Cure3,White,2,1,TRUE,TRUE,[“WhiteMage”],6,4,39
 1F,Wall,White,2,1,TRUE,TRUE,[“WhiteMage”],7,3,42
 20,Bersk,White,2,1,TRUE,TRUE,[“WhiteMage”],8,3,45
 21,Life2,White,2,1,TRUE,TRUE,[“WhiteMage”],0B,4,48
-22,Holy,White,2,1,TRUE,TRUE,[“WhiteMage”],0A,7,51
+22,Holy,White,2,1,TRUE,TRUE,[“WhiteMage”],0A,6,51
 23,Dispel,White,2,1,TRUE,TRUE,[“WhiteMage”],7,3,54
 24,Fire,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0C,1,34
 25,Ice,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0D,1,34
@@ -45,14 +45,14 @@ magic_id,readable_name,type,value,max_count,valid,item_randomization_valid,relat
 2B,Ice2,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0D,2,55
 2C,Bolt2,Black,2,1,TRUE,TRUE,"[“BlackMage”, “RedMage”]",0E,2,55
 2D,Drain,Black,2,1,TRUE,TRUE,[“BlackMage”],0F,2,63
-2E,Break,Black,2,1,TRUE,TRUE,[“BlackMage”],0F,3,70
+2E,Break,Black,2,1,TRUE,TRUE,[“BlackMage”],0F,4,70
 2F,Bio,Black,2,1,TRUE,TRUE,[“BlackMage”],11,3,70
 30,Fire3,Black,2,1,TRUE,TRUE,[“BlackMage”],0C,4,79
 31,Ice3,Black,2,1,TRUE,TRUE,[“BlackMage”],0D,4,79
 32,Bolt3,Black,2,1,TRUE,TRUE,[“BlackMage”],0E,4,79
 33,Flare,Black,2,1,TRUE,TRUE,[“BlackMage”],11,7,110
-34,Doom,Black,2,1,TRUE,TRUE,[“BlackMage”],10,5,105
-35,Psych,Black,2,1,TRUE,TRUE,[“BlackMage”],10,3,92
+34,Doom,Black,2,1,TRUE,TRUE,[“BlackMage”],10,6,105
+35,Psych,Black,2,1,TRUE,TRUE,[“BlackMage”],10,2,92
 36,Drag,Time,2,1,FALSE,FALSE,[“TimeMage”],FF,1,
 37,Slow,Time,2,1,TRUE,TRUE,[“TimeMage”],12,1,49
 38,Regen,Time,2,1,TRUE,TRUE,[“TimeMage”],13,1,53
@@ -66,7 +66,7 @@ magic_id,readable_name,type,value,max_count,valid,item_randomization_valid,relat
 40,Slow2,Time,2,1,TRUE,TRUE,[“TimeMage”],12,3,81
 41,Reset,Time,2,1,TRUE,FALSE,[“TimeMage”],13,1,
 42,Qrter,Time,2,1,TRUE,TRUE,[“TimeMage”],14,4,97
-43,Hast2,Time,2,1,TRUE,TRUE,[“TimeMage”],15,4,94
+43,Hast2,Time,2,1,TRUE,TRUE,[“TimeMage”],15,5,94
 44,Old,Time,2,1,TRUE,TRUE,[“TimeMage”],14,3,99
 45,Meteo,Time,2,1,TRUE,TRUE,[“TimeMage”],16,7,110
 46,Quick,Time,2,1,TRUE,FALSE,[“TimeMage”],15,7,102
@@ -77,22 +77,22 @@ magic_id,readable_name,type,value,max_count,valid,item_randomization_valid,relat
 4B,Shiva,Esper,2,1,TRUE,FALSE,[“Summoner”],1A,2,
 4C,Ramuh,Esper,2,1,TRUE,FALSE,[“Summoner”],1A,2,
 4D,Ifrit,Esper,2,1,TRUE,FALSE,[“Summoner”],1A,2,
-4E,Titan,Esper,2,1,TRUE,FALSE,[“Summoner”],17,4,
+4E,Titan,Esper,2,1,TRUE,FALSE,[“Summoner”],17,3,
 4F,Golem,Esper,2,1,TRUE,FALSE,[“Summoner”],17,5,
 50,Shoat,Esper,2,1,TRUE,FALSE,[“Summoner”],19,4,
 51,Crbnkl,Esper,2,1,TRUE,FALSE,[“Summoner”],18,5,
-52,Syldra,Esper,2,1,TRUE,FALSE,[“Summoner”],18,6,
+52,Syldra,Esper,2,1,TRUE,FALSE,[“Summoner”],18,7,
 53,Odin,Esper,2,1,TRUE,FALSE,[“Summoner”],17,7,
-54,Phenix,Esper,2,1,TRUE,FALSE,[“Summoner”],18,8,
-55,Levia,Esper,2,1,TRUE,FALSE,[“Summoner”],19,8,
-56,Bahmut,Esper,2,1,TRUE,FALSE,[“Summoner”],1A,8,
+54,Phenix,Esper,2,1,TRUE,FALSE,[“Summoner”],18,6,
+55,Levia,Esper,2,1,TRUE,FALSE,[“Summoner”],19,7,
+56,Bahmut,Esper,2,1,TRUE,FALSE,[“Summoner”],1A,7,
 57,Power,Song,2,1,TRUE,FALSE,[“Bard”],1B,1,
-58,Speed,Song,2,1,TRUE,FALSE,[“Bard”],1C,1,
+58,Speed,Song,2,1,TRUE,FALSE,[“Bard”],1C,3,
 59,Vitality,Song,2,1,TRUE,FALSE,[“Bard”],1B,1,
-5A,Magic,Song,2,1,TRUE,FALSE,[“Bard”],1D,1,
-5B,Hero,Song,2,1,TRUE,FALSE,[“Bard”],1E,4,
+5A,Magic,Song,2,1,TRUE,FALSE,[“Bard”],1D,2,
+5B,Hero,Song,2,1,TRUE,FALSE,[“Bard”],1E,5,
 5C,Requiem,Song,2,1,TRUE,FALSE,[“Bard”],1C,1,
-5D,Love,Song,2,1,TRUE,FALSE,[“Bard”],1D,1,
+5D,Love,Song,2,1,TRUE,FALSE,[“Bard”],1D,3,
 5E,Charm,Song,2,1,TRUE,FALSE,[“Bard”],1E,1,
 82,Condemn,Blue,2,1,TRUE,TRUE,[“BlueMage”],22,4,34
 83,Roulette,Blue,2,1,TRUE,TRUE,[“BlueMage”],22,1,12
@@ -106,14 +106,14 @@ magic_id,readable_name,type,value,max_count,valid,item_randomization_valid,relat
 8B,Flash,Blue,2,1,TRUE,TRUE,[“BlueMage”],24,1,17
 8C,Time Slip,Blue,2,1,TRUE,TRUE,[“BlueMage”],24,1,16
 8D,MoonFlut,Blue,2,1,TRUE,TRUE,[“BlueMage”],21,1,17
-8E,DethClaw,Blue,2,1,TRUE,TRUE,[“BlueMage”],24,2,39
+8E,DethClaw,Blue,2,1,TRUE,TRUE,[“BlueMage”],24,3,39
 8F,Aero,Blue,2,1,TRUE,TRUE,[“BlueMage”],20,1,34
 90,Aero 2,Blue,2,1,TRUE,TRUE,[“BlueMage”],20,2,55
 91,Aero 3,Blue,2,1,TRUE,TRUE,[“BlueMage”],20,5,79
 92,Emission,Blue,2,1,TRUE,TRUE,[“BlueMage”],26,2,44
 93,GblinPnch,Blue,2,1,TRUE,TRUE,[“BlueMage”],26,1,9
 94,DrkShock,Blue,2,1,TRUE,TRUE,[“BlueMage”],25,4,77
-95,GuardOff,Blue,2,1,TRUE,TRUE,[“BlueMage”],23,3,66
+95,GuardOff,Blue,2,1,TRUE,TRUE,[“BlueMage”],23,2,66
 96,Fusion,Blue,2,1,TRUE,TRUE,[“BlueMage”],25,2,29
 97,MindBlst,Blue,2,1,TRUE,TRUE,[“BlueMage”],27,5,87
 98,Vampire,Blue,2,1,TRUE,TRUE,[“BlueMage”],27,1,13

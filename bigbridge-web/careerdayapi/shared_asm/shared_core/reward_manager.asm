@@ -724,6 +724,10 @@ jml !ADDRESS_chesthook_mib
 
 org !ADDRESS_chesthook_mib
 sta $0be0
+; dummy out unused ram slot
+lda #$00
+sta !unusedram3
+
 ; first check if 0xB was present
 lda $11
 and #$B0
@@ -735,6 +739,10 @@ bra MIBKeyItemResume
 
 ; pass case
 MIBKeyItemPass:
+
+lda #$88 ; #$88 custom flag for MIB in chests
+sta !unusedram3
+
 
 lda $11
 ; give access to flags 
@@ -776,4 +784,66 @@ jml $c00ed1
 
 
 
+;; new code to disable giving prior item
+
+org $c00ea2
+jml !ADDRESS_chesthook_mib_disable_on_reward_new_regular_item
+
+org !ADDRESS_chesthook_mib_disable_on_reward_new_regular_item
+lda !unusedram3
+and #$88 ; custom code for if MIB is placed
+cmp #$88
+bne ChestPlaceRegularItem ; if MIB, then do NOT place a corresponding item 
+
+ChestMIBTextIgnorePlacingItem: ; alias doesnt actually do anything
+bra ChestMIBTextFinish ; then go straight to end 
+
+ChestPlaceRegularItem: ; place an item like normal if MIB flag was not set
+lda $16a2
+sta $0640,y
+lda #$01
+sta $0740,y
+ldx #$0002
+stx $af
+
+ChestMIBTextFinish:
+lda #$00  
+sta !unusedram3 ; reset this address so others don't trip the flag
+jml $c00eb2
+
+
+
+
+
+
+; relocate code for handling placing an item that has already been obtained in the inventory
+; needed for new MIB key item handling 
+
+
+
+org $c00e88
+JML !ADDRESS_chesthook_new_reward_had_prior_item
+
+org !ADDRESS_chesthook_new_reward_had_prior_item
+; same checks as above for key item stuff
+lda !unusedram3
+and #$88 ; custom code for if MIB is placed
+cmp #$88
+bne ChestPlaceRegularItem2 ; if MIB, then do NOT place a corresponding item 
+bra ChestBranchFinish2
+
+ChestPlaceRegularItem2:
+; then resume 
+lda $0740,y
+cmp #$63
+beq ChestBranchFinish2
+lda $0740,y
+inc
+JML $c00e93
+
+
+ChestBranchFinish2:
+lda #$00  
+sta !unusedram3 ; reset this address so others don't trip the flag
+JML $c00ead
 

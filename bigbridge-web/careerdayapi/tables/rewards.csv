@@ -23,8 +23,8 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 21,C0FADC,Bahmut,Hiryuu Valley,Bahamut,event,8,,,,,,,
 22,C0FADE,Vitality,Crescent Island,Life Song,event,2,,,,,,,
 23,C0FAE0,Charm,Lix,Temptation Song at Lix,event,2,,,,,,,
-24,C0FAE2,Love,Istory Falls,Love Song at Istory,event,2,,,,,,,
-25,C0FAE4,Requiem,Kelb,Requiem Song at Kelb,event,2,,,,,,,
+24,C0FAE2,Love,Istory Falls,Love Song at Istory,event,3,,,,,,,
+25,C0FAE4,Requiem,Kelb,Requiem Song at Kelb,event,3,,,,,,,
 26,C0FAE6,Speed,Surgate Castle,Speed Song at Surgate,event,4,,,,,,,
 27,C0FAE8,Magic,Ancient Library,Magic Song at Ancient Library,event,4,,,,,,,
 28,C0FAEA,Power,Crescent Island,Power Song from Crescent Town,event,2,,,,,,,
@@ -38,18 +38,18 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 36,C0FAFA,Mythril Helm,North Mountain,Magisa & Forza,event,2,,,,,,,
 37,C0FAFC,CornaJar,Kelb,CornaJar at Kelb,event,8,,,,,,,
 38,C0FAFE,Ribbon,Rugor,Ribbon from girl in Rugor,event,4,,,,,,,
-39,C0FB02,Assassin,Kuzar,12 Kuzar Events,event,8,,,,,,,
-40,C0FB04,Apollo's Harp,Kuzar,12 Kuzar Events,event,8,,,,,,,
-41,C0FB06,Excalibur,Kuzar,12 Kuzar Events,event,8,,,,,,,
-42,C0FB08,Flame Whip,Kuzar,12 Kuzar Events,event,8,,,,,,,
-43,C0FB0A,Earth Bell,Kuzar,12 Kuzar Events,event,8,,,,,,,
-44,C0FB0C,Holy Lance,Kuzar,12 Kuzar Events,event,8,,,,,,,
-45,C0FB0E,Masamune,Kuzar,12 Kuzar Events,event,8,,,,,,,
-46,C0FB10,Wizard Rod,Kuzar,12 Kuzar Events,event,8,,,,,,,
-47,C0FB12,Rune Axe,Kuzar,12 Kuzar Events,event,8,,,,,,,
-48,C0FB14,Sage's Staff,Kuzar,12 Kuzar Events,event,8,,,,,,,
-49,C0FB16,Hardened Dagger,Kuzar,12 Kuzar Events,event,8,,,,,,,
-50,C0FB18,Yoichi Bow,Kuzar,12 Kuzar Events,event,8,,,,,,,
+39,C0FB02,Assassin,Kuzar,12 Kuzar Events,event,7,,,,,,,
+40,C0FB04,Apollo's Harp,Kuzar,12 Kuzar Events,event,7,,,,,,,
+41,C0FB06,Excalibur,Kuzar,12 Kuzar Events,event,7,,,,,,,
+42,C0FB08,Flame Whip,Kuzar,12 Kuzar Events,event,7,,,,,,,
+43,C0FB0A,Earth Bell,Kuzar,12 Kuzar Events,event,7,,,,,,,
+44,C0FB0C,Holy Lance,Kuzar,12 Kuzar Events,event,7,,,,,,,
+45,C0FB0E,Masamune,Kuzar,12 Kuzar Events,event,7,,,,,,,
+46,C0FB10,Wizard Rod,Kuzar,12 Kuzar Events,event,7,,,,,,,
+47,C0FB12,Rune Axe,Kuzar,12 Kuzar Events,event,7,,,,,,,
+48,C0FB14,Sage's Staff,Kuzar,12 Kuzar Events,event,7,,,,,,,
+49,C0FB16,Hardened Dagger,Kuzar,12 Kuzar Events,event,7,,,,,,,
+50,C0FB18,Yoichi Bow,Kuzar,12 Kuzar Events,event,7,,,,,,,
 51,C0FB1A,Shiva,Walse,Shiva,event,4,,,,,,,
 52,C0FB1C,Ifrit,Ancient Library,Ifrit,event,4,,,,,,,
 53,C0FB1E,Samurai,Walse,Water Crystal,event,4,,,,,,,
@@ -57,13 +57,13 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 55,C0FB22,MysticKnight,Walse,Water Crystal,event,4,,,,,,,
 56,C0FB24,TimeMage,Walse,Water Crystal,event,4,,,,,,,
 57,C0FB26,Summoner,Walse,Water Crystal,event,4,,,,,,,
-58,C0FB28,Brave Blade,Mua,Brave Blade,event,6,,,,,,,
-59,C0FB2A,Chicken Knife,Mua,Chicken Knife,event,6,,,,,,,
+58,C0FB28,Brave Blade,Mua,Brave Blade,event,7,,,,,,,
+59,C0FB2A,Chicken Knife,Mua,Chicken Knife,event,7,,,,,,,
 60,C0FB2C,Cabin,Tycoon Castle,Tycoon Castle Cabin,event,2,,,,,,,
 61,C0FB2E,Cabin,Tycoon Castle,Tycoon Castle Cabin,event,2,,,,,,,
 62,C0FB30,GoGo,Walse,Walse Tower Chest,event,2,,,,,,,
 63,C0FB32,Pyramid Tablet,Pyramid,Pyramid Top,event,2,,,,,,,
-64,C0FB34,Toad,Istory Falls,Toad Event,event,2,,,,,,,
+64,C0FB34,Toad,Istory Falls,Toad Event,event,3,,,,,,,
 65,C0FB36,Aegis Shield,Mua,Aegis Shield Chest,event,4,,,,,,,
 66,C0FB38,Cabin,Carwen,Lone Wolf Barrel,event,2,,,,,,,
 67,C0FB3A,Thunder Whip,Bal Castle,Lone Wolf Chest,event,4,,,,,,,
@@ -122,10 +122,10 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 120,D132D6,490,Walse,Walse Castle Box,chest,2,,,,,,,
 121,D132DA,Tent,Walse,Walse Castle Barrel,chest,2,,,,,,,
 122,D132DE,Phoenix Down,Walse,Walse Castle Barrel,chest,2,,,,,,,
-123,D132E2,Silk robe,Walse,Walse Tower Chest,chest,2,,,,,,,
-124,D132E6,Maiden's Kiss,Walse,Walse Tower Chest,chest,2,,,,,,,
-125,D132EA,Silver Armlet,Walse,Walse Tower Chest,chest,2,,,,,,,
-126,D132EE,Ether,Walse,Walse Tower Chest,chest,2,,,,,,,
+123,D132E2,Silk robe,Walse,Walse Tower Chest,chest,3,,,,,,,
+124,D132E6,Maiden's Kiss,Walse,Walse Tower Chest,chest,3,,,,,,,
+125,D132EA,Silver Armlet,Walse,Walse Tower Chest,chest,3,,,,,,,
+126,D132EE,Ether,Walse,Walse Tower Chest,chest,3,,,,,,,
 127,D132F2,Phoenix Down,Tycoon Castle,Tycoon Meteor Chest,chest,2,,,,,,,
 128,D132F6,Heavy Spear,Karnak,Karnak Castle Chest MIB 1,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],84,[“burning”],1
 129,D132FA,Thunder Scroll,Karnak,Karnak Castle Chest MIB 2,mib_key,4,Item,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],85,[“burning”],1
@@ -151,27 +151,27 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 149,D1334A,Elixir,Steamship,Steamship Chest,chest,2,,,,,,,
 150,D1334E,Ether,Ancient Library,Ancient Library Chest,chest,2,,,,,,,
 151,D13352,Phoenix Down,Ancient Library,Ancient Library Chest,chest,2,,,,,,,
-152,D13356,Stealth Suit,Ancient Library,Ancient Library Chest,chest,2,,,,,,,
+152,D13356,Stealth Suit,Ancient Library,Ancient Library Chest,chest,3,,,,,,,
 153,D1335A,Shuriken,Jacole,Jacole Cave Chest,chest,2,,,,,,,
 154,D1335E,Tent,Jacole,Jacole Cave Chest,chest,2,,,,,,,
 155,D13362,Shuriken,Ruined City,Ruined City Chest,chest,2,,,,,,,
 156,D13366,Shuriken,Ruined City,Ruined City Chest,chest,2,,,,,,,
 157,D1336A,Size,Ruined City,Ruined City Chest,chest,2,,,,,,,
-158,D1336E,Golden Armor,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-159,D13372,Elixir,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-160,D13376,Phoenix Down,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-161,D1337A,Golden Shield,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
+158,D1336E,Golden Armor,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+159,D13372,Elixir,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+160,D13376,Phoenix Down,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+161,D1337A,Golden Shield,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
 162,D1337E,Mythril Glove,Steamship,Steamship Chest,chest,2,,,,,,,
 163,D13382,Elixir,Steamship,Steamship Chest,chest,2,,,,,,,
 164,D13386,Full Moon,Steamship,Steamship Chest,chest,2,,,,,,,
-165,D1338A,Hi-Potion,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-166,D1338E,5000,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-167,D13392,Shuriken,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-168,D13396,Ancient Sword,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-169,D1339A,Full Moon,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-170,D1339E,Power Wrist,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-171,D133A2,Ether,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,2,,,,,,,
-172,D133A6,Cabin,Exdeath's Castle,Flying Lonka Ruins Chest,chest,2,,,,,,,
+165,D1338A,Hi-Potion,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+166,D1338E,5000,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+167,D13392,Shuriken,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+168,D13396,Ancient Sword,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+169,D1339A,Full Moon,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+170,D1339E,Power Wrist,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+171,D133A2,Ether,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest,3,,,,,,,
+172,D133A6,Cabin,Exdeath's Castle,Flying Lonka Ruins Chest,chest,3,,,,,,,
 173,D133AA,Ether,Exdeath's Castle,Exdeath's Castle Chest,chest,5,,,,,,,
 174,D133AE,Diamond Shield,Exdeath's Castle,Exdeath's Castle Chest,chest,5,,,,,,,
 175,D133B2,Ice Shield,Exdeath's Castle,Exdeath's Castle Chest,chest,5,,,,,,,
@@ -207,45 +207,45 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 205,D1342A,Phoenix Down,Hiryuu Valley,Hiryuu Valley Chest,chest,4,,,,,,,
 206,D1342E,5000,Surgate Castle,Surgate Castle Chest,chest,4,,,,,,,
 207,D13432,Float,Surgate Castle,Surgate Castle Chest,chest,4,,,,,,,
-208,D13436,Drain Sword,Barrier Tower,Barrier Tower Chest MIB 1,mib_key,4,Item,[“Submarine Key”],"[“Adamantite”, “Submarine Key”]",[“Submarine Key”],87,[“tower”],2
+208,D13436,Drain Sword,Barrier Tower,Barrier Tower Chest MIB 1,mib_key,5,Item,[“Submarine Key”],"[“Adamantite”, “Submarine Key”]",[“Submarine Key”],87,[“tower”],2
 209,D1343A,9000,Barrier Tower,Barrier Tower Chest,chest,4,,,,,,,
 210,D1343E,18000,Barrier Tower,Barrier Tower Chest,chest,4,,,,,,,
-211,D13442,Gold Hairpin,Barrier Tower,Barrier Tower Chest MIB 2,mib_key,4,Item,[“Submarine Key”],"[“Adamantite”, “Submarine Key”]",[“Submarine Key”],88,[“tower”],2
+211,D13442,Gold Hairpin,Barrier Tower,Barrier Tower Chest MIB 2,mib_key,5,Item,[“Submarine Key”],"[“Adamantite”, “Submarine Key”]",[“Submarine Key”],88,[“tower”],2
 212,D13446,Guardian,Mua,Mua Town Barrel,chest,4,,,,,,,
-213,D1344A,2500,Mua,Mua Forest Chest,chest,4,,,,,,,
-214,D1344E,Ether,Mua,Mua Forest Chest,chest,4,,,,,,,
-215,D13452,4900,Mua,Mua Forest Chest,chest,4,,,,,,,
-216,D13456,Phoenix Down,Mua,Mua Forest Chest,chest,4,,,,,,,
-217,D1345A,9500,Mua,Mua Forest Chest,chest,4,,,,,,,
-218,D1345E,Soot,Mua,Mua Forest Chest,chest,4,,,,,,,
-219,D13462,Flametongue,Mua,Mua Forest Chest,chest,4,,,,,,,
-220,D13466,Cabin,Mua,Mua Forest Chest,chest,4,,,,,,,
-221,D1346A,Giant Drink,Mua,Mua Forest Chest,chest,4,,,,,,,
-222,D1346E,Elixir,Mua,Mua Forest Chest,chest,4,,,,,,,
-223,D13472,Morning Star,Mua,Mua Forest Chest,chest,4,,,,,,,
+213,D1344A,2500,Mua,Mua Forest Chest,chest,5,,,,,,,
+214,D1344E,Ether,Mua,Mua Forest Chest,chest,5,,,,,,,
+215,D13452,4900,Mua,Mua Forest Chest,chest,5,,,,,,,
+216,D13456,Phoenix Down,Mua,Mua Forest Chest,chest,5,,,,,,,
+217,D1345A,9500,Mua,Mua Forest Chest,chest,5,,,,,,,
+218,D1345E,Soot,Mua,Mua Forest Chest,chest,5,,,,,,,
+219,D13462,Flametongue,Mua,Mua Forest Chest,chest,5,,,,,,,
+220,D13466,Cabin,Mua,Mua Forest Chest,chest,5,,,,,,,
+221,D1346A,Giant Drink,Mua,Mua Forest Chest,chest,5,,,,,,,
+222,D1346E,Elixir,Mua,Mua Forest Chest,chest,5,,,,,,,
+223,D13472,Morning Star,Mua,Mua Forest Chest,chest,5,,,,,,,
 224,D13476,Ether,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 225,D1347A,DragonFang,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 226,D1347E,Elixir,Pyramid,Pyramid Chest,chest,6,,,,,,,
-227,D13482,Elixir,Pyramid,Pyramid Chest,chest,7,,,,,,,
-228,D13486,Black Robe,Pyramid,Pyramid Chest MIB 1,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",89,[“desert”],3
+227,D13482,Elixir,Pyramid,Pyramid Chest,chest,6,,,,,,,
+228,D13486,Black Robe,Pyramid,Pyramid Chest MIB 1,mib_key,7,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",89,[“desert”],3
 229,D1348A,Thornlet,Pyramid,Pyramid Chest,chest,6,,,,,,,
-230,D1348E,DarkMatter,Pyramid,Pyramid Chest MIB 2,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8A,[“desert”],3
-231,D13492,Crystal Armor,Pyramid,Pyramid Chest MIB 3,mib_key,9,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8B,[“desert”],3
-232,D13496,Cursed Ring,Pyramid,Pyramid Chest,chest,6,,,,,,,
-233,D1349A,Ice Shield,Pyramid,Pyramid Chest,chest,6,,,,,,,
+230,D1348E,DarkMatter,Pyramid,Pyramid Chest MIB 2,mib_key,7,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8A,[“desert”],3
+231,D13492,Crystal Armor,Pyramid,Pyramid Chest MIB 3,mib_key,7,Item,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",8B,[“desert”],3
+232,D13496,Cursed Ring,Pyramid,Pyramid Chest,chest,8,,,,,,,
+233,D1349A,Ice Shield,Pyramid,Pyramid Chest,chest,8,,,,,,,
 234,D1349E,Flame Shield,Pyramid,Pyramid Chest,chest,6,,,,,,,
 235,D134A2,DarkMatter,Pyramid,Pyramid Chest,chest,6,,,,,,,
-236,D134A6,White Robe,Pyramid,Pyramid Chest,chest,7,,,,,,,
-237,D134AA,DarkSuit,Pyramid,Pyramid Chest,chest,7,,,,,,,
-238,D134AE,DarkMatter,Pyramid,Pyramid Chest,chest,7,,,,,,,
-239,D134B2,DarkMatter,Pyramid,Pyramid Chest,chest,7,,,,,,,
-240,D134B6,DarkMatter,Pyramid,Pyramid Chest,chest,7,,,,,,,
-241,D134BA,9000,Pyramid,Pyramid Chest,chest,8,,,,,,,
-242,D134BE,8000,Pyramid,Pyramid Chest,chest,8,,,,,,,
-243,D134C2,Earth Hammer,Pyramid,Pyramid Chest,chest,8,,,,,,,
-244,D134C6,10000,Pyramid,Pyramid Chest,chest,8,,,,,,,
-245,D134CA,Cabin,Pyramid,Pyramid Chest,chest,8,,,,,,,
-246,D134CE,Elixir,Pyramid,Pyramid Chest,chest,8,,,,,,,
+236,D134A6,White Robe,Pyramid,Pyramid Chest,chest,6,,,,,,,
+237,D134AA,DarkSuit,Pyramid,Pyramid Chest,chest,6,,,,,,,
+238,D134AE,DarkMatter,Pyramid,Pyramid Chest,chest,6,,,,,,,
+239,D134B2,DarkMatter,Pyramid,Pyramid Chest,chest,6,,,,,,,
+240,D134B6,DarkMatter,Pyramid,Pyramid Chest,chest,6,,,,,,,
+241,D134BA,9000,Pyramid,Pyramid Chest,chest,7,,,,,,,
+242,D134BE,8000,Pyramid,Pyramid Chest,chest,7,,,,,,,
+243,D134C2,Earth Hammer,Pyramid,Pyramid Chest,chest,7,,,,,,,
+244,D134C6,10000,Pyramid,Pyramid Chest,chest,7,,,,,,,
+245,D134CA,Cabin,Pyramid,Pyramid Chest,chest,7,,,,,,,
+246,D134CE,Elixir,Pyramid,Pyramid Chest,chest,7,,,,,,,
 247,D134D2,12000,Pyramid,Pyramid Chest,chest,5,,,,,,,
 248,D134D6,DarkMatter,Pyramid,Pyramid Chest,chest,5,,,,,,,
 249,D134DA,Elixir,Pyramid,Pyramid Chest,chest,5,,,,,,,
@@ -256,38 +256,38 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 254,D134EE,12000,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 255,D134F2,Hi-Potion,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 256,D134F6,Protect Drink,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
-257,D134FA,BeastKiller,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
-258,D134FE,RisingSun,Solitary Island,Solitary Island Chest MIB 1,mib_key,6,Item,[“Shrine Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Shrine Page”]","[“Anti Barrier”, “Bracelet”, “Shrine Page”]",8C,[“bridge”],3
+257,D134FA,BeastKiller,Solitary Island,Solitary Island Chest,chest,7,,,,,,,
+258,D134FE,RisingSun,Solitary Island,Solitary Island Chest MIB 1,mib_key,8,Item,[“Shrine Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Shrine Page”]","[“Anti Barrier”, “Bracelet”, “Shrine Page”]",8C,[“bridge”],3
 259,D13502,Ether,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
-260,D13506,Guard Ring,Solitary Island,Solitary Island Chest MIB 2,mib_key,6,Item,[“Shrine Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Shrine Page”]","[“Anti Barrier”, “Bracelet”, “Shrine Page”]",8D,[“bridge”],3
+260,D13506,Guard Ring,Solitary Island,Solitary Island Chest MIB 2,mib_key,8,Item,[“Shrine Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Shrine Page”]","[“Anti Barrier”, “Bracelet”, “Shrine Page”]",8D,[“bridge”],3
 261,D1350A,Crystal Helm,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 262,D1350E,9000,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 263,D13512,Elixir,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 264,D13516,DarkMatter,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
 265,D1351A,Circlet,Solitary Island,Solitary Island Chest,chest,6,,,,,,,
-266,D1351E,Ether,Fork Tower,Fork Tower L. Chest,chest,7,,,,,,,
-267,D13522,Wonder Wand,Fork Tower,Fork Tower L. Chest,chest,7,,,,,,,
-268,D13526,Hi-Potion,Fork Tower,Fork Tower R. Chest,chest,7,,,,,,,
-269,D1352A,Defender Sword,Fork Tower,Fork Tower R. Chest,chest,7,,,,,,,
+266,D1351E,Ether,Fork Tower,Fork Tower L. Chest,chest,8,,,,,,,
+267,D13522,Wonder Wand,Fork Tower,Fork Tower L. Chest,chest,8,,,,,,,
+268,D13526,Hi-Potion,Fork Tower,Fork Tower R. Chest,chest,8,,,,,,,
+269,D1352A,Defender Sword,Fork Tower,Fork Tower R. Chest,chest,8,,,,,,,
 270,D1352E,Water Scroll,Great Trench,Great Trench Chest,chest,6,,,,,,,
-271,D13532,Flame Ring,Great Trench,Great Trench Chest,chest,6,,,,,,,
+271,D13532,Flame Ring,Great Trench,Great Trench Chest,chest,7,,,,,,,
 272,D13536,DragonFang,Great Trench,Great Trench Chest,chest,6,,,,,,,
 273,D1353A,Ether,Great Trench,Great Trench Chest,chest,6,,,,,,,
-274,D1353E,Phoenix Down,Great Trench,Great Trench Chest,chest,6,,,,,,,
-275,D13542,Kaiser Knuckles,Istory Falls,Great Trench Chest,chest,6,,,,,,,
+274,D1353E,Phoenix Down,Great Trench,Great Trench Chest,chest,7,,,,,,,
+275,D13542,Kaiser Knuckles,Istory Falls,Great Trench Chest,chest,7,,,,,,,
 276,D13546,Ether,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
 277,D1354A,TurtleShell,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
 278,D1354E,Air Knife,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
 279,D13552,Giant Drink,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
-280,D13556,RuneEdge,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
-281,D1355A,Guard Ring,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
-282,D1355E,Wall Ring,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
-283,D13562,Phoenix Down,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
-284,D13566,Enhancer,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
-285,D1356A,12000,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
-286,D1356E,Artemis Bow,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
-287,D13572,Pinwheel,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
-288,D13576,Aegis Shield,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
+280,D13556,RuneEdge,Istory Falls,Istory Falls Chest,chest,7,,,,,,,
+281,D1355A,Guard Ring,Istory Falls,Istory Falls Chest,chest,7,,,,,,,
+282,D1355E,Wall Ring,Istory Falls,Istory Falls Chest,chest,7,,,,,,,
+283,D13562,Phoenix Down,Istory Falls,Istory Falls Chest,chest,7,,,,,,,
+284,D13566,Enhancer,Istory Falls,Istory Falls Chest,chest,7,,,,,,,
+285,D1356A,12000,Istory Falls,Istory Falls Chest,chest,7,,,,,,,
+286,D1356E,Artemis Bow,Istory Falls,Istory Falls Chest,chest,7,,,,,,,
+287,D13572,Pinwheel,Istory Falls,Istory Falls Chest,chest,7,,,,,,,
+288,D13576,Aegis Shield,Istory Falls,Istory Falls Chest,chest,7,,,,,,,
 289,D1357A,Giant's Axe,Istory Falls,Istory Falls Chest,chest,6,,,,,,,
 290,D1357E,5000,Phoenix Tower,Phoenix Tower Pot,chest,1,Item,,,,,,
 291,D13582,Phoenix Down,Phoenix Tower,Phoenix Tower Pot,chest,1,Item,,,,,,
@@ -300,63 +300,63 @@ idx,address,original_reward,area,description,reward_style,tier,force_type,requir
 298,D1359E,Avis Killer,Phoenix Tower,Phoenix Tower Pot,chest,1,Item,,,,,,
 299,D135A2,25000,Phoenix Tower,Phoenix Tower Pot,chest,1,Item,,,,,,
 300,D135A6,Thief Knife,Mirage Village,Mirage Village Barrel,chest,7,,,,,,,
-301,D135AA,Ether,Rift,Rift (Ruins) Chest,chest,7,,,,,,,
-302,D135AE,Cabin,Rift,Rift (Ruins) Chest,chest,7,,,,,,,
-303,D135B2,Elixir,Rift,Rift (Ruins) Chest,chest,7,,,,,,,
-304,D135B6,DarkMatter,Rift,Rift (Ruins) Chest,chest,7,,,,,,,
-305,D135BA,Elixir,Rift,Rift (Ruins) Chest,chest,7,,,,,,,
-306,D135BE,Drain Sword,Rift,Rift (Ruins) Chest,chest,7,,,,,,,
+301,D135AA,Ether,Rift,Rift (Ruins) Chest,chest,6,,,,,,,
+302,D135AE,Cabin,Rift,Rift (Ruins) Chest,chest,6,,,,,,,
+303,D135B2,Elixir,Rift,Rift (Ruins) Chest,chest,6,,,,,,,
+304,D135B6,DarkMatter,Rift,Rift (Ruins) Chest,chest,6,,,,,,,
+305,D135BA,Elixir,Rift,Rift (Ruins) Chest,chest,6,,,,,,,
+306,D135BE,Drain Sword,Rift,Rift (Ruins) Chest,chest,6,,,,,,,
 307,D135C2,DragonFang,Rift,Rift (Forest) Chest,chest,7,,,,,,,
 308,D135C6,Ribbon,Rift,Rift (Forest) Chest,chest,7,,,,,,,
 309,D135CA,Enhancer,Rift,Rift (Forest) Chest,chest,7,,,,,,,
 310,D135CE,Lillith Rod,Rift,Rift (Forest) Chest,chest,7,,,,,,,
-311,D135D2,Angel Ring,Rift,Rift (Cave) Chest,chest,7,,,,,,,
+311,D135D2,Angel Ring,Rift,Rift (Cave) Chest,chest,8,,,,,,,
 312,D135D6,Coral Ring,Rift,Rift (Cave) Chest,chest,7,,,,,,,
 313,D135DA,Thor Hammer,Rift,Rift (Castle) Chest,chest,7,,,,,,,
 314,D135DE,Running Shoes,Rift,Rift (Castle) Chest,chest,7,,,,,,,
-315,D135E2,Red Shoes,Rift,Rift (Castle) Chest,chest,7,,,,,,,
-316,D135E6,Rainbow Dress,Rift,Rift (Castle) Chest,chest,7,,,,,,,
-317,D135EA,ManEater,Rift,Rift (Castle) Chest,chest,7,,,,,,,
-318,D135EE,Pinwheel,Void,The Void Chest,chest,8,,,,,,,
-319,D135F2,Pinwheel,Void,The Void Chest,chest,8,,,,,,,
-320,D135F6,Elixir,Void,The Void Chest,chest,8,,,,,,,
-321,D135FA,Ragnarok,Void,The Void Chest,chest,8,Item,,,,,,
+315,D135E2,Red Shoes,Rift,Rift (Castle) Chest,chest,8,,,,,,,
+316,D135E6,Rainbow Dress,Rift,Rift (Castle) Chest,chest,8,,,,,,,
+317,D135EA,ManEater,Rift,Rift (Castle) Chest,chest,8,,,,,,,
+318,D135EE,Pinwheel,Void,The Void Chest,chest,6,,,,,,,
+319,D135F2,Pinwheel,Void,The Void Chest,chest,6,,,,,,,
+320,D135F6,Elixir,Void,The Void Chest,chest,6,,,,,,,
+321,D135FA,Ragnarok,Void,The Void Chest,chest,6,Item,,,,,,
 322,D135FE,Pinwheel,Void,The Void Chest,chest,8,,,,,,,
-323,C0FB70,New,Ancient Library,Byblos,key,7,,[“Ifrit's Fire”],[“Ifrit's Fire”],[“Ifrit's Fire”],60,[“library”],1
-324,C0FB72,New,Wind Shrine,WingRaptor,key,7,,,,,61,,1
-325,C0FB74,New,Torna Canal,Karlabos,key,7,,,,,62,[“ship”],1
-326,C0FB76,New,Ship Graveyard,Siren,key,7,,,,,63,[“ship”],1
-327,C0FB78,New,North Mountain,Magisa & Forza,key,7,,,,,64,[“mountainous”],1
-328,C0FB7A,New,Walse Tower,Galura,key,7,,[“Walse Tower Key”],[“Walse Tower Key”],[“Walse Tower Key”],65,[“tower”],1
-329,C0FB7C,New,Steamship,LiquiFlame,key,7,,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],66,[“ship”],1
-330,C0FB7E,New,Karnak,Sergeant & DeathClaw,key,7,,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],67,[“burning”],1
-331,C0FB80,New,Desert of Shifting Sands,Sandworm,key,7,,[“Sandworm Bait”],[“Sandworm Bait”],[“Sandworm Bait”],68,[“desert”],1
-332,C0FB82,New,Tycoon Meteor,AdamanTiMi,key,7,,,,,69,[“meteor”],1
-333,C0FB84,New,Flying Lonka Ruins,Sol Cannon,key,7,,[“Adamantite”],[“Adamantite”],[“Adamantite”],6A,[“aerial”],1
-334,C0FB86,New,Flying Lonka Ruins,ArchaeAvis,key,7,,[“Adamantite”],[“Adamantite”],[“Adamantite”],6B,[“aerial”],1
-335,C0FB88,New,Lonka Meteor,Chim.Brain,key,7,,,,,6C,[“meteor”],1
-336,C0FB8A,New,Walse Meteor,Puroboros,key,7,,,,,6E,[“meteor”],1
-337,C0FB8C,New,Karnak Meteor,Titan,key,7,,,,,6D,[“meteor”],1
-338,C0FBB6,New,Ancient Library,Ifrit,key,7,,,,,83,[“library”],1
-339,C0FBB8,New,Walse Kingdom,Shiva,key,7,,,,,84,[“castle”],1
-340,C0FBBA,New,Catapult,Crayclaw,key,7,,,,,85,[“aerial”],1
-341,C0FB8E,New,Exdeath's Castle,Gilgamesh 1,key,7,,[“Anti Barrier”],"[“Adamantite”, “Anti Barrier”]",[“Anti Barrier”],6F,[“castle”],2
-342,C0FB90,New,Big Bridge,Gilgamesh 2,key,7,,[“Big Bridge Key”],"[“Adamantite”, “Big Bridge Key”]",[“Big Bridge Key”],70,[“bridge”],2
-343,C0FB92,New,Moogle Waterway,Tyrasaurus,key,7,,,[“Adamantite”],,71,[“cave”],2
-344,C0FB94,New,Bal Castle,Abductor,key,7,,,[“Adamantite”],,72,[“castle”],2
-345,C0FB96,New,Hiryuu Valley,HiryuuPlant,key,7,,,[“Adamantite”],,73,[“mountainous”],2
-346,C0FB98,New,Zeza Fleet,Gilgamesh 3 & Enkidou,key,7,,[“Hiryuu Call”],"[“Adamantite”, “Hiryuu Call”]",[“Hiryuu Call”],74,[“ship”],2
-347,C0FB9A,New,Barrier Tower,Atmos,key,7,,[“Submarine Key”],"[“Adamantite”, “Submarine Key”]",[“Submarine Key”],75,[“tower”],2
-348,C0FB9C,New,Mua Forest,Guardians,key,7,,[“Elder Branch”],"[“Adamantite”, “Elder Branch”]",[“Elder Branch”],76,[“burning”],2
-349,C0FB9E,New,Exdeath's Castle,Carbunkle,key,7,,"[“Anti Barrier”, “Bracelet”]","[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",77,[“castle”],2
-350,C0FBA0,New,Exdeath's Castle,Gilgamesh 4,key,7,,"[“Anti Barrier”, “Bracelet”]","[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",78,[“castle”],2
-351,C0FBA2,New,Tule Pass,Antlion,key,7,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",79,[“cave”],3
+323,C0FB70,New,Ancient Library,Byblos,key,5,,[“Ifrit's Fire”],[“Ifrit's Fire”],[“Ifrit's Fire”],60,[“library”],1
+324,C0FB72,New,Wind Shrine,WingRaptor,key,4,,,,,61,,1
+325,C0FB74,New,Torna Canal,Karlabos,key,4,,,,,62,[“ship”],1
+326,C0FB76,New,Ship Graveyard,Siren,key,4,,,,,63,[“ship”],1
+327,C0FB78,New,North Mountain,Magisa & Forza,key,4,,,,,64,[“mountainous”],1
+328,C0FB7A,New,Walse Tower,Galura,key,5,,[“Walse Tower Key”],[“Walse Tower Key”],[“Walse Tower Key”],65,[“tower”],1
+329,C0FB7C,New,Steamship,LiquiFlame,key,5,,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],66,[“ship”],1
+330,C0FB7E,New,Karnak,Sergeant & DeathClaw,key,5,,[“Steamship Key”],[“Steamship Key”],[“Steamship Key”],67,[“burning”],1
+331,C0FB80,New,Desert of Shifting Sands,Sandworm,key,5,,[“Sandworm Bait”],[“Sandworm Bait”],[“Sandworm Bait”],68,[“desert”],1
+332,C0FB82,New,Tycoon Meteor,AdamanTiMi,key,4,,,,,69,[“meteor”],1
+333,C0FB84,New,Flying Lonka Ruins,Sol Cannon,key,5,,[“Adamantite”],[“Adamantite”],[“Adamantite”],6A,[“aerial”],1
+334,C0FB86,New,Flying Lonka Ruins,ArchaeAvis,key,5,,[“Adamantite”],[“Adamantite”],[“Adamantite”],6B,[“aerial”],1
+335,C0FB88,New,Lonka Meteor,Chim.Brain,key,4,,,,,6C,[“meteor”],1
+336,C0FB8A,New,Walse Meteor,Puroboros,key,4,,,,,6E,[“meteor”],1
+337,C0FB8C,New,Karnak Meteor,Titan,key,4,,,,,6D,[“meteor”],1
+338,C0FBB6,New,Ancient Library,Ifrit,key,4,,,,,83,[“library”],1
+339,C0FBB8,New,Walse Kingdom,Shiva,key,4,,,,,84,[“castle”],1
+340,C0FBBA,New,Catapult,Crayclaw,key,4,,,,,85,[“aerial”],1
+341,C0FB8E,New,Exdeath's Castle,Gilgamesh 1,key,6,,[“Anti Barrier”],"[“Adamantite”, “Anti Barrier”]",[“Anti Barrier”],6F,[“castle”],2
+342,C0FB90,New,Big Bridge,Gilgamesh 2,key,6,,[“Big Bridge Key”],"[“Adamantite”, “Big Bridge Key”]",[“Big Bridge Key”],70,[“bridge”],2
+343,C0FB92,New,Moogle Waterway,Tyrasaurus,key,5,,,[“Adamantite”],,71,[“cave”],2
+344,C0FB94,New,Bal Castle,Abductor,key,5,,,[“Adamantite”],,72,[“castle”],2
+345,C0FB96,New,Hiryuu Valley,HiryuuPlant,key,5,,,[“Adamantite”],,73,[“mountainous”],2
+346,C0FB98,New,Zeza Fleet,Gilgamesh 3 & Enkidou,key,6,,[“Hiryuu Call”],"[“Adamantite”, “Hiryuu Call”]",[“Hiryuu Call”],74,[“ship”],2
+347,C0FB9A,New,Barrier Tower,Atmos,key,6,,[“Submarine Key”],"[“Adamantite”, “Submarine Key”]",[“Submarine Key”],75,[“tower”],2
+348,C0FB9C,New,Mua Forest,Guardians,key,6,,[“Elder Branch”],"[“Adamantite”, “Elder Branch”]",[“Elder Branch”],76,[“burning”],2
+349,C0FB9E,New,Exdeath's Castle,Carbunkle,key,6,,"[“Anti Barrier”, “Bracelet”]","[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",77,[“castle”],2
+350,C0FBA0,New,Exdeath's Castle,Gilgamesh 4,key,6,,"[“Anti Barrier”, “Bracelet”]","[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",78,[“castle”],2
+351,C0FBA2,New,Tule Pass,Antlion,key,6,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",79,[“cave”],3
 352,C0FBA4,New,Pyramid,Merugene,key,7,,[“Pyramid Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Pyramid Page”]","[“Anti Barrier”, “Bracelet”, “Pyramid Page”]",7A,[“desert”],3
-353,C0FBA6,New,Bal Castle,Odin,key,8,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",7B,[“cave”],3
-354,C0FBA8,New,Great Trench,"Triton, Neregeid & Phobos",key,8,,"[“Submarine Key”, “Trench Page”]","[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”, “Trench Page”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”, “Trench Page”]",7C,[“underwater”],3
-355,C0FBAA,New,Fork Tower,Omniscient,key,8,,[“Elder Branch”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Elder Branch”]","[“Anti Barrier”, “Bracelet”, “Elder Branch”]",7D,[“tower”],3
-356,C0FBAC,New,Fork Tower,Minotauros,key,8,,[“Elder Branch”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Elder Branch”]","[“Anti Barrier”, “Bracelet”, “Elder Branch”]",7E,[“tower”],3
-357,C0FBAE,New,Istory Falls,Leviathan,key,8,,"[“Submarine Key”, “Falls Page”]","[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”, “Falls Page”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”, “Falls Page”]",7F,[“underwater”],3
-358,C0FBB0,New,Solitary Island,Stalker,key,8,,[“Shrine Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Shrine Page”]","[“Anti Barrier”, “Bracelet”, “Shrine Page”]",80,[“bridge”],3
-359,C0FBB2,New,Walse Tower,GoGo,key,8,,[“Submarine Key”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”]",81,[“underwater”],3
-360,C0FBB4,New,North Mountain,Bahamut,key,8,,[“Mirage Radar”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Mirage Radar”]","[“Anti Barrier”, “Bracelet”, “Mirage Radar”]",82,[“mountainous”],3
+353,C0FBA6,New,Bal Castle,Odin,key,6,,,"[“Adamantite”, “Anti Barrier”, “Bracelet”]","[“Anti Barrier”, “Bracelet”]",7B,[“cave”],3
+354,C0FBA8,New,Great Trench,"Triton, Neregeid & Phobos",key,7,,"[“Submarine Key”, “Trench Page”]","[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”, “Trench Page”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”, “Trench Page”]",7C,[“underwater”],3
+355,C0FBAA,New,Fork Tower,Omniscient,key,7,,[“Elder Branch”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Elder Branch”]","[“Anti Barrier”, “Bracelet”, “Elder Branch”]",7D,[“tower”],3
+356,C0FBAC,New,Fork Tower,Minotauros,key,7,,[“Elder Branch”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Elder Branch”]","[“Anti Barrier”, “Bracelet”, “Elder Branch”]",7E,[“tower”],3
+357,C0FBAE,New,Istory Falls,Leviathan,key,7,,"[“Submarine Key”, “Falls Page”]","[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”, “Falls Page”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”, “Falls Page”]",7F,[“underwater”],3
+358,C0FBB0,New,Solitary Island,Stalker,key,7,,[“Shrine Page”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Shrine Page”]","[“Anti Barrier”, “Bracelet”, “Shrine Page”]",80,[“bridge”],3
+359,C0FBB2,New,Walse Tower,GoGo,key,7,,[“Submarine Key”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Submarine Key”]","[“Anti Barrier”, “Bracelet”, “Submarine Key”]",81,[“underwater”],3
+360,C0FBB4,New,North Mountain,Bahamut,key,7,,[“Mirage Radar”],"[“Adamantite”, “Anti Barrier”, “Bracelet”, “Mirage Radar”]","[“Anti Barrier”, “Bracelet”, “Mirage Radar”]",82,[“mountainous”],3

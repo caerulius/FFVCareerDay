@@ -119,9 +119,9 @@ lda #$30
 sta $0AE9
 lda #$00
 sta $0AEA
-lda #$4C
+lda #$AD
 sta $0AEB
-lda #$73
+lda #$A5
 sta $0AEC
 KeyItemSubmarineKeyFinish:
 RTL
@@ -136,9 +136,9 @@ lda #$2C
 sta $0AE5
 lda #$00
 sta $0AE6
-lda #$4A
+lda #$AC
 sta $0AE7
-lda #$6E
+lda #$A5
 sta $0AE8
 KeyItemHiryuuCallFinish:
 

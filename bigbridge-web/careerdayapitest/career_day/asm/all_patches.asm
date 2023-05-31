@@ -13,6 +13,13 @@ if !fourjobmode == 1
     endif
 endif
 
+if !remove_flashes == 1
+    incsrc open_world/remove_flashes.asm
+endif
+
+if !kuzar_credits_warp == 1
+    incsrc open_world/kuzar_credits_warp.asm
+endif
 
 ; world 1                                   Destinations:
 incsrc world1/tycoon_meteor_01_mount.asm
@@ -233,6 +240,7 @@ incsrc reward_events/balcastle_odin.asm
 incsrc reward_events/crescent_herosong.asm
 incsrc reward_events/crescent_lifesong.asm
 incsrc reward_events/crescent_powersong.asm
+incsrc reward_events/crescent_powerherosongs.asm
 incsrc reward_events/exdeathcastle_carbuncle.asm
 incsrc reward_events/walse_shiva.asm
 incsrc reward_events/watercrystal_obtainshards.asm
