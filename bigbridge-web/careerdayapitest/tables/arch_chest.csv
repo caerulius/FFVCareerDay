@@ -1,0 +1,253 @@
+idx,address,original_reward,area,description,reward_style
+71,D13212,Broadsword,Wind Shrine,Wind Shrine Chest,chest
+72,D13216,Ether,Tule,Beginner's House Chest,chest
+73,D1321A,100,Tule,Beginner's House Chest,chest
+74,D1321E,Potion,Tule,Beginner's House Chest,chest
+75,D13222,Phoenix Down,Tule,Beginner's House Chest,chest
+76,D13226,Tent,Tule,Beginner's House Chest,chest
+77,D1322A,Leather Shoes,Tule,Beginner's House Chest MIB 1,mib_key
+78,D1322E,Leather Cap,Pirate's Cave,Pirate's Cave Chest,chest
+79,D13232,Tent,Pirate's Cave,Pirate's Cave Chest,chest
+80,D13236,Ether,Pirate's Cave,Pirate's Cave Chest,chest
+81,D1323A,300,Pirate's Cave,Pirate's Cave Chest,chest
+82,D1323E,Tent,Wind Shrine,Wind Shrine Chest,chest
+83,D13242,Leather Cap,Wind Shrine,Wind Shrine Chest,chest
+84,D13246,Staff,Wind Shrine,Wind Shrine Chest,chest
+85,D1324A,150,Tule,Tule Barrel,chest
+86,D1324E,Leather Shoes,Tule,Tule Box,chest
+87,D13252,Potion,Tule,Tule Barrel,chest
+88,D13256,Tent,Tule,Tule Box,chest
+89,D1325A,Phoenix Down,Tule,Tule Bush,chest
+90,D1325E,Flail,Ship Graveyard,Ship Graveyard Chest,chest
+91,D13262,Phoenix Down,Ship Graveyard,Ship Graveyard Chest,chest
+92,D13266,Tent,Ship Graveyard,Ship Graveyard Chest,chest
+93,D1326A,990,Ship Graveyard,Ship Graveyard Box,chest
+94,D1326E,Potion,Ship Graveyard,Ship Graveyard Chest,chest
+95,D13272,Antidote,Ship Graveyard,Ship Graveyard Chest,chest
+96,D13276,Antidote,Ship Graveyard,Ship Graveyard Chest,chest
+97,D1327A,Phoenix Down,Ship Graveyard,Ship Graveyard Chest,chest
+98,D1327E,Antidote,Carwen,Carwen Barrel,chest
+99,D13282,Ice Rod,Carwen,Carwen Box,chest
+100,D13286,1000,Carwen,Carwen Pot,chest
+101,D1328A,Soft,North Mountain,North Mountain Chest,chest
+102,D1328E,Phoenix Down,North Mountain,North Mountain Chest,chest
+103,D13292,Glasses,Walse,Walse Town Pot,chest
+104,D13296,Hi-Potion,Tycoon Castle,Tycoon Castle Pot,chest
+105,D1329A,Ether,Tycoon Castle,Tycoon Castle Pot,chest
+106,D1329E,Elixir,Tycoon Castle,Tycoon Castle Barrel,chest
+107,D132A2,Phoenix Down,Tycoon Castle,Tycoon Castle Barrel,chest
+108,D132A6,Cabin,Tycoon Castle,Tycoon Castle Barrel,chest
+109,D132AA,Ether,Tycoon Castle,Tycoon Castle Pot,chest
+110,D132AE,Elixir,Tycoon Castle,Tycoon Castle Pot,chest
+111,D132B2,Phoenix Down,Tycoon Castle,Tycoon Castle Pot,chest
+112,D132B6,Maiden's Kiss,Tycoon Castle,Tycoon Castle Pot,chest
+113,D132BA,Shuriken,Tycoon Castle,Tycoon Castle Chest,chest
+114,D132BE,Giyaman,Tycoon Castle,Tycoon Castle Chest,chest
+115,D132C2,Katana,Tycoon Castle,Tycoon Castle Chest,chest
+116,D132C6,Elf Cape,Walse,Walse Castle Chest,chest
+117,D132CA,1000,Walse,Walse Castle Pot,chest
+118,D132CE,Drag,Walse,Walse Castle Pot,chest
+119,D132D2,1000,Walse,Walse Castle Pot,chest
+120,D132D6,490,Walse,Walse Castle Box,chest
+121,D132DA,Tent,Walse,Walse Castle Barrel,chest
+122,D132DE,Phoenix Down,Walse,Walse Castle Barrel,chest
+123,D132E2,Silk robe,Walse,Walse Tower Chest,chest
+124,D132E6,Maiden's Kiss,Walse,Walse Tower Chest,chest
+125,D132EA,Silver Armlet,Walse,Walse Tower Chest,chest
+126,D132EE,Ether,Walse,Walse Tower Chest,chest
+127,D132F2,Phoenix Down,Tycoon Castle,Tycoon Meteor Chest,chest
+128,D132F6,Heavy Spear,Karnak,Karnak Castle Chest MIB 1,mib_key
+129,D132FA,Thunder Scroll,Karnak,Karnak Castle Chest MIB 2,mib_key
+130,D132FE,2000,Karnak,Karnak Castle Chest,chest
+131,D13302,Elixir,Karnak,Karnak Castle Chest MIB 3,mib_key
+132,D13306,Elixir,Karnak,Karnak Castle Chest,chest
+133,D1330A,Elixir,Karnak,Karnak Castle Chest,chest
+134,D1330E,2000,Karnak,Karnak Castle Chest,chest
+135,D13312,Elixir,Karnak,Karnak Castle Chest,chest
+136,D13316,Elixir,Karnak,Karnak Castle Chest,chest
+137,D1331A,Ribbon,Karnak,Karnak Castle Chest,chest
+138,D1331E,Shuriken,Karnak,Karnak Castle Chest,chest
+139,D13322,2000,Karnak,Karnak Castle Chest,chest
+140,D13326,Elixir,Karnak,Karnak Castle Chest,chest
+141,D1332A,Elf Cape,Karnak,Karnak Castle Chest,chest
+142,D1332E,Guardian,Karnak,Karnak Castle Chest,chest
+143,D13332,Fire Rod,Steamship,Karnak Town Barrel,chest
+144,D13336,Cabin,Steamship,Steamship Chest,chest
+145,D1333A,Phoenix Down,Steamship,Steamship Chest,chest
+146,D1333E,Elixir,Steamship,Steamship Chest,chest
+147,D13342,GrnBeret,Steamship,Steamship Chest,chest
+148,D13346,Thief's Glove,Steamship,Steamship Chest,chest
+149,D1334A,Elixir,Steamship,Steamship Chest,chest
+150,D1334E,Ether,Ancient Library,Ancient Library Chest,chest
+151,D13352,Phoenix Down,Ancient Library,Ancient Library Chest,chest
+152,D13356,Stealth Suit,Ancient Library,Ancient Library Chest,chest
+153,D1335A,Shuriken,Jacole,Jacole Cave Chest,chest
+154,D1335E,Tent,Jacole,Jacole Cave Chest,chest
+155,D13362,Shuriken,Ruined City,Ruined City Chest,chest
+156,D13366,Shuriken,Ruined City,Ruined City Chest,chest
+157,D1336A,Size,Ruined City,Ruined City Chest,chest
+158,D1336E,Golden Armor,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+159,D13372,Elixir,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+160,D13376,Phoenix Down,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+161,D1337A,Golden Shield,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+162,D1337E,Mythril Glove,Steamship,Steamship Chest,chest
+163,D13382,Elixir,Steamship,Steamship Chest,chest
+164,D13386,Full Moon,Steamship,Steamship Chest,chest
+165,D1338A,Hi-Potion,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+166,D1338E,5000,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+167,D13392,Shuriken,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+168,D13396,Ancient Sword,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+169,D1339A,Full Moon,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+170,D1339E,Power Wrist,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+171,D133A2,Ether,Flying Lonka Ruins,Flying Lonka Ruins Chest,chest
+172,D133A6,Cabin,Exdeath's Castle,Flying Lonka Ruins Chest,chest
+173,D133AA,Ether,Exdeath's Castle,Exdeath's Castle Chest,chest
+174,D133AE,Diamond Shield,Exdeath's Castle,Exdeath's Castle Chest,chest
+175,D133B2,Ice Shield,Exdeath's Castle,Exdeath's Castle Chest,chest
+176,D133B6,Ether,Exdeath's Castle,Exdeath's Castle Chest,chest
+177,D133BA,Elixir,Exdeath's Castle,Exdeath's Castle Chest,chest
+178,D133BE,Gale Bow,Exdeath's Castle,Exdeath's Castle Chest,chest
+179,D133C2,IceBrand,Exdeath's Castle,Exdeath's Castle Chest,chest
+180,D133C6,Kotetsu,Exdeath's Castle,Exdeath's Castle Chest,chest
+181,D133CA,9900,Exdeath's Castle,Exdeath's Castle Chest,chest
+182,D133CE,Elixir,Exdeath's Castle,Exdeath's Castle Chest,chest
+183,D133D2,8000,Exdeath's Castle,Exdeath's Castle Chest,chest
+184,D133D6,DblLance,Exdeath's Castle,Exdeath's Castle Chest,chest
+185,D133DA,Partisan,Exdeath's Castle,Exdeath's Castle Chest,chest
+186,D133DE,Pinwheel,Exdeath's Castle,Exdeath's Castle Chest,chest
+187,D133E2,4400,Moogle Village,Moogle Cave Chest,chest
+188,D133E6,Phoenix Down,Moogle Village,Moogle Cave Chest,chest
+189,D133EA,Cabin,Moogle Village,Moogle Village Chest,chest
+190,D133EE,Dancing Dagger,Moogle Village,Moogle Village Chest,chest
+191,D133F2,1,Moogle Village,Moogle Village Chest,chest
+192,D133F6,10000,Moogle Village,Moogle Village Chest,chest
+193,D133FA,Phoenix Down,Moogle Village,Moogle Village Chest,chest
+194,D133FE,Ether,Moogle Village,Moogle Village Chest,chest
+195,D13402,Elf Cape,Moogle Village,Moogle Village Chest,chest
+196,D13406,Angel Gwn,Bal Castle,Bal Castle Chest,chest
+197,D1340A,Hero Drink,Bal Castle,Bal Castle Chest,chest
+198,D1340E,Exit,Bal Castle,Bal Castle Chest,chest
+199,D13412,Bone Mail,Hiryuu Valley,Hiryuu Valley Skull,chest
+200,D13416,5000,Hiryuu Valley,Hiryuu Valley Chest,chest
+201,D1341A,Cabin,Hiryuu Valley,Hiryuu Valley Chest,chest
+202,D1341E,7000,Hiryuu Valley,Hiryuu Valley Chest,chest
+203,D13422,Hypno Helm,Hiryuu Valley,Hiryuu Valley Chest,chest
+204,D13426,Air Blade,Hiryuu Valley,Hiryuu Valley Chest,chest
+205,D1342A,Phoenix Down,Hiryuu Valley,Hiryuu Valley Chest,chest
+206,D1342E,5000,Surgate Castle,Surgate Castle Chest,chest
+207,D13432,Float,Surgate Castle,Surgate Castle Chest,chest
+208,D13436,Drain Sword,Barrier Tower,Barrier Tower Chest MIB 1,mib_key
+209,D1343A,9000,Barrier Tower,Barrier Tower Chest,chest
+210,D1343E,18000,Barrier Tower,Barrier Tower Chest,chest
+211,D13442,Gold Hairpin,Barrier Tower,Barrier Tower Chest MIB 2,mib_key
+212,D13446,Guardian,Mua,Mua Town Barrel,chest
+213,D1344A,2500,Mua,Mua Forest Chest,chest
+214,D1344E,Ether,Mua,Mua Forest Chest,chest
+215,D13452,4900,Mua,Mua Forest Chest,chest
+216,D13456,Phoenix Down,Mua,Mua Forest Chest,chest
+217,D1345A,9500,Mua,Mua Forest Chest,chest
+218,D1345E,Soot,Mua,Mua Forest Chest,chest
+219,D13462,Flametongue,Mua,Mua Forest Chest,chest
+220,D13466,Cabin,Mua,Mua Forest Chest,chest
+221,D1346A,Giant Drink,Mua,Mua Forest Chest,chest
+222,D1346E,Elixir,Mua,Mua Forest Chest,chest
+223,D13472,Morning Star,Mua,Mua Forest Chest,chest
+224,D13476,Ether,Solitary Island,Solitary Island Chest,chest
+225,D1347A,DragonFang,Solitary Island,Solitary Island Chest,chest
+226,D1347E,Elixir,Pyramid,Pyramid Chest,chest
+227,D13482,Elixir,Pyramid,Pyramid Chest,chest
+228,D13486,Black Robe,Pyramid,Pyramid Chest MIB 1,mib_key
+229,D1348A,Thornlet,Pyramid,Pyramid Chest,chest
+230,D1348E,DarkMatter,Pyramid,Pyramid Chest MIB 2,mib_key
+231,D13492,Crystal Armor,Pyramid,Pyramid Chest MIB 3,mib_key
+232,D13496,Cursed Ring,Pyramid,Pyramid Chest,chest
+233,D1349A,Ice Shield,Pyramid,Pyramid Chest,chest
+234,D1349E,Flame Shield,Pyramid,Pyramid Chest,chest
+235,D134A2,DarkMatter,Pyramid,Pyramid Chest,chest
+236,D134A6,White Robe,Pyramid,Pyramid Chest,chest
+237,D134AA,DarkSuit,Pyramid,Pyramid Chest,chest
+238,D134AE,DarkMatter,Pyramid,Pyramid Chest,chest
+239,D134B2,DarkMatter,Pyramid,Pyramid Chest,chest
+240,D134B6,DarkMatter,Pyramid,Pyramid Chest,chest
+241,D134BA,9000,Pyramid,Pyramid Chest,chest
+242,D134BE,8000,Pyramid,Pyramid Chest,chest
+243,D134C2,Earth Hammer,Pyramid,Pyramid Chest,chest
+244,D134C6,10000,Pyramid,Pyramid Chest,chest
+245,D134CA,Cabin,Pyramid,Pyramid Chest,chest
+246,D134CE,Elixir,Pyramid,Pyramid Chest,chest
+247,D134D2,12000,Pyramid,Pyramid Chest,chest
+248,D134D6,DarkMatter,Pyramid,Pyramid Chest,chest
+249,D134DA,Elixir,Pyramid,Pyramid Chest,chest
+250,D134DE,DarkMatter,Pyramid,Pyramid Chest,chest
+251,D134E2,Guard Ring,Pyramid,Pyramid Chest,chest
+252,D134E6,Ribbon,Pyramid,Pyramid Chest,chest
+253,D134EA,Gold Hairpin,Pyramid,Pyramid Chest,chest
+254,D134EE,12000,Solitary Island,Solitary Island Chest,chest
+255,D134F2,Hi-Potion,Solitary Island,Solitary Island Chest,chest
+256,D134F6,Protect Drink,Solitary Island,Solitary Island Chest,chest
+257,D134FA,BeastKiller,Solitary Island,Solitary Island Chest,chest
+258,D134FE,RisingSun,Solitary Island,Solitary Island Chest MIB 1,mib_key
+259,D13502,Ether,Solitary Island,Solitary Island Chest,chest
+260,D13506,Guard Ring,Solitary Island,Solitary Island Chest MIB 2,mib_key
+261,D1350A,Crystal Helm,Solitary Island,Solitary Island Chest,chest
+262,D1350E,9000,Solitary Island,Solitary Island Chest,chest
+263,D13512,Elixir,Solitary Island,Solitary Island Chest,chest
+264,D13516,DarkMatter,Solitary Island,Solitary Island Chest,chest
+265,D1351A,Circlet,Solitary Island,Solitary Island Chest,chest
+266,D1351E,Ether,Fork Tower,Fork Tower L. Chest,chest
+267,D13522,Wonder Wand,Fork Tower,Fork Tower L. Chest,chest
+268,D13526,Hi-Potion,Fork Tower,Fork Tower R. Chest,chest
+269,D1352A,Defender Sword,Fork Tower,Fork Tower R. Chest,chest
+270,D1352E,Water Scroll,Great Trench,Great Trench Chest,chest
+271,D13532,Flame Ring,Great Trench,Great Trench Chest,chest
+272,D13536,DragonFang,Great Trench,Great Trench Chest,chest
+273,D1353A,Ether,Great Trench,Great Trench Chest,chest
+274,D1353E,Phoenix Down,Great Trench,Great Trench Chest,chest
+275,D13542,Kaiser Knuckles,Istory Falls,Great Trench Chest,chest
+276,D13546,Ether,Istory Falls,Istory Falls Chest,chest
+277,D1354A,TurtleShell,Istory Falls,Istory Falls Chest,chest
+278,D1354E,Air Knife,Istory Falls,Istory Falls Chest,chest
+279,D13552,Giant Drink,Istory Falls,Istory Falls Chest,chest
+280,D13556,RuneEdge,Istory Falls,Istory Falls Chest,chest
+281,D1355A,Guard Ring,Istory Falls,Istory Falls Chest,chest
+282,D1355E,Wall Ring,Istory Falls,Istory Falls Chest,chest
+283,D13562,Phoenix Down,Istory Falls,Istory Falls Chest,chest
+284,D13566,Enhancer,Istory Falls,Istory Falls Chest,chest
+285,D1356A,12000,Istory Falls,Istory Falls Chest,chest
+286,D1356E,Artemis Bow,Istory Falls,Istory Falls Chest,chest
+287,D13572,Pinwheel,Istory Falls,Istory Falls Chest,chest
+288,D13576,Aegis Shield,Istory Falls,Istory Falls Chest,chest
+289,D1357A,Giant's Axe,Istory Falls,Istory Falls Chest,chest
+290,D1357E,5000,Phoenix Tower,Phoenix Tower Pot,chest
+291,D13582,Phoenix Down,Phoenix Tower,Phoenix Tower Pot,chest
+292,D13586,10000,Phoenix Tower,Phoenix Tower Pot,chest
+293,D1358A,Phoenix Down,Phoenix Tower,Phoenix Tower Pot,chest
+294,D1358E,Phoenix Down,Phoenix Tower,Phoenix Tower Pot,chest
+295,D13592,15000,Phoenix Tower,Phoenix Tower Pot,chest
+296,D13596,20000,Phoenix Tower,Phoenix Tower Pot,chest
+297,D1359A,Phoenix Down,Phoenix Tower,Phoenix Tower Pot,chest
+298,D1359E,Avis Killer,Phoenix Tower,Phoenix Tower Pot,chest
+299,D135A2,25000,Phoenix Tower,Phoenix Tower Pot,chest
+300,D135A6,Thief Knife,Mirage Village,Mirage Village Barrel,chest
+301,D135AA,Ether,Rift,Rift (Ruins) Chest,chest
+302,D135AE,Cabin,Rift,Rift (Ruins) Chest,chest
+303,D135B2,Elixir,Rift,Rift (Ruins) Chest,chest
+304,D135B6,DarkMatter,Rift,Rift (Ruins) Chest,chest
+305,D135BA,Elixir,Rift,Rift (Ruins) Chest,chest
+306,D135BE,Drain Sword,Rift,Rift (Ruins) Chest,chest
+307,D135C2,DragonFang,Rift,Rift (Forest) Chest,chest
+308,D135C6,Ribbon,Rift,Rift (Forest) Chest,chest
+309,D135CA,Enhancer,Rift,Rift (Forest) Chest,chest
+310,D135CE,Lillith Rod,Rift,Rift (Forest) Chest,chest
+311,D135D2,Angel Ring,Rift,Rift (Cave) Chest,chest
+312,D135D6,Coral Ring,Rift,Rift (Cave) Chest,chest
+313,D135DA,Thor Hammer,Rift,Rift (Castle) Chest,chest
+314,D135DE,Running Shoes,Rift,Rift (Castle) Chest,chest
+315,D135E2,Red Shoes,Rift,Rift (Castle) Chest,chest
+316,D135E6,Rainbow Dress,Rift,Rift (Castle) Chest,chest
+317,D135EA,ManEater,Rift,Rift (Castle) Chest,chest
+318,D135EE,Pinwheel,Void,The Void Chest,chest
+319,D135F2,Pinwheel,Void,The Void Chest,chest
+320,D135F6,Elixir,Void,The Void Chest,chest
+321,D135FA,Ragnarok,Void,The Void Chest,chest
+322,D135FE,Pinwheel,Void,The Void Chest,chest

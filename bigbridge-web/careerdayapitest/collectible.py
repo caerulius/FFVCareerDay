@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import pandas as pd 
-import random
 from abc import ABC, abstractmethod
 from collections import OrderedDict
 import math
 from progression_translation import *
 import logging
 
-logging.basicConfig(level=logging.ERROR, format="%(asctime)-15s %(message)s")
 
 class Collectible(ABC):
     """A single something, retreived from a chest, event, or shop.
@@ -19,16 +16,22 @@ class Collectible(ABC):
     """ 
     def __init__(self, reward_id, reward_name, reward_value, related_jobs,
                  max_count, tier=None, valid = None):
-        #pandas imports a blank field as a float nan. This is the easiest way to none it.
+        
+
         if type(max_count) is float:
             self.max_count = None
         else:
-            self.max_count = int(max_count)
+            try:
+                self.max_count = int(max_count)
+            except:
+                self.max_count = None
+            
+            
         self.reward_id = reward_id
         self.collectible_name = reward_name
         self.reward_value = reward_value
         self.related_jobs = [x.replace('"', '').replace(' ', '')
-                              .replace('“', '').replace('”', '')
+                              .replace("'", '')
                              for x in related_jobs]
         self.placed_reward = None
 
@@ -37,9 +40,12 @@ class Collectible(ABC):
             self.tier = int(tier)
         else:
             self.tier = None
-        if valid is None:
+            
+        if valid:
+            self.valid = valid
+        elif valid is None:
             self.valid = True
-        else:
+        elif not valid:
             self.valid = valid == "TRUE"
         self.place_weight = 1
 
@@ -145,7 +151,7 @@ class Crystal(Collectible):
                                      .replace('“', '').replace('”', '')
                                     for x in self.starting_spell_list]
         self.starting_spell_ids = data_row['starting_spell_ids'].strip('][').split(',')
-        self.starting_spell_ids = [x.replace('"', '').replace(' ', '')
+        self.starting_spell_ids = [x.replace('"', '').replace(' ', '').replace("'", '')
                                      .replace('“', '').replace('”', '')
                                     for x in self.starting_spell_ids]
         self.starting_ability = data_row['starting_ability']
@@ -221,7 +227,8 @@ class Gil(Collectible):
     reward_type = ""
     def __init__(self, gil_id, data_row):
         self.reward_type = data_row['power_byte']
-        super().__init__(data_row['number_byte'], str(data_row['readable_amount']) + " gil",
+        self.gil_id = gil_id
+        super().__init__(data_row['number_byte'], str(data_row['readable_amount']) + " Gil",
                          int(data_row['value']), [],data_row['max_count'], tier=data_row['tier'])
 
     @property
@@ -246,6 +253,7 @@ class KeyItem(Collectible):
     def __init__(self, keyitem_id, data_row):
         super().__init__(keyitem_id, data_row['readable_name'], 0,
                          [], 1, tier=None, valid=data_row['valid'])
+        
         self.writeable_name = data_row['writeable_name']
         self.text_location = data_row['text_location']
         self.required_by_placement = []
@@ -269,38 +277,40 @@ class KeyItem(Collectible):
     @property
     def shop_name(self):
         return self.collectible_name
+    
+
 
 class CollectibleManager():
     def __init__(self, data_manager, collectible_config=None):
         self.collectible_config = collectible_config
         
-        logging.error("Collectible Manager enter Init")
-        logging.error("CM: Initializing Items")
-        items = [Item(x, data_manager.files['items'].loc[x]) for x in data_manager.files['items'].index.values]
-        logging.error("CM: Items Initialized")
-        logging.error("CM: Initializing Magics")
-        magics = [Magic(x, data_manager.files['magics'].loc[x],self.collectible_config) for x in data_manager.files['magics'].index.values]
-        logging.error("CM: Magics Initialized")
-        logging.error("CM: Initializing Crystals")
-        crystals = [Crystal(x, data_manager.files['crystals'].loc[x]) for x in data_manager.files['crystals'].index.values]
-        logging.error("CM: Crystals Initialized")
-        logging.error("CM: Initializing Abilities")
-        abilities = [Ability(x, data_manager.files['abilities'].loc[x],self.collectible_config) for x in data_manager.files['abilities'].index.values]
-        logging.error("CM: Abilities Initialized")
-        logging.error("CM: Initializing Gil")
-        gil = [Gil(x, data_manager.files['gil'].loc[x]) for x in data_manager.files['gil'].index.values]
-        logging.error("CM: Gil Initialized")
-        logging.error("CM: Initializing Key Items")
-        key_items = [KeyItem(x, data_manager.files['key_items'].loc[x]) for x in data_manager.files['key_items'].index.values]
-        logging.error("CM: Key Items Initialized")
-        logging.error("CM: Initializing Internal Properties")
+        logging.debug("Collectible Manager enter Init")
+        logging.debug("CM: Initializing Items")
+        items = [Item(k, v) for k, v in data_manager.files['items'].items()]
+        logging.debug("CM: Items Initialized")
+        logging.debug("CM: Initializing Magics")
+        magics = [Magic(k, v ,self.collectible_config) for k, v in data_manager.files['magics'].items()]
+        logging.debug("CM: Magics Initialized")
+        logging.debug("CM: Initializing Crystals")
+        crystals = [Crystal(k, v) for k, v in data_manager.files['crystals'].items()]
+        logging.debug("CM: Crystals Initialized")
+        logging.debug("CM: Initializing Abilities")
+        abilities = [Ability(k, v, self.collectible_config) for k, v in data_manager.files['abilities'].items()]
+        logging.debug("CM: Abilities Initialized")
+        logging.debug("CM: Initializing Gil")
+        gil = [Gil(k, v) for k, v in data_manager.files['gil'].items()]
+        logging.debug("CM: Gil Initialized")
+        logging.debug("CM: Initializing Key Items")
+        key_items = [KeyItem(k, v) for k, v in data_manager.files['key_items'].items()]
+        logging.debug("CM: Key Items Initialized")
+        logging.debug("CM: Initializing Internal Properties")
         self.collectibles = items + magics + crystals + abilities + gil + key_items
         self.collectibles = [x for x in self.collectibles if x.valid]
         self.placement_history = {}
         self.placement_rewards = {}
         self.placed_gil_rewards = []
-        logging.error("CM: Internal Properties Initialized")
-        logging.error("Collectible Manager exit Init")
+        logging.debug("CM: Internal Properties Initialized")
+        logging.debug("Collectible Manager exit Init")
 
     def get_by_name(self, name):
         if name == "New":
@@ -316,6 +326,7 @@ class CollectibleManager():
             if i.reward_id == reward_id and i.reward_type == reward_type and i.valid:
                 return i
         return None
+
 
     def get_all_of_type(self, t):
         if type(t) is list or type(t) is tuple:
@@ -518,7 +529,7 @@ class CollectibleManager():
             
 
         # try:
-        #     logging.error("Reward: %s (%s) Pre-tier filter working_list len: %s" % (next_reward.description, next_reward.idx, len(working_list)))
+        #     logging.debug("Reward: %s (%s) Pre-tier filter working_list len: %s" % (next_reward.description, next_reward.idx, len(working_list)))
         # except:
         #     pass
         
@@ -542,7 +553,7 @@ class CollectibleManager():
         
             # try again
             try:
-                logging.error("Reward: %s Step 2 (allow any prior placement) filter working_list len: %s" % (next_reward.description, len(working_list)))
+                logging.debug("Reward: %s Step 2 (allow any prior placement) filter working_list len: %s" % (next_reward.description, len(working_list)))
             except:
                 pass
             
@@ -555,7 +566,7 @@ class CollectibleManager():
             working_list = [y for y in [x for x in working_list] if y.valid]
 
             try:       
-                logging.error("Reward: %s Step 2 (allow all) filter working_list len: %s" % (next_reward.description, len(working_list)))
+                logging.debug("Reward: %s Step 2 (allow all) filter working_list len: %s" % (next_reward.description, len(working_list)))
             except:
                 pass
             # try again
@@ -572,7 +583,7 @@ class CollectibleManager():
         choice = random_engine.choice(final_working_list)
 
         try:                
-            logging.error("Reward: %s choice: %s" % (next_reward.description, choice.readable_name))
+            logging.debug("Reward: %s choice: %s" % (next_reward.description, choice.readable_name))
         except:
             pass        
 

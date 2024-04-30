@@ -1,5 +1,3 @@
-import pandas as pd
-
 resell_dict = {
     "HALF": "0",
     "5": "4",
@@ -10,7 +8,7 @@ NUM_SHOP_PRICES = 768
 class ShopPrice:
     def __init__(self, index, collectible_manager, data_manager):
         self.idx = index
-        self.generate_from_df(data_manager.files['shopprices'])
+        self.generate_from_data(data_manager.files['shopprices'])
         '''
         self.address
         self.shop_type (00 for magic, 03 for item, 07 for crystal/ability)
@@ -37,13 +35,15 @@ class ShopPrice:
             resell = "NOSELL"
         return f"{self.content_name} costs {self.int_price} and resells for {resell}"
 
-    def generate_from_df(self, df):
-        s = df[df['idx']==self.idx].iloc[0]
-        if s.empty:
-            print("No match on index found for Shop Price class "+self.idx)
+    def generate_from_data(self, data):
+        
+        if self.idx in data.keys():
+            s = data[self.idx]
+            for k, v in s.items():
+                setattr(self,k,v)
         else:
-            for index in s.index:
-                setattr(self,index,s.loc[index])
+            print("No match on index found for Shop prices %s" % self.idx)
+
 
 
 class ShopPriceManager:

@@ -96,7 +96,7 @@ for id in unique_ids:
         rows_data[i] = new_data
 
 #    for _ in rows_data:
-    df_master = df_master.append(pd.DataFrame(rows_data).T,sort=False)
+    df_master = pd.concat([df_master,pd.DataFrame(rows_data).T])
     
     
     

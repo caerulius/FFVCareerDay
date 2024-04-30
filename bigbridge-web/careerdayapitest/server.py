@@ -189,6 +189,7 @@ def patch_and_return():
                             'music_randomization':   data['music_randomization'],
                             'remove_ned':   data['remove_ned'],
                             'key_items_in_mib':   data['key_items_in_mib'],
+                            'trapped_chests':   data['trapped_chests'],
                             'free_shops':   data['free_shops'],
                             'end_on_exdeath1': data['end_on_exdeath1'],
                             'hints_flag': data['hints_flag'],

@@ -1,17 +1,9 @@
 # -*- coding: utf-8 -*-
-import pandas as pd 
-import random
-import operator
-from log_analyzer import check_completeable_spoiler_log
-
+# from log_analyzer import check_completeable_spoiler_log
 class Reward:
-    def __init__(self, index, collectible_manager, data_manager, null_tablet_override = None):
+    def __init__(self, index, collectible_manager, data_manager):
         self.idx = index
-        if not null_tablet_override:
-            self.generate_from_df(data_manager.files['rewards'])
-        else:
-            for k, v in null_tablet_override.items():
-                setattr(self,k,v)
+        self.generate_from_data(data_manager.files['rewards'])
         '''
         self.address (address of two byte value, id definition)
         self.type (crystal, esper, magic, etc)
@@ -23,25 +15,17 @@ class Reward:
         self.required_key_items (Sandworm Bait, Adamantite, etc.)
         self.exdeath_address (Address only relevant to the key item rewards, that tells the special exdeath rewards where to write)
         '''
-        if type(self.force_type) == float:
-            self.force_type = None
-        if type(self.required_key_items) == float:
-            self.required_key_items = None
-        else:
-            self.required_key_items = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
+        if self.required_key_items:
+            self.required_key_items = [x.replace('"', '').replace("'", "").replace('“', '').replace('”', '').strip() for x in \
                                         self.required_key_items.strip('][').split(',')]
-        if type(self.required_key_items_lock1) == float:
-            self.required_key_items_lock1 = None
-        else:
-            self.required_key_items_lock1 = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
+        if self.required_key_items_lock1:
+            self.required_key_items_lock1 = [x.replace('"', '').replace("'", "").replace('“', '').replace('”', '').strip() for x in \
                                         self.required_key_items_lock1.strip('][').split(',')]
-        if type(self.required_key_items_lock2) == float:
-            self.required_key_items_lock2 = None
-        else:
-            self.required_key_items_lock2 = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
+        if self.required_key_items_lock2:
+            self.required_key_items_lock2 = [x.replace('"', '').replace("'", "").replace('“', '').replace('”', '').strip() for x in \
                                         self.required_key_items_lock2.strip('][').split(',')]
         try:
-            self.hint_tags = [x.replace('"', '').replace('“', '').replace('”', '').strip() for x in \
+            self.hint_tags = [x.replace('"', '').replace("'", "").replace('“', '').replace('”', '').strip() for x in \
                               self.hint_tags.strip('][').split(',')]
         except:
             self.hint_tags = ''
@@ -55,8 +39,12 @@ class Reward:
 
     @property
     def asar_output(self):
+        
         if self.mib_type is None:
-            return f"org ${self.address} \ndb ${self.collectible.reward_type}, ${self.collectible.patch_id}"
+            try:
+                return f"org ${self.address} \ndb ${self.collectible.reward_type}, ${self.collectible.patch_id}"
+            except:
+                pass
         else:
             return f"org ${self.address} \ndb ${self.mib_type}, ${self.collectible.patch_id}"
     
@@ -72,20 +60,23 @@ class Reward:
             return '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s (%s)" % (self.collectible.tier, self.collectible.reward_name, "Ability"))
         if str(type(self.collectible)) == "<class 'collectible.Crystal'>":
             return '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s (%s)" % (self.collectible.tier, self.collectible.reward_name, "Crystal"))
-    
+        
 
         if self.mib_type is None:
             return  '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s" % (self.collectible.tier, self.collectible.reward_name))
         else:
             return '{:50}'.format("T%s %s %s" % (self.tier, self.description, self.original_reward)) + '{:50}'.format("T%s %s (monster-in-a-box)" % (self.collectible.tier, self.collectible.reward_name))
-
-    def generate_from_df(self, df):
-        s = df[df['idx']==self.idx].iloc[0]
-        if s.empty:
-            print("No match on index found for Reward class "+self.idx)
+        
+        
+    def generate_from_data(self, data):
+        
+        if self.idx in data.keys():
+            s = data[self.idx]
+            for k, v in s.items():
+                setattr(self,k,v)
         else:
-            for index in s.index:
-                setattr(self,index,s.loc[index])
+            print("No match on index found for Reward class %s" % self.idx)
+
 
     def set_collectible(self, collectible, type_override=None):
         self.randomized = True
@@ -93,7 +84,7 @@ class Reward:
 
 class RewardManager:
     def __init__(self, collectible_manager, data_manager):
-        self.rewards = [Reward(x, collectible_manager, data_manager) for x in data_manager.files['rewards'].index.values]
+        self.rewards = [Reward(k, collectible_manager, data_manager) for k in data_manager.files['rewards'].keys()]
 
     def get_random_reward(self, random_engine, area=None):
         if area is None:
@@ -118,19 +109,29 @@ class RewardManager:
         output = output + "\n;Chests and Events"
         output = output + "\n;=================\n"
         for i in self.rewards:
+
             output = output + i.asar_output + "\n"
 
         return output
 
     def get_spoiler(self, world_lock, free_tablets):
         
-        output = "-----KEY ITEMS------\n"
-        if free_tablets > 0:
-            output += 'FREE TABLETS: %s\n' % free_tablets
-        output_temp, flag1, flag2, df = check_completeable_spoiler_log([x for x in self.rewards if str(type(x.collectible)) == "<class 'collectible.KeyItem'>"],world_lock)
-        self.df = df
-        output = output + output_temp + "\n"
-        output = output + "-----*********-----\n\n\n"
+        output = "-----BOSS CHECKS------\n"
+        keys = [x for x in self.rewards if x.reward_style == "key"]
+        keys = sorted(keys, key = lambda i: i.description)
+        for i in keys:
+            output = output + "{:<40}".format("{:<40}".format(i.description)+"{:<40}".format(i.collectible.reward_name))+"\n"
+
+        # if trapped_chests:
+        #     output += "\n-----TRAPPED CHESTS/MIB------\n"
+        #     keys = [x for x in self.rewards]
+        #     keys = sorted(keys, key = lambda i: i.description)
+        #     for i in keys:
+        #         if i.reward_arch_mib_flag:
+        #             output = output + "{:<40}".format("{:<60}".format("%s (%s)" % (i.description, i.original_reward))+"{:<40}".format("%s (MIB Rank %s)" % (i.collectible.reward_name, i.reward_arch_region_rank)))+"\n"
+
+
+        output = output + "-----****************-----\n\n"
         
         output = output + "-----CHESTS AND EVENTS (T = Tier)-----\n"
         for i in [x for x in self.rewards if str(type(x.collectible)) != "<class 'collectible.KeyItem'>"]:

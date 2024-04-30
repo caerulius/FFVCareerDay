@@ -1,12 +1,12 @@
 from data_manager import *
 from enemy import *
 
-NUM_FORMATIONS = 513
+NUM_FORMATIONS = 512
 
 class Formation(object):
     def __init__(self,index,data_manager,enemy_manager,original_flag = False):
         self.idx = index
-        self.generate_from_df(data_manager.files['formations'])
+        self.generate_from_data(data_manager.files['formations'])
         '''
         self.offset
         self.randomized_boss
@@ -37,6 +37,7 @@ class Formation(object):
         self.assign_enemies(enemy_manager, data_manager, original_flag)
         self.original_enemy_list = self.enemy_list
         self.enemy_change = ''
+        self.mib_flag = False
 
     @property
     def asar_output(self):
@@ -82,14 +83,15 @@ class Formation(object):
             print("Exception %s" % e)
             return ""
 
-    def generate_from_df(self, df):
-        s = df[df['idx']==str(self.idx)].iloc[0]
-        if s.empty:
-            print("No match on index found for Formation class "+self.idx)
+    def generate_from_data(self, data):
+        if str(self.idx) in data.keys():
+            s = data[str(self.idx)]
+            for k, v in s.items():
+                setattr(self,k,v)
+            pass
         else:
-            for index in s.index:
-                setattr(self,index,s.loc[index])
-                
+            print("No match on index found for Formation %s" % self.idx)
+            
     def assign_enemies(self,enemy_manager, data_manager, original_flag):
         enemy_list = []
         for enemy in ['enemy_1','enemy_2','enemy_3','enemy_4','enemy_5','enemy_6','enemy_7','enemy_8']:
@@ -132,8 +134,6 @@ class Formation(object):
                 # If it's not original, iterate through the list of all enemies 
                 if self.rank == 'standard':
                     for enemy_loop in [x for x in enemy_manager.enemies if x.enemy_rank == 'enemy']:  # Search through first set of enemies before bosses
-#                        if self.enemy_list == 'Ifrit':
-#                            breakpoint()                        
                         if enemy_loop.idx_hex == enemy_id:
                             new_enemy = enemy_loop
                 else:
@@ -147,8 +147,8 @@ class Formation(object):
 
 class FormationManager(object):
     def __init__(self, data_manager, enemy_manager):
-        self.formations = [Formation(x, data_manager, enemy_manager) for x in range(1, NUM_FORMATIONS)]
-
+        self.formations = [Formation(x, data_manager, enemy_manager) for x in data_manager.files['formations'].keys()]
+        self.mib_patch = ''
     def get_patch(self,remove_ned_flag):
         output = ";=========="
         output = output + "\n;formations"
@@ -159,10 +159,21 @@ class FormationManager(object):
             formation_list = [i for i in self.formations if i.randomized_boss == 'y']
         for i in formation_list:
             output = output + i.asar_output + "\n"
+            
+        if self.mib_patch:
+            output += self.mib_patch + "\n"
         output = output + "\n"
 
         return output
 
+    def get_spoiler_mib_patch(self):
+        mib_formations = [i for i in self.formations if i.mib_flag]
+        output = "\n-----TRAPPED CHEST/MIB FORMATIONS-----\n"
+        mib_formations = sorted(mib_formations, key = lambda x: x.region_rank)
+        for f in mib_formations:
+            output += "Rank %s > %s\n" % (f.region_rank, f.enemy_list)
+        output = output + '\n'
+        return output
     def get_spoiler(self,remove_ned_flag):
         output = "-----FORMATIONS-----\n"
         output = output+ "-- List in order of bosses where they appear in power ranking--\n  (WingRaptor appears at X location)\n"

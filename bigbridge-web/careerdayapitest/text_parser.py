@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
-import pandas as pd
-import configparser
-import os
+import os, sys
+import json, pkgutil
+THIS_FILEPATH = os.path.abspath(os.path.dirname(__file__))
 
 class TextParser():
-    def __init__(self, config_path = 'local-config.ini'):
-        self.config = configparser.ConfigParser()
-        self.config.read(config_path)
+    def __init__(self, config):
+        self.config = config
 
-        self.text_table_path = self.config['PATHS']['text_table_path']
-        self.table_to_use = self.config['PATHS']['text_table_to_use']
+        def load_json_data(filepath: str):
+            return json.loads(pkgutil.get_data(__name__,filepath).decode('utf-8-sig'))
+        
+        self.text_dict = load_json_data(os.path.join('tables','text_tables', 'json','text_table_chest.json'))
+        self.text_dict2 = dict((v,k) for k,v in self.text_dict.items())
 
-        self.text_dict = pd.read_csv(self.text_table_path + self.table_to_use, header=None, index_col=0).to_dict()[1]
-        self.text_dict2 = pd.read_csv(self.text_table_path + self.table_to_use, header=None, index_col=1).to_dict()[0]
-
-        self.key_item_table = pd.read_csv(self.text_table_path + 'key_item_text.csv',header=None,index_col=0).to_dict()[1]
 
     def run_decrypt(self, byte_list):
         new_bytes = []
@@ -48,10 +46,18 @@ class TextParser():
                     left = x.find("<")
                     right = x.find(">")+1
                     new_char = x[left:right]
-                    text_list.append(self.text_dict2[new_char])
+                    if new_char not in self.text_dict2:
+                        new_char = ' '
+                    else:
+                        new_char = self.text_dict2[new_char]
+                    text_list.append(new_char)
                     counter = right
                 else:    
-                    text_list.append(self.text_dict2[char])
+                    if char not in self.text_dict2:
+                        new_char = ' '
+                    else:
+                        new_char = self.text_dict2[char]
+                    text_list.append(new_char)
                     counter = counter + 1
             text_asar = 'db'
             for i in text_list:
@@ -78,10 +84,18 @@ class TextParser():
                     left = x.find("<")
                     right = x.find(">")+1
                     new_char = x[left:right]
-                    text_list.append(self.text_dict2[new_char])
+                    if new_char not in self.text_dict2:
+                        new_char = ' '
+                    else:
+                        new_char = self.text_dict2[new_char]
+                    text_list.append(new_char)
                     counter = right
                 else:    
-                    text_list.append(self.text_dict2[char])
+                    if char not in self.text_dict2:
+                        new_char = ' '
+                    else:
+                        new_char = self.text_dict2[char]
+                    text_list.append(new_char)
                     counter = counter + 1
             text_asar = 'db '
             for i in text_list:
@@ -130,10 +144,18 @@ class TextParser():
                 left = x.find("<")
                 right = x.find(">")+1
                 new_char = x[left:right]
-                text_list.append(self.text_dict2[new_char])
+                if new_char not in self.text_dict2:
+                    new_char = ' '
+                else:
+                    new_char = self.text_dict2[new_char]
+                text_list.append(new_char)
                 counter = right
             else:    
-                text_list.append(self.text_dict2[char])
+                if char not in self.text_dict2:
+                    new_char = ' '
+                else:
+                    new_char = self.text_dict2[char]
+                text_list.append(new_char)
                 counter = counter + 1
         text_asar = 'db'
         if ff_fill != None:
@@ -164,13 +186,23 @@ class TextParser():
                 left = x.find("<")
                 right = x.find(">")+1
                 new_char = x[left:right]
-                text_list.append(self.text_dict2[new_char])
+                new_char = x[left:right]
+                if new_char not in self.text_dict2:
+                    new_char = ' '
+                else:
+                    new_char = self.text_dict2[new_char]
+                text_list.append(new_char)
+
                 counter = right
             elif char == "|":
                 text_list.append("01")
                 counter = counter + 1
             else:    
-                text_list.append(self.text_dict2[char])
+                if char not in self.text_dict2:
+                    new_char = ' '
+                else:
+                    new_char = self.text_dict2[char]
+                text_list.append(new_char)
                 counter = counter + 1
         text_asar = 'db'
         for i in text_list:

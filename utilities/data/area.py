@@ -1,5 +1,3 @@
-from enum import Enum
-import pandas as pd
 from random import Random
 import math
 
@@ -65,7 +63,7 @@ class AreaManager():
         """Reads the area data from a file and assembles objects for each.
 
         Args:
-            data_file (pandas.DataFrame): A DataFrame object of a csv that
+            data_file : A DataFrame object of a csv that
                 represents the data on Areas. Each row corresponds to a
                 single Area, and iterating through assembles the
                 AreaManager's areas object
@@ -73,9 +71,9 @@ class AreaManager():
         Returns:
             None
         """
-        for index, row in data_file.iterrows():
-            self.areas.append(Area(row.area_name, row.capacity,
-                                   row.order, row.num_checks))
+        for index, row in data_file.items():
+            self.areas.append(Area(row['area_name'], row['capacity'],
+                                   row['order'], row['num_checks']))
 
     def get_emptiest_area(self):
         """Retrieves the least full area, by current_volume.

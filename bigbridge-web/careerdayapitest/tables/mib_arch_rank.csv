@@ -1,0 +1,431 @@
+idx,enemy_list,hp,rank
+1,Goblin,16,1
+15,White Snake,25,1
+10,"Dearo, Dearo",32,1
+2,"Killer Bee, Killer Bee",40,1
+8,"Steel Bat, Steel Bat",40,1
+12,"Stroper, Stroper",40,1
+14,"Black Goblin, Black Goblin",40,1
+16,"White Snake, Black Goblin",45,1
+20,"ManiWizard, White Snake",45,1
+3,"Goblin, Goblin, Goblin",48,1
+4,"Killer Bee, Killer Bee, Goblin",56,1
+9,"Steel Bat, Steel Bat, Dearo",56,1
+5,"Nut Eater, Nut Eater, Nut Eater",60,1
+11,"Steel Bat, Steel Bat, Steel Bat",60,1
+13,"Stroper, Stroper, Steel Bat",60,1
+18,"Mold Wind, Mold Wind, Mold Wind",60,1
+19,"ManiWizard, Mold Wind, Black Goblin",60,1
+21,"ManiWizard, ManiWizard, ManiWizard",60,1
+17,"Mold Wind, Black Goblin, White Snake",65,1
+36,Skeleton,70,1
+410,"Sea Avis, Sea Avis, Sea Avis",75,1
+6,"Stray Cat, Stray Cat, Stray Cat, Stray Cat",80,1
+7,"Stray Cat, Killer Bee, Nut Eater, Stray Cat",80,1
+26,Gatlings,80,1
+436,Wild Nack,95,1
+23,"Sucker, Sucker",100,1
+47,Gala Cat,100,1
+50,Cockatrice,100,1
+22,"Octoraken, Octoraken",120,1
+32,Bander S.,120,1
+39,UndeadRusk,130,1
+90,Karnak,140,1
+24,"Sucker, Sucker, Octoraken",160,1
+25,"Octoraken, Octoraken, Sucker",170,1
+31,"Bighorn, Bighorn",180,1
+28,"Tatu, Tatu",200,1
+52,"Cockatrice, Cockatrice",200,1
+60,Wyvern,200,1
+182,"Sting Eagle, Sting Eagle",200,1
+33,"Bander S., Bighorn",210,1
+37,"Skeleton, Skeleton, Skeleton",210,1
+41,"UndeadRusk, PsychoHead",220,1
+211,"GajraGajri, GajraGajri, GajraGajri",225,1
+44,"PsychoHead, Carcurser, Skeleton",235,1
+46,"RockGarter, RockGarter",240,1
+27,"Gatlings, Gatlings, Bighorn",250,2
+53,"Blocks, Blocks, Blocks, Blocks, Blocks",250,2
+45,"UndeadRusk, UndeadRusk",260,2
+29,"Bighorn, Gatlings, Tatu",270,2
+40,"UndeadRusk, Skeleton, Carcurser",275,2
+30,"Tatu, Tatu, Gatlings",280,2
+62,Padosule,280,2
+38,"Carcurser, Carcurser, Skeleton, Skeleton",290,2
+42,"Skeleton, Skeleton, Skeleton, PsychoHead",300,2
+49,"Gala Cat, Gala Cat, Gala Cat",300,2
+59,"RikaldMage, RikaldMage, RikaldMage",300,2
+43,"PsychoHead, PsychoHead, UndeadRusk",310,2
+56,"IceSoldier, IceSoldier",320,2
+48,"RockGarter, RockGarter, Gala Cat",340,2
+51,"Cockatrice, RockGarter, RockGarter",340,2
+54,"Blocks, Blocks, RockGarter, RockGarter",340,2
+34,"Bander S., Bander S., Bander S.",360,2
+143,Jail Bear,380,2
+65,"Wyvern, Wyvern",400,2
+141,"Tarantula, Tarantula",400,2
+58,"RikaldMage, IceSoldier, IceSoldier",420,2
+69,"Wild Nack, Wild Nack, Wild Nack, Wild Nack, Wild Nack",475,2
+55,"Elf Toad, Elf Toad, Elf Toad",480,2
+57,"Elf Toad, Elf Toad, IceSoldier",480,2
+61,"Wyvern, Padosule",480,2
+78,"Crew Dust, Crew Dust",480,2
+83,"PoItergeist, PoItergeist",480,2
+35,Galura,500,2
+70,"GrassTurtle, GrassTurtle",500,2
+168,Pao,500,2
+179,Likaon,500,2
+254,Pao,500,2
+63,"Padosule, RikaldMage, IceSoldier",540,2
+66,"Aegil, Aegil, Aegil",540,2
+64,"Padosule, Padosule",560,2
+75,Mithril Drgn,600,2
+71,"Aegil, Aegil, GrassTurtle",610,2
+89,"Sorcerer, Karnak, Karnak",630,2
+426,Garkimasra,666,2
+88,"Sorcerer, Sorcerer",700,2
+189,Neon,700,2
+434,TwinLizard,700,2
+82,"Crew Dust, Crew Dust, PoItergeist",720,2
+91,Gigas,760,2
+144,"Jail Bear, Tarantula, Tarantula",780,2
+142,"Tarantula, Tarantula, Tarantula, Tarantula",800,3
+169,Aquathone,800,3
+87,"Sergeant, Karnak, Karnak, Karnak",820,3
+67,Zuu,850,3
+73,"Silent Bee, Silent Bee, Silent Bee, Silent Bee",880,3
+103,"Bomb, Bomb",880,3
+129,Lamia,900,3
+79,"Crew Dust, Crew Dust, Crew Dust, Crew Dust",960,3
+93,"Page 32, Page 64",980,3
+115,D.Chimera,1000,3
+120,Sand Bear,1000,3
+126,Whirl Demon,1000,3
+263,Barette,1000,3
+416,"SeaScorpio, SeaScorpio",1000,3
+424,Imp,1000,3
+425,Owazoral,1000,3
+437,MiniDragon,1000,3
+74,"Mithril Drgn, Silent Bee, GrassTurtle",1070,3
+107,"BioSoldier, BioSoldier",1080,3
+111,"BlackFlame, BlackFlame, BlackFlame, BlackFlame, BlackFlame",1100,3
+409,"Sea Avis, Sahagin, Sahagin",1125,3
+438,Magnetes,1200,3
+68,"Zuu, Aegil, Aegil",1210,3
+411,"Sea Avis, Th.Anemone, Th.Anemone",1225,3
+352,"Whirl Demon, Goblin, BlackFlame",1236,3
+118,"Sand Killer, Sand Killer",1240,3
+92,"Gigas, Sorcerer, Karnak",1250,3
+116,"Sand Porky, Sand Porky, Sand Porky",1260,3
+72,"Zuu, GrassTurtle, Aegil",1280,3
+204,Land Turtle,1300,3
+112,"StoneGolem, BlackFlame, BlackFlame",1440,3
+176,Andagranda,1450,3
+119,"Sand Killer, Sand Porky, Sand Porky",1460,3
+80,"Crew Dust, Crew Dust, Defeater, Defeater, Motor Trap, Motor Trap",1480,3
+94,"Page 64, Page 32, Page 64",1480,3
+81,"PoItergeist, Defeater, Defeater, Defeater, Motor Trap, Motor Trap",1500,3
+86,"Crew Dust, Defeater, Defeater, Defeater, Motor Trap, Motor Trap",1500,3
+95,"Page 64, Page 64, Page 64",1500,3
+334,"MercuryBat, MercuryBat, MercuryBat",1500,3
+350,"Elf Toad, MiniMage, Crew Dust",1500,3
+85,"Defeater, Defeater, Defeater, Defeater, Motor Trap, Motor Trap",1520,3
+104,"Bomb, Bomb, TwinLizard",1580,3
+110,"Crescent, Crescent, BlackFlame, BlackFlame",1600,3
+193,Wall Knight,1600,3
+122,"Ra Mage, LonkaKnght",1620,3
+407,"Sahagin, Sahagin, Sahagin",1650,4
+98,"Page 32, Page 64, Page 128",1680,4
+408,"Th.Anemone, Th.Anemone, Sahagin",1750,4
+106,"Bomb, Bomb, Bomb, Bomb",1760,4
+76,"Mithril Drgn, Mithril Drgn, Mithril Drgn",1800,4
+136,"Water Buzz, Water Buzz, Water Buzz",1800,4
+138,"Rock Brain, Rock Brain, Rock Brain",1800,4
+159,"Blood Slime, Blood Slime, Blood Slime",1800,4
+170,"Weresnake, Weresnake",1800,4
+178,"Drippy, Drippy",1800,4
+255,"Radiator, Radiator",1800,4
+108,"BioSoldier, TwinLizard, Crescent",1820,4
+109,"Crescent, Crescent, TwinLizard",1860,4
+99,"Page 64, Page 256, Page 32",1880,4
+139,"Rock Brain, Torrent, Water Buzz",1900,4
+183,"Sting Eagle, Drippy, Drippy",1900,4
+127,"Whirl Demon, Whirl Demon",2000,4
+133,Hyudora,2000,4
+145,"Lunenta, Lunenta",2000,4
+162,"MooglEater, MooglEater",2000,4
+264,"Barette, Barette",2000,4
+286,Ixecrator,2000,4
+121,"Sand Bear, Sand Killer, Sand Porky",2040,4
+351,"Traveler, Garkimasra, Mold Wind",2086,4
+105,"TwinLizard, TwinLizard, TwinLizard",2100,4
+117,"Sand Porky, Sand Porky, Sand Porky, Sand Porky, Sand Porky",2100,4
+137,"Torrent, Torrent, Torrent",2100,4
+190,"Neon, Neon, Neon",2100,4
+266,BlandLamia,2100,4
+305,DuelKnight,2140,4
+307,Ion,2140,4
+309,Berserker,2140,4
+173,"Ridicule, Aquathone",2180,4
+130,"Lamia, StonedMask, StonedMask, StonedMask",2250,4
+100,"Page 128, Page 128, Page 256",2300,4
+164,Lopros,2300,4
+317,Blizzard,2300,4
+319,Isteritos,2300,4
+212,"GajraGajri, GajraGajri, MiniMage, MiniMage",2350,4
+96,"Page 32, Page 32, Page 128, Page 128",2360,4
+97,"Page 64, Page 128, Page 128, Page 32",2380,4
+131,"ArchaeToad, ArchaeToad, ArchaeToad",2400,4
+296,Slownin,2400,4
+200,Ziggurat,2420,4
+163,"MooglEater, Acrophese, Blood Slime",2500,4
+102,"Page 32, Page 64, Page 128, Page 256, Page 128, Page 64, Page 32,",4260,4
+180,"Likaon, Likaon, Likaon, Likaon, Likaon",2500,5
+335,"MercuryBat, MercuryBat, MercuryBat, MercuryBat, MercuryBat",2500,5
+123,"LonkaKnght, LonkaKnght, LonkaKnght",2580,5
+140,"Rock Brain, Rock Brain, Torrent, Torrent",2600,5
+300,Dim Master,2600,5
+349,"D.Chimera, Drippy, Torrent",2600,5
+125,"LonkaKnght, LonkaKnght, StonedMask, StonedMask",2620,5
+354,"Bomb, Wild Nack, BlandLamia",2635,5
+132,"ArchaeToad, Whirl Demon, Lamia",2700,5
+172,"Conago, Weresnake, Aquathone",2700,5
+218,Wyrm,2700,5
+429,"Drippy, Drippy, Drippy",2700,5
+128,"Whirl Demon, LonkaKnght, LonkaKnght",2720,5
+101,"Page 128, Page 64, Page 256, Page 128",2800,5
+191,"Traveler, Neon, Neon",2800,5
+124,"Ra Mage, Ra Mage, StonedMask, StonedMask, StonedMask",2870,5
+225,Magic Drgn,2900,5
+135,Hydra,3000,5
+146,"Lunenta, Dilure, Dilure",3000,5
+148,"Faerie Orc, Faerie Orc, Faerie Orc",3000,5
+149,"Faerie Orc, Lunenta, Dilure",3000,5
+150,"Devourer, Faerie Orc, Faerie Orc",3000,5
+151,"Mandrake, Devourer, Devourer",3000,5
+152,"Mandrake, Lunenta, Dilure",3000,5
+153,"Devourer, Lunenta, Lunenta",3000,5
+155,"Cactus, Cactus, Cactus",3000,5
+171,"Conago, Conago, Conago",3000,5
+220,"TwinLizard, TwinLizard",3000,5
+302,Flare,3000,5
+369,Bardandels,3000,5
+414,"Armon, Armon",3000,5
+415,"Armon, SeaScorpio, SeaScorpio, SeaScorpio",3000,5
+298,"TinyMage, TinyMage",3080,5
+336,"Coral, MercuryBat, MercuryBat",3150,5
+194,"Traveler, Gravido",3200,5
+339,Gel Water,3300,5
+174,"Ridicule, Conago, Conago",3380,5
+160,"Blood Slime, Blood Slime, Blood Slime, Blood Slime, Blood Slime, Blood Slime",3600,5
+161,"Acrophese, Acrophese, Acrophese, Acrophese",3600,5
+205,"Cure Beast, Land Turtle, Land Turtle",3600,5
+256,"Radiator, Radiator, Radiator, Radiator",3600,5
+270,"Nile, Nile, Nile",3600,5
+134,"Hyudora, Ra Mage, LonkaKnght",3620,5
+184,"BoneDragon, Sting Eagle, Likaon, Likaon",3690,5
+288,"Owazoral, Owazoral",3800,5
+293,"Cursed One, Owazoral",3880,5
+196,"Tricker, Tricker, Tricker",3900,6
+206,"Land Turtle, Land Turtle, Land Turtle",3900,6
+224,"Wall Mage, Wall Mage, Wall Mage",3900,6
+412,"Sahagin, Th.Anemone, Corvette",3950,6
+228,"DarkWizard, DarkWizard",3998,6
+197,"Tricker, Tricker, Traveler",4000,6
+203,"Cure Beast, Cure Beast, Cure Beast, Cure Beast",4000,6
+215,"Imp, Imp",4000,6
+245,"Hedgehog, Shadow, Shadow, Shadow",4000,6
+283,"Mukare, Mukare",4000,6
+342,Fall Guard,4000,6
+418,"Gel Fish, Gel Fish, Gel Fish, Gel Fish",4000,6
+251,Elm Gigas,4170,6
+195,"Traveler, Wall Knight, Magnetes",4200,6
+249,"Shadow, Shadow, Treeman",4200,6
+267,"BlandLamia, BlandLamia",4200,6
+306,"DuelKnight, DuelKnight",4280,6
+308,"Ion, DuelKnight",4280,6
+268,"BlandLamia, Pyra Layer",4300,6
+181,"BoneDragon, Drippy, Drippy",4390,6
+234,"BandelKuar, Blind Wolf, Blind Wolf",4400,6
+313,"Druid, Iron Dress",4400,6
+291,ShdwDancer,4480,6
+221,"Blind Wolf, Blind Wolf, Blind Wolf, Blind Wolf, Blind Wolf",4500,6
+353,"Dilure, Magic Drgn, Blood Slime",4500,6
+186,ZombieDrgn,4590,6
+165,"Lopros, Lopros",4600,6
+207,"Bold Mani, Bold Mani, Cure Beast, Cure Beast",4600,6
+209,"Bold Mani, Land Turtle, Cure Beast, Cure Beast",4600,6
+223,"Wall Mage, Blind Wolf, Blind Wolf, TwinLizard",4600,6
+318,"Blizzard, Blizzard",4600,6
+321,"Spizner, Spizner",4600,6
+214,"Mammon, Mammon, GajraGajri, GajraGajri, MiniMage",4650,6
+175,"Ridicule, Ridicule, Weresnake, Conago",4660,6
+199,"Gravido, Wall Knight, Tricker",4700,6
+401,"Mind Mage, Thing, Thing",4706,6
+244,"Treeman, Sleepy, Shadow",4800,6
+250,"Shadow, Shadow, Python, Hedgehog",4800,6
+297,"Slownin, Slownin",4800,6
+201,"Ziggurat, Magnetes, Magnetes",4820,6
+219,"Wyrm, MiniMage, MiniMage",4900,6
+222,"TwinLizard, TwinLizard, Blind Wolf, Arage",4950,6
+113,"MiniDragon, MiniDragon, MiniDragon, MiniDragon, MiniDragon",5000,6
+114,Prototype,5000,6
+147,"Dilure, Dilure, Dilure, Dilure, Dilure",5000,6
+154,Kuzar,5000,7
+247,"Python, Hedgehog, Treeman",5000,7
+217,"Imp, Imp, GajraGajri, MiniMage",5175,7
+185,"BoneDragon, BoneDragon",5180,7
+229,"DarkWizard, DarkWizard, Wall Mage",5298,7
+262,"Barette, Desertpede, Desertpede",5300,7
+282,"GloomWidow, GloomWidow, GloomWidow",5460,7
+216,"Imp, Mammon, Mammon, GajraGajri",5475,7
+269,"Pyra Layer, Nile, BlandLamia",5500,7
+343,"Fall Guard, MercuryBat, MercuryBat, MercuryBat",5500,7
+187,"ZombieDrgn, Sting Eagle, Drippy",5590,7
+192,"Magnetes, Magnetes, Wall Knight, Wall Knight",5600,7
+413,"Corvette, Corvette",5600,7
+284,"Mukare, GloomWidow, Slug",5640,7
+226,"Magic Drgn, TwinLizard, Wall Mage",5700,7
+272,"Nile, Nile, Nile, BlandLamia",5700,7
+177,"Andagranda, Andagranda, Andagranda, Andagranda",5800,7
+265,Sekmet,6000,7
+287,"Ixecrator, Ixecrator, Ixecrator",6000,7
+303,"Flare, Flare",6000,7
+392,"SwrdDancer, SwrdDancer",6000,7
+202,"Ziggurat, Ziggurat, Magnetes",6040,7
+299,"TinyMage, TinyMage, TinyMage, TinyMage",6160,7
+242,"Sleepy, Sleepy, Sleepy, Sleepy",6400,7
+310,"Berserker, Ion, DuelKnight",6420,7
+311,"Berserker, Berserker, Berserker",6420,7
+208,"Bold Mani, Bold Mani, Bold Mani, Bold Mani, Bold Mani",6500,7
+198,"Gravido, Wall Knight, Magnetes, AdamaGolem",6600,7
+210,"MiniMage, MiniMage, MiniMage, MiniMage, MiniMage, MiniMage",6600,7
+235,"Motordrive, Motordrive",6600,7
+243,"Treeman, Treeman, Treeman",6600,7
+275,"BlandLamia, BlandLamia, Nile, Nile",6600,7
+312,"Druid, Druid, Druid",6600,7
+314,"Iron Dress, Iron Dress, Iron Dress",6600,7
+315,"Statue, Statue",6600,7
+301,"Dim Master, Dim Master, TinyMage",6740,7
+253,"Elm Gigas, Hedgehog, Sleepy",6770,7
+230,"AdamaGolem, Arage, Arage, Arage",6800,7
+322,"Spizner, Spizner, Spizner",6900,7
+323,"Spizner, Blizzard, Blizzard",6900,7
+232,"AdamaGolem, DarkWizard, Wall Mage",6949,7
+252,"Elm Gigas, Shadow, Python",6970,7
+246,"Hedgehog, Sleepy, Treeman, Treeman",7000,7
+326,"Unknown, Unknown",7000,7
+383,AvisDragon,7000,7
+304,"Flare, Dim Master, TinyMage",7140,7
+167,"Skull Eater, Skull Eater, Skull Eater, Skull Eater, Skull Eater, Skull Eater",6,8
+233,"BandelKuar, BandelKuar, DarkWizard",7199,8
+271,"Nile, Nile, Nile, Nile, Nile, Nile",7200,8
+280,"Slug, Slug, Slug, Slug",7280,8
+281,"Slug, Slug, GloomWidow, GloomWidow",7280,8
+213,"Mammon, Mammon, Mammon, MiniMage, MiniMage",7300,8
+231,"AdamaGolem, AdamaGolem",7300,8
+379,"Orcat, Orcat, Achelone",7400,8
+285,"Mukare, Slug, Slug, Slug",7460,8
+237,Red Dragon,7500,8
+324,"Unknown, Unknown, Unknown",7500,8
+359,"Chamcubia, Bella Donna",7700,8
+277,"ZephyrZone, AdamaGolem, BioSoldier",7780,8
+361,"Cherie, Chamcubia",7800,8
+290,"Ixecrator, Ixecrator, Ixecrator, Owazoral",7900,8
+360,"Bella Donna, Cherie",7900,8
+294,"Cursed One, Cursed One, Cursed One, Cursed One",7920,8
+395,"Bodyguard, Bodyguard",7920,8
+248,"Python, Python, Treeman, Treeman",8000,8
+370,"Bardandels, LevelCheck",8000,8
+357,"Anku Heggu, Anku Heggu, Anku Heggu",8340,8
+278,"ZephyrZone, Ziggurat, Lunenta",8380,8
+292,"ShdwDancer, Ixecrator, Owazoral",8380,8
+378,"Orcat, Orcat, Orcat, Orcat",8400,8
+295,"Cursed One, Ixecrator, ShdwDancer",8460,8
+276,"ZephyrZone, D.Chimera, LonkaKnght",8480,8
+238,Yellow Drgn,8500,8
+327,"Unknown, Unknown, Unknown",8500,8
+236,"Motordrive, Motordrive, DarkWizard",8599,8
+261,"Desertpede, Desertpede, Desertpede, Desertpede",8600,8
+337,"Coral, Coral, Coral, Coral",8600,8
+394,"Bodyguard, Ninja",8960,8
+366,"Grenade, Grenade, DoomDealer",9000,8
+371,"Bardandels, Bardandels, Grenade",9000,8
+419,Giant Bird,9000,8
+289,"Owazoral, Owazoral, Owazoral, Owazoral, Owazoral",9500,8
+329,"Unknown, Unknown, Unknown",9500,8
+381,"Achelone, Achelone, Achelone",9600,8
+340,"Gel Water, Gel Water, Gel Water",9900,8
+273,Archaesaur,9960,8
+325,"Unknown, Unknown, Unknown, Unknown",10000,8
+328,"Unknown, Unknown, Unknown, Unknown",10000,8
+348,"LevelCheck, Prototype",10000,8
+380,Great Drgn,10000,8
+386,"Ninja, Ninja",10000,8
+347,"Alcumia, BoneDragon",10300,8
+346,"Alcumia, Hydra",10500,8
+227,"Magic Drgn, Magic Drgn, Magic Drgn, Arage, Blind Wolf",10650,9
+432,"Belfegor, Thing, Thing, Mind Mage",10706,9
+374,"White Flame, White Flame, MossFungus, Farfarerro",10780,9
+341,"Gel Water, Gel Water, Coral, Coral",10900,9
+330,"Unknown, Unknown, Unknown, Unknown",11000,9
+355,"Anku Heggu, Ammona, Ammona, Ammona",11120,9
+362,"Chamcubia, Chamcubia, Chamcubia",11400,9
+376,"MossFungus, White Flame, White Flame, White Flame, White Flame",11400,9
+320,"Isteritos, Isteritos, Isteritos, Isteritos, Isteritos",11500,9
+403,"Thing, Necromancr, Mind Mage",11603,9
+363,"Bella Donna, Bella Donna, Bella Donna",11700,9
+365,"Chamcubia, Bella Donna, Cherie",11700,9
+344,"Fall Guard, Fall Guard, Fall Guard",12000,9
+345,"Alcumia, Red Dragon",12000,9
+364,"Cherie, Cherie, Cherie",12000,9
+373,"DoomDealer, DoomDealer, DoomDealer, DoomDealer",12000,9
+385,"AvisDragon, Ninja",12000,9
+396,"Death Claw, Fury, SwrdDancer",12000,9
+431,"Belfegor, Belfegor",12000,9
+274,"Archaesaur, Nile, Nile",12360,9
+332,"Unknown, Unknown, Unknown",12500,9
+377,"Farfarerro, Farfarerro, Farfarerro, Farfarerro, Farfarerro",12900,9
+368,"LevelCheck, LevelCheck, Grenade",13000,9
+390,"SwrdDancer, Fury, Fury",13000,9
+356,"Ammona, Ammona, Ammona, Ammona, Ammona",13900,9
+372,"DoomDealer, DoomDealer, LevelCheck, Bardandels",14000,9
+384,"AvisDragon, AvisDragon",14000,9
+389,"Death Claw, Death Claw, SwrdDancer, SwrdDancer",14000,9
+393,"Fury, Fury, Death Claw",14000,9
+240,"Red Dragon, BlueDragon",14400,9
+156,Sand Crawl,15000,9
+375,"MossFungus, MossFungus, MossFungus",15000,9
+421,"Sea Devil, Sea Devil, Sea Devil",15000,9
+382,"Great Drgn, Achelone, Orcat",15300,9
+316,"Statue, Statue, Statue, Statue, Statue",16500,9
+399,"Necromancr, Gorchimera",16900,9
+157,"Sand Crawl, Cactus, Cactus",17000,9
+241,"Yellow Drgn, Yellow Drgn",17000,9
+405,CrysDragon,17500,9
+387,Iron Giant,18000,9
+397,K.Behemoth,18000,9
+402,"Mind Mage, Mind Mage, Mind Mage, Mind Mage",18800,9
+331,"Unknown, Unknown, Unknown, Unknown",19000,9
+417,Silvune,19000,9
+420,"Giant Bird, Sea Devil, Sea Devil",19000,9
+333,"Unknown, Unknown, Unknown",19500,9
+158,ShieldDrgn,19999,10
+279,ExdethSoul,20000,10
+367,"LevelCheck, LevelCheck, LevelCheck, LevelCheck",20000,10
+400,"Gorchimera, Gorchimera",20000,10
+239,"BlueDragon, BlueDragon, BlueDragon",20700,10
+358,Land Crawl,22000,10
+257,"Metamorpha, Shiva, Ifrit, Ramuh",28000,10
+258,"Metamorpha, Shiva, Gala Cat, Elf Toad",28000,10
+259,"Metamorpha, Ifrit, Wyvern, Whirl Demon",28000,10
+260,"Metamorpha, Ramuh, Crew Dust, ZombieDrgn",28000,10
+404,"Gorchimera, K.Behemoth",28000,10
+388,"Iron Giant, Death Claw, Death Claw, Death Claw",30000,10
+422,Stingray,30000,10
+430,Gil Turtle,32768,10
+423,Tote Avis,33090,10
+391,"Iron Giant, Iron Giant",36000,10
+398,"K.Behemoth, K.Behemoth",36000,10
+433,"Mover, Mover, Mover, Mover, Mover, Mover",60000,10
+338,"Tonberi, Tonberi, Tonberi, Tonberi, Tonberi",196965,10

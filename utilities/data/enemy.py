@@ -37,9 +37,9 @@ STAT_HEX_MAP = {
         }
 
 class Enemy(object):
-    def __init__(self,index, data_manager, pass_type = 'id', use_boss_table = True):
+    def __init__(self,index, data_manager, pass_type, use_boss_table = True):
         self.idx = index
-        self.generate_from_df(data_manager,pass_type,use_boss_table)
+        self.generate_from_data(data_manager, pass_type, use_boss_table)
         '''
         self.idx_hex
         self.enemy_name
@@ -118,7 +118,7 @@ class Enemy(object):
         
         stat_data = '; Stats: \norg $'+self.stats_address+"\ndb "
         for stat in STAT_HEX_MAP:
-            hex_val = getattr(self, stat)
+            hex_val = str(getattr(self, stat))
             stat_data = stat_data + "$" + hex_val + ", "
         final_output = final_output + "\n" + stat_data[:-2] + "\n"
 
@@ -165,20 +165,36 @@ class Enemy(object):
         
         return final_output
 
-    def generate_from_df(self,data_manager,pass_type,use_boss_table):
-        if pass_type == 'id': #if we're passing in ids, we can look anywhere
-            s = data_manager.files['enemies'][data_manager.files['enemies']['idx']==str(self.idx)].iloc[0]
-        if pass_type == 'hex': #if we're passing in hexes, we have to star
-            if use_boss_table:
-                s = data_manager.files['enemies_bosses'][data_manager.files['enemies_bosses']['idx_hex'].str.match(str(self.idx))].iloc[0]
+    def generate_from_data(self,data_manager, pass_type, use_boss_table):
+        # if pass_type == 'id': #if we're passing in ids, we can look anywhere
+        
+        # if pass_type == 'hex': #if we're passing in hexes, we have to star
+        #     if use_boss_table:
+        #         s = data_manager.files['enemies_bosses'][data_manager.files['enemies_bosses']['idx_hex'].str.match(str(self.idx))].iloc[0]
+        #     else:
+        #         s = data_manager.files['enemies_nonbosses'][data_manager.files['enemies_nonbosses']['idx_hex'].str.match(str(self.idx))].iloc[0]
+        
+        
+        if pass_type == 'id':
+    
+            if str(self.idx) in data_manager.files['enemies'].keys():
+                data = data_manager.files['enemies'][str(self.idx)]
+                for k, v in data.items():
+                    setattr(self,k,v)
             else:
-                s = data_manager.files['enemies_nonbosses'][data_manager.files['enemies_nonbosses']['idx_hex'].str.match(str(self.idx))].iloc[0]
-
-        if s.empty:
-            print("No match on index found for enemy class "+self.idx)
-        else:
-            for index in s.index:
-                setattr(self,index,s.loc[index])
+                print("No match on index found for Enemy data %s" % self.idx)
+                
+        elif pass_type == 'hex':
+            try:
+                if use_boss_table:
+                    data = data_manager.files['enemies_bosses'][[i for i in data_manager.files['enemies_bosses'] if data_manager.files['enemies_bosses'][i]['idx_hex'] == self.idx][0]]
+                else:
+                    data = data_manager.files['enemies_nonbosses'][[i for i in data_manager.files['enemies_nonbosses'] if data_manager.files['enemies_nonbosses'][i]['idx_hex'] == self.idx][0]]
+                for k, v in data.items():
+                    setattr(self,k,v)
+            except:
+                print("No match on index found for Enemy data via passing in hex as pass_type %s" % self.idx)
+                
 
     def update_val(self, attr, val):
         val = int(val)
@@ -214,10 +230,9 @@ class Enemy(object):
     def apply_rank_mult(self):
         rank_mult = self.rank_mult
         for stat in ['num_phys_power','num_phys_def','num_mag_power','num_mag_def','num_gil','num_level']:
-            try:
-                setattr(self,stat,str(round(int(getattr(self,stat)) * rank_mult)))
-            except:
-                breakpoint()
+
+            setattr(self,stat,str(round(int(getattr(self,stat)) * rank_mult)))
+
         self.update_all()
 
     def update_all(self):
@@ -239,7 +254,7 @@ class Enemy(object):
 
 class EnemyManager(object):
     def __init__(self, data_manager):
-        self.enemies = [Enemy(x, data_manager) for x in range(0, NUM_ENEMIES)]
+        self.enemies = [Enemy(x, data_manager, 'id') for x in range(0, NUM_ENEMIES)]
         self.relevant_enemies = []
 
     def get_patch(self, relevant=False):
@@ -293,7 +308,7 @@ class EnemyManager(object):
 
         return output
     
-    def set_portal_boss(self, df_portal, portal_boss_str, output_str):
+    def set_portal_boss(self, portal_data, portal_boss_str, output_str):
         
         # This all currently supports 3 enemies, which replace LiquiFlame/Kuzar/SolCannon from Phoenix Tower
         # with entirely new enemies
@@ -305,20 +320,18 @@ class EnemyManager(object):
         # Look for "UPDATE STEP" in notes below
         
         
-        df = df_portal
+        portal_indexes = [i for i in portal_data if portal_data[i]['enemy_name']==portal_boss_str]
         
-        df = df[df['enemy_name'] == portal_boss_str]
-        
-        enemies = [[x for x in self.enemies if x.idx == '357'][0],
-                   [x for x in self.enemies if x.idx == '358'][0],
-                   [x for x in self.enemies if x.idx == '359'][0]
+        enemies = [[x for x in self.enemies if x.idx == 357][0],
+                   [x for x in self.enemies if x.idx == 358][0],
+                   [x for x in self.enemies if x.idx == 359][0]
                   ]
         
         self.relevant_enemies = self.relevant_enemies + enemies
         
-        for enemy in enemies:
-            data = df[df['idx']==int(enemy.idx)].iloc[0]
-            for i in data.index:
+        for _, enemy in enumerate(enemies):
+            data = portal_data[portal_indexes[_]]
+            for i in data.keys():
                 if i == 'enemy_name':
                     setattr(enemy,i,str(data[i]))
                 if "num_" in i:

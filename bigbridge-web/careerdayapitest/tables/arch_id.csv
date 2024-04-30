@@ -1,0 +1,478 @@
+arch_id,name,item_type,item_id
+100,Knight Crystal,Crystal,00
+101,Monk Crystal,Crystal,01
+102,Thief Crystal,Crystal,02
+103,Dragoon Crystal,Crystal,03
+104,Ninja Crystal,Crystal,04
+105,Samurai Crystal,Crystal,05
+106,Berserker Crystal,Crystal,06
+107,Hunter Crystal,Crystal,07
+108,MysticKnight Crystal,Crystal,08
+109,WhiteMage Crystal,Crystal,09
+110,BlackMage Crystal,Crystal,0A
+111,TimeMage Crystal,Crystal,0B
+112,Summoner Crystal,Crystal,0C
+113,BlueMage Crystal,Crystal,0D
+114,RedMage Crystal,Crystal,0E
+115,Trainer Crystal,Crystal,0F
+116,Chemist Crystal,Crystal,10
+117,Geomancer Crystal,Crystal,11
+118,Bard Crystal,Crystal,12
+119,Dancer Crystal,Crystal,13
+120,Mimic Crystal,Crystal,14
+121,Freelancer Crystal,Crystal,15
+201,Ice Sword Magic,Magic,01
+202,Bolt Sword Magic,Magic,02
+203,Venom Sword Magic,Magic,03
+204,Mute Sword Magic,Magic,04
+205,Sleep Sword Magic,Magic,05
+206,Fire2 Sword Magic,Magic,06
+207,Ice2 Sword Magic,Magic,07
+208,Bolt2 Sword Magic,Magic,08
+209,Drain Sword Magic,Magic,09
+210,Break Sword Magic,Magic,0A
+211,Bio Sword Magic,Magic,0B
+212,Fire3 Sword Magic,Magic,0C
+213,Ice3 Sword Magic,Magic,0D
+214,Bolt3 Sword Magic,Magic,0E
+215,Holy Sword Magic,Magic,0F
+216,Flare Sword Magic,Magic,10
+217,Psych Sword Magic,Magic,11
+218,Cure White Magic,Magic,12
+219,Scan White Magic,Magic,13
+220,Antdt White Magic,Magic,14
+221,Mute White Magic,Magic,15
+222,Armor White Magic,Magic,16
+223,Size White Magic,Magic,17
+224,Cure2 White Magic,Magic,18
+225,Life White Magic,Magic,19
+226,Charm White Magic,Magic,1A
+227,Image White Magic,Magic,1B
+228,Shell White Magic,Magic,1C
+229,Heal White Magic,Magic,1D
+230,Cure3 White Magic,Magic,1E
+231,Wall White Magic,Magic,1F
+232,Bersk White Magic,Magic,20
+233,Life2 White Magic,Magic,21
+234,Holy White Magic,Magic,22
+235,Dispel White Magic,Magic,23
+236,Fire Black Magic,Magic,24
+237,Ice Black Magic,Magic,25
+238,Bolt Black Magic,Magic,26
+239,Venom Black Magic,Magic,27
+240,Sleep Black Magic,Magic,28
+241,Toad Black Magic,Magic,29
+242,Fire2 Black Magic,Magic,2A
+243,Ice2 Black Magic,Magic,2B
+244,Bolt2 Black Magic,Magic,2C
+245,Drain Black Magic,Magic,2D
+246,Break Black Magic,Magic,2E
+247,Bio Black Magic,Magic,2F
+248,Fire3 Black Magic,Magic,30
+249,Ice3 Black Magic,Magic,31
+250,Bolt3 Black Magic,Magic,32
+251,Flare Black Magic,Magic,33
+252,Doom Black Magic,Magic,34
+253,Psych Black Magic,Magic,35
+255,Slow Time Magic,Magic,37
+256,Regen Time Magic,Magic,38
+257,Void Time Magic,Magic,39
+258,Haste Time Magic,Magic,3A
+259,Float Time Magic,Magic,3B
+260,Demi Time Magic,Magic,3C
+261,Stop Time Magic,Magic,3D
+263,Comet Time Magic,Magic,3F
+264,Slow2 Time Magic,Magic,40
+265,Reset Time Magic,Magic,41
+266,Qrter Time Magic,Magic,42
+267,Hast2 Time Magic,Magic,43
+268,Old Time Magic,Magic,44
+269,Meteo Time Magic,Magic,45
+270,Quick Time Magic,Magic,46
+271,Xzone Time Magic,Magic,47
+272,Chocob Esper Magic,Magic,48
+273,Sylph Esper Magic,Magic,49
+274,Remora Esper Magic,Magic,4A
+275,Shiva Esper Magic,Magic,4B
+276,Ramuh Esper Magic,Magic,4C
+277,Ifrit Esper Magic,Magic,4D
+278,Titan Esper Magic,Magic,4E
+279,Golem Esper Magic,Magic,4F
+280,Shoat Esper Magic,Magic,50
+281,Crbnkl Esper Magic,Magic,51
+282,Syldra Esper Magic,Magic,52
+283,Odin Esper Magic,Magic,53
+284,Phenix Esper Magic,Magic,54
+285,Levia Esper Magic,Magic,55
+286,Bahmut Esper Magic,Magic,56
+287,Power Song Magic,Magic,57
+288,Speed Song Magic,Magic,58
+289,Vitality Song Magic,Magic,59
+290,Magic Song Magic,Magic,5A
+291,Hero Song Magic,Magic,5B
+292,Requiem Song Magic,Magic,5C
+293,Love Song Magic,Magic,5D
+294,Charm Song Magic,Magic,5E
+295,Condemn Blue Magic,Magic,82
+296,Roulette Blue Magic,Magic,83
+297,AquaRake Blue Magic,Magic,84
+298,L5 Doom Blue Magic,Magic,85
+299,L4 Qrter Blue Magic,Magic,86
+300,L2 Old Blue Magic,Magic,87
+301,L3 Flare Blue Magic,Magic,88
+302,FrogSong Blue Magic,Magic,89
+303,TinySong Blue Magic,Magic,8A
+304,Flash Blue Magic,Magic,8B
+305,Time Slip Blue Magic,Magic,8C
+306,MoonFlut Blue Magic,Magic,8D
+307,DethClaw Blue Magic,Magic,8E
+308,Aero Blue Magic,Magic,8F
+309,Aero 2 Blue Magic,Magic,90
+310,Aero 3 Blue Magic,Magic,91
+311,Emission Blue Magic,Magic,92
+312,GblinPnch Blue Magic,Magic,93
+313,DrkShock Blue Magic,Magic,94
+314,GuardOff Blue Magic,Magic,95
+315,Fusion Blue Magic,Magic,96
+316,MindBlst Blue Magic,Magic,97
+317,Vampire Blue Magic,Magic,98
+318,Hammer Blue Magic,Magic,99
+319,BigGuard Blue Magic,Magic,9A
+320,Exploder Blue Magic,Magic,9B
+321,???? Blue Magic,Magic,9C
+322,Blowfish Blue Magic,Magic,9D
+323,WhiteWind Blue Magic,Magic,9E
+324,Missile Blue Magic,Magic,9F
+400,Kick Ability,Ability,06
+401,BuildUp Ability,Ability,07
+402,Mantra Ability,Ability,08
+403,Escape Ability,Ability,09
+404,Steal Ability,Ability,0A
+405,Mug Ability,Ability,0B
+406,Jump Ability,Ability,0C
+407,DrgnSwd Ability,Ability,0D
+408,Smoke Ability,Ability,0E
+409,Image Ability,Ability,0F
+410,Throw Ability,Ability,10
+411,SwdSlap Ability,Ability,11
+412,GilToss Ability,Ability,12
+413,Slash Ability,Ability,13
+414,Animals Ability,Ability,14
+415,Aim Ability,Ability,15
+416,X-Fight Ability,Ability,16
+417,Conjure Ability,Ability,17
+418,Observe Ability,Ability,18
+419,Analyze Ability,Ability,19
+420,Tame Ability,Ability,1A
+421,Control Ability,Ability,1B
+422,Catch Ability,Ability,1C
+423,Mix Ability,Ability,1E
+424,Drink Ability,Ability,1F
+425,Pray Ability,Ability,20
+426,Revive Ability,Ability,21
+427,Terrain Ability,Ability,22
+428,Hide Ability,Ability,24
+429,Sing Ability,Ability,27
+430,Flirt Ability,Ability,28
+431,Dance Ability,Ability,29
+432,Mimic Ability,Ability,2A
+433,MgcSwrd Lv.1 Ability,Ability,30
+434,MgcSwrd Lv.2 Ability,Ability,31
+435,MgcSwrd Lv.3 Ability,Ability,32
+436,MgcSwrd Lv.4 Ability,Ability,33
+437,MgcSwrd Lv.5 Ability,Ability,34
+438,MgcSwrd Lv.6 Ability,Ability,35
+439,White Lv.1 Ability,Ability,38
+440,White Lv.2 Ability,Ability,39
+441,White Lv.3 Ability,Ability,3A
+442,White Lv.4 Ability,Ability,3B
+443,White Lv.5 Ability,Ability,3C
+444,White Lv.6 Ability,Ability,3D
+445,Black Lv.1 Ability,Ability,40
+446,Black Lv.2 Ability,Ability,41
+447,Black Lv.3 Ability,Ability,42
+448,Black Lv.4 Ability,Ability,43
+449,Black Lv.5 Ability,Ability,44
+450,Black Lv.6 Ability,Ability,45
+451,Time Lv.1 Ability,Ability,48
+452,Time Lv.2 Ability,Ability,49
+453,Time Lv.3 Ability,Ability,4A
+454,Time Lv.4 Ability,Ability,4B
+455,Time Lv.5 Ability,Ability,4C
+456,Time Lv.6 Ability,Ability,4D
+457,Summon Lv.1 Ability,Ability,50
+458,Summon Lv.2 Ability,Ability,51
+459,Summon Lv.3 Ability,Ability,52
+460,Summon Lv.4 Ability,Ability,53
+461,Summon Lv.5 Ability,Ability,54
+462,Red Lv.1 Ability,Ability,58
+463,Red Lv.2 Ability,Ability,59
+464,Red Lv.3 Ability,Ability,5A
+465,X-Magic Ability,Ability,60
+466,Blue Ability,Ability,61
+467,Equip Shield Ability,Ability,68
+468,Equip Armors Ability,Ability,69
+469,Equip Ribbon Ability,Ability,6A
+470,Equip Swords Ability,Ability,6B
+471,Equip Spears Ability,Ability,6C
+472,Equip Katana Ability,Ability,6D
+473,Equip Axes Ability,Ability,6E
+474,Equip Bows Ability,Ability,6F
+475,Equip Whips Ability,Ability,70
+476,Equip Harps Ability,Ability,71
+477,Agility Ability,Ability,72
+478,HP +10% Ability,Ability,73
+479,HP +20% Ability,Ability,74
+480,HP +30% Ability,Ability,75
+481,MP +10% Ability,Ability,76
+482,MP +30% Ability,Ability,77
+483,Brawl Ability,Ability,78
+484,Dbl Grip Ability,Ability,79
+485,2-Wield Ability,Ability,7A
+486,Medicine Ability,Ability,7B
+487,Cover Ability,Ability,7C
+488,Counter Ability,Ability,7D
+489,Evade Ability,Ability,7E
+490,Barrier Ability,Ability,80
+491,Berserk Ability,Ability,81
+492,Caution Ability,Ability,82
+493,Preemptive Ability,Ability,83
+494,DmgFloor Ability,Ability,85
+495,Equip Rods Ability,Ability,87
+600,Knife Item,Item,02
+601,Dagger Item,Item,03
+602,Mythril Knife Item,Item,04
+603,Kunai Item,Item,05
+604,Mage Masher Item,Item,06
+605,Guardian Item,Item,07
+606,Kodachi Item,Item,08
+607,Orialcon Item,Item,09
+608,Air Knife Item,Item,0A
+609,Assassin Item,Item,0B
+610,Hardened Dagger Item,Item,0C
+611,Broadsword Item,Item,0D
+612,RegalCut Item,Item,0E
+613,Mythril Sword Item,Item,0F
+614,Coral Sword Item,Item,10
+615,Ancient Sword Item,Item,11
+616,Epee Sword Item,Item,12
+617,Slumber Sword Item,Item,13
+618,Defender Sword Item,Item,14
+619,Excalibur Item,Item,15
+620,Ragnarok Item,Item,16
+621,Javelin Item,Item,17
+622,Spear Item,Item,18
+623,Mythril Spear Item,Item,19
+624,Trident Item,Item,1A
+625,Wind Spear Item,Item,1B
+626,Partisan Item,Item,1C
+627,Heavy Spear Item,Item,1D
+628,DblLance Item,Item,1E
+629,Holy Lance Item,Item,1F
+630,Dragoon Lance Item,Item,20
+631,Battle Axe Item,Item,21
+632,Mythril Hammer Item,Item,22
+633,Ogre Killer Item,Item,23
+634,War Hammer Item,Item,24
+635,Venom Axe Item,Item,25
+636,Earth Hammer Item,Item,26
+637,Rune Axe Item,Item,27
+638,Thor Hammer Item,Item,28
+639,Katana Item,Item,29
+640,Air Blade Item,Item,2A
+641,Kotetsu Item,Item,2B
+642,Bizen Item,Item,2C
+643,Forged Item,Item,2D
+644,Murasume Item,Item,2E
+645,Masamune Item,Item,2F
+646,Tempest Item,Item,30
+647,Rod Item,Item,31
+648,Fire Rod Item,Item,32
+649,Ice Rod Item,Item,33
+650,Thunder Rod Item,Item,34
+651,Venom Rod Item,Item,35
+652,Lillith Rod Item,Item,36
+653,Wizard Rod Item,Item,37
+654,Staff Item,Item,38
+655,Mythril Staff Item,Item,39
+656,Power Staff Item,Item,3A
+657,Healing Staff Item,Item,3B
+658,Staff of Light Item,Item,3C
+659,Sage's Staff Item,Item,3D
+660,Judgement Staff Item,Item,3E
+661,Fire Bow Item,Item,3F
+662,Ice Bow Item,Item,40
+663,Thunder Bow Item,Item,41
+664,Darkness Bow Item,Item,42
+665,Killer Bow Item,Item,43
+666,Elven Bow Item,Item,44
+667,Yoichi Bow Item,Item,45
+668,Artemis Bow Item,Item,46
+669,Silver Harp Item,Item,47
+670,Dream Harp Item,Item,48
+671,Lamia's Harp Item,Item,49
+672,Apollo's Harp Item,Item,4A
+673,Whip Item,Item,4B
+674,Chain Whip Item,Item,4C
+675,Thunder Whip Item,Item,4D
+676,Flame Whip Item,Item,4E
+677,Dragon's Whisker Item,Item,4F
+678,Giyaman Item,Item,50
+679,Earth Bell Item,Item,51
+680,Rune Chime Item,Item,52
+681,Tinkerbell Item,Item,53
+682,Drain Sword Item,Item,55
+683,RuneEdge Item,Item,56
+684,Flametongue Item,Item,57
+685,IceBrand Item,Item,58
+686,Full Moon Item,Item,59
+687,Shuriken Item,Item,5A
+688,Pinwheel Item,Item,5B
+689,Excailbur Item,Item,5C
+690,BeastKiller Item,Item,5D
+691,Flail Item,Item,5E
+692,Morning Star Item,Item,5F
+693,Wonder Wand Item,Item,60
+694,Brave Blade Item,Item,61
+695,Soot Item,Item,62
+696,Chicken Knife Item,Item,63
+697,RisingSun Item,Item,64
+698,Silver Bow Item,Item,65
+699,Gale Bow Item,Item,66
+700,AntiMagic Bow Item,Item,67
+701,Avis Killer Item,Item,68
+702,DoomCut Item,Item,69
+703,Giant's Axe Item,Item,6A
+704,ManEater Item,Item,6B
+705,Thief Knife Item,Item,6C
+706,Dancing Dagger Item,Item,6D
+707,Enhancer Item,Item,6E
+708,Leather Shield Item,Item,81
+709,Bronze Shield Item,Item,82
+710,Iron Shield Item,Item,83
+711,Mythril Shield Item,Item,84
+712,Golden Shield Item,Item,85
+713,Aegis Shield Item,Item,86
+714,Diamond Shield Item,Item,87
+715,Crystal Shield Item,Item,88
+716,Leather Cap Item,Item,89
+717,Bronze Helm Item,Item,8A
+718,Iron Helm Item,Item,8B
+719,Mythril Helm Item,Item,8C
+720,Golden Helm Item,Item,8D
+721,Diamond Helm Item,Item,8E
+722,Crystal Helm Item,Item,8F
+723,Plumed Hat Item,Item,90
+724,Tricorn Hat Item,Item,91
+725,Magus Item,Item,92
+726,Circlet Item,Item,93
+727,Gold Hairpin Item,Item,94
+728,Ribbon Item,Item,95
+729,Bandana Item,Item,96
+730,GrnBeret Item,Item,97
+731,DarkHood Item,Item,98
+732,Lamia's Tiara Item,Item,99
+733,Leather Armor Item,Item,9A
+734,Bronze Armor Item,Item,9B
+735,Iron Armor Item,Item,9C
+736,Mythril Armor Item,Item,9D
+737,Golden Armor Item,Item,9E
+738,Diamond Armor Item,Item,9F
+739,Crystal Armor Item,Item,A0
+740,CopperPlt Item,Item,A1
+741,Training Suit Item,Item,A2
+742,Silver Plate Item,Item,A3
+743,Stealth Suit Item,Item,A4
+744,DiamndPlt Item,Item,A5
+745,DarkSuit Item,Item,A6
+746,Cotton Robe Item,Item,A7
+747,Silk robe Item,Item,A8
+748,Gaia Gear Item,Item,A9
+749,Bard's Surplice Item,Item,AA
+750,Lumina Robe Item,Item,AB
+751,Black Robe Item,Item,AC
+752,White Robe Item,Item,AD
+753,Mirage Vest Item,Item,AE
+754,Guard Ring Item,Item,AF
+755,Thief's Glove Item,Item,B0
+756,Giant's Gloves Item,Item,B1
+757,Elf Cape Item,Item,B2
+758,Cursed Ring Item,Item,B3
+759,Glasses Item,Item,B4
+760,Running Shoes Item,Item,B5
+761,Mythril Glove Item,Item,B6
+762,Silver Armlet Item,Item,B7
+763,Diamond Armlet Item,Item,B8
+764,Strength Item,Item,B9
+765,Power Wrist Item,Item,BA
+766,Angel Gwn Item,Item,BB
+767,Angel Ring Item,Item,BC
+768,Flame Ring Item,Item,BD
+769,Coral Ring Item,Item,BE
+770,Bone Mail Item,Item,BF
+771,Leather Shoes Item,Item,C0
+772,Kaiser Knuckles Item,Item,C1
+773,Gauntlets Item,Item,C2
+774,Tiger Mask Item,Item,C3
+775,Flame Shield Item,Item,C4
+776,CornaJar Item,Item,C5
+777,Genji Shield Item,Item,C6
+778,Genji Helm Item,Item,C7
+779,Genji Armor Item,Item,C8
+780,Genji Gloves Item,Item,C9
+781,Wall Ring Item,Item,CA
+782,Hypno Helm Item,Item,CB
+783,Thornlet Item,Item,CC
+784,Ice Shield Item,Item,CD
+785,Cursed Shield Item,Item,CE
+786,Rainbow Dress Item,Item,CF
+787,Red Shoes Item,Item,D0
+788,Potion Item,Item,E0
+789,HiPotion Item,Item,E1
+790,Ether Item,Item,E2
+791,Elixir Item,Item,E3
+792,Phoenix Down Item,Item,E4
+793,Maiden's Kiss Item,Item,E5
+794,Revivify Item,Item,E6
+795,TurtleShell Item,Item,E7
+796,Antidote Item,Item,E8
+797,Eyedrop Item,Item,E9
+798,DragonFang Item,Item,EA
+799,DarkMatter Item,Item,EB
+800,Soft Item,Item,EC
+801,LuckMallet Item,Item,ED
+802,Magic Lamp Item,Item,EF
+803,Tent Item,Item,F0
+804,Cabin Item,Item,F1
+805,Giant Drink Item,Item,F2
+806,Power Drink Item,Item,F3
+807,Speed Drink Item,Item,F4
+808,Protect Drink Item,Item,F5
+809,Hero Drink Item,Item,F6
+810,Ramuh Item,Item,F9
+811,Shoat Item,Item,FA
+812,Golem Item,Item,FB
+813,Flame Scroll Item,Item,FC
+814,Water Scroll Item,Item,FD
+815,Thunder Scroll Item,Item,FE
+1000,Walse Tower Key,Key Item,00
+1001,Steamship Key,Key Item,01
+1002,Ifrit's Fire,Key Item,02
+1003,SandwormBait,Key Item,03
+1004,Big Bridge Key,Key Item,04
+1005,Hiryuu Call,Key Item,05
+1006,Submarine Key,Key Item,06
+1007,Anti Barrier,Key Item,07
+1008,Bracelet,Key Item,08
+1009,Pyramid Page,Key Item,0B
+1010,Shrine Page,Key Item,0C
+1011,Trench Page,Key Item,0D
+1012,Falls Page,Key Item,0E
+1013,Mirage Radar,Key Item,12
+1014,Adamantite,Key Item,15
+1015,Moogle Suit,Key Item,16
+1016,Elder Branch,Key Item,18
+1017,1st Tablet,Key Item,1A
+1018,2nd Tablet,Key Item,1B
+1019,3rd Tablet,Key Item,1C
+1020,4th Tablet,Key Item,1D

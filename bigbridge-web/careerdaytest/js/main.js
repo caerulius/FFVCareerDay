@@ -212,6 +212,7 @@ function apiCall(data){
 		"starting_cara": $('#starting_cara').is(':checked'),
 		"remove_ned": $('#remove_ned').is(':checked'),
         "key_items_in_mib": $('#key_items_in_mib').is(':checked'),
+        "trapped_chests": $('#trapped_chests').is(':checked'),
 		"everysteprandomencounter": $('#everysteprandomencounter').is(':checked'),
 		"free_shops": $('#free_shops').is(':checked'),
 		"music_randomization": $('#music_randomization').is(':checked'),
@@ -352,6 +353,9 @@ function getSettingString(){
 	if($('#key_items_in_mib').is(':checked')){
 		seedString = seedString + " KIMIB";
 	}
+	if($('#trapped_chests').is(':checked')){
+		seedString = seedString + " TRCH";
+	}
 	if($('#everysteprandomencounter').is(':checked')){
 		seedString = seedString + " STP";
 	}
@@ -466,6 +470,9 @@ function applyCustomSettingString(){
 		}
 		else if(val == "KIMIB"){
 			$( "#key_items_in_mib" ).prop( "checked", true );
+		}
+		else if(val == "TRCH"){
+			$( "#trapped_chests" ).prop( "checked", true );
 		}
 		else if(val == "STP"){
 			$( "#everysteprandomencounter" ).prop( "checked", true );
@@ -627,6 +634,7 @@ function clearSettings(){
 	$('#starting_cara').prop( "checked", false );
 	$('#remove_ned').prop( "checked", false );
     $('#key_items_in_mib').prop( "checked", false );
+    $('#trapped_chests').prop( "checked", false );
 	$('#everysteprandomencounter').prop( "checked", false );
 	$('#free_shops').prop( "checked", false );
 	$('#music_randomization').prop( "checked", false );

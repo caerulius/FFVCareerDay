@@ -93,6 +93,22 @@ def move_cd():
     new_files = retrieve_new_files(data_input_path, apitest_hashes, accepted_filetypes)
     data_output_path = os.path.join('bigbridge-web','careerdayapitest', 'tables', 'text_tables')
     move_files(new_files,data_output_path,accepted_filetypes)    
+
+    # utilities/data/tables/json
+    accepted_filetypes = ('json')
+    data_input_path = hash_directory(os.path.join('utilities','data', 'tables','json'))
+    new_files = retrieve_new_files(data_input_path, apitest_hashes, accepted_filetypes)
+    data_output_path = os.path.join('bigbridge-web','careerdayapitest', 'tables', 'json')
+    move_files(new_files,data_output_path,accepted_filetypes)    
+
+
+    # utilities/data/tables/text_tables/json
+    accepted_filetypes = ('json')
+    data_input_path = hash_directory(os.path.join('utilities','data', 'tables', 'text_tables','json'))
+    new_files = retrieve_new_files(data_input_path, apitest_hashes, accepted_filetypes)
+    data_output_path = os.path.join('bigbridge-web','careerdayapitest', 'tables', 'text_tables', 'json')
+    move_files(new_files,data_output_path,accepted_filetypes)    
+
     
     
 def move_cd_old():        

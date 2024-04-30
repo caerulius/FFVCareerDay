@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-import pandas as pd 
 import random
 from abc import ABC, abstractmethod
 from collections import OrderedDict
@@ -452,8 +450,8 @@ def set_bit(byte,bit_to_set):
     return hex(int(temp_bin,base=2)).replace("0x","").zfill(2)
 
 def rewrite_shop_costs(choice, original):
-    output_str = '\n;Price: %s -> %s\norg $%s\ndb ' % (original.readable_name, choice.weapon_name_menu, original.shop_addr)
-    new_shop_price = str(choice.shop_price)
+    output_str = '\n;Price: %s -> %s\norg $%s\ndb ' % (original['readable_name'], choice['weapon_name_menu'], original['shop_addr'])
+    new_shop_price = str(choice['shop_price'])
     b1, b2 = int(new_shop_price[0:2]), new_shop_price[2:]
     
     b1 = i2b(b1)
@@ -517,8 +515,6 @@ class Weapon(ABC):
     
 class WeaponManager(ABC):
     def __init__(self, data_manager, re=None, percent_randomization=100):
-        global magic_dict
-        magic_dict = data_manager.files['magic_item_randomization'].reset_index()[['magic_id','readable_name','tier']].set_index('magic_id').to_dict()
         self.df_weapon = data_manager.files['weapon_randomization']
         self.df_custom_weapons = data_manager.files['custom_weapons']
         self.history = {}
@@ -532,19 +528,17 @@ class WeaponManager(ABC):
     def randomize(self):
         self.weapons = []
         weapon_patch = ''
-        
-        indices = list(self.df_weapon.index)
+        indices = list(self.df_weapon.keys())
         new_len = int(len(indices) * self.percent_randomization *.01)
         indices = indices[:new_len]
         self.re.shuffle(indices)
         for i in indices:
-            new_weapon = Weapon(self.df_weapon.loc[i],self.re)
-            choice, pass_flag = self.find_replacement(self.df_weapon.loc[i])
-            
-            
+            new_weapon = Weapon(self.df_weapon[i],self.re)
+            choice, pass_flag = self.find_replacement(self.df_weapon[i])
+
             if pass_flag:
                 # now rewrite shop costs
-                weapon_patch = weapon_patch + rewrite_shop_costs(choice, self.df_weapon.loc[i])
+                weapon_patch = weapon_patch + rewrite_shop_costs(choice, self.df_weapon[i])
                 new_weapon.set_replacement(choice)
                 if new_weapon.data_dict['subtype'] == 'flail':
                     new_weapon.bytemap['byte3'] = self.re.choice(['5E','4B'])
@@ -555,7 +549,7 @@ class WeaponManager(ABC):
                 # in this case, the original item needs to be REMOVED from the 
                 # pool of items in the game, since it is not randomized
                 
-                self.banned_items.append(self.df_weapon.loc[i])
+                self.banned_items.append(self.df_weapon[i])
                 
         return weapon_patch
             
@@ -563,21 +557,24 @@ class WeaponManager(ABC):
         og_weapon_type = og_weapon['subtype']
         og_weapon_tier = og_weapon['tier']
         og_weapon_name = og_weapon['readable_name']
-        
-        df = self.df_custom_weapons[(self.df_custom_weapons['weapon_type']==og_weapon_type)]
+        df = {k:v for k, v in self.df_custom_weapons.items() if self.df_custom_weapons[k]['weapon_type']==og_weapon_type}
         
         tier_adj = 1
         while tier_adj < 10:
             pass_flag = True
             if og_weapon_type in ['whip','bow','spear']:
                 # for killer weapons, strictly try to find a replacement at equal or less the value only
-                df_temp = df[(df['tier'] <= og_weapon_tier) & (df['tier'] >= (og_weapon_tier - tier_adj))]
+                adj1 = og_weapon_tier
+                adj2 = (og_weapon_tier - tier_adj)
+                df_temp = {k:v for k, v in df.items() if v['tier'] <= adj1 and v['tier']>= adj2}
             else:
-                df_temp = df[(df['tier'] <= og_weapon_tier + round(tier_adj/2)) & (df['tier'] >= (og_weapon_tier - tier_adj))]
-            choices = list(df_temp.index)
+                adj1 = og_weapon_tier + round(tier_adj/2)
+                adj2 = og_weapon_tier - tier_adj
+                df_temp = {k:v for k, v in df.items() if v['tier'] <= adj1 and v['tier']>= adj2}
+            choices = list(df_temp.keys())
             try:
                 choice = self.re.choice(choices)
-                weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
+                weapon_name_clean = df_temp[choice]['weapon_name_menu'].split(">")[1]
 #                logging.error(weapon_name_clean)
 #                if weapon_name_clean == 'Elements':
 #                    breakpoint()
@@ -595,12 +592,12 @@ class WeaponManager(ABC):
                 while iter_num < 10:
                     if weapon_name_clean not in self.history.values():
                         self.history[choice] = weapon_name_clean
-#                        logging.error("ROUND 1 >>>>>>"+df.loc[choice]['weapon_name_textbox'])
-                        return df.loc[choice], True # True = pass_flag for valid replacement
+#                        logging.error("ROUND 1 >>>>>>"+df[choice]['weapon_name_textbox'])
+                        return df[choice], True # True = pass_flag for valid replacement
                     else:
                         # reroll, try again
                         choice = self.re.choice(choices)
-                        weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
+                        weapon_name_clean = df_temp[choice]['weapon_name_menu'].split(">")[1]
                     iter_num += 1
                 
 
@@ -610,12 +607,12 @@ class WeaponManager(ABC):
 
                     if choice not in self.history:
                         self.history[choice] = weapon_name_clean
-#                        logging.error("ROUND 2 >>>>>>"+df.loc[choice]['weapon_name_textbox'])
-                        return df.loc[choice], True # True = pass_flag for valid replacement
+#                        logging.error("ROUND 2 >>>>>>"+df[choice]['weapon_name_textbox'])
+                        return df[choice], True # True = pass_flag for valid replacement
                     else:
                         # reroll, try again
                         choice = self.re.choice(choices)
-                        weapon_name_clean = df_temp.loc[choice]['weapon_name_menu'].split(">")[1]
+                        weapon_name_clean = df_temp[choice]['weapon_name_menu'].split(">")[1]
                     iter_num += 1
                 tier_adj += 1        
         
@@ -634,14 +631,16 @@ class WeaponManager(ABC):
                 f.write(x.asar_output)       
     @property
     def get_patch(self):
-        output_str = ''
+        output = ";=========="
+        output = output + "\n;weapon randomization"
+        output = output + "\n;==========\n"
         for x in self.weapons:
-            output_str = output_str + x.asar_output
-        return output_str
+            output = output + x.asar_output
+        return output
     
     @property
     def get_spoiler(self):
-        output_str = '\n-----WEAPON RANODMIZATION-----\n'
+        output_str = '\n-----WEAPON RANDOMIZATION-----\n'
         for x in self.weapons:
             output_str = output_str + x.spoiler
         output_str = output_str + '\n'

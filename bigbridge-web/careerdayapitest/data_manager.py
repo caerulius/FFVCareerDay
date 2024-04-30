@@ -1,46 +1,86 @@
-import pandas as pd
-import configparser
+import pkgutil, json
+import os
+import sys
+
+
+THIS_FILEPATH = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(THIS_FILEPATH)
+
 
 class DataManager():
-    def __init__(self, config_path = 'local-config.ini'):
-        self.config = configparser.ConfigParser()
-        self.config.read(config_path)
+    def __init__(self, config):
+        self.config = config
         self.data_table_path = self.config['PATHS']['data_table_path']
 
         self.files = {}
-        self.files['areas'] = pd.read_csv(self.data_table_path + 'areas.csv',index_col='area_id',dtype=str)
-        self.files['items'] = pd.read_csv(self.data_table_path + 'item_id.csv',index_col='item_id',dtype=str)
-        self.files['magics'] = pd.read_csv(self.data_table_path + 'magic_id.csv',index_col='magic_id',dtype=str)
-        self.files['crystals'] = pd.read_csv(self.data_table_path + 'crystal_id.csv',index_col='crystal_id',dtype=str)
-        self.files['abilities'] = pd.read_csv(self.data_table_path + 'ability_id.csv',index_col='ability_id',dtype=str)
-        self.files['gil'] = pd.read_csv(self.data_table_path + 'gil_rewards.csv',index_col="gil_id",dtype=str)
-        self.files['key_items'] = pd.read_csv(self.data_table_path + 'key_items.csv',index_col='keyitem_id',dtype=str)
-        self.files['rewards'] = pd.read_csv(self.data_table_path + 'rewards.csv', dtype=str)
-        self.files['rewards']['idx'] = self.files['rewards']['idx'].astype(int)
-        self.files['shops'] = pd.read_csv(self.data_table_path + 'shop_id.csv',dtype=str)
-        self.files['shops']['idx'] = self.files['shops']['idx'].astype(int)
-        self.files['shopprices'] = pd.read_csv(self.data_table_path + 'shop_prices.csv', dtype=str)
-        self.files['shopprices']['idx'] = self.files['shopprices']['idx'].astype(int)
-        self.files['enemies'] = pd.read_csv(self.data_table_path + 'enemy_data.csv', dtype=str)
-        self.files['enemies_bosses'] = self.files['enemies'][self.files['enemies']['enemy_rank']=='boss']
-        self.files['enemies_nonbosses'] = self.files['enemies'][self.files['enemies']['enemy_rank']=='enemy']
-        self.files['formations'] = pd.read_csv(self.data_table_path + 'formation_id.csv', dtype=str)
-        self.files['monsters_in_boxes'] = pd.read_csv(self.data_table_path + 'monster_in_a_box.csv',dtype=str)
-        self.files['monsters_in_boxes'] = self.files['monsters_in_boxes'][self.files['monsters_in_boxes']['useable_flag']=='y'].reset_index(drop=True)
-        self.files['monsters_in_boxes'] = self.files['monsters_in_boxes'].reset_index()
-        self.files['monsters_in_boxes'].drop('monster_box_id',axis=1,inplace=True)
-        self.files['monsters_in_boxes'].columns = ['monster_box_id'] + self.files['monsters_in_boxes'].columns.tolist()[1:]
-        self.files['monsters_in_boxes']['monster_box_id'] = self.files['monsters_in_boxes']['monster_box_id'].astype(int)
-        self.files['boss_scaling'] = pd.read_csv(self.data_table_path + 'boss_scaling.csv')
-        self.files['portal_bosses'] = pd.read_csv(self.data_table_path + 'portal_bosses.csv')
-        self.files['enemy_skills'] = pd.read_csv(self.data_table_path + 'enemy_skills.csv',index_col='name').to_dict()['hex']
-        self.files['job_color_palettes'] = pd.read_csv(self.data_table_path + 'job_color_palettes.csv')
-        self.files['boss_color_palettes'] = pd.read_csv(self.data_table_path + 'boss_color_palettes.csv')
-        self.files['hints'] = pd.read_csv(self.data_table_path + 'hint_npc.csv',dtype=str)
-        self.files['weapon_randomization'] = pd.read_csv(self.data_table_path + 'weapon_randomization_id.csv')
-        self.files['weapon_randomization'] = self.files['weapon_randomization'][self.files['weapon_randomization']['valid']==True]
-        self.files['weapon_randomization'] = self.files['weapon_randomization'][self.files['weapon_randomization']['type']=='weapon']
-        self.files['magic_item_randomization'] = pd.read_csv(self.data_table_path + 'magic_id.csv',index_col='magic_id')
-        self.files['magic_item_randomization'] = self.files['magic_item_randomization'][self.files['magic_item_randomization']['item_randomization_valid']==True]
-        self.files['custom_weapons'] =  pd.read_csv(self.data_table_path + 'custom_weapons_v2.csv',index_col='index')
+        
+        def load_json_data(filepath: str):
+            return json.loads(pkgutil.get_data(__name__,filepath).decode('utf-8-sig'))
+
+
+        self.files['areas'] = load_json_data(os.path.join('tables', 'json','areas.json'))
+        self.files['items'] = load_json_data(os.path.join('tables', 'json','item_id.json'))
+        self.files['magics'] = load_json_data(os.path.join('tables', 'json','magic_id.json'))
+        self.files['crystals'] = load_json_data(os.path.join('tables', 'json','crystal_id.json'))
+        self.files['abilities'] = load_json_data(os.path.join('tables', 'json','ability_id.json'))
+        self.files['gil'] = load_json_data(os.path.join('tables', 'json','gil_rewards.json'))
+        self.files['key_items'] = load_json_data(os.path.join('tables', 'json','key_items.json'))
+        self.files['rewards'] = load_json_data(os.path.join('tables', 'json','rewards.json'))
+        self.files['mib_rank'] = load_json_data(os.path.join('tables', 'json','mib_arch_rank.json'))
+
+
+        d = {}
+        for k, v in self.files['rewards'].items():
+            d[int(k)] = v
+        self.files['rewards'] = d
+
+        self.files['shops'] = load_json_data(os.path.join('tables', 'json','shop_id.json'))
+        d = {}
+        for k, v in self.files['shops'].items():
+            d[int(k)] = v
+        self.files['shops'] = d
+
+        self.files['shopprices'] = load_json_data(os.path.join('tables', 'json','shop_prices.json'))
+        d = {}
+        for k, v in self.files['shopprices'].items():
+            d[int(k)] = v
+        self.files['shopprices'] = d
+
+        self.files['enemies'] = load_json_data(os.path.join('tables', 'json','enemy_data.json'))
+        self.files['enemies_bosses'] = {}
+        self.files['enemies_nonbosses'] = {} 
+        for k, v in self.files['enemies'].items():
+            if v['enemy_rank'] == 'boss':
+                self.files['enemies_bosses'][k] = v
+            elif v['enemy_rank'] == 'enemy':
+                self.files['enemies_nonbosses'][k] = v
+        self.files['formations'] = load_json_data(os.path.join('tables', 'json','formation_id.json'))
+        self.files['monsters_in_boxes'] = load_json_data(os.path.join('tables', 'json','monster_in_a_box.json'))
+        d = {}
+        for k, v in self.files['monsters_in_boxes'].items():
+            if v['useable_flag'] == 'y':
+                d[int(k)] = v
+        self.files['monsters_in_boxes'] = d
+        self.files['boss_scaling'] = load_json_data(os.path.join('tables', 'json','boss_scaling.json'))
+        self.files['portal_bosses'] = load_json_data(os.path.join('tables', 'json','portal_bosses.json'))
+        self.files['enemy_skills'] = load_json_data(os.path.join('tables', 'json','enemy_skills.json'))
+        self.files['job_color_palettes'] = load_json_data(os.path.join('tables', 'json','job_color_palettes.json'))
+        self.files['boss_color_palettes'] = load_json_data(os.path.join('tables', 'json','boss_color_palettes.json'))
+        self.files['hints'] = load_json_data(os.path.join('tables', 'json','hint_npc.json'))
+        self.files['weapon_randomization'] = load_json_data(os.path.join('tables', 'json','weapon_randomization_id.json'))
+        d = {}
+        for k, v in self.files['weapon_randomization'].items():
+            if v['valid'] and v['type'] == 'weapon':
+                d[k] = v
+        self.files['weapon_randomization'] = d
+        self.files['magic_item_randomization'] = load_json_data(os.path.join('tables', 'json','magic_id.json'))
+        d = {}
+        for k, v in self.files['magic_item_randomization'].items():
+            if v['item_randomization_valid']:
+                d[k] = v
+        self.files['magic_item_randomization'] = d
+        self.files['custom_weapons'] = load_json_data(os.path.join('tables', 'json','custom_weapons_v2.json'))
+
+        
+        
         

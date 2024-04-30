@@ -535,7 +535,7 @@ def generate_v1_table():
             new_index += 1
     
     df2 = pd.DataFrame(new_weapons).T
-    df = df.append(df2)
+    df = pd.concat([df,df2])
     
     #### ABILITY WEAPONS (BELLS)
     new_index = 0
@@ -556,7 +556,7 @@ def generate_v1_table():
         new_index += 1
 
     df3 = pd.DataFrame(new_weapons).T
-    df = df.append(df3)
+    df = pd.concat([df,df3])
     
     
     #### ELEMENTAL (EVERY WEAPON)
@@ -579,7 +579,7 @@ def generate_v1_table():
         new_index += 1
     
     df4 = pd.DataFrame(new_weapons).T
-    df = df.append(df4)
+    df = pd.concat([df,df4])
     df = df[['weapon_name_menu','weapon_name_textbox','weapon_str','weapon_type','tier','magic_id','magic_type','killer_type','ability','ability_id','adjustment_type','byte1','byte2','byte3','byte4','byte5','byte6','byte7','byte8','byte9','byte10','byte11','byte12']]
     df.reset_index(inplace=True)
     df.drop('index',axis=1,inplace=True)

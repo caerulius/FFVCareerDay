@@ -232,7 +232,7 @@ def check_completeable_spoiler_log(key_list, world_lock):
     df_key = pd.DataFrame(columns=['boss','key'])
     
     for key in key_list:
-        df_key = df_key.append(pd.DataFrame({'boss':key.description,'key':key.collectible.collectible_name},columns=['boss','key'],index=[0]))
+        df_key = pd.concat([df_key,pd.DataFrame({'boss':key.description,'key':key.collectible.collectible_name},columns=['boss','key'],index=[0])])
     
     
     def add_to_output(output, add):
@@ -255,7 +255,7 @@ def check_completeable_spoiler_log(key_list, world_lock):
         df = pd.merge(df,df_key,left_on='description',right_on='boss')[['boss','required_key_items_lock2','key']]
     
     df.columns = ['boss','req','key_reward']
-    df = df.append(pd.DataFrame({'boss':"NeoExdeath",'req':"1st Tablet,2nd Tablet, 3rd Tablet, 4th Tablet",'key_reward':"World Saved"},index=[0]))
+    df = pd.concat([df,pd.DataFrame({'boss':"NeoExdeath",'req':"1st Tablet,2nd Tablet, 3rd Tablet, 4th Tablet",'key_reward':"World Saved"},index=[0])])
     
     
     obtained_keys = []
@@ -347,7 +347,7 @@ def process_spoiler_data(num_iterations):
             spoiler = c.RM.get_spoiler()
             df_key_temp = get_key_item_df(spoiler,random_num)
             df_sphere_master = df_sphere_master.append(check_completeable(df_key_temp))
-            df_key_master = df_key_master.append(df_key_temp)
+            df_key_master = pd.concat([df_key_master,df_key_temp])
             df_rewards_master = df_rewards_master.append(get_rewards_df(spoiler,random_num))
             df_crystals_master = df_crystals_master.append(get_crystals(c,random_num))
             df_shops_master = df_shops_master.append(get_shops(c,random_num))
@@ -361,7 +361,7 @@ def run_pivots(df_rewards,df_shops):
     df_item = pd.read_csv('tables/item_id.csv')[['readable_name','value']]
     df_magic = pd.read_csv('tables/magic_id.csv')[['readable_name','value']]
     df_ability = pd.read_csv('tables/ability_id.csv')[['readable_name','value']]
-    df_all = df_item.append(df_magic).append(df_ability)
+    df_all = pd.concat([df_item,df_magic,df_ability])
     
     df_rewards_value = df_rewards.copy()
     
@@ -401,7 +401,7 @@ def run_pivots(df_rewards,df_shops):
 
 
         data_dict = pd.DataFrame({'seed':[seed],'reward_sum':[reward_sum],'reward_avg':[reward_avg],'reward_sellable_count':[reward_sellable_count],'reward_sellable_count_pct':[reward_sellable_count_pct],'reward_earlygame_sum':[reward_earlygame_sum]})
-        df3 = df3.append(data_dict,sort=None)
+        df3 = pd.concat([df3,data_dict])
         
     df3.to_csv('log_analysis_render/latest_data/seed_value.csv',index=None)
     

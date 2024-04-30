@@ -1,25 +1,20 @@
 # -*- coding: utf-8 -*-
-import pandas as pd
+import pkgutil
+import json
 import os
-GUI_FLAG = False
 # LOCAL PY VERSION
 
 THIS_FILEPATH = os.path.dirname(__file__)
-    
-if GUI_FLAG:
-    text_dict_chest = pd.read_csv('tables/text_tables/text_table_chest.csv', header=None,index_col=0).to_dict()[1]
-    text_dict_chest2 = pd.read_csv('tables/text_tables/text_table_chest.csv', header=None,index_col=1).to_dict()[0]
-    text_dict_shop = pd.read_csv('tables/text_tables/text_table_shop.csv', header=None,index_col=0).to_dict()[1]
-    text_dict_shop2 = pd.read_csv('tables/text_tables/text_table_shop.csv', header=None,index_col=1).to_dict()[0]
 
-    key_item_table = pd.read_csv('tables/text_tables/' + 'key_item_text.csv',header=None,index_col=0).to_dict()[1]
-else:
-    text_dict_chest = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','text_table_chest.csv')),header=None,index_col=0).to_dict()[1]
-    text_dict_chest2 = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','text_table_chest.csv')),header=None,index_col=1).to_dict()[0]
-    text_dict_shop = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','text_table_shop.csv')),header=None,index_col=0).to_dict()[1]
-    text_dict_shop2 = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','text_table_shop.csv')),header=None,index_col=1).to_dict()[0]
+def load_json_data(filepath: str):
+    return json.loads(pkgutil.get_data(__name__,filepath).decode('utf-8-sig'))
 
-    key_item_table = pd.read_csv(os.path.abspath(os.path.join(THIS_FILEPATH,'tables','text_tables','key_item_text.csv')),header=None,index_col=0).to_dict()[1]
+
+text_dict_chest = load_json_data(os.path.join('tables','text_tables', 'json','text_table_chest.json'))
+text_dict_chest2 = dict((v,k) for k,v in text_dict_chest.items())
+
+text_dict_shop = load_json_data(os.path.join('tables','text_tables', 'json','text_table_shop.json'))
+text_dict_shop2 = dict((v,k) for k,v in text_dict_shop.items())
 
 
 def init_table(tabletype):
@@ -229,15 +224,15 @@ def run_exdeath_rewards(passed_dict):
 
 
     
-def generate_keyitems():
-    print("Writing file to career_day/asm/asm_patches/text_tables/key_item_tables.asm...")
-    write_text = ''
-    write_text = write_text + '; Key Items (in menu) text\n'
-    write_text = write_text + run_encrypt(key_item_table)
-    write_text = write_text + '; Key Items (for rewards/chests) text\n'
-    write_text = write_text + run_encrypt(key_item_reward_table)
-    with open('../../projects/shared_asm/text_tables/key_item_tables.asm','w') as file:
-        file.write(write_text)
+# def generate_keyitems():
+#     print("Writing file to career_day/asm/asm_patches/text_tables/key_item_tables.asm...")
+#     write_text = ''
+#     write_text = write_text + '; Key Items (in menu) text\n'
+#     write_text = write_text + run_encrypt(key_item_table)
+#     write_text = write_text + '; Key Items (for rewards/chests) text\n'
+#     write_text = write_text + run_encrypt(key_item_reward_table)
+#     with open('../../projects/shared_asm/text_tables/key_item_tables.asm','w') as file:
+#         file.write(write_text)
         
 init_table('shop')
 #run_decrypt()
